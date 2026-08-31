@@ -1,8 +1,8 @@
 {
-  "name": "agrovet-mobile",
+  "name": "agroscan-mobile",
   "version": "1.0.0",
   "private": true,
-  "description": "AgroVet Android shell (Capacitor) — UI from ../web, API on agroscan.mujahidulhaquejihad.com",
+  "description": "AgroScan Android shell (Capacitor) — UI from ../web, API on agroscan.mujahidulhaquejihad.com",
   "scripts": {
     "sync:web": "node scripts/sync-web.js",
     "cap:sync": "npm run sync:web && npx cap sync android",

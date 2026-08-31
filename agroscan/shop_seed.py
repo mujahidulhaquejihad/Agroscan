@@ -5,8 +5,8 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from agrovet.bd_data import equipment, products, suppliers, upazilas
-from agrovet.shop_db import _connect, init_shop_db
+from agroscan.bd_data import equipment, products, suppliers, upazilas
+from agroscan.shop_db import _connect, init_shop_db
 
 _PACK = Path(__file__).resolve().parents[1] / "data" / "agroscan"
 

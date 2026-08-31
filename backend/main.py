@@ -1,4 +1,4 @@
-"""AgroVet V2 API - serves the web app and the future mobile app.
+"""AgroScan API - serves the web app and the future mobile app.
 
 Endpoints:
   GET  /api/status         -> which models are loaded, device
@@ -17,7 +17,7 @@ from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from agrovet.auth_store import (
+from agroscan.auth_store import (
     admin_delete_user,
     admin_get_user,
     admin_list_users,
@@ -33,17 +33,17 @@ from agrovet.auth_store import (
     update_user_profile,
     upsert_google_user,
 )
-from agrovet.image_io import load_rgb_image
-from agrovet.infer import InferenceEngine
-from agrovet.knowledge import (
+from agroscan.image_io import load_rgb_image
+from agroscan.infer import InferenceEngine
+from agroscan.knowledge import (
     EMERGENCY_CONTACTS,
     GOV_LINKS,
     advice_for,
 )
-from agrovet.leaf_crop import auto_crop_leaf, image_to_jpeg_bytes, perspective_crop
-from agrovet.llm_chat import chat_reply, llm_status, preload as llm_preload, vision_scan_reply
-from agrovet.news import list_news
-from agrovet.shop_db import (
+from agroscan.leaf_crop import auto_crop_leaf, image_to_jpeg_bytes, perspective_crop
+from agroscan.llm_chat import chat_reply, llm_status, preload as llm_preload, vision_scan_reply
+from agroscan.news import list_news
+from agroscan.shop_db import (
     admin_shop_stats,
     create_order,
     get_order,
@@ -62,7 +62,7 @@ from agrovet.shop_db import (
 ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = ROOT / "web"
 
-app = FastAPI(title="AgroVet V2", version="2.0.0")
+app = FastAPI(title="AgroScan", version="2.0.0")
 
 # Allow the mobile app (and any web origin) to call the API.
 app.add_middleware(
@@ -87,8 +87,8 @@ def _load():
     init_db()
     init_shop_db()
     try:
-        from agrovet.shop_db import _connect
-        from agrovet.shop_seed import seed_from_pack
+        from agroscan.shop_db import _connect
+        from agroscan.shop_seed import seed_from_pack
 
         with _connect() as con:
             n = con.execute("SELECT COUNT(*) FROM products").fetchone()[0]
@@ -120,7 +120,7 @@ def status():
 def llm_load():
     """Retry loading Qwen2.5-3B (call after freeing RAM / closing browsers)."""
     # Allow retry even if a previous pagefile error soft-disabled the LLM.
-    import agrovet.llm_chat as lc
+    import agroscan.llm_chat as lc
 
     lc._disabled = False
     lc._load_error = None
@@ -297,7 +297,7 @@ def advice(
 
 @app.get("/api/diseases")
 def diseases(lang: str = "bn"):
-    from agrovet.knowledge import all_diseases
+    from agroscan.knowledge import all_diseases
 
     return {"diseases": all_diseases(lang)}
 
@@ -316,14 +316,14 @@ class FarmPlanIn(BaseModel):
 
 @app.get("/api/crops")
 def crops_catalog():
-    from agrovet.farm_plan import load_flora_crops
+    from agroscan.farm_plan import load_flora_crops
 
     return {"crops": load_flora_crops()}
 
 
 @app.post("/api/farm/plan")
 def farm_plan(body: FarmPlanIn):
-    from agrovet.farm_plan import recommend_crops
+    from agroscan.farm_plan import recommend_crops
 
     return recommend_crops(
         district=body.district or "",
@@ -340,7 +340,7 @@ def farm_plan(body: FarmPlanIn):
 
 @app.get("/api/farm/cultivate/{crop_name}")
 def farm_cultivate(crop_name: str, lang: str = "bn"):
-    from agrovet.farm_plan import cultivation_outline
+    from agroscan.farm_plan import cultivation_outline
 
     return cultivation_outline(crop_name, lang)
 
@@ -604,7 +604,7 @@ def admin_update_order(
 def admin_seed(authorization: str | None = Header(default=None)):
     if not _admin_token_ok(authorization):
         raise HTTPException(401, "Admin token required.")
-    from agrovet.shop_seed import seed_from_pack
+    from agroscan.shop_seed import seed_from_pack
 
     return seed_from_pack()
 
@@ -613,7 +613,7 @@ def admin_seed(authorization: str | None = Header(default=None)):
 def admin_apply_images(authorization: str | None = Header(default=None)):
     if not _admin_token_ok(authorization):
         raise HTTPException(401, "Admin token required.")
-    from agrovet.shop_seed import apply_product_images
+    from agroscan.shop_seed import apply_product_images
 
     return apply_product_images()
 
@@ -687,7 +687,7 @@ async def admin_update_product_price(
 
 @app.get("/api/safety")
 def safety_ref(lang: str = "bn"):
-    from agrovet.bd_data import safety
+    from agroscan.bd_data import safety
 
     pack = safety()
     return {

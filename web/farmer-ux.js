@@ -1,15 +1,15 @@
 /* Farmer UX helpers: season tips, sticky helpline, offline last advice, PHI, scout, feedback */
 (function () {
-  var ADVICE_KEY = "agrovet_last_advice_v1";
-  var SCOUT_KEY = "agrovet_last_scout_v1";
-  var FEEDBACK_KEY = "agrovet_feedback_log_v1";
+  var ADVICE_KEY = "agroscan_last_advice_v1";
+  var SCOUT_KEY = "agroscan_last_scout_v1";
+  var FEEDBACK_KEY = "agroscan_feedback_log_v1";
 
   function $(id) { return document.getElementById(id); }
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
   function isBn() {
-    var lang = window.AgrovetI18n ? window.AgrovetI18n.lang : "bn";
+    var lang = window.AgroScanI18n ? window.AgroScanI18n.lang : "bn";
     return String(lang || "").indexOf("bn") === 0;
   }
 
@@ -90,8 +90,8 @@
     var box = $("offlineAdviceBox");
     if (!box) return;
     // Prefer multi-card offline pack when available
-    if (window.AgrovetField && window.AgrovetField.getPack) {
-      var pack = window.AgrovetField.getPack() || [];
+    if (window.AgroScanField && window.AgroScanField.getPack) {
+      var pack = window.AgroScanField.getPack() || [];
       if (pack.length) {
         var html = "<h3>" + T("offline_pack_title") + "</h3><p class='muted small'>" +
           T("offline_pack_hint") + "</p><div class='offline-pack-list'>";
@@ -114,8 +114,8 @@
           items[i].onclick = function () {
             var idx = parseInt(this.getAttribute("data-idx"), 10);
             if (window.agroscanShowPane) window.agroscanShowPane("field");
-            if (window.AgrovetField && window.AgrovetField.showOfflineDetail) {
-              var detailPack = window.AgrovetField.getPack();
+            if (window.AgroScanField && window.AgroScanField.showOfflineDetail) {
+              var detailPack = window.AgroScanField.getPack();
               // switch offline tab then show detail
               var tabs = document.querySelectorAll(".field-tab");
               var t;
@@ -123,7 +123,7 @@
                 if (tabs[t].getAttribute("data-tab") === "offline") tabs[t].click();
               }
               setTimeout(function () {
-                window.AgrovetField.showOfflineDetail(detailPack[idx]);
+                window.AgroScanField.showOfflineDetail(detailPack[idx]);
               }, 50);
             }
           };
@@ -203,15 +203,15 @@
     if (listen) {
       listen.onclick = function () {
         if ($("listenBtn")) $("listenBtn").click();
-        else if (window.AgrovetFeatures && window.AgrovetFeatures.speakAdvice) {
-          window.AgrovetFeatures.speakAdvice();
+        else if (window.AgroScanFeatures && window.AgroScanFeatures.speakAdvice) {
+          window.AgroScanFeatures.speakAdvice();
         }
       };
     }
     if (buy) {
       buy.onclick = function () {
-        if (window.AgrovetShop && window.AgrovetShop.recommendForDisease) {
-          window.AgrovetShop.recommendForDisease(window.AgroScanLastDisease || "", { stay: false });
+        if (window.AgroScanShop && window.AgroScanShop.recommendForDisease) {
+          window.AgroScanShop.recommendForDisease(window.AgroScanLastDisease || "", { stay: false });
         }
         if (window.agroscanShowPane) window.agroscanShowPane("shop");
       };
@@ -238,8 +238,8 @@
         } catch (e) {}
         // Attach vote onto the latest matching history scan
         try {
-          if (window.AgrovetFeatures && window.AgrovetFeatures.attachFeedback) {
-            window.AgrovetFeatures.attachFeedback(disease || "", vote);
+          if (window.AgroScanFeatures && window.AgroScanFeatures.attachFeedback) {
+            window.AgroScanFeatures.attachFeedback(disease || "", vote);
           }
         } catch (e2) {}
         if (thanks) thanks.className = "muted small";
@@ -286,15 +286,15 @@
       helpline: a.when_to_call_helpline || "",
     });
 
-    if (window.AgrovetField && window.AgrovetField.onDiagnosis) {
-      window.AgrovetField.onDiagnosis(data);
+    if (window.AgroScanField && window.AgroScanField.onDiagnosis) {
+      window.AgroScanField.onDiagnosis(data);
     }
 
     // Auto-read once for simple UI (short delay so UI paints)
     if (document.body.classList.contains("simple-ui") && window.speechSynthesis) {
       setTimeout(function () {
-        if ($("listenBtn") && !window.__agrovetAutoSpoke) {
-          window.__agrovetAutoSpoke = true;
+        if ($("listenBtn") && !window.__agroscanAutoSpoke) {
+          window.__agroscanAutoSpoke = true;
           $("listenBtn").click();
         }
       }, 900);
@@ -310,11 +310,11 @@
     document.addEventListener("langchange", function () {
       renderSeasonTip();
       renderScoutReminder();
-      if (window.AgrovetI18n) window.AgrovetI18n.applyI18n();
+      if (window.AgroScanI18n) window.AgroScanI18n.applyI18n();
     });
   }
 
-  window.AgrovetFarmerUX = {
+  window.AgroScanFarmerUX = {
     init: init,
     onDiagnosis: onDiagnosis,
     showOfflineAdvice: showOfflineAdvice,

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signing out — AgroScan</title>
-  <link rel="icon" href="/static/AgroVet_logo-main.png" type="image/png" />
+  <link rel="icon" href="/static/AgroScan_logo-main.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,14 +24,14 @@
   <script src="/static/auth.js?v=11"></script>
   <script>
     (function () {
-      var s = window.AgrovetAuth && window.AgrovetAuth.getSession();
+      var s = window.AgroScanAuth && window.AgroScanAuth.getSession();
       if (s && s.token) {
         var x = new XMLHttpRequest();
-        x.open("POST", (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE || "") + "/api/auth/logout", true);
+        x.open("POST", (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE || "") + "/api/auth/logout", true);
         x.setRequestHeader("Authorization", "Bearer " + s.token);
         x.send();
       }
-      if (window.AgrovetAuth) window.AgrovetAuth.clearSession();
+      if (window.AgroScanAuth) window.AgroScanAuth.clearSession();
       setTimeout(function () { window.location.href = "/login"; }, 1200);
     })();
   </script>

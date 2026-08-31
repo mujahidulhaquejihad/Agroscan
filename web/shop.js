@@ -1,11 +1,11 @@
 /* AgroScan shop: browse → cart → checkout (ecommerce-style, ES5) */
 (function () {
   var API = "";
-  if (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) {
-    API = window.AGROVET_CONFIG.API_BASE;
+  if (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) {
+    API = window.AGROSCAN_CONFIG.API_BASE;
   }
 
-  var CART_KEY = "agrovet_cart";
+  var CART_KEY = "agroscan_cart";
   var loc = { district: "", upazila: "", lat: null, lng: null };
   var cart = [];
   var productCache = {};
@@ -21,11 +21,11 @@
   function $(id) { return document.getElementById(id); }
 
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
 
   function isBn() {
-    var lang = window.AgrovetI18n ? window.AgrovetI18n.lang : "en";
+    var lang = window.AgroScanI18n ? window.AgroScanI18n.lang : "en";
     return String(lang || "").indexOf("bn") === 0;
   }
 
@@ -96,7 +96,7 @@
   }
 
   function getSession() {
-    try { return JSON.parse(localStorage.getItem("agrovet_session") || "null"); }
+    try { return JSON.parse(localStorage.getItem("agroscan_session") || "null"); }
     catch (e) { return null; }
   }
 
@@ -115,7 +115,7 @@
   }
 
   function isBn() {
-    var lang = (window.AgrovetI18n && window.AgrovetI18n.lang) || "bn";
+    var lang = (window.AgroScanI18n && window.AgroScanI18n.lang) || "bn";
     return String(lang).indexOf("bn") === 0;
   }
 
@@ -726,7 +726,7 @@
       var u = data.user || {};
       var s = getSession() || {};
       s.user = u;
-      try { localStorage.setItem("agrovet_session", JSON.stringify(s)); } catch (e) {}
+      try { localStorage.setItem("agroscan_session", JSON.stringify(s)); } catch (e) {}
       profileLoaded = true;
       setFormValues({
         name: u.name || "",
@@ -846,7 +846,7 @@
       }, function (data) {
         var s = getSession() || {};
         if (data.user) s.user = data.user;
-        try { localStorage.setItem("agrovet_session", JSON.stringify(s)); } catch (e) {}
+        try { localStorage.setItem("agroscan_session", JSON.stringify(s)); } catch (e) {}
         place();
       }, function () { place(); }, token);
     } else {
@@ -1088,7 +1088,7 @@
     if (isLoggedIn()) refreshProfile();
   }
 
-  window.AgrovetShop = {
+  window.AgroScanShop = {
     init: init,
     recommendForDisease: loadRecommendations,
     addToCart: function (id, qty) { addToCart(id, qty, false); },

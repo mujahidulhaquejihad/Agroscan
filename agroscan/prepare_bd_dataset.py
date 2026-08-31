@@ -4,8 +4,8 @@ Usage (from project root):
 
     python -m pip install datasets huggingface_hub
     huggingface-cli login          # after accepting terms on the Hub page
-    python -m agrovet.prepare_bd_dataset info
-    python -m agrovet.prepare_bd_dataset download
+    python -m agroscan.prepare_bd_dataset info
+    python -m agroscan.prepare_bd_dataset download
 
 The dataset is gated:
 https://huggingface.co/datasets/Saon110/bd-crop-vegetable-plant-disease-dataset

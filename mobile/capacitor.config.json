@@ -5,7 +5,6 @@
   "server": {
     "androidScheme": "https",
     "allowNavigation": [
-      "agrovet.mujahidulhaquejihad.com",
       "agroscan.mujahidulhaquejihad.com",
       "*.mujahidulhaquejihad.com"
     ]

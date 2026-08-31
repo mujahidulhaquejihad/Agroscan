@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from agrovet.config import SHOP_DB_PATH
+from agroscan.config import SHOP_DB_PATH
 
 ORDER_STATUSES = ("pending", "confirmed", "processing", "shipped", "delivered", "cancelled")
 PRODUCT_CATEGORIES = ("pesticide", "medicine", "seed", "fertilizer", "equipment")
@@ -243,7 +243,7 @@ def list_upazilas(district: str = "") -> List[dict]:
         out = [_row_dict(r) for r in rows]
         return _enrich_upazila_bn(out)
     try:
-        from agrovet.bd_data import upazilas as pack_upazilas
+        from agroscan.bd_data import upazilas as pack_upazilas
 
         out = []
         for u in pack_upazilas():
@@ -271,7 +271,7 @@ def _enrich_upazila_bn(rows: List[dict]) -> List[dict]:
     if not need:
         return rows
     try:
-        from agrovet.bd_data import upazilas as pack_upazilas
+        from agroscan.bd_data import upazilas as pack_upazilas
 
         dmap = {}
         umap = {}
@@ -438,7 +438,7 @@ def product_with_suppliers(product_id: int, district: str = "", upazila: str = "
 def recommended_products_for_disease(disease_class: str, district: str = "", upazila: str = "") -> List[dict]:
     skus: List[str] = []
     try:
-        from agrovet.bd_data import find_treatment
+        from agroscan.bd_data import find_treatment
 
         rec = find_treatment(class_name=disease_class)
         if rec:
@@ -472,7 +472,7 @@ def recommended_products_for_disease(disease_class: str, district: str = "", upa
             out.append(item)
         if out:
             return out
-        from agrovet.knowledge import advice_for
+        from agroscan.knowledge import advice_for
 
         info = advice_for(disease_class, "en") or {}
         tp = info.get("treatment_plan") or {}

@@ -1,15 +1,15 @@
 /* Optional extras: i18n, resources, drag-drop, chatbot */
 (function () {
-  var cfg = window.AGROVET_CONFIG || {};
+  var cfg = window.AGROSCAN_CONFIG || {};
   var API = cfg.API_BASE || "";
   function $(id) { return document.getElementById(id); }
 
   function init() {
     try {
-      if (window.AgrovetI18n) {
-        window.AgrovetI18n.applyI18n();
+      if (window.AgroScanI18n) {
+        window.AgroScanI18n.applyI18n();
         var langBtn = $("langToggle");
-        if (langBtn) langBtn.onclick = function () { window.AgrovetI18n.toggleLang(); };
+        if (langBtn) langBtn.onclick = function () { window.AgroScanI18n.toggleLang(); };
       }
       document.addEventListener("langchange", function () {
         if (govLinks.length) paintGovGrid();
@@ -31,7 +31,7 @@
   var govFilter = "all";
   var govQuery = "";
 
-  function i18n() { return window.AgrovetI18n; }
+  function i18n() { return window.AgroScanI18n; }
 
   function catLabel(cat) {
     var key = "resources_cat_" + (cat || "ministry");
@@ -153,9 +153,9 @@
     dropzone.ondrop = function (e) {
       e.preventDefault();
       dropzone.className = "uploader";
-      if (e.dataTransfer && e.dataTransfer.files[0] && window.agrovetPickFile) {
+      if (e.dataTransfer && e.dataTransfer.files[0] && window.agroscanPickFile) {
         var inp = $("fileInput");
-        if (inp) { inp.files = e.dataTransfer.files; window.agrovetPickFile(inp); }
+        if (inp) { inp.files = e.dataTransfer.files; window.agroscanPickFile(inp); }
       }
     };
   }
@@ -201,7 +201,7 @@
   }
 
   function tChat(key, vars) {
-    if (window.AgrovetI18n && window.AgrovetI18n.t) return window.AgrovetI18n.t(key, vars);
+    if (window.AgroScanI18n && window.AgroScanI18n.t) return window.AgroScanI18n.t(key, vars);
     return key;
   }
 
@@ -344,8 +344,8 @@
 
     if (best.prediction) {
       window.AgroScanLastDisease = best.prediction;
-      if (window.AgrovetShop) {
-        try { window.AgrovetShop.recommendForDisease(best.prediction); } catch (e) {}
+      if (window.AgroScanShop) {
+        try { window.AgroScanShop.recommendForDisease(best.prediction); } catch (e) {}
       }
     } else if (data.class_name) {
       window.AgroScanLastDisease = data.class_name;

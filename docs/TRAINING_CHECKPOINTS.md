@@ -16,32 +16,32 @@ Optional epoch-tagged copies (when `--ckpt-every N` and `N > 1`):
 Start fresh:
 
 ```bash
-python -m agrovet.train_all
+python -m agroscan.train_all
 # or one stage:
-python -m agrovet.train_leaf
-python -m agrovet.train_crop
-python -m agrovet.train_disease --arch efficientnet_b3
+python -m agroscan.train_leaf
+python -m agroscan.train_crop
+python -m agroscan.train_disease --arch efficientnet_b3
 ```
 
 Stop anytime (Ctrl+C). Resume from the last finished epoch:
 
 ```bash
-python -m agrovet.train_all --resume
-python -m agrovet.train_leaf --resume
-python -m agrovet.train_crop --resume
-python -m agrovet.train_disease --arch efficientnet_b3 --resume
+python -m agroscan.train_all --resume
+python -m agroscan.train_leaf --resume
+python -m agroscan.train_crop --resume
+python -m agroscan.train_disease --arch efficientnet_b3 --resume
 ```
 
 Keep extra snapshots every 5 epochs (in addition to the rolling `.train.pt`):
 
 ```bash
-python -m agrovet.train_disease --arch resnet50 --resume --ckpt-every 5 --epochs 40
+python -m agroscan.train_disease --arch resnet50 --resume --ckpt-every 5 --epochs 40
 ```
 
 Skip finished stages when restarting the full pipeline:
 
 ```bash
-python -m agrovet.train_all --resume --skip-leaf --skip-crop
+python -m agroscan.train_all --resume --skip-leaf --skip-crop
 ```
 
 ## Notes

@@ -7,7 +7,7 @@ from __future__ import annotations
 
 # # AgroScan Model Comparison
 # 
-# This notebook mirrors `Model_Comparison.ipynb` (PlantVillage / Colab) for the **Agrovet V2** local datasets and models.
+# This notebook mirrors `Model_Comparison.ipynb` (PlantVillage / Colab) for the **AgroScan** local datasets and models.
 # 
 # **Datasets (already split, ImageFolder):**
 # - Level 1 `Datasets/leaf_gate/{train,valid,test}` — leaf vs non-leaf
@@ -15,7 +15,7 @@ from __future__ import annotations
 # - Level 3 `Datasets/{train,valid,test}` — **123** disease classes (~241k / 30k / 30k)
 # 
 # **Level-3 models compared:** EfficientNet-B3, ResNet-50, DenseNet-121  
-# (same ensemble as `agrovet/config.py`). Training uses focal loss (γ=2) and a class-balanced sampler.
+# (same ensemble as `agroscan/config.py`). Training uses focal loss (γ=2) and a class-balanced sampler.
 # 
 # Outputs save under `models/Model_Comparison/`. Full training on ~241k images takes many hours on an RTX 3060 — set `RUN_TRAINING = False` to only rebuild plots from saved checkpoints.
 

@@ -2,7 +2,7 @@
 
 Run once after Datasets/{train,valid,test} exist:
 
-    python -m agrovet.prepare_hierarchy
+    python -m agroscan.prepare_hierarchy
 """
 from __future__ import annotations
 

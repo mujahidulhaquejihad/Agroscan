@@ -6,7 +6,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from agrovet.config import AGROSCAN_PACK_DIR
+from agroscan.config import AGROSCAN_PACK_DIR
 
 
 def _read(name: str):
@@ -124,7 +124,7 @@ def _norm(name: str) -> str:
 def find_treatment(class_name: str = "", kb_key: str = "") -> Optional[dict]:
     if class_name:
         try:
-            from agrovet.label_map import merge_class_name
+            from agroscan.label_map import merge_class_name
 
             class_name = merge_class_name(class_name)
         except Exception:

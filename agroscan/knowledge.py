@@ -334,7 +334,7 @@ def advice_for_key(
     land_unit: str = "decimal",
 ) -> Optional[dict]:
     try:
-        from agrovet.treatment_detail import advice_from_pack
+        from agroscan.treatment_detail import advice_from_pack
 
         pack = advice_from_pack(kb_key, lang, land_size=land_size, land_unit=land_unit)
         if pack:
@@ -346,7 +346,7 @@ def advice_for_key(
     info = dict(DISEASE_INFO[kb_key])
     info["matched_key"] = kb_key
     try:
-        from agrovet.treatment_detail import treatment_plan_for
+        from agroscan.treatment_detail import treatment_plan_for
 
         tp = treatment_plan_for(kb_key, lang, land_size=land_size, land_unit=land_unit)
         if tp:
@@ -371,7 +371,7 @@ def advice_for(
 ) -> Optional[dict]:
     """Return KB info for a full class name like 'Tomato___Late_blight'."""
     try:
-        from agrovet.treatment_detail import advice_from_pack
+        from agroscan.treatment_detail import advice_from_pack
 
         pack = advice_from_pack(class_name, lang, land_size=land_size, land_unit=land_unit)
         if pack:
@@ -389,8 +389,8 @@ def advice_for(
 def all_diseases(lang: str = "bn") -> Dict[str, dict]:
     out: Dict[str, dict] = {}
     try:
-        from agrovet.bd_data import treatments
-        from agrovet.treatment_detail import advice_from_pack
+        from agroscan.bd_data import treatments
+        from agroscan.treatment_detail import advice_from_pack
 
         for rec in treatments():
             name = rec.get("class_name") or rec.get("kb_key")
@@ -487,8 +487,8 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
     """Score every pack disease against the user message."""
     out: List[dict] = []
     try:
-        from agrovet.bd_data import treatments
-        from agrovet.treatment_detail import advice_from_pack
+        from agroscan.bd_data import treatments
+        from agroscan.treatment_detail import advice_from_pack
     except Exception:
         return out
 
@@ -648,7 +648,7 @@ def resolve_disease_query(
       {"status": "clarify", "reply", "suggestions", "options"}
       {"status": "none"}
     """
-    from agrovet.treatment_detail import advice_from_pack
+    from agroscan.treatment_detail import advice_from_pack
 
     lang = lang or "en"
     if confirm_class:
@@ -735,9 +735,9 @@ def chatbot_reply(
     if not msg and not confirm_class:
         return {
             "reply": (
-                "হাই! আমি এগ্রোভেট সহকারী। পাতার রোগ, চিকিৎসা বা অ্যাপ ব্যবহার সম্পর্কে জিজ্ঞাসা করুন।"
+                "হাই! আমি এগ্রোস্ক্যান সহকারী। পাতার রোগ, চিকিৎসা বা অ্যাপ ব্যবহার সম্পর্কে জিজ্ঞাসা করুন।"
                 if bn
-                else "Hi! I'm the AgroVet assistant. Ask me about a plant disease, treatment, or how to use the app."
+                else "Hi! I'm the AgroScan assistant. Ask me about a plant disease, treatment, or how to use the app."
             ),
             "suggestions": suggestions,
         }

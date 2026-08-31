@@ -10,8 +10,8 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from agrovet.bd_data import treatments
-from agrovet.config import AGROSCAN_PACK_DIR
+from agroscan.bd_data import treatments
+from agroscan.config import AGROSCAN_PACK_DIR
 
 OUT_NAME = "rag_disease_docs.json"
 

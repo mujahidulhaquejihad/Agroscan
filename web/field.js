@@ -1,15 +1,15 @@
 /* My Field: plots + scan history, spray/PHI calendar, offline diagnosis pack */
 (function () {
-  var PLOTS_KEY = "agrovet_plots_v1";
-  var ACTIVE_PLOT_KEY = "agrovet_active_plot_v1";
-  var SPRAYS_KEY = "agrovet_sprays_v1";
-  var PACK_KEY = "agrovet_offline_pack_v1";
+  var PLOTS_KEY = "agroscan_plots_v1";
+  var ACTIVE_PLOT_KEY = "agroscan_active_plot_v1";
+  var SPRAYS_KEY = "agroscan_sprays_v1";
+  var PACK_KEY = "agroscan_offline_pack_v1";
   var PACK_MAX = 12;
   var DAY_MS = 24 * 60 * 60 * 1000;
 
   function $(id) { return document.getElementById(id); }
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
   function uid() {
     return "f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -159,7 +159,7 @@
           date: fmtDate(entry.harvest_ok_at),
           crop: entry.title || entry.disease || ""
         }),
-        tag: "agrovet-phi-" + entry.id
+        tag: "agroscan-phi-" + entry.id
       });
     } catch (e) {}
   }
@@ -183,7 +183,7 @@
     setPack(pack);
     // Keep single last-advice key in sync for existing offline banner button
     try {
-      localStorage.setItem("agrovet_last_advice_v1", JSON.stringify(pack[0]));
+      localStorage.setItem("agroscan_last_advice_v1", JSON.stringify(pack[0]));
     } catch (e) {}
   }
 
@@ -375,7 +375,7 @@
     if (sizeEl) sizeEl.value = String(plot.land_size);
     if (unitEl) unitEl.value = plot.land_unit || "decimal";
     try {
-      localStorage.setItem("agrovet_land", JSON.stringify({
+      localStorage.setItem("agroscan_land", JSON.stringify({
         size: Number(plot.land_size),
         unit: plot.land_unit || "decimal"
       }));
@@ -685,7 +685,7 @@
     });
   }
 
-  window.AgrovetField = {
+  window.AgroScanField = {
     init: init,
     onDiagnosis: onDiagnosis,
     renderAll: renderAll,

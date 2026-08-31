@@ -1,4 +1,4 @@
-# AgroVet Android (Capacitor)
+# AgroScan Android (Capacitor)
 
 Package id: `com.mujahidulhaquejihad.agroscan`  
 API host: `https://agroscan.mujahidulhaquejihad.com`

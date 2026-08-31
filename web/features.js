@@ -1,9 +1,9 @@
-// Extra AgroVet features: dark mode, history, weather/spraying, crop calendar,
+// Extra AgroScan features: dark mode, history, weather/spraying, crop calendar,
 // daily tip, disease library, text-to-speech, downloadable report.
 (function () {
-  const T = () => window.AgrovetI18n;
+  const T = () => window.AgroScanI18n;
   const $ = (id) => document.getElementById(id);
-  const API = (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) || "";
+  const API = (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) || "";
 
   function bind(id, fn) {
     const el = $(id);
@@ -11,7 +11,7 @@
   }
 
   /* ---------------- Dark mode ---------------- */
-  const THEME_KEY = "agrovet_theme";
+  const THEME_KEY = "agroscan_theme";
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     const b = $("darkToggle");
@@ -27,7 +27,7 @@
   }
 
   /* ---------------- Diagnosis history (sidebar + Photo page) ---------------- */
-  const HKEY = "agrovet_history";
+  const HKEY = "agroscan_history";
   const HMAX = 15;
   const getHistory = () => {
     try {
@@ -176,7 +176,7 @@
 
   function findUserFeedback(disease, time) {
     try {
-      const log = JSON.parse(localStorage.getItem("agrovet_feedback_log_v1") || "[]");
+      const log = JSON.parse(localStorage.getItem("agroscan_feedback_log_v1") || "[]");
       if (!Array.isArray(log) || !disease) return null;
       const windowMs = 2 * 60 * 60 * 1000;
       for (let i = log.length - 1; i >= 0; i--) {
@@ -504,8 +504,8 @@
     const shopBtn = $("photoHistShop");
     if (shopBtn) {
       shopBtn.onclick = () => {
-        if (window.AgrovetShop && window.AgrovetShop.recommendForDisease) {
-          window.AgrovetShop.recommendForDisease(e.disease || "");
+        if (window.AgroScanShop && window.AgroScanShop.recommendForDisease) {
+          window.AgroScanShop.recommendForDisease(e.disease || "");
         }
         if (window.agroscanShowPane) window.agroscanShowPane("shop");
       };
@@ -677,7 +677,7 @@
     const blob = new Blob([text], { type: "text/plain" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "agrovet-diagnosis.txt";
+    a.download = "agroscan-diagnosis.txt";
     a.click();
   }
   async function shareReport() {
@@ -763,8 +763,8 @@
         </div>`;
       cult.querySelectorAll(".farm-shop-add").forEach((btn) => {
         btn.addEventListener("click", () => {
-          if (window.AgrovetShop && window.AgrovetShop.addSku) {
-            window.AgrovetShop.addSku(btn.getAttribute("data-sku"));
+          if (window.AgroScanShop && window.AgroScanShop.addSku) {
+            window.AgroScanShop.addSku(btn.getAttribute("data-sku"));
           }
           location.hash = "#shop";
           if (window.agroscanShowPane) window.agroscanShowPane("shop");
@@ -854,11 +854,11 @@
         if (wb && wb.querySelector(".wx-grid")) loadWeather();
       });
     } catch (err) {
-      console.error("AgrovetFeatures init error:", err);
+      console.error("AgroScanFeatures init error:", err);
     }
   }
 
-  window.AgrovetFeatures = {
+  window.AgroScanFeatures = {
     onResult,
     init,
     speakAdvice,

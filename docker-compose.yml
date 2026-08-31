@@ -1,7 +1,7 @@
 services:
-  agrovet:
+  agroscan:
     build: .
-    container_name: agrovet
+    container_name: agroscan
     restart: unless-stopped
     ports:
       - "127.0.0.1:8000:8000"

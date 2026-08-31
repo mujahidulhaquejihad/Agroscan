@@ -2,8 +2,8 @@
 
 Usage (from project root):
 
-    python -m agrovet.prepare_bd_leaf_dataset
-    python -m agrovet.prepare_bd_leaf_dataset info
+    python -m agroscan.prepare_bd_leaf_dataset
+    python -m agroscan.prepare_bd_leaf_dataset info
 """
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def main():
                 print(f"  {name}: {count:,}")
             print(f"Total: {sum(stats.values()):,}")
         else:
-            print("Not extracted yet. Run: python -m agrovet.prepare_bd_leaf_dataset extract")
+            print("Not extracted yet. Run: python -m agroscan.prepare_bd_leaf_dataset extract")
         return
 
     ensure_bd_leaf_extracted(force=args.force)

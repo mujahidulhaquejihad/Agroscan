@@ -15,7 +15,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from agrovet.config import AGROSCAN_PACK_DIR
+from agroscan.config import AGROSCAN_PACK_DIR
 
 SECTION_ORDER = ("overview", "symptoms", "prevention", "treatment", "process")
 
@@ -50,7 +50,7 @@ def _load_pack_docs() -> List[dict]:
     path = Path(AGROSCAN_PACK_DIR) / "rag_disease_docs.json"
     if not path.exists():
         try:
-            from agrovet.rag_build import build_all
+            from agroscan.rag_build import build_all
 
             build_all()
         except Exception:

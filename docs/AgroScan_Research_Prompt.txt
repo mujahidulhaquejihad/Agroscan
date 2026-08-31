@@ -572,8 +572,8 @@ SUGGESTED RESEARCH ORDER
 HOW DEV TEAM WILL USE THIS DATA
 ================================================================================
 
-  - Import disease JSON into agrovet/treatment_detail.py and agrovet/knowledge.py
-  - Seed data/agrovet_shop.db (products, suppliers, equipment)
+  - Import disease JSON into agroscan/treatment_detail.py and agroscan/knowledge.py
+  - Seed data/agroscan_shop.db (products, suppliers, equipment)
   - Filter suppliers by user district / upazila / GPS location
   - Link: diagnosis -> recommended products -> cart -> order -> admin tracking
   - Farm planner uses crop profitability JSON to suggest crops + shop items

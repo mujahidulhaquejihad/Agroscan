@@ -1,13 +1,13 @@
-/* AgroVet auth: login, signup, guest, Google, session header UI */
+/* AgroScan auth: login, signup, guest, Google, session header UI */
 (function () {
-  var cfg = window.AGROVET_CONFIG || {};
+  var cfg = window.AGROSCAN_CONFIG || {};
   var API = cfg.API_BASE || "";
-  var KEY = "agrovet_session";
+  var KEY = "agroscan_session";
 
   function $(id) { return document.getElementById(id); }
 
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
 
   function getSession() {
@@ -231,7 +231,7 @@
     initGoogleButton("googleBtn");
   }
 
-  window.AgrovetAuth = {
+  window.AgroScanAuth = {
     getSession: getSession,
     setSession: setSession,
     clearSession: clearSession,

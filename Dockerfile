@@ -1,4 +1,4 @@
-# AgroVet V2 — API + web UI (production)
+# AgroScan — API + web UI (production)
 FROM python:3.11-slim-bookworm
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY backend ./backend
-COPY agrovet ./agrovet
+COPY agroscan ./agroscan
 COPY web ./web
 COPY models ./models
 

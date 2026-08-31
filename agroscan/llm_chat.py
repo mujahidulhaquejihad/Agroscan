@@ -115,8 +115,8 @@ def _kb_is_generic(reply: str, lang: str) -> bool:
 
 
 def _build_prompt(message: str, context_disease: Optional[str], lang: str) -> str:
-    from agrovet.knowledge import advice_for, resolve_disease_query
-    from agrovet.rag import retrieve
+    from agroscan.knowledge import advice_for, resolve_disease_query
+    from agroscan.rag import retrieve
 
     lang = (lang or "en").lower()
     if lang.startswith("bn"):
@@ -363,7 +363,7 @@ def chat_reply(
     confirm_class: Optional[str] = None,
 ) -> dict:
     """Pack/KB first for named diseases; Qwen only for open questions with RAG."""
-    from agrovet.knowledge import (
+    from agroscan.knowledge import (
         _format_pack_reply,
         _suggestions,
         chatbot_reply,
@@ -572,7 +572,7 @@ def generate_vision_feedback(
 
 def vision_scan_reply(predict_result: dict, lang: str = "bn") -> dict:
     """Pipeline: vision predict dict → status + farmer reply (Qwen when possible)."""
-    from agrovet.knowledge import _format_pack_reply, _suggestions, advice_for
+    from agroscan.knowledge import _format_pack_reply, _suggestions, advice_for
 
     lang = lang or "bn"
     sug_lang = "bn" if (lang or "").startswith("bn") else "en"

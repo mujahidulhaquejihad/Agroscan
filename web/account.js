@@ -1,11 +1,11 @@
 /* AgroScan account page: profile + order tracking */
 (function () {
-  var API = (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) || "";
+  var API = (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) || "";
   var STEPS = ["pending", "confirmed", "processing", "shipped", "delivered"];
 
   function $(id) { return document.getElementById(id); }
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
   function esc(s) {
     return String(s == null ? "" : s)
@@ -13,7 +13,7 @@
       .replace(/"/g, "&quot;");
   }
   function session() {
-    return window.AgrovetAuth ? window.AgrovetAuth.getSession() : null;
+    return window.AgroScanAuth ? window.AgroScanAuth.getSession() : null;
   }
   function token() {
     var s = session();
@@ -235,12 +235,12 @@
     xhr("PATCH", "/api/auth/profile", body, function (data) {
       var s = session() || {};
       if (data.user) s.user = data.user;
-      try { localStorage.setItem("agrovet_session", JSON.stringify(s)); } catch (err) {}
+      try { localStorage.setItem("agroscan_session", JSON.stringify(s)); } catch (err) {}
       fillProfile(data.user || Object.assign({}, savedProfile || {}, body));
       var viewMsg = $("profileViewMsg");
       viewMsg.textContent = T("account_saved");
       viewMsg.className = "account-msg ok";
-      if (window.AgrovetAuth && window.AgrovetAuth.renderHeader) window.AgrovetAuth.renderHeader();
+      if (window.AgroScanAuth && window.AgroScanAuth.renderHeader) window.AgroScanAuth.renderHeader();
     }, function (m) {
       msg.textContent = m;
       msg.className = "account-msg error";
@@ -291,7 +291,7 @@
       var u = data.user || {};
       var s = session() || {};
       s.user = u;
-      try { localStorage.setItem("agrovet_session", JSON.stringify(s)); } catch (e) {}
+      try { localStorage.setItem("agroscan_session", JSON.stringify(s)); } catch (e) {}
       fillProfile(u);
       loadOrders();
       var hash = (location.hash || "").replace(/^#/, "");

@@ -1,7 +1,7 @@
-const cfg = window.AGROVET_CONFIG || {};
+const cfg = window.AGROSCAN_CONFIG || {};
 const API = cfg.API_BASE || "";
 const $ = (id) => document.getElementById(id);
-const t = (k) => (window.AgrovetI18n ? window.AgrovetI18n.t(k) : k);
+const t = (k) => (window.AgroScanI18n ? window.AgroScanI18n.t(k) : k);
 let selectedFile = null;
 let lastDisease = null;
 let apiOnline = false;
@@ -26,10 +26,10 @@ function initApp() {
     const year = $("year");
     if (year) year.textContent = new Date().getFullYear();
 
-    if (window.AgrovetI18n) {
-      window.AgrovetI18n.applyI18n();
+    if (window.AgroScanI18n) {
+      window.AgroScanI18n.applyI18n();
       const langBtn = $("langToggle");
-      if (langBtn) langBtn.addEventListener("click", () => window.AgrovetI18n.toggleLang());
+      if (langBtn) langBtn.addEventListener("click", () => window.AgroScanI18n.toggleLang());
     }
 
     setStatusText("Checking server...");
@@ -40,7 +40,7 @@ function initApp() {
     setupChat();
     setupGoogle();
   } catch (err) {
-    console.error("AgroVet init error:", err);
+    console.error("AgroScan init error:", err);
     showOffline("Page error - hard refresh (Ctrl+Shift+R)");
   }
 }
@@ -177,7 +177,7 @@ function setupAnalyze() {
       try { data = await r.json(); } catch { data = {}; }
       if (!r.ok) throw new Error(apiDetail(data) || `Prediction failed (${r.status})`);
       render(data);
-      if (window.AgrovetFeatures) window.AgrovetFeatures.onResult(data, $("preview").src);
+      if (window.AgroScanFeatures) window.AgroScanFeatures.onResult(data, $("preview").src);
     } catch (err) {
       const msg = String(err.message || err);
       $("errorBox").innerHTML = msg.includes("Failed to fetch") || msg.includes("NetworkError")
@@ -192,7 +192,7 @@ function setupAnalyze() {
 }
 
 const pct = (x) => (x * 100).toFixed(1) + "%";
-const isBn = () => window.AgrovetI18n && window.AgrovetI18n.lang === "bn";
+const isBn = () => window.AgroScanI18n && window.AgroScanI18n.lang === "bn";
 
 function render(data) {
   $("results").classList.remove("hidden");

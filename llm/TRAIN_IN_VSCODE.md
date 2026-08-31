@@ -102,7 +102,7 @@ Folder should contain `adapter_model.safetensors` (or `.bin`) + `adapter_config.
 
 ```powershell
 python -c "
-from agrovet.llm_chat import chat_reply, llm_status
+from agroscan.llm_chat import chat_reply, llm_status
 print(llm_status())
 print(chat_reply('টমেটো লেট ব্লাইটে কী করব?', None, 'bn'))
 "
@@ -112,7 +112,7 @@ print(chat_reply('টমেটো লেট ব্লাইটে কী কর�
 
 ## Chat API + 6 GB server
 
-`/api/chat` is wired to LoRA + KB fallback (`agrovet/llm_chat.py`).
+`/api/chat` is wired to LoRA + KB fallback (`agroscan/llm_chat.py`).
 
 See **`llm/DEPLOY_6GB.md`** for GGUF / small-VPS options.
 

@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from typing import Dict, List, Optional
 
-from agrovet.bd_data import find_treatment, warning_box
-from agrovet.land_scale import (
+from agroscan.bd_data import find_treatment, warning_box
+from agroscan.land_scale import (
     followup_steps,
     land_summary,
     scale_chemical,

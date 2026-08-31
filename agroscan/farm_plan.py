@@ -168,7 +168,7 @@ def recommend_crops(
 
     pack_recs: List[Dict[str, Any]] = []
     try:
-        from agrovet.bd_data import crops as pack_crops
+        from agroscan.bd_data import crops as pack_crops
 
         district_l = (district or "").strip().lower()
         for row in pack_crops():
@@ -304,7 +304,7 @@ def cultivation_outline(crop_name: str, lang: str = "bn") -> Dict[str, Any]:
     name = crop_name.strip()
     bn = (lang or "en").startswith("bn")
     try:
-        from agrovet.bd_data import find_crop
+        from agroscan.bd_data import find_crop
 
         row = find_crop(name)
     except Exception:

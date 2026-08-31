@@ -1,17 +1,17 @@
-/* AgroVet core - ES5-safe (works in older browsers, no fetch/async required) */
+/* AgroScan core - ES5-safe (works in older browsers, no fetch/async required) */
 (function () {
   var API = "";
-  if (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) {
-    API = window.AGROVET_CONFIG.API_BASE;
+  if (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) {
+    API = window.AGROSCAN_CONFIG.API_BASE;
   }
 
   function $(id) { return document.getElementById(id); }
 
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
 
-  var LAND_KEY = "agrovet_land";
+  var LAND_KEY = "agroscan_land";
 
   function getLandInputs() {
     var sizeEl = $("adviceLandSize") || $("farmLandSize");
@@ -61,7 +61,7 @@
     var cls = window.AgroScanLastDisease;
     if (!cls) return;
     var land = saveLandInputs();
-    var lang = (window.AgrovetI18n && window.AgrovetI18n.lang) || "bn";
+    var lang = (window.AgroScanI18n && window.AgroScanI18n.lang) || "bn";
     var q = "/api/advice/" + encodeURIComponent(cls) +
       "?lang=" + encodeURIComponent(lang) +
       "&land_size=" + encodeURIComponent(land.size) +
@@ -248,7 +248,7 @@
           banner.className = "offline-banner";
           var urlEl = $("offlineApiUrl");
           if (urlEl) {
-            var base = (window.AGROVET_CONFIG && (window.AGROVET_CONFIG.API_BASE || window.AGROVET_CONFIG.PRODUCTION_API)) || "";
+            var base = (window.AGROSCAN_CONFIG && (window.AGROSCAN_CONFIG.API_BASE || window.AGROSCAN_CONFIG.PRODUCTION_API)) || "";
             urlEl.textContent = base || (window.location.origin || "");
           }
         }
@@ -257,7 +257,7 @@
     });
   }
 
-  window.agrovetPickFile = function (input) {
+  window.agroscanPickFile = function (input) {
     var file = input.files && input.files[0];
     var err = $("errorBox");
     if (err) err.className = "error hidden";
@@ -287,8 +287,8 @@
     }
 
     // Always offer leaf crop / auto-leaf after camera or gallery pick
-    if (window.AgrovetCrop) {
-      window.AgrovetCrop.open(file, function (cropped) {
+    if (window.AgroScanCrop) {
+      window.AgroScanCrop.open(file, function (cropped) {
         acceptFile(cropped || file);
         if (document.body.classList.contains("simple-ui") && selectedFile) {
           setTimeout(function () {
@@ -630,20 +630,20 @@
 
       if ($("adviceBody")) $("adviceBody").innerHTML = html;
       var orderBtn = $("orderMedsBtn");
-      if (orderBtn && window.AgrovetShop) {
+      if (orderBtn && window.AgroScanShop) {
         orderBtn.onclick = function () {
-          window.AgrovetShop.recommendForDisease(window.AgroScanLastDisease || "");
+          window.AgroScanShop.recommendForDisease(window.AgroScanLastDisease || "");
           if (window.agroscanShowPane) window.agroscanShowPane("shop");
           else location.hash = "#shop";
         };
       }
     }
 
-    if (window.AgrovetFeatures && window.AgrovetFeatures.onResult) {
-      window.AgrovetFeatures.onResult(data, $("preview") ? $("preview").src : "");
+    if (window.AgroScanFeatures && window.AgroScanFeatures.onResult) {
+      window.AgroScanFeatures.onResult(data, $("preview") ? $("preview").src : "");
     }
-    if (window.AgrovetFarmerUX && window.AgrovetFarmerUX.onDiagnosis) {
-      window.AgrovetFarmerUX.onDiagnosis(data);
+    if (window.AgroScanFarmerUX && window.AgroScanFarmerUX.onDiagnosis) {
+      window.AgroScanFarmerUX.onDiagnosis(data);
     }
     if (window.agroscanShowPane) {
       window.agroscanShowPane("diagnose", { focusResults: true });
@@ -660,9 +660,9 @@
   }
 
   function runAnalyze() {
-    window.__agrovetAutoSpoke = false;
-    if (window.AgrovetFeatures && window.AgrovetFeatures.closeHistoryView) {
-      window.AgrovetFeatures.closeHistoryView();
+    window.__agroscanAutoSpoke = false;
+    if (window.AgroScanFeatures && window.AgroScanFeatures.closeHistoryView) {
+      window.AgroScanFeatures.closeHistoryView();
     }
     if (!selectedFile || !apiOnline) {
       var err0 = $("errorBox");
@@ -690,14 +690,14 @@
       var extra = {
         land_size: String(land.size),
         land_unit: land.unit,
-        lang: (window.AgrovetI18n && window.AgrovetI18n.lang) || "bn"
+        lang: (window.AgroScanI18n && window.AgroScanI18n.lang) || "bn"
       };
       if (selectedCropOverride) extra.crop = selectedCropOverride;
       xhrPostFile(API + "/api/predict", uploadFile, function (data) {
         if (loader) loader.className = "loader hidden";
         renderResult(data);
-        if (window.AgrovetShop && data.stage3_disease && data.stage3_disease.best_answer) {
-          window.AgrovetShop.recommendForDisease(data.stage3_disease.best_answer.prediction || "");
+        if (window.AgroScanShop && data.stage3_disease && data.stage3_disease.best_answer) {
+          window.AgroScanShop.recommendForDisease(data.stage3_disease.best_answer.prediction || "");
         }
         checkStatus();
         updateAnalyzeBtn();
@@ -717,8 +717,8 @@
 
   function runAnalyzeWithCrop() {
     if (!selectedFile) return;
-    if (window.AgrovetCrop) {
-      window.AgrovetCrop.open(selectedFile, function (croppedFile) {
+    if (window.AgroScanCrop) {
+      window.AgroScanCrop.open(selectedFile, function (croppedFile) {
         selectedFile = croppedFile;
         var preview = $("preview");
         if (preview) {
@@ -737,7 +737,7 @@
     if (year) year.textContent = new Date().getFullYear();
 
     var fileInput = $("fileInput");
-    if (fileInput) fileInput.onchange = function () { window.agrovetPickFile(fileInput); };
+    if (fileInput) fileInput.onchange = function () { window.agroscanPickFile(fileInput); };
 
     var analyzeBtn = $("analyzeBtn");
     if (analyzeBtn) analyzeBtn.onclick = function (e) {
@@ -748,8 +748,8 @@
     var cropBtn = $("cropOnlyBtn");
     if (cropBtn) cropBtn.onclick = function () {
       if (!selectedFile) return;
-      if (window.AgrovetCrop) {
-        window.AgrovetCrop.open(selectedFile, function (f) {
+      if (window.AgroScanCrop) {
+        window.AgroScanCrop.open(selectedFile, function (f) {
           selectedFile = f;
           var preview = $("preview");
           if (preview) { preview.src = URL.createObjectURL(f); preview.style.display = "block"; }

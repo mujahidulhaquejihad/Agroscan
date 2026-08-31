@@ -1,8 +1,8 @@
 /* Leaf crop editor: 4 corners + auto leaf crop (ES5) */
 (function () {
   var API = "";
-  if (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) {
-    API = window.AGROVET_CONFIG.API_BASE;
+  if (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) {
+    API = window.AGROSCAN_CONFIG.API_BASE;
   }
 
   var state = {
@@ -19,7 +19,7 @@
   function $(id) { return document.getElementById(id); }
 
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
 
   function setBusy(on) {
@@ -296,7 +296,7 @@
     if (state.open) refreshLabels();
   });
 
-  window.AgrovetCrop = {
+  window.AgroScanCrop = {
     open: open,
     close: close,
     skip: function (file, done) { if (done) done(file); }

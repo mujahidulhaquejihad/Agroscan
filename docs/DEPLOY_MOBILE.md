@@ -9,7 +9,7 @@ Production hostname: **https://agroscan.mujahidulhaquejihad.com**
 Copy the project to the server (include `models/*.pt`).
 
 ```bash
-cd ~/agrovet   # or your project path
+cd ~/agroscan   # or your project path
 docker compose up -d --build
 docker compose logs -f
 ```

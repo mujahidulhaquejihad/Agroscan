@@ -165,7 +165,7 @@
     <div class="warn"><strong style="font-size:11px">Safety net</strong><div class="tiny">Prompt: use only retrieved guides, never mix crops, else say unsure + call 16123. Vision text rejected if repetitive.</div></div>
   </div>
 
-  <footer class="foot"><span>AgroScan / AgroVet V2 · I:\Agroscan</span><span>Page 1 of 5 · System map</span></footer>
+  <footer class="foot"><span>AgroScan / AgroScan · I:\Agroscan</span><span>Page 1 of 5 · System map</span></footer>
 </section>
 
 <!-- PAGE 2 -->
@@ -175,7 +175,7 @@
       <div class="kicker">Pipeline A</div>
       <h1>Vision scan — three levels, then farmer wording</h1>
     </div>
-    <div class="meta">agrovet/infer.py · llm_chat.vision_scan_reply<br/>POST /api/predict &nbsp; POST /api/chat/vision</div>
+    <div class="meta">agroscan/infer.py · llm_chat.vision_scan_reply<br/>POST /api/predict &nbsp; POST /api/chat/vision</div>
   </header>
 
   <div class="flow" style="margin-bottom:8px">
@@ -230,7 +230,7 @@
       <div class="kicker">Pipeline B</div>
       <h1>Chat router — pack is the product, Qwen is overflow</h1>
     </div>
-    <div class="meta">agrovet/llm_chat.chat_reply<br/>agrovet/knowledge.resolve_disease_query</div>
+    <div class="meta">agroscan/llm_chat.chat_reply<br/>agroscan/knowledge.resolve_disease_query</div>
   </header>
 
   <div class="row" style="margin-bottom:8px">
@@ -288,7 +288,7 @@
       <div class="kicker">Retrieval</div>
       <h1>RAG pipeline — lexical TF-IDF over the Bangladesh pack</h1>
     </div>
-    <div class="meta">agrovet/rag_build.py · agrovet/rag.py<br/>data/agroscan/rag_disease_docs.json</div>
+    <div class="meta">agroscan/rag_build.py · agroscan/rag.py<br/>data/agroscan/rag_disease_docs.json</div>
   </header>
 
   <div class="flow" style="margin-bottom:8px">
@@ -333,7 +333,7 @@
   <div class="grid3">
     <div class="card"><h3>Qwen’s job in RAG</h3><div class="tiny">Generation only. It rewrites the retrieved sections into a farmer reply. It does not search. If snippets are empty, the prompt orders it to say it is unsure.</div></div>
     <div class="card"><h3>CPU vs GPU</h3><div class="tiny">Retrieval is CPU sklearn and always on. Qwen needs CUDA in auto mode (AGROSCAN_LLM_ENABLED=auto). Docker image is CPU PyTorch — LLM likely stays off there.</div></div>
-    <div class="card"><h3>Rebuild</h3><div class="tiny">python -m agrovet.rag_build writes rag_disease_docs.json. clear_index_cache() drops the in-memory TF-IDF matrix.</div></div>
+    <div class="card"><h3>Rebuild</h3><div class="tiny">python -m agroscan.rag_build writes rag_disease_docs.json. clear_index_cache() drops the in-memory TF-IDF matrix.</div></div>
   </div>
   <footer class="foot"><span>Index lives in process memory — restart the API after rebuilding the JSON</span><span>Page 4 of 5 · RAG</span></footer>
 </section>
@@ -345,7 +345,7 @@
       <div class="kicker">Generation and honesty</div>
       <h1>Qwen serving vs training — and how results actually land</h1>
     </div>
-    <div class="meta">agrovet/llm_chat.py · llm/train_lora.py<br/>llm_data/adapters/</div>
+    <div class="meta">agroscan/llm_chat.py · llm/train_lora.py<br/>llm_data/adapters/</div>
   </header>
 
   <div class="grid2" style="margin-bottom:8px">

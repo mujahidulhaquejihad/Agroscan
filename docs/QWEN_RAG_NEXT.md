@@ -2,8 +2,8 @@
 
 You already have most of the stack:
 
-- Chat API loads **Qwen2.5-3B-Instruct** (`agrovet/llm_chat.py`)
-- In-app **TF-IDF RAG** over disease guides / knowledge (`agrovet/rag.py`)
+- Chat API loads **Qwen2.5-3B-Instruct** (`agroscan/llm_chat.py`)
+- In-app **TF-IDF RAG** over disease guides / knowledge (`agroscan/rag.py`)
 - LoRA trainer with resume (`llm/train_lora.py`) — currently oriented to **1.5B** adapters under `llm_data/adapters/`
 
 Do this **before** the APK.

@@ -1,5 +1,5 @@
-/* AgroVet PWA service worker — cache app shell; always network for API. */
-const CACHE = "agrovet-shell-v2";
+/* AgroScan PWA service worker — cache app shell; always network for API. */
+const CACHE = "agroscan-shell-v2";
 const SHELL = [
   "/",
   "/static/styles.css?v=47",
@@ -13,7 +13,7 @@ const SHELL = [
   "/static/shop.js?v=14",
   "/static/mobile.js?v=25",
   "/static/pwa.js?v=21",
-  "/static/AgroVet_logo-main.png",
+  "/static/AgroScan_logo-main.png",
   "/static/icons/icon-192.png",
   "/static/icons/icon-512.png",
   "/static/manifest.json",

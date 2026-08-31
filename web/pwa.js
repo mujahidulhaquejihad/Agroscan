@@ -11,7 +11,7 @@
   }
 
   function dismissKey() {
-    return "agrovet_pwa_dismissed";
+    return "agroscan_pwa_dismissed";
   }
 
   function hideBanner() {

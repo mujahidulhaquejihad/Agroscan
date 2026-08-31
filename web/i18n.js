@@ -990,7 +990,7 @@ const I18N = {
   },
 };
 
-let currentLang = localStorage.getItem("agrovet_lang") || "bn";
+let currentLang = localStorage.getItem("agroscan_lang") || "bn";
 
 function t(key, vars) {
   let s = (I18N[currentLang] && I18N[currentLang][key]) || I18N.en[key] || key;
@@ -1049,11 +1049,11 @@ function applyI18n() {
 
 function toggleLang() {
   currentLang = currentLang === "en" ? "bn" : "en";
-  localStorage.setItem("agrovet_lang", currentLang);
+  localStorage.setItem("agroscan_lang", currentLang);
   applyI18n();
 }
 
-window.AgrovetI18n = { t, applyI18n, toggleLang, govField, emField, govKey, get lang() { return currentLang; } };
+window.AgroScanI18n = { t, applyI18n, toggleLang, govField, emField, govKey, get lang() { return currentLang; } };
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", applyI18n);

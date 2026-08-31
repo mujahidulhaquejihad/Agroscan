@@ -1,4 +1,4 @@
-// AgroVet V2 web config.
+// AgroScan web config.
 (function () {
   // Must match the hostname you open in the browser (Cloudflare Tunnel).
   var PRODUCTION_API = "https://agroscan.mujahidulhaquejihad.com";
@@ -35,7 +35,7 @@
     return "";
   }
 
-  window.AGROVET_CONFIG = {
+  window.AGROSCAN_CONFIG = {
     API_BASE: apiBase(),
     PRODUCTION_API: PRODUCTION_API,
     // Google OAuth Web Client ID (Cloud Console → Credentials).

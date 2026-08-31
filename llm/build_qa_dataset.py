@@ -61,10 +61,10 @@ def _clean_pair(instruction: str, output: str, source: str) -> dict | None:
 
 
 def _pairs_from_disease_guides() -> list[dict]:
-    from agrovet.disease_guides import DISEASE_GUIDES
-    from agrovet.disease_guides_bn import DISEASE_GUIDES_BN
-    from agrovet.knowledge import DISEASE_INFO
-    from agrovet.knowledge_bn import DISEASE_INFO_BN
+    from agroscan.disease_guides import DISEASE_GUIDES
+    from agroscan.disease_guides_bn import DISEASE_GUIDES_BN
+    from agroscan.knowledge import DISEASE_INFO
+    from agroscan.knowledge_bn import DISEASE_INFO_BN
 
     rows: list[dict] = []
     templates_en = [
@@ -134,7 +134,7 @@ def _pairs_from_disease_guides() -> list[dict]:
 
 
 def _pairs_from_farm_plan() -> list[dict]:
-    from agrovet.farm_plan import (
+    from agroscan.farm_plan import (
         MULTICROP,
         SEASON_META,
         cultivation_outline,

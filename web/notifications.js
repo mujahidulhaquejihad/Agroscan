@@ -1,16 +1,16 @@
 /* Farmer notifications: pack news + local field/PHI alerts */
 (function () {
-  var READ_KEY = "agrovet_news_read_v1";
-  var CACHE_KEY = "agrovet_news_cache_v1";
-  var cfg = window.AGROVET_CONFIG || {};
+  var READ_KEY = "agroscan_news_read_v1";
+  var CACHE_KEY = "agroscan_news_cache_v1";
+  var cfg = window.AGROSCAN_CONFIG || {};
   var API = cfg.API_BASE || "";
 
   function $(id) { return document.getElementById(id); }
   function T(key, vars) {
-    return window.AgrovetI18n ? window.AgrovetI18n.t(key, vars) : key;
+    return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
   function isBn() {
-    var lang = window.AgrovetI18n ? window.AgrovetI18n.lang : "bn";
+    var lang = window.AgroScanI18n ? window.AgroScanI18n.lang : "bn";
     return String(lang || "").indexOf("bn") === 0;
   }
   function esc(s) {
@@ -55,7 +55,7 @@
 
     // PHI / spray alerts from Field module
     try {
-      var sprays = JSON.parse(localStorage.getItem("agrovet_sprays_v1") || "[]");
+      var sprays = JSON.parse(localStorage.getItem("agroscan_sprays_v1") || "[]");
       var i;
       for (i = 0; i < (sprays || []).length; i++) {
         var s = sprays[i];
@@ -90,7 +90,7 @@
 
     // Scout reminder
     try {
-      var last = parseInt(localStorage.getItem("agrovet_last_scout_v1") || "0", 10) || 0;
+      var last = parseInt(localStorage.getItem("agroscan_last_scout_v1") || "0", 10) || 0;
       var week = 7 * 24 * 60 * 60 * 1000;
       if (!last || (Date.now() - last) >= week) {
         out.push({
@@ -333,7 +333,7 @@
     });
   }
 
-  window.AgrovetNotifications = {
+  window.AgroScanNotifications = {
     init: init,
     refresh: fetchNews,
     updateBadge: updateBadge

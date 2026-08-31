@@ -6,7 +6,7 @@ Files here power treatment advice, shop catalog, suppliers, upazilas,
 crop profitability, and regulatory warning boxes.
 
 Re-seed the shop SQLite DB:
-  python -m agrovet.shop_seed
+  python -m agroscan.shop_seed
 
 Do not invent dealer phone numbers. DAE offices are documented contacts;
 ask them for the licensed dealer register.

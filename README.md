@@ -12,7 +12,7 @@ Work in **`I:\Agroscan\Agroscan`** (the parent `I:\Agroscan` folder is only Sync
 
 ```
 Agroscan/                  ← you are here
-├── agrovet/               Python core (vision, RAG, shop, chat)
+├── agroscan/               Python core (vision, RAG, shop, chat)
 ├── backend/               FastAPI  (backend/main.py)
 ├── web/                   browser / PWA UI
 ├── mobile/                Capacitor Android (use this, not archive/apk)
@@ -34,15 +34,13 @@ Agroscan/                  ← you are here
 
 | Want… | Go here |
 |--------|---------|
-| Change API or chat routing | `agrovet/`, `backend/main.py` |
+| Change API or chat routing | `agroscan/`, `backend/main.py` |
 | Change the website | `web/` |
 | Change Android wrapper | `mobile/` |
 | Disease doses / 16123 pack | `data/agroscan/` |
-| Train vision models | `python -m agrovet.train_all` |
+| Train vision models | `python -m agroscan.train_all` |
 | Train Qwen LoRA | `llm/train_lora.py` (see `docs/` + `.vscode/tasks.json`) |
 | Architecture diagram | `docs/AgroScan_Architecture.pdf` |
-
-Python package is still named `agrovet` (imports). Product name is AgroScan.
 
 ## Pipeline (three levels)
 
@@ -87,15 +85,15 @@ See [docs/DEPLOY_MOBILE.md](docs/DEPLOY_MOBILE.md) (Docker, Cloudflare Tunnel, P
 
 From this folder. Disease training uses unified `Datasets/train|valid|test`:
 
-    python -m agrovet.train_all
+    python -m agroscan.train_all
 
-    python -m agrovet.train_leaf
-    python -m agrovet.train_disease --arch efficientnet_b3
+    python -m agroscan.train_leaf
+    python -m agroscan.train_disease --arch efficientnet_b3
 
 Checkpoints: `models/leaf_gate.pt`, `models/leaf_type.pt`, `models/disease_<arch>.pt`.
 
-If a Bangladesh zip is still packed: `python -m agrovet.prepare_bd_leaf_dataset extract`
+If a Bangladesh zip is still packed: `python -m agroscan.prepare_bd_leaf_dataset extract`
 
 ## Troubleshooting
 
-**[WinError 1455] paging file too small** — set `NUM_WORKERS = 0` in `agrovet/config.py`, or enlarge the Windows pagefile, then reboot.
+**[WinError 1455] paging file too small** — set `NUM_WORKERS = 0` in `agroscan/config.py`, or enlarge the Windows pagefile, then reboot.

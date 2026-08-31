@@ -41,7 +41,7 @@ def hf_access_help() -> str:
         "1) Open https://huggingface.co/datasets/Saon110/bd-crop-vegetable-plant-disease-dataset\n"
         "2) Log in and click 'Agree' to the dataset terms\n"
         "3) Run: huggingface-cli login\n"
-        "4) Retry training or: python -m agrovet.prepare_bd_dataset info"
+        "4) Retry training or: python -m agroscan.prepare_bd_dataset info"
     )
 
 

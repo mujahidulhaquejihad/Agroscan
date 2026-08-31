@@ -28,7 +28,7 @@ python -m llm.train_lora --merge --out llm_data\adapters\agroscan-1.5b --max-ste
 
 4. Serve with `llama-server` or Ollama; change AgroScan chat to call that HTTP API instead of in-process PeftModel.
 
-`agrovet/llm_chat.py` is the in-process path. A GGUF HTTP client can replace `generate_reply()` later without changing the frontend.
+`agroscan/llm_chat.py` is the in-process path. A GGUF HTTP client can replace `generate_reply()` later without changing the frontend.
 
 ## Env flags (FastAPI)
 
