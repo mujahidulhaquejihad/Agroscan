@@ -1,0 +1,32 @@
+# Core DL (install the CUDA build separately, see README)
+torch
+torchvision
+
+# Training utilities
+numpy
+pillow
+scikit-learn
+tqdm
+matplotlib
+
+# Backend API (serves both the web app and the future mobile app)
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Optional: Hugging Face Bangladesh crop dataset download
+datasets
+huggingface_hub
+
+# LoRA agri-LLM serving (/api/chat) — also see llm/requirements-train.txt
+transformers<5
+accelerate
+peft
+bitsandbytes  # 4-bit Qwen2.5-3B on RTX 3060; fp16 fallback if this fails
+
+
+# Optional: server-side Google Sign-In verification
+google-auth
+
+# Image preprocessing (leaf auto-crop)
+opencv-python-headless

@@ -1,0 +1,4 @@
+model_key,arch,history_path,best_model_path,final_model_path,best_val_acc,img_size
+EfficientNet_B3,efficientnet_b3,C:\Agroscan\models\Model_Comparison\EfficientNet_B3\efficientnet_b3_history.csv,C:\Agroscan\models\Model_Comparison\EfficientNet_B3\efficientnet_b3_best_model.pt,C:\Agroscan\models\Model_Comparison\EfficientNet_B3\efficientnet_b3_final_model.pt,0.9790321507022566,300
+ResNet50,resnet50,C:\Agroscan\models\Model_Comparison\ResNet50\resnet50_history.csv,C:\Agroscan\models\Model_Comparison\ResNet50\resnet50_best_model.pt,C:\Agroscan\models\Model_Comparison\ResNet50\resnet50_final_model.pt,0.9770684949743726,224
+DenseNet121,densenet121,C:\Agroscan\models\Model_Comparison\DenseNet121\densenet121_history.csv,C:\Agroscan\models\Model_Comparison\DenseNet121\densenet121_best_model.pt,C:\Agroscan\models\Model_Comparison\DenseNet121\densenet121_final_model.pt,0.9748052985422352,224

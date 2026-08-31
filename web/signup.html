@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up — AgroScan</title>
+  <link rel="icon" href="/static/AgroVet_logo-main.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=44">
+  <script src="/static/config.js?v=11"></script>
+  <script src="/static/i18n.js?v=38"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="auth-body" data-title-key="signup_title">
+  <div class="auth-shell">
+    <div class="auth-topbar">
+      <a href="/" class="auth-brand">
+        <span class="logo-chip logo-chip-auth">
+          <img src="/static/AgroVet_logo-main.png" alt="AgroScan" class="logo-img logo-img-white logo-img-auth-lg" />
+        </span>
+      </a>
+      <button type="button" id="langToggle" class="icon-btn auth-lang" data-i18n-title="language" title="Language">বাংলা</button>
+    </div>
+
+    <div class="auth-card">
+      <h1 data-i18n="signup_h1">Create account</h1>
+      <p class="auth-sub" data-i18n="signup_sub">Join AgroScan for saved scans, reports, and personalized tips.</p>
+
+      <div id="authError" class="auth-error hidden"></div>
+
+      <form id="signupForm" class="auth-form" novalidate>
+        <label class="field">
+          <span data-i18n="field_name">Full name</span>
+          <input type="text" id="name" name="name" required autocomplete="name" data-i18n-ph="ph_name" placeholder="Your name">
+        </label>
+        <label class="field">
+          <span data-i18n="field_email">Email</span>
+          <input type="email" id="email" name="email" required autocomplete="email" data-i18n-ph="ph_email" placeholder="you@example.com">
+        </label>
+        <label class="field">
+          <span data-i18n="field_password">Password</span>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" required autocomplete="new-password" data-i18n-ph="ph_password_new" placeholder="At least 6 characters" minlength="6">
+            <button type="button" class="password-toggle" data-target="password" aria-label="Show password" data-i18n-aria="show_password" title="Show password">
+              <span class="pw-icon-show" aria-hidden="true">&#128065;</span>
+              <span class="pw-icon-hide hidden" aria-hidden="true">&#128064;</span>
+            </button>
+          </div>
+        </label>
+        <label class="field">
+          <span data-i18n="field_password2">Confirm password</span>
+          <div class="password-wrap">
+            <input type="password" id="password2" name="password2" required autocomplete="new-password" data-i18n-ph="ph_password_repeat" placeholder="Repeat password">
+            <button type="button" class="password-toggle" data-target="password2" aria-label="Show password" data-i18n-aria="show_password" title="Show password">
+              <span class="pw-icon-show" aria-hidden="true">&#128065;</span>
+              <span class="pw-icon-hide hidden" aria-hidden="true">&#128064;</span>
+            </button>
+          </div>
+        </label>
+
+        <fieldset class="auth-address">
+          <legend data-i18n="signup_address_legend">Delivery address (optional)</legend>
+          <p class="muted small" data-i18n="signup_address_hint">Saved for shop checkout. You can change it later.</p>
+          <label class="field">
+            <span data-i18n="shop_phone">Phone</span>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"
+              inputmode="tel" enterkeyhint="next" maxlength="14"
+              data-i18n-ph="ph_phone" placeholder="01XXXXXXXXX">
+          </label>
+          <label class="field">
+            <span data-i18n="shop_address">Delivery address</span>
+            <textarea id="address" name="address" rows="3" autocomplete="street-address"
+              enterkeyhint="next" data-i18n-ph="ph_address"
+              placeholder="Village, road, union"></textarea>
+          </label>
+          <div class="auth-row">
+            <label class="field">
+              <span data-i18n="shop_district">District</span>
+              <input type="text" id="district" name="district" autocomplete="address-level2"
+                enterkeyhint="next" data-i18n-ph="ph_district" placeholder="e.g. Gazipur">
+            </label>
+            <label class="field">
+              <span data-i18n="shop_upazila">Upazila</span>
+              <input type="text" id="upazila" name="upazila" autocomplete="address-level3"
+                enterkeyhint="done" data-i18n-ph="ph_upazila" placeholder="e.g. Savar">
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="signup_btn">Create account</button>
+      </form>
+
+      <div class="auth-divider"><span data-i18n="or_divider">or</span></div>
+
+      <div id="googleBtn" class="google-btn-wrap"></div>
+
+      <button type="button" id="guestBtn" class="btn btn-secondary btn-block" data-i18n="guest_continue">Continue as Guest</button>
+      <p class="auth-foot"><span data-i18n="have_account">Already have an account?</span> <a href="/login" data-i18n="auth_login">Log in</a></p>
+    </div>
+  </div>
+  <script src="/static/auth.js?v=12"></script>
+  <script>
+    document.getElementById("langToggle").onclick = function () { window.AgrovetI18n.toggleLang(); };
+  </script>
+</body>
+</html>

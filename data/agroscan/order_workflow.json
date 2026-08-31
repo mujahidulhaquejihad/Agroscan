@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "section": "H",
+    "title": "How agro-input ordering actually works in rural Bangladesh",
+    "version": "1.0",
+    "generated": "2026-08-20",
+    "purpose": "Design reference for AgroScan's ordering, admin and supplier-facing screens. Written for the dev team, not the farmer.",
+    "confidence_statement": "This document describes widely observed norms in Bangladeshi rural agro-input retail. It is compiled from the structure of the input supply chain as documented in DAE and fertiliser-sector reporting, and from how the dealer-commission and pricing system is described in published sources. It is NOT based on a primary field survey. Before committing to a transaction design, interview 15-20 dealers and 40-50 farmers across at least three of your Phase-1 upazilas. The single highest-risk assumption in this whole dataset is that farmers will prepay for inputs online. They mostly will not."
+  },
+
+  "1_payment": {
+    "question": "Typical payment: cash on delivery vs bKash prepay vs credit",
+    "summary_en": "Cash dominates, informal seasonal credit is the second pillar, and mobile money is used but mostly for remittance rather than for buying inputs. Prepayment to a shop the farmer has not dealt with before is culturally unusual and should not be the default flow.",
+    "summary_bn": "নগদ টাকাই প্রধান, এরপর মৌসুমি বাকি; মোবাইল ব্যাংকিং ব্যবহার হয় বটে, তবে বেশিরভাগই টাকা পাঠানোর জন্য, উপকরণ কেনার জন্য নয়। যে দোকানের সাথে আগে লেনদেন হয়নি সেখানে আগাম টাকা দেওয়ার চল নেই, তাই এটাকে প্রধান পদ্ধতি বানানো ঠিক হবে না।",
+    "modes": [
+      {
+        "mode": "cash_on_delivery",
+        "prevalence": "dominant",
+        "detail_en": "Cash at the counter, or cash on delivery if the dealer sends the goods. This is the default expectation and the flow AgroScan should treat as primary.",
+        "detail_bn": "দোকানে নগদ, অথবা দোকানদার পণ্য পাঠালে হাতে হাতে নগদ। এটাই স্বাভাবিক প্রত্যাশা, অ্যাগ্রোস্ক্যানেও এটাকেই প্রধান পদ্ধতি ধরা উচিত।",
+        "app_implication": "COD must be a first-class order type, not an afterthought. The order record needs a 'payment_pending_on_delivery' state and a dealer-side confirmation that cash was actually collected."
+      },
+      {
+        "mode": "seasonal_credit_from_dealer",
+        "prevalence": "very common",
+        "detail_en": "The farmer takes inputs on credit at planting and settles after harvest, often with an implicit price premium rather than stated interest. The dealer keeps it in a notebook, not a system. This relationship is often multi-generational and is a large part of why farmers stay with one dealer even when another is cheaper.",
+        "detail_bn": "চাষের সময় বাকিতে উপকরণ নিয়ে ফসল ওঠার পর টাকা শোধ করা হয়, সুদ বলা না হলেও দামের মধ্যেই তা ধরা থাকে। দোকানদার খাতায় লিখে রাখেন, কোনো সফটওয়্যারে নয়। এই সম্পর্ক প্রায়ই বংশপরম্পরায় চলে, আর এজন্যই অন্য দোকানে সস্তা হলেও কৃষক পুরনো দোকান ছাড়েন না।",
+        "app_implication": "This is the biggest threat to an app-based marketplace. A farmer who owes his dealer money is not free to buy elsewhere. AgroScan cannot compete with credit it does not offer. Consider positioning the app as an information and price-transparency layer over the farmer's EXISTING dealer relationship rather than trying to replace it. A 'my dealer' feature that lets a farmer send an order to the shop he already uses will get far more traction than a marketplace."
+      },
+      {
+        "mode": "mobile_money_bkash_nagad",
+        "prevalence": "common for transfers, less common for input purchase",
+        "detail_en": "bKash and Nagad are widely held and widely used for remittances and person-to-person transfer. Using them to prepay a shop is less established, and farmers are wary of paying before seeing the goods, particularly given the real risk of adulterated product.",
+        "detail_bn": "বিকাশ ও নগদ প্রায় সবার আছে এবং টাকা পাঠাতে ব্যাপকভাবে ব্যবহার হয়। তবে দোকানে আগাম টাকা দেওয়ার চল কম, আর ভেজাল পণ্যের বাস্তব ঝুঁকির কারণে পণ্য না দেখে টাকা দিতে কৃষকরা ভরসা পান না।",
+        "app_implication": "Offer mobile money as an option, never as a requirement. A partial-payment model (small token via bKash to confirm the order, balance in cash on delivery) reduces dealer no-show risk without asking the farmer to prepay in full."
+      },
+      {
+        "mode": "government_subsidy_card",
+        "prevalence": "occasional, programme-specific",
+        "detail_en": "Government incentive distributions of seed and fertiliser run through the Upazila Agriculture Office against a farmer card / agricultural input assistance card, not through private dealers.",
+        "detail_bn": "সরকারি বীজ ও সার প্রণোদনা কৃষি উপকরণ সহায়তা কার্ডের মাধ্যমে উপজেলা কৃষি অফিস থেকে বিতরণ হয়, বেসরকারি দোকান থেকে নয়।",
+        "app_implication": "Out of scope for transactions, but worth surfacing as INFORMATION: 'incentive distribution for this crop is open at your Upazila Agriculture Office' is genuinely valuable to a farmer and costs you nothing."
+      }
+    ],
+    "confidence": "medium"
+  },
+
+  "2_delivery": {
+    "question": "Delivery time within the same upazila vs cross-district",
+    "same_upazila": {
+      "typical_lead_time": "Same day to 2 days",
+      "detail_en": "Most farmers simply go to the upazila or union bazaar themselves, often on a fixed weekly haat day. Where a dealer does deliver, it is usually by van, motorcycle or auto-rickshaw within a few kilometres, and it is informal — a phone call and 'send it with whoever is going that way'.",
+      "detail_bn": "বেশিরভাগ কৃষক নিজেই উপজেলা বা ইউনিয়ন বাজারে যান, প্রায়ই সাপ্তাহিক হাটের দিনে। দোকানদার পাঠালে সাধারণত ভ্যান, মোটরসাইকেল বা অটোরিকশায় কয়েক কিলোমিটারের মধ্যে, আর পুরো ব্যাপারটাই অনানুষ্ঠানিক — একটা ফোন আর 'যে ওদিকে যাচ্ছে তার হাতে পাঠিয়ে দিন'।"
+    },
+    "cross_district": {
+      "typical_lead_time": "2-5 days, longer in the monsoon",
+      "detail_en": "Cross-district movement of inputs is mostly wholesale dealer-to-dealer, not retail-to-farmer. A farmer ordering across districts is unusual except for specialised items — hybrid or imported seed, grafted seedlings, machinery and spare parts. Courier services (SA Paribahan, Sundarban, RedX and similar) are used for small high-value items.",
+      "detail_bn": "এক জেলা থেকে আরেক জেলায় উপকরণ যায় মূলত পাইকারি ডিলার থেকে ডিলারে, খুচরা থেকে কৃষকে নয়। বিশেষ কিছু জিনিস ছাড়া — হাইব্রিড বা আমদানি করা বীজ, কলম চারা, যন্ত্রপাতি ও যন্ত্রাংশ — কৃষকের জেলার বাইরে অর্ডার করা অস্বাভাবিক। ছোট দামি জিনিসে কুরিয়ার (এসএ পরিবহন, সুন্দরবন, রেডএক্স ইত্যাদি) ব্যবহার হয়।"
+    },
+    "seasonal_constraints_en": [
+      "Monsoon (June-September): rural roads and char-land access degrade badly; add 2-3 days and expect failed deliveries",
+      "Haor areas (Sunamganj, Kishoreganj, Netrokona): boat access only for months of the year — a road-based delivery promise there is simply wrong",
+      "Char land (Kurigram, Gaibandha, Jamalpur, Bhola): river crossing required, delivery windows depend on the ferry",
+      "Eid and harvest peaks: transport capacity is absorbed and everything slows"
+    ],
+    "seasonal_constraints_bn": [
+      "বর্ষা (জুন-সেপ্টেম্বর): গ্রামের রাস্তা ও চরের যাতায়াত খুব খারাপ হয়ে যায়; ২-৩ দিন বেশি ধরুন, ডেলিভারি ব্যর্থ হওয়াও স্বাভাবিক",
+      "হাওর এলাকা (সুনামগঞ্জ, কিশোরগঞ্জ, নেত্রকোনা): বছরের কয়েক মাস শুধু নৌকায় যাওয়া যায় — সেখানে সড়কপথে ডেলিভারির প্রতিশ্রুতি দেওয়াই ভুল",
+      "চরাঞ্চল (কুড়িগ্রাম, গাইবান্ধা, জামালপুর, ভোলা): নদী পার হতে হয়, ফেরির সময়ের উপর ডেলিভারি নির্ভর করে",
+      "ঈদ ও ফসল তোলার ভরা মৌসুম: পরিবহন ব্যস্ত থাকে, সবকিছু ধীর হয়ে যায়"
+    ],
+    "app_implication": "Do not show a single national delivery SLA. Compute the promise from the upazila record: same-upazila, adjacent-upazila, or cross-district, and apply a monsoon and a haor/char modifier. An over-promised delivery date is the fastest way to lose a farmer's trust permanently.",
+    "confidence": "medium"
+  },
+
+  "3_minimum_order": {
+    "question": "Minimum order sizes dealers accept",
+    "detail_en": "There is effectively no minimum at the counter — dealers routinely sell a single 100 g sachet of fungicide or a few hundred grams of seed, because that is the reality of a farmer with 20 decimal of land. Minimums appear only when DELIVERY is involved. A dealer will not send a boy on a van for a Tk 80 sachet.",
+    "detail_bn": "দোকানে কার্যত কোনো ন্যূনতম নেই — ২০ শতাংশ জমির কৃষকের বাস্তবতা মাথায় রেখে দোকানদার এক প্যাকেট ১০০ গ্রাম ছত্রাকনাশক বা কয়েকশ গ্রাম বীজও বিক্রি করেন। ন্যূনতমের প্রশ্ন আসে শুধু ডেলিভারির বেলায়। ৮০ টাকার একটা প্যাকেটের জন্য কেউ ভ্যানে লোক পাঠাবে না।",
+    "observed_thresholds": [
+      {"context": "Counter sale", "minimum": "None", "note": "Single sachets are normal and expected"},
+      {"context": "Dealer delivery within the union", "minimum": "Roughly Tk 500-1,000 of goods", "note": "Below this the dealer will ask the farmer to collect"},
+      {"context": "Dealer delivery to a distant village", "minimum": "Roughly Tk 2,000-3,000, or a delivery charge", "note": "Often waived for a regular credit customer"},
+      {"context": "Fertiliser in bag quantities", "minimum": "One 50 kg bag", "note": "Loose sale by kg happens but is where adulteration and short weight occur"},
+      {"context": "Machinery", "minimum": "Per unit", "note": "Usually collected by the buyer or delivered by the machinery dealer"}
+    ],
+    "app_implication": "Set the free-delivery threshold per dealer, not globally, and default it to around Tk 1,000. Support group ordering: several farmers in one village consolidating into one delivery is how this actually works on the ground and it solves the minimum-order problem naturally. A 'village group order' feature would be more useful than a per-farmer cart.",
+    "confidence": "low",
+    "note": "The specific taka thresholds here are informed estimates, not survey findings. Validate them with dealers before hard-coding."
+  },
+
+  "4_stock_confirmation": {
+    "question": "How dealers confirm stock",
+    "detail_en": "By phone, almost universally, and increasingly by WhatsApp or IMO voice call. Very few upazila-level agro-dealers keep a digital inventory; stock is what is visibly on the shelf. A dealer asked 'do you have Contaf 5 EC' will physically look. This means any real-time stock display in the app will be wrong within a day unless the dealer maintains it, and dealers will not maintain it without a strong reason.",
+    "detail_bn": "প্রায় সবসময় ফোনে, আর ইদানীং হোয়াটসঅ্যাপ বা আইএমও-তে কলে। উপজেলা পর্যায়ের খুব কম দোকানেই ডিজিটাল স্টক থাকে; তাকে যা আছে সেটাই স্টক। 'কনটাফ ৫ ইসি আছে?' জিজ্ঞাসা করলে দোকানদার তাকে গিয়ে দেখেন। মানে অ্যাপে সরাসরি স্টক দেখালে দোকানদার নিজে হালনাগাদ না করলে একদিনেই তা ভুল হয়ে যাবে, আর যথেষ্ট কারণ না থাকলে দোকানদার তা করবেন না।",
+    "app_implication": [
+      "Do NOT build a live inventory system as a v1 requirement. It will be inaccurate and will make the app look broken.",
+      "Model stock as 'usually stocked' / 'ask the dealer' rather than a number.",
+      "Build a request-to-quote flow: the farmer sends an order request, the dealer confirms availability and price by phone or in-app, and only then does the order become firm. This mirrors what already happens.",
+      "If you do want dealer-side inventory later, give the dealer something they want in return — a simple khata (ledger) app that tracks their credit customers would be far more attractive to a dealer than an inventory screen, and inventory can ride along on top of it."
+    ],
+    "confidence": "medium"
+  },
+
+  "5_who_delivers": {
+    "question": "Who delivers",
+    "options": [
+      {"who": "Farmer collects", "prevalence": "most common",
+       "detail_en": "The farmer goes to the union or upazila bazaar, usually on a haat day, and often combines it with other errands. This is not a failure of logistics; it is a social and economic routine.",
+       "detail_bn": "কৃষক ইউনিয়ন বা উপজেলা বাজারে যান, সাধারণত হাটের দিনে, আর সাথে অন্য কাজও সেরে নেন। এটা পরিবহন ব্যবস্থার দুর্বলতা নয়, এটা সামাজিক ও অর্থনৈতিক রুটিন।"},
+      {"who": "Dealer's own staff or family member", "prevalence": "common for regular customers",
+       "detail_en": "By bicycle, motorcycle or van, usually free for known customers and for larger orders.",
+       "detail_bn": "সাইকেল, মোটরসাইকেল বা ভ্যানে, পরিচিত ক্রেতা ও বড় অর্ডারের ক্ষেত্রে সাধারণত বিনামূল্যে।"},
+      {"who": "Local van / auto-rickshaw hired ad hoc", "prevalence": "common for bulk",
+       "detail_en": "For fertiliser bags and machinery the farmer or dealer hires a van for a negotiated fare.",
+       "detail_bn": "সারের বস্তা ও যন্ত্রপাতির জন্য কৃষক বা দোকানদার দরদাম করে ভ্যান ভাড়া করেন।"},
+      {"who": "Courier service", "prevalence": "occasional",
+       "detail_en": "Used for small high-value items shipped across districts, especially seed and machinery parts.",
+       "detail_bn": "জেলার বাইরে ছোট দামি জিনিস, বিশেষ করে বীজ ও যন্ত্রাংশ পাঠাতে ব্যবহার হয়।"},
+      {"who": "Company field officer", "prevalence": "for large orders only",
+       "detail_en": "Seed and pesticide company field staff visit larger farmers directly, often bundling advice with the sale — which is a conflict of interest the app should quietly counterbalance with independent advice.",
+       "detail_bn": "বীজ ও কীটনাশক কোম্পানির মাঠকর্মীরা বড় কৃষকের কাছে সরাসরি যান, বিক্রির সাথে পরামর্শও দেন — এখানে স্বার্থের সংঘাত আছে, অ্যাপের নিরপেক্ষ পরামর্শ চুপচাপ সেই ভারসাম্যটা তৈরি করতে পারে।"}
+    ],
+    "app_implication": "Support 'collect from shop' as a first-class fulfilment type with a pickup-ready notification. It will probably be your most-used option and it costs you nothing to operate.",
+    "confidence": "medium"
+  },
+
+  "6_returns_and_refunds": {
+    "question": "Return and refund norms for agro inputs",
+    "detail_en": "There is no formal return culture for opened pesticide, fertiliser or seed, and for good reason: once a container is opened its contents cannot be verified. What does happen is informal adjustment — a trusted dealer will replace a clearly defective item or adjust the next purchase, because the relationship is worth more than the item. Unopened, undamaged goods can often be exchanged. Sealed machinery follows normal warranty terms.",
+    "detail_bn": "খোলা ওষুধ, সার বা বীজ ফেরত দেওয়ার কোনো আনুষ্ঠানিক চল নেই, আর তার যুক্তিও আছে: একবার কৌটা খোলা হলে ভেতরে কী আছে যাচাই করা যায় না। যা হয় তা হলো অনানুষ্ঠানিক সমঝোতা — বিশ্বস্ত দোকানদার স্পষ্ট নষ্ট জিনিস বদলে দেন বা পরের কেনাকাটায় সমন্বয় করেন, কারণ সম্পর্কটা জিনিসটার চেয়ে দামি। না খোলা, অক্ষত জিনিস প্রায়ই বদলানো যায়। সিলগালা যন্ত্রপাতিতে স্বাভাবিক ওয়ারেন্টি চলে।",
+    "the_real_dispute": {
+      "en": "The dispute that actually arises is not 'I want to return this' but 'I used it and it did not work'. The three possible causes are adulteration, resistance and wrong diagnosis or application, and the farmer usually cannot tell which. The formal remedy is to take the container, label and receipt to the Upazila Agriculture Office, which can test for adulteration and act against the dealer's licence. Very few farmers do this, which is precisely why adulteration persists.",
+      "bn": "আসল বিরোধটা 'এটা ফেরত নিন' নিয়ে নয়, 'ব্যবহার করলাম কিন্তু কাজ হলো না' নিয়ে। এর তিনটি সম্ভাব্য কারণ — ভেজাল, পোকার সহনশীলতা, অথবা ভুল রোগ নির্ণয় বা ভুলভাবে প্রয়োগ — আর কৃষক সাধারণত বুঝতে পারেন না কোনটা। আনুষ্ঠানিক প্রতিকার হলো কৌটা, লেবেল ও রসিদ নিয়ে উপজেলা কৃষি অফিসে যাওয়া; তারা ভেজাল পরীক্ষা করে দোকানের লাইসেন্সের বিরুদ্ধে ব্যবস্থা নিতে পারে। খুব কম কৃষকই তা করেন, আর এজন্যই ভেজাল টিকে আছে।"
+    },
+    "app_implication": [
+      "Prompt the farmer to photograph the label, batch number and receipt AT PURCHASE and store it against the order. This costs one screen and creates the evidence trail that makes a complaint possible.",
+      "Build a 'this treatment did not work' flow that walks through the three causes before assuming adulteration, and that ends with a one-tap way to log a complaint with the container photo attached.",
+      "Do not promise refunds you cannot enforce. AgroScan's realistic role is evidence and escalation, not arbitration."
+    ],
+    "confidence": "medium"
+  },
+
+  "7_peak_seasons": {
+    "question": "Peak seasons when dealers are busiest",
+    "calendar": [
+      {"months": [10, 11], "peak_en": "Rabi planting rush — the single biggest input-buying window of the year: potato seed tuber, wheat and maize seed, vegetable seed, and basal fertiliser all at once",
+       "peak_bn": "রবি মৌসুমের রোপণের ভিড় — বছরের সবচেয়ে বড় উপকরণ কেনার সময়: বীজ আলু, গম ও ভুট্টার বীজ, সবজির বীজ আর জমি তৈরির সার একসাথে",
+       "load": "very high"},
+      {"months": [12, 1], "peak_en": "Late blight fungicide rush in the potato and tomato belts; urea top-dressing demand",
+       "peak_bn": "আলু ও টমেটোর এলাকায় নাবি ধ্বসার ওষুধের ভিড়; ইউরিয়া উপরি প্রয়োগের চাহিদা",
+       "load": "high", "note": "This is when a fungicide stock-out actually costs a farmer his crop, and it is when the app's value is highest"},
+      {"months": [12, 1, 2], "peak_en": "Boro transplanting and fertiliser demand",
+       "peak_bn": "বোরো রোপণ ও সারের চাহিদা", "load": "very high"},
+      {"months": [3, 4], "peak_en": "Boro top-dressing, blast sprays at booting and heading, and Kharif-1 land preparation",
+       "peak_bn": "বোরোর উপরি সার, থোড় ও শিষের সময় ব্লাস্টের স্প্রে, আর খরিফ-১ এর জমি তৈরি", "load": "high"},
+      {"months": [6, 7, 8], "peak_en": "Aman seedbed and transplanting; monsoon slows delivery at exactly the time demand rises",
+       "peak_bn": "আমনের বীজতলা ও রোপণ; ঠিক যখন চাহিদা বাড়ে তখনই বর্ষায় ডেলিভারি ধীর হয়ে যায়", "load": "high"},
+      {"months": [5, 9], "peak_en": "Relatively quiet periods between the main crops",
+       "peak_bn": "প্রধান ফসলগুলোর মাঝে তুলনামূলক শান্ত সময়", "load": "low"}
+    ],
+    "app_implication": [
+      "Pre-position stock alerts and dealer capacity warnings ahead of October-November and December-January.",
+      "The December-January fungicide window is where AgroScan can prove its worth: a farmer who gets mancozeb in hand before the fog arrives keeps his potato crop. Build the seasonal push notification around that, not around generic engagement.",
+      "Expect dealer response times to lengthen sharply in peak weeks. Adjust SLA expectations shown to farmers seasonally rather than showing an optimistic constant."
+    ],
+    "confidence": "medium"
+  },
+
+  "8_badc_vs_private": {
+    "question": "How BADC depots differ from private dealers",
+    "comparison": [
+      {"dimension": "What they sell",
+       "badc_en": "Certified seed of BRRI, BARI and BINA released varieties; non-urea fertiliser; small irrigation equipment. No pesticide retail.",
+       "private_en": "Everything: pesticide, fertiliser, seed, equipment, and informal advice.",
+       "badc_bn": "ব্রি, বারি ও বিনার জাতের সার্টিফাইড বীজ; ইউরিয়া ছাড়া সার; ছোট সেচ যন্ত্রপাতি। বালাইনাশক খুচরা বিক্রি করে না।",
+       "private_bn": "সবকিছু: বালাইনাশক, সার, বীজ, যন্ত্রপাতি এবং সাথে অনানুষ্ঠানিক পরামর্শ।"},
+      {"dimension": "Price",
+       "badc_en": "Government-set, published, and usually the lowest available.",
+       "private_en": "Market price, typically above the government rate; farmers are documented as paying Tk 3-8/kg above the fixed fertiliser rate.",
+       "badc_bn": "সরকার নির্ধারিত, প্রকাশিত, এবং সাধারণত সবচেয়ে কম।",
+       "private_bn": "বাজারদর, সাধারণত সরকারি দরের চেয়ে বেশি; নথিভুক্ত তথ্য অনুযায়ী কৃষকরা সারে কেজিতে ৩-৮ টাকা বেশি দেন।"},
+      {"dimension": "Quality assurance",
+       "badc_en": "Certified and tagged. This is the benchmark for what genuine seed looks like.",
+       "private_en": "Varies enormously. Reputable company product is fine; adulteration and repacking are real risks at the low end.",
+       "badc_bn": "সার্টিফাইড ও ট্যাগযুক্ত। আসল বীজ দেখতে কেমন হয় তার মাপকাঠি এটাই।",
+       "private_bn": "মান খুব ভিন্ন ভিন্ন। ভালো কোম্পানির পণ্য ঠিক আছে; নিচের দিকে ভেজাল ও অন্য প্যাকেটে ভরার ঝুঁকি বাস্তব।"},
+      {"dimension": "Availability and convenience",
+       "badc_en": "Limited outlets, district or regional level, government hours only, and stock runs out early in peak season.",
+       "private_en": "In every union bazaar, open long hours including Fridays, and will open the shutter for a regular customer.",
+       "badc_bn": "বিক্রয়কেন্দ্র কম, জেলা বা আঞ্চলিক পর্যায়ে, শুধু সরকারি সময়ে, আর ভরা মৌসুমে আগেভাগেই স্টক শেষ হয়ে যায়।",
+       "private_bn": "প্রতিটি ইউনিয়ন বাজারে, শুক্রবারসহ অনেকক্ষণ খোলা, আর পরিচিত ক্রেতার জন্য দোকান খুলেও দেন।"},
+      {"dimension": "Credit",
+       "badc_en": "None. Cash only.",
+       "private_en": "Seasonal credit until harvest is standard and is the main reason farmers stay with a private dealer.",
+       "badc_bn": "নেই। শুধু নগদ।",
+       "private_bn": "ফসল ওঠা পর্যন্ত বাকি দেওয়াই স্বাভাবিক, আর এজন্যই কৃষকরা বেসরকারি দোকানেই থাকেন।"},
+      {"dimension": "Advice",
+       "badc_en": "None at the counter; advice comes from the DAE office next door.",
+       "private_en": "The dealer is in practice the farmer's most-used adviser, which is a problem because he also earns from what he recommends.",
+       "badc_bn": "কাউন্টারে পরামর্শ নেই; পরামর্শ আসে পাশের ডিএই অফিস থেকে।",
+       "private_bn": "বাস্তবে দোকানদারই কৃষকের সবচেয়ে বেশি ব্যবহৃত পরামর্শদাতা, যা সমস্যা — কারণ যা সুপারিশ করেন তা বিক্রি করেই তিনি আয় করেন।"}
+    ],
+    "the_strategic_point_en": "The dealer being both the adviser and the seller is the structural problem AgroScan is best placed to fix. An independent diagnosis with a named ACTIVE INGREDIENT and a dose lets a farmer walk into any shop and ask for a specific thing, instead of accepting whatever is recommended and marked up. That is a bigger contribution than the marketplace, and it does not require anyone to change how they pay.",
+    "the_strategic_point_bn": "দোকানদারই পরামর্শদাতা আবার বিক্রেতা — এই কাঠামোগত সমস্যাটাই অ্যাগ্রোস্ক্যান সবচেয়ে ভালোভাবে সমাধান করতে পারে। নিরপেক্ষ রোগ নির্ণয়ের সাথে মূল উপাদানের নাম ও মাত্রা জানা থাকলে কৃষক যেকোনো দোকানে গিয়ে নির্দিষ্ট জিনিসটাই চাইতে পারবেন, দোকানদার যা ধরিয়ে দেবেন আর বাড়তি দাম নেবেন তা নয়। বাজারের চেয়ে এই অবদানটাই বড়, আর এর জন্য কাউকে টাকা দেওয়ার পদ্ধতিও বদলাতে হয় না।",
+    "confidence": "medium"
+  },
+
+  "9_recommended_order_state_machine": {
+    "note": "Suggested order lifecycle for the admin and dealer screens, built around how transactions actually work rather than an e-commerce template.",
+    "states": [
+      {"state": "draft", "detail": "Farmer has items in cart, nothing sent"},
+      {"state": "request_sent", "detail": "Order request sent to the chosen dealer; NOT yet a commitment by either side"},
+      {"state": "dealer_confirmed", "detail": "Dealer has confirmed availability and quoted a final price; farmer must accept because the price may differ from the app's indicative range"},
+      {"state": "farmer_accepted", "detail": "Farmer accepted the quoted price"},
+      {"state": "ready_for_pickup", "detail": "Fulfilment type = collect; notify the farmer"},
+      {"state": "out_for_delivery", "detail": "Fulfilment type = delivery"},
+      {"state": "delivered_payment_pending", "detail": "COD: goods handed over, cash not yet recorded"},
+      {"state": "completed", "detail": "Payment recorded. Prompt for the label and receipt photo here."},
+      {"state": "cancelled_by_farmer", "detail": "Must be allowed at any point before dealer_confirmed at no cost"},
+      {"state": "cancelled_out_of_stock", "detail": "Dealer could not supply; suggest the next-ranked dealer AND an alternative product with the same active ingredient"},
+      {"state": "disputed", "detail": "Farmer reports the product did not work; route to the diagnostic flow described in section 6, not to a refund flow"}
+    ],
+    "key_design_decisions": [
+      "The dealer confirms the PRICE, not just availability. Indicative prices in the catalogue will not match the shop, and pretending otherwise will destroy trust on the first order.",
+      "Never auto-cancel on dealer non-response in peak season. In December a dealer may not look at the app for two days; escalate by phone instead.",
+      "Substitution must be by ACTIVE INGREDIENT, never by trade name. If Dithane M-45 is out, Indofil M-45 is the same product; the app should say so and the farmer should be told they are equivalent.",
+      "Store the AP registration number with the order line so a residue or adulteration query later can be traced to a specific registered product."
+    ],
+    "confidence": "medium"
+  },
+
+  "10_validation_plan_for_dev_team": {
+    "note": "This whole section is the least evidence-backed part of the AgroScan dataset. Validate it before building the transaction layer.",
+    "steps": [
+      "Interview 15-20 licensed dealers across at least 3 Phase-1 upazilas covering different regions (one plain-land, one char or haor, one peri-urban).",
+      "Ask specifically: what share of your sales is on credit; what is your delivery threshold in taka; how many farmers ask you to deliver; do you use WhatsApp with customers.",
+      "Interview 40-50 farmers with a range of landholdings. Ask: who do you buy from and why; do you owe your dealer money now; have you ever paid for anything by bKash before receiving it.",
+      "Get the licensed-dealer register from each Upazila Agriculture Office and cross-check it against whatever you collect from Google Places.",
+      "Test the single riskiest assumption first with a small pilot: will a farmer send an order through an app to a dealer he already knows? If yes, the product works. If no, pivot to information and price transparency only, which still has real value."
+    ]
+  }
+}

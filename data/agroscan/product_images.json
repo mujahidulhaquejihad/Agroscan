@@ -1,0 +1,2738 @@
+{
+  "PEST-0001": {
+    "path": "/static/shop-images/PEST-0001.jpg",
+    "query": "generated-packshot",
+    "title": "Mancozeb 80% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0002": {
+    "path": "/static/shop-images/PEST-0002.jpg",
+    "query": "generated-packshot",
+    "title": "Mancozeb 80% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0003": {
+    "path": "/static/shop-images/PEST-0003.jpg",
+    "query": "generated-packshot",
+    "title": "Mancozeb 80% WP 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0004": {
+    "path": "/static/shop-images/PEST-0004.jpg",
+    "query": "generated-packshot",
+    "title": "Benalaxyl + Mancozeb 8% + 64% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0005": {
+    "path": "/static/shop-images/PEST-0005.jpg",
+    "query": "generated-packshot",
+    "title": "Benalaxyl + Mancozeb 8% + 64% WP 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0006": {
+    "path": "/static/shop-images/PEST-0006.jpg",
+    "query": "generated-packshot",
+    "title": "Metalaxyl + Mancozeb 8% + 64% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0007": {
+    "path": "/static/shop-images/PEST-0007.jpg",
+    "query": "generated-packshot",
+    "title": "Metalaxyl + Mancozeb 8% + 64% WP 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0008": {
+    "path": "/static/shop-images/PEST-0008.jpg",
+    "query": "generated-packshot",
+    "title": "Cymoxanil + Mancozeb 8% + 64% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0009": {
+    "path": "/static/shop-images/PEST-0009.jpg",
+    "query": "generated-packshot",
+    "title": "Cymoxanil + Mancozeb 8% + 64% WP 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0010": {
+    "path": "/static/shop-images/PEST-0010.jpg",
+    "query": "generated-packshot",
+    "title": "Tricyclazole 75% WP 20g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0011": {
+    "path": "/static/shop-images/PEST-0011.jpg",
+    "query": "generated-packshot",
+    "title": "Tricyclazole 75% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0012": {
+    "path": "/static/shop-images/PEST-0012.jpg",
+    "query": "generated-packshot",
+    "title": "Tricyclazole 75% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0013": {
+    "path": "/static/shop-images/PEST-0013.jpg",
+    "query": "generated-packshot",
+    "title": "Carbendazim 50% WP 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0014": {
+    "path": "/static/shop-images/PEST-0014.jpg",
+    "query": "generated-packshot",
+    "title": "Carbendazim 50% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0015": {
+    "path": "/static/shop-images/PEST-0015.jpg",
+    "query": "generated-packshot",
+    "title": "Carbendazim 50% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0016": {
+    "path": "/static/shop-images/PEST-0016.jpg",
+    "query": "generated-packshot",
+    "title": "Hexaconazole 5% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0017": {
+    "path": "/static/shop-images/PEST-0017.jpg",
+    "query": "generated-packshot",
+    "title": "Hexaconazole 5% EC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0018": {
+    "path": "/static/shop-images/PEST-0018.jpg",
+    "query": "generated-packshot",
+    "title": "Hexaconazole 5% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0019": {
+    "path": "/static/shop-images/PEST-0019.jpg",
+    "query": "generated-packshot",
+    "title": "Propiconazole 25% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0020": {
+    "path": "/static/shop-images/PEST-0020.jpg",
+    "query": "generated-packshot",
+    "title": "Propiconazole 25% EC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0021": {
+    "path": "/static/shop-images/PEST-0021.jpg",
+    "query": "generated-packshot",
+    "title": "Propiconazole 25% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0022": {
+    "path": "/static/shop-images/PEST-0022.jpg",
+    "query": "generated-packshot",
+    "title": "Difenoconazole 25% EC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0023": {
+    "path": "/static/shop-images/PEST-0023.jpg",
+    "query": "generated-packshot",
+    "title": "Difenoconazole 25% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0024": {
+    "path": "/static/shop-images/PEST-0024.jpg",
+    "query": "generated-packshot",
+    "title": "Difenoconazole 25% EC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0025": {
+    "path": "/static/shop-images/PEST-0025.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin + Difenoconazole 20% + 12.5% SC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0026": {
+    "path": "/static/shop-images/PEST-0026.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin + Difenoconazole 20% + 12.5% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0027": {
+    "path": "/static/shop-images/PEST-0027.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin + Difenoconazole 20% + 12.5% SC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0028": {
+    "path": "/static/shop-images/PEST-0028.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin 25% SC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0029": {
+    "path": "/static/shop-images/PEST-0029.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin 25% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0030": {
+    "path": "/static/shop-images/PEST-0030.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin + Cyproconazole 20% + 8% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0031": {
+    "path": "/static/shop-images/PEST-0031.jpg",
+    "query": "generated-packshot",
+    "title": "Azoxystrobin + Cyproconazole 20% + 8% SC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0032": {
+    "path": "/static/shop-images/PEST-0032.jpg",
+    "query": "generated-packshot",
+    "title": "Trifloxystrobin + Tebuconazole 25% + 50% WG 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0033": {
+    "path": "/static/shop-images/PEST-0033.jpg",
+    "query": "generated-packshot",
+    "title": "Trifloxystrobin + Tebuconazole 25% + 50% WG 30g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0034": {
+    "path": "/static/shop-images/PEST-0034.jpg",
+    "query": "generated-packshot",
+    "title": "Trifloxystrobin + Tebuconazole 25% + 50% WG 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0035": {
+    "path": "/static/shop-images/PEST-0035.jpg",
+    "query": "generated-packshot",
+    "title": "Copper oxychloride 50% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0036": {
+    "path": "/static/shop-images/PEST-0036.jpg",
+    "query": "generated-packshot",
+    "title": "Copper oxychloride 50% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0037": {
+    "path": "/static/shop-images/PEST-0037.jpg",
+    "query": "generated-packshot",
+    "title": "Copper oxychloride 50% WP 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0038": {
+    "path": "/static/shop-images/PEST-0038.jpg",
+    "query": "generated-packshot",
+    "title": "Copper hydroxide 77% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0039": {
+    "path": "/static/shop-images/PEST-0039.jpg",
+    "query": "generated-packshot",
+    "title": "Copper hydroxide 77% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0040": {
+    "path": "/static/shop-images/PEST-0040.jpg",
+    "query": "generated-packshot",
+    "title": "Sulphur (wettable) 80% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0041": {
+    "path": "/static/shop-images/PEST-0041.jpg",
+    "query": "generated-packshot",
+    "title": "Sulphur (wettable) 80% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0042": {
+    "path": "/static/shop-images/PEST-0042.jpg",
+    "query": "generated-packshot",
+    "title": "Sulphur (wettable) 80% WP 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0043": {
+    "path": "/static/shop-images/PEST-0043.jpg",
+    "query": "generated-packshot",
+    "title": "Iprodione 50% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0044": {
+    "path": "/static/shop-images/PEST-0044.jpg",
+    "query": "generated-packshot",
+    "title": "Iprodione 50% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0045": {
+    "path": "/static/shop-images/PEST-0045.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorothalonil 75% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0046": {
+    "path": "/static/shop-images/PEST-0046.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorothalonil 75% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0047": {
+    "path": "/static/shop-images/PEST-0047.jpg",
+    "query": "generated-packshot",
+    "title": "Imidacloprid 20% SL 10ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0048": {
+    "path": "/static/shop-images/PEST-0048.jpg",
+    "query": "generated-packshot",
+    "title": "Imidacloprid 20% SL 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0049": {
+    "path": "/static/shop-images/PEST-0049.jpg",
+    "query": "generated-packshot",
+    "title": "Imidacloprid 20% SL 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0050": {
+    "path": "/static/shop-images/PEST-0050.jpg",
+    "query": "generated-packshot",
+    "title": "Thiamethoxam 25% WG 4g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0051": {
+    "path": "/static/shop-images/PEST-0051.jpg",
+    "query": "generated-packshot",
+    "title": "Thiamethoxam 25% WG 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0052": {
+    "path": "/static/shop-images/PEST-0052.jpg",
+    "query": "generated-packshot",
+    "title": "Thiamethoxam 25% WG 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0053": {
+    "path": "/static/shop-images/PEST-0053.jpg",
+    "query": "generated-packshot",
+    "title": "Emamectin benzoate 5% SG 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0054": {
+    "path": "/static/shop-images/PEST-0054.jpg",
+    "query": "generated-packshot",
+    "title": "Emamectin benzoate 5% SG 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0055": {
+    "path": "/static/shop-images/PEST-0055.jpg",
+    "query": "generated-packshot",
+    "title": "Emamectin benzoate 5% SG 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0056": {
+    "path": "/static/shop-images/PEST-0056.jpg",
+    "query": "generated-packshot",
+    "title": "Flubendiamide 20% WG 15ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0057": {
+    "path": "/static/shop-images/PEST-0057.jpg",
+    "query": "generated-packshot",
+    "title": "Flubendiamide 20% WG 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0058": {
+    "path": "/static/shop-images/PEST-0058.jpg",
+    "query": "generated-packshot",
+    "title": "Abamectin 1.8% EC 10ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0059": {
+    "path": "/static/shop-images/PEST-0059.jpg",
+    "query": "generated-packshot",
+    "title": "Abamectin 1.8% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0060": {
+    "path": "/static/shop-images/PEST-0060.jpg",
+    "query": "generated-packshot",
+    "title": "Abamectin 1.8% EC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0061": {
+    "path": "/static/shop-images/PEST-0061.jpg",
+    "query": "generated-packshot",
+    "title": "Spiromesifen 22.9% SC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0062": {
+    "path": "/static/shop-images/PEST-0062.jpg",
+    "query": "generated-packshot",
+    "title": "Spiromesifen 22.9% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0063": {
+    "path": "/static/shop-images/PEST-0063.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorpyrifos 20% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0064": {
+    "path": "/static/shop-images/PEST-0064.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorpyrifos 20% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0065": {
+    "path": "/static/shop-images/PEST-0065.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorpyrifos 20% EC 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0066": {
+    "path": "/static/shop-images/PEST-0066.jpg",
+    "query": "generated-packshot",
+    "title": "Cypermethrin 10% EC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0067": {
+    "path": "/static/shop-images/PEST-0067.jpg",
+    "query": "generated-packshot",
+    "title": "Cypermethrin 10% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0068": {
+    "path": "/static/shop-images/PEST-0068.jpg",
+    "query": "generated-packshot",
+    "title": "Cypermethrin 10% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0069": {
+    "path": "/static/shop-images/PEST-0069.jpg",
+    "query": "generated-packshot",
+    "title": "Fipronil 5% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0070": {
+    "path": "/static/shop-images/PEST-0070.jpg",
+    "query": "generated-packshot",
+    "title": "Fipronil 5% SC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0071": {
+    "path": "/static/shop-images/PEST-0071.jpg",
+    "query": "generated-packshot",
+    "title": "Acetamiprid 20% SP 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0072": {
+    "path": "/static/shop-images/PEST-0072.jpg",
+    "query": "generated-packshot",
+    "title": "Acetamiprid 20% SP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0073": {
+    "path": "/static/shop-images/PEST-0073.jpg",
+    "query": "generated-packshot",
+    "title": "Lambda-cyhalothrin 2.5% EC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0074": {
+    "path": "/static/shop-images/PEST-0074.jpg",
+    "query": "generated-packshot",
+    "title": "Lambda-cyhalothrin 2.5% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0075": {
+    "path": "/static/shop-images/PEST-0075.jpg",
+    "query": "generated-packshot",
+    "title": "Lambda-cyhalothrin 2.5% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0076": {
+    "path": "/static/shop-images/PEST-0076.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorantraniliprole 18.5% SC 10ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0077": {
+    "path": "/static/shop-images/PEST-0077.jpg",
+    "query": "generated-packshot",
+    "title": "Chlorantraniliprole 18.5% SC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0078": {
+    "path": "/static/shop-images/PEST-0078.jpg",
+    "query": "generated-packshot",
+    "title": "Butachlor 5% G / 60% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0079": {
+    "path": "/static/shop-images/PEST-0079.jpg",
+    "query": "generated-packshot",
+    "title": "Butachlor 5% G / 60% EC 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0080": {
+    "path": "/static/shop-images/PEST-0080.jpg",
+    "query": "generated-packshot",
+    "title": "Butachlor 5% G / 60% EC 5kg (granule)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0081": {
+    "path": "/static/shop-images/PEST-0081.jpg",
+    "query": "generated-packshot",
+    "title": "Pretilachlor 50% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0082": {
+    "path": "/static/shop-images/PEST-0082.jpg",
+    "query": "generated-packshot",
+    "title": "Pretilachlor 50% EC 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0083": {
+    "path": "/static/shop-images/PEST-0083.jpg",
+    "query": "generated-packshot",
+    "title": "Glyphosate 41% SL 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0084": {
+    "path": "/static/shop-images/PEST-0084.jpg",
+    "query": "generated-packshot",
+    "title": "Glyphosate 41% SL 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0085": {
+    "path": "/static/shop-images/PEST-0085.jpg",
+    "query": "generated-packshot",
+    "title": "Glyphosate 41% SL 5L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0086": {
+    "path": "/static/shop-images/PEST-0086.jpg",
+    "query": "generated-packshot",
+    "title": "2,4-D Amine 72% SL 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0087": {
+    "path": "/static/shop-images/PEST-0087.jpg",
+    "query": "generated-packshot",
+    "title": "2,4-D Amine 72% SL 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0088": {
+    "path": "/static/shop-images/PEST-0088.jpg",
+    "query": "generated-packshot",
+    "title": "Pendimethalin 33% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0089": {
+    "path": "/static/shop-images/PEST-0089.jpg",
+    "query": "generated-packshot",
+    "title": "Pendimethalin 33% EC 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0090": {
+    "path": "/static/shop-images/PEST-0090.jpg",
+    "query": "generated-packshot",
+    "title": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0091": {
+    "path": "/static/shop-images/PEST-0091.jpg",
+    "query": "generated-packshot",
+    "title": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0092": {
+    "path": "/static/shop-images/PEST-0092.jpg",
+    "query": "generated-packshot",
+    "title": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0093": {
+    "path": "/static/shop-images/PEST-0093.jpg",
+    "query": "generated-packshot",
+    "title": "Bacillus thuringiensis var. kurstaki Bio-insecticide 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0094": {
+    "path": "/static/shop-images/PEST-0094.jpg",
+    "query": "generated-packshot",
+    "title": "Bacillus thuringiensis var. kurstaki Bio-insecticide 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0095": {
+    "path": "/static/shop-images/PEST-0095.jpg",
+    "query": "generated-packshot",
+    "title": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0096": {
+    "path": "/static/shop-images/PEST-0096.jpg",
+    "query": "generated-packshot",
+    "title": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0097": {
+    "path": "/static/shop-images/PEST-0097.jpg",
+    "query": "generated-packshot",
+    "title": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 1L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0098": {
+    "path": "/static/shop-images/PEST-0098.jpg",
+    "query": "generated-packshot",
+    "title": "Pseudomonas fluorescens Bio-agent (10^8 cfu/g) 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0099": {
+    "path": "/static/shop-images/PEST-0099.jpg",
+    "query": "generated-packshot",
+    "title": "Pseudomonas fluorescens Bio-agent (10^8 cfu/g) 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0100": {
+    "path": "/static/shop-images/PEST-0100.jpg",
+    "query": "generated-packshot",
+    "title": "Metarhizium anisopliae Bio-insecticide 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0101": {
+    "path": "/static/shop-images/PEST-0101.jpg",
+    "query": "generated-packshot",
+    "title": "Metarhizium anisopliae Bio-insecticide 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0102": {
+    "path": "/static/shop-images/PEST-0102.jpg",
+    "query": "generated-packshot",
+    "title": "Wetting agent / spreader-sticker Non-ionic surfactant 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0103": {
+    "path": "/static/shop-images/PEST-0103.jpg",
+    "query": "generated-packshot",
+    "title": "Wetting agent / spreader-sticker Non-ionic surfactant 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0104": {
+    "path": "/static/shop-images/PEST-0104.jpg",
+    "query": "generated-packshot",
+    "title": "Thiophanate-methyl 70% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0105": {
+    "path": "/static/shop-images/PEST-0105.jpg",
+    "query": "generated-packshot",
+    "title": "Thiophanate-methyl 70% WP 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0106": {
+    "path": "/static/shop-images/PEST-0106.jpg",
+    "query": "generated-packshot",
+    "title": "Validamycin 3% L / 5% SL 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0107": {
+    "path": "/static/shop-images/PEST-0107.jpg",
+    "query": "generated-packshot",
+    "title": "Validamycin 3% L / 5% SL 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0108": {
+    "path": "/static/shop-images/PEST-0108.jpg",
+    "query": "generated-packshot",
+    "title": "Dimethomorph 50% WP 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0109": {
+    "path": "/static/shop-images/PEST-0109.jpg",
+    "query": "generated-packshot",
+    "title": "Dimethomorph 50% WP 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0110": {
+    "path": "/static/shop-images/PEST-0110.jpg",
+    "query": "generated-packshot",
+    "title": "Kasugamycin 3% SL 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0111": {
+    "path": "/static/shop-images/PEST-0111.jpg",
+    "query": "generated-packshot",
+    "title": "Kasugamycin 3% SL 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0112": {
+    "path": "/static/shop-images/PEST-0112.jpg",
+    "query": "generated-packshot",
+    "title": "Buprofezin 25% SC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0113": {
+    "path": "/static/shop-images/PEST-0113.jpg",
+    "query": "generated-packshot",
+    "title": "Buprofezin 25% SC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0114": {
+    "path": "/static/shop-images/PEST-0114.jpg",
+    "query": "generated-packshot",
+    "title": "Spinosad 45% SC 15ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0115": {
+    "path": "/static/shop-images/PEST-0115.jpg",
+    "query": "generated-packshot",
+    "title": "Spinosad 45% SC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0116": {
+    "path": "/static/shop-images/PEST-0116.jpg",
+    "query": "generated-packshot",
+    "title": "Deltamethrin 2.5% EC 50ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0117": {
+    "path": "/static/shop-images/PEST-0117.jpg",
+    "query": "generated-packshot",
+    "title": "Deltamethrin 2.5% EC 250ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0118": {
+    "path": "/static/shop-images/PEST-0118.jpg",
+    "query": "generated-packshot",
+    "title": "Malathion 57% EC 100ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0119": {
+    "path": "/static/shop-images/PEST-0119.jpg",
+    "query": "generated-packshot",
+    "title": "Malathion 57% EC 500ml",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0120": {
+    "path": "/static/shop-images/PEST-0120.jpg",
+    "query": "generated-packshot",
+    "title": "Carbofuran 5% G 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0121": {
+    "path": "/static/shop-images/PEST-0121.jpg",
+    "query": "generated-packshot",
+    "title": "Carbofuran 5% G 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0122": {
+    "path": "/static/shop-images/PEST-0122.jpg",
+    "query": "generated-packshot",
+    "title": "Zinc phosphide 80% rodenticide 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0123": {
+    "path": "/static/shop-images/PEST-0123.jpg",
+    "query": "generated-packshot",
+    "title": "Zinc phosphide 80% rodenticide 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0124": {
+    "path": "/static/shop-images/PEST-0124.jpg",
+    "query": "generated-packshot",
+    "title": "Bromadiolone 0.005% bait 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0125": {
+    "path": "/static/shop-images/PEST-0125.jpg",
+    "query": "generated-packshot",
+    "title": "Bromadiolone 0.005% bait 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0126": {
+    "path": "/static/shop-images/PEST-0126.jpg",
+    "query": "generated-packshot",
+    "title": "Copper sulphate + lime (Bordeaux mixture components) 1% preparation 1kg copper sulphate",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "PEST-0127": {
+    "path": "/static/shop-images/PEST-0127.jpg",
+    "query": "generated-packshot",
+    "title": "Copper sulphate + lime (Bordeaux mixture components) 1% preparation 5kg copper sulphate",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0001": {
+    "path": "/static/shop-images/FERT-0001.jpg",
+    "query": "generated-packshot",
+    "title": "Urea 46% N 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0002": {
+    "path": "/static/shop-images/FERT-0002.jpg",
+    "query": "generated-packshot",
+    "title": "Urea 46% N 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0003": {
+    "path": "/static/shop-images/FERT-0003.jpg",
+    "query": "generated-packshot",
+    "title": "Urea 46% N 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0004": {
+    "path": "/static/shop-images/FERT-0004.jpg",
+    "query": "generated-packshot",
+    "title": "TSP (Triple Super Phosphate) 46% P2O5 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0005": {
+    "path": "/static/shop-images/FERT-0005.jpg",
+    "query": "generated-packshot",
+    "title": "TSP (Triple Super Phosphate) 46% P2O5 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0006": {
+    "path": "/static/shop-images/FERT-0006.jpg",
+    "query": "generated-packshot",
+    "title": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0007": {
+    "path": "/static/shop-images/FERT-0007.jpg",
+    "query": "generated-packshot",
+    "title": "MoP (Muriate of Potash) 60% K2O 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0008": {
+    "path": "/static/shop-images/FERT-0008.jpg",
+    "query": "generated-packshot",
+    "title": "MoP (Muriate of Potash) 60% K2O 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0009": {
+    "path": "/static/shop-images/FERT-0009.jpg",
+    "query": "generated-packshot",
+    "title": "MoP (Muriate of Potash) 60% K2O 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0010": {
+    "path": "/static/shop-images/FERT-0010.jpg",
+    "query": "generated-packshot",
+    "title": "DAP (Di-Ammonium Phosphate) 18-46-0 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0011": {
+    "path": "/static/shop-images/FERT-0011.jpg",
+    "query": "generated-packshot",
+    "title": "DAP (Di-Ammonium Phosphate) 18-46-0 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0012": {
+    "path": "/static/shop-images/FERT-0012.jpg",
+    "query": "generated-packshot",
+    "title": "DAP (Di-Ammonium Phosphate) 18-46-0 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0013": {
+    "path": "/static/shop-images/FERT-0013.jpg",
+    "query": "generated-packshot",
+    "title": "Gypsum (Calcium sulphate) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0014": {
+    "path": "/static/shop-images/FERT-0014.jpg",
+    "query": "generated-packshot",
+    "title": "Gypsum (Calcium sulphate) 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0015": {
+    "path": "/static/shop-images/FERT-0015.jpg",
+    "query": "generated-packshot",
+    "title": "Gypsum (Calcium sulphate) 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0016": {
+    "path": "/static/shop-images/FERT-0016.jpg",
+    "query": "generated-packshot",
+    "title": "Zinc sulphate monohydrate 33% Zn 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0017": {
+    "path": "/static/shop-images/FERT-0017.jpg",
+    "query": "generated-packshot",
+    "title": "Zinc sulphate monohydrate 33% Zn 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0018": {
+    "path": "/static/shop-images/FERT-0018.jpg",
+    "query": "generated-packshot",
+    "title": "Zinc sulphate monohydrate 33% Zn 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0019": {
+    "path": "/static/shop-images/FERT-0019.jpg",
+    "query": "generated-packshot",
+    "title": "Boric acid / Borax 17% B 250g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0020": {
+    "path": "/static/shop-images/FERT-0020.jpg",
+    "query": "generated-packshot",
+    "title": "Boric acid / Borax 17% B 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0021": {
+    "path": "/static/shop-images/FERT-0021.jpg",
+    "query": "generated-packshot",
+    "title": "Magnesium sulphate (Epsom salt) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0022": {
+    "path": "/static/shop-images/FERT-0022.jpg",
+    "query": "generated-packshot",
+    "title": "Magnesium sulphate (Epsom salt) 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0023": {
+    "path": "/static/shop-images/FERT-0023.jpg",
+    "query": "generated-packshot",
+    "title": "Calcium nitrate 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0024": {
+    "path": "/static/shop-images/FERT-0024.jpg",
+    "query": "generated-packshot",
+    "title": "Calcium nitrate 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0025": {
+    "path": "/static/shop-images/FERT-0025.jpg",
+    "query": "generated-packshot",
+    "title": "NPK 15-15-15 compound 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0026": {
+    "path": "/static/shop-images/FERT-0026.jpg",
+    "query": "generated-packshot",
+    "title": "NPK 15-15-15 compound 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0027": {
+    "path": "/static/shop-images/FERT-0027.jpg",
+    "query": "generated-packshot",
+    "title": "NPK 15-15-15 compound 25kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0028": {
+    "path": "/static/shop-images/FERT-0028.jpg",
+    "query": "generated-packshot",
+    "title": "Vermicompost 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0029": {
+    "path": "/static/shop-images/FERT-0029.jpg",
+    "query": "generated-packshot",
+    "title": "Vermicompost 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0030": {
+    "path": "/static/shop-images/FERT-0030.jpg",
+    "query": "generated-packshot",
+    "title": "Vermicompost 25kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0031": {
+    "path": "/static/shop-images/FERT-0031.jpg",
+    "query": "generated-packshot",
+    "title": "Well-decomposed cowdung compost 25kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0032": {
+    "path": "/static/shop-images/FERT-0032.jpg",
+    "query": "generated-packshot",
+    "title": "Well-decomposed cowdung compost 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0033": {
+    "path": "/static/shop-images/FERT-0033.jpg",
+    "query": "generated-packshot",
+    "title": "Rhizobium inoculant 200g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0034": {
+    "path": "/static/shop-images/FERT-0034.jpg",
+    "query": "generated-packshot",
+    "title": "Rhizobium inoculant 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0035": {
+    "path": "/static/shop-images/FERT-0035.jpg",
+    "query": "generated-packshot",
+    "title": "Trisodium phosphate (seed and tool disinfectant) 500g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0036": {
+    "path": "/static/shop-images/FERT-0036.jpg",
+    "query": "generated-packshot",
+    "title": "Trisodium phosphate (seed and tool disinfectant) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0037": {
+    "path": "/static/shop-images/FERT-0037.jpg",
+    "query": "generated-packshot",
+    "title": "Bleaching powder (calcium hypochlorite) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "FERT-0038": {
+    "path": "/static/shop-images/FERT-0038.jpg",
+    "query": "generated-packshot",
+    "title": "Bleaching powder (calcium hypochlorite) 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0001": {
+    "path": "/static/shop-images/SEED-0001.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan28 certified Boro rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0002": {
+    "path": "/static/shop-images/SEED-0002.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan28 certified Boro rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0003": {
+    "path": "/static/shop-images/SEED-0003.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan29 certified Boro rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0004": {
+    "path": "/static/shop-images/SEED-0004.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan29 certified Boro rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0005": {
+    "path": "/static/shop-images/SEED-0005.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan89 certified Boro rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0006": {
+    "path": "/static/shop-images/SEED-0006.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan89 certified Boro rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0007": {
+    "path": "/static/shop-images/SEED-0007.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan92 certified Boro rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0008": {
+    "path": "/static/shop-images/SEED-0008.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan92 certified Boro rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0009": {
+    "path": "/static/shop-images/SEED-0009.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan49 certified Aman rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0010": {
+    "path": "/static/shop-images/SEED-0010.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan49 certified Aman rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0011": {
+    "path": "/static/shop-images/SEED-0011.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan75 certified Aman rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0012": {
+    "path": "/static/shop-images/SEED-0012.jpg",
+    "query": "generated-packshot",
+    "title": "BRRI dhan75 certified Aman rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0013": {
+    "path": "/static/shop-images/SEED-0013.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid rice seed (Boro) 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0014": {
+    "path": "/static/shop-images/SEED-0014.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid rice seed (Boro) 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0015": {
+    "path": "/static/shop-images/SEED-0015.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Diamant 40kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0016": {
+    "path": "/static/shop-images/SEED-0016.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Diamant 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0017": {
+    "path": "/static/shop-images/SEED-0017.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Cardinal 40kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0018": {
+    "path": "/static/shop-images/SEED-0018.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Cardinal 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0019": {
+    "path": "/static/shop-images/SEED-0019.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Granola 40kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0020": {
+    "path": "/static/shop-images/SEED-0020.jpg",
+    "query": "generated-packshot",
+    "title": "Potato seed tuber — Granola 50kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0021": {
+    "path": "/static/shop-images/SEED-0021.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid tomato seed 1g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0022": {
+    "path": "/static/shop-images/SEED-0022.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid tomato seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0023": {
+    "path": "/static/shop-images/SEED-0023.jpg",
+    "query": "generated-packshot",
+    "title": "BARI tomato variety seed 5g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0024": {
+    "path": "/static/shop-images/SEED-0024.jpg",
+    "query": "generated-packshot",
+    "title": "BARI tomato variety seed 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0025": {
+    "path": "/static/shop-images/SEED-0025.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid brinjal seed 1g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0026": {
+    "path": "/static/shop-images/SEED-0026.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid brinjal seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0027": {
+    "path": "/static/shop-images/SEED-0027.jpg",
+    "query": "generated-packshot",
+    "title": "BARI brinjal variety seed 5g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0028": {
+    "path": "/static/shop-images/SEED-0028.jpg",
+    "query": "generated-packshot",
+    "title": "BARI brinjal variety seed 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0029": {
+    "path": "/static/shop-images/SEED-0029.jpg",
+    "query": "generated-packshot",
+    "title": "Chilli seed 5g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0030": {
+    "path": "/static/shop-images/SEED-0030.jpg",
+    "query": "generated-packshot",
+    "title": "Chilli seed 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0031": {
+    "path": "/static/shop-images/SEED-0031.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid maize seed 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0032": {
+    "path": "/static/shop-images/SEED-0032.jpg",
+    "query": "generated-packshot",
+    "title": "Hybrid maize seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0033": {
+    "path": "/static/shop-images/SEED-0033.jpg",
+    "query": "generated-packshot",
+    "title": "Wheat seed — BARI Gom 33 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0034": {
+    "path": "/static/shop-images/SEED-0034.jpg",
+    "query": "generated-packshot",
+    "title": "Wheat seed — BARI Gom 33 40kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0035": {
+    "path": "/static/shop-images/SEED-0035.jpg",
+    "query": "generated-packshot",
+    "title": "Onion seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0036": {
+    "path": "/static/shop-images/SEED-0036.jpg",
+    "query": "generated-packshot",
+    "title": "Onion seed 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0037": {
+    "path": "/static/shop-images/SEED-0037.jpg",
+    "query": "generated-packshot",
+    "title": "Mustard seed — BARI Sarisha 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0038": {
+    "path": "/static/shop-images/SEED-0038.jpg",
+    "query": "generated-packshot",
+    "title": "Mustard seed — BARI Sarisha 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0039": {
+    "path": "/static/shop-images/SEED-0039.jpg",
+    "query": "generated-packshot",
+    "title": "Lentil seed — BARI Masur 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0040": {
+    "path": "/static/shop-images/SEED-0040.jpg",
+    "query": "generated-packshot",
+    "title": "Lentil seed — BARI Masur 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0041": {
+    "path": "/static/shop-images/SEED-0041.jpg",
+    "query": "generated-packshot",
+    "title": "Cucumber seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0042": {
+    "path": "/static/shop-images/SEED-0042.jpg",
+    "query": "generated-packshot",
+    "title": "Cucumber seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0043": {
+    "path": "/static/shop-images/SEED-0043.jpg",
+    "query": "generated-packshot",
+    "title": "Sweet gourd (pumpkin) seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0044": {
+    "path": "/static/shop-images/SEED-0044.jpg",
+    "query": "generated-packshot",
+    "title": "Sweet gourd (pumpkin) seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0045": {
+    "path": "/static/shop-images/SEED-0045.jpg",
+    "query": "generated-packshot",
+    "title": "Cabbage seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0046": {
+    "path": "/static/shop-images/SEED-0046.jpg",
+    "query": "generated-packshot",
+    "title": "Cabbage seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0047": {
+    "path": "/static/shop-images/SEED-0047.jpg",
+    "query": "generated-packshot",
+    "title": "Cauliflower seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0048": {
+    "path": "/static/shop-images/SEED-0048.jpg",
+    "query": "generated-packshot",
+    "title": "Cauliflower seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0049": {
+    "path": "/static/shop-images/SEED-0049.jpg",
+    "query": "generated-packshot",
+    "title": "Grafted brinjal seedlings (wilt-resistant rootstock) 100 seedlings",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0050": {
+    "path": "/static/shop-images/SEED-0050.jpg",
+    "query": "generated-packshot",
+    "title": "Grafted brinjal seedlings (wilt-resistant rootstock) 500 seedlings",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0051": {
+    "path": "/static/shop-images/SEED-0051.jpg",
+    "query": "generated-packshot",
+    "title": "Certified Aus rice seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0052": {
+    "path": "/static/shop-images/SEED-0052.jpg",
+    "query": "generated-packshot",
+    "title": "Certified Aus rice seed 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0053": {
+    "path": "/static/shop-images/SEED-0053.jpg",
+    "query": "generated-packshot",
+    "title": "Certified virus-free tomato seed 1g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0054": {
+    "path": "/static/shop-images/SEED-0054.jpg",
+    "query": "generated-packshot",
+    "title": "Certified virus-free tomato seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0055": {
+    "path": "/static/shop-images/SEED-0055.jpg",
+    "query": "generated-packshot",
+    "title": "Garlic seed clove 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0056": {
+    "path": "/static/shop-images/SEED-0056.jpg",
+    "query": "generated-packshot",
+    "title": "Garlic seed clove 10kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0057": {
+    "path": "/static/shop-images/SEED-0057.jpg",
+    "query": "generated-packshot",
+    "title": "Groundnut kernel seed 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0058": {
+    "path": "/static/shop-images/SEED-0058.jpg",
+    "query": "generated-packshot",
+    "title": "Groundnut kernel seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0059": {
+    "path": "/static/shop-images/SEED-0059.jpg",
+    "query": "generated-packshot",
+    "title": "Mungbean seed 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0060": {
+    "path": "/static/shop-images/SEED-0060.jpg",
+    "query": "generated-packshot",
+    "title": "Mungbean seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0061": {
+    "path": "/static/shop-images/SEED-0061.jpg",
+    "query": "generated-packshot",
+    "title": "Jute seed 1kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0062": {
+    "path": "/static/shop-images/SEED-0062.jpg",
+    "query": "generated-packshot",
+    "title": "Jute seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0063": {
+    "path": "/static/shop-images/SEED-0063.jpg",
+    "query": "generated-packshot",
+    "title": "Bitter gourd seed 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0064": {
+    "path": "/static/shop-images/SEED-0064.jpg",
+    "query": "generated-packshot",
+    "title": "Bitter gourd seed 100g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0065": {
+    "path": "/static/shop-images/SEED-0065.jpg",
+    "query": "generated-packshot",
+    "title": "Turmeric rhizome seed 5kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0066": {
+    "path": "/static/shop-images/SEED-0066.jpg",
+    "query": "generated-packshot",
+    "title": "Turmeric rhizome seed 20kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0067": {
+    "path": "/static/shop-images/SEED-0067.jpg",
+    "query": "generated-packshot",
+    "title": "Sugarcane setts (three-budded) 100 setts",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0068": {
+    "path": "/static/shop-images/SEED-0068.jpg",
+    "query": "generated-packshot",
+    "title": "Sugarcane setts (three-budded) 500 setts",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0069": {
+    "path": "/static/shop-images/SEED-0069.jpg",
+    "query": "generated-packshot",
+    "title": "Papaya seed (Shahi / Red Lady) 10g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0070": {
+    "path": "/static/shop-images/SEED-0070.jpg",
+    "query": "generated-packshot",
+    "title": "Papaya seed (Shahi / Red Lady) 50g",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0071": {
+    "path": "/static/shop-images/SEED-0071.jpg",
+    "query": "generated-packshot",
+    "title": "Certified malta / lemon sapling (citrus) 1 sapling",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "SEED-0072": {
+    "path": "/static/shop-images/SEED-0072.jpg",
+    "query": "generated-packshot",
+    "title": "Certified malta / lemon sapling (citrus) 25 saplings",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0001": {
+    "path": "/static/shop-images/EQ-0001.jpg",
+    "query": "generated-packshot",
+    "title": "Knapsack sprayer 16L manual",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0002": {
+    "path": "/static/shop-images/EQ-0002.jpg",
+    "query": "generated-packshot",
+    "title": "Knapsack sprayer 12L manual",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0003": {
+    "path": "/static/shop-images/EQ-0003.jpg",
+    "query": "generated-packshot",
+    "title": "Knapsack sprayer 20L manual",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0004": {
+    "path": "/static/shop-images/EQ-0004.jpg",
+    "query": "generated-packshot",
+    "title": "Battery knapsack sprayer 16L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0005": {
+    "path": "/static/shop-images/EQ-0005.jpg",
+    "query": "generated-packshot",
+    "title": "Power sprayer (petrol) 25L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0006": {
+    "path": "/static/shop-images/EQ-0006.jpg",
+    "query": "generated-packshot",
+    "title": "Foot sprayer (pedal type)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0007": {
+    "path": "/static/shop-images/EQ-0007.jpg",
+    "query": "generated-packshot",
+    "title": "Hand-held pressure sprayer 2L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0008": {
+    "path": "/static/shop-images/EQ-0008.jpg",
+    "query": "generated-packshot",
+    "title": "Spare brass nozzle set (hollow cone, flat fan, flood jet)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0009": {
+    "path": "/static/shop-images/EQ-0009.jpg",
+    "query": "generated-packshot",
+    "title": "Spray lance extension (1.5 m)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0010": {
+    "path": "/static/shop-images/EQ-0010.jpg",
+    "query": "generated-packshot",
+    "title": "Spray shield / hood for herbicide",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0011": {
+    "path": "/static/shop-images/EQ-0011.jpg",
+    "query": "generated-packshot",
+    "title": "Nitrile spray gloves (pair)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0012": {
+    "path": "/static/shop-images/EQ-0012.jpg",
+    "query": "generated-packshot",
+    "title": "Spray mask with replaceable cartridge",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0013": {
+    "path": "/static/shop-images/EQ-0013.jpg",
+    "query": "generated-packshot",
+    "title": "Disposable dust mask (pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0014": {
+    "path": "/static/shop-images/EQ-0014.jpg",
+    "query": "generated-packshot",
+    "title": "Safety goggles",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0015": {
+    "path": "/static/shop-images/EQ-0015.jpg",
+    "query": "generated-packshot",
+    "title": "Spray raincoat / chemical apron",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0016": {
+    "path": "/static/shop-images/EQ-0016.jpg",
+    "query": "generated-packshot",
+    "title": "Rubber gumboots",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0017": {
+    "path": "/static/shop-images/EQ-0017.jpg",
+    "query": "generated-packshot",
+    "title": "First aid kit (agricultural)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0018": {
+    "path": "/static/shop-images/EQ-0018.jpg",
+    "query": "generated-packshot",
+    "title": "Power tiller (12 HP diesel)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0019": {
+    "path": "/static/shop-images/EQ-0019.jpg",
+    "query": "generated-packshot",
+    "title": "Rotary tiller attachment (for power tiller)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0020": {
+    "path": "/static/shop-images/EQ-0020.jpg",
+    "query": "generated-packshot",
+    "title": "Mouldboard plough (power tiller attachment)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0021": {
+    "path": "/static/shop-images/EQ-0021.jpg",
+    "query": "generated-packshot",
+    "title": "Hand hoe (kodal)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0022": {
+    "path": "/static/shop-images/EQ-0022.jpg",
+    "query": "generated-packshot",
+    "title": "Spade (belcha)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0023": {
+    "path": "/static/shop-images/EQ-0023.jpg",
+    "query": "generated-packshot",
+    "title": "Ladder / plank leveller (moi)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0024": {
+    "path": "/static/shop-images/EQ-0024.jpg",
+    "query": "generated-packshot",
+    "title": "Seed drill (power tiller operated)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0025": {
+    "path": "/static/shop-images/EQ-0025.jpg",
+    "query": "generated-packshot",
+    "title": "Manual seed dibbler",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0026": {
+    "path": "/static/shop-images/EQ-0026.jpg",
+    "query": "generated-packshot",
+    "title": "Rice transplanter (walk-behind, 4-row)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0027": {
+    "path": "/static/shop-images/EQ-0027.jpg",
+    "query": "generated-packshot",
+    "title": "Seedling raising tray (mat type, pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0028": {
+    "path": "/static/shop-images/EQ-0028.jpg",
+    "query": "generated-packshot",
+    "title": "Drip irrigation kit (1 decimal)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0029": {
+    "path": "/static/shop-images/EQ-0029.jpg",
+    "query": "generated-packshot",
+    "title": "Drip irrigation kit (10 decimal)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0030": {
+    "path": "/static/shop-images/EQ-0030.jpg",
+    "query": "generated-packshot",
+    "title": "Sprinkler irrigation set (portable)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0031": {
+    "path": "/static/shop-images/EQ-0031.jpg",
+    "query": "generated-packshot",
+    "title": "Centrifugal water pump 2 inch (diesel)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0032": {
+    "path": "/static/shop-images/EQ-0032.jpg",
+    "query": "generated-packshot",
+    "title": "Submersible pump 1 HP (electric)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0033": {
+    "path": "/static/shop-images/EQ-0033.jpg",
+    "query": "generated-packshot",
+    "title": "Solar irrigation pump 1 HP with panels",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0034": {
+    "path": "/static/shop-images/EQ-0034.jpg",
+    "query": "generated-packshot",
+    "title": "AWD field water tube (perforated pipe)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0035": {
+    "path": "/static/shop-images/EQ-0035.jpg",
+    "query": "generated-packshot",
+    "title": "Layflat delivery hose (per 10 m)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0036": {
+    "path": "/static/shop-images/EQ-0036.jpg",
+    "query": "generated-packshot",
+    "title": "Rotary paddy weeder (manual, single row)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0037": {
+    "path": "/static/shop-images/EQ-0037.jpg",
+    "query": "generated-packshot",
+    "title": "Rotary paddy weeder (two row)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0038": {
+    "path": "/static/shop-images/EQ-0038.jpg",
+    "query": "generated-packshot",
+    "title": "Wheel hoe / push cultivator",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0039": {
+    "path": "/static/shop-images/EQ-0039.jpg",
+    "query": "generated-packshot",
+    "title": "Hand weeder (nirani)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0040": {
+    "path": "/static/shop-images/EQ-0040.jpg",
+    "query": "generated-packshot",
+    "title": "Pruning shears (secateurs)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0041": {
+    "path": "/static/shop-images/EQ-0041.jpg",
+    "query": "generated-packshot",
+    "title": "Pruning saw",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0042": {
+    "path": "/static/shop-images/EQ-0042.jpg",
+    "query": "generated-packshot",
+    "title": "Grafting knife",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0043": {
+    "path": "/static/shop-images/EQ-0043.jpg",
+    "query": "generated-packshot",
+    "title": "Grafting tape / parafilm (roll)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0044": {
+    "path": "/static/shop-images/EQ-0044.jpg",
+    "query": "generated-packshot",
+    "title": "Sickle (kaste)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0045": {
+    "path": "/static/shop-images/EQ-0045.jpg",
+    "query": "generated-packshot",
+    "title": "Banana harvesting knife (long handle)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0046": {
+    "path": "/static/shop-images/EQ-0046.jpg",
+    "query": "generated-packshot",
+    "title": "Mango harvester pole with net bag",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0047": {
+    "path": "/static/shop-images/EQ-0047.jpg",
+    "query": "generated-packshot",
+    "title": "Reaper (walk-behind, 1.2 m)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0048": {
+    "path": "/static/shop-images/EQ-0048.jpg",
+    "query": "generated-packshot",
+    "title": "Combine harvester (mini, walk-behind class)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0049": {
+    "path": "/static/shop-images/EQ-0049.jpg",
+    "query": "generated-packshot",
+    "title": "Pedal thresher (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0050": {
+    "path": "/static/shop-images/EQ-0050.jpg",
+    "query": "generated-packshot",
+    "title": "Power thresher (open drum, engine driven)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0051": {
+    "path": "/static/shop-images/EQ-0051.jpg",
+    "query": "generated-packshot",
+    "title": "Maize sheller (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0052": {
+    "path": "/static/shop-images/EQ-0052.jpg",
+    "query": "generated-packshot",
+    "title": "Maize sheller (power operated)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0053": {
+    "path": "/static/shop-images/EQ-0053.jpg",
+    "query": "generated-packshot",
+    "title": "Winnowing fan (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0054": {
+    "path": "/static/shop-images/EQ-0054.jpg",
+    "query": "generated-packshot",
+    "title": "Jute sack (50 kg, pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0055": {
+    "path": "/static/shop-images/EQ-0055.jpg",
+    "query": "generated-packshot",
+    "title": "Airtight grain storage drum 200L",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0056": {
+    "path": "/static/shop-images/EQ-0056.jpg",
+    "query": "generated-packshot",
+    "title": "Hermetic storage bag (Super Grain Bag type)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0057": {
+    "path": "/static/shop-images/EQ-0057.jpg",
+    "query": "generated-packshot",
+    "title": "Potato storage crate (plastic, stackable)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0058": {
+    "path": "/static/shop-images/EQ-0058.jpg",
+    "query": "generated-packshot",
+    "title": "Onion storage crate / net bag",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0059": {
+    "path": "/static/shop-images/EQ-0059.jpg",
+    "query": "generated-packshot",
+    "title": "Tarpaulin sheet for sun drying (per 100 sq ft)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0060": {
+    "path": "/static/shop-images/EQ-0060.jpg",
+    "query": "generated-packshot",
+    "title": "Moisture meter (grain)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0061": {
+    "path": "/static/shop-images/EQ-0061.jpg",
+    "query": "generated-packshot",
+    "title": "Soil pH meter (digital)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0062": {
+    "path": "/static/shop-images/EQ-0062.jpg",
+    "query": "generated-packshot",
+    "title": "Soil moisture meter",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0063": {
+    "path": "/static/shop-images/EQ-0063.jpg",
+    "query": "generated-packshot",
+    "title": "Min-max thermometer / hygrometer",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0064": {
+    "path": "/static/shop-images/EQ-0064.jpg",
+    "query": "generated-packshot",
+    "title": "Hand lens 20x",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0065": {
+    "path": "/static/shop-images/EQ-0065.jpg",
+    "query": "generated-packshot",
+    "title": "Soil test kit (NPK, basic)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0066": {
+    "path": "/static/shop-images/EQ-0066.jpg",
+    "query": "generated-packshot",
+    "title": "BSFB pheromone trap with lure (pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0067": {
+    "path": "/static/shop-images/EQ-0067.jpg",
+    "query": "generated-packshot",
+    "title": "Fruit fly pheromone trap (cue-lure, pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0068": {
+    "path": "/static/shop-images/EQ-0068.jpg",
+    "query": "generated-packshot",
+    "title": "Fall armyworm pheromone trap (pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0069": {
+    "path": "/static/shop-images/EQ-0069.jpg",
+    "query": "generated-packshot",
+    "title": "Yellow sticky trap (pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0070": {
+    "path": "/static/shop-images/EQ-0070.jpg",
+    "query": "generated-packshot",
+    "title": "Blue sticky trap (pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0071": {
+    "path": "/static/shop-images/EQ-0071.jpg",
+    "query": "generated-packshot",
+    "title": "Light trap (solar)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0072": {
+    "path": "/static/shop-images/EQ-0072.jpg",
+    "query": "generated-packshot",
+    "title": "Bird perch poles (bundle of 20)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0073": {
+    "path": "/static/shop-images/EQ-0073.jpg",
+    "query": "generated-packshot",
+    "title": "Fruit bagging bags (pack of 100)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0074": {
+    "path": "/static/shop-images/EQ-0074.jpg",
+    "query": "generated-packshot",
+    "title": "Insect-proof net 50 mesh (per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0075": {
+    "path": "/static/shop-images/EQ-0075.jpg",
+    "query": "generated-packshot",
+    "title": "Shade net 50% (per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0076": {
+    "path": "/static/shop-images/EQ-0076.jpg",
+    "query": "generated-packshot",
+    "title": "Polytunnel plastic film (200 micron, per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0077": {
+    "path": "/static/shop-images/EQ-0077.jpg",
+    "query": "generated-packshot",
+    "title": "Black plastic mulch film (per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0078": {
+    "path": "/static/shop-images/EQ-0078.jpg",
+    "query": "generated-packshot",
+    "title": "Silver reflective mulch film (per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0079": {
+    "path": "/static/shop-images/EQ-0079.jpg",
+    "query": "generated-packshot",
+    "title": "Straw mulch (per bundle)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0080": {
+    "path": "/static/shop-images/EQ-0080.jpg",
+    "query": "generated-packshot",
+    "title": "Bamboo staking poles (bundle of 20)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0081": {
+    "path": "/static/shop-images/EQ-0081.jpg",
+    "query": "generated-packshot",
+    "title": "Nylon trellis net (per metre)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0082": {
+    "path": "/static/shop-images/EQ-0082.jpg",
+    "query": "generated-packshot",
+    "title": "Seed germination tray (98 cell, pack of 10)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0083": {
+    "path": "/static/shop-images/EQ-0083.jpg",
+    "query": "generated-packshot",
+    "title": "Cocopeat growing medium (5 kg block)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0084": {
+    "path": "/static/shop-images/EQ-0084.jpg",
+    "query": "generated-packshot",
+    "title": "Measuring cup / graduated jug (1L)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0085": {
+    "path": "/static/shop-images/EQ-0085.jpg",
+    "query": "generated-packshot",
+    "title": "Digital weighing scale (5 kg)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0086": {
+    "path": "/static/shop-images/EQ-0086.jpg",
+    "query": "generated-packshot",
+    "title": "Pesticide storage box with lock",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0087": {
+    "path": "/static/shop-images/EQ-0087.jpg",
+    "query": "generated-packshot",
+    "title": "Wheelbarrow",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0088": {
+    "path": "/static/shop-images/EQ-0088.jpg",
+    "query": "generated-packshot",
+    "title": "Harvest crate (plastic, 20 kg)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0089": {
+    "path": "/static/shop-images/EQ-0089.jpg",
+    "query": "generated-packshot",
+    "title": "Rope and tie material (per kg)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0090": {
+    "path": "/static/shop-images/EQ-0090.jpg",
+    "query": "generated-packshot",
+    "title": "Bleaching powder (calcium hypochlorite) 1 kg",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0091": {
+    "path": "/static/shop-images/EQ-0091.jpg",
+    "query": "generated-packshot",
+    "title": "Agricultural lime (50 kg bag)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0092": {
+    "path": "/static/shop-images/EQ-0092.jpg",
+    "query": "generated-packshot",
+    "title": "Treadle pump (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0093": {
+    "path": "/static/shop-images/EQ-0093.jpg",
+    "query": "generated-packshot",
+    "title": "Suction and delivery hose set with foot valve",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0094": {
+    "path": "/static/shop-images/EQ-0094.jpg",
+    "query": "generated-packshot",
+    "title": "Potato planter (power tiller mounted)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0095": {
+    "path": "/static/shop-images/EQ-0095.jpg",
+    "query": "generated-packshot",
+    "title": "Garlic / onion set planter (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0096": {
+    "path": "/static/shop-images/EQ-0096.jpg",
+    "query": "generated-packshot",
+    "title": "Cono weeder (rice)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0097": {
+    "path": "/static/shop-images/EQ-0097.jpg",
+    "query": "generated-packshot",
+    "title": "Brush cutter / grass trimmer (petrol)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0098": {
+    "path": "/static/shop-images/EQ-0098.jpg",
+    "query": "generated-packshot",
+    "title": "Long-handled loppers",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0099": {
+    "path": "/static/shop-images/EQ-0099.jpg",
+    "query": "generated-packshot",
+    "title": "Banana leaf pruning hook (long pole)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0100": {
+    "path": "/static/shop-images/EQ-0100.jpg",
+    "query": "generated-packshot",
+    "title": "Groundnut / pulse stripper (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0101": {
+    "path": "/static/shop-images/EQ-0101.jpg",
+    "query": "generated-packshot",
+    "title": "Jute ribboner / retting aid",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0102": {
+    "path": "/static/shop-images/EQ-0102.jpg",
+    "query": "generated-packshot",
+    "title": "EC / TDS meter (irrigation water)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0103": {
+    "path": "/static/shop-images/EQ-0103.jpg",
+    "query": "generated-packshot",
+    "title": "Rain gauge (manual)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0104": {
+    "path": "/static/shop-images/EQ-0104.jpg",
+    "query": "generated-packshot",
+    "title": "Drip fertigation venturi injector",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  },
+  "EQ-0105": {
+    "path": "/static/shop-images/EQ-0105.jpg",
+    "query": "generated-packshot",
+    "title": "Solar dryer (small, tunnel type)",
+    "license": "generated",
+    "source_url": "",
+    "creator": "AgroScan"
+  }
+}

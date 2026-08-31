@@ -1,0 +1,21 @@
+{
+  "appId": "com.mujahidulhaquejihad.agroscan",
+  "appName": "AgroScan",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": [
+      "agrovet.mujahidulhaquejihad.com",
+      "agroscan.mujahidulhaquejihad.com",
+      "*.mujahidulhaquejihad.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true
+    }
+  }
+}

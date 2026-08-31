@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#067a42" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>AgroScan - Smart Leaf Disease Detection</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <link rel="icon" href="/static/icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css?v=65" />
+</head>
+<body data-title-key="page_title" class="app-panes mobile-tabs simple-ui" data-app-pane="diagnose" data-mobile-pane="diagnose">
+  <a id="top"></a>
+  <div id="offlineBanner" class="offline-banner hidden">
+    <strong data-i18n="offline_title">No internet</strong>
+    <span data-i18n="offline_step1">Turn on mobile data or Wi‑Fi, then open the app again.</span>
+    <div class="offline-banner-actions">
+      <button type="button" id="showOfflineAdviceBtn" class="btn btn-ghost btn-sm" data-i18n="offline_show_last">Show last advice</button>
+    </div>
+    <code id="offlineApiUrl" class="visually-hidden"></code>
+    <span class="visually-hidden" data-i18n="offline_step2"></span>
+    <span class="visually-hidden" data-i18n="offline_note"></span>
+  </div>
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand brand-logo-only" aria-label="AgroScan home">
+        <span class="logo-chip logo-chip-header">
+          <img src="/static/AgroVet_logo-main.png" alt="AgroScan" class="logo-img logo-img-white logo-img-brand" />
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#diagnose" data-i18n="nav_diagnose">Photo</a>
+        <a href="#field" data-i18n="nav_field">Field</a>
+        <a href="#notifications" class="nav-notif-link">
+          <span data-i18n="nav_notifications">News</span>
+          <span class="notif-badge hidden">0</span>
+        </a>
+        <a href="#shop" data-i18n="nav_shop">Shop</a>
+        <a href="#emergency" data-i18n="nav_emergency">Call</a>
+        <a href="#library" data-i18n="nav_help">Help</a>
+      </nav>
+      <div class="header-right">
+        <div class="header-tools">
+          <button id="langToggle" class="icon-btn" data-i18n-title="language" title="Language">বাংলা</button>
+        </div>
+        <div id="authArea" class="auth-area"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== 3-COLUMN LAYOUT ===================== -->
+  <div class="layout">
+    <!-- LEFT SIDEBAR (advanced; hidden in simple-ui) -->
+    <aside class="sidebar left simple-hide">
+      <div class="widget">
+        <h3 data-i18n="history">Recent diagnoses</h3>
+        <div id="historyList" class="hist-list"></div>
+        <button id="clearHistory" class="btn btn-link btn-sm" data-i18n="clear">Clear</button>
+      </div>
+      <div class="widget">
+        <h3 data-i18n="phototips">Photo tips</h3>
+        <ul class="tips">
+          <li data-i18n="phototip_1">Use a single leaf on a plain background.</li>
+          <li data-i18n="phototip_2">Good daylight, avoid shadows & blur.</li>
+          <li data-i18n="phototip_3">Fill the frame with the leaf.</li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h3 data-i18n="quickdial">Quick dial</h3>
+        <a class="dial" href="tel:16123">&#128222; <span data-i18n="dial_krishi">16123 Krishi</span></a>
+        <a class="dial" href="tel:16358">&#128222; <span data-i18n="dial_vet">16358 Vet</span></a>
+        <a class="dial danger" href="tel:999">&#128222; <span data-i18n="dial_emergency">999 Emergency</span></a>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <main class="center">
+      <section class="hero diagnose-workspace" id="diagnose">
+        <aside id="photoHistory" class="photo-history" aria-label="Previous scans">
+          <div class="photo-history-head">
+            <h3 data-i18n="photo_history_title">Previous scans</h3>
+            <button type="button" id="photoHistoryClear" class="btn btn-link btn-sm" data-i18n="clear">Clear</button>
+          </div>
+          <p class="muted small" data-i18n="photo_history_hint">Tap a scan to open it on the right.</p>
+          <div id="photoHistoryList" class="photo-history-list"></div>
+        </aside>
+
+        <div class="diagnose-main">
+          <div id="diagnoseCapture" class="diagnose-capture">
+            <header class="diagnose-top">
+              <div class="hero-text">
+                <h2 data-i18n="hero_title">Take a leaf photo</h2>
+                <p data-i18n-html="hero_sub_html">We will tell you the disease and what to do.</p>
+                <ol class="simple-steps" aria-hidden="true">
+                  <li data-i18n="simple_step1">1. Take photo</li>
+                  <li data-i18n="simple_step2">2. Wait</li>
+                  <li data-i18n="simple_step3">3. See advice</li>
+                </ol>
+              </div>
+              <div id="diagnoseFieldPicker" class="diagnose-field-picker">
+                <label class="diagnose-field-label" for="diagnoseFieldSelect">
+                  <span data-i18n="diagnose_choose_field">Choose your field</span>
+                </label>
+                <div class="diagnose-field-row">
+                  <select id="diagnoseFieldSelect" class="diagnose-field-select" aria-describedby="diagnoseFieldHint"></select>
+                  <button type="button" id="diagnoseFieldAddBtn" class="btn btn-secondary btn-sm" data-i18n="diagnose_add_field">Add field</button>
+                </div>
+                <p id="diagnoseFieldHint" class="muted small" data-i18n="diagnose_field_hint">Pick a field before you take the photo. This scan will be saved there.</p>
+                <div id="diagnoseFieldQuickAdd" class="diagnose-field-quick hidden">
+                  <input id="diagnoseFieldNewName" type="text" maxlength="60" data-i18n-ph="field_plot_name_ph" placeholder="North field" />
+                  <input id="diagnoseFieldNewCrop" type="text" maxlength="40" data-i18n-ph="field_plot_crop_ph" placeholder="Tomato" />
+                  <button type="button" id="diagnoseFieldQuickSave" class="btn btn-primary btn-sm" data-i18n="field_save_plot">Save plot</button>
+                </div>
+              </div>
+            </header>
+
+            <div class="diagnose-work">
+              <div class="uploader" id="dropzone">
+                <input type="file" id="fileInput" accept="image/*,.jpg,.jpeg,.png,.webp,.bmp"
+                  onchange="window.agrovetPickFile && window.agrovetPickFile(this)" />
+                <input type="file" id="cameraInput" class="visually-hidden" accept="image/*" capture="environment"
+                  onchange="window.agrovetPickFile && window.agrovetPickFile(this)" />
+                <div class="drop-inner">
+                  <label class="preview-wrap" for="fileInput" id="uploadLabel">
+                    <img id="preview" alt="" />
+                    <div id="placeholder" class="placeholder">
+                      <span class="big placeholder-cam" aria-hidden="true"></span>
+                      <p class="drop-desktop"><span data-i18n="drop_hint">Drop a leaf photo here or</span>
+                        <span class="link" data-i18n="browse">browse</span></p>
+                      <p class="drop-mobile muted" data-i18n="mobile_drop_hint">Press the green button below</p>
+                    </div>
+                  </label>
+                  <div class="mobile-upload-actions">
+                    <button type="button" id="cameraBtn" class="btn btn-primary btn-touch btn-hero-action">
+                      <span data-i18n="mobile_take_photo">Take photo</span>
+                    </button>
+                    <button type="button" id="galleryBtn" class="btn btn-secondary btn-touch">
+                      <span data-i18n="mobile_gallery">Old photo</span>
+                    </button>
+                  </div>
+                  <div class="diagnose-actions">
+                    <p id="fileName" class="file-name muted small hidden"></p>
+                    <button type="button" id="cropOnlyBtn" class="btn btn-secondary btn-touch" data-i18n="crop_edit">Crop leaf</button>
+                    <button type="button" id="analyzeBtn" class="btn btn-primary btn-lg btn-touch" disabled data-i18n="analyze">See disease</button>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="diagnose-side" aria-label="Tips">
+                <div id="seasonTip" class="season-tip" role="status"></div>
+                <div id="scoutReminder" class="scout-reminder hidden" role="status"></div>
+                <div id="fieldPhiBanner" class="field-phi-banner hidden" role="status"></div>
+                <div id="offlineAdviceBox" class="offline-advice hidden"></div>
+              </aside>
+            </div>
+          </div>
+          <div id="photoHistoryDetail" class="photo-history-detail hidden" role="region" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <div id="loader" class="loader hidden"><div class="spinner"></div><p data-i18n="running">Please wait…</p></div>
+      <div id="errorBox" class="error hidden"></div>
+
+      <section id="results" class="results hidden">
+        <div id="lowConfAlert" class="low-conf-alert hidden"></div>
+        <div id="resultActions" class="result-actions hidden">
+          <button id="listenBtn" class="btn btn-primary btn-lg" data-i18n="listen">Listen</button>
+          <button id="shareBtn" class="btn btn-secondary btn-lg" data-i18n="share">Share</button>
+          <button id="downloadBtn" class="btn btn-ghost btn-sm simple-hide" data-i18n="download">Download report</button>
+        </div>
+        <div class="card stage simple-tech" id="stage1Card">
+          <div class="card-head"><span class="step" data-i18n="stage1">Stage 1</span><h2 data-i18n="leaf_check">Leaf check</h2></div>
+          <div id="stage1Body" class="card-body"></div>
+        </div>
+        <div class="card stage hidden" id="cropCard">
+          <div class="card-head"><h2 data-i18n="leaf_type">Which plant?</h2></div>
+          <div id="cropBody" class="card-body"></div>
+        </div>
+        <div class="card stage hidden" id="modelsCard">
+          <div class="card-head"><h2 data-i18n="per_model">All 3 models</h2></div>
+          <div id="modelsBody" class="models-grid"></div>
+        </div>
+        <div class="card stage best hidden" id="bestCard">
+          <div class="card-head"><h2 data-i18n="best_answer">Highest confidence</h2></div>
+          <div id="bestBody" class="card-body"></div>
+          <div id="farmerActionStrip" class="farmer-action-strip hidden" role="group">
+            <button type="button" id="farmerActListen" class="btn btn-primary btn-lg" data-i18n="listen">Listen</button>
+            <button type="button" id="farmerActBuy" class="btn btn-secondary btn-lg" data-i18n="shop_order_meds">Buy medicine</button>
+            <a id="farmerActCall" class="btn btn-ghost btn-lg" href="tel:16123" data-i18n="call_16123">Call 16123</a>
+          </div>
+        </div>
+        <div id="phiReminder" class="phi-reminder hidden" role="status"></div>
+        <div id="fieldPostScan" class="field-post-scan hidden"></div>
+        <div class="card stage hidden" id="adviceCard">
+          <div class="card-head"><h2 data-i18n="treat_prevent">What to do</h2></div>
+          <div class="land-size-bar" id="adviceLandBar">
+            <label class="land-field">
+              <span data-i18n="farm_land">Land size</span>
+              <input id="adviceLandSize" type="number" min="0.1" step="0.1" value="10" />
+            </label>
+            <label class="land-field">
+              <span data-i18n="farm_unit">Unit</span>
+              <select id="adviceLandUnit">
+                <option value="decimal" data-i18n="farm_unit_decimal">Decimal</option>
+                <option value="bigha" data-i18n="farm_unit_bigha">Bigha</option>
+                <option value="acre" data-i18n="farm_unit_acre">Acre</option>
+              </select>
+            </label>
+            <button type="button" id="adviceLandApply" class="btn btn-secondary btn-sm" data-i18n="land_apply">Update doses</button>
+          </div>
+          <p class="muted small land-hint" data-i18n="land_hint">Enter your plot size to scale spray water, product amount and follow-ups.</p>
+          <div id="adviceBody" class="card-body"></div>
+          <div id="adviceShopRec" class="advice-shop-rec hidden"></div>
+          <div id="adviceFeedback" class="advice-feedback hidden">
+            <p data-i18n="feedback_ask">Was this advice useful?</p>
+            <button type="button" class="btn btn-secondary btn-sm" data-fb="yes" data-i18n="feedback_yes">Yes</button>
+            <button type="button" class="btn btn-ghost btn-sm" data-fb="no" data-i18n="feedback_no">Not really</button>
+            <span id="feedbackThanks" class="muted small hidden" data-i18n="feedback_thanks">Thank you</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" class="shop-hub">
+        <header class="shop-hero">
+          <div class="shop-hero-text">
+            <h2 data-i18n="shop_title">Buy medicine & seed</h2>
+            <p class="muted" data-i18n="shop_sub">Pick what you need. We will deliver.</p>
+          </div>
+          <button type="button" id="shopCartToggle" class="btn btn-primary shop-cart-fab" aria-controls="shopCartDrawer">
+            <span aria-hidden="true">&#128722;</span>
+            <span data-i18n="shop_cart">Bag</span>
+            <span id="shopCartBadge" class="shop-cart-badge hidden">0</span>
+          </button>
+        </header>
+
+        <div id="shopSafetyNote" class="shop-safety simple-advanced"></div>
+        <div id="shopRecommend" class="shop-recommend hidden"></div>
+        <div id="shopToast" class="shop-toast hidden" role="status"></div>
+
+        <div class="shop-views" role="tablist" aria-label="Shop sections">
+          <button type="button" class="shop-view active" data-view="browse" data-i18n="shop_view_browse">Buy</button>
+          <button type="button" class="shop-view" data-view="orders" data-i18n="shop_view_orders">My orders</button>
+          <button type="button" class="shop-view simple-hide" data-view="help" data-i18n="shop_view_help">Local help</button>
+        </div>
+
+        <div class="shop-view-panel" data-panel="browse">
+          <div class="shop-toolbar">
+            <label class="shop-field">
+              <span data-i18n="shop_district">District</span>
+              <select id="shopDistrict"></select>
+            </label>
+            <label class="shop-field">
+              <span data-i18n="shop_upazila">Upazila</span>
+              <select id="shopUpazila"><option value="">—</option></select>
+            </label>
+            <label class="shop-field shop-search-field">
+              <span data-i18n="shop_search">Search</span>
+              <input id="shopSearch" type="search" autocomplete="off"
+                data-i18n-ph="shop_search_ph" placeholder="Brand, SKU, active ingredient..." />
+            </label>
+            <button type="button" id="shopUseLocation" class="btn btn-secondary btn-sm shop-locate-btn">
+              <span data-i18n="shop_use_location">Use my location</span>
+            </button>
+          </div>
+          <p id="shopLocationStatus" class="muted small shop-locate-status hidden" role="status"></p>
+
+          <div id="shopCategoryFilter" class="shop-cats" role="tablist">
+            <button type="button" class="shop-cat" data-cat="" data-i18n="shop_cat_all">All</button>
+            <button type="button" class="shop-cat active" data-cat="pesticide" data-i18n="shop_cat_pesticide">Pesticides</button>
+            <button type="button" class="shop-cat" data-cat="fertilizer" data-i18n="shop_cat_fertilizer">Fertilizer</button>
+            <button type="button" class="shop-cat" data-cat="seed" data-i18n="shop_cat_seed">Seeds</button>
+            <button type="button" class="shop-cat" data-cat="equipment" data-i18n="shop_cat_equipment">Equipment</button>
+          </div>
+
+          <div class="shop-section-head">
+            <h3 data-i18n="shop_products_title">Products</h3>
+            <span id="shopProductCount" class="muted small"></span>
+          </div>
+          <div id="shopProducts" class="shop-products"></div>
+        </div>
+
+        <div class="shop-view-panel hidden" data-panel="help">
+          <div class="shop-panel shop-panel-flat">
+            <h3 data-i18n="shop_suppliers_title">Top suppliers (your upazila)</h3>
+            <p class="muted small" data-i18n="shop_suppliers_hint">Ask the Upazila Agriculture Office for the licensed dealer register before you buy pesticides.</p>
+            <div id="shopSuppliers" class="shop-suppliers"></div>
+          </div>
+        </div>
+
+        <div class="shop-view-panel hidden" data-panel="orders">
+          <div class="shop-panel shop-panel-flat">
+            <h3 data-i18n="shop_orders">Your orders</h3>
+            <div id="shopOrders"></div>
+          </div>
+        </div>
+
+        <div id="shopCartBackdrop" class="shop-cart-backdrop hidden" aria-hidden="true"></div>
+        <aside id="shopCartDrawer" class="shop-cart-drawer" aria-hidden="true">
+          <div class="shop-cart-drawer-head">
+            <div>
+              <h3 id="shopDrawerTitle" data-i18n="shop_cart">Cart</h3>
+              <div class="shop-steps" aria-hidden="true">
+                <span class="shop-step active" data-step="cart" data-i18n="shop_step_cart">Cart</span>
+                <span class="shop-step-sep">›</span>
+                <span class="shop-step" data-step="checkout" data-i18n="shop_step_checkout">Checkout</span>
+              </div>
+            </div>
+            <button type="button" id="shopCartClose" class="icon-btn" aria-label="Close">&times;</button>
+          </div>
+
+          <div id="shopCartStep" class="shop-cart-step">
+            <div id="shopCart" class="shop-cart-body"></div>
+            <div class="shop-cart-footer">
+              <p class="muted small" data-i18n="price_confirm_note">Prices are set by AgroScan. Admin can update them anytime.</p>
+              <button type="button" id="shopGoCheckout" class="btn btn-primary shop-checkout" disabled data-i18n="shop_go_checkout">Proceed to checkout</button>
+            </div>
+          </div>
+
+          <div id="shopCheckoutStep" class="shop-cart-step hidden">
+            <div class="shop-checkout-body">
+              <div id="shopDeliverySummary" class="shop-delivery-summary hidden"></div>
+              <form id="shopCheckoutForm" class="shop-checkout-form" autocomplete="on">
+                <label class="shop-field">
+                  <span data-i18n="shop_name">Full name</span>
+                  <input id="shopName" type="text" autocomplete="name" enterkeyhint="next" required />
+                </label>
+                <label class="shop-field">
+                  <span data-i18n="shop_phone">Phone</span>
+                  <input id="shopPhone" type="tel" autocomplete="tel" inputmode="tel"
+                    enterkeyhint="next" maxlength="14" required />
+                </label>
+                <label class="shop-field">
+                  <span data-i18n="shop_address">Delivery address</span>
+                  <textarea id="shopAddress" rows="3" autocomplete="street-address"
+                    enterkeyhint="next" required></textarea>
+                </label>
+                <div class="shop-checkout-row">
+                  <label class="shop-field">
+                    <span data-i18n="shop_district">District</span>
+                    <select id="shopCheckoutDistrict" required></select>
+                  </label>
+                  <label class="shop-field">
+                    <span data-i18n="shop_upazila">Upazila</span>
+                    <select id="shopCheckoutUpazila" required><option value="">—</option></select>
+                  </label>
+                </div>
+                <label id="shopSaveProfileWrap" class="shop-check hidden">
+                  <input type="checkbox" id="shopSaveProfile" checked />
+                  <span data-i18n="shop_save_profile">Save as my default delivery info</span>
+                </label>
+              </form>
+              <p class="muted small" data-i18n="price_confirm_note">Prices are set by AgroScan. Admin can update them anytime.</p>
+            </div>
+            <div class="shop-cart-footer shop-checkout-actions">
+              <button type="button" id="shopBackToCart" class="btn btn-secondary" data-i18n="shop_back_cart">Back to cart</button>
+              <button type="button" id="shopPlaceOrder" class="btn btn-primary" data-i18n="shop_checkout">Place order</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="field" class="field-hub">
+        <header class="field-hero">
+          <div class="field-hero-text">
+            <h2 data-i18n="field_title">My field</h2>
+            <p class="muted" data-i18n="field_sub">Plots, spray calendar, and offline advice cards.</p>
+          </div>
+        </header>
+        <div class="field-tabs" role="tablist">
+          <button type="button" class="field-tab active" data-tab="plots" data-i18n="field_tab_plots">Plots</button>
+          <button type="button" class="field-tab" data-tab="calendar" data-i18n="field_tab_calendar">Spray calendar</button>
+          <button type="button" class="field-tab" data-tab="offline" data-i18n="field_tab_offline">Offline pack</button>
+        </div>
+
+        <div id="fieldPlotsPanel" class="field-panel">
+          <div class="field-active-row">
+            <label>
+              <span data-i18n="field_active_plot">Active plot</span>
+              <select id="fieldActiveSelect"></select>
+            </label>
+          </div>
+          <form id="fieldPlotForm" class="field-plot-form">
+            <h3 data-i18n="field_add_plot">Add a plot</h3>
+            <div class="field-form-grid">
+              <label>
+                <span data-i18n="field_plot_name">Plot name</span>
+                <input id="fieldPlotName" type="text" maxlength="60" data-i18n-ph="field_plot_name_ph" placeholder="North field" required />
+              </label>
+              <label>
+                <span data-i18n="field_plot_crop">Main crop</span>
+                <input id="fieldPlotCrop" type="text" maxlength="40" data-i18n-ph="field_plot_crop_ph" placeholder="Tomato" />
+              </label>
+              <label>
+                <span data-i18n="farm_land">Land size</span>
+                <input id="fieldPlotSize" type="number" min="0.1" step="0.1" />
+              </label>
+              <label>
+                <span data-i18n="farm_unit">Unit</span>
+                <select id="fieldPlotUnit">
+                  <option value="decimal" data-i18n="farm_unit_decimal">Decimal</option>
+                  <option value="bigha" data-i18n="farm_unit_bigha">Bigha</option>
+                  <option value="acre" data-i18n="farm_unit_acre">Acre</option>
+                </select>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="field_save_plot">Save plot</button>
+          </form>
+          <h3 data-i18n="field_your_plots">Your plots</h3>
+          <div id="fieldPlotList" class="field-plot-list"></div>
+          <h3 data-i18n="field_scan_history">Scan history (active plot)</h3>
+          <div id="fieldScanList" class="field-scan-list"></div>
+        </div>
+
+        <div id="fieldCalendarPanel" class="field-panel hidden">
+          <p class="muted" data-i18n="field_calendar_hint">After you spray, log it here. We count harvest-wait (PHI) days.</p>
+          <div id="fieldCalendarList" class="field-calendar-list"></div>
+        </div>
+
+        <div id="fieldOfflinePanel" class="field-panel hidden">
+          <p class="muted" data-i18n="field_offline_hint">Last diagnoses stay on this phone. Open a card when the network is weak.</p>
+          <div id="fieldOfflineList" class="field-offline-list"></div>
+        </div>
+      </section>
+
+      <section id="notifications" class="notif-hub">
+        <header class="notif-hero">
+          <div class="notif-hero-text">
+            <h2 data-i18n="notif_title">News & alerts</h2>
+            <p class="muted" data-i18n="notif_sub">Season tips, harvest-wait reminders, and farmer advisories.</p>
+          </div>
+          <div class="notif-toolbar">
+            <button type="button" id="notifRefresh" class="btn btn-secondary btn-sm" data-i18n="notif_refresh">Refresh</button>
+            <button type="button" id="notifMarkAll" class="btn btn-ghost btn-sm" data-i18n="notif_mark_all">Mark all read</button>
+          </div>
+        </header>
+        <p id="notifMeta" class="muted small"></p>
+        <p id="notifStatus" class="muted small"></p>
+        <div id="notifList" class="notif-list"></div>
+      </section>
+
+      <section id="emergency" class="emergency">
+        <div class="emergency-head">
+          <h2>&#128680; <span data-i18n="emergency_title">Need help now? Call</span></h2>
+          <p data-i18n="emergency_sub">If plants or animals are in danger, call right away.</p>
+        </div>
+        <div id="emergencyGrid" class="emergency-grid"></div>
+      </section>
+
+      <section id="library" class="library-hub">
+        <header class="library-hero">
+          <div class="library-hero-text">
+            <h2 data-i18n="library_title">Find a disease</h2>
+            <p class="muted" data-i18n="library_sub">Type the crop or disease name. See what to do.</p>
+          </div>
+        </header>
+        <div class="help-call-row">
+          <a class="btn btn-primary btn-lg help-call" href="tel:16123">&#128222; 16123 <span data-i18n="dial_krishi_short">Krishi</span></a>
+          <a class="btn btn-secondary btn-lg help-call" href="tel:16358">&#128222; 16358 <span data-i18n="dial_vet_short">Vet</span></a>
+          <a class="btn btn-accent btn-lg help-call" href="tel:999">&#128222; 999</a>
+        </div>
+        <label class="library-search-wrap">
+          <span class="visually-hidden" data-i18n="library_ph">Search a disease...</span>
+          <input id="libSearch" class="lib-search" type="search" autocomplete="off"
+            data-i18n-ph="library_ph" placeholder="Search a disease..." />
+        </label>
+        <p class="library-count muted small"><span id="libCount">0</span> <span data-i18n="library_count_label">diseases</span></p>
+        <div id="libList" class="lib-list"></div>
+
+        <div class="help-gov-block">
+          <h3 data-i18n="resources_title_simple">Government help</h3>
+          <p class="muted" data-i18n="resources_sub_simple">Tap a link to open official sites.</p>
+          <div id="govGrid" class="gov-grid"></div>
+          <p id="govEmpty" class="gov-empty hidden" data-i18n="resources_empty">No matching resources.</p>
+        </div>
+      </section>
+
+      <!-- Hidden stubs so existing scripts keep working -->
+      <section id="resources" class="visually-hidden" aria-hidden="true">
+        <strong id="govCount">0</strong>
+        <input id="govSearch" type="search" tabindex="-1" />
+        <div id="govFilters"></div>
+      </section>
+    </main>
+
+    <!-- RIGHT SIDEBAR (advanced; hidden in simple-ui) -->
+    <aside class="sidebar right simple-hide">
+      <div class="widget">
+        <h3 data-i18n="weather">Weather & spraying</h3>
+        <div id="weatherBody"><button id="loadWeather" class="btn btn-ghost btn-sm" data-i18n="weather_enable">Enable location for spraying advice</button></div>
+      </div>
+      <div class="widget">
+        <h3 data-i18n="crop_calendar">Crop season</h3>
+        <div id="calendarBody"></div>
+      </div>
+      <div class="widget tip">
+        <h3 data-i18n="daily_tip">Tip of the day</h3>
+        <p id="tipBody"></p>
+      </div>
+      <div class="widget farm-planner" id="farmPlanner">
+        <h3 data-i18n="farm_title">Farm planner</h3>
+        <p class="muted small" data-i18n="farm_sub">Enter land size and season to get crop ideas and multicrop options.</p>
+        <form id="farmPlanForm" class="farm-form">
+          <label class="farm-field">
+            <span data-i18n="farm_district">District / area</span>
+            <input id="farmDistrict" type="text" autocomplete="address-level2"
+              data-i18n-ph="farm_district_ph" placeholder="e.g. Bogura, Dinajpur" />
+          </label>
+          <div class="farm-row">
+            <label class="farm-field">
+              <span data-i18n="farm_land">Land size</span>
+              <input id="farmLandSize" type="number" min="0.1" step="0.1" value="10" required />
+            </label>
+            <label class="farm-field">
+              <span data-i18n="farm_unit">Unit</span>
+              <select id="farmLandUnit">
+                <option value="decimal" data-i18n="farm_unit_decimal">Decimal</option>
+                <option value="bigha" data-i18n="farm_unit_bigha">Bigha</option>
+                <option value="acre" data-i18n="farm_unit_acre">Acre</option>
+              </select>
+            </label>
+          </div>
+          <label class="farm-field">
+            <span data-i18n="farm_season">Season</span>
+            <select id="farmSeason">
+              <option value="" data-i18n="farm_season_auto">Auto (current month)</option>
+              <option value="rabi" data-i18n="farm_season_rabi">Rabi (winter)</option>
+              <option value="kharif1" data-i18n="farm_season_k1">Kharif-1 (pre-monsoon)</option>
+              <option value="kharif2" data-i18n="farm_season_k2">Kharif-2 (monsoon)</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary btn-sm farm-submit" data-i18n="farm_submit">Get crop plan</button>
+        </form>
+        <div id="farmPlanResult" class="farm-result hidden"></div>
+        <div id="farmCultivate" class="farm-cultivate hidden"></div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div>
+        <div class="brand footer-brand brand-logo-only">
+          <span class="logo-chip logo-chip-footer">
+            <img src="/static/AgroVet_logo-main.png" alt="AgroScan" class="logo-img logo-img-white logo-img-footer" />
+          </span>
+        </div>
+        <p class="muted small" data-i18n="footer_about">AI-assisted plant leaf disease detection for farmers in Bangladesh.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_explore">Explore</h4>
+        <a href="#diagnose" data-i18n="nav_diagnose">Diagnose</a>
+        <a href="#field" data-i18n="nav_field">Field</a>
+        <a href="#notifications" data-i18n="nav_notifications">News</a>
+        <a href="#emergency" data-i18n="nav_emergency">Emergency</a>
+        <a href="#library" data-i18n="nav_help">Help</a>
+        <a href="#resources" data-i18n="nav_resources">Resources</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer_helplines">Helplines</h4>
+        <a href="tel:16123" data-i18n="footer_krishi">Krishi Call Center: 16123</a>
+        <a href="tel:16358" data-i18n="footer_vet">Vet Helpline: 16358</a>
+        <a href="tel:999" data-i18n="footer_emergency">Emergency: 999</a>
+      </div>
+      <div class="simple-hide">
+        <h4 data-i18n="footer_dev">For developers</h4>
+        <code>POST /api/predict</code><br /><code>POST /api/chat</code>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> AgroScan</span>
+      <span class="muted small" data-i18n="disclaimer">Advice is general guidance, not a substitute for a qualified plant doctor / vet.</span>
+    </div>
+  </footer>
+
+  <!-- ===================== MOBILE BOTTOM NAV ===================== -->
+  <nav class="mobile-bottom-nav" aria-label="Main navigation">
+    <a href="#diagnose" class="mob-nav-item active" data-section="diagnose" role="tab" aria-current="page">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.25"/></svg>
+      </span>
+      <span data-i18n="nav_diagnose">Photo</span>
+    </a>
+    <a href="#field" class="mob-nav-item" data-section="field" role="tab" aria-current="false">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 11c-2.5-1.2-5.5-.6-7.5 1.2 0-4.2 3.2-7.7 7.5-8.2 4.3.5 7.5 4 7.5 8.2-2-1.8-5-2.4-7.5-1.2z"/></svg>
+      </span>
+      <span data-i18n="nav_field">Field</span>
+    </a>
+    <a href="#notifications" class="mob-nav-item" data-section="notifications" role="tab" aria-current="false">
+      <span class="mob-icon mob-icon-badge-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        <span class="notif-badge hidden">0</span>
+      </span>
+      <span data-i18n="nav_notifications">News</span>
+    </a>
+    <a href="#shop" class="mob-nav-item" data-section="shop" role="tab" aria-current="false">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      </span>
+      <span data-i18n="nav_shop">Shop</span>
+    </a>
+    <a href="#emergency" class="mob-nav-item" data-section="emergency" role="tab" aria-current="false">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 3.8 6 6.8c-.5.7-.4 1.6.2 2.2l1.8 1.8a16 16 0 0 0 5.2 5.2l1.8 1.8c.6.6 1.5.7 2.2.2l3-2.2c.6-.4.7-1.3.3-1.9l-1.6-2.4a1.4 1.4 0 0 0-1.7-.5l-2 .8a1.4 1.4 0 0 1-1.5-.4L10.4 8.7a1.4 1.4 0 0 1-.4-1.5l.8-2a1.4 1.4 0 0 0-.5-1.7L7.9 3.5a1.4 1.4 0 0 0-1.7.3z"/></svg>
+      </span>
+      <span data-i18n="nav_emergency">Call</span>
+    </a>
+  </nav>
+
+  <!-- ===================== CHATBOT ===================== -->
+  <button id="chatToggle" class="chat-toggle" data-i18n-aria="assistant" aria-label="assistant">&#128172;</button>
+  <div id="chatPanel" class="chat-panel hidden">
+    <div class="chat-head">
+      <span>&#127807; <span data-i18n="assistant">AgroScan Assistant</span></span>
+      <button id="chatClose" class="chat-close" data-i18n-aria="close" aria-label="Close">&times;</button>
+    </div>
+    <div id="chatLog" class="chat-log"></div>
+    <div id="chatChips" class="chat-chips"></div>
+    <form id="chatForm" class="chat-input">
+      <input id="chatImageInput" type="file" accept="image/*" capture="environment" hidden />
+      <button type="button" id="chatAttachBtn" class="chat-tool-btn" data-i18n-aria="chat_attach" aria-label="Attach leaf photo" title="Attach leaf photo">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3.5-4.5 2.5 3.01L14.5 13l4.5 6H5z"/></svg>
+      </button>
+      <button type="button" id="chatMicBtn" class="chat-tool-btn" data-i18n-aria="chat_mic" aria-label="Speak" title="Speak">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
+      </button>
+      <input id="chatText" type="text" autocomplete="off" data-i18n-ph="chat_ph" placeholder="Ask about a disease, treatment, vet..." />
+      <button id="chatSend" class="btn btn-primary btn-sm" type="submit" data-i18n="send">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/config.js?v=24"></script>
+  <script src="/static/i18n.js?v=52"></script>
+  <script src="/static/auth.js?v=22"></script>
+  <script src="/static/crop.js?v=2"></script>
+  <script src="/static/core.js?v=36"></script>
+  <script src="/static/shop.js?v=16"></script>
+  <script src="/static/features.js?v=37"></script>
+  <script src="/static/farmer-ux.js?v=3"></script>
+  <script src="/static/field.js?v=2"></script>
+  <script src="/static/notifications.js?v=1"></script>
+  <script src="/static/app-extra.js?v=20"></script>
+  <script src="/static/mobile.js?v=28"></script>
+  <script src="/static/pwa.js?v=21"></script>
+</body>
+</html>

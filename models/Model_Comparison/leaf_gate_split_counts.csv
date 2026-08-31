@@ -1,0 +1,7 @@
+﻿"split","label","count"
+"train","leaf","5200"
+"train","non_leaf","7800"
+"valid","leaf","650"
+"valid","non_leaf","975"
+"test","leaf","650"
+"test","non_leaf","975"

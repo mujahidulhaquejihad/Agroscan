@@ -1,0 +1,68 @@
+[
+  {
+    "id": "rabi-blight-watch-2026",
+    "date": "2026-08-20",
+    "priority": "high",
+    "category": "season",
+    "title_en": "Foggy weeks: watch late blight on potato & tomato",
+    "title_bn": "কুয়াশা মৌসুম: আলু ও টমেটোর নাবি ধ্বসায় নজর রাখুন",
+    "body_en": "Morning fog raises late blight risk. Scout fields every 2–3 days. Spray a protectant early if lesions appear, and call 16123 if unsure.",
+    "body_bn": "সকালের কুয়াশায় নাবি ধ্বসার ঝুঁকি বাড়ে। ২–৩ দিন পরপর জমি দেখুন। দাগ দেখলে দ্রুত প্রতিরোধক স্প্রে করুন; দ্বিধা হলে ১৬১২৩ কল করুন।",
+    "link": "https://dae.gov.bd"
+  },
+  {
+    "id": "wet-season-rice-2026",
+    "date": "2026-08-15",
+    "priority": "high",
+    "category": "disease",
+    "title_en": "Wet season rice: blast, BLB and sheath blight risk",
+    "title_bn": "বর্ষায় ধান: ব্লাস্ট, BLB ও খোলপোড়ার ঝুঁকি",
+    "body_en": "Keep drainage clear. Avoid excess nitrogen. Upload a clear leaf photo in AgroScan if you see diamond-shaped blast spots or yellow leaf tips.",
+    "body_bn": "নিকাশ খোলা রাখুন। অতিরিক্ত ইউরিয়া এড়ান। হীরক আকৃতির ব্লাস্ট দাগ বা পাতার হলুদ মাথা দেখলে এগ্রোস্ক্যানে স্পষ্ট ছবি দিন।",
+    "link": "https://brri.gov.bd"
+  },
+  {
+    "id": "ppw-buy-licensed-2026",
+    "date": "2026-08-10",
+    "priority": "normal",
+    "category": "gov",
+    "title_en": "Buy pesticides only from licensed dealers",
+    "title_bn": "শুধু লাইসেন্সধারী দোকান থেকে বালাইনাশক কিনুন",
+    "body_en": "Check the AP registration on the label. Ask your Upazila Agriculture Office for the licensed dealer list before buying.",
+    "body_bn": "লেবেলে AP নিবন্ধন দেখুন। কেনার আগে উপজেলা কৃষি অফিসে লাইসেন্সধারী ডিলার তালিকা জিজ্ঞাসা করুন।",
+    "link": "https://ppw.krishi.gov.bd/pesticide-list"
+  },
+  {
+    "id": "helpline-16123-2026",
+    "date": "2026-08-05",
+    "priority": "normal",
+    "category": "tip",
+    "title_en": "Free crop advice: Krishi Call Center 16123",
+    "title_bn": "বিনামূল্যে পরামর্শ: কৃষি কল সেন্টার ১৬১২৩",
+    "body_en": "Sat–Thu, 9am–5pm. Speak with an extension officer about leaf disease, fertilizer, or spray timing.",
+    "body_bn": "শনি–বৃহ, সকাল ৯টা–বিকাল ৫টা। পাতার রোগ, সার বা স্প্রের সময় নিয়ে কৃষি কর্মকর্তার সাথে কথা বলুন।",
+    "link": "tel:16123"
+  },
+  {
+    "id": "phi-harvest-wait-2026",
+    "date": "2026-08-01",
+    "priority": "normal",
+    "category": "tip",
+    "title_en": "After spraying: respect harvest wait (PHI)",
+    "title_bn": "স্প্রের পর: ফসল তোলার অপেক্ষা (PHI) মানুন",
+    "body_en": "Do not harvest until the product’s PHI days are over. Log your spray in AgroScan Field → Spray calendar to get a countdown.",
+    "body_bn": "পণ্যের PHI দিন শেষ না হওয়া পর্যন্ত ফসল তুলবেন না। এগ্রোস্ক্যান → জমি → স্প্রে ক্যালেন্ডারে লগ করলে কাউন্টডাউন পাবেন।",
+    "link": null
+  },
+  {
+    "id": "photo-tips-2026",
+    "date": "2026-07-28",
+    "priority": "normal",
+    "category": "tip",
+    "title_en": "Clearer leaf photos = better disease advice",
+    "title_bn": "স্পষ্ট পাতার ছবি = ভালো রোগ পরামর্শ",
+    "body_en": "One leaf, daylight, plain background, fill the frame. Avoid blur and heavy shadow.",
+    "body_bn": "একটি পাতা, দিনের আলো, সাদা/সাধারণ ব্যাকগ্রাউন্ড, ফ্রেম ভর্তি করুন। ঝাপসা ও ঘন ছায়া এড়ান।",
+    "link": null
+  }
+]

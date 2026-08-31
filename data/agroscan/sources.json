@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "title": "AgroScan source register",
+    "version": "1.0",
+    "generated": "2026-08-20",
+    "status_legend": {
+      "retrieved": "content fetched and used directly",
+      "partial": "fetched but truncated or summarised; treat derived facts as medium confidence",
+      "blocked": "found via search, could not be fetched from the build environment",
+      "search_only": "known to exist and cited, not opened"
+    }
+  },
+  "sources": [
+    {
+      "id": "ppw_registered_list",
+      "title": "DAE Plant Protection Wing — Registered Pesticides List (Approved 66 PTAC & 95 PTASC-PPW)",
+      "publisher": "Department of Agricultural Extension, Plant Protection Wing",
+      "url": "https://dae.portal.gov.bd/sites/default/files/files/dae.portal.gov.bd/page/8dbdf06a_3999_4ae5_bdfb_e441bc82b959/Approved%20(66%20PTAC%20&%2095%20PTASC-PPW)%20Registered%20Pesticides%20List.pdf",
+      "status": "blocked",
+      "block_reason": "TLS self-signed certificate",
+      "sections": [
+        "A",
+        "B",
+        "D",
+        "G"
+      ],
+      "priority": 1,
+      "used_for": "AP registration numbers, registered crops, label doses"
+    },
+    {
+      "id": "ppw_cancelled_list",
+      "title": "DAE PPW — List of Cancelled Pesticides",
+      "publisher": "Department of Agricultural Extension",
+      "url": "https://file-dhaka.portal.gov.bd/media/80b9a8cf-b0dc-4186-b545-f01a34a4f3a3/uploaded-files/approved-66-ptac-95-ptasc-ppw-registered-pesticidescancelled-list.pdf",
+      "status": "blocked",
+      "sections": [
+        "G"
+      ],
+      "priority": 1,
+      "used_for": "the actual de-registered/banned list — NOT included in this pack"
+    },
+    {
+      "id": "archive_registered_pesticides",
+      "title": "Registered Pesticide in Bangladesh (PTAC to 65th meeting)",
+      "publisher": "Internet Archive scan",
+      "url": "https://archive.org/stream/RegisteredPesticideInBangladesh/Registered+pesticide+in+Bangladesh_djvu.txt",
+      "status": "partial",
+      "sections": [
+        "A",
+        "B",
+        "D"
+      ],
+      "priority": 2,
+      "used_for": "all 11 verified AP numbers",
+      "verified_ap_numbers": {
+        "Karishma 28 SC": "AP-2431 / Eon Trading House / mango anthracnose",
+        "Score 250 EC": "AP-384 / Syngenta Bangladesh / onion purple blotch",
+        "Galben M": "AP-374 / ACI Formulations / potato & tomato late blight",
+        "Contaf 5 EC": "AP-460 / Auto Crop Care / rice sheath blight",
+        "Amistar Top": "AP-2312 / Syngenta Bangladesh / rice sheath blight, blast",
+        "Bavistin DF": "AP-176 / BASF Bangladesh / rice sheath blight, sugarcane",
+        "Knowin 50 WP": "AP-241 / McDonald Bangladesh / rice sheath blight",
+        "Champion 77 WP": "AP-354 / Petrochem Bangladesh / tomato blights",
+        "Rovral 50 WP": "AP-143 / Bayer CropScience / mustard Alternaria spot",
+        "Sitro 25 SC": "AP-3153 / S I Agro International / tea die-back",
+        "Microthiol Special 80 WP": "AP-252 / Shetu Pesticides / tea mites"
+      }
+    },
+    {
+      "id": "daily_star_hhp",
+      "title": "17 highly harmful pesticides widely used across country",
+      "publisher": "The Daily Star",
+      "url": "https://www.thedailystar.net/news/bangladesh/news/17-highly-harmful-pesticides-widely-used-across-country-4043486",
+      "status": "retrieved",
+      "sections": [
+        "G",
+        "B"
+      ],
+      "priority": 3,
+      "used_for": "the complete HHP list in Section G; the 25 highly_hazardous_flag SKUs"
+    },
+    {
+      "id": "usda_fairs",
+      "title": "Food and Agricultural Import Regulations and Standards — Bangladesh",
+      "publisher": "USDA FAS GAIN",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food+and+Agricultural+Import+Regulations+and+Standards+Report_Dhaka_Bangladesh_4-15-2019.pdf",
+      "status": "retrieved",
+      "sections": [
+        "G"
+      ],
+      "used_for": "registration process, MRL framework (Codex via Food Safety Regs 2017)"
+    },
+    {
+      "id": "sps_plant_protection",
+      "title": "Bangladesh SPS Information Management System — Plant Protection",
+      "publisher": "APAARI / Bangladesh SPS IMS",
+      "url": "https://sps.apaari.org/index.php/plant-protection/",
+      "status": "retrieved",
+      "sections": [
+        "G"
+      ],
+      "used_for": "Pesticide Act/Rules chronology; PPW contact"
+    },
+    {
+      "id": "pesticide_act_2018",
+      "title": "Pesticide Act 2018 (বালাইনাশক আইন, ২০১৮)",
+      "publisher": "Ministry of Law / bdlaws",
+      "url": "http://bdlaws.minlaw.gov.bd/",
+      "status": "search_only",
+      "sections": [
+        "G"
+      ],
+      "used_for": "legal framework, labelling requirements"
+    },
+    {
+      "id": "barc_frg_2018",
+      "title": "Fertilizer Recommendation Guide 2018",
+      "publisher": "Bangladesh Agricultural Research Council",
+      "url": "https://barc.portal.gov.bd/sites/default/files/files/barc.portal.gov.bd/page/4adead4d_6e17_4d74_b5bd_e86e46c059ad/88c1738fe0618daef286ef3d27c95423.pdf",
+      "mirror": "https://moa.portal.gov.bd/sites/default/files/files/moa.portal.gov.bd/page/9d1b92d4_1793_43af_9425_0ed49f27b8d0/FRG-2018%20(English).pdf",
+      "status": "blocked",
+      "sections": [
+        "A",
+        "F",
+        "G"
+      ],
+      "priority": 2,
+      "used_for": "all fertiliser doses; per-decimal values in this pack are derived, not transcribed"
+    },
+    {
+      "id": "usda_fertilizer_2026",
+      "title": "Fertilizer Situation in Bangladesh (BG2025-0017), 30 March 2026",
+      "publisher": "USDA FAS GAIN",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Fertilizer+Situation+in+Bangladesh_Dhaka_Bangladesh_BG2025-0017",
+      "status": "retrieved",
+      "sections": [
+        "B",
+        "G"
+      ],
+      "used_for": "FY2025-26 farmer-level prices urea 27 / TSP 27 / DAP 20 / MoP 21 Tk/kg; FY2024-25 consumption"
+    },
+    {
+      "id": "daily_star_fert_2025",
+      "title": "Farmers forced to pay more than subsidised rates for fertiliser (28 Jan 2025)",
+      "publisher": "The Daily Star",
+      "url": "https://www.thedailystar.net/business/economy/news/farmers-forced-pay-more-subsidised-rates-fertiliser-3810946",
+      "status": "retrieved",
+      "sections": [
+        "B",
+        "G"
+      ],
+      "used_for": "Tk 3-8/kg market premium applied to fertiliser price_bdt_max"
+    },
+    {
+      "id": "bbs_yearbook_2024",
+      "title": "Yearbook of Agricultural Statistics 2024",
+      "publisher": "Bangladesh Bureau of Statistics",
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/58f325576f9a47cc91e7d227e336e40f.pdf",
+      "landing": "https://bbs.gov.bd/site/page/3e838eb6-30a2-4709-be85-40484b0c16c6/Yearbook-of-Agricultural-Statistics",
+      "status": "retrieved",
+      "sections": [
+        "F",
+        "A"
+      ],
+      "priority": 4,
+      "used_for": "2023-24 area and production; yields RECOMPUTED (see caveat)",
+      "caveat": "The summary extraction reported Boro 5.16 t/ha, which does not reconcile with the area/production on the same page. Recomputed to 4.32 t/ha. Verify against the PDF's own yield column."
+    },
+    {
+      "id": "dam_prices",
+      "title": "Department of Agricultural Marketing — daily market prices",
+      "publisher": "DAM, Ministry of Agriculture",
+      "url": "https://market.dam.gov.bd/?L=E",
+      "status": "partial",
+      "sections": [
+        "F",
+        "B"
+      ],
+      "priority": 5,
+      "used_for": "price reference; farm-gate estimated below these levels",
+      "note": "Interactive report requires division/district/upazila selection — build a scraper against the form, not the static PDF"
+    },
+    {
+      "id": "plantwise_bsfb",
+      "title": "Plantwise factsheet for farmers — Shoot and fruit borer of brinjal (Bangladesh, SPIED, Sept 2013)",
+      "publisher": "CABI Plantwise",
+      "url": "https://factsheetadmin.plantwise.org/Uploads/PDFs/20157800236.pdf",
+      "status": "retrieved",
+      "sections": [
+        "A",
+        "C"
+      ],
+      "used_for": "40-60 pheromone traps/acre; tolerant varieties Jhumka, Shingnath, Nayantara, Uttara; flubendiamide"
+    },
+    {
+      "id": "fao_eggplant_ipm",
+      "title": "Eggplant Integrated Pest Management: An Ecological Guide",
+      "publisher": "FAO",
+      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/fe47c702-b9bf-4f5a-97bc-4d8d8dc1a541/content",
+      "status": "search_only",
+      "sections": [
+        "A"
+      ],
+      "used_for": "brinjal bacterial wilt and BSFB IPM"
+    },
+    {
+      "id": "ipmworld_bangladesh",
+      "title": "Vegetable IPM in Bangladesh",
+      "publisher": "Radcliffe's IPM World Textbook, University of Minnesota",
+      "url": "https://ipmworld.umn.edu/rahman",
+      "status": "search_only",
+      "sections": [
+        "A"
+      ],
+      "used_for": "Bangladesh vegetable IPM; grafting on wilt-resistant rootstock"
+    },
+    {
+      "id": "tandf_tomato_ipm",
+      "title": "Tomato pests and diseases in Bangladesh and India",
+      "publisher": "International Journal of Pest Management",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/09670874.2023.2252760",
+      "status": "search_only",
+      "sections": [
+        "A"
+      ],
+      "used_for": "TYLCV, whitefly, farmer practice"
+    },
+    {
+      "id": "springer_wheat_blast",
+      "title": "Progress and Challenges of Wheat Production in the Era of Climate Change: A Bangladesh Perspective",
+      "publisher": "Springer",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-13-6883-7_24",
+      "status": "search_only",
+      "sections": [
+        "A"
+      ],
+      "used_for": "wheat blast since 2016; BARI Gom 33"
+    },
+    {
+      "id": "krishi_call_center",
+      "title": "Krishi Call Center (16123), Bangladesh",
+      "publisher": "FAO Science, Technology and Innovation Portal",
+      "url": "https://sti-portal.fao.org/innovations/krishi-call-center-16123-bangladesh",
+      "status": "retrieved",
+      "sections": [
+        "G",
+        "A"
+      ],
+      "used_for": "verifies 16123 as the DAE/AIS farmer helpline"
+    },
+    {
+      "id": "nuhil_geocode",
+      "title": "bangladesh-geocode — division/district/upazila with Bangla names",
+      "publisher": "nuhil (GitHub)",
+      "url": "https://github.com/nuhil/bangladesh-geocode",
+      "status": "retrieved",
+      "sections": [
+        "E"
+      ],
+      "used_for": "administrative hierarchy and official Bangla names (494 upazilas)"
+    },
+    {
+      "id": "geoboundaries_adm3",
+      "title": "geoBoundaries gbOpen BGD ADM3 (upazila polygons)",
+      "publisher": "geoBoundaries / William & Mary geoLab",
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/main/releaseData/gbOpen/BGD/ADM3/geoBoundaries-BGD-ADM3_simplified.geojson",
+      "status": "retrieved",
+      "sections": [
+        "E"
+      ],
+      "used_for": "544 upazila polygons -> interior representative points",
+      "note": "the raw.githubusercontent.com path returns a Git LFS pointer; use the media. host"
+    },
+    {
+      "id": "geoboundaries_adm2",
+      "title": "geoBoundaries gbOpen BGD ADM2 (district polygons)",
+      "publisher": "geoBoundaries",
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/main/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson",
+      "status": "retrieved",
+      "sections": [
+        "E"
+      ],
+      "used_for": "64 district polygons for point-in-polygon assignment"
+    },
+    {
+      "id": "google_places",
+      "title": "Google Places API (New) — Text Search",
+      "publisher": "Google",
+      "url": "https://places.googleapis.com/v1/places:searchText",
+      "status": "not_called",
+      "sections": [
+        "D"
+      ],
+      "priority": 6,
+      "used_for": "the route to real dealer records; script provided at data/scripts/collect_dealers.py",
+      "note": "requires GOOGLE_MAPS_API_KEY; read Google's caching and attribution policy before storing results"
+    },
+    {
+      "id": "dae_upazila_portals",
+      "title": "DAE upazila office subdomains",
+      "publisher": "Bangladesh national portal",
+      "url": "https://dae.<upazila>.<district>.gov.bd",
+      "status": "search_only",
+      "sections": [
+        "D"
+      ],
+      "priority": 6,
+      "used_for": "15 Upazila Agriculture Office records",
+      "note": "pattern confirmed live for dae.bochaganj.dinajpur.gov.bd and dae.jagannathpur.sunamganj.gov.bd but NOT individually verified for the 15 Phase-1 upazilas; phone numbers are published on these pages"
+    },
+    {
+      "id": "bari_hatboi",
+      "title": "Krishi Projukti Hatboi (BARI Agricultural Technology Handbook), 9th ed. 2019",
+      "publisher": "Bangladesh Agricultural Research Institute",
+      "url": "https://bari.gov.bd",
+      "status": "blocked",
+      "block_reason": "only found behind a Scribd paywall",
+      "sections": [
+        "A",
+        "F"
+      ],
+      "priority": 3,
+      "used_for": "would be the definitive cross-check for every disease card and crop record"
+    }
+  ],
+  "official_portals": [
+    {
+      "name": "Department of Agricultural Extension",
+      "url": "https://dae.gov.bd"
+    },
+    {
+      "name": "Bangladesh Agricultural Research Council",
+      "url": "https://barc.gov.bd"
+    },
+    {
+      "name": "Bangladesh Agricultural Research Institute",
+      "url": "https://bari.gov.bd"
+    },
+    {
+      "name": "Bangladesh Rice Research Institute",
+      "url": "https://brri.gov.bd"
+    },
+    {
+      "name": "Bangladesh Agricultural Development Corporation",
+      "url": "https://badc.gov.bd"
+    },
+    {
+      "name": "Ministry of Agriculture",
+      "url": "https://moa.gov.bd"
+    },
+    {
+      "name": "Department of Agricultural Marketing — daily prices",
+      "url": "https://market.dam.gov.bd"
+    },
+    {
+      "name": "Bangladesh Bureau of Statistics",
+      "url": "https://bbs.gov.bd"
+    },
+    {
+      "name": "Bangladesh Agro-Meteorological Information System",
+      "url": "https://bamis.gov.bd"
+    },
+    {
+      "name": "DAE Plant Quarantine Wing portal",
+      "url": "https://pqw.dae.gov.bd"
+    }
+  ],
+  "download_priority": [
+    "1. DAE PPW Registered + Cancelled pesticide lists — verifies ~50 registration_ref strings and gives the real banned list",
+    "2. BARC FRG-2018 — replaces derived per-decimal fertiliser doses with authoritative tables",
+    "3. BARI Krishi Projukti Hatboi 9th ed. — definitive Bangla cross-check for Sections A and F",
+    "4. BBS Yearbook 2024 yield tables — confirm the recomputed t/ha figures",
+    "5. DAM daily price feed — replaces every estimated price with live data",
+    "6. Upazila DAE office pages + Google Places — completes Section D with real phone numbers"
+  ]
+}

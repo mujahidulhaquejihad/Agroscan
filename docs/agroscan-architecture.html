@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>AgroScan — How vision, RAG, and Qwen work</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #0d1f16; color: #14261c; font-family: "Segoe UI", Calibri, Arial, sans-serif; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet {
+    width: 297mm; height: 210mm; padding: 11mm 12mm 10mm;
+    background: #f4f1e8; position: relative; overflow: hidden;
+    page-break-after: always; break-after: page;
+  }
+  .sheet:last-child { page-break-after: auto; }
+  header.top {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 2.5px solid #1b4332; padding-bottom: 6px; margin-bottom: 8px;
+  }
+  .kicker { font-size: 10px; letter-spacing: 2.4px; text-transform: uppercase; color: #40916c; font-weight: 700; }
+  h1 { font-size: 22px; color: #081c15; line-height: 1.15; font-weight: 750; }
+  .meta { text-align: right; font-size: 10px; color: #52796f; line-height: 1.45; }
+  footer.foot {
+    position: absolute; left: 12mm; right: 12mm; bottom: 6mm;
+    display: flex; justify-content: space-between; font-size: 9px; color: #6b7c70;
+    border-top: 1px solid #d8d3c4; padding-top: 3px;
+  }
+  h2 { font-size: 12px; color: #1b4332; margin: 0 0 6px; letter-spacing: .3px; }
+  .row { display: flex; gap: 8px; }
+  .col { flex: 1; min-width: 0; }
+  .card {
+    background: #fff; border: 1px solid #d9d3c2; border-radius: 8px;
+    padding: 8px 9px; box-shadow: 0 1px 0 rgba(27,67,50,.06);
+  }
+  .card h3 { font-size: 11px; color: #081c15; margin-bottom: 4px; }
+  .muted { color: #5c6f64; font-size: 10px; line-height: 1.35; }
+  .tiny { font-size: 9px; color: #5c6f64; line-height: 1.35; }
+  .pill {
+    display: inline-block; font-size: 8.5px; font-weight: 700; letter-spacing: .4px;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 99px;
+  }
+  .p-green { background: #d8f3dc; color: #1b4332; }
+  .p-gold { background: #faedcd; color: #7a4e00; }
+  .p-blue { background: #d6eaf8; color: #1b4f72; }
+  .p-red { background: #fde2e1; color: #7a1c1c; }
+  .p-cream { background: #efe8d4; color: #3d4a40; }
+  .flow { display: flex; align-items: stretch; gap: 6px; }
+  .box {
+    flex: 1; background: #fff; border: 1.5px solid #1b4332; border-radius: 8px;
+    padding: 7px 8px; min-height: 58px;
+  }
+  .box .t { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: #40916c; }
+  .box .n { font-size: 12px; font-weight: 700; color: #081c15; margin: 2px 0 3px; }
+  .arr {
+    align-self: center; color: #1b4332; font-size: 18px; font-weight: 700; flex: 0 0 14px; text-align: center;
+  }
+  .step {
+    display: flex; gap: 8px; align-items: flex-start; margin-bottom: 6px;
+  }
+  .num {
+    flex: 0 0 22px; height: 22px; border-radius: 50%; background: #1b4332; color: #fff;
+    font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+  .tree-item {
+    border-left: 3px solid #40916c; padding: 6px 8px; margin-bottom: 5px; background: #fff;
+    border-radius: 0 7px 7px 0;
+  }
+  .tree-item.alt { border-left-color: #bc6c25; }
+  .tree-item.llm { border-left-color: #1d4e89; }
+  .tree-item.kb { border-left-color: #52796f; }
+  .tree-item h4 { font-size: 11px; margin-bottom: 2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 10px; }
+  th { text-align: left; background: #1b4332; color: #f4f1e8; padding: 4px 7px; font-weight: 600; }
+  td { padding: 4px 7px; border-bottom: 1px solid #e4decc; vertical-align: top; }
+  tr:nth-child(even) td { background: #faf7ee; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 7px; }
+  .tag { font-family: Consolas, "Courier New", monospace; font-size: 9px; background: #e9edc9; padding: 1px 4px; border-radius: 3px; }
+  .callout { background: #1b4332; color: #f4f1e8; border-radius: 8px; padding: 8px 10px; }
+  .callout strong { color: #b7e4c7; }
+  .warn { background: #fff3e0; border: 1px solid #e09f3e; border-radius: 8px; padding: 7px 9px; }
+  .ok { background: #d8f3dc; border: 1px solid #40916c; border-radius: 8px; padding: 7px 9px; }
+  ul.clean { margin: 0; padding-left: 14px; font-size: 10px; line-height: 1.4; }
+  .hero {
+    background: linear-gradient(135deg, #081c15 0%, #1b4332 55%, #2d6a4f 100%);
+    color: #f4f1e8; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;
+  }
+  .hero p { font-size: 12px; line-height: 1.4; color: #d8f3dc; }
+  .split { display: grid; grid-template-columns: 1.15fr .85fr; gap: 8px; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="sheet">
+  <header class="top">
+    <div>
+      <div class="kicker">AgroScan architecture · from the running code</div>
+      <h1>How everything works — vision, pack, RAG, and Qwen</h1>
+    </div>
+    <div class="meta">Bangladesh farmer app · local RTX 3060<br/>Not embedding RAG — TF-IDF + pack-first routing<br/>August 2026</div>
+  </header>
+
+  <div class="hero">
+    <p><strong>Two farmer entries, one FastAPI server.</strong> A leaf photo goes through three vision levels, then a verified disease pack (Qwen only writes a short wrap). A typed question hits the pack first, then the knowledge base, and only leftover open questions go through TF-IDF retrieval into local <strong>Qwen2.5-3B-Instruct</strong>.</p>
+  </div>
+
+  <div class="flow" style="margin-bottom:8px">
+    <div class="box" style="background:#081c15;color:#f4f1e8;border-color:#40916c">
+      <div class="t" style="color:#95d5b2">Farmer</div>
+      <div class="n" style="color:#fff">Web / PWA / Android</div>
+      <div class="tiny" style="color:#b7e4c7">Leaf photo or Bangla/English question. Optional land size, crop pick, 16123.</div>
+    </div>
+    <div class="arr">▸</div>
+    <div class="box">
+      <div class="t">Server</div>
+      <div class="n">FastAPI · backend/main.py</div>
+      <div class="tiny"><span class="tag">POST /api/predict</span> scan &nbsp; <span class="tag">POST /api/chat</span> text &nbsp; <span class="tag">POST /api/chat/vision</span> photo+advice</div>
+    </div>
+    <div class="arr">▸</div>
+    <div class="box">
+      <div class="t">Router</div>
+      <div class="n">Which pipeline?</div>
+      <div class="tiny">Image → InferenceEngine then vision_scan_reply. Text → chat_reply (pack → KB → RAG+Qwen).</div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-bottom:8px">
+    <div class="card">
+      <span class="pill p-green">Pipeline A · vision</span>
+      <h3 style="margin-top:6px">Leaf photo → disease class → pack</h3>
+      <div class="tiny" style="margin:4px 0 6px">L1 leaf gate (MobileNetV3-Large) → L2 crop (EfficientNet-B3) → L3 disease ensemble. Ensemble aligns softmaxes, masks to the chosen crop, then <strong>picks the single highest-confidence model</strong> — it does not average the winner.</div>
+      <div class="flow">
+        <div class="box" style="min-height:48px"><div class="t">L1</div><div class="n" style="font-size:11px">Leaf?</div><div class="tiny">threshold 0.50</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px"><div class="t">L2</div><div class="n" style="font-size:11px">Which crop?</div><div class="tiny">confirm if &lt; 0.90</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px"><div class="t">L3</div><div class="n" style="font-size:11px">Which disease?</div><div class="tiny">B3 + R50 + DN121</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px;background:#d8f3dc"><div class="t">Out</div><div class="n" style="font-size:11px">Pack + optional Qwen</div><div class="tiny">source vision+pack / +llm</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <span class="pill p-blue">Pipeline B · chat</span>
+      <h3 style="margin-top:6px">Typed question → pack first, Qwen last</h3>
+      <div class="tiny" style="margin:4px 0 6px">Named diseases never wait on the LLM. Qwen only runs when the KB would otherwise give a generic “I can help with leaf disease” reply. Generation is greedy, max 220 tokens, grounded on 6 TF-IDF snippets.</div>
+      <div class="flow">
+        <div class="box" style="min-height:48px;background:#d8f3dc"><div class="t">1</div><div class="n" style="font-size:11px">Pack</div><div class="tiny">source: pack</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px;background:#faedcd"><div class="t">2</div><div class="n" style="font-size:11px">Clarify</div><div class="tiny">same name, many crops</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px"><div class="t">3</div><div class="n" style="font-size:11px">KB</div><div class="tiny">greet / 16123 / how-to</div></div>
+        <div class="arr">▸</div>
+        <div class="box" style="min-height:48px;background:#d6eaf8"><div class="t">4</div><div class="n" style="font-size:11px">RAG+Qwen</div><div class="tiny">source: llm</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid4">
+    <div class="ok"><strong style="font-size:11px">Authoritative pack</strong><div class="tiny">44 diseases × EN+BN = 88 RAG docs from disease_treatments.json. Doses/PHI/brands are pack fields, not model guesses.</div></div>
+    <div class="card"><strong style="font-size:11px">Retrieval</strong><div class="tiny">sklearn TF-IDF, 20k features, 1–2 grams, cosine, k=6, score floor 0.015, section boosts, language prefer, allow_keys pin.</div></div>
+    <div class="card"><strong style="font-size:11px">Generator</strong><div class="tiny">Local Qwen2.5-3B-Instruct (HF Transformers). 4-bit NF4 on CUDA. Expected LoRA agroscan-3b is missing → base Instruct.</div></div>
+    <div class="warn"><strong style="font-size:11px">Safety net</strong><div class="tiny">Prompt: use only retrieved guides, never mix crops, else say unsure + call 16123. Vision text rejected if repetitive.</div></div>
+  </div>
+
+  <footer class="foot"><span>AgroScan / AgroVet V2 · I:\Agroscan</span><span>Page 1 of 5 · System map</span></footer>
+</section>
+
+<!-- PAGE 2 -->
+<section class="sheet">
+  <header class="top">
+    <div>
+      <div class="kicker">Pipeline A</div>
+      <h1>Vision scan — three levels, then farmer wording</h1>
+    </div>
+    <div class="meta">agrovet/infer.py · llm_chat.vision_scan_reply<br/>POST /api/predict &nbsp; POST /api/chat/vision</div>
+  </header>
+
+  <div class="flow" style="margin-bottom:8px">
+    <div class="box"><div class="t">Upload</div><div class="n">Leaf JPEG / PNG</div><div class="tiny">Optional crop override, land size (decimal / bigha / acre), lang bn|en</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">L1 · leaf_gate.pt</div><div class="n">MobileNetV3-Large</div><div class="tiny">P(leaf) ≥ 0.50. Below that: status not_leaf, disease skipped.</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">L2 · leaf_type.pt</div><div class="n">EfficientNet-B3</div><div class="tiny">Crop name. If confidence &lt; 0.90, UI asks farmer to pick from top-3.</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">L3 · disease_*.pt</div><div class="n">Three backbones</div><div class="tiny">EfficientNet-B3, ResNet-50, DenseNet-121. Masked to L2 crop.</div></div>
+  </div>
+
+  <div class="split" style="margin-bottom:8px">
+    <div class="card">
+      <h2>How the “best answer” is chosen</h2>
+      <ol class="clean" style="padding-left:16px;font-size:10.5px;line-height:1.45">
+        <li>Each disease model emits softmax, aligned onto the shared class list (older 38-class checkpoints do not dilute Bangladesh-only classes).</li>
+        <li>Probabilities are <strong>masked to the L2 crop</strong> so a tomato photo cannot win as rice blast.</li>
+        <li>Code comment is explicit: <em>NEVER average — pick the single model with the highest confidence.</em></li>
+        <li>Uncertain if confidence &lt; 0.45; UI warns if &lt; 0.80 (retake photo / call an officer).</li>
+        <li>Class label looks like <span class="tag">Rice___Blast</span> → plant + condition + pack lookup via advice_for().</li>
+      </ol>
+      <div class="tiny" style="margin-top:6px">If leaf_type.pt is missing, crop is estimated by summing disease-class probabilities by plant. L1 missing means the gate is skipped (is_leaf = true).</div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:8px">
+        <h2>After the class is known</h2>
+        <div class="tree-item"><h4>Header always</h4><div class="tiny">Leaf % · crop · disease · confidence. Bangla or English.</div></div>
+        <div class="tree-item llm"><h4>Try Qwen wrap · generate_vision_feedback</h4><div class="tiny">Does <em>not</em> call retrieve(). Prompt = scan header + pack title, 5 steps, 4 treatments, 3 prevention lines. 3–6 short sentences. Max 180 new tokens, greedy.</div></div>
+        <div class="tree-item"><h4>Quality gate · _llm_text_is_bad</h4><div class="tiny">Reject if one word is ≥22% of the text, or 6 identical tokens in a row. Known 3B collapse mode.</div></div>
+        <div class="tree-item alt"><h4>Fallback</h4><div class="tiny">vision+llm if Qwen is clean · vision+pack if rejected or unloaded · bare vision + “call 16123” if no pack.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Status returned to UI</th><th>When</th><th>source field</th></tr></thead>
+    <tbody>
+      <tr><td>not_leaf</td><td>L1 says this is not a leaf</td><td>vision</td></tr>
+      <tr><td>need_crop</td><td>L2 confidence below 0.90 and farmer has not picked</td><td>vision</td></tr>
+      <tr><td>no_disease</td><td>No class from L3</td><td>vision</td></tr>
+      <tr><td>ok</td><td>Class + header + Qwen or pack body</td><td>vision+llm / vision+pack / vision</td></tr>
+    </tbody>
+  </table>
+  <footer class="foot"><span>Models: leaf_gate.pt · leaf_type.pt · disease_efficientnet_b3.pt · disease_resnet50.pt · disease_densenet121.pt</span><span>Page 2 of 5 · Vision</span></footer>
+</section>
+
+<!-- PAGE 3 -->
+<section class="sheet">
+  <header class="top">
+    <div>
+      <div class="kicker">Pipeline B</div>
+      <h1>Chat router — pack is the product, Qwen is overflow</h1>
+    </div>
+    <div class="meta">agrovet/llm_chat.chat_reply<br/>agrovet/knowledge.resolve_disease_query</div>
+  </header>
+
+  <div class="row" style="margin-bottom:8px">
+    <div class="col" style="flex:1.15">
+      <div class="tree-item"><h4>1. resolve_disease_query(message)</h4>
+        <div class="tiny">Score pack/KB candidates. If one disease+crop is clear → format the full pack reply (symptoms, steps, chemicals, 16123). <strong>source: pack. Qwen is not called.</strong></div>
+      </div>
+      <div class="tree-item alt"><h4>2. Ambiguous name → clarify</h4>
+        <div class="tiny">Same kb_key on several crops (e.g. blight). Return options; wait for confirm_class. <strong>source: clarify</strong></div>
+      </div>
+      <div class="tree-item kb"><h4>3. chatbot_reply / structural KB</h4>
+        <div class="tiny">Greetings, emergency, government links, “how do I use AgroScan”, scan-context follow-ups. If the KB text is already specific, return it. <strong>source: kb / context / pack</strong></div>
+      </div>
+      <div class="tree-item llm"><h4>4. Only then generate_reply — RAG + Qwen</h4>
+        <div class="tiny">Runs if the KB answer is generic (“I can help with plant-leaf…”). retrieve(k=6) → prompt → Qwen. Fail → KB fallback. <strong>source: llm</strong></div>
+      </div>
+    </div>
+    <div class="col" style="flex:.85">
+      <div class="callout" style="margin-bottom:8px">
+        <div class="kicker" style="color:#95d5b2">Why this order</div>
+        <p style="font-size:12px;margin-top:4px;line-height:1.4">Chemical doses are a legal/safety surface. The pack is DAE/PPW-backed text. The 3B model is instructed never to invent products. Routing enforces that: named diseases never reach generation.</p>
+      </div>
+      <div class="card">
+        <h3>What a pack answer contains</h3>
+        <ul class="clean">
+          <li>Crop + disease title (EN and BN fields)</li>
+          <li>Pathogen, season, severity, source, last verified</li>
+          <li>Cultural control and fertilizer (BARC FRG-style)</li>
+          <li>Chemical options: product, AI, dose/L, timing, interval, max sprays, PHI, BD brands</li>
+          <li>Registration: verified AP, or “confirm with dealer/PPW”</li>
+          <li>Organic options, safety, legal, when to call 16123</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2>Prompt Qwen actually sees (open questions only)</h2>
+  <div class="card" style="font-family:Consolas,'Courier New',monospace;font-size:10px;line-height:1.45;background:#081c15;color:#d8f3dc">
+    ### Instruction:<br/>
+    You are AgroScan… ONLY use the retrieved guides below. Never mix one crop/disease into another. If guides do not cover the question, say you are unsure and suggest calling 16123. Do not invent products, doses, or symptoms.<br/>
+    Matched disease record (authoritative): {title + summary} &nbsp; <span style="color:#95d5b2">← if named match</span><br/>
+    Retrieved guides:<br/>
+    [1] … [6] section chunks &nbsp; <span style="color:#95d5b2">or “none. Say you are unsure.”</span><br/>
+    ### Input:<br/>{farmer message}<br/>
+    ### Response:
+  </div>
+  <div class="tiny" style="margin-top:6px">Bangla system prompt is used when lang starts with bn. allow_keys pins retrieval to the matched class_name / kb_key so maize blight steps cannot leak into potato late blight. Prompt truncated at 2048 tokens; generation max 220, do_sample=False.</div>
+  <footer class="foot"><span>chat_reply is pack-first by design — RAG+Qwen is the leftover path</span><span>Page 3 of 5 · Chat router</span></footer>
+</section>
+
+<!-- PAGE 4 -->
+<section class="sheet">
+  <header class="top">
+    <div>
+      <div class="kicker">Retrieval</div>
+      <h1>RAG pipeline — lexical TF-IDF over the Bangladesh pack</h1>
+    </div>
+    <div class="meta">agrovet/rag_build.py · agrovet/rag.py<br/>data/agroscan/rag_disease_docs.json</div>
+  </header>
+
+  <div class="flow" style="margin-bottom:8px">
+    <div class="box"><div class="t">Source of truth</div><div class="n">disease_treatments.json</div><div class="tiny">DAE / PPW / BRRI / BARC-backed pack. Builder does not invent doses or AP numbers.</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">build_all()</div><div class="n">44 × EN+BN = 88 docs</div><div class="tiny">Healthy classes skipped. Each disease: overview, symptoms, prevention, treatment, process.</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">Chunks</div><div class="n">Section documents</div><div class="tiny">Aliases (title, crop, BN names, kb_key, Class___Disease) prepended for keyword hit.</div></div>
+    <div class="arr">▸</div>
+    <div class="box"><div class="t">Index</div><div class="n">In-RAM sklearn</div><div class="tiny">TfidfVectorizer 20k features, ngram (1,2). @lru_cache. No Chroma/FAISS.</div></div>
+  </div>
+
+  <div class="grid2" style="margin-bottom:8px">
+    <div class="card">
+      <h2>retrieve(query, lang, k=6)</h2>
+      <table>
+        <thead><tr><th>Step</th><th>Rule</th></tr></thead>
+        <tbody>
+          <tr><td>Query</td><td>optional extra (scan class) + user text</td></tr>
+          <tr><td>Score</td><td>cosine similarity on TF-IDF vectors</td></tr>
+          <tr><td>Boost</td><td>+0.15 prevention/treatment; +0.12 process/symptoms if keywords match (EN+BN)</td></tr>
+          <tr><td>Language</td><td>prefer bn chunks if lang is bn, then fill from the rest</td></tr>
+          <tr><td>Floor</td><td>drop scores &lt; 0.015</td></tr>
+          <tr><td>Pin</td><td>PlantVillage class_name with ___ must match exactly; else fuzzy kb_key</td></tr>
+          <tr><td>Dedupe</td><td>(lang, key, section)</td></tr>
+          <tr><td>Length</td><td>treatment/process 2200 chars; others 1600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:8px">
+        <h2>What a treatment chunk looks like</h2>
+        <div class="tiny">Rice — Rice blast example (pack, not model): Tricyclazole 75% WP at 0.6 g/L, spray at booting and 50% heading, max 2 sprays, PHI 21 days, brands Trooper/Beam/Blasticure. Rotate to Nativo 75 WG. Stop urea; add MoP. Neck blast cannot be cured once the panicle is infected. Pack notes: AP numbers often “confirm with dealer” — blast vs brown spot have <strong>opposite nitrogen advice</strong>; retrieval pinning exists so those two are not merged.</div>
+      </div>
+      <div class="warn">
+        <strong style="font-size:11px">This is not neural RAG</strong>
+        <div class="tiny">No dense embeddings, no Qwen-as-retriever, no vector DB. “Diamond spots on rice” will rank blast if those words sit in the chunk. A paraphrase with no shared n-grams may miss. Legacy DISEASE_GUIDES are indexed alongside the pack when the pack exists.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid3">
+    <div class="card"><h3>Qwen’s job in RAG</h3><div class="tiny">Generation only. It rewrites the retrieved sections into a farmer reply. It does not search. If snippets are empty, the prompt orders it to say it is unsure.</div></div>
+    <div class="card"><h3>CPU vs GPU</h3><div class="tiny">Retrieval is CPU sklearn and always on. Qwen needs CUDA in auto mode (AGROSCAN_LLM_ENABLED=auto). Docker image is CPU PyTorch — LLM likely stays off there.</div></div>
+    <div class="card"><h3>Rebuild</h3><div class="tiny">python -m agrovet.rag_build writes rag_disease_docs.json. clear_index_cache() drops the in-memory TF-IDF matrix.</div></div>
+  </div>
+  <footer class="foot"><span>Index lives in process memory — restart the API after rebuilding the JSON</span><span>Page 4 of 5 · RAG</span></footer>
+</section>
+
+<!-- PAGE 5 -->
+<section class="sheet">
+  <header class="top">
+    <div>
+      <div class="kicker">Generation and honesty</div>
+      <h1>Qwen serving vs training — and how results actually land</h1>
+    </div>
+    <div class="meta">agrovet/llm_chat.py · llm/train_lora.py<br/>llm_data/adapters/</div>
+  </header>
+
+  <div class="grid2" style="margin-bottom:8px">
+    <div class="card">
+      <h2>What is loaded at chat time</h2>
+      <table>
+        <thead><tr><th>Knob</th><th>Value in code</th></tr></thead>
+        <tbody>
+          <tr><td>Base</td><td>Qwen/Qwen2.5-3B-Instruct</td></tr>
+          <tr><td>Adapter expected</td><td>llm_data/adapters/agroscan-3b — <strong>not on disk</strong></td></tr>
+          <tr><td>Adapter present</td><td>agroscan-1.5b — refused on the 3B base</td></tr>
+          <tr><td>Quant</td><td>4-bit NF4, else fp16 CUDA, else CPU fp32</td></tr>
+          <tr><td>Decode</td><td>greedy, 220 / 180 tokens, stop on ###</td></tr>
+          <tr><td>Enable</td><td>auto = CUDA available; pagefile error 1455 disables for the process</td></tr>
+          <tr><td>Preload</td><td>off unless AGROSCAN_LLM_PRELOAD=1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h2>What was trained (not served)</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Count / setting</th></tr></thead>
+        <tbody>
+          <tr><td>Train JSONL</td><td>69,238</td></tr>
+          <tr><td>Eval JSONL</td><td>2,000 — no logged eval metrics in repo</td></tr>
+          <tr><td>krishokchat</td><td>58,299</td></tr>
+          <tr><td>crop CSVs</td><td>~10k</td></tr>
+          <tr><td>AgroScan disease EN+BN</td><td>94 + 55</td></tr>
+          <tr><td>Train model</td><td>Qwen2.5-1.5B-Instruct, LoRA r=16</td></tr>
+        </tbody>
+      </table>
+      <div class="tiny" style="margin-top:6px">The fine-tune and the serve model are different sizes. Live RAG answers are stock 3B Instruct + retrieved pack text.</div>
+    </div>
+  </div>
+
+  <h2>What the farmer actually gets today</h2>
+  <table style="margin-bottom:8px">
+    <thead><tr><th>Path</th><th>Typical question</th><th>Engine</th><th>Quality in practice</th></tr></thead>
+    <tbody>
+      <tr><td>Named disease</td><td>“ধানের ব্লাস্টে কী স্প্রে?”</td><td>Pack formatter</td><td><strong>Strong.</strong> This is the designed happy path. Caveat: many AP numbers still “confirm with dealer”.</td></tr>
+      <tr><td>Ambiguous name</td><td>“blight কী করব?”</td><td>Clarify UI</td><td>Working: asks which crop.</td></tr>
+      <tr><td>Scan with pack</td><td>Photo of blast leaf</td><td>Vision + pack, Qwen wrap if clean</td><td>Diagnosis from ensemble; advice from pack. Qwen wrap is fragile (repetition gate).</td></tr>
+      <tr><td>Open chat</td><td>Paraphrase with no disease name</td><td>TF-IDF + base 3B</td><td><strong>Unguaranteed.</strong> No recall/faithfulness eval in repo. Keyword retrieval; small greedy model; no 3B LoRA.</td></tr>
+      <tr><td>Hello / 16123 / how-to</td><td>“হ্যালো”, “হেল্পলাইন”</td><td>KB</td><td>Deterministic, no LLM.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid3">
+    <div class="ok"><strong style="font-size:11px">Trust this</strong><div class="tiny">Pack JSON + vision class → farmer treatment. Routing, allow_keys, and the “only use retrieved guides” prompt exist to keep doses inside that pack.</div></div>
+    <div class="warn"><strong style="font-size:11px">Do not over-claim</strong><div class="tiny">There is no RAG eval set. The 1.5B LoRA is unused at serve. Docker/CPU likely never loads Qwen. GGUF export is still absent.</div></div>
+    <div class="card" style="border-color:#1d4e89"><strong style="font-size:11px">If you raise quality next</strong><div class="tiny">Train/attach agroscan-3b <em>or</em> serve 1.5B on a 1.5B base. Add a 20-query retrieval check that blast and brown-spot nitrogen advice never swap.</div></div>
+  </div>
+  <footer class="foot"><span>Drawn from infer.py, rag.py, rag_build.py, llm_chat.py, train_lora.py, dataset_stats.json — August 2026</span><span>Page 5 of 5 · Results</span></footer>
+</section>
+
+</body>
+</html>

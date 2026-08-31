@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgroScan Admin</title>
+  <link rel="icon" href="/static/AgroVet_logo-main.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #12241a;
+      --muted: #5a6f62;
+      --panel: rgba(255, 252, 247, 0.92);
+      --panel-solid: #fffdf8;
+      --line: rgba(18, 36, 26, 0.12);
+      --green: #1f6b3a;
+      --green-d: #154d2a;
+      --green-soft: #d8eedf;
+      --accent: #c45c26;
+      --accent-soft: #f6e0d4;
+      --warn: #9a3412;
+      --ok: #166534;
+      --shadow: 0 18px 50px rgba(12, 32, 20, 0.14);
+      --radius: 18px;
+      --font-en: "Poppins", system-ui, sans-serif;
+      --font-bn: "Noto Sans Bengali", "Noto Sans", system-ui, sans-serif;
+      --font: var(--font-en);
+      --display: "Fraunces", Georgia, serif;
+    }
+    html[lang="bn"], html.lang-bn { --font: var(--font-bn); }
+    html[lang="en"], html.lang-en { --font: var(--font-en); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(196, 92, 38, 0.18), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(31, 107, 58, 0.28), transparent 50%),
+        linear-gradient(165deg, #0f2a1a 0%, #1a4730 38%, #245c3c 70%, #173526 100%);
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 4c8 10 8 22 0 32-8-10-8-22 0-32zm0 20c10 6 18 4 26-4-10 4-20 2-26 4zm0 0c-10 6-18 4-26-4 10 4 20 2 26 4z' fill='%23fff' fill-opacity='0.9'/%3E%3C/svg%3E");
+    }
+    .hidden { display: none !important; }
+    button, input, select, textarea { font: inherit; }
+    a { color: inherit; }
+
+    .shell {
+      width: min(1240px, calc(100% - 24px));
+      margin: 20px auto 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Login */
+    .login-stage {
+      min-height: calc(100vh - 40px);
+      display: grid;
+      place-items: center;
+      animation: rise 0.55s ease both;
+    }
+    .login-card {
+      width: min(440px, 100%);
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 24px;
+      padding: 28px 26px 24px;
+      box-shadow: var(--shadow);
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .brand-mark img { width: 48px; height: 48px; object-fit: contain; }
+    .brand-mark strong {
+      font-family: var(--display);
+      font-size: 1.55rem;
+      letter-spacing: -0.02em;
+      display: block;
+      line-height: 1.1;
+    }
+    .brand-mark span { color: var(--muted); font-size: 13px; }
+    .login-card h1 {
+      font-family: var(--display);
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .hint { color: var(--muted); font-size: 13px; margin: 0 0 16px; line-height: 1.45; }
+    label.field { display: block; font-weight: 600; font-size: 13px; margin: 12px 0 6px; }
+    input, select, textarea {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #fff;
+      color: var(--ink);
+      min-height: 46px;
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid rgba(31, 107, 58, 0.35);
+      border-color: var(--green);
+    }
+    .password-wrap { position: relative; }
+    .password-wrap input { padding-right: 48px; }
+    .password-toggle {
+      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      border: 0; background: transparent; width: 40px; height: 40px; cursor: pointer;
+    }
+    .btn {
+      border: 0; border-radius: 12px; padding: 11px 16px; font-weight: 700;
+      cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--green); color: #fff; box-shadow: 0 10px 24px rgba(31,107,58,.28); }
+    .btn-primary:hover { background: var(--green-d); }
+    .btn-secondary { background: var(--green-soft); color: var(--green-d); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .btn-danger { background: #fee2e2; color: #991b1b; }
+    .btn-accent { background: var(--accent); color: #fff; }
+    .btn-sm { padding: 8px 12px; font-size: 13px; border-radius: 10px; }
+    .btn-block { width: 100%; margin-top: 16px; }
+    .error { color: #b42318; font-size: 13px; font-weight: 600; margin-top: 10px; }
+    .ok-msg { color: var(--ok); font-size: 13px; font-weight: 600; }
+
+    /* App chrome */
+    .app-frame {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 18px;
+      animation: rise 0.45s ease both;
+    }
+    @media (max-width: 900px) {
+      .app-frame { grid-template-columns: 1fr; }
+    }
+    .side {
+      background: rgba(10, 28, 18, 0.72);
+      color: #e8f5ec;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 20px 16px;
+      backdrop-filter: blur(10px);
+      align-self: start;
+      position: sticky;
+      top: 16px;
+    }
+    @media (max-width: 900px) {
+      .side { position: static; }
+    }
+    .side .brand-mark strong, .side .brand-mark span { color: #f3faf5; }
+    .side .brand-mark span { color: rgba(243,250,245,0.7); }
+    .nav {
+      display: grid;
+      gap: 6px;
+      margin-top: 18px;
+    }
+    .nav button {
+      text-align: left;
+      background: transparent;
+      color: rgba(243,250,245,0.82);
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .18s ease, transform .18s ease;
+    }
+    .nav button:hover { background: rgba(255,255,255,0.08); }
+    .nav button.active {
+      background: linear-gradient(120deg, rgba(196,92,38,0.95), rgba(31,107,58,0.95));
+      color: #fff;
+      transform: translateX(2px);
+    }
+    .side-foot {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: grid;
+      gap: 8px;
+    }
+    .side-foot .btn { width: 100%; }
+
+    .main { min-width: 0; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: #f4faf6;
+    }
+    .topbar h2 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .topbar p { margin: 4px 0 0; opacity: 0.78; font-size: 14px; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      animation: fade 0.35s ease both;
+    }
+    .panel + .panel { margin-top: 14px; }
+    .panel h3 {
+      margin: 0 0 4px;
+      font-family: var(--display);
+      font-size: 1.25rem;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 14px 0 8px;
+    }
+    .toolbar input, .toolbar select { max-width: 280px; min-height: 42px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 900px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat {
+      background: linear-gradient(160deg, #fff 0%, #f3f8f4 100%);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      overflow: hidden;
+      position: relative;
+      transition: transform .2s ease;
+    }
+    .stat:hover { transform: translateY(-2px); }
+    .stat::after {
+      content: "";
+      position: absolute;
+      right: -20px; top: -20px;
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: rgba(31,107,58,0.08);
+    }
+    .stat .label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .stat .value {
+      font-family: var(--display);
+      font-size: 2rem;
+      margin-top: 6px;
+      letter-spacing: -0.03em;
+    }
+    .stat.accent .value { color: var(--accent); }
+    .stat.green .value { color: var(--green-d); }
+
+    .split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; margin-top: 12px; }
+    @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+    .mini {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .mini h4 { margin: 0 0 10px; font-size: 14px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      background: var(--green-soft);
+      color: var(--green-d);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .pill.warn { background: var(--accent-soft); color: var(--warn); }
+
+    .list { display: grid; gap: 10px; margin-top: 12px; }
+    .row-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .row-card:hover { border-color: rgba(31,107,58,0.35); box-shadow: 0 8px 20px rgba(18,36,26,0.06); }
+    @media (max-width: 700px) {
+      .row-card { grid-template-columns: 1fr; }
+    }
+    .row-card strong { display: block; font-size: 15px; }
+    .meta { color: var(--muted); font-size: 12.5px; margin-top: 3px; line-height: 1.4; }
+    .actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
+    .price-input { max-width: 110px; min-height: 40px; padding: 8px 10px; }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green-d);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .badge.off { background: #fee2e2; color: #991b1b; }
+    .badge.pending { background: #fef3c7; color: #92400e; }
+    .badge.shipped, .badge.processing { background: #dbeafe; color: #1e40af; }
+    .badge.delivered { background: var(--green-soft); color: var(--ok); }
+    .badge.cancelled { background: #f3f4f6; color: #4b5563; }
+
+    /* Modal */
+    .modal-back {
+      position: fixed; inset: 0; z-index: 40;
+      background: rgba(8, 20, 14, 0.55);
+      display: grid; place-items: center;
+      padding: 16px;
+      animation: fade 0.2s ease both;
+    }
+    .modal {
+      width: min(560px, 100%);
+      background: var(--panel-solid);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      max-height: min(90vh, 760px);
+      overflow: auto;
+      animation: rise 0.25s ease both;
+    }
+    .modal h3 { margin: 0 0 4px; font-family: var(--display); }
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 560px) { .modal-grid { grid-template-columns: 1fr; } }
+    .modal-grid .full { grid-column: 1 / -1; }
+    .modal-actions {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end;
+      margin-top: 16px;
+    }
+
+    .toast {
+      position: fixed; right: 18px; bottom: 18px; z-index: 50;
+      background: var(--ink); color: #fff;
+      padding: 12px 16px; border-radius: 12px;
+      box-shadow: var(--shadow);
+      transform: translateY(20px); opacity: 0;
+      transition: all .25s ease;
+      max-width: min(360px, calc(100% - 32px));
+      font-size: 14px; font-weight: 600;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .tool {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+    }
+    .tool p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div id="adminLogin" class="login-stage">
+      <div class="login-card">
+        <div class="brand-mark">
+          <img src="/static/AgroVet_logo-main.png" alt="" />
+          <div>
+            <strong>AgroScan</strong>
+            <span>Operations console</span>
+          </div>
+        </div>
+        <h1>Admin sign-in</h1>
+        <p class="hint">Local default password is set by <code>AGROSCAN_ADMIN_TOKEN</code> (or <code>agroscan-admin</code>).</p>
+        <label class="field">Username
+          <input id="adminUser" type="text" autocomplete="username" value="admin" />
+        </label>
+        <label class="field">Password
+          <div class="password-wrap">
+            <input id="adminPass" type="password" autocomplete="current-password" />
+            <button type="button" class="password-toggle" data-target="adminPass" aria-label="Show password">
+              <span class="pw-icon-show" aria-hidden="true">&#128065;</span>
+              <span class="pw-icon-hide hidden" aria-hidden="true">&#128064;</span>
+            </button>
+          </div>
+        </label>
+        <button id="adminLoginBtn" class="btn btn-primary btn-block">Enter dashboard</button>
+        <p id="adminLoginErr" class="error hidden"></p>
+      </div>
+    </div>
+
+    <div id="adminApp" class="hidden">
+      <div class="app-frame">
+        <aside class="side">
+          <div class="brand-mark">
+            <img src="/static/AgroVet_logo-main.png" alt="" />
+            <div>
+              <strong>AgroScan</strong>
+              <span>Admin</span>
+            </div>
+          </div>
+          <nav class="nav" id="adminNav">
+            <button type="button" class="active" data-tab="overview">Overview</button>
+            <button type="button" data-tab="users">Users</button>
+            <button type="button" data-tab="orders">Orders</button>
+            <button type="button" data-tab="products">Products</button>
+            <button type="button" data-tab="tools">Tools</button>
+          </nav>
+          <div class="side-foot">
+            <a class="btn btn-ghost btn-sm" href="/" style="text-align:center;text-decoration:none;display:block;color:#e8f5ec;border-color:rgba(255,255,255,.2)">Open shop</a>
+            <button id="adminLogout" type="button" class="btn btn-secondary btn-sm">Log out</button>
+          </div>
+        </aside>
+
+        <main class="main">
+          <div class="topbar">
+            <div>
+              <h2 id="pageTitle">Overview</h2>
+              <p id="pageSub">Live snapshot of AgroScan commerce &amp; accounts</p>
+            </div>
+          </div>
+
+          <section id="tabOverview" class="panel">
+            <div class="stats" id="statGrid">
+              <div class="stat green"><div class="label">Users</div><div class="value" id="stUsers">—</div></div>
+              <div class="stat accent"><div class="label">Orders</div><div class="value" id="stOrders">—</div></div>
+              <div class="stat green"><div class="label">Products</div><div class="value" id="stProducts">—</div></div>
+              <div class="stat accent"><div class="label">Revenue (BDT)</div><div class="value" id="stRevenue">—</div></div>
+            </div>
+            <div class="split">
+              <div class="mini">
+                <h4>Order pipeline</h4>
+                <div class="pill-row" id="orderPills"></div>
+              </div>
+              <div class="mini">
+                <h4>System</h4>
+                <div class="pill-row" id="sysPills"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tabUsers" class="panel hidden">
+            <h3>Users</h3>
+            <p class="hint">Search, edit profile details, reset password, disable accounts, or revoke sessions.</p>
+            <div class="toolbar">
+              <input id="userSearch" type="search" placeholder="Search name, email, phone, place" />
+              <button id="userRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+            </div>
+            <div id="adminUsers" class="list"></div>
+          </section>
+
+          <section id="tabOrders" class="panel hidden">
+            <h3>Orders</h3>
+            <p class="hint">Update fulfilment status for customer orders.</p>
+            <div class="toolbar">
+              <select id="orderStatusFilter">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="processing">Processing</option>
+                <option value="shipped">Shipped</option>
+                <option value="delivered">Delivered</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+              <button id="adminRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+            </div>
+            <div id="adminOrders" class="list"></div>
+          </section>
+
+          <section id="tabProducts" class="panel hidden">
+            <h3>Product prices</h3>
+            <p class="hint">Fixed shop prices (BDT). Changes show immediately in the storefront.</p>
+            <div class="toolbar">
+              <input id="prodSearch" type="search" placeholder="Search name / SKU / brand" />
+              <button id="prodRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+            </div>
+            <div id="adminProducts" class="list"></div>
+          </section>
+
+          <section id="tabTools" class="panel hidden">
+            <h3>Maintenance tools</h3>
+            <p class="hint">Use carefully on production data.</p>
+            <div class="tools-grid">
+              <div class="tool">
+                <strong>Seed shop catalogue</strong>
+                <p>Reload upazilas, suppliers, and products from the Bangladesh data pack.</p>
+                <button id="adminSeed" type="button" class="btn btn-accent btn-sm">Run seed</button>
+              </div>
+              <div class="tool">
+                <strong>Apply product images</strong>
+                <p>Attach image URLs from <code>product_images.json</code> to existing products.</p>
+                <button id="adminApplyImages" type="button" class="btn btn-secondary btn-sm">Apply images</button>
+              </div>
+              <div class="tool">
+                <strong>Refresh overview</strong>
+                <p>Reload live counts for users, orders, and catalogue.</p>
+                <button id="adminStatsRefresh" type="button" class="btn btn-secondary btn-sm">Refresh stats</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <div id="userModal" class="modal-back hidden" role="dialog" aria-modal="true">
+    <div class="modal">
+      <h3>Edit user</h3>
+      <p class="hint" id="userModalSub">Update account details</p>
+      <input type="hidden" id="editUserId" />
+      <div class="modal-grid">
+        <label class="field">Name<input id="editName" /></label>
+        <label class="field">Email<input id="editEmail" type="email" /></label>
+        <label class="field">Phone<input id="editPhone" inputmode="tel" /></label>
+        <label class="field">Status
+          <select id="editActive">
+            <option value="1">Active</option>
+            <option value="0">Disabled</option>
+          </select>
+        </label>
+        <label class="field">District<input id="editDistrict" /></label>
+        <label class="field">Upazila<input id="editUpazila" /></label>
+        <label class="field full">Address<textarea id="editAddress"></textarea></label>
+        <label class="field full">New password (optional)<input id="editPassword" type="password" placeholder="Leave blank to keep current" autocomplete="new-password" /></label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="userModalClose">Cancel</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="userRevokeBtn">Revoke sessions</button>
+        <button type="button" class="btn btn-danger btn-sm" id="userDeleteBtn">Delete</button>
+        <button type="button" class="btn btn-primary btn-sm" id="userSaveBtn">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="/static/config.js"></script>
+  <script>
+(function () {
+  var API = (window.AGROVET_CONFIG && window.AGROVET_CONFIG.API_BASE) || "";
+  var KEY = "agroscan_admin_token";
+  var DEFAULT_PASS = "agroscan-admin";
+  var TITLES = {
+    overview: ["Overview", "Live snapshot of AgroScan commerce & accounts"],
+    users: ["Users", "Manage farmer and customer accounts"],
+    orders: ["Orders", "Fulfilment and delivery status"],
+    products: ["Products", "Fixed shop prices in BDT"],
+    tools: ["Tools", "Catalogue seed and maintenance"]
+  };
+
+  function $(id) { return document.getElementById(id); }
+  function token() { return localStorage.getItem(KEY) || ""; }
+  function setToken(t) {
+    if (t) localStorage.setItem(KEY, t);
+    else localStorage.removeItem(KEY);
+  }
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+  function toast(msg) {
+    var el = $("toast");
+    el.textContent = msg;
+    el.className = "toast show";
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { el.className = "toast"; }, 2600);
+  }
+  function formatDetail(detail) {
+    if (detail == null || detail === "") return "";
+    if (typeof detail === "string") return detail;
+    if (Array.isArray(detail)) {
+      return detail.map(function (d) {
+        if (!d) return "";
+        if (typeof d === "string") return d;
+        if (d.msg) return d.msg;
+        try { return JSON.stringify(d); } catch (e) { return String(d); }
+      }).filter(Boolean).join("; ") || "Request failed";
+    }
+    if (typeof detail === "object" && detail.msg) return detail.msg;
+    try { return JSON.stringify(detail); } catch (e) { return String(detail); }
+  }
+  function xhr(method, path, body, ok, fail) {
+    var x = new XMLHttpRequest();
+    x.open(method, API + path, true);
+    x.setRequestHeader("Authorization", "Bearer " + token());
+    if (body != null) x.setRequestHeader("Content-Type", "application/json");
+    x.onload = function () {
+      var data = {};
+      try { data = x.responseText ? JSON.parse(x.responseText) : {}; }
+      catch (e) {
+        if (x.status >= 200 && x.status < 300) return fail("Invalid JSON response");
+      }
+      if (x.status >= 200 && x.status < 300) ok(data);
+      else fail(formatDetail(data.detail) || ("HTTP " + x.status));
+    };
+    x.onerror = function () { fail("Network error"); };
+    x.send(body != null ? JSON.stringify(body) : null);
+  }
+  function showApp(on) {
+    $("adminLogin").className = on ? "login-stage hidden" : "login-stage";
+    $("adminApp").className = on ? "" : "hidden";
+  }
+  function setTab(tab) {
+    var titles = TITLES[tab] || TITLES.overview;
+    $("pageTitle").textContent = titles[0];
+    $("pageSub").textContent = titles[1];
+    var tabs = ["overview", "users", "orders", "products", "tools"];
+    tabs.forEach(function (t) {
+      var el = $("tab" + t.charAt(0).toUpperCase() + t.slice(1));
+      if (el) el.className = t === tab ? "panel" : "panel hidden";
+    });
+    var nav = document.querySelectorAll("#adminNav button");
+    for (var i = 0; i < nav.length; i++) {
+      nav[i].className = nav[i].getAttribute("data-tab") === tab ? "active" : "";
+    }
+    if (tab === "overview") loadStats();
+    if (tab === "users") loadUsers();
+    if (tab === "orders") loadOrders();
+    if (tab === "products") loadProducts();
+  }
+
+  function login() {
+    var user = ($("adminUser").value || "").trim();
+    var pass = ($("adminPass").value || "").trim();
+    var err = $("adminLoginErr");
+    if (user !== "admin" || !pass) {
+      err.textContent = "Use username admin and the admin password.";
+      err.className = "error";
+      return;
+    }
+    setToken(pass);
+    xhr("GET", "/api/admin/stats", null, function () {
+      err.className = "error hidden";
+      showApp(true);
+      setTab("overview");
+    }, function () {
+      setToken("");
+      err.textContent = "Wrong password. Default local password: agroscan-admin";
+      err.className = "error";
+      showApp(false);
+    });
+  }
+
+  function loadStats() {
+    xhr("GET", "/api/admin/stats", null, function (data) {
+      var shop = data.shop || {};
+      var users = data.users || {};
+      var models = data.models || {};
+      $("stUsers").textContent = users.users_total != null ? users.users_total : "—";
+      $("stOrders").textContent = shop.orders != null ? shop.orders : "—";
+      $("stProducts").textContent = shop.products != null ? shop.products : "—";
+      $("stRevenue").textContent = shop.revenue_bdt != null ? Math.round(shop.revenue_bdt).toLocaleString() : "—";
+      var pills = $("orderPills");
+      var by = shop.orders_by_status || {};
+      var keys = Object.keys(by);
+      pills.innerHTML = keys.length
+        ? keys.map(function (k) {
+            return "<span class='pill" + (k === "pending" ? " warn" : "") + "'>" + esc(k) + ": " + by[k] + "</span>";
+          }).join("")
+        : "<span class='meta'>No orders yet</span>";
+      var sys = $("sysPills");
+      var llm = models.llm || {};
+      var vision = models.vision || {};
+      sys.innerHTML =
+        "<span class='pill'>Active users: " + (users.users_active || 0) + "</span>" +
+        "<span class='pill'>Sessions: " + (users.sessions_active || 0) + "</span>" +
+        "<span class='pill'>Suppliers: " + (shop.suppliers || 0) + "</span>" +
+        "<span class='pill'>" + (vision.loaded ? "Vision ready" : "Vision offline") + "</span>" +
+        "<span class='pill'>" + ((llm.loaded || llm.enabled) ? "LLM configured" : "LLM off") + "</span>";
+    }, function (m) {
+      toast(m);
+      if (String(m).toLowerCase().indexOf("admin") >= 0 || String(m).indexOf("401") >= 0) {
+        setToken("");
+        showApp(false);
+      }
+    });
+  }
+
+  function loadUsers() {
+    var q = ($("userSearch").value || "").trim();
+    var path = "/api/admin/users?limit=150" + (q ? ("&search=" + encodeURIComponent(q)) : "");
+    xhr("GET", path, null, function (data) {
+      var el = $("adminUsers");
+      var html = "";
+      (data.users || []).forEach(function (u) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(u.name || "User") + "</strong>" +
+          "<div class='meta'>" + esc(u.email || "") +
+          (u.phone ? (" · " + esc(u.phone)) : "") +
+          (u.district || u.upazila ? (" · " + esc([u.upazila, u.district].filter(Boolean).join(", "))) : "") +
+          "<br/>#" + u.id + " · " + esc(u.provider || "local") +
+          " · sessions " + (u.active_sessions || 0) +
+          " · <span class='badge " + (u.active ? "" : "off") + "'>" + (u.active ? "active" : "disabled") + "</span>" +
+          "</div></div>" +
+          "<div class='actions'>" +
+          "<button type='button' class='btn btn-primary btn-sm edit-user' data-id='" + u.id + "'>Edit</button>" +
+          "</div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>No users found.</p>";
+      var btns = el.querySelectorAll(".edit-user");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () { openUserModal(parseInt(this.getAttribute("data-id"), 10)); };
+      }
+    }, function (m) {
+      $("adminUsers").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  function openUserModal(id) {
+    xhr("GET", "/api/admin/users/" + id, null, function (data) {
+      var u = data.user || {};
+      $("editUserId").value = u.id;
+      $("editName").value = u.name || "";
+      $("editEmail").value = u.email || "";
+      $("editPhone").value = u.phone || "";
+      $("editDistrict").value = u.district || "";
+      $("editUpazila").value = u.upazila || "";
+      $("editAddress").value = u.address || "";
+      $("editActive").value = u.active ? "1" : "0";
+      $("editPassword").value = "";
+      $("userModalSub").textContent = "User #" + u.id + " · " + (u.provider || "local");
+      $("userModal").className = "modal-back";
+    }, function (m) { toast(m); });
+  }
+  function closeUserModal() { $("userModal").className = "modal-back hidden"; }
+
+  function saveUser() {
+    var id = $("editUserId").value;
+    var body = {
+      name: $("editName").value,
+      email: $("editEmail").value,
+      phone: $("editPhone").value,
+      district: $("editDistrict").value,
+      upazila: $("editUpazila").value,
+      address: $("editAddress").value,
+      active: parseInt($("editActive").value, 10)
+    };
+    var pw = ($("editPassword").value || "").trim();
+    if (pw) body.password = pw;
+    xhr("PATCH", "/api/admin/users/" + id, body, function () {
+      toast("User updated");
+      closeUserModal();
+      loadUsers();
+      loadStats();
+    }, function (m) { toast(m); });
+  }
+
+  function loadOrders() {
+    var st = ($("orderStatusFilter").value || "").trim();
+    var path = "/api/admin/orders" + (st ? ("?status=" + encodeURIComponent(st)) : "");
+    xhr("GET", path, null, function (data) {
+      var el = $("adminOrders");
+      var html = "";
+      (data.orders || []).forEach(function (o) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(o.order_code) + "</strong>" +
+          "<div class='meta'>" +
+          "<span class='badge " + esc(o.status || "") + "'>" + esc(o.status || "") + "</span> · " +
+          Math.round(o.total_bdt || 0) + " BDT · " + esc(o.user_name || "guest") +
+          " · " + esc([o.upazila, o.district].filter(Boolean).join(", ")) +
+          (o.user_phone ? (" · " + esc(o.user_phone)) : "") +
+          "</div></div>" +
+          "<div class='actions'>" +
+          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='confirmed'>Confirm</button>" +
+          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='processing'>Process</button>" +
+          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='shipped'>Ship</button>" +
+          "<button type='button' class='btn btn-primary btn-sm' data-code='" + esc(o.order_code) + "' data-st='delivered'>Deliver</button>" +
+          "<button type='button' class='btn btn-danger btn-sm' data-code='" + esc(o.order_code) + "' data-st='cancelled'>Cancel</button>" +
+          "</div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>No orders yet.</p>";
+      var btns = el.querySelectorAll("button[data-code]");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          var code = this.getAttribute("data-code");
+          var status = this.getAttribute("data-st");
+          xhr("PATCH", "/api/admin/orders/" + encodeURIComponent(code), {
+            status: status, message: "Updated by admin"
+          }, function () {
+            toast("Order " + code + " → " + status);
+            loadOrders();
+            loadStats();
+          }, function (m) { toast(m); });
+        };
+      }
+    }, function (m) {
+      $("adminOrders").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  function loadProducts() {
+    var q = ($("prodSearch").value || "").trim();
+    var path = "/api/admin/products?limit=120" + (q ? ("&search=" + encodeURIComponent(q)) : "");
+    xhr("GET", path, null, function (data) {
+      var el = $("adminProducts");
+      var html = "";
+      (data.products || []).forEach(function (p) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(p.name || "") + "</strong>" +
+          "<div class='meta'>" + esc(p.sku || "") + " · " + esc(p.category || "") +
+          (p.brand ? (" · " + esc(p.brand)) : "") + "</div></div>" +
+          "<div class='actions'>" +
+          "<input class='price-input' type='number' min='0' step='1' value='" + (p.price_bdt || 0) + "' data-id='" + p.id + "' />" +
+          "<span class='meta'>BDT</span>" +
+          "<button type='button' class='btn btn-primary btn-sm save-price' data-id='" + p.id + "'>Save</button>" +
+          "</div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>No products.</p>";
+      var btns = el.querySelectorAll(".save-price");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          var id = this.getAttribute("data-id");
+          var input = el.querySelector(".price-input[data-id='" + id + "']");
+          var price = parseFloat(input && input.value);
+          if (!(price >= 0)) { toast("Enter a valid price"); return; }
+          xhr("POST", "/api/admin/products/" + id + "/price?price_bdt=" + encodeURIComponent(price), null,
+            function () { toast("Price updated"); },
+            function (m) { toast(m); });
+        };
+      }
+    }, function (m) {
+      $("adminProducts").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  $("adminLoginBtn").onclick = login;
+  $("adminPass").onkeydown = function (e) { if (e.key === "Enter") login(); };
+  $("adminLogout").onclick = function () { setToken(""); showApp(false); };
+  $("userRefresh").onclick = loadUsers;
+  $("userSearch").onkeydown = function (e) { if (e.key === "Enter") loadUsers(); };
+  $("adminRefresh").onclick = loadOrders;
+  $("orderStatusFilter").onchange = loadOrders;
+  $("prodRefresh").onclick = loadProducts;
+  $("prodSearch").onkeydown = function (e) { if (e.key === "Enter") loadProducts(); };
+  $("adminStatsRefresh").onclick = loadStats;
+  $("userModalClose").onclick = closeUserModal;
+  $("userModal").onclick = function (e) { if (e.target === $("userModal")) closeUserModal(); };
+  $("userSaveBtn").onclick = saveUser;
+  $("userRevokeBtn").onclick = function () {
+    var id = $("editUserId").value;
+    if (!confirm("Revoke all active sessions for this user?")) return;
+    xhr("POST", "/api/admin/users/" + id + "/revoke-sessions", null, function (d) {
+      toast("Revoked " + (d.revoked || 0) + " session(s)");
+      openUserModal(parseInt(id, 10));
+      loadUsers();
+    }, function (m) { toast(m); });
+  };
+  $("userDeleteBtn").onclick = function () {
+    var id = $("editUserId").value;
+    if (!confirm("Permanently delete this user? This cannot be undone.")) return;
+    xhr("DELETE", "/api/admin/users/" + id, null, function () {
+      toast("User deleted");
+      closeUserModal();
+      loadUsers();
+      loadStats();
+    }, function (m) { toast(m); });
+  };
+  $("adminSeed").onclick = function () {
+    if (!confirm("Re-seed shop catalogue from the data pack?")) return;
+    xhr("POST", "/api/admin/seed", null, function () {
+      toast("Shop seeded");
+      loadStats();
+      loadProducts();
+    }, function (m) { toast(m); });
+  };
+  $("adminApplyImages").onclick = function () {
+    xhr("POST", "/api/admin/apply-images", null, function (d) {
+      toast("Images applied: " + (d.updated || 0));
+    }, function (m) { toast(m); });
+  };
+
+  var nav = document.querySelectorAll("#adminNav button");
+  for (var n = 0; n < nav.length; n++) {
+    nav[n].onclick = function () { setTab(this.getAttribute("data-tab")); };
+  }
+
+  var toggles = document.querySelectorAll(".password-toggle");
+  for (var i = 0; i < toggles.length; i++) {
+    toggles[i].onclick = function () {
+      var input = $(this.getAttribute("data-target"));
+      if (!input) return;
+      var show = input.type === "password";
+      input.type = show ? "text" : "password";
+      var a = this.querySelector(".pw-icon-show");
+      var b = this.querySelector(".pw-icon-hide");
+      if (a) a.className = show ? "pw-icon-show hidden" : "pw-icon-show";
+      if (b) b.className = show ? "pw-icon-hide" : "pw-icon-hide hidden";
+    };
+  }
+
+  if (token()) {
+    xhr("GET", "/api/admin/stats", null, function () {
+      showApp(true);
+      setTab("overview");
+    }, function () {
+      setToken("");
+      showApp(false);
+      $("adminPass").placeholder = DEFAULT_PASS;
+    });
+  } else {
+    $("adminPass").placeholder = DEFAULT_PASS;
+  }
+})();
+  </script>
+</body>
+</html>

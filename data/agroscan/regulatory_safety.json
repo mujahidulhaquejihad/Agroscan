@@ -1,0 +1,392 @@
+{
+  "meta": {
+    "section": "G",
+    "title": "Regulatory & safety reference for AgroScan (Bangladesh)",
+    "version": "1.0",
+    "generated": "2026-08-19",
+    "scope": "Farmer-facing legal and safety guidance for pesticide and fertiliser use in Bangladesh, plus ready-to-display warning box text for the app UI.",
+    "important_caveat_en": "This reference summarises publicly available information about Bangladeshi pesticide regulation as of August 2026. It is not legal advice. Pesticide registration status changes; the definitive source is the Plant Protection Wing (PPW), Department of Agricultural Extension, Khamarbari, Farmgate, Dhaka-1215. Verify the current registered list and any ban notifications with PPW before publishing product-level legal claims in the app.",
+    "important_caveat_bn": "এই তথ্য ২০২৬ সালের আগস্ট পর্যন্ত বাংলাদেশের বালাইনাশক নিয়ন্ত্রণ সম্পর্কে প্রকাশ্যে পাওয়া তথ্যের সারসংক্ষেপ। এটি আইনি পরামর্শ নয়। নিবন্ধনের অবস্থা বদলায়; চূড়ান্ত তথ্যের উৎস হলো উদ্ভিদ সংরক্ষণ উইং (পিপিডব্লিউ), কৃষি সম্প্রসারণ অধিদপ্তর, খামারবাড়ি, ফার্মগেট, ঢাকা-১২১৫। অ্যাপে কোনো পণ্যের আইনি অবস্থা প্রকাশের আগে পিপিডব্লিউ থেকে বর্তমান নিবন্ধিত তালিকা ও নিষেধাজ্ঞা যাচাই করে নিন।"
+  },
+  "topics": [
+    {
+      "topic": "pesticide_registration_bd",
+      "title_en": "How pesticides are approved in Bangladesh",
+      "title_bn": "বাংলাদেশে বালাইনাশক কীভাবে অনুমোদন পায়",
+      "content_en": "Every pesticide sold in Bangladesh must be registered with the Plant Protection Wing (PPW) of the Department of Agricultural Extension (DAE), under the Ministry of Agriculture. The governing law is the Pesticide Act 2018, which replaced and consolidated the earlier Pesticides Ordinance 1971, the Pesticide Rules 1985 (amended 2010), the Pesticides Ordinance 2007 and the Pesticides (Amendment) Act 2009.\n\nA company applies separately for registration of the product and for a licence to market it. The Pesticide Technical Advisory Committee (PTAC) and the Pesticide Technical Advisory Sub-Committee (PTASC) review applications; approved products receive an AP registration number, and PPW publishes a consolidated Registered Pesticides List. Approval typically takes around two years.\n\nWhat this means for you as a farmer: a legally sold pesticide comes in a sealed pack, has a printed label in Bangla, names the active ingredient and its percentage, states the registered crops and pests, gives the dose and the pre-harvest interval, and shows a registration number. If any of those are missing, the product may be unregistered, counterfeit or repacked. Buy only from a licensed dealer and keep the receipt.\n\nA very large number of formulated products are registered in Bangladesh — press reporting has put the figure at over 8,000 products registered with PPW. Many are the same active ingredient sold under different trade names, which is why AgroScan lists the ACTIVE INGREDIENT first: if the active ingredient and its percentage match, the product will do the same job whatever name is on the pack.",
+      "content_bn": "বাংলাদেশে বিক্রি হওয়া প্রতিটি বালাইনাশক কৃষি মন্ত্রণালয়ের অধীন কৃষি সম্প্রসারণ অধিদপ্তরের (ডিএই) উদ্ভিদ সংরক্ষণ উইং (পিপিডব্লিউ) থেকে নিবন্ধিত হতে হয়। প্রযোজ্য আইন পেস্টিসাইড আইন ২০১৮, যা আগের পেস্টিসাইড অধ্যাদেশ ১৯৭১, পেস্টিসাইড বিধিমালা ১৯৮৫ (২০১০ সালে সংশোধিত), পেস্টিসাইড অধ্যাদেশ ২০০৭ ও পেস্টিসাইড (সংশোধন) আইন ২০০৯ এর জায়গা নিয়েছে।\n\nকোম্পানিকে পণ্যের নিবন্ধন ও বিক্রির লাইসেন্সের জন্য আলাদা আলাদা আবেদন করতে হয়। পেস্টিসাইড টেকনিক্যাল অ্যাডভাইজরি কমিটি (পিটিএসি) ও উপকমিটি (পিটিএএসসি) আবেদন যাচাই করে; অনুমোদিত পণ্য একটি এপি নিবন্ধন নম্বর পায় এবং পিপিডব্লিউ নিবন্ধিত বালাইনাশকের তালিকা প্রকাশ করে। অনুমোদন পেতে সাধারণত দুই বছরের মতো লাগে।\n\nকৃষক হিসেবে আপনার জন্য এর মানে: বৈধ বালাইনাশক আসে সিলগালা প্যাকেটে, গায়ে বাংলায় ছাপা লেবেল থাকে, মূল উপাদান ও তার শতাংশ লেখা থাকে, কোন ফসলে কোন পোকা-রোগের জন্য নিবন্ধিত তা লেখা থাকে, মাত্রা ও ফসল তোলার নিরাপদ সময় লেখা থাকে, আর নিবন্ধন নম্বর থাকে। এর কোনোটি না থাকলে পণ্যটি অনিবন্ধিত, নকল বা অন্য প্যাকেট থেকে ভরা হতে পারে। শুধু লাইসেন্সধারী দোকান থেকে কিনুন এবং রসিদ রাখুন।\n\nবাংলাদেশে বিপুল সংখ্যক পণ্য নিবন্ধিত — সংবাদমাধ্যমের হিসাব অনুযায়ী পিপিডব্লিউ-তে ৮,০০০ এর বেশি পণ্য নিবন্ধিত। এর অনেকগুলোই আসলে একই উপাদান, শুধু নাম আলাদা। এজন্যই অ্যাগ্রোস্ক্যান আগে মূল উপাদানের নাম দেখায়: উপাদান ও তার শতাংশ মিলে গেলে প্যাকেটে যে নামই থাকুক, কাজ একই হবে।",
+      "warning_level": "medium",
+      "source": "Pesticide Act 2018 (bdlaws.minlaw.gov.bd); Bangladesh SPS Information Management System, Plant Protection page (sps.apaari.org/index.php/plant-protection/); USDA FAS GAIN, Food and Agricultural Import Regulations and Standards Report, Bangladesh; DAE Plant Protection Wing Registered Pesticides List (dae.portal.gov.bd); The Daily Star, '17 highly harmful pesticides widely used across country'",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "The 8,000+ registered products figure comes from press reporting citing PPW, not from a PPW publication directly."
+    },
+    {
+      "topic": "banned_restricted_pesticides",
+      "title_en": "Banned and restricted pesticides in Bangladesh",
+      "title_bn": "বাংলাদেশে নিষিদ্ধ ও নিয়ন্ত্রিত বালাইনাশক",
+      "content_en": "Bangladesh has withdrawn or banned a number of pesticide active ingredients since the 1960s; press reporting citing DAE puts the figure at 19 active ingredients banned over that period. PPW also publishes a list of CANCELLED pesticide registrations alongside its registered list.\n\nSeparately from formal bans, a national review has identified 17 Highly Hazardous Pesticides (HHPs) that remain registered and are in wide or moderate use in Bangladesh. Widely used HHPs identified were: paraquat, glyphosate, chlorpyrifos, abamectin, acetochlor, glufosinate ammonium, zinc phosphide, bromadiolone, carbendazim and propiconazole. Moderately or infrequently used HHPs identified were: cadusafos, thiacloprid, spirodiclofen, dimethomorph, beta-cyfluthrin, cyproconazole and edifenphos. Eight further HHPs are registered but were not found in the market: ethoprophos, cyfluthrin, triazophos, methyl bromide, trichlorfon, diuron, epoxiconazole and flusilazole.\n\nParaquat deserves particular attention. It is banned in more than 40 countries including all 27 EU member states, and remains in use in Bangladesh. It is extremely toxic if swallowed and there is no effective antidote — a small mouthful can be fatal, and it is a common agent in poisoning cases. If you use it at all, store it locked away from children and never decant it into a drinks bottle.\n\nIn January 2020 the Bangladesh Environmental Lawyers Association petitioned the High Court, which ordered the government to formulate an action plan within 90 days to phase out harmful pesticides. FAO has been supporting Bangladesh in strengthening its pesticide regulations.\n\nWHAT TO DO: Before you buy, check that the product's active ingredient appears on the current PPW Registered Pesticides List and does not appear on the cancelled list. If a dealer offers you a product with no Bangla label, no registration number, or in a repacked container, do not buy it and report it to your Upazila Agriculture Office.",
+      "content_bn": "১৯৬০-এর দশক থেকে বাংলাদেশে বেশ কিছু বালাইনাশক উপাদান নিষিদ্ধ বা প্রত্যাহার করা হয়েছে; ডিএই-র বরাত দিয়ে সংবাদমাধ্যমের হিসাবে এই সময়ে ১৯টি উপাদান নিষিদ্ধ হয়েছে। পিপিডব্লিউ নিবন্ধিত তালিকার পাশাপাশি বাতিল নিবন্ধনের তালিকাও প্রকাশ করে।\n\nআনুষ্ঠানিক নিষেধাজ্ঞার বাইরেও একটি জাতীয় পর্যালোচনায় ১৭টি অতি ঝুঁকিপূর্ণ বালাইনাশক (এইচএইচপি) চিহ্নিত হয়েছে যেগুলো এখনো নিবন্ধিত এবং বাংলাদেশে ব্যাপক বা মাঝারি হারে ব্যবহৃত হয়। ব্যাপকভাবে ব্যবহৃত: প্যারাকোয়াট, গ্লাইফোসেট, ক্লোরপাইরিফস, অ্যাবামেকটিন, অ্যাসিটোক্লোর, গ্লুফোসিনেট অ্যামোনিয়াম, জিংক ফসফাইড, ব্রোমাডিওলন, কার্বেন্ডাজিম ও প্রোপিকোনাজল। মাঝারি বা কম ব্যবহৃত: ক্যাডুসাফস, থায়াক্লোপ্রিড, স্পাইরোডাইক্লোফেন, ডাইমেথোমরফ, বিটা-সাইফ্লুথ্রিন, সাইপ্রোকোনাজল ও এডিফেনফস। আরও ৮টি নিবন্ধিত কিন্তু বাজারে পাওয়া যায়নি: ইথোপ্রোফস, সাইফ্লুথ্রিন, ট্রায়াজোফস, মিথাইল ব্রোমাইড, ট্রাইক্লোরফন, ডাইইউরন, ইপোক্সিকোনাজল ও ফ্লুসিলাজল।\n\nপ্যারাকোয়াট নিয়ে বিশেষভাবে সতর্ক থাকুন। ইউরোপীয় ইউনিয়নের ২৭টি দেশসহ ৪০টির বেশি দেশে এটি নিষিদ্ধ, অথচ বাংলাদেশে ব্যবহার হয়। খেয়ে ফেললে এটি মারাত্মক বিষাক্ত এবং এর কার্যকর কোনো প্রতিষেধক নেই — এক ঢোক খেলেই মৃত্যু হতে পারে, বিষপানের ঘটনায় এটি প্রায়ই ব্যবহৃত হয়। ব্যবহার করলে শিশুদের নাগালের বাইরে তালাবদ্ধ রাখুন এবং কখনোই পানীয়ের বোতলে ঢালবেন না।\n\n২০২০ সালের জানুয়ারিতে বাংলাদেশ এনভায়রনমেন্টাল লইয়ার্স অ্যাসোসিয়েশনের রিটের প্রেক্ষিতে হাইকোর্ট ৯০ দিনের মধ্যে ক্ষতিকর বালাইনাশক পর্যায়ক্রমে বন্ধের কর্মপরিকল্পনা তৈরির নির্দেশ দেয়। এফএও বাংলাদেশকে বালাইনাশক বিধিবিধান শক্তিশালী করতে সহায়তা করছে।\n\nকী করবেন: কেনার আগে দেখে নিন পণ্যের মূল উপাদানটি পিপিডব্লিউ-র বর্তমান নিবন্ধিত তালিকায় আছে কিনা এবং বাতিল তালিকায় নেই তো। কোনো দোকানদার বাংলা লেবেলবিহীন, নিবন্ধন নম্বরবিহীন বা অন্য পাত্রে ভরা ওষুধ দিলে কিনবেন না, উপজেলা কৃষি অফিসে জানান।",
+      "warning_level": "high",
+      "banned_or_restricted_reference": {
+        "note_en": "AgroScan does NOT publish a definitive banned list, because PPW's ban notifications are issued as office orders and change over time. The lists below are HAZARD FLAGS drawn from a published national HHP review, not a legal ban list. Products containing these actives may still be legally registered in Bangladesh.",
+        "note_bn": "অ্যাগ্রোস্ক্যান চূড়ান্ত নিষিদ্ধ তালিকা প্রকাশ করে না, কারণ পিপিডব্লিউ-র নিষেধাজ্ঞা অফিস আদেশে জারি হয় এবং সময়ে সময়ে বদলায়। নিচের তালিকা প্রকাশিত জাতীয় এইচএইচপি পর্যালোচনা থেকে নেওয়া ঝুঁকির সংকেত, আইনি নিষেধাজ্ঞার তালিকা নয়। এসব উপাদানের পণ্য বাংলাদেশে এখনো বৈধভাবে নিবন্ধিত থাকতে পারে।",
+        "hhp_widely_used": [
+          "Paraquat",
+          "Glyphosate",
+          "Chlorpyrifos",
+          "Abamectin",
+          "Acetochlor",
+          "Glufosinate ammonium",
+          "Zinc phosphide",
+          "Bromadiolone",
+          "Carbendazim",
+          "Propiconazole"
+        ],
+        "hhp_moderately_used": [
+          "Cadusafos",
+          "Thiacloprid",
+          "Spirodiclofen",
+          "Dimethomorph",
+          "Beta-cyfluthrin",
+          "Cyproconazole",
+          "Edifenphos"
+        ],
+        "hhp_registered_not_found_in_market": [
+          "Ethoprophos",
+          "Cyfluthrin",
+          "Triazophos",
+          "Methyl bromide",
+          "Trichlorfon",
+          "Diuron",
+          "Epoxiconazole",
+          "Flusilazole"
+        ],
+        "app_behaviour_recommendation": "When a recommended product's active ingredient appears in hhp_widely_used or hhp_moderately_used, the app should display an amber caution chip reading 'Highly hazardous pesticide — use only if necessary, at label dose, with full protective equipment' and should surface any lower-risk alternative in the same treatment card first."
+      },
+      "source": "The Daily Star, '17 highly harmful pesticides widely used across country' (thedailystar.net/news/bangladesh/news/17-highly-harmful-pesticides-widely-used-across-country-4043486); New Age, 'Pesticide: banned, but sold' and 'Hazardous pesticides in wide use in Bangladesh'; DAE Plant Protection Wing 'List of Cancelled Pesticides' (file-dhaka.portal.gov.bd); FAO/UN Bangladesh, 'FAO supports Bangladesh in strengthening Pesticide Regulations'",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "medium",
+      "notes": "The specific 19-banned-ingredient list was NOT obtainable in verified form; the names are not published in the sources reviewed. The dev team must obtain the current cancelled/banned list directly from PPW before the app makes any 'this product is banned' claim. Deliberately flagged rather than guessed."
+    },
+    {
+      "topic": "phi_general",
+      "title_en": "Pre-Harvest Interval (PHI) — the safe waiting time before harvest",
+      "title_bn": "ফসল তোলার নিরাপদ সময় (পিএইচআই)",
+      "content_en": "The pre-harvest interval, or PHI, is the minimum number of days you must wait between the last pesticide spray and harvesting the crop. It is printed on every registered pesticide label. It is not a suggestion — it is the time the chemical needs to break down to a level that is safe to eat.\n\nWhy it matters in Bangladesh: our highest-value crops are also the ones picked most often. Brinjal, chilli, cucumber, tomato and beans are harvested every 2-5 days. If you spray on Monday and pick on Wednesday, the residue goes straight to the consumer. This is why brinjal and chilli have a poor reputation for residues in Bangladeshi markets, and it is a reputational problem for every farmer, not just the one who did it.\n\nHOW TO MANAGE PHI ON A FREQUENTLY PICKED CROP:\n1. Spray immediately AFTER a picking round, never before one.\n2. Choose products with a short PHI for crops you pick often (sulphur has a 3-day PHI; some systemics have 14-21 days).\n3. Mark the spray date on a stick at the edge of the field or in the AgroScan app so you do not forget.\n4. If the market price spikes and you are tempted to pick early — do not. Sell the following week instead.\n\nMaximum Residue Limits for food sold in Bangladesh are set in the Food Safety (Contaminants, Toxins and Harmful Residues) Regulations 2017, which follow Codex Alimentarius standards. Produce that exceeds these limits is not legally saleable.",
+      "content_bn": "পিএইচআই মানে শেষবার ওষুধ স্প্রে করার পর ফসল তোলার আগে যত দিন অপেক্ষা করতেই হবে। নিবন্ধিত প্রতিটি ওষুধের লেবেলে এটি লেখা থাকে। এটি পরামর্শ নয় — খাওয়ার উপযোগী মাত্রায় নামতে ওষুধের যত সময় লাগে সেটাই এই সময়।\n\nবাংলাদেশে এটা কেন জরুরি: আমাদের সবচেয়ে দামি ফসলগুলোই সবচেয়ে ঘন ঘন তোলা হয়। বেগুন, মরিচ, শসা, টমেটো ও শিম ২-৫ দিন পর পর তোলা হয়। সোমবার স্প্রে করে বুধবার তুললে ওষুধ সরাসরি ক্রেতার পাতে যায়। এজন্যই বাংলাদেশের বাজারে বেগুন ও মরিচে অবশিষ্টাংশ নিয়ে দুর্নাম, আর এই দুর্নাম শুধু একজনের নয়, সব কৃষকের।\n\nঘন ঘন তোলা ফসলে পিএইচআই কীভাবে সামলাবেন:\n১. ফল তোলার রাউন্ড শেষ হওয়ার সাথে সাথে স্প্রে করুন, তোলার আগে কখনো নয়।\n২. যে ফসল ঘন ঘন তোলেন তাতে কম পিএইচআই-এর ওষুধ বাছুন (সালফারের পিএইচআই ৩ দিন; কিছু সিস্টেমিক ওষুধের ১৪-২১ দিন)।\n৩. স্প্রের তারিখ জমির কিনারায় একটা লাঠিতে লিখে রাখুন বা অ্যাগ্রোস্ক্যান অ্যাপে লিখে রাখুন, যাতে ভুলে না যান।\n৪. হঠাৎ দাম বেড়ে গেলে আগেভাগে তোলার লোভ হবে — করবেন না। পরের সপ্তাহে বিক্রি করুন।\n\nবাংলাদেশে বিক্রি হওয়া খাদ্যে অবশিষ্টাংশের সর্বোচ্চ সীমা নির্ধারিত আছে খাদ্য নিরাপত্তা (দূষক, বিষক্রিয়া ও ক্ষতিকর অবশিষ্টাংশ) বিধিমালা ২০১৭-তে, যা কোডেক্স অ্যালিমেন্টারিয়াস মান অনুসরণ করে। এই সীমার বেশি অবশিষ্টাংশ থাকলে সেই ফসল আইনত বিক্রয়যোগ্য নয়।",
+      "warning_level": "high",
+      "source": "Food Safety (Contaminants, Toxins and Harmful Residues) Regulations 2017, Bangladesh Food Safety Authority; USDA FAS GAIN, Food and Agricultural Import Regulations and Standards Report, Bangladesh (MRL framework); pesticide label PHI values",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "PHI values in AgroScan's disease records are typical label values for the active ingredient and formulation. The app should always tell the farmer to check the physical label, because PHI varies by product and crop."
+    },
+    {
+      "topic": "ppe_requirements",
+      "title_en": "Protective equipment when spraying",
+      "title_bn": "স্প্রে করার সময় সুরক্ষা সরঞ্জাম",
+      "content_en": "Most pesticide exposure in Bangladesh happens through the skin, not the lungs — through hands while mixing, through wet clothes sticking to the back and legs, and through spray drifting back onto the face. Wear, every single time:\n\n• GLOVES — nitrile or thick rubber, not cloth. Cloth gloves soak up chemical and hold it against your skin, which is worse than no gloves.\n• MASK — a cartridge respirator if you can afford one. A cloth or surgical mask does very little against vapour, but it is better than nothing against powder.\n• GOGGLES — essential when spraying upward into a tree, a trellis or a polytunnel.\n• FULL-SLEEVE SHIRT AND LONG TROUSERS — cover all skin. A plastic apron or raincoat over the top when spraying tall crops.\n• BOOTS OR CLOSED SHOES — never spray barefoot or in sandals.\n• HAT — when spraying trees or tall crops.\n\nRULES THAT MATTER AS MUCH AS THE EQUIPMENT:\n• Mix outdoors, upwind, never with bare hands. Use a stick or a measuring cup, never your fingers.\n• Never blow into a blocked nozzle with your mouth. Use water and a soft brush.\n• Spray with the wind BEHIND you, walking backwards out of the treated area.\n• Do not eat, drink, chew paan or smoke while spraying, and wash your hands before you do any of these.\n• Spray in the early morning or late afternoon, not in the midday heat — heat makes you sweat, and sweaty skin absorbs more chemical.\n• Stop if you feel dizzy, sick, get a headache or your skin tingles. These are early poisoning signs.\n• Wash your whole body with soap immediately afterwards, and wash spray clothes SEPARATELY from the family's clothes.\n• Do not let children or pregnant women mix, spray, or enter a sprayed field for at least 24 hours.\n\nSTORAGE:\n• Keep pesticides locked, in their ORIGINAL container with the label attached.\n• NEVER put pesticide in a drinks bottle, a water jug or a food container. This is the single most common cause of accidental child poisoning in rural Bangladesh.\n• Store away from food, animal feed, drinking water and sleeping areas.\n• Do not reuse empty pesticide containers for anything. Rinse three times, puncture them, and bury them away from water sources.",
+      "content_bn": "বাংলাদেশে বেশিরভাগ ক্ষেত্রে ওষুধ শরীরে ঢোকে চামড়া দিয়ে, শ্বাস দিয়ে নয় — মেশানোর সময় হাত দিয়ে, ভেজা কাপড় পিঠ ও পায়ে লেগে, আর স্প্রে উড়ে মুখে এসে। প্রতিবার অবশ্যই পরুন:\n\n• হাতমোজা — নাইট্রিল বা মোটা রাবারের, কাপড়ের নয়। কাপড়ের মোজা ওষুধ শুষে নিয়ে চামড়ার সাথে চেপে ধরে রাখে, যা মোজা না পরার চেয়েও খারাপ।\n• মাস্ক — সামর্থ্য থাকলে কার্তুজওয়ালা রেসপিরেটর। কাপড়ের বা সার্জিক্যাল মাস্ক বাষ্প ঠেকায় না, তবে গুঁড়ার বিরুদ্ধে কিছু না থাকার চেয়ে ভালো।\n• চশমা — গাছ, মাচা বা পলিটানেলে উপরের দিকে স্প্রে করলে অপরিহার্য।\n• ফুলহাতা জামা ও ফুলপ্যান্ট — সব চামড়া ঢেকে রাখুন। লম্বা ফসলে স্প্রের সময় উপরে প্লাস্টিকের এপ্রন বা রেইনকোট।\n• জুতা বা বুট — খালি পায়ে বা স্যান্ডেলে কখনো স্প্রে নয়।\n• টুপি — গাছ বা লম্বা ফসলে স্প্রের সময়।\n\nসরঞ্জামের মতোই জরুরি যেসব নিয়ম:\n• খোলা জায়গায়, বাতাস পিছনে রেখে মেশান, খালি হাতে কখনো নয়। লাঠি বা মাপার কাপ ব্যবহার করুন, আঙুল নয়।\n• নজেল বন্ধ হলে মুখ দিয়ে ফুঁ দেবেন না। পানি ও নরম ব্রাশ দিয়ে পরিষ্কার করুন।\n• বাতাস পিছনে রেখে স্প্রে করুন, স্প্রে করা জায়গা থেকে পিছিয়ে আসতে আসতে।\n• স্প্রের সময় খাওয়া, পান করা, পান খাওয়া বা ধূমপান নয়; এসবের আগে হাত ধুয়ে নিন।\n• দুপুরের গরমে নয়, খুব সকালে বা বিকেলে স্প্রে করুন — গরমে ঘাম হয়, আর ঘামা চামড়া বেশি ওষুধ শুষে নেয়।\n• মাথা ঘোরা, বমি ভাব, মাথাব্যথা বা চামড়ায় ঝিনঝিন লাগলে থামুন। এগুলো বিষক্রিয়ার প্রথম লক্ষণ।\n• সাথে সাথে সাবান দিয়ে পুরো শরীর ধুয়ে ফেলুন, আর স্প্রের কাপড় পরিবারের কাপড় থেকে আলাদা করে ধুয়ে ফেলুন।\n• শিশু ও গর্ভবতী নারীদের দিয়ে ওষুধ মেশাবেন বা স্প্রে করাবেন না, এবং স্প্রে করা জমিতে অন্তত ২৪ ঘণ্টা তাদের ঢুকতে দেবেন না।\n\nসংরক্ষণ:\n• ওষুধ তালাবদ্ধ রাখুন, লেবেলসহ আসল পাত্রেই রাখুন।\n• কখনোই পানীয়ের বোতল, পানির জগ বা খাবারের পাত্রে ওষুধ রাখবেন না। গ্রামবাংলায় শিশুদের দুর্ঘটনাজনিত বিষক্রিয়ার সবচেয়ে বড় কারণ এটাই।\n• খাবার, গোখাদ্য, খাওয়ার পানি ও শোয়ার জায়গা থেকে দূরে রাখুন।\n• খালি কৌটা কোনো কাজে আর ব্যবহার করবেন না। তিনবার ধুয়ে, ফুটো করে, পানির উৎস থেকে দূরে পুঁতে ফেলুন।",
+      "warning_level": "high",
+      "source": "FAO/WHO International Code of Conduct on Pesticide Management; DAE extension safety guidance; standard occupational pesticide safety practice adapted to Bangladeshi field conditions",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "The 'never put pesticide in a drinks bottle' and 'cloth gloves are worse than none' points are included because they address the two most common real-world failure modes in rural Bangladesh."
+    },
+    {
+      "topic": "fertilizer_limits",
+      "title_en": "Fertiliser: use the recommended dose, not more",
+      "title_bn": "সার: সুপারিশকৃত মাত্রাতেই দিন, বেশি নয়",
+      "content_en": "Bangladesh's official fertiliser recommendations come from the BARC Fertilizer Recommendation Guide (FRG) 2018, which sets crop-by-crop doses of urea, TSP, MoP, gypsum, zinc sulphate and boric acid according to your soil's fertility level and Agro-Ecological Zone. Your Upazila Agriculture Office can arrange a soil test and give you the dose for your specific field.\n\nGovernment-fixed farmer-level prices (FY 2025-26) are: urea Tk 27/kg, TSP Tk 27/kg, DAP Tk 20/kg and MoP Tk 21/kg. In practice farmers often pay Tk 3-8/kg above these rates because of the length of the dealer chain — a January 2025 report found farmers paying Tk 30-31 for urea and Tk 35 for TSP. If a dealer charges far above the fixed rate, you can report it to your Upazila Agriculture Office.\n\nWHY OVER-APPLYING UREA COSTS YOU MONEY TWICE:\n1. You pay for fertiliser you do not need.\n2. Excess nitrogen makes several diseases dramatically worse — rice blast, bacterial leaf blight, sheath blight, late blight in potato and tomato, and brinjal shoot borer all get worse with heavy urea. So you then pay again for pesticide.\n\nBangladesh's national fertiliser use is heavily skewed towards urea: FY2024/25 consumption was about 2.6 million MT urea against 0.765 million MT TSP and 1.01 million MT MoP. Most Bangladeshi soils are short of potassium, sulphur, zinc and boron, not nitrogen. Applying the full potash dose is usually the highest-return change a farmer can make.\n\nENVIRONMENTAL LIMITS:\n• Do not apply urea to a flooded field just before heavy rain — it washes into canals and ponds and causes algal blooms that kill fish.\n• Do not store fertiliser next to a pond or a drinking-water tubewell.\n• Split nitrogen applications instead of one heavy dose: this improves uptake, reduces loss and reduces disease.\n• Apply organic manure — well-rotted cowdung or compost — to rebuild organic matter. Most intensively cropped Bangladeshi soils are below 1.5% organic matter.",
+      "content_bn": "বাংলাদেশের সরকারি সার সুপারিশ আসে বিএআরসি ফার্টিলাইজার রেকমেন্ডেশন গাইড (এফআরজি) ২০১৮ থেকে, যেখানে মাটির উর্বরতা ও কৃষি-পরিবেশ অঞ্চল অনুযায়ী প্রতিটি ফসলের জন্য ইউরিয়া, টিএসপি, এমওপি, জিপসাম, জিংক সালফেট ও বোরিক অ্যাসিডের মাত্রা দেওয়া আছে। উপজেলা কৃষি অফিস থেকে মাটি পরীক্ষা করিয়ে নিজের জমির জন্য নির্দিষ্ট মাত্রা জেনে নিতে পারেন।\n\nসরকার নির্ধারিত কৃষক পর্যায়ের দাম (২০২৫-২৬ অর্থবছর): ইউরিয়া ২৭ টাকা/কেজি, টিএসপি ২৭ টাকা/কেজি, ডিএপি ২০ টাকা/কেজি ও এমওপি ২১ টাকা/কেজি। বাস্তবে ডিলার চেইন লম্বা হওয়ায় কৃষকরা প্রায়ই ৩-৮ টাকা বেশি দেন — ২০২৫ সালের জানুয়ারির এক প্রতিবেদনে দেখা যায় কৃষকরা ইউরিয়া ৩০-৩১ টাকা ও টিএসপি ৩৫ টাকায় কিনছেন। নির্ধারিত দামের চেয়ে অনেক বেশি নিলে উপজেলা কৃষি অফিসে অভিযোগ করতে পারেন।\n\nবেশি ইউরিয়া দিলে দুইবার লোকসান কেন:\n১. যে সার দরকার নেই তার টাকা গেল।\n২. বেশি নাইট্রোজেনে অনেক রোগ ভয়ানকভাবে বেড়ে যায় — ধানের ব্লাস্ট, পাতা পোড়া, খোলপোড়া, আলু-টমেটোর নাবি ধ্বসা, বেগুনের ডগা ছিদ্রকারী পোকা — সবই বেশি ইউরিয়ায় বাড়ে। ফলে আবার ওষুধের টাকাও যায়।\n\nদেশে সার ব্যবহারে ইউরিয়ার দিকেই ঝোঁক বেশি: ২০২৪/২৫ অর্থবছরে ব্যবহার হয়েছে প্রায় ২৬ লাখ টন ইউরিয়া, বিপরীতে টিএসপি ৭.৬৫ লাখ টন ও এমওপি ১০.১ লাখ টন। বাংলাদেশের বেশিরভাগ মাটিতে ঘাটতি নাইট্রোজেনের নয় — পটাশিয়াম, সালফার, জিংক ও বোরনের। পুরো পটাশ মাত্রা দেওয়াই সাধারণত একজন কৃষকের জন্য সবচেয়ে লাভজনক পরিবর্তন।\n\nপরিবেশগত সীমা:\n• ভারী বৃষ্টির ঠিক আগে ডুবন্ত জমিতে ইউরিয়া দেবেন না — তা খাল-পুকুরে গিয়ে শ্যাওলা বাড়ায়, মাছ মরে।\n• পুকুর বা খাওয়ার পানির টিউবওয়েলের পাশে সার রাখবেন না।\n• একবারে বেশি না দিয়ে ইউরিয়া কিস্তিতে দিন: এতে গাছ ভালো শোষণ করে, অপচয় কমে, রোগও কমে।\n• পচা গোবর বা কম্পোস্টের মতো জৈব সার দিন। বাংলাদেশের নিবিড় চাষের বেশিরভাগ মাটিতে জৈব পদার্থ ১.৫% এর নিচে।",
+      "warning_level": "medium",
+      "source": "BARC Fertilizer Recommendation Guide 2018 (barc.portal.gov.bd; moa.portal.gov.bd); USDA FAS GAIN, 'Fertilizer Situation in Bangladesh', BG2025-0017, 30 March 2026 (FY2025-26 farmer-level prices and FY2024/25 consumption); The Daily Star, 'Farmers forced to pay more than subsidised rates for fertiliser', 28 January 2025",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "Two sources report slightly different DAP/MoP figures (USDA FY2025-26: DAP 20, MoP 21; Daily Star Jan 2025: DAP 21, MoP 20). Both are shown to the dev team; use the USDA FY2025-26 figures as the more recent and verify with the Ministry of Agriculture before display."
+    },
+    {
+      "topic": "environmental_warnings",
+      "title_en": "Protecting bees, fish, livestock and drinking water",
+      "title_bn": "মৌমাছি, মাছ, গবাদিপশু ও খাওয়ার পানি রক্ষা",
+      "content_en": "BEES AND POLLINATORS\nMustard, mango, litchi, cucurbits, brinjal and beans all depend on bees and other insects for pollination. Without pollinators you get fewer and smaller fruits — spraying at the wrong moment costs you yield directly, not just the environment.\n• NEVER spray insecticide on a crop that is in full bloom during daylight hours.\n• Neonicotinoids (imidacloprid, thiamethoxam), abamectin, emamectin benzoate and pyrethroids are all highly toxic to bees.\n• If you must spray during flowering, do it after sunset or before sunrise when bees are not foraging.\n• Tell any beekeeper within about 2 km before you spray. Mustard fields in the Rabi season often have hives placed in or beside them.\n\nFISH AND PONDS\nMost of rural Bangladesh's protein comes from ponds and rice-field fish. Many pesticides are extremely toxic to fish at very low concentrations.\n• NEVER wash a sprayer, a mixing bucket or your spray clothes in a pond, canal, khal or irrigation channel. Wash them in a pit in the field, away from water.\n• Never dispose of leftover spray solution into water. Spray it out over a bare corner of the treated field instead.\n• Do not drain a freshly sprayed rice field directly into a fish pond. Wait at least 3-5 days.\n• Rice-fish farmers must check the label — many rice insecticides cannot be used at all in a rice-fish system.\n\nLIVESTOCK\n• Keep cattle, goats and poultry out of a sprayed field for at least 24 hours, and out of an orchard for at least 48 hours.\n• Do not cut sprayed green fodder (maize, rice straw, weeds from a sprayed field) for animals inside the PHI. Many fungicides used on maize and wheat carry a 30-day interval.\n• Do not let animals drink from a channel that drains a sprayed field.\n\nDRINKING WATER\n• Do not mix pesticides near a tubewell, well or pond used for drinking.\n• Do not store pesticides in a room where drinking water is kept.\n• If a container leaks near a water source, do not use that water. Report it to your Union Parishad or Upazila Agriculture Office.\n\nPOISONING EMERGENCY\nIf someone swallows pesticide, or shows dizziness, vomiting, excessive sweating, drooling, pinpoint pupils, muscle twitching or difficulty breathing after spraying:\n• Get them into fresh air, remove contaminated clothing, wash the skin with soap and water.\n• Do NOT make them vomit unless a doctor tells you to — with some pesticides vomiting causes more damage.\n• Take the PESTICIDE CONTAINER OR LABEL with you to the hospital. This is the single most useful thing you can do; treatment depends entirely on which chemical it was.\n• Call 999 for emergency services.\n• Paraquat poisoning is a medical emergency with no antidote — go to hospital immediately even if the person seems fine.",
+      "content_bn": "মৌমাছি ও পরাগবাহী পোকা\nসরিষা, আম, লিচু, কুমড়া জাতীয় ফসল, বেগুন ও শিম — সবগুলোরই পরাগায়নে মৌমাছি ও অন্যান্য পোকা লাগে। পরাগবাহী পোকা না থাকলে ফল কম ও ছোট হয় — ভুল সময়ে স্প্রে করলে শুধু পরিবেশ নয়, সরাসরি আপনার ফলনই কমে।\n• পুরো ফুল ফোটা অবস্থায় দিনের বেলা কখনো কীটনাশক স্প্রে করবেন না।\n• নিওনিকোটিনয়েড (ইমিডাক্লোপ্রিড, থায়ামেথোক্সাম), অ্যাবামেকটিন, ইমামেকটিন বেনজোয়েট ও পাইরেথ্রয়েড — সবই মৌমাছির জন্য মারাত্মক বিষাক্ত।\n• ফুল ফোটা অবস্থায় স্প্রে করতেই হলে সূর্যাস্তের পর বা সূর্যোদয়ের আগে করুন, তখন মৌমাছি চলাচল করে না।\n• আশপাশে ২ কিলোমিটারের মধ্যে মৌচাষি থাকলে স্প্রের আগে জানিয়ে দিন। রবি মৌসুমে সরিষার জমিতে বা পাশে প্রায়ই মৌবাক্স বসানো থাকে।\n\nমাছ ও পুকুর\nগ্রামবাংলার আমিষের বেশিরভাগ আসে পুকুর ও ধানের জমির মাছ থেকে। অনেক ওষুধ খুব সামান্য পরিমাণেই মাছের জন্য মারাত্মক বিষাক্ত।\n• পুকুর, খাল বা সেচ নালায় কখনো স্প্রেয়ার, মেশানোর বালতি বা স্প্রের কাপড় ধোবেন না। জমিতে গর্ত করে, পানি থেকে দূরে ধুয়ে ফেলুন।\n• বাড়তি মেশানো ওষুধ পানিতে ফেলবেন না। স্প্রে করা জমির ফাঁকা এক কোণায় ছিটিয়ে দিন।\n• সদ্য স্প্রে করা ধানের জমির পানি সরাসরি মাছের পুকুরে ছাড়বেন না। অন্তত ৩-৫ দিন অপেক্ষা করুন।\n• ধান-মাছ একসাথে চাষ করলে লেবেল দেখে নিন — ধানের অনেক কীটনাশক এই পদ্ধতিতে একদমই ব্যবহার করা যায় না।\n\nগবাদিপশু\n• স্প্রে করা জমিতে অন্তত ২৪ ঘণ্টা এবং বাগানে অন্তত ৪৮ ঘণ্টা গরু, ছাগল ও হাঁস-মুরগি ঢুকতে দেবেন না।\n• পিএইচআই-এর মধ্যে স্প্রে করা জমির কাঁচা ঘাস (ভুট্টা, ধানের খড়, আগাছা) পশুকে খাওয়াবেন না। ভুট্টা ও গমে ব্যবহৃত অনেক ছত্রাকনাশকের ব্যবধান ৩০ দিন।\n• স্প্রে করা জমির পানি যে নালায় যায় সেখান থেকে পশুকে পানি খেতে দেবেন না।\n\nখাওয়ার পানি\n• খাওয়ার টিউবওয়েল, কূপ বা পুকুরের কাছে ওষুধ মেশাবেন না।\n• যে ঘরে খাওয়ার পানি রাখা হয় সেখানে ওষুধ রাখবেন না।\n• পানির উৎসের কাছে কৌটা থেকে ওষুধ পড়ে গেলে ওই পানি ব্যবহার করবেন না। ইউনিয়ন পরিষদ বা উপজেলা কৃষি অফিসে জানান।\n\nবিষক্রিয়ায় জরুরি করণীয়\nকেউ ওষুধ খেয়ে ফেললে, অথবা স্প্রের পর মাথা ঘোরা, বমি, অতিরিক্ত ঘাম, মুখ দিয়ে লালা পড়া, চোখের মণি ছোট হয়ে যাওয়া, মাংসপেশি কাঁপা বা শ্বাসকষ্ট হলে:\n• খোলা বাতাসে নিয়ে যান, ওষুধ লাগা কাপড় খুলে ফেলুন, সাবান-পানি দিয়ে চামড়া ধুয়ে দিন।\n• ডাক্তার না বললে বমি করাবেন না — কিছু ওষুধে বমি করালে ক্ষতি আরও বাড়ে।\n• হাসপাতালে যাওয়ার সময় ওষুধের কৌটা বা লেবেলটা সাথে নিয়ে যান। এটাই সবচেয়ে কাজের কাজ; চিকিৎসা পুরোপুরি নির্ভর করে কোন ওষুধ ছিল তার উপর।\n• জরুরি সেবার জন্য ৯৯৯ নম্বরে ফোন করুন।\n• প্যারাকোয়াট খেয়ে ফেললে তা জরুরি অবস্থা এবং এর কোনো প্রতিষেধক নেই — রোগী ভালো মনে হলেও সাথে সাথে হাসপাতালে নিন।",
+      "warning_level": "high",
+      "source": "FAO/WHO International Code of Conduct on Pesticide Management; Bangladesh National Emergency Service 999; DAE extension safety guidance; The Daily Star reporting on paraquat toxicity in Bangladesh",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "The 'take the container to hospital' instruction is included because it materially changes clinical outcomes and is frequently omitted from farmer-facing material."
+    },
+    {
+      "topic": "helplines_and_portals",
+      "title_en": "Helplines and official portals",
+      "title_bn": "হেল্পলাইন ও সরকারি ওয়েবসাইট",
+      "content_en": "HELPLINES\n• 16123 — Krishi Call Center, Department of Agricultural Extension. Free agricultural advice from agriculture officers. Available for crop, pest, disease, fertiliser and cultivation questions. Operated under the Agriculture Information Service (AIS), Ministry of Agriculture.\n• 16358 — Department of Livestock Services helpline, for livestock and poultry problems.\n• 999 — National Emergency Service, for poisoning, medical and other emergencies.\n\nWHERE TO GO IN PERSON\n• Your Upazila Agriculture Office (উপজেলা কৃষি অফিস) — the Upazila Agriculture Officer and the Sub-Assistant Agriculture Officer (SAAO) for your block are the right first contact for a field problem, a soil test, or a dispute with a dealer.\n• Your Union Digital Centre for online government services.\n\nOFFICIAL PORTALS\n• dae.gov.bd — Department of Agricultural Extension\n• barc.gov.bd — Bangladesh Agricultural Research Council (source of the Fertilizer Recommendation Guide)\n• bari.gov.bd — Bangladesh Agricultural Research Institute (non-rice crops)\n• brri.gov.bd — Bangladesh Rice Research Institute\n• badc.gov.bd — Bangladesh Agricultural Development Corporation (seed, fertiliser, irrigation)\n• moa.gov.bd — Ministry of Agriculture\n• dam.gov.bd and market.dam.gov.bd — Department of Agricultural Marketing, including daily market prices\n• bbs.gov.bd — Bangladesh Bureau of Statistics (Yearbook of Agricultural Statistics)\n• bamis.gov.bd — Agro-meteorological information and advisories\n\nWHEN TO CALL 16123\nCall if: more than about 20-30% of your crop is affected; the problem is spreading despite two treatments; you cannot identify the crop or the problem; you suspect a quarantine-level disease such as wheat blast or citrus greening; a dealer sells you an unlabelled or repacked product; or you or someone else shows symptoms after spraying.",
+      "content_bn": "হেল্পলাইন\n• ১৬১২৩ — কৃষি কল সেন্টার, কৃষি সম্প্রসারণ অধিদপ্তর। কৃষি কর্মকর্তাদের কাছ থেকে বিনামূল্যে পরামর্শ। ফসল, পোকা, রোগ, সার ও চাষাবাদ সংক্রান্ত প্রশ্নের জন্য। কৃষি তথ্য সার্ভিস (এআইএস), কৃষি মন্ত্রণালয়ের অধীনে পরিচালিত।\n• ১৬৩৫৮ — প্রাণিসম্পদ অধিদপ্তরের হেল্পলাইন, গবাদিপশু ও হাঁস-মুরগির সমস্যার জন্য।\n• ৯৯৯ — জাতীয় জরুরি সেবা, বিষক্রিয়া, চিকিৎসা ও অন্যান্য জরুরি অবস্থার জন্য।\n\nসরাসরি কোথায় যাবেন\n• উপজেলা কৃষি অফিস — জমির সমস্যা, মাটি পরীক্ষা বা দোকানদারের সাথে ঝামেলার জন্য উপজেলা কৃষি অফিসার ও আপনার ব্লকের উপসহকারী কৃষি অফিসার (এসএএও) প্রথম যোগাযোগের জায়গা।\n• অনলাইন সরকারি সেবার জন্য ইউনিয়ন ডিজিটাল সেন্টার।\n\nসরকারি ওয়েবসাইট\n• dae.gov.bd — কৃষি সম্প্রসারণ অধিদপ্তর\n• barc.gov.bd — বাংলাদেশ কৃষি গবেষণা কাউন্সিল (সার সুপারিশ নির্দেশিকার উৎস)\n• bari.gov.bd — বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট (ধান ছাড়া অন্যান্য ফসল)\n• brri.gov.bd — বাংলাদেশ ধান গবেষণা ইনস্টিটিউট\n• badc.gov.bd — বাংলাদেশ কৃষি উন্নয়ন কর্পোরেশন (বীজ, সার, সেচ)\n• moa.gov.bd — কৃষি মন্ত্রণালয়\n• dam.gov.bd ও market.dam.gov.bd — কৃষি বিপণন অধিদপ্তর, দৈনিক বাজারদরসহ\n• bbs.gov.bd — বাংলাদেশ পরিসংখ্যান ব্যুরো (কৃষি পরিসংখ্যান বর্ষগ্রন্থ)\n• bamis.gov.bd — কৃষি আবহাওয়া তথ্য ও পরামর্শ\n\nকখন ১৬১২৩ নম্বরে ফোন করবেন\nফোন করুন যদি: ফসলের ২০-৩০% এর বেশি আক্রান্ত হয়; দুইবার চিকিৎসার পরও রোগ ছড়াতে থাকে; ফসল বা সমস্যা চিনতে না পারেন; গমের ব্লাস্ট বা সাইট্রাস গ্রিনিং-এর মতো কোয়ারেন্টাইন পর্যায়ের রোগ সন্দেহ হয়; দোকানদার লেবেলবিহীন বা অন্য প্যাকেটে ভরা ওষুধ দেয়; অথবা স্প্রের পর আপনার বা কারও শরীরে কোনো লক্ষণ দেখা দেয়।",
+      "warning_level": "low",
+      "source": "Krishi Call Center 16123, Agriculture Information Service, Ministry of Agriculture (sti-portal.fao.org/innovations/krishi-call-center-16123-bangladesh); Department of Livestock Services; Bangladesh National Emergency Service 999; official government portals",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "The 16123 number is well documented in FAO's STI Portal and in academic studies of farmer helpline use in Bangladesh. Verify 16358 and portal URLs before hard-coding, as government portal addresses occasionally change."
+    },
+    {
+      "topic": "counterfeit_and_adulterated_products",
+      "title_en": "Spotting fake and adulterated agro-inputs",
+      "title_bn": "নকল ও ভেজাল কৃষি উপকরণ চেনা",
+      "content_en": "Counterfeit and adulterated pesticides, fertilisers and seeds are a real problem in Bangladesh and are one of the main reasons a correct treatment 'does not work'. Before you buy:\n\nCHECK THE PACK\n• Is the seal intact and unbroken?\n• Is there a printed Bangla label firmly attached — not a sticker over another label?\n• Does it state the active ingredient AND its percentage (e.g. 'Mancozeb 80% WP')?\n• Is there a registration number, batch number, manufacturing date and expiry date?\n• Is the expiry date in the future?\n• Does the printing look sharp, or blurred and off-colour?\n\nREFUSE\n• Loose product weighed out from a big sack into a polythene bag.\n• Product in an unlabelled bottle or a repacked container.\n• A price far below the normal market price — genuine product has a floor cost.\n• Any product where the dealer cannot show you the label claim for your crop.\n\nALWAYS\n• Buy from a licensed dealer and ASK FOR A RECEIPT with the product name and batch number on it. Without a receipt you have no recourse.\n• Keep the empty container and the receipt until after harvest.\n\nIF IT FAILS\nIf a correctly applied product clearly did not work, take the container, the label and the receipt to your Upazila Agriculture Office. Adulteration can be tested and the dealer's licence is at stake. Reporting is what makes the system work — most farmers do not report, which is why adulteration persists.\n\nSEEDS\n• Buy certified seed from BADC, or from established companies with sealed and labelled packs.\n• A seed pack should show the variety name, germination percentage, purity, lot number and packing date.\n• Do not buy seed sold loose from a sack with no tag.",
+      "content_bn": "বাংলাদেশে নকল ও ভেজাল বালাইনাশক, সার ও বীজ একটি বাস্তব সমস্যা, আর সঠিক চিকিৎসা দেওয়ার পরও 'কাজ না হওয়ার' এটি অন্যতম প্রধান কারণ। কেনার আগে:\n\nপ্যাকেট দেখুন\n• সিল অক্ষত আছে তো, ভাঙা নয় তো?\n• বাংলায় ছাপা লেবেল শক্তভাবে লাগানো আছে তো — অন্য লেবেলের উপর স্টিকার লাগানো নয় তো?\n• মূল উপাদান এবং তার শতাংশ লেখা আছে তো (যেমন 'ম্যানকোজেব ৮০% ডব্লিউপি')?\n• নিবন্ধন নম্বর, ব্যাচ নম্বর, তৈরির তারিখ ও মেয়াদ উত্তীর্ণের তারিখ আছে তো?\n• মেয়াদের তারিখ কি সামনের দিকে?\n• ছাপা কি ঝকঝকে, নাকি ঝাপসা ও রং বেমানান?\n\nযা নেবেন না\n• বড় বস্তা থেকে মেপে পলিথিনে ভরে দেওয়া খোলা পণ্য।\n• লেবেলবিহীন বোতল বা অন্য পাত্রে ভরা পণ্য।\n• বাজারদরের চেয়ে অনেক কম দাম — আসল পণ্যের একটা সর্বনিম্ন খরচ আছে।\n• যে পণ্যের ক্ষেত্রে দোকানদার আপনার ফসলের জন্য লেবেলে কী লেখা আছে দেখাতে পারেন না।\n\nসবসময়\n• লাইসেন্সধারী দোকান থেকে কিনুন এবং পণ্যের নাম ও ব্যাচ নম্বরসহ রসিদ চেয়ে নিন। রসিদ না থাকলে পরে কিছু করার থাকে না।\n• ফসল ওঠার আগ পর্যন্ত খালি কৌটা ও রসিদ রেখে দিন।\n\nকাজ না হলে\nঠিকমতো প্রয়োগের পরও স্পষ্টভাবে কাজ না হলে কৌটা, লেবেল ও রসিদ নিয়ে উপজেলা কৃষি অফিসে যান। ভেজাল পরীক্ষা করা যায় এবং দোকানের লাইসেন্স ঝুঁকিতে পড়ে। অভিযোগ করলেই ব্যবস্থাটা কাজ করে — বেশিরভাগ কৃষক অভিযোগ করেন না বলেই ভেজাল টিকে আছে।\n\nবীজ\n• বিএডিসি বা প্রতিষ্ঠিত কোম্পানির সিলগালা ও লেবেলযুক্ত প্যাকেট থেকে সার্টিফাইড বীজ কিনুন।\n• বীজের প্যাকেটে জাতের নাম, অঙ্কুরোদগমের হার, বিশুদ্ধতা, লট নম্বর ও প্যাকিংয়ের তারিখ থাকা উচিত।\n• ট্যাগবিহীন বস্তা থেকে খোলা বীজ কিনবেন না।",
+      "warning_level": "high",
+      "source": "Pesticide Act 2018 labelling and licensing requirements; DAE extension guidance on input quality; New Age and Daily Star reporting on adulterated agro-inputs in Bangladesh",
+      "source_type": "official",
+      "last_verified": "2026-08-19",
+      "confidence": "medium",
+      "notes": "This topic was not in the original brief but is included because 'the medicine did not work' is one of the most common farmer complaints in Bangladesh and adulteration is a frequent cause. It also protects AgroScan's credibility when a correct recommendation fails."
+    },
+    {
+      "topic": "resistance_management",
+      "title_en": "Why the same medicine stops working — resistance",
+      "title_bn": "একই ওষুধে কেন আর কাজ হয় না — সহনশীলতা",
+      "content_en": "If a product worked last year and does not work this year, the most likely reason after adulteration is RESISTANCE. Pests and diseases that survive a spray pass on their survival to the next generation. Spray the same chemical group over and over and within a few seasons only the resistant ones are left.\n\nBangladesh already has serious resistance problems in brinjal shoot and fruit borer, whitefly, yellow mite, and in Phytophthora (late blight) against metalaxyl-type fungicides.\n\nHOW TO SLOW IT DOWN\n1. ROTATE BY CHEMICAL GROUP, not by brand name. Two products with different names may contain the same active ingredient — check the ingredient, not the name.\n2. Do not use a systemic fungicide more than 2-3 times in a season. Use contact protectants (mancozeb, copper, sulphur) as the backbone and save the systemics for when you actually need them.\n3. Never spray on a calendar when there is no pest present. Every unnecessary spray selects for resistance and kills the natural enemies that were working for you free of charge.\n4. Always use the FULL label dose. Half doses are the fastest way to breed resistant pests — the strong ones survive and the weak ones die.\n5. Use non-chemical methods (pheromone traps, roguing, deleafing, trellising, resistant varieties) so the chemicals do less of the work and last longer.\n6. Do not tank-mix two or three insecticides together. It does not work better and it burns through several chemical groups at once.\n\nIF A PRODUCT STOPS WORKING\nDo not increase the dose — that is both illegal and ineffective, and it puts residues on your produce. Switch to a completely different chemical group and call 16123 for advice on what to use.",
+      "content_bn": "গত বছর যে ওষুধে কাজ হয়েছিল এ বছর হচ্ছে না — ভেজালের পর এর সবচেয়ে সম্ভাব্য কারণ হলো সহনশীলতা। স্প্রের পরও যেসব পোকা বা জীবাণু বেঁচে যায়, তারা সেই বেঁচে থাকার ক্ষমতা পরের বংশে দিয়ে যায়। একই গ্রুপের ওষুধ বারবার দিলে কয়েক মৌসুমেই শুধু সহনশীলগুলোই টিকে থাকে।\n\nবাংলাদেশে ইতিমধ্যেই বেগুনের ডগা ও ফল ছিদ্রকারী পোকা, সাদা মাছি, হলুদ মাকড় এবং নাবি ধ্বসার জীবাণুর মেটালাক্সিল জাতীয় ওষুধের বিরুদ্ধে গুরুতর সহনশীলতা তৈরি হয়েছে।\n\nকীভাবে ধীর করবেন\n১. ব্র্যান্ডের নাম নয়, ওষুধের গ্রুপ পাল্টে পাল্টে দিন। দুটি ভিন্ন নামের পণ্যে একই উপাদান থাকতে পারে — নাম নয়, উপাদান দেখুন।\n২. মৌসুমে ২-৩ বারের বেশি সিস্টেমিক ছত্রাকনাশক দেবেন না। মূল ভিত্তি হিসেবে স্পর্শক প্রতিরোধক (ম্যানকোজেব, কপার, সালফার) ব্যবহার করুন, সিস্টেমিক রাখুন সত্যিই দরকার হলে দেওয়ার জন্য।\n৩. পোকা নেই অথচ ক্যালেন্ডার দেখে স্প্রে — কখনো নয়। প্রতিটি অপ্রয়োজনীয় স্প্রে সহনশীলতা বাড়ায় আর যেসব উপকারী পোকা বিনা পয়সায় কাজ করছিল তাদের মেরে ফেলে।\n৪. সবসময় লেবেলের পুরো মাত্রা দিন। অর্ধেক মাত্রা দেওয়াই সহনশীল পোকা তৈরির দ্রুততম উপায় — সবল পোকা বেঁচে যায়, দুর্বলগুলো মরে।\n৫. ওষুধ ছাড়া পদ্ধতি ব্যবহার করুন (ফেরোমন ফাঁদ, আক্রান্ত গাছ তুলে ফেলা, পাতা ছাঁটাই, মাচা, প্রতিরোধী জাত) — এতে ওষুধের উপর চাপ কমে ও ওষুধ বেশি দিন কাজ করে।\n৬. এক ট্যাংকে দুই-তিনটি কীটনাশক মেশাবেন না। এতে কাজ ভালো হয় না, বরং একসাথে কয়েকটা গ্রুপই নষ্ট হয়ে যায়।\n\nকোনো ওষুধে আর কাজ না হলে\nমাত্রা বাড়াবেন না — এটি বেআইনি, কাজেও দেয় না, আর ফসলে অবশিষ্টাংশ রেখে যায়। সম্পূর্ণ ভিন্ন গ্রুপের ওষুধে যান এবং কী দেবেন তা জানতে ১৬১২৩ নম্বরে ফোন করুন।",
+      "warning_level": "medium",
+      "source": "FRAC and IRAC resistance management principles; documented resistance in Leucinodes orbonalis in Bangladesh (researchgate 319322900); documented phenylamide resistance in Phytophthora infestans; Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook",
+      "source_type": "academic",
+      "last_verified": "2026-08-19",
+      "confidence": "high",
+      "notes": "Included because AgroScan recommends specific products; without resistance guidance the app risks accelerating exactly the problem it is trying to solve."
+    }
+  ],
+  "ui_warning_boxes": [
+    {
+      "id": "warn_generic_pesticide",
+      "trigger": "Shown on every treatment card that includes a chemical_treatments entry",
+      "level": "high",
+      "title_en": "Safety first",
+      "title_bn": "আগে নিরাপত্তা",
+      "body_en": "Wear gloves, mask, goggles and full-sleeve clothes. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind behind you. Wash with soap afterwards. Keep children, pregnant women and animals out of the field for 24 hours. Never wash the sprayer in a pond or canal.",
+      "body_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। খোলা জায়গায় মেশান, খালি হাতে কখনো নয়। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু, গর্ভবতী নারী ও গবাদিপশু জমি থেকে দূরে রাখুন। পুকুর বা খালে কখনো স্প্রেয়ার ধোবেন না।"
+    },
+    {
+      "id": "warn_phi",
+      "trigger": "Shown on every chemical_treatments entry, with {phi_days} substituted",
+      "level": "high",
+      "title_en": "Do not harvest for {phi_days} days",
+      "title_bn": "{phi_days} দিন ফসল তুলবেন না",
+      "body_en": "After your last spray, wait at least {phi_days} days before harvesting or picking. This is the law and it is what keeps your produce safe to eat and legal to sell. Note the spray date now so you do not forget.",
+      "body_bn": "শেষ স্প্রের পর ফসল তোলার আগে অন্তত {phi_days} দিন অপেক্ষা করুন। এটি আইন, আর এতেই আপনার ফসল খাওয়ার উপযোগী ও বিক্রির উপযোগী থাকে। এখনই স্প্রের তারিখটা লিখে রাখুন, নাহলে ভুলে যাবেন।"
+    },
+    {
+      "id": "warn_hhp",
+      "trigger": "Shown when the recommended active ingredient appears in the HHP lists in topic banned_restricted_pesticides",
+      "level": "high",
+      "title_en": "Highly hazardous pesticide",
+      "title_bn": "অতি ঝুঁকিপূর্ণ বালাইনাশক",
+      "body_en": "This active ingredient is on Bangladesh's list of highly hazardous pesticides in wide use. It is legally registered, but use it only when the problem genuinely justifies it, only at the label dose, and only with full protective equipment. Consider the non-chemical or lower-risk option shown above first.",
+      "body_bn": "এই উপাদানটি বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ বালাইনাশকের তালিকায় আছে। এটি আইনত নিবন্ধিত, তবে সত্যিই দরকার হলে তবেই, শুধু লেবেলের মাত্রায় এবং পূর্ণ সুরক্ষা সরঞ্জাম পরেই ব্যবহার করুন। আগে উপরে দেখানো ওষুধবিহীন বা কম ঝুঁকির বিকল্পটি বিবেচনা করুন।"
+    },
+    {
+      "id": "warn_bee_safety",
+      "trigger": "Shown when the recommended product is an insecticide or acaricide, or when the crop is in flower",
+      "level": "high",
+      "title_en": "Protect the bees — and your own yield",
+      "title_bn": "মৌমাছি বাঁচান — আপনার ফলনও বাঁচবে",
+      "body_en": "Do not spray during flowering in daylight hours. Bees pollinate your crop, so killing them costs you fruit directly. If you must spray while the crop is in flower, do it after sunset or before sunrise, and tell any beekeeper nearby.",
+      "body_bn": "ফুল ফোটা অবস্থায় দিনের বেলা স্প্রে করবেন না। মৌমাছিই আপনার ফসলের পরাগায়ন করে, তাই ওদের মারলে আপনার ফলই কমে। ফুল থাকা অবস্থায় স্প্রে করতেই হলে সূর্যাস্তের পর বা সূর্যোদয়ের আগে করুন, আর আশপাশে মৌচাষি থাকলে জানিয়ে দিন।"
+    },
+    {
+      "id": "warn_fish_safety",
+      "trigger": "Shown for all pesticide recommendations; emphasised in rice-fish and pond-adjacent areas",
+      "level": "high",
+      "title_en": "Keep it out of the water",
+      "title_bn": "পানিতে যেন না যায়",
+      "body_en": "Never wash the sprayer, the mixing bucket or your clothes in a pond, khal or irrigation channel. Never pour leftover spray into water. Do not drain a freshly sprayed rice field into a fish pond for at least 3-5 days. Many of these chemicals kill fish at very low doses.",
+      "body_bn": "পুকুর, খাল বা সেচ নালায় কখনো স্প্রেয়ার, বালতি বা কাপড় ধোবেন না। বাড়তি ওষুধ পানিতে ঢালবেন না। সদ্য স্প্রে করা ধানের জমির পানি অন্তত ৩-৫ দিন মাছের পুকুরে ছাড়বেন না। এসব ওষুধের অনেকগুলোই খুব সামান্য মাত্রাতেই মাছ মেরে ফেলে।"
+    },
+    {
+      "id": "warn_no_cure_virus",
+      "trigger": "Shown on all viral disease classes (tylcv, tomato_mosaic_virus, tungro, citrus_greening)",
+      "level": "high",
+      "title_en": "There is no medicine for this",
+      "title_bn": "এর কোনো ওষুধ নেই",
+      "body_en": "This is a virus (or an incurable bacterial disease). No spray anywhere in the world cures it, and any product sold to you as a cure is a waste of money. The plants already affected will not recover. What you can do is remove the affected plants and control the insect that carries the disease, so the healthy plants stay healthy.",
+      "body_bn": "এটি ভাইরাস (বা এমন ব্যাকটেরিয়ার রোগ যা সারে না)। পৃথিবীর কোথাও এমন কোনো স্প্রে নেই যা এটি সারায়; কেউ 'এর ওষুধ' বলে কিছু বিক্রি করলে তা টাকার অপচয়। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। আপনি যা করতে পারেন — আক্রান্ত গাছ তুলে ফেলুন আর যে পোকা রোগ ছড়ায় তা দমন করুন, তাহলে সুস্থ গাছগুলো সুস্থ থাকবে।"
+    },
+    {
+      "id": "warn_bacterial_not_fungal",
+      "trigger": "Shown on bacterial disease classes (bacterial_leaf_blight, bacterial_wilt, bacterial_spot)",
+      "level": "high",
+      "title_en": "A fungicide will not work here",
+      "title_bn": "এখানে ছত্রাকনাশকে কাজ হবে না",
+      "body_en": "This is a bacterial disease, not a fungal one. Ordinary fungicides do nothing against bacteria — spraying one wastes your money and delays the steps that actually help. Do not use antibiotics on crops either; that is not an approved practice and it makes germs harder to treat in people.",
+      "body_bn": "এটি ব্যাকটেরিয়ার রোগ, ছত্রাকের নয়। সাধারণ ছত্রাকনাশকে ব্যাকটেরিয়ার কিছুই হয় না — স্প্রে করলে টাকা নষ্ট হয় আর যে কাজগুলো সত্যিই দরকার সেগুলো পিছিয়ে যায়। ফসলে অ্যান্টিবায়োটিকও ব্যবহার করবেন না; এটি অনুমোদিত নয় এবং এতে মানুষের রোগের চিকিৎসাও কঠিন হয়ে পড়ে।"
+    },
+    {
+      "id": "warn_healthy_no_spray",
+      "trigger": "Shown on all healthy classes",
+      "level": "low",
+      "title_en": "No medicine needed",
+      "title_bn": "কোনো ওষুধ লাগবে না",
+      "body_en": "Your plant looks healthy. Do not spray anything. Spraying a healthy crop wastes money, kills the spiders and beneficial insects that protect your field for free, and can trigger a pest outbreak later.",
+      "body_bn": "আপনার গাছ সুস্থ দেখাচ্ছে। কিছুই স্প্রে করবেন না। সুস্থ ফসলে স্প্রে করলে টাকা নষ্ট হয়, যেসব মাকড়সা ও উপকারী পোকা বিনা পয়সায় আপনার জমি পাহারা দিচ্ছে তারা মরে যায়, আর পরে বরং পোকার আক্রমণ বেড়ে যেতে পারে।"
+    },
+    {
+      "id": "warn_low_confidence_crop",
+      "trigger": "Shown when the predicted class has bangladesh_relevance of not_grown, not_grown_commercially or rare_experimental",
+      "level": "medium",
+      "title_en": "This crop is not grown in Bangladesh — please check",
+      "title_bn": "এই ফসল বাংলাদেশে হয় না — একটু দেখে নিন",
+      "body_en": "The scan says this is a crop that is not commercially grown in Bangladesh, so the identification is probably wrong. Please take another photo of a single clear leaf in good light against a plain background, or tell us which crop this is. If you are unsure, call the Krishi Call Center on 16123.",
+      "body_bn": "স্ক্যান বলছে এটি এমন একটি ফসল যা বাংলাদেশে বাণিজ্যিকভাবে হয় না, তাই শনাক্তকরণ সম্ভবত ভুল। অনুগ্রহ করে সাদামাটা ব্যাকগ্রাউন্ডে ভালো আলোয় একটি পরিষ্কার পাতার আবার ছবি তুলুন, অথবা আমাদের বলুন এটি কোন ফসল। নিশ্চিত না হলে কৃষি কল সেন্টার ১৬১২৩ নম্বরে ফোন করুন।"
+    },
+    {
+      "id": "warn_poisoning_emergency",
+      "trigger": "Shown in the app's safety section and reachable from any treatment card",
+      "level": "high",
+      "title_en": "If someone is poisoned",
+      "title_bn": "কেউ বিষক্রিয়ায় আক্রান্ত হলে",
+      "body_en": "Move them to fresh air, remove contaminated clothes, wash the skin with soap and water. Do NOT make them vomit unless a doctor says so. TAKE THE PESTICIDE CONTAINER OR LABEL TO THE HOSPITAL — the treatment depends entirely on which chemical it was. Call 999. If it was paraquat, go to hospital immediately even if the person seems fine; there is no antidote.",
+      "body_bn": "খোলা বাতাসে নিয়ে যান, ওষুধ লাগা কাপড় খুলে ফেলুন, সাবান-পানি দিয়ে চামড়া ধুয়ে দিন। ডাক্তার না বললে বমি করাবেন না। ওষুধের কৌটা বা লেবেল হাসপাতালে নিয়ে যান — কোন ওষুধ ছিল তার উপরই চিকিৎসা নির্ভর করে। ৯৯৯ নম্বরে ফোন করুন। প্যারাকোয়াট হলে রোগী ভালো মনে হলেও সাথে সাথে হাসপাতালে নিন; এর কোনো প্রতিষেধক নেই।"
+    },
+    {
+      "id": "warn_fake_product",
+      "trigger": "Shown on the shop / product detail screen",
+      "level": "medium",
+      "title_en": "Check before you buy",
+      "title_bn": "কেনার আগে দেখে নিন",
+      "body_en": "Buy only sealed packs with a Bangla label showing the active ingredient and its percentage, a registration number, a batch number and an expiry date. Never buy loose or repacked pesticide. Always ask for a receipt — without one you cannot complain if the product turns out to be fake.",
+      "body_bn": "শুধু সিলগালা প্যাকেট কিনুন যাতে বাংলায় লেবেল আছে, মূল উপাদান ও তার শতাংশ, নিবন্ধন নম্বর, ব্যাচ নম্বর ও মেয়াদের তারিখ লেখা আছে। খোলা বা অন্য প্যাকেটে ভরা ওষুধ কখনো কিনবেন না। সবসময় রসিদ চেয়ে নিন — রসিদ না থাকলে পণ্য নকল বেরোলে অভিযোগ করা যাবে না।"
+    },
+    {
+      "id": "warn_price_indicative",
+      "trigger": "Shown on every product price in the shop and in the cart",
+      "level": "medium",
+      "title_en": "This price is only a guide",
+      "title_bn": "এই দাম শুধু ধারণার জন্য",
+      "body_en": "The shop's actual price may be different. The dealer will confirm the real price before your order is final. Do not treat the figure shown here as a fixed price, and do not pay in advance on the strength of it.",
+      "body_bn": "দোকানের আসল দাম আলাদা হতে পারে। অর্ডার চূড়ান্ত হওয়ার আগে দোকানদার আসল দাম জানিয়ে দেবেন। এখানে যে দাম দেখাচ্ছে তাকে নির্ধারিত দাম ভাববেন না, আর এই দাম দেখে আগাম টাকাও দেবেন না।"
+    },
+    {
+      "id": "warn_check_label",
+      "trigger": "Shown on every chemical_treatments entry, alongside warn_phi",
+      "level": "high",
+      "title_en": "Check the pack before you spray",
+      "title_bn": "স্প্রে করার আগে প্যাকেট দেখে নিন",
+      "body_en": "Always read the dose and the pre-harvest interval printed on the pack. The doses shown here are the rates used across Bangladesh, but the label on your own pack is the legal authority and may be different for your crop. If the label says something different, follow the label.",
+      "body_bn": "প্যাকেটের গায়ে লেখা মাত্রা ও ফসল তোলার নিরাপদ সময় সবসময় পড়ে নিন। এখানে যে মাত্রা দেওয়া আছে তা সারা বাংলাদেশে ব্যবহৃত মাত্রা, কিন্তু আইনগতভাবে আপনার নিজের প্যাকেটের লেবেলই চূড়ান্ত এবং আপনার ফসলের জন্য তা আলাদা হতে পারে। লেবেলে অন্য কিছু লেখা থাকলে লেবেল অনুযায়ী চলুন।"
+    },
+    {
+      "id": "warn_registration_unverified",
+      "trigger": "Shown wherever a product's registration_verified is false, IN PLACE OF an AP number",
+      "level": "medium",
+      "title_en": "Registration number not confirmed",
+      "title_bn": "নিবন্ধন নম্বর নিশ্চিত করা যায়নি",
+      "body_en": "We could not confirm this product's DAE registration number against the official list. The active ingredient is registered for use in Bangladesh, but check that the pack you buy has a registration number printed on it and a label in Bangla.",
+      "body_bn": "সরকারি তালিকার সাথে মিলিয়ে এই পণ্যের ডিএই নিবন্ধন নম্বর আমরা নিশ্চিত করতে পারিনি। এর মূল উপাদানটি বাংলাদেশে ব্যবহারের জন্য নিবন্ধিত, তবে আপনি যে প্যাকেট কিনছেন তাতে নিবন্ধন নম্বর ও বাংলা লেবেল আছে কিনা দেখে নিন।"
+    },
+    {
+      "id": "warn_find_licensed_dealer",
+      "trigger": "Shown on the supplier/shop screen while Section D contains no private dealers",
+      "level": "medium",
+      "title_en": "How to find a licensed dealer near you",
+      "title_bn": "কাছের লাইসেন্সধারী দোকান কীভাবে খুঁজবেন",
+      "body_en": "AgroScan does not list private shops yet. Go to your Upazila Agriculture Office and ask to see the licensed dealer register — it is a public list and they will show you. Buying from a licensed dealer is what gets you a receipt you can complain with later if the product turns out to be fake.",
+      "body_bn": "অ্যাগ্রোস্ক্যানে এখনো বেসরকারি দোকানের তালিকা নেই। উপজেলা কৃষি অফিসে গিয়ে লাইসেন্সধারী ডিলারের তালিকা দেখতে চান — এটি সবার জন্য উন্মুক্ত তালিকা, তারা দেখাবেন। লাইসেন্সধারী দোকান থেকে কিনলেই এমন রসিদ পাবেন, যা দিয়ে পণ্য নকল বেরোলে পরে অভিযোগ করা যায়।"
+    }
+  ],
+  "helplines": [
+    {
+      "number": "16123",
+      "name_en": "Krishi Call Center (Department of Agricultural Extension)",
+      "name_bn": "কৃষি কল সেন্টার (কৃষি সম্প্রসারণ অধিদপ্তর)",
+      "purpose_en": "Free crop, pest, disease and fertiliser advice from agriculture officers",
+      "purpose_bn": "কৃষি কর্মকর্তাদের কাছ থেকে ফসল, পোকা, রোগ ও সার বিষয়ে বিনামূল্যে পরামর্শ",
+      "confidence": "high"
+    },
+    {
+      "number": "16358",
+      "name_en": "Department of Livestock Services helpline",
+      "name_bn": "প্রাণিসম্পদ অধিদপ্তর হেল্পলাইন",
+      "purpose_en": "Livestock and poultry health advice",
+      "purpose_bn": "গবাদিপশু ও হাঁস-মুরগির স্বাস্থ্য বিষয়ে পরামর্শ",
+      "confidence": "medium",
+      "notes": "Number taken from the brief; verify against DLS before display."
+    },
+    {
+      "number": "999",
+      "name_en": "National Emergency Service",
+      "name_bn": "জাতীয় জরুরি সেবা",
+      "purpose_en": "Police, fire, ambulance and poisoning emergencies",
+      "purpose_bn": "পুলিশ, ফায়ার সার্ভিস, অ্যাম্বুলেন্স ও বিষক্রিয়ার জরুরি অবস্থা",
+      "confidence": "high"
+    },
+    {
+      "number": "333",
+      "name_en": "National Information Service",
+      "name_bn": "জাতীয় তথ্য সেবা",
+      "purpose_en": "General government service information, including agriculture office contacts",
+      "purpose_bn": "কৃষি অফিসের যোগাযোগসহ সরকারি সেবার সাধারণ তথ্য",
+      "confidence": "medium"
+    }
+  ],
+  "official_portals": [
+    {
+      "url": "https://dae.gov.bd",
+      "name_en": "Department of Agricultural Extension",
+      "name_bn": "কৃষি সম্প্রসারণ অধিদপ্তর"
+    },
+    {
+      "url": "https://barc.gov.bd",
+      "name_en": "Bangladesh Agricultural Research Council",
+      "name_bn": "বাংলাদেশ কৃষি গবেষণা কাউন্সিল"
+    },
+    {
+      "url": "https://bari.gov.bd",
+      "name_en": "Bangladesh Agricultural Research Institute",
+      "name_bn": "বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট"
+    },
+    {
+      "url": "https://brri.gov.bd",
+      "name_en": "Bangladesh Rice Research Institute",
+      "name_bn": "বাংলাদেশ ধান গবেষণা ইনস্টিটিউট"
+    },
+    {
+      "url": "https://badc.gov.bd",
+      "name_en": "Bangladesh Agricultural Development Corporation",
+      "name_bn": "বাংলাদেশ কৃষি উন্নয়ন কর্পোরেশন"
+    },
+    {
+      "url": "https://moa.gov.bd",
+      "name_en": "Ministry of Agriculture",
+      "name_bn": "কৃষি মন্ত্রণালয়"
+    },
+    {
+      "url": "https://market.dam.gov.bd",
+      "name_en": "Department of Agricultural Marketing — daily market prices",
+      "name_bn": "কৃষি বিপণন অধিদপ্তর — দৈনিক বাজারদর"
+    },
+    {
+      "url": "https://bbs.gov.bd",
+      "name_en": "Bangladesh Bureau of Statistics",
+      "name_bn": "বাংলাদেশ পরিসংখ্যান ব্যুরো"
+    },
+    {
+      "url": "https://bamis.gov.bd",
+      "name_en": "Bangladesh Agro-Meteorological Information System",
+      "name_bn": "বাংলাদেশ কৃষি আবহাওয়া তথ্য পদ্ধতি"
+    }
+  ],
+  "open_items_for_dev_team": [
+    "Obtain the current PPW 'List of Cancelled Pesticides' and the current Registered Pesticides List directly from DAE and load them as reference tables. Do not ship a hard-coded banned list from this document.",
+    "Confirm the 16358 DLS helpline number with the Department of Livestock Services before display.",
+    "Confirm current farmer-level fertiliser prices with the Ministry of Agriculture each fiscal year; the two sources cited here differ slightly on DAP and MoP.",
+    "Get the FRG-2018 crop-by-crop tables from the PDF at barc.portal.gov.bd and load them as structured data rather than the summary guidance in this document.",
+    "Have a Bangladeshi agricultural extension officer review all Bangla safety text before release; it is written in farmer register but has not been field-tested."
+  ]
+}

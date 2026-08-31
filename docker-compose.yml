@@ -1,0 +1,14 @@
+services:
+  agrovet:
+    build: .
+    container_name: agrovet
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      # Update models on the host without rebuilding the image
+      - ./models:/app/models:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Bind to localhost only — Cloudflare Tunnel reaches the app on the same machine.
+    # Do not expose 8000 publicly when using a tunnel.

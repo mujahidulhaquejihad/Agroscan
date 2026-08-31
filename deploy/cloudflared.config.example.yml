@@ -1,0 +1,17 @@
+# Example Cloudflare Tunnel config for AgroScan.
+# Copy to ~/.cloudflared/config.yml on the Linux server and replace placeholders.
+#
+#   tunnel: <TUNNEL_UUID>
+#   credentials-file: /home/<USER>/.cloudflared/<TUNNEL_UUID>.json
+#
+# Then:
+#   cloudflared tunnel route dns agroscan agroscan.mujahidulhaquejihad.com
+#   cloudflared tunnel run agroscan
+
+tunnel: REPLACE_WITH_TUNNEL_UUID
+credentials-file: /home/REPLACE_USER/.cloudflared/REPLACE_WITH_TUNNEL_UUID.json
+
+ingress:
+  - hostname: agroscan.mujahidulhaquejihad.com
+    service: http://127.0.0.1:8000
+  - service: http_status:404

@@ -1,0 +1,584 @@
+================================================================================
+AGROSCAN — BANGLADESH AGRI DATA RESEARCH PROMPT
+================================================================================
+Version: 1.0
+Date: 2026-08-20
+Purpose: Collect structured data for AgroScan web/mobile app (leaf disease AI,
+         treatment advice, agro shop, supplier ordering, farm planner)
+Target country: Bangladesh ONLY
+Output language: JSON with English keys + Bangla (_bn) farmer-facing fields
+================================================================================
+
+
+CONTEXT
+-------
+You are researching data for AgroScan, a Bangladesh-focused mobile/web app that:
+
+  1. Detects plant leaf diseases using AI (~123 disease classes, ~27 crops)
+  2. Gives DETAILED treatment advice (what to do, pesticides/medicines, dose,
+     when to apply, safety limits, pre-harvest intervals)
+  3. Lets farmers ORDER pesticides, seeds, fertilizer, and farming equipment
+     from TOP SUPPLIERS in their upazila
+  4. Recommends PROFITABLE CROPS for their land and links to shop products
+
+The development team needs structured, Bangladesh-specific, ACTIONABLE data —
+NOT generic Wikipedia summaries.
+
+Prefer official sources: DAE, BARI, BRRI, BADC, DLS, pesticide labels,
+extension manuals, BBS crop statistics.
+
+Mark anything uncertain as "confidence": "low" and cite sources.
+
+
+================================================================================
+DELIVERABLE FORMAT (ALL SECTIONS)
+================================================================================
+
+Return ONE master JSON file OR separate JSON files per section (A through H).
+
+Every record MUST include these metadata fields:
+
+  "source":           "URL or document name"
+  "source_type":      "official | academic | label | field_guide | inferred"
+  "last_verified":    "YYYY-MM-DD"
+  "confidence":       "high | medium | low"
+  "notes":            "optional caveats"
+
+Use English for JSON keys. Include Bangla (_bn) for all farmer-facing text.
+Bangla must be natural farmer language, not awkward machine translation.
+
+
+================================================================================
+SECTION A — DISEASE TREATMENT PLANS (PRIORITY: HIGH)
+================================================================================
+
+GOAL
+----
+Build detailed treatment cards for each disease class in our AI model.
+Phase 1: 30 most common crops/diseases in Bangladesh.
+Phase 2: expand toward full 123-class list.
+
+OUR DISEASE LABEL FORMAT
+------------------------
+  Crop___Condition
+
+Examples:
+  Tomato___Late_blight
+  Rice___Blast
+  Rice___Brown_spot
+  Potato___Late_blight
+  Brinjal___Bacterial_wilt
+  Mango___Anthracnose
+  Corn___Gray_Leaf_Spot
+  Apple___Cedar_apple_rust
+  Pepper___Bacterial_spot
+  Grape___Black_rot
+  Strawberry___Leaf_scorch
+  Soybean___Healthy
+
+(Full class list follows common PlantVillage + Bangladesh-relevant crops.
+ Skip exotic crops rare in Bangladesh with a note explaining why.)
+
+
+JSON SCHEMA — ONE OBJECT PER DISEASE
+------------------------------------
+{
+  "class_name": "Tomato___Late_blight",
+  "kb_key": "late_blight",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Late blight",
+  "disease_bn": "লেইট ব্লাইট",
+  "severity": "high",
+
+  "summary_en": "2-3 sentence farmer-friendly summary",
+  "summary_bn": "...",
+
+  "symptoms_en": ["bullet point", "..."],
+  "symptoms_bn": ["..."],
+
+  "immediate_actions_en": [
+    {"step": 1, "title": "Short title", "detail": "What to do and how, plain language"}
+  ],
+  "immediate_actions_bn": [
+    {"step": 1, "title": "...", "detail": "..."}
+  ],
+
+  "cultural_control_en": ["remove infected leaves", "improve drainage", "..."],
+  "cultural_control_bn": ["..."],
+
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 75% WP",
+      "product_name_bn": "ম্যানকোজেব ৭৫% WP",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২.৫ গ্রাম",
+      "water_volume_per_decimal": "10-15 litres (if known)",
+      "application_method_en": "Knapsack spray both leaf surfaces until wet",
+      "application_method_bn": "...",
+      "timing_en": "At first symptoms; repeat every 7-10 days if disease spreads",
+      "timing_bn": "...",
+      "interval_days": 7,
+      "max_applications_per_season": 4,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not harvest for 14 days after last spray",
+      "pre_harvest_interval_note_bn": "...",
+      "brands_available_bd": ["Acme", "Square", "Green"],
+      "registered_in_bd": true,
+      "registration_ref": "DAE/label reference if available",
+      "treatment_type": "preventive | curative | both"
+    }
+  ],
+
+  "organic_alternatives_en": ["neem oil extract 3ml/L", "..."],
+  "organic_alternatives_bn": ["..."],
+
+  "fertilizer_advice_en": "Avoid excess nitrogen; balanced NPK...",
+  "fertilizer_advice_bn": "...",
+
+  "safety_warning_en": "Wear gloves, mask, long sleeves. Do not exceed label dose.
+    Respect PHI. Do not spray during flowering (bee safety).",
+  "safety_warning_bn": "...",
+
+  "legal_note_en": "Use only DAE-approved products. Call Krishi Call Center 16123.",
+  "legal_note_bn": "...",
+
+  "when_to_call_helpline_en": "If >30% plants affected or yield loss expected",
+  "when_to_call_helpline_bn": "...",
+
+  "expected_outcome_en": "Early treatment usually controls spread within 2 weeks",
+  "expected_outcome_bn": "...",
+
+  "related_shop_products": ["Mancozeb 75% WP 500g", "Knapsack sprayer 16L"],
+
+  "seasons_relevant": ["rabi", "kharif1", "kharif2"],
+  "months_relevant": [11, 12, 1, 2, 3],
+
+  "source": "...",
+  "source_type": "official",
+  "last_verified": "2026-08-20",
+  "confidence": "high",
+  "notes": ""
+}
+
+
+RESEARCH REQUIREMENTS — SECTION A
+---------------------------------
+  - Bangladesh climate: rabi (Nov-Mar), kharif-1 (Mar-Jun), kharif-2 (Jun-Oct)
+  - Use BRRI/BARI/DAE recommendations for rice, wheat, potato, tomato, etc.
+  - Distinguish PREVENTIVE vs CURATIVE sprays
+  - Include MAX APPLICATIONS per season and PHI from labels or DAE guides
+  - Flag BANNED or RESTRICTED chemicals in Bangladesh
+  - For "healthy" classes: maintenance + balanced fertilization only (no pesticide)
+  - Include at least 1-2 chemical options where appropriate + organic alternative
+  - Map kb_key as lowercase slug: late_blight, blast, brown_spot, etc.
+
+TARGET: Minimum 30 disease records in Phase 1.
+
+
+================================================================================
+SECTION B — PESTICIDE & AGRO-INPUT PRODUCT CATALOG (PRIORITY: HIGH)
+================================================================================
+
+GOAL
+----
+Populate the shop with real or verifiable products sold in Bangladesh.
+
+JSON SCHEMA — ONE OBJECT PER PRODUCT
+------------------------------------
+{
+  "sku": "PEST-0001",
+  "name_en": "Mancozeb 75% WP 500g",
+  "name_bn": "ম্যানকোজেব ৭৫% WP ৫০০ গ্রাম",
+  "category": "pesticide",
+  "subcategory": "fungicide | insecticide | herbicide | nematicide | biopesticide",
+  "brand": "Acme",
+  "manufacturer": "Acme Pesticides Ltd",
+  "active_ingredient": "Mancozeb",
+  "concentration": "75% WP",
+  "pack_size": "500g",
+  "unit": "pack",
+  "price_bdt_min": 120,
+  "price_bdt_max": 180,
+  "disease_keys": ["late_blight", "early_blight"],
+  "crop_tags": ["tomato", "potato"],
+  "description_en": "Contact fungicide for early and late blight control",
+  "description_bn": "...",
+  "usage_summary_en": "2.5 g/L water, spray every 7-10 days",
+  "usage_summary_bn": "...",
+  "safety_class": "moderate",
+  "registered_bd": true,
+  "source": "...",
+  "source_type": "label",
+  "last_verified": "2026-08-20",
+  "confidence": "medium",
+  "notes": ""
+}
+
+CATEGORIES TO COVER
+-------------------
+  pesticide, fungicide, insecticide, herbicide, fertilizer, seed, biopesticide
+
+Also include common Bangladesh products:
+  - Urea, TSP, MOP, DAP, gypsum, zinc sulphate
+  - BRRI/BADC rice seeds, hybrid tomato/brinjal seeds
+  - Popular fungicides: Mancozeb, Tricyclazole, Carbendazim, Propiconazole
+  - Popular insecticides: Imidacloprid, Cypermethrin, Abamectin (where legal)
+
+TARGET: Minimum 200 agro-input products.
+
+
+================================================================================
+SECTION C — FARMING EQUIPMENT CATALOG (PRIORITY: MEDIUM)
+================================================================================
+
+GOAL
+----
+100+ equipment items for the shop.
+
+SUBCATEGORIES
+-------------
+  sprayer, tiller, planter, harvest, irrigation, weeder, pruning, sensor,
+  safety_gear, storage, greenhouse, threshing, pumping
+
+JSON SCHEMA
+-----------
+{
+  "sku": "EQ-0001",
+  "name_en": "Knapsack sprayer 16L manual",
+  "name_bn": "ন্যাপস্যাক স্প্রেয়ার ১৬ লিটার (ম্যানুয়াল)",
+  "category": "equipment",
+  "subcategory": "sprayer",
+  "brand": "RFL",
+  "specs_en": "16L tank, brass nozzle, shoulder straps",
+  "specs_bn": "...",
+  "typical_use_en": "Pesticide and foliar fertilizer application",
+  "typical_use_bn": "...",
+  "price_bdt_min": 1500,
+  "price_bdt_max": 3500,
+  "suitable_crops": ["all"],
+  "maintenance_tips_en": "Clean after each use; store dry",
+  "maintenance_tips_bn": "...",
+  "source": "...",
+  "confidence": "medium"
+}
+
+INCLUDE ITEMS LIKE
+------------------
+  Hand/knapsack sprayers (12L, 16L, 20L)
+  Power tiller and attachments
+  Seed drills, dibblers
+  Drip irrigation kits, water pumps
+  Sickle, pruning shears, grafting knife
+  Soil pH meter, moisture meter
+  Threshers (manual/small)
+  Face mask, gloves, raincoat for spraying
+  Storage bins, jute sacks
+  Mulching film, shade net
+
+TARGET: Minimum 100 equipment SKUs with realistic BDT price ranges.
+
+
+================================================================================
+SECTION D — SUPPLIERS BY UPAZILA (PRIORITY: HIGH)
+================================================================================
+
+GOAL
+----
+Top 10 agro-input suppliers/dealers PER UPAZILA for farmer ordering.
+
+PHASE 1 GEOGRAPHIC SCOPE (15 upazilas)
+---------------------------------------
+District: Dhaka      — Savar, Dhamrai, Keraniganj
+District: Gazipur     — Kaliakair, Kapasia
+District: Mymensingh — Trishal, Gafargaon
+District: Rajshahi   — Paba, Tanore
+District: Khulna      — Dumuria, Dighalia
+District: Sylhet     — Golapganj, Beanibazar
+District: Barishal    — Babuganj
+District: Rangpur     — Badarganj
+
+Phase 2: expand to all 495 upazilas across 64 districts.
+
+JSON SCHEMA — ONE OBJECT PER SUPPLIER
+-------------------------------------
+{
+  "name_en": "Krishi Bazar Savar",
+  "name_bn": "কৃষি বাজার সাভার",
+  "type": "dealer",
+  "phone": "+8801712345678",
+  "email": "optional@example.com",
+  "address_en": "Main Road, Savar, Dhaka",
+  "address_bn": "মেইন রোড, সাভার, ঢাকা",
+  "district": "Dhaka",
+  "upazila": "Savar",
+  "lat": 23.8583,
+  "lng": 90.2664,
+  "rank_in_upazila": 1,
+  "rating": 4.5,
+  "verified": false,
+  "products_sold": ["pesticide", "seed", "fertilizer", "equipment"],
+  "brands_stocked": ["Acme", "Square", "BRAC Seed", "BADC"],
+  "delivery_available": true,
+  "payment_methods": ["cash", "bKash"],
+  "opening_hours_en": "Sat-Thu 9am-7pm",
+  "opening_hours_bn": "শনি-বৃহ ৯টা-৭টা",
+  "source": "Google Maps listing URL",
+  "source_type": "field_guide",
+  "last_verified": "2026-08-20",
+  "confidence": "medium",
+  "notes": "Phone from public listing"
+}
+
+RESEARCH METHODS
+----------------
+  - Google Maps: "fertilizer shop", "krishi dokan", "pesticide dealer" + upazila
+  - BADC depot / union parishad agro centers
+  - Brand dealer locators: ACI, Square, BRAC Seed, Partex, etc.
+  - Facebook business pages (agro shops in upazila)
+
+CRITICAL RULES
+--------------
+  - DO NOT INVENT phone numbers — use real ones from listings OR set phone: null
+  - Mark all unverified entries: "verified": false
+  - rank_in_upazila: 1 = best/most trusted, 10 = still top-10 but lower rank
+  - Include at least mix of: local dealers, cooperatives, BADC if present
+
+TARGET: 10 suppliers × 15 upazilas = 150 supplier records (Phase 1).
+
+
+================================================================================
+SECTION E — UPAZILA GEO DATA (PRIORITY: MEDIUM)
+================================================================================
+
+GOAL
+----
+Location database for filtering suppliers by farmer district/upazila/GPS.
+
+JSON SCHEMA
+-----------
+{
+  "division_en": "Dhaka",
+  "division_bn": "ঢাকা",
+  "district_en": "Dhaka",
+  "district_bn": "ঢাকা",
+  "upazila_en": "Savar",
+  "upazila_bn": "সাভার",
+  "lat": 23.8583,
+  "lng": 90.2664
+}
+
+SOURCE OPTIONS
+--------------
+  - Bangladesh Bureau of Statistics (BBS) administrative boundaries
+  - Open datasets (GeoJSON/CSV of upazila centroids)
+  - GADM or similar with Bangla names
+
+TARGET: All 495 upazilas with district, division, approximate centroid lat/lng.
+
+
+================================================================================
+SECTION F — CROP PROFITABILITY & FARM PLANNER (PRIORITY: MEDIUM)
+================================================================================
+
+GOAL
+----
+Help farmers choose profitable crops and know what seeds/inputs to order.
+
+JSON SCHEMA — ONE OBJECT PER CROP
+---------------------------------
+{
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "seasons": ["rabi"],
+  "suitable_districts": ["Dhaka", "Bogura", "Dinajpur", "Nilphamari"],
+  "unsuitable_districts": [],
+
+  "land_min_decimal": 1,
+  "land_ideal_decimal": 10,
+
+  "expected_yield_per_decimal_kg_min": 800,
+  "expected_yield_per_decimal_kg_max": 1200,
+
+  "market_price_bdt_per_kg_min": 25,
+  "market_price_bdt_per_kg_max": 45,
+
+  "expected_profit_bdt_per_decimal_min": 15000,
+  "expected_profit_bdt_per_decimal_max": 35000,
+  "input_cost_bdt_per_decimal": 8000,
+
+  "duration_days": 90,
+  "water_need": "medium",
+  "sunlight_need": "full",
+
+  "risk_factors_en": ["late blight in humid weather", "price volatility at harvest"],
+  "risk_factors_bn": ["..."],
+
+  "recommended_varieties_bd": ["Diamant", "Cardinal", "Granola"],
+  "seed_required_per_decimal_kg": "50-60",
+
+  "fertilizer_plan_en": [
+    {"stage": "basal", "product": "TSP", "dose_per_decimal": "10 kg"},
+    {"stage": "topdress", "product": "Urea", "dose_per_decimal": "8 kg at 30 days"}
+  ],
+  "fertilizer_plan_bn": [...],
+
+  "shop_products_needed": [
+    {"type": "seed", "name_en": "Potato seed tuber Diamant", "qty_per_decimal": "50-60 kg"},
+    {"type": "fertilizer", "name_en": "TSP 50kg bag", "qty_per_decimal": "0.2 bag"},
+    {"type": "pesticide", "name_en": "Mancozeb 75% WP", "qty_per_decimal": "2-3 packs/season"},
+    {"type": "equipment", "name_en": "Knapsack sprayer 16L", "qty_per_decimal": "1 unit"}
+  ],
+
+  "companion_crops_en": ["Onion after potato harvest", "Maize as rotation"],
+  "companion_crops_bn": ["..."],
+
+  "planting_months": [10, 11],
+  "harvest_months": [1, 2, 3],
+
+  "source": "DAE/BBS extension manual",
+  "source_type": "official",
+  "last_verified": "2026-08-20",
+  "confidence": "medium",
+  "notes": "Profit varies sharply with market price"
+}
+
+PRIORITY CROPS (25-30)
+----------------------
+  Rice: Boro, Aman, Aus
+  Potato, Tomato, Brinjal, Chili, Cucumber, Cauliflower, Cabbage
+  Mango, Banana, Jackfruit (where data available)
+  Jute, Wheat, Maize
+  Lentil, Mustard, Groundnut, Soybean
+  Onion, Garlic, Turmeric
+  Sugarcane, Tea (regional)
+
+TARGET: 25-30 crop profitability records.
+
+
+================================================================================
+SECTION G — REGULATORY & SAFETY REFERENCE (PRIORITY: HIGH)
+================================================================================
+
+GOAL
+----
+Farmer-facing safety and legal guidance for pesticide/fertilizer use in Bangladesh.
+
+DELIVER AS JSON + SHORT TEXT BLOCKS (EN + BN)
+---------------------------------------------
+
+Topics to cover:
+
+  1. DAE pesticide registration — how products are approved in Bangladesh
+  2. List of BANNED or RESTRICTED pesticides (if published by DAE)
+  3. PHI (Pre-Harvest Interval) — what farmers must follow before harvest
+  4. Fertilizer application limits — urea/TSP/MOP to prevent overuse & pollution
+  5. PPE requirements — gloves, mask, goggles, long sleeves when spraying
+  6. Environmental warnings — bees, fish ponds, livestock, drinking water
+  7. Helplines:
+       16123 — Krishi Call Center (DAE)
+       16358 — Department of Livestock Services
+       999   — National Emergency
+  8. Official portals:
+       dae.gov.bd, bar.gov.bd, brri.gov.bd, badc.gov.bd, mofa.gov.bd
+
+JSON SCHEMA
+-----------
+{
+  "topic": "phi_general",
+  "title_en": "Pre-Harvest Interval (PHI)",
+  "title_bn": "ফসল তোলার নিরাপদ সময় (PHI)",
+  "content_en": "Full explanation for farmers...",
+  "content_bn": "...",
+  "warning_level": "high",
+  "source": "...",
+  "confidence": "high"
+}
+
+Include ready-to-display WARNING BOX text for the app UI (EN + BN).
+
+
+================================================================================
+SECTION H — ORDER WORKFLOW (PRIORITY: LOW)
+================================================================================
+
+GOAL
+----
+Document how agro orders work in rural Bangladesh for admin/supplier design.
+
+Answer these questions (structured JSON or bullet doc):
+
+  1. Typical payment: cash on delivery vs bKash prepay vs credit
+  2. Delivery time within same upazila vs cross-district
+  3. Minimum order sizes dealers accept
+  4. How dealers confirm stock (phone call, WhatsApp)
+  5. Who delivers: dealer staff, courier, farmer pickup
+  6. Return/refund norms for agro inputs
+  7. Peak seasons when dealers are busiest
+  8. How BADC depots differ from private dealers
+
+No minimum record count — one thorough document is enough.
+
+
+================================================================================
+OUTPUT CHECKLIST
+================================================================================
+
+  Section | Deliverable                    | Phase 1 minimum
+  --------|--------------------------------|------------------
+  A       | disease_treatments.json        | 30 diseases
+  B       | products.json                  | 200 products
+  C       | equipment.json                 | 100 items
+  D       | suppliers.json                 | 150 (10 × 15 upazilas)
+  E       | upazilas.json                  | 495 upazilas
+  F       | crop_profitability.json        | 25-30 crops
+  G       | regulatory_safety.json         | 1 reference doc
+  H       | order_workflow.json            | 1 doc
+
+
+================================================================================
+QUALITY RULES (MANDATORY)
+================================================================================
+
+  1. BANGLADESH-FIRST — not generic India/US/EU advice
+  2. CITE EVERY CLAIM — URL, PDF title, manual name, page number if possible
+  3. NO FAKE PHONE NUMBERS OR EXACT PRICES — use ranges or null
+  4. BANGLA must be natural — farmer language, not Google-translate style
+  5. FLAG UNCERTAINTY — "confidence": "low" when extrapolating
+  6. DISTINGUISH preventive vs curative vs organic options
+  7. INCLUDE SEASONAL TIMING — rabi/kharif and month numbers
+  8. MAP TO OUR KEYS — class_name and kb_key exactly as specified
+  9. HEALTHY classes get NO pesticide recommendation
+  10. Note if a product is NOT registered or banned in Bangladesh
+
+
+================================================================================
+SUGGESTED RESEARCH ORDER
+================================================================================
+
+  Pass 1 (most user value):
+    Section A (30 diseases) + Section D (150 suppliers) + Section G (safety)
+
+  Pass 2 (shop inventory):
+    Section B (200 products) + Section C (100 equipment)
+
+  Pass 3 (planner + geo):
+    Section E (495 upazilas) + Section F (25-30 crops) + Section H (workflow)
+
+
+================================================================================
+HOW DEV TEAM WILL USE THIS DATA
+================================================================================
+
+  - Import disease JSON into agrovet/treatment_detail.py and agrovet/knowledge.py
+  - Seed data/agrovet_shop.db (products, suppliers, equipment)
+  - Filter suppliers by user district / upazila / GPS location
+  - Link: diagnosis -> recommended products -> cart -> order -> admin tracking
+  - Farm planner uses crop profitability JSON to suggest crops + shop items
+
+
+================================================================================
+END OF RESEARCH PROMPT
+================================================================================
