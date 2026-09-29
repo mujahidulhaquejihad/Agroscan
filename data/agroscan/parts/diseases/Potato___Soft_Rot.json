@@ -1,0 +1,112 @@
+{
+  "class_name": "Potato___Soft_Rot",
+  "kb_key": "soft_rot",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Bacterial soft rot",
+  "disease_bn": "আলুর সফট রট",
+  "pathogen": "Pectobacterium / Dickeya spp.",
+  "severity": "high",
+  "summary_en": "Bacterial soft rot on Potato (Pectobacterium / Dickeya spp.). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "আলু-এ আলুর সফট রট (Pectobacterium / Dickeya spp.)। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Wet slimy rot with a foul smell; skin may stay on as a bag",
+    "Spreads in wet crates and washed tubers",
+    "Do not wash potatoes before storage"
+  ],
+  "symptoms_bn": [
+    "ভেজা পিচ্ছিল পচন, দুর্গন্ধ; খোসা থলে হয়ে থাকতে পারে",
+    "ভেজা ক্রেট ও ধোয়া আলুতে ছড়ায়",
+    "গুদামের আগে আলু ধোবেন না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "This is not a fungicide problem",
+      "detail": "Soft rot bacteria are not killed by mancozeb. Spraying stored tubers is wasted and unsafe."
+    },
+    {
+      "step": 2,
+      "title": "Throw out slimy, smelly tubers immediately",
+      "detail": "One bag can wet-rot the next. Do not wash the rest — drying is safer than washing."
+    },
+    {
+      "step": 3,
+      "title": "Harvest from dry soil, not standing water",
+      "detail": "Waterlogged ridges at lifting are the main field cause."
+    },
+    {
+      "step": 4,
+      "title": "Do not put washed potatoes into store",
+      "detail": "Surface water is what the bacteria need."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "এটা ছত্রাকনাশকের সমস্যা নয়",
+      "detail": "সফট রট ব্যাকটেরিয়া ম্যানকোজেবে মরে না। গুদামি আলুতে স্প্রে অপচয় ও অনিরাপদ।"
+    },
+    {
+      "step": 2,
+      "title": "পিচ্ছিল দুর্গন্ধ আলু এখনই ফেলুন",
+      "detail": "এক বস্তা পাশেরটা ভিজিয়ে পচায়। বাকিগুলো ধোবেন না — শুকানো ধোয়ার চেয়ে নিরাপদ।"
+    },
+    {
+      "step": 3,
+      "title": "শুকনো মাটি থেকে তুলুন, দাঁড়ানো পানি থেকে নয়",
+      "detail": "তোলার সময় জলাবদ্ধ আইলই মাঠের প্রধান কারণ।"
+    },
+    {
+      "step": 4,
+      "title": "ধোয়া আলু গুদাম করবেন না",
+      "detail": "খোসার পানিই ব্যাকটেরিয়ার দরকার।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Rogueing, rotation and clean seed — not a bottle — are the real organic options here"
+  ],
+  "organic_alternatives_bn": [
+    "এখানে আসল জৈব উপায় গাছ তোলা, পালা ও পরিষ্কার বীজ — বোতল নয়"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "No pesticide is recommended for this class.",
+  "safety_warning_bn": "এই শ্রেণিতে কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Potato keeps getting worse after the steps above, or if you are not sure this is Bacterial soft rot.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও আলু খারাপ হতে থাকলে, অথবা এটা আলুর সফট রট কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    2,
+    3,
+    4
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Potato___Soft_Rot. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": []
+}

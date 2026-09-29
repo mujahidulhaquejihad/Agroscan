@@ -6,7 +6,17 @@
   }
 
   var CART_KEY = "agroscan_cart";
+  var PLACE_KEY = "agroscan_place_v1";
   var loc = { district: "", upazila: "", lat: null, lng: null };
+  try {
+    var savedPlace = JSON.parse(localStorage.getItem(PLACE_KEY) || "null");
+    if (savedPlace && (savedPlace.district || savedPlace.upazila)) {
+      loc.district = savedPlace.district || "";
+      loc.upazila = savedPlace.upazila || "";
+      loc.lat = savedPlace.lat != null ? savedPlace.lat : null;
+      loc.lng = savedPlace.lng != null ? savedPlace.lng : null;
+    }
+  } catch (e) {}
   var cart = [];
   var productCache = {};
   var currentCat = "pesticide";
@@ -313,6 +323,14 @@
     var name = u.name || "";
     loc.district = district;
     loc.upazila = name;
+    try {
+      localStorage.setItem(PLACE_KEY, JSON.stringify({
+        district: loc.district,
+        upazila: loc.upazila,
+        lat: loc.lat,
+        lng: loc.lng,
+      }));
+    } catch (e) {}
     var dist = $("shopDistrict");
     var upa = $("shopUpazila");
     if (dist) {
@@ -332,48 +350,61 @@
     showToast(T("shop_location_ok_short", { place: label }));
   }
 
+  function fetchNearest(lat, lng) {
+    loc.lat = lat;
+    loc.lng = lng;
+    var q = "/api/shop/nearest-upazila?lat=" + encodeURIComponent(lat) +
+      "&lng=" + encodeURIComponent(lng);
+    xhrGet(API + q, function (data) {
+      var btn = $("shopUseLocation");
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = T("shop_use_location");
+      }
+      applyNearestUpazila(data.upazila);
+    }, function () {
+      var btn = $("shopUseLocation");
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = T("shop_use_location");
+      }
+      loadSuppliers();
+      setLocationStatus(T("shop_location_no_match"), true);
+    });
+  }
+
   function detectLocation(fromButton) {
     var btn = $("shopUseLocation");
+    if (fromButton && btn) {
+      btn.disabled = true;
+      btn.textContent = T("shop_location_finding");
+      setLocationStatus(T("shop_location_finding"));
+    }
+    function onErr(err) {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = T("shop_use_location");
+      }
+      var code = err && err.code;
+      if (code === 1) setLocationStatus(T("shop_location_denied"), true);
+      else if (code === 3) setLocationStatus(T("shop_location_timeout"), true);
+      else setLocationStatus(T("shop_location_fail"), true);
+    }
+    if (window.AgroScanGeo && window.AgroScanGeo.locate) {
+      window.AgroScanGeo.locate(function (pos) {
+        if (pos && pos.lat != null) fetchNearest(pos.lat, pos.lng);
+      }, onErr);
+      return;
+    }
     if (!navigator.geolocation) {
       setLocationStatus(T("shop_location_unsupported"), true);
       return;
     }
-    if (btn) {
-      btn.disabled = true;
-      btn.textContent = T("shop_location_finding");
-    }
-    if (fromButton) setLocationStatus(T("shop_location_finding"));
     navigator.geolocation.getCurrentPosition(
       function (pos) {
-        loc.lat = pos.coords.latitude;
-        loc.lng = pos.coords.longitude;
-        var q = "/api/shop/nearest-upazila?lat=" + encodeURIComponent(loc.lat) +
-          "&lng=" + encodeURIComponent(loc.lng);
-        xhrGet(API + q, function (data) {
-          if (btn) {
-            btn.disabled = false;
-            btn.textContent = T("shop_use_location");
-          }
-          applyNearestUpazila(data.upazila);
-        }, function () {
-          if (btn) {
-            btn.disabled = false;
-            btn.textContent = T("shop_use_location");
-          }
-          loadSuppliers();
-          setLocationStatus(T("shop_location_no_match"), true);
-        });
+        fetchNearest(pos.coords.latitude, pos.coords.longitude);
       },
-      function (err) {
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = T("shop_use_location");
-        }
-        var code = err && err.code;
-        if (code === 1) setLocationStatus(T("shop_location_denied"), true);
-        else if (code === 3) setLocationStatus(T("shop_location_timeout"), true);
-        else setLocationStatus(T("shop_location_fail"), true);
-      },
+      onErr,
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
     );
   }
@@ -1061,9 +1092,15 @@
       if (loc.district) fillBrowseUpazila(loc.district);
       if (loc.upazila && $("shopUpazila")) $("shopUpazila").value = loc.upazila;
       if (pendingNearest) applyNearestUpazila(pendingNearest);
-      detectLocation(false);
+      var g = window.AgroScanGeo && window.AgroScanGeo.get && window.AgroScanGeo.get();
+      if (g && g.lat != null) fetchNearest(g.lat, g.lng);
     }, function () {
-      detectLocation(false);
+      var g = window.AgroScanGeo && window.AgroScanGeo.get && window.AgroScanGeo.get();
+      if (g && g.lat != null) fetchNearest(g.lat, g.lng);
+    });
+    document.addEventListener("agroscan-geo", function (ev) {
+      var d = ev.detail || {};
+      if (d.lat != null && d.lng != null) fetchNearest(d.lat, d.lng);
     });
 
     document.addEventListener("langchange", function () {
@@ -1092,7 +1129,9 @@
     init: init,
     recommendForDisease: loadRecommendations,
     addToCart: function (id, qty) { addToCart(id, qty, false); },
-    addSku: addSku,
+    getPlace: function () {
+      return { district: loc.district, upazila: loc.upazila, lat: loc.lat, lng: loc.lng };
+    },
     openCart: openCart,
     closeCart: closeCart
   };

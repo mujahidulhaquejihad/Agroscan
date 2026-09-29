@@ -15,6 +15,7 @@
         if (govLinks.length) paintGovGrid();
         if (emergencyContacts.length) paintEmergency();
         refreshMicTitle();
+        refreshSpeakTitle();
         var attachBtn = $("chatAttachBtn");
         if (attachBtn) {
           attachBtn.title = tChat("chat_attach");
@@ -164,9 +165,21 @@
     var toggle = $("chatToggle"), panel = $("chatPanel"), close = $("chatClose"), form = $("chatForm");
     var attachBtn = $("chatAttachBtn"), micBtn = $("chatMicBtn"), imgInput = $("chatImageInput");
     if (toggle) toggle.onclick = function () {
-      if (panel) panel.className = panel.className.indexOf("hidden") >= 0 ? "chat-panel" : "chat-panel hidden";
+      if (!panel) return;
+      var opening = panel.className.indexOf("hidden") >= 0;
+      panel.className = opening ? "chat-panel" : "chat-panel hidden";
+      document.body.classList.toggle("chat-open", opening);
+      if (!opening) {
+        stopVoiceListen();
+        stopChatSpeak();
+      }
     };
-    if (close && panel) close.onclick = function () { panel.className = "chat-panel hidden"; };
+    if (close && panel) close.onclick = function () {
+      panel.className = "chat-panel hidden";
+      document.body.classList.remove("chat-open");
+      stopVoiceListen();
+      stopChatSpeak();
+    };
     if (form) form.onsubmit = function (e) {
       e.preventDefault();
       stopVoiceListen();
@@ -194,6 +207,19 @@
       };
       refreshMicTitle();
     }
+    var speakBtn = $("chatSpeakBtn");
+    if (speakBtn) {
+      speakBtn.onclick = function () { toggleChatSpeak(); };
+      refreshSpeakTitle();
+    }
+    if (window.speechSynthesis) {
+      try {
+        window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = function () {
+          try { window.speechSynthesis.getVoices(); } catch (e2) {}
+        };
+      } catch (e) {}
+    }
     if (attachBtn) {
       attachBtn.title = tChat("chat_attach");
       attachBtn.setAttribute("aria-label", tChat("chat_attach"));
@@ -212,15 +238,77 @@
   var chatPendingFile = null;
   var chatSpeech = null;
   var chatListening = false;
+  var chatSendOnEnd = false;
+  var chatRec = null;
+  var chatRecStream = null;
+  var chatRecChunks = [];
+  var chatRecTimer = null;
+  var chatRecMime = "";
+  var chatAudioCtx = null;
+  var chatSpeaking = false;
+  var chatSpeakGen = 0;
+  var chatSpeakOn = true;
+  try {
+    var savedSpeak = localStorage.getItem("agroscan_chat_tts");
+    if (savedSpeak === "0") chatSpeakOn = false;
+    if (savedSpeak === "1") chatSpeakOn = true;
+  } catch (e) {}
 
-  function pushChatBot(text) {
+  function chatSourceLabel(src) {
+    if (!src || src === "clarify") return "";
+    if (src.indexOf("gemini") >= 0 || src === "llm") return tChat("chat_src_guides");
+    if (src === "pack" || src === "context" || src === "vision+pack") return tChat("chat_src_pack");
+    if (src === "catalog") return tChat("chat_src_list");
+    if (src.indexOf("offline") >= 0) return tChat("chat_src_offline");
+    if (src === "kb" || src === "vision") return tChat("chat_src_kb");
+    return "";
+  }
+
+  function rememberChatDisease(d) {
+    if (!d) return;
+    if (d.class_name) window.AgroScanLastDisease = d.class_name;
+    else if (d.matched_key) window.AgroScanLastDisease = d.matched_key;
+  }
+
+  function pushChatBot(text, source) {
     var log = $("chatLog");
     if (!log || !text) return;
     var b = document.createElement("div");
     b.className = "msg bot";
-    b.textContent = text;
+    var body = document.createElement("div");
+    body.className = "msg-body";
+    body.textContent = text;
+    b.appendChild(body);
+    var label = chatSourceLabel(source);
+    if (label) {
+      var src = document.createElement("div");
+      src.className = "msg-src";
+      src.textContent = label;
+      b.appendChild(src);
+    }
     log.appendChild(b);
     log.scrollTop = log.scrollHeight;
+    if (chatSpeakOn) speakChat(text);
+  }
+
+  function collectChatHistory() {
+    var log = $("chatLog");
+    if (!log) return [];
+    var nodes = log.querySelectorAll(".msg.user, .msg.bot");
+    var out = [];
+    var i;
+    for (i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      if (el.id === "chatLoadingMsg" || el.classList.contains("msg-loading")) continue;
+      var role = el.classList.contains("user") ? "user" : "assistant";
+      var body = el.querySelector(".msg-body") || el.querySelector(".chat-msg-cap");
+      var text = ((body ? body.textContent : el.textContent) || "").trim();
+      if (!text) continue;
+      if (text.length > 1200) text = text.slice(0, 1200);
+      out.push({ role: role, content: text });
+    }
+    if (out.length && out[out.length - 1].role === "user") out.pop();
+    return out.slice(-8);
   }
 
   function pushChatUserImage(file) {
@@ -258,6 +346,13 @@
     var x = new XMLHttpRequest();
     x.open("POST", API + "/api/chat/vision", true);
     x.timeout = 300000;
+    if (x.upload) {
+      x.upload.onload = function () {
+        if (window.AgroScanBusy && window.AgroScanBusy.startChecking) {
+          window.AgroScanBusy.startChecking();
+        }
+      };
+    }
     x.onload = function () {
       try {
         var data = JSON.parse(x.responseText || "{}");
@@ -278,6 +373,9 @@
     if (!cropOverride) pushChatUserImage(file);
     startChatLoading();
     setChatInputLocked(true, "loading");
+    if (window.AgroScanBusy && window.AgroScanBusy.show) {
+      window.AgroScanBusy.show(tChat("scan_prep"), tChat("scan_prep_sub"), { allowSkip: false });
+    }
     var chips = $("chatChips");
     if (chips) {
       chips.innerHTML = "";
@@ -309,6 +407,12 @@
       return;
     }
 
+    if (status === "unsupported_crop") {
+      setChatInputLocked(false);
+      pushChatBot(data.reply || tChat("chat_photo_unsupported_crop"));
+      return;
+    }
+
     if (status === "need_crop" || (crop.needs_user_pick && chatPendingFile)) {
       setChatInputLocked(false);
       pushChatBot(data.reply || tChat("chat_photo_pick_crop"));
@@ -322,13 +426,15 @@
               return { crop: o.crop, label: o.crop, confidence: o.confidence };
             });
         var i;
-        for (i = 0; i < Math.min(3, opts.length); i++) {
+        for (i = 0; i < opts.length; i++) {
           (function (opt) {
             var b = document.createElement("button");
             b.type = "button";
             b.className = "chip chip-choice";
-            var label = opt.label || opt.crop || "";
-            if (opt.confidence != null) {
+            var cropName = opt.crop || opt.label || "";
+            var isOther = String(cropName).toLowerCase() === "other";
+            var label = isOther ? tChat("crop_other") : (opt.label || cropName);
+            if (!isOther && opt.confidence != null) {
               label += " (" + Math.round(Number(opt.confidence) * 100) + "%)";
             }
             b.textContent = label;
@@ -352,7 +458,7 @@
     }
 
     if (data.reply) {
-      pushChatBot(data.reply);
+      pushChatBot(data.reply, data.source);
     } else {
       pushChatBot(tChat("chat_photo_fail"));
     }
@@ -373,132 +479,383 @@
     micBtn.classList.toggle("is-listening", !!chatListening);
   }
 
-  function stopVoiceListen() {
+  function refreshSpeakTitle() {
+    var btn = $("chatSpeakBtn");
+    if (!btn) return;
+    var label = chatSpeaking ? tChat("chat_speak_stop") : (chatSpeakOn ? tChat("chat_speak_on") : tChat("chat_speak"));
+    btn.title = label;
+    btn.setAttribute("aria-label", label);
+    btn.classList.toggle("is-speaking", !!chatSpeaking);
+    btn.classList.toggle("is-muted", !chatSpeakOn);
+  }
+
+  function chatLangTag() {
+    return isBnChat() ? "bn-BD" : "en-US";
+  }
+
+  function pickChatVoice() {
+    if (!window.speechSynthesis) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var bn = isBnChat();
+    var best = null;
+    var i;
+    for (i = 0; i < voices.length; i++) {
+      var v = voices[i];
+      var lang = String(v.lang || "").toLowerCase();
+      var name = String(v.name || "").toLowerCase();
+      var hit = bn
+        ? (lang.indexOf("bn") === 0 || name.indexOf("bengali") >= 0 || name.indexOf("bangla") >= 0)
+        : lang.indexOf("en") === 0;
+      if (!hit) continue;
+      if (!best) best = v;
+      if (bn && (lang.indexOf("bd") >= 0 || name.indexOf("google") >= 0)) best = v;
+      if (!bn && (lang.indexOf("us") >= 0 || name.indexOf("google") >= 0)) best = v;
+    }
+    return best;
+  }
+
+  function stopChatSpeak() {
+    chatSpeakGen += 1;
+    if (window.speechSynthesis) {
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    }
+    chatSpeaking = false;
+    refreshSpeakTitle();
+  }
+
+  function speakChat(text) {
+    if (!chatSpeakOn || !text || !window.speechSynthesis) return;
+    var gen = ++chatSpeakGen;
+    try { window.speechSynthesis.cancel(); } catch (e) {}
+    var u = new SpeechSynthesisUtterance(String(text).replace(/\s+/g, " ").trim());
+    if (!u.text) return;
+    u.lang = chatLangTag();
+    u.rate = isBnChat() ? 1.02 : 1.08;
+    var voice = pickChatVoice();
+    if (voice) {
+      u.voice = voice;
+      if (voice.lang) u.lang = voice.lang;
+    }
+    u.onend = function () {
+      if (gen !== chatSpeakGen) return;
+      chatSpeaking = false;
+      refreshSpeakTitle();
+    };
+    u.onerror = function () {
+      if (gen !== chatSpeakGen) return;
+      chatSpeaking = false;
+      refreshSpeakTitle();
+    };
+    chatSpeaking = true;
+    refreshSpeakTitle();
+    setTimeout(function () {
+      if (gen !== chatSpeakGen || !chatSpeakOn) return;
+      window.speechSynthesis.speak(u);
+    }, 50);
+  }
+
+  function toggleChatSpeak() {
+    if (chatSpeaking) {
+      stopChatSpeak();
+      return;
+    }
+    chatSpeakOn = !chatSpeakOn;
+    try { localStorage.setItem("agroscan_chat_tts", chatSpeakOn ? "1" : "0"); } catch (e) {}
+    refreshSpeakTitle();
+    if (!chatSpeakOn) return;
+    var log = $("chatLog");
+    var last = log && log.querySelector(".msg.bot:last-child .msg-body");
+    if (last && last.textContent) speakChat(last.textContent);
+  }
+
+  function stopRecStream() {
+    if (chatRecTimer) {
+      clearTimeout(chatRecTimer);
+      chatRecTimer = null;
+    }
+    if (chatRecStream) {
+      try {
+        var tracks = chatRecStream.getTracks();
+        var i;
+        for (i = 0; i < tracks.length; i++) tracks[i].stop();
+      } catch (e) {}
+      chatRecStream = null;
+    }
+    chatRec = null;
+  }
+
+  function stopVoiceListen(keepSend) {
+    if (!keepSend) chatSendOnEnd = false;
     chatListening = false;
     refreshMicTitle();
     if (chatSpeech) {
-      try { chatSpeech.onend = null; chatSpeech.stop(); } catch (e) {}
+      try { chatSpeech.stop(); } catch (e) {}
+    }
+    if (chatRec && chatRec.state === "recording") {
+      try {
+        if (chatRec.requestData) chatRec.requestData();
+        chatRec.stop();
+      } catch (e) {}
+    } else {
+      stopRecStream();
     }
   }
 
-  function toggleVoiceListen() {
-    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) {
+  function sendHeardChat() {
+    var txt = $("chatText");
+    var msg = txt && txt.value.trim();
+    if (!msg) return;
+    txt.value = "";
+    sendChat(msg);
+  }
+
+  function recMimeType() {
+    var types = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg"];
+    var i;
+    if (!window.MediaRecorder) return "";
+    for (i = 0; i < types.length; i++) {
+      try {
+        if (MediaRecorder.isTypeSupported(types[i])) return types[i];
+      } catch (e) {}
+    }
+    return "";
+  }
+
+  function showSttBusy() {
+    if (window.AgroScanBusy && window.AgroScanBusy.show) {
+      window.AgroScanBusy.show(tChat("chat_mic_transcribing"), tChat("chat_mic_transcribing_sub"), { allowSkip: false });
+    }
+  }
+
+  function hideSttBusy() {
+    if (window.AgroScanBusy && window.AgroScanBusy.hide) window.AgroScanBusy.hide();
+  }
+
+  function encodeWavMono16(samples, sampleRate) {
+    var n = samples.length;
+    var buf = new ArrayBuffer(44 + n * 2);
+    var v = new DataView(buf);
+    function wstr(o, s) {
+      var i;
+      for (i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i));
+    }
+    wstr(0, "RIFF");
+    v.setUint32(4, 36 + n * 2, true);
+    wstr(8, "WAVEfmt ");
+    v.setUint32(16, 16, true);
+    v.setUint16(20, 1, true);
+    v.setUint16(22, 1, true);
+    v.setUint32(24, sampleRate, true);
+    v.setUint32(28, sampleRate * 2, true);
+    v.setUint16(32, 2, true);
+    v.setUint16(34, 16, true);
+    wstr(36, "data");
+    v.setUint32(40, n * 2, true);
+    var i, s;
+    for (i = 0; i < n; i++) {
+      s = Math.max(-1, Math.min(1, samples[i]));
+      v.setInt16(44 + i * 2, s < 0 ? s * 32768 : s * 32767, true);
+    }
+    return new Blob([buf], { type: "audio/wav" });
+  }
+
+  function blobToSpeechWav(blob, done) {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC || !blob) {
+      done(blob);
+      return;
+    }
+    if (!chatAudioCtx) {
+      try { chatAudioCtx = new AC(); } catch (e) { done(blob); return; }
+    }
+    var ctx = chatAudioCtx;
+    function decode() {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var raw = reader.result;
+        try { raw = raw.slice(0); } catch (e2) {}
+        ctx.decodeAudioData(raw, function (buf) {
+          var left = buf.getChannelData(0);
+          var data = new Float32Array(left.length);
+          var i;
+          data.set(left);
+          if (buf.numberOfChannels > 1) {
+            var right = buf.getChannelData(1);
+            var lim = Math.min(data.length, right.length);
+            for (i = 0; i < lim; i++) data[i] = (data[i] + right[i]) * 0.5;
+          }
+          var fromRate = buf.sampleRate;
+          var rate = fromRate >= 24000 ? 24000 : 16000;
+          var ratio = fromRate / rate;
+          var n = Math.max(1, Math.floor(data.length / ratio));
+          var samples = new Float32Array(n);
+          var start, end, j, acc, k;
+          for (i = 0; i < n; i++) {
+            start = Math.floor(i * ratio);
+            end = Math.min(data.length, Math.floor((i + 1) * ratio) || start + 1);
+            acc = 0;
+            k = 0;
+            for (j = start; j < end; j++) {
+              acc += data[j];
+              k += 1;
+            }
+            samples[i] = k ? acc / k : data[start];
+          }
+          if (n / rate < 0.25) {
+            done(null);
+            return;
+          }
+          done(encodeWavMono16(samples, rate));
+        }, function () { done(blob); });
+      };
+      reader.onerror = function () { done(blob); };
+      reader.readAsArrayBuffer(blob);
+    }
+    if (ctx.state === "suspended" && ctx.resume) ctx.resume().then(decode, decode);
+    else decode();
+  }
+
+  function uploadStt(blob) {
+    showSttBusy();
+    blobToSpeechWav(blob, function (wav) {
+      if (!wav || wav.size < 200) {
+        hideSttBusy();
+        pushChatBot(tChat("chat_mic_short"));
+        return;
+      }
+      setChatInputLocked(true, "loading");
+      var fd = new FormData();
+      var name = (wav.type || "").indexOf("wav") >= 0 ? "speech.wav" : "speech.webm";
+      fd.append("file", wav, name);
+      fd.append("lang", i18n() ? i18n().lang : "bn");
+      var x = new XMLHttpRequest();
+      x.open("POST", API + "/api/chat/stt", true);
+      x.timeout = 25000;
+      x.onload = function () {
+        hideSttBusy();
+        setChatInputLocked(false);
+        refreshMicTitle();
+        if (x.status < 200 || x.status >= 300) {
+          pushChatBot(tChat("chat_stt_fail"));
+          return;
+        }
+        try {
+          var d = JSON.parse(x.responseText || "{}");
+          if (d.text) sendChat(String(d.text).trim());
+          else pushChatBot(tChat("chat_stt_fail"));
+        } catch (e) {
+          pushChatBot(tChat("chat_stt_fail"));
+        }
+      };
+      x.onerror = x.ontimeout = function () {
+        hideSttBusy();
+        setChatInputLocked(false);
+        refreshMicTitle();
+        pushChatBot(tChat("chat_stt_fail"));
+      };
+      x.send(fd);
+    });
+  }
+
+  function beginMediaListen() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
       pushChatBot(tChat("chat_mic_unsupported"));
       return;
     }
-    if (chatListening) {
-      stopVoiceListen();
-      return;
-    }
-    if (!chatSpeech) {
-      chatSpeech = new SR();
-      chatSpeech.continuous = false;
-      chatSpeech.interimResults = true;
-      chatSpeech.maxAlternatives = 1;
-      chatSpeech.onresult = function (ev) {
-        var txt = $("chatText");
-        if (!txt) return;
-        var out = "";
-        var i;
-        for (i = 0; i < ev.results.length; i++) {
-          out += ev.results[i][0].transcript;
-        }
-        txt.value = out.trim();
+    navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: true,
+        noiseSuppression: true,
+        autoGainControl: true,
+        channelCount: 1
+      }
+    }).then(function (stream) {
+      if (!chatAudioCtx) {
+        try {
+          var AC = window.AudioContext || window.webkitAudioContext;
+          if (AC) chatAudioCtx = new AC();
+        } catch (e0) {}
+      }
+      if (chatAudioCtx && chatAudioCtx.state === "suspended" && chatAudioCtx.resume) {
+        chatAudioCtx.resume();
+      }
+      chatRecStream = stream;
+      chatRecChunks = [];
+      chatRecMime = recMimeType();
+      chatRec = chatRecMime ? new MediaRecorder(stream, { mimeType: chatRecMime }) : new MediaRecorder(stream);
+      chatRec.ondataavailable = function (ev) {
+        if (ev.data && ev.data.size) chatRecChunks.push(ev.data);
       };
-      chatSpeech.onerror = function () {
-        stopVoiceListen();
-      };
-      chatSpeech.onend = function () {
+      chatRec.onerror = function () {
+        stopRecStream();
         chatListening = false;
         refreshMicTitle();
+        pushChatBot(tChat("chat_mic_error"));
       };
-    }
-    chatSpeech.lang = isBnChat() ? "bn-BD" : "en-US";
-    try {
-      chatSpeech.start();
-      chatListening = true;
-      refreshMicTitle();
-    } catch (e) {
-      stopVoiceListen();
+      chatRec.onstop = function () {
+        var blob = new Blob(chatRecChunks, { type: (chatRecMime || "audio/webm").split(";")[0] });
+        stopRecStream();
+        chatListening = false;
+        refreshMicTitle();
+        if (chatSendOnEnd) {
+          chatSendOnEnd = false;
+          if (!blob.size) {
+            pushChatBot(tChat("chat_mic_short"));
+            return;
+          }
+          uploadStt(blob);
+        }
+      };
+      try {
+        chatSendOnEnd = true;
+        chatRec.start(250);
+        chatListening = true;
+        refreshMicTitle();
+        chatRecTimer = setTimeout(function () {
+          if (chatRec && chatRec.state === "recording") {
+            try { chatRec.stop(); } catch (e2) {}
+          }
+        }, 20000);
+      } catch (e) {
+        chatSendOnEnd = false;
+        stopRecStream();
+        chatListening = false;
+        refreshMicTitle();
+        pushChatBot(tChat("chat_mic_error"));
+      }
+    }).catch(function () {
       pushChatBot(tChat("chat_mic_error"));
+    });
+  }
+
+  function beginVoiceListen() {
+    beginMediaListen();
+  }
+
+  function toggleVoiceListen() {
+    if (chatListening) {
+      if (chatRec && chatRec.state === "recording") {
+        stopVoiceListen(true);
+        return;
+      }
+      var txt = $("chatText");
+      var msg = txt && txt.value.trim();
+      stopVoiceListen();
+      if (msg) {
+        txt.value = "";
+        sendChat(msg);
+      }
+      return;
     }
-  }
-
-  var chatLoadTimer = null;
-  var chatLoadStep = 0;
-  var chatLoadReady = false;
-  var chatLoadDoneFn = null;
-
-  function chatProgressTexts() {
-    var bn = i18n() && i18n().lang === "bn";
-    if (bn) {
-      return [
-        "পাতার ছবি মডেলে যাচাই করছি…",
-        "রোগ শনাক্ত করে গাইড মিলিয়ে দেখছি…",
-        "সহকারী পরামর্শ লিখছি…",
-      ];
-    }
-    return [
-      "Running leaf models on your photo…",
-      "Matching the disease guide…",
-      "Writing assistant feedback…",
-    ];
-  }
-
-  function chatAlmostReadyText() {
-    return (i18n() && i18n().lang === "bn") ? "প্রায় হয়ে গেছে…" : "Almost ready…";
-  }
-
-  function setChatLoadText(text) {
-    var el = $("chatLoadingMsg");
-    var textEl = el && el.querySelector(".chat-load-text");
-    if (textEl) textEl.textContent = text;
-  }
-
-  function clearChatLoadTimer() {
-    if (chatLoadTimer) {
-      clearTimeout(chatLoadTimer);
-      chatLoadTimer = null;
-    }
+    stopChatSpeak();
+    beginVoiceListen();
   }
 
   function stopChatLoading() {
-    clearChatLoadTimer();
-    chatLoadReady = false;
-    chatLoadDoneFn = null;
-    chatLoadStep = 0;
     var el = $("chatLoadingMsg");
     if (el && el.parentNode) el.parentNode.removeChild(el);
     var panel = $("chatPanel");
     if (panel) panel.classList.remove("chat-busy");
-  }
-
-  function advanceChatLoading() {
-    clearChatLoadTimer();
-    var texts = chatProgressTexts();
-
-    // Answer is in — only now show "Almost ready", then reveal.
-    if (chatLoadReady) {
-      setChatLoadText(chatAlmostReadyText());
-      chatLoadTimer = setTimeout(function () {
-        var done = chatLoadDoneFn;
-        stopChatLoading();
-        if (done) done();
-      }, 1100);
-      return;
-    }
-
-    // Still waiting: move to next progress line once, never loop.
-    if (chatLoadStep < texts.length - 1) {
-      chatLoadStep += 1;
-      setChatLoadText(texts[chatLoadStep]);
-      chatLoadTimer = setTimeout(advanceChatLoading, 2200);
-      return;
-    }
-
-    // Stay on the last progress line until the answer arrives.
-    // finishChatLoading() will call advanceChatLoading when ready.
   }
 
   function startChatLoading() {
@@ -515,32 +872,16 @@
       '<span class="chat-load-spin" aria-hidden="true"></span>' +
       '<span class="chat-load-text"></span>' +
       '<span class="chat-load-dots" aria-hidden="true"><i></i><i></i><i></i></span>';
+    var textEl = wrap.querySelector(".chat-load-text");
+    if (textEl) textEl.textContent = (i18n() && i18n().lang === "bn") ? "উত্তর লিখছি…" : "Writing a reply…";
     log.appendChild(wrap);
     log.scrollTop = log.scrollHeight;
-
-    chatLoadStep = 0;
-    chatLoadReady = false;
-    setChatLoadText(chatProgressTexts()[0]);
-    chatLoadTimer = setTimeout(advanceChatLoading, 2200);
   }
 
   function finishChatLoading(done) {
-    chatLoadDoneFn = done;
-    chatLoadReady = true;
-    clearChatLoadTimer();
-    var texts = chatProgressTexts();
-    // Finish remaining progress steps slowly, then "Almost ready".
-    function continueSteps() {
-      if (!chatLoadReady) return;
-      if (chatLoadStep < texts.length - 1) {
-        chatLoadStep += 1;
-        setChatLoadText(texts[chatLoadStep]);
-        chatLoadTimer = setTimeout(continueSteps, 1800);
-        return;
-      }
-      chatLoadTimer = setTimeout(advanceChatLoading, 600);
-    }
-    chatLoadTimer = setTimeout(continueSteps, 800);
+    if (window.AgroScanBusy && window.AgroScanBusy.hide) window.AgroScanBusy.hide();
+    stopChatLoading();
+    if (done) done();
   }
 
   function setChatInputLocked(locked, reason) {
@@ -602,6 +943,7 @@
   }
 
   function sendChat(message, confirmClass) {
+    stopChatSpeak();
     var log = $("chatLog");
     if (message && log) {
       var u = document.createElement("div");
@@ -620,50 +962,55 @@
     var x = new XMLHttpRequest();
     x.open("POST", API + "/api/chat", true);
     x.setRequestHeader("Content-Type", "application/json");
+    x.timeout = 90000;
     x.onload = function () {
+      if (x.status < 200 || x.status >= 300) {
+        if (typeof x.onerror === "function") x.onerror();
+        return;
+      }
       finishChatLoading(function () {
         try {
           var d = JSON.parse(x.responseText);
-          if (log) {
-            var b = document.createElement("div");
-            b.className = "msg bot";
-            b.textContent = d.reply;
-            log.appendChild(b);
-            log.scrollTop = log.scrollHeight;
-          }
+          rememberChatDisease(d);
+          pushChatBot(d.reply, d.source);
           var clarifying = d.source === "clarify" && d.options && d.options.length;
           renderChatChips(d.suggestions, d.options, clarifying);
           if (!clarifying) setChatInputLocked(false);
         } catch (e) {
           setChatInputLocked(false);
-          if (log) {
-            var err = document.createElement("div");
-            err.className = "msg bot";
-            err.textContent = (i18n() && i18n().lang === "bn")
-              ? "সহকারী সেবায় যোগাযোগ করা যায়নি।"
-              : "Sorry, I couldn't reach the assistant.";
-            log.appendChild(err);
-          }
+          pushChatBot(tChat("chat_unreachable"));
         }
       });
     };
-    x.onerror = function () {
+    x.onerror = x.ontimeout = function () {
+      if (window.AgroScanOffline && window.AgroScanOffline.chat) {
+        window.AgroScanOffline.chat(message, lang, lastDisease).then(function (d) {
+          finishChatLoading(function () {
+            rememberChatDisease(d);
+            pushChatBot(d.reply, d.source);
+            renderChatChips(d.suggestions, d.options, false);
+            setChatInputLocked(false);
+          });
+        });
+        return;
+      }
       finishChatLoading(function () {
         setChatInputLocked(false);
-        if (log) {
-          var err = document.createElement("div");
-          err.className = "msg bot";
-          err.textContent = (i18n() && i18n().lang === "bn")
-            ? "সহকারী সেবায় যোগাযোগ করা যায়নি।"
-            : "Sorry, I couldn't reach the assistant.";
-          log.appendChild(err);
-        }
+        pushChatBot(tChat("chat_unreachable"));
       });
     };
     var lang = i18n() ? i18n().lang : "en";
     var lastDisease = window.AgroScanLastDisease || null;
     var payload = { message: message || "", context_disease: lastDisease, lang: lang };
+    var history = collectChatHistory();
+    if (history.length) payload.history = history;
     if (confirmClass) payload.confirm_class = confirmClass;
+    var place = window.AgroScanShop && window.AgroScanShop.getPlace && window.AgroScanShop.getPlace();
+    var geo = window.AgroScanGeo && window.AgroScanGeo.get && window.AgroScanGeo.get();
+    if (place && place.district) payload.district = place.district;
+    if (place && place.upazila) payload.upazila = place.upazila;
+    if (geo && geo.lat != null) payload.lat = geo.lat;
+    if (geo && geo.lng != null) payload.lng = geo.lng;
     x.send(JSON.stringify(payload));
   }
 

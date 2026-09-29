@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>AgroScan — Frontend, backend, storage</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; width: 1920px; height: 1080px; overflow: hidden; }
+  @page { size: 338mm 190mm; margin: 0; }
+  body {
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    color: #1a2e24;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet {
+    width: 1920px; height: 1080px; padding: 36px 48px 32px;
+    position: relative; overflow: hidden; background: #fff;
+  }
+  h1 {
+    text-align: center; font-size: 34px; letter-spacing: 3px;
+    color: #0d3b2a; font-weight: 800; margin: 0 0 22px 72px;
+  }
+  .badge {
+    position: absolute; left: 48px; top: 36px;
+    background: #1b7a4a; color: #fff; font-weight: 800; font-size: 22px;
+    padding: 8px 16px; border-radius: 6px;
+  }
+  .row { display: flex; gap: 14px; align-items: stretch; height: 860px; }
+  .col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .card {
+    background: #fff; border: 2px solid #c5ddd0; border-radius: 18px;
+    padding: 16px 18px; flex: 1; min-width: 0;
+  }
+  .card h2 { font-size: 20px; color: #1b7a4a; margin-bottom: 4px; }
+  .sub { font-size: 13px; color: #5a7366; margin-bottom: 10px; font-weight: 600; }
+  ul { padding-left: 18px; font-size: 15px; line-height: 1.42; color: #243830; }
+  li { margin-bottom: 4px; }
+  .arrow {
+    align-self: center; color: #1b7a4a; font-size: 36px; font-weight: 800;
+    flex: 0 0 28px; text-align: center;
+  }
+  .note {
+    background: #e8f6ee; border: 2px solid #b7e0c8; border-radius: 18px;
+    padding: 16px 18px; flex: 0 0 340px; width: 340px;
+  }
+  .note h2 { font-size: 18px; color: #1b7a4a; margin-bottom: 10px; }
+  .note p { font-size: 14px; line-height: 1.42; color: #243830; margin-bottom: 10px; }
+  .strip {
+    margin-top: 16px; background: #1b7a4a; color: #fff; border-radius: 12px;
+    text-align: center; font-size: 18px; font-weight: 700; padding: 12px 16px;
+  }
+  .mono { font-family: Consolas, "Courier New", monospace; font-size: 13px; }
+  .ok { color: #1b7a4a; font-weight: 700; }
+  .warn { color: #8a4b00; }
+  .drum {
+    margin: 10px auto 12px; width: 72px; height: 78px;
+    border: 4px solid #7bbf98; border-radius: 10px 10px 6px 6px;
+    background: linear-gradient(#cfe9d9,#e8f6ee);
+  }
+  footer {
+    position: absolute; left: 48px; right: 48px; bottom: 14px;
+    display: flex; justify-content: space-between; font-size: 12px; color: #6b7c70;
+  }
+</style>
+</head>
+<body>
+<section class="sheet">
+  <div class="badge">02</div>
+  <h1>FRONTEND &nbsp;•&nbsp; BACKEND &nbsp;•&nbsp; DATABASE</h1>
+
+  <div class="row">
+    <div class="col" style="flex: 1.08;">
+      <div class="card">
+        <h2>FRONTEND — Web / PWA</h2>
+        <div class="sub">HTML · CSS · JavaScript &nbsp;|&nbsp; folder <span class="mono">web/</span></div>
+        <ul>
+          <li>Farmer screens: Photo, Field, News, Shop, Call, Help, chat</li>
+          <li>Camera / gallery = HTML file input (no Capacitor Camera plugin)</li>
+          <li>Bangla / English, login, vendor desk, admin desk</li>
+          <li>PWA service worker <span class="mono">sw.js</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>MOBILE APP — Capacitor Android</h2>
+        <div class="sub">Capacitor 6.2 &nbsp;|&nbsp; <span class="mono">com.mujahidulhaquejihad.agroscan</span></div>
+        <ul>
+          <li>Same web UI copied into <span class="mono">mobile/www</span></li>
+          <li>No on-device model — scan, chat, shop call the hosted API</li>
+          <li>Native plugins: Geolocation, App, Status Bar</li>
+          <li>APK built with Gradle; API base = production URL</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="col" style="flex: 1.22;">
+      <div class="card">
+        <h2>BACKEND / API — FastAPI</h2>
+        <div class="sub"><span class="mono">backend/main.py</span> · Uvicorn. Frontend calls:</div>
+        <ul>
+          <li><span class="mono">POST /api/predict</span> — photo → leaf → crop → disease</li>
+          <li><span class="mono">POST /api/chat</span>, <span class="mono">/chat/vision</span>, <span class="mono">/chat/stt</span></li>
+          <li>Farmer auth <span class="mono">/api/auth/*</span> · vendor <span class="mono">/api/vendor/*</span></li>
+          <li>Admin <span class="mono">/api/admin/*</span> · shop, news, advice, farm APIs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>AI + APPLICATION SERVICES</h2>
+        <div class="sub">Runs on the server, only through those APIs</div>
+        <ul>
+          <li>L1 MobileNetV3-Large → L2 EfficientNet-B3 → L3 ensemble (B3 + ResNet-50 + DenseNet-121), crop-masked, highest confidence wins</li>
+          <li>Advice comes from the JSON pack, not from the CNN</li>
+          <li>Chat: clarify → pack → KB → Gemini + TF-IDF RAG (k = 6)</li>
+          <li>Shop orders, vendor stock, admin users</li>
+          <li class="warn">Weather is not this API — the page calls Open-Meteo in the browser</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <div class="col" style="flex: 0.78;">
+      <div class="card" style="text-align:center;">
+        <h2>DATA / STORAGE</h2>
+        <div class="sub">Server-side application data</div>
+        <div class="drum"></div>
+        <ul style="text-align:left">
+          <li><span class="mono">users.db</span> — farmer accounts</li>
+          <li><span class="mono">agroscan_shop.db</span> — shop &amp; vendors</li>
+          <li>JSON pack — 142 disease cards</li>
+          <li><span class="mono">*.pt</span> — PyTorch CNN weights</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <h2>DATABASE NOTE</h2>
+      <p><span class="ok">The backend DBMS is SQLite.</span> Farmer sessions: <span class="mono">data/users.db</span>. Shop / vendor / admin: <span class="mono">data/agroscan_shop.db</span>.</p>
+      <p>The frontend also uses browser <strong>localStorage</strong> for cart, scan history, field plots, language, and the session token. That is not the server database.</p>
+      <p>CNN weights are files, not rows: <span class="mono">leaf_gate.pt</span>, <span class="mono">leaf_type.pt</span>, <span class="mono">disease_*.pt</span>.</p>
+      <p style="margin-bottom:0">Live: agroscan.mujahidulhaquejihad.com</p>
+    </div>
+  </div>
+
+  <div class="strip">Farmer / vendor / admin &nbsp;→&nbsp; Web or Capacitor APK &nbsp;→&nbsp; FastAPI &nbsp;→&nbsp; SQLite + JSON pack + .pt models</div>
+  <footer>
+    <span>From the running code: web/ · backend/main.py · agroscan/infer.py · shop_db.py · auth_store.py</span>
+    <span>Corrected figure for slide 02</span>
+  </footer>
+</section>
+</body>
+</html>

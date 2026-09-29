@@ -1,0 +1,92 @@
+{
+  "class_name": "Peach___Bacterial_spot",
+  "kb_key": "peach_bacterial_spot",
+  "crop_en": "Peach",
+  "crop_bn": "পিচ ফল",
+  "disease_en": "Bacterial spot",
+  "disease_bn": "পিচ ফলের ব্যাকটেরিয়াজনিত দাগ রোগ",
+  "pathogen": "Xanthomonas arboricola pv. pruni",
+  "severity": "medium",
+  "bangladesh_relevance": "not_grown_commercially",
+  "bangladesh_note_en": "Peach requires winter chilling that Bangladesh does not provide and is not grown commercially here. A prediction of this class from a Bangladeshi field photo is almost certainly a misclassification.",
+  "bangladesh_note_bn": "পিচ ফলের জন্য যে শীত দরকার তা বাংলাদেশে পড়ে না, এখানে এর বাণিজ্যিক চাষ হয় না। বাংলাদেশের ছবিতে এই ফলাফল এলে প্রায় নিশ্চিতভাবেই ভুল শনাক্তকরণ।",
+  "summary_en": "A disease of peach orchards in temperate climates. Peach is not grown commercially in Bangladesh. Included for model completeness only.",
+  "summary_bn": "শীতপ্রধান দেশের পিচ বাগানের রোগ। বাংলাদেশে পিচের বাণিজ্যিক চাষ হয় না। শুধু মডেলের পূর্ণতার জন্য রাখা।",
+  "symptoms_en": [
+    "Small angular dark spots on leaves that fall out leaving shot holes",
+    "Sunken dark spots and cracking on fruit",
+    "Cankers on twigs"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট কোণাকৃতি গাঢ় দাগ, খসে গিয়ে ছিদ্র হয়ে যায়",
+    "ফলে বসে যাওয়া গাঢ় দাগ ও ফাটল",
+    "ডালে ক্ষত"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check whether this is really peach",
+      "detail": "Peach is not grown commercially in Bangladesh. Retake the photo of a clearer leaf and rescan."
+    },
+    {
+      "step": 2,
+      "title": "Call 16123 if unsure",
+      "detail": "Take a sample leaf to your Upazila Agriculture Office."
+    },
+    {
+      "step": 3,
+      "title": "Do not spray on this result",
+      "detail": "Do not treat a crop you are not growing."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "এটা সত্যিই পিচ কিনা দেখুন",
+      "detail": "বাংলাদেশে পিচের বাণিজ্যিক চাষ হয় না। পরিষ্কার একটা পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 2,
+      "title": "নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন",
+      "detail": "একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    },
+    {
+      "step": 3,
+      "title": "এই ফলাফল দেখে স্প্রে করবেন না",
+      "detail": "যে ফসল চাষ করছেন না তার চিকিৎসা করবেন না।"
+    }
+  ],
+  "cultural_control_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "cultural_control_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "organic_alternatives_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "fertilizer_advice_en": "Not applicable. Identify the actual crop first.",
+  "fertilizer_advice_bn": "প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended for this class in Bangladesh.",
+  "safety_warning_bn": "বাংলাদেশে এই শ্রেণির জন্য কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment recommended. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার পরামর্শ নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 to identify your crop.",
+  "when_to_call_helpline_bn": "আপনার ফসল চিনতে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Not applicable — retake the photo.",
+  "expected_outcome_bn": "প্রযোজ্য নয় — আবার ছবি তুলুন।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "BBS Yearbook of Agricultural Statistics 2024; PlantVillage class list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

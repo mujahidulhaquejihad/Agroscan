@@ -1,0 +1,88 @@
+{
+  "class_name": "Cherry_(including_sour)___Powdery_mildew",
+  "kb_key": "cherry_powdery_mildew",
+  "crop_en": "Cherry",
+  "crop_bn": "চেরি",
+  "disease_en": "Powdery mildew",
+  "disease_bn": "চেরির পাউডারি মিলডিউ রোগ",
+  "pathogen": "Podosphaera clandestina",
+  "severity": "low",
+  "bangladesh_relevance": "not_grown",
+  "bangladesh_note_en": "Cherry is not grown in Bangladesh at all — it requires substantial winter chilling. A prediction of this class from a Bangladeshi photo is a misclassification.",
+  "bangladesh_note_bn": "বাংলাদেশে চেরি একেবারেই হয় না — এর জন্য অনেক বেশি শীত দরকার। বাংলাদেশের ছবিতে এই ফলাফল এলে তা ভুল শনাক্তকরণ।",
+  "summary_en": "Cherry is not grown in Bangladesh. This class is included for model completeness only and should be treated as a misclassification signal in the Bangladesh deployment.",
+  "summary_bn": "বাংলাদেশে চেরি হয় না। শুধু মডেলের পূর্ণতার জন্য রাখা; বাংলাদেশে এই ফলাফলকে ভুল শনাক্তকরণের সংকেত হিসেবেই দেখা উচিত।",
+  "symptoms_en": [
+    "White powdery patches on leaves and shoots"
+  ],
+  "symptoms_bn": [
+    "পাতা ও ডগায় সাদা গুঁড়ার মতো ছোপ"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "This result is not possible in Bangladesh",
+      "detail": "Cherry is not grown here. Retake the photo of a clearer leaf and rescan."
+    },
+    {
+      "step": 2,
+      "title": "If the leaf has white powder, it is something else",
+      "detail": "White powder on a Bangladeshi leaf is much more likely to be powdery mildew of cucurbits, mango or beans. Tell the app the crop name if you can."
+    },
+    {
+      "step": 3,
+      "title": "Call 16123 if unsure",
+      "detail": "Take a sample leaf to your Upazila Agriculture Office."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "বাংলাদেশে এই ফলাফল সম্ভব নয়",
+      "detail": "এখানে চেরি হয় না। পরিষ্কার একটা পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 2,
+      "title": "পাতায় সাদা গুঁড়া থাকলে সেটা অন্য কিছু",
+      "detail": "বাংলাদেশের কোনো পাতায় সাদা গুঁড়া থাকলে তা সম্ভবত কুমড়া জাতীয় ফসল, আম বা শিমের পাউডারি মিলডিউ। পারলে অ্যাপে ফসলের নামটা বলে দিন।"
+    },
+    {
+      "step": 3,
+      "title": "নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন",
+      "detail": "একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "cultural_control_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "organic_alternatives_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "fertilizer_advice_en": "Not applicable. Identify the actual crop first.",
+  "fertilizer_advice_bn": "প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended for this class in Bangladesh.",
+  "safety_warning_bn": "বাংলাদেশে এই শ্রেণির জন্য কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment recommended. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার পরামর্শ নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 to identify your crop.",
+  "when_to_call_helpline_bn": "আপনার ফসল চিনতে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Not applicable — retake the photo.",
+  "expected_outcome_bn": "প্রযোজ্য নয় — আবার ছবি তুলুন।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "BBS Yearbook of Agricultural Statistics 2024 (no cherry production); PlantVillage class list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS — recommend suppressing this class entirely in the Bangladesh deployment.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

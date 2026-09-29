@@ -1,0 +1,168 @@
+{
+  "class_name": "Corn_(maize)___healthy",
+  "kb_key": "healthy_maize",
+  "crop_en": "Maize",
+  "crop_bn": "ভুট্টা",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Maize in Bangladesh usually stays healthy if you keep to the FRG fertiliser plan and watch the leaves around the cob at tasselling.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। এফআরজি অনুযায়ী সার দিলে আর মোচা আসার সময় মোচার আশপাশের পাতা নজরে রাখলে বাংলাদেশে ভুট্টা সাধারণত সুস্থই থাকে।",
+  "symptoms_en": [
+    "Even green leaves with no lesions, pustules or streaks",
+    "Strong upright stalks, uniform plant height",
+    "No orange powder rubbing off on the fingers"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ, ফোস্কা বা রেখা নেই",
+    "কাণ্ড শক্ত ও সোজা, গাছের উচ্চতা সমান",
+    "হাত দিলে আঙুলে কমলা গুঁড়া লাগছে না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray. A prophylactic fungicide on healthy maize rarely pays for itself in Bangladesh."
+    },
+    {
+      "step": 2,
+      "title": "Check the ear leaf at tasselling",
+      "detail": "The leaves at and just above the cob produce most of the grain. Look at them specifically when the tassels emerge — that is the moment a fungicide decision is worth making."
+    },
+    {
+      "step": 3,
+      "title": "Keep to the fertiliser schedule",
+      "detail": "Maize is a heavy feeder. Follow FRG-2018 and split the urea top-dressing at knee-high and pre-tasselling stages."
+    },
+    {
+      "step": 4,
+      "title": "Watch for fall armyworm",
+      "detail": "Check the whorl for ragged windowpane feeding and sawdust-like frass. Fall armyworm is now the main maize pest in Bangladesh and needs different action from any disease."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "স্প্রে করবেন না। সুস্থ ভুট্টায় আগেভাগে ছত্রাকনাশক দিলে বাংলাদেশে সাধারণত খরচই উঠে না।"
+    },
+    {
+      "step": 2,
+      "title": "মোচা আসার সময় মোচার পাতা দেখুন",
+      "detail": "মোচার সমান ও তার ঠিক উপরের পাতাগুলোই দানার বেশিরভাগ খাবার তৈরি করে। মোচা বের হওয়ার সময় বিশেষভাবে ওই পাতাগুলো দেখুন — ছত্রাকনাশক দেবেন কিনা সেই সিদ্ধান্ত তখনই নিতে হয়।"
+    },
+    {
+      "step": 3,
+      "title": "সারের সময়সূচি মেনে চলুন",
+      "detail": "ভুট্টা বেশি খাবার চায়। এফআরজি-২০১৮ মেনে চলুন এবং হাঁটু সমান ও মোচা আসার আগে দুই কিস্তিতে ইউরিয়া উপরি প্রয়োগ করুন।"
+    },
+    {
+      "step": 4,
+      "title": "ফল আর্মিওয়ার্ম পোকা খেয়াল রাখুন",
+      "detail": "গাছের মাথার পাতার খাঁজে ছেঁড়াখোঁড়া জানালার মতো খাওয়ার দাগ ও কাঠের গুঁড়ার মতো বিষ্ঠা আছে কিনা দেখুন। ফল আর্মিওয়ার্ম এখন বাংলাদেশে ভুট্টার প্রধান পোকা, এর ব্যবস্থা রোগের চেয়ে আলাদা।"
+    }
+  ],
+  "cultural_control_en": [
+    "Rotate maize with other crops rather than growing it continuously",
+    "Plough in residue after harvest",
+    "Plant tolerant hybrids at the recommended spacing",
+    "Scout the whorl weekly for fall armyworm from the seedling stage",
+    "Keep the field weed-free in the first 45 days"
+  ],
+  "cultural_control_bn": [
+    "একই জমিতে বারবার ভুট্টা না করে পালা করে অন্য ফসল করুন",
+    "ফসল কাটার পর নাড়া চাষ দিয়ে মাটিতে মিশিয়ে দিন",
+    "সুপারিশকৃত দূরত্বে সহনশীল হাইব্রিড লাগান",
+    "চারা অবস্থা থেকেই সপ্তাহে একবার গাছের মাথার খাঁজে ফল আর্মিওয়ার্ম আছে কিনা দেখুন",
+    "প্রথম ৪৫ দিন জমি আগাছামুক্ত রাখুন"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Well-rotted cowdung or compost before sowing",
+    "Pheromone traps for fall armyworm monitoring",
+    "Encourage natural enemies by avoiding routine insecticide"
+  ],
+  "organic_alternatives_bn": [
+    "বপনের আগে পচা গোবর বা কম্পোস্ট",
+    "ফল আর্মিওয়ার্ম নজরদারির জন্য ফেরোমন ফাঁদ",
+    "নিয়মিত কীটনাশক এড়িয়ে উপকারী পোকা বাঁচান"
+  ],
+  "fertilizer_advice_en": "Maize needs more nitrogen than most crops. Follow BARC FRG-2018 for your soil, apply the full basal TSP, MoP, gypsum and zinc, and split urea into two or three top-dressings up to pre-tasselling. Zinc deficiency is common in Bangladesh maize soils and causes white striping on young leaves.",
+  "fertilizer_advice_bn": "বেশিরভাগ ফসলের চেয়ে ভুট্টার নাইট্রোজেন বেশি লাগে। আপনার মাটির জন্য বিএআরসি এফআরজি-২০১৮ মেনে চলুন, পুরো টিএসপি, এমওপি, জিপসাম ও জিংক জমি তৈরির সময় দিন, আর মোচা আসার আগ পর্যন্ত ২-৩ কিস্তিতে ইউরিয়া দিন। বাংলাদেশের ভুট্টার জমিতে জিংকের ঘাটতি সাধারণ, এতে কচি পাতায় সাদা ডোরা পড়ে।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, labelled and away from food, water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তালাবদ্ধ, লেবেলসহ এবং খাবার, পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if you see lesions on the ear leaf, white striping on young leaves (zinc deficiency), or fall armyworm damage in the whorl.",
+  "when_to_call_helpline_bn": "মোচার পাতায় দাগ দেখলে, কচি পাতায় সাদা ডোরা (জিংকের ঘাটতি) দেখলে, অথবা গাছের মাথায় ফল আর্মিওয়ার্মের ক্ষতি দেখলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With the FRG fertiliser plan, correct spacing and weekly scouting, Bangladeshi Rabi maize normally reaches harvest with a green upper canopy and full cobs.",
+  "expected_outcome_bn": "এফআরজি অনুযায়ী সার, ঠিক দূরত্ব আর সপ্তাহে একবার জমি দেখলে বাংলাদেশের রবি ভুট্টা সাধারণত সবুজ পাতা ও ভরা মোচা নিয়েই ফসল তোলা পর্যন্ত পৌঁছায়।",
+  "related_shop_products": [
+    "Urea 50kg bag",
+    "TSP 50kg bag",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Zinc sulphate monohydrate 1kg",
+    "Fall armyworm pheromone trap"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd); BARI maize production guidance; BBS Yearbook of Agricultural Statistics 2024 (maize area and production)",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Healthy class — zero pesticide recommendations. Fall armyworm scouting is included because it is now the dominant maize problem in Bangladesh and a farmer opening a healthy-leaf result should still be pointed at it.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Urea 50kg bag",
+      "sku": "FERT-0003",
+      "name_en": "Urea 46% N 50kg",
+      "category": "fertilizer",
+      "match_score": 0.758,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Zinc sulphate monohydrate 1kg",
+      "sku": "FERT-0017",
+      "name_en": "Zinc sulphate monohydrate 33% Zn 1kg",
+      "category": "fertilizer",
+      "match_score": 1.212,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Fall armyworm pheromone trap",
+      "sku": "EQ-0068",
+      "name_en": "Fall armyworm pheromone trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

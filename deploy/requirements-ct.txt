@@ -1,0 +1,8 @@
+numpy
+pillow
+scikit-learn
+fastapi
+uvicorn[standard]
+python-multipart
+google-auth
+opencv-python-headless

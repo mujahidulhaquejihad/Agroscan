@@ -1,0 +1,315 @@
+{
+  "class_name": "Potato___Late_blight",
+  "kb_key": "late_blight",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Late blight",
+  "disease_bn": "আলুর নাবি ধ্বসা রোগ",
+  "pathogen": "Phytophthora infestans",
+  "severity": "high",
+  "summary_en": "Late blight is the most destructive potato disease in Bangladesh and can destroy a whole field in 7-10 days in foggy December-January weather. It is a race against time: preventive spraying before the fog sets in saves the crop, spraying after the field turns black does not.",
+  "summary_bn": "নাবি ধ্বসা বাংলাদেশে আলুর সবচেয়ে ভয়ংকর রোগ। ডিসেম্বর-জানুয়ারির কুয়াশায় ৭-১০ দিনেই পুরো জমি শেষ করে দিতে পারে। এটা সময়ের সাথে দৌড় — কুয়াশা পড়ার আগেই প্রতিরোধমূলক স্প্রে করলে ফসল বাঁচে, জমি কালো হয়ে যাওয়ার পর স্প্রে করে লাভ নেই।",
+  "symptoms_en": [
+    "Water-soaked dark green to blackish-brown patches on leaves, usually starting at the leaf tip or edge",
+    "In the early morning a white downy fungal ring on the underside of the lesion, right at the edge of the dead tissue",
+    "Lesions spread fast in fog; whole leaves collapse and the field smells of rotting potato",
+    "Dark brown to black lesions on stems and petioles that girdle and break them",
+    "Firm reddish-brown rot spreading irregularly from the tuber skin inwards; infected tubers rot in storage",
+    "Explodes when night temperature is 10-20°C with fog or drizzle and long leaf wetness"
+  ],
+  "symptoms_bn": [
+    "পাতায় ভেজা ভেজা গাঢ় সবুজ থেকে কালচে বাদামি দাগ, সাধারণত পাতার আগা বা কিনারা থেকে শুরু হয়",
+    "খুব ভোরে দাগের নিচের পিঠে, মরা অংশের ঠিক কিনারায় সাদা তুলার মতো ছত্রাকের বলয় দেখা যায়",
+    "কুয়াশায় দাগ খুব দ্রুত ছড়ায়; পুরো পাতা ঢলে পড়ে, জমিতে পচা আলুর গন্ধ আসে",
+    "কাণ্ড ও বোঁটায় গাঢ় বাদামি-কালো দাগ পড়ে, ওখান থেকে ভেঙে যায়",
+    "আলুর খোসা থেকে ভেতরের দিকে শক্ত লালচে-বাদামি পচন; আক্রান্ত আলু গুদামে পচে যায়",
+    "রাতে ১০-২০ ডিগ্রি সেলসিয়াস তাপমাত্রা, কুয়াশা বা গুঁড়ি বৃষ্টি আর পাতা অনেকক্ষণ ভেজা থাকলে রোগ বিস্ফোরিত হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray today, not tomorrow",
+      "detail": "Late blight doubles roughly every 2 days in fog. A spray today is worth three sprays next week. If you see the first water-soaked patches, spray the same day."
+    },
+    {
+      "step": 2,
+      "title": "Switch to a systemic + contact mix",
+      "detail": "Once lesions are visible, a contact fungicide alone is not enough. Use a systemic combination such as metalaxyl + mancozeb or cymoxanil + mancozeb, then go back to contact products for follow-up sprays."
+    },
+    {
+      "step": 3,
+      "title": "Remove and bury the worst plants",
+      "detail": "Cut out badly infected plants and bury them at least 30 cm deep away from the field or burn them. Do not leave them on the bund — they keep producing spores."
+    },
+    {
+      "step": 4,
+      "title": "Stop overhead irrigation",
+      "detail": "Do not irrigate by flooding or sprinkling while the disease is active. Wet leaves are what the disease needs. Irrigate in the morning, never in the evening."
+    },
+    {
+      "step": 5,
+      "title": "Earth up the ridges",
+      "detail": "Pull soil up over the tubers so spores washing down from the leaves cannot reach them. This is what prevents tuber rot in storage."
+    },
+    {
+      "step": 6,
+      "title": "Plan the harvest",
+      "detail": "If more than half the canopy is dead, cut and remove the haulm (tops), wait 10-14 days for the skin to set, then harvest on a dry day. Do not harvest wet — wet infected tubers rot the whole store."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আজই স্প্রে করুন, কালকে নয়",
+      "detail": "কুয়াশায় এই রোগ প্রতি ২ দিনে প্রায় দ্বিগুণ হয়। আজকের একটা স্প্রে আগামী সপ্তাহের তিনটা স্প্রের সমান। প্রথম ভেজা দাগ দেখলে সেদিনই স্প্রে করুন।"
+    },
+    {
+      "step": 2,
+      "title": "সিস্টেমিক + স্পর্শক ওষুধ মিশিয়ে দিন",
+      "detail": "দাগ দেখা দিলে শুধু স্পর্শক ছত্রাকনাশকে কাজ হবে না। মেটালাক্সিল + ম্যানকোজেব বা সাইমোক্সানিল + ম্যানকোজেব জাতীয় মিশ্র ওষুধ দিন, তারপরের স্প্রেগুলোতে আবার স্পর্শক ওষুধে ফিরে যান।"
+    },
+    {
+      "step": 3,
+      "title": "বেশি আক্রান্ত গাছ তুলে পুঁতে ফেলুন",
+      "detail": "খারাপভাবে আক্রান্ত গাছ কেটে জমি থেকে দূরে অন্তত ৩০ সেন্টিমিটার গভীরে পুঁতে ফেলুন বা পুড়িয়ে দিন। আইলে ফেলে রাখবেন না — ওখান থেকেই জীবাণু ছড়াতে থাকে।"
+    },
+    {
+      "step": 4,
+      "title": "উপর দিয়ে সেচ বন্ধ করুন",
+      "detail": "রোগ চলাকালীন প্লাবন বা ঝর্ণা সেচ দেবেন না। পাতা ভেজা থাকাটাই এই রোগের দরকার। সেচ দিলে সকালে দিন, সন্ধ্যায় কখনো নয়।"
+    },
+    {
+      "step": 5,
+      "title": "গোড়ায় মাটি তুলে দিন",
+      "detail": "আলুর উপর মাটি তুলে দিন যাতে পাতা থেকে ধুয়ে আসা জীবাণু আলুতে না পৌঁছায়। গুদামে আলু পচা ঠেকাতে এটাই মূল কাজ।"
+    },
+    {
+      "step": 6,
+      "title": "আলু তোলার পরিকল্পনা করুন",
+      "detail": "অর্ধেকের বেশি গাছ মরে গেলে গাছের উপরের অংশ কেটে সরিয়ে ফেলুন, ১০-১৪ দিন অপেক্ষা করে খোসা শক্ত হলে শুকনো দিনে আলু তুলুন। ভেজা অবস্থায় তুলবেন না — ভেজা আক্রান্ত আলু পুরো গুদাম পচিয়ে দেয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Plant only certified, blight-free seed tubers from BADC or a licensed dealer",
+    "Plant early (mid-October to early November) so the crop bulks before peak fog",
+    "Use tolerant varieties where available; Diamant and Cardinal are widely grown but are not resistant",
+    "Keep wide ridges and good drainage so the canopy dries quickly",
+    "Do not plant potato next to a tomato field — the same pathogen moves between them",
+    "Rotate away from potato and tomato for at least 2 years on badly affected land",
+    "Destroy volunteer potato plants and cull piles, which carry the pathogen between seasons",
+    "Follow the national late blight forecast/warning advisories issued during the Rabi season"
+  ],
+  "cultural_control_bn": [
+    "বিএডিসি বা লাইসেন্সধারী দোকান থেকে সার্টিফাইড, রোগমুক্ত বীজ আলু লাগান",
+    "আগাম লাগান (অক্টোবরের মাঝামাঝি থেকে নভেম্বরের শুরু) যাতে বেশি কুয়াশা পড়ার আগেই আলু বড় হয়ে যায়",
+    "সম্ভব হলে সহনশীল জাত নিন; ডায়মন্ট ও কার্ডিনাল বেশি চাষ হয় তবে এগুলো প্রতিরোধী নয়",
+    "চওড়া আইল ও ভালো নিকাশ রাখুন যাতে গাছ তাড়াতাড়ি শুকায়",
+    "টমেটোর জমির পাশে আলু লাগাবেন না — একই জীবাণু দুই ফসলের মধ্যে যাতায়াত করে",
+    "খারাপভাবে আক্রান্ত জমিতে অন্তত ২ বছর আলু ও টমেটো না করে অন্য ফসল করুন",
+    "আগের ফসলের পড়ে থাকা আলুর গাছ ও ফেলে দেওয়া আলুর স্তূপ নষ্ট করুন, এগুলোতেই জীবাণু বেঁচে থাকে",
+    "রবি মৌসুমে জারি করা নাবি ধ্বসার পূর্বাভাস ও সতর্কবার্তা মেনে চলুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water (about 20-25 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০-২৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal at full canopy",
+      "application_method_en": "Knapsack spray covering both leaf surfaces until just wet, not dripping. Start before symptoms appear, as soon as fog begins. Re-spray if rain or heavy dew washes it off within 4 hours.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার দুই পিঠ ভিজিয়ে দিন, তবে যেন গড়িয়ে না পড়ে। কুয়াশা শুরু হলেই, দাগ দেখার আগে থেকেই শুরু করুন। ৪ ঘণ্টার মধ্যে বৃষ্টি বা ভারী কুয়াশায় ধুয়ে গেলে আবার স্প্রে করুন।",
+      "timing_en": "PREVENTIVE. Start at 30-35 days after planting or as soon as fog begins, and repeat every 7-10 days. This is the backbone spray of the season.",
+      "timing_bn": "প্রতিরোধমূলক। রোপণের ৩০-৩৫ দিন পর অথবা কুয়াশা শুরু হওয়া মাত্র শুরু করুন, ৭-১০ দিন পর পর দিন। মৌসুমের মূল স্প্রে এটাই।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন আলু তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP",
+        "Emcozeb 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb is registered in Bangladesh, including in the combination product Galben M (AP-374, ACI Formulations Ltd) for late blight of potato and tomato. Verify the straight-mancozeb brand's AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    },
+    {
+      "product_name_en": "Metalaxyl 8% + Mancozeb 64% WP",
+      "product_name_bn": "মেটালাক্সিল ৮% + ম্যানকোজেব ৬৪% ডব্লিউপি",
+      "active_ingredient": "Metalaxyl (or Benalaxyl) + Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water (about 20 g per 10 litre sprayer load); label rate approximately 0.2% of formulated product",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০ গ্রাম); লেবেল অনুযায়ী প্রায় ০.২% দ্রবণ",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with full canopy coverage. The systemic part moves inside the leaf, so it also protects new growth for a few days.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছ ভিজিয়ে দিন। এর সিস্টেমিক অংশ পাতার ভেতরে ঢুকে যায়, তাই কয়েক দিন নতুন পাতাও সুরক্ষা পায়।",
+      "timing_en": "CURATIVE/knockdown. Use at the first visible lesions, or as the first spray when the disease is already in the neighbourhood. Use a maximum of 2-3 times per season and always alternate with a contact fungicide.",
+      "timing_bn": "রোগ দমনের ওষুধ। প্রথম দাগ দেখা মাত্র, অথবা আশপাশের জমিতে রোগ থাকলে প্রথম স্প্রে হিসেবে দিন। মৌসুমে সর্বোচ্চ ২-৩ বার, এবং সবসময় স্পর্শক ছত্রাকনাশকের সাথে পালা করে দিন।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not harvest for 14 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৪ দিন আলু তুলবেন না।",
+      "brands_available_bd": [
+        "Galben M",
+        "Ridomil Gold MZ 68 WG",
+        "Krilaxyl Gold"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Galben M (Benalaxyl 8% + Mancozeb 64%), AP-374, ACI Formulations Limited, registered for late blight of potato and tomato in the DAE Plant Protection Wing registered pesticide list.",
+      "treatment_type": "curative",
+      "caution_en": "Phytophthora develops resistance to phenylamide fungicides (metalaxyl, benalaxyl) quickly. Never use it alone, never more than 3 times a season, and never as the routine weekly spray.",
+      "caution_bn": "মেটালাক্সিল/বেনালাক্সিল জাতীয় ওষুধ এই রোগের জীবাণু দ্রুত সহ্য করা শিখে ফেলে। কখনো একা ব্যবহার করবেন না, মৌসুমে ৩ বারের বেশি নয়, আর প্রতি সপ্তাহের নিয়মিত স্প্রে হিসেবে কখনো নয়।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    },
+    {
+      "product_name_en": "Cymoxanil 8% + Mancozeb 64% WP",
+      "product_name_bn": "সাইমোক্সানিল ৮% + ম্যানকোজেব ৬৪% ডব্লিউপি",
+      "active_ingredient": "Cymoxanil + Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water (about 20-25 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০-২৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray, full coverage. Good rotation partner for metalaxyl so resistance does not build up.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে দিন। মেটালাক্সিলের সাথে পালা করে দেওয়ার জন্য ভালো, এতে রোগের প্রতিরোধ ক্ষমতা গড়ে ওঠে না।",
+      "timing_en": "At first lesions, or as an alternate knockdown spray in a heavy blight year.",
+      "timing_bn": "প্রথম দাগ দেখা মাত্র, অথবা রোগ বেশি হওয়ার বছরে মেটালাক্সিলের বদলে পালা করে।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not harvest for 14 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৪ দিন আলু তুলবেন না।",
+      "brands_available_bd": [
+        "Curzate M8",
+        "Melody Duo",
+        "Secure 60 WG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Cymoxanil + mancozeb combinations are marketed in Bangladesh for potato late blight; verify brand-level AP number against the current PPW list.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Copper oxychloride 50% WP at 3 g/L or Bordeaux mixture 1% as a protectant — accepted in organic systems but weaker and needs more frequent application",
+    "Trichoderma harzianum applied to soil at planting reduces early inoculum; Bangladeshi trials show useful but partial suppression of both late and early blight",
+    "Removing infected foliage and burying it deeply is the most reliable non-chemical action",
+    "No organic option will stop a full late blight epidemic in December fog — plan preventively rather than relying on these"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতি লিটার পানিতে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি বা ১% বোর্দো মিশ্রণ প্রতিরোধক হিসেবে — জৈব চাষে চলে, তবে দুর্বল এবং ঘন ঘন দিতে হয়",
+    "রোপণের সময় মাটিতে ট্রাইকোডার্মা হারজিয়ানাম দিলে শুরুর দিকের জীবাণু কমে; বাংলাদেশের গবেষণায় নাবি ও আগাম ধ্বসা দুটোতেই কিছুটা উপকার পাওয়া গেছে",
+    "আক্রান্ত পাতা তুলে গভীরে পুঁতে ফেলাই ওষুধ ছাড়া সবচেয়ে নির্ভরযোগ্য কাজ",
+    "ডিসেম্বরের কুয়াশায় পুরোদমে রোগ লাগলে কোনো জৈব ওষুধেই তা থামবে না — এগুলোর ভরসায় না থেকে আগেভাগে প্রতিরোধমূলক ব্যবস্থা নিন"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen — soft, lush foliage is far more susceptible and stays wet longer. Apply the full potash dose from FRG-2018; potassium thickens cell walls and reduces both foliar and tuber infection. Do not top-dress urea once blight has started.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না — নরম, সতেজ পাতায় রোগ অনেক বেশি লাগে এবং পাতা বেশিক্ষণ ভেজা থাকে। এফআরজি-২০১৮ অনুযায়ী পুরো পটাশ মাত্রা দিন; পটাশ কোষের দেয়াল মোটা করে, পাতা ও আলু দুটোতেই রোগ কম হয়। রোগ শুরু হয়ে গেলে আর ইউরিয়া উপরি প্রয়োগ করবেন না।",
+  "safety_warning_en": "Wear gloves, mask, goggles, full-sleeve shirt and long trousers. Mancozeb powder irritates eyes and airways — do not open the pack in a breeze or tip powder near your face. Do not eat, drink or smoke while spraying. Spray with the wind behind you. Wash hands, face and clothes with soap afterwards; wash spray clothes separately from family clothes. Do not spray during flowering hours when bees are active. Never rinse the sprayer into a pond, canal or drinking-water source.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। ম্যানকোজেব গুঁড়া চোখ ও শ্বাসনালিতে জ্বালা ধরায় — বাতাসে প্যাকেট খুলবেন না, মুখের কাছে গুঁড়া ঢালবেন না। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে হাত, মুখ ও কাপড় ধুয়ে ফেলুন; স্প্রের কাপড় পরিবারের কাপড়ের সাথে ধোবেন না। মৌমাছি চলাচলের সময় ফুল ফোটা অবস্থায় স্প্রে করবেন না। পুকুর, খাল বা খাওয়ার পানির উৎসে কখনো স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only pesticides registered by the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy sealed packs with a Bangla label from a licensed dealer and keep the receipt. Respect the pre-harvest interval — potato sold before the PHI can carry residues above the limits in the Food Safety (Contaminants, Toxins and Harmful Residues) Regulations 2017. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই-র উদ্ভিদ সংরক্ষণ উইং নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে বাংলা লেবেলযুক্ত সিলগালা প্যাকেট কিনুন, রসিদ রাখুন। পিএইচআই (ফসল তোলার নিরাপদ সময়) মেনে চলুন — সময়ের আগে তোলা আলুতে খাদ্য নিরাপত্তা বিধিমালা ২০১৭ এর নির্ধারিত সীমার বেশি ওষুধের অবশিষ্টাংশ থেকে যেতে পারে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 immediately if lesions are spreading despite two sprays, if more than 20% of the canopy is affected, or if blight has appeared in several fields in your area. Late blight is a village-level emergency, not an individual problem.",
+  "when_to_call_helpline_bn": "দুইবার স্প্রের পরও রোগ ছড়াতে থাকলে, ২০% এর বেশি গাছ আক্রান্ত হলে, অথবা এলাকার কয়েকটি জমিতে রোগ দেখা দিলে সাথে সাথে ১৬১২৩ নম্বরে ফোন করুন। নাবি ধ্বসা একজনের সমস্যা নয়, পুরো গ্রামের জরুরি অবস্থা।",
+  "expected_outcome_en": "If you start preventive sprays before symptoms and keep the 7-10 day schedule, the crop usually comes through with little loss. If you start after lesions appear, expect to lose 15-40% depending on how fast you act. Once more than half the canopy is dead, the tubers stop bulking and no spray will change that — switch to protecting the tubers for storage.",
+  "expected_outcome_bn": "দাগ দেখার আগেই প্রতিরোধমূলক স্প্রে শুরু করে ৭-১০ দিন পর পর চালিয়ে গেলে সাধারণত ক্ষতি খুব কম হয়। দাগ দেখার পর শুরু করলে কত দ্রুত ব্যবস্থা নিলেন তার উপর ১৫-৪০% ক্ষতি হতে পারে। অর্ধেকের বেশি গাছ মরে গেলে আলু আর বাড়ে না, কোনো স্প্রেতেই তা ফিরবে না — তখন গুদামজাত করার জন্য আলু বাঁচানোর দিকে মন দিন।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Metalaxyl + Mancozeb 68% WP 100g",
+    "Cymoxanil + Mancozeb 72% WP 100g",
+    "Knapsack sprayer 16L manual",
+    "Nitrile spray gloves",
+    "Spray mask with cartridge",
+    "MoP (Muriate of Potash) 50kg bag"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Galben M, AP-374, ACI Formulations Ltd — potato/tomato late blight); Bangladeshi field trials on fungicide efficacy against potato late blight (ggfjournals.com/assets/uploads/10-151.pdf; researchgate.net 'Management of late blight of potato through fungicides'); Trichoderma harzianum biological control trial, ScienceDirect S2773078623000286; Potato Late Blight Warning System in Bangladesh (potatocongress.org); BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Galben M AP-374 is verified from the published PPW list. Other brand AP numbers are not individually verified. Per-litre doses are standard Bangladesh extension rates; verify against the physical label before display.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Metalaxyl + Mancozeb 68% WP 100g",
+      "sku": "PEST-0006",
+      "name_en": "Metalaxyl + Mancozeb 8% + 64% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.092,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Cymoxanil + Mancozeb 72% WP 100g",
+      "sku": "PEST-0008",
+      "name_en": "Cymoxanil + Mancozeb 8% + 64% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.081,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nitrile spray gloves",
+      "sku": "EQ-0011",
+      "name_en": "Nitrile spray gloves (pair)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

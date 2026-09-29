@@ -245,6 +245,7 @@
         top3: crop.top3 || [],
         source: crop.source,
         user_selected: !!crop.user_selected,
+        is_other: !!crop.is_other,
       },
       models: (d.models || []).map((m) => ({
         model: m.model,
@@ -358,13 +359,19 @@
     // Stage 2 crop
     if (e.crop && (e.crop.crop || (e.crop.top3 && e.crop.top3.length))) {
       html += `<div class="photo-hist-section"><h5>${T().t("leaf_type")}</h5>` +
-        `<p><strong>${T().t("crop_label")}:</strong> ${escHtml(e.crop.crop || "")}` +
-        (e.crop.confidence != null ? ` (${pctHist(e.crop.confidence)})` : "") +
+        `<p><strong>${T().t("crop_label")}:</strong> ${escHtml(
+          String(e.crop.crop || "").toLowerCase() === "other" ? T().t("crop_other") : (e.crop.crop || "")
+        )}` +
+        (e.crop.confidence != null && String(e.crop.crop || "").toLowerCase() !== "other"
+          ? ` (${pctHist(e.crop.confidence)})`
+          : "") +
         `</p>`;
       if (e.crop.top3 && e.crop.top3.length) {
         html += "<ul class='photo-hist-top3'>";
-        e.crop.top3.slice(0, 3).forEach((c) => {
-          html += `<li>${escHtml(c.crop || "")} — ${pctHist(c.confidence)}</li>`;
+        e.crop.top3.forEach((c) => {
+          const other = String(c.crop || "").toLowerCase() === "other";
+          html += `<li>${escHtml(other ? T().t("crop_other") : (c.crop || ""))}` +
+            (other ? "" : ` — ${pctHist(c.confidence)}`) + `</li>`;
         });
         html += "</ul>";
       }
@@ -524,18 +531,15 @@
     if (ok && !en.length) { en.push("Good conditions for spraying."); bn.push("\u09B8\u09CD\u09AA\u09CD\u09B0\u09C7\u09B0 \u099C\u09A8\u09CD\u09AF \u0989\u09AA\u09AF\u09C1\u0995\u09CD\u09A4 \u0986\u09AC\u09B9\u09BE\u0993\u09AF\u09BC\u09BE\u0964"); }
     return { ok, msg: (T().lang === "bn" ? bn : en).join(" ") };
   }
-  function loadWeather() {
+  function weatherFromCoords(la, lo) {
     const box = $("weatherBody");
+    if (!box) return;
     box.innerHTML = `<p class="muted small">${T().t("weather_loading")}</p>`;
-    if (!navigator.geolocation) { box.innerHTML = `<p class="muted small">${T().t("weather_geo_unsupported")}</p>`; return; }
-    navigator.geolocation.getCurrentPosition(async (pos) => {
-      const { latitude: la, longitude: lo } = pos.coords;
-      try {
-        const u = `https://api.open-meteo.com/v1/forecast?latitude=${la}&longitude=${lo}&current=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m&daily=precipitation_probability_max&timezone=auto`;
-        const d = await (await fetch(u)).json();
-        const c = d.current, rp = (d.daily.precipitation_probability_max || [0])[0];
-        const adv = sprayAdvice(c.temperature_2m, c.wind_speed_10m, rp, c.precipitation);
-        box.innerHTML = `
+    const u = `https://api.open-meteo.com/v1/forecast?latitude=${la}&longitude=${lo}&current=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m&daily=precipitation_probability_max&timezone=auto`;
+    fetch(u).then((r) => r.json()).then((d) => {
+      const c = d.current, rp = (d.daily.precipitation_probability_max || [0])[0];
+      const adv = sprayAdvice(c.temperature_2m, c.wind_speed_10m, rp, c.precipitation);
+      box.innerHTML = `
           <div class="wx-grid">
             <div><b>${c.temperature_2m}\u00B0C</b><span>${T().t("wx_temp")}</span></div>
             <div><b>${c.relative_humidity_2m}%</b><span>${T().t("wx_humidity")}</span></div>
@@ -543,7 +547,42 @@
             <div><b>${rp}%</b><span>${T().t("wx_rain")}</span></div>
           </div>
           <div class="spray ${adv.ok ? "ok" : "no"}">${adv.ok ? "\u2705" : "\u26A0\uFE0F"} ${adv.msg}</div>`;
-      } catch { box.innerHTML = `<p class="muted small">${T().t("weather_unavailable")}</p>`; }
+    }).catch(() => {
+      box.innerHTML = `<p class="muted small">${T().t("weather_unavailable")}</p>`;
+    });
+  }
+  function readCachedGeo() {
+    var g = window.AgroScanGeo && window.AgroScanGeo.get && window.AgroScanGeo.get();
+    if (g && g.lat != null) return g;
+    try { g = JSON.parse(localStorage.getItem("agroscan_geo_v1") || "null"); } catch (e) { g = null; }
+    if (g && g.lat != null) return g;
+    try { g = JSON.parse(localStorage.getItem("agroscan_place_v1") || "null"); } catch (e) { g = null; }
+    if (g && g.lat != null) return g;
+    return null;
+  }
+  function loadWeather() {
+    const box = $("weatherBody");
+    if (!box) return;
+    box.innerHTML = `<p class="muted small">${T().t("weather_loading")}</p>`;
+    const g = readCachedGeo();
+    if (g && g.lat != null) {
+      weatherFromCoords(g.lat, g.lng);
+      if (window.AgroScanGeo && window.AgroScanGeo.locate) window.AgroScanGeo.locate(function () {}, function () {});
+      return;
+    }
+    if (window.AgroScanGeo && window.AgroScanGeo.locate) {
+      window.AgroScanGeo.locate(function (pos) {
+        if (pos && pos.lat != null) weatherFromCoords(pos.lat, pos.lng);
+      }, function () {
+        box.innerHTML = `<button id="wxEnable" class="btn btn-ghost btn-sm">${T().t("weather_enable")}</button>`;
+        const b = box.querySelector("#wxEnable");
+        if (b) b.addEventListener("click", loadWeather);
+      });
+      return;
+    }
+    if (!navigator.geolocation) { box.innerHTML = `<p class="muted small">${T().t("weather_geo_unsupported")}</p>`; return; }
+    navigator.geolocation.getCurrentPosition((pos) => {
+      weatherFromCoords(pos.coords.latitude, pos.coords.longitude);
     }, () => {
       box.innerHTML = `<button id="wxEnable" class="btn btn-ghost btn-sm">${T().t("weather_enable")}</button>`;
       box.querySelector("#wxEnable").addEventListener("click", loadWeather);
@@ -845,6 +884,11 @@
       bind("downloadBtn", downloadReport);
       bind("shareBtn", shareReport);
       setListenLabel();
+      loadWeather();
+      document.addEventListener("agroscan-geo", (ev) => {
+        const d = ev.detail || {};
+        if (d.lat != null) weatherFromCoords(d.lat, d.lng);
+      });
       document.addEventListener("langchange", () => {
         renderHistory(); renderPhotoHistory(); renderCalendar(); renderTip();
         loadLibrary();

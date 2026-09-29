@@ -80,6 +80,11 @@ def is_variety_class(name: str) -> bool:
     return "variety" in (name or "").lower()
 
 
+def is_other_crop(crop: Optional[str]) -> bool:
+    """True when Level-2 is the out-of-set 'Other' class (not a trained crop)."""
+    return (crop or "").strip().lower() in {"other", "unknown", "none", "n/a"}
+
+
 def crop_from_class(name: str) -> str:
     """Level-2 leaf type: crop/plant name from a disease class folder."""
     name = merge_class_name(name)
@@ -100,6 +105,8 @@ def crop_from_class(name: str) -> str:
 
 def classes_for_crop(class_names: Iterable[str], crop: str) -> List[int]:
     """Indices of Level-3 classes that belong to a Level-2 crop."""
+    if is_other_crop(crop):
+        return []
     want = (crop or "").strip().lower()
     hits = [i for i, n in enumerate(class_names) if crop_from_class(n).lower() == want]
     if hits:

@@ -7,6 +7,7 @@ Fallback: DISEASE_GUIDES + DISEASE_INFO.
 from __future__ import annotations
 
 import json
+import re
 from functools import lru_cache
 from pathlib import Path
 from typing import List, Optional, Set
@@ -18,6 +19,49 @@ from sklearn.metrics.pairwise import cosine_similarity
 from agroscan.config import AGROSCAN_PACK_DIR
 
 SECTION_ORDER = ("overview", "symptoms", "prevention", "treatment", "process")
+# Treatment pages mix 2–3 chemicals + organic + safety. One TF-IDF vector
+# buries option 2, and retrieve() used to cut at 2200 chars.
+_TREAT_SPLIT = re.compile(
+    r"\n(?=Chemical option \d+:|Organic / non-chemical options:|Safety:|Legal:|Pack notes:)"
+)
+
+
+def _section_bodies(section: str, body: str) -> List[str]:
+    """Split treatment into chemical / organic pieces; keep safety as one tail.
+
+    Header stays prepended to each product piece so TF-IDF still sees the crop.
+    Legal/notes do not compete with dose chunks for the top-k slots.
+    """
+    body = (body or "").strip()
+    if not body:
+        return []
+    if section != "treatment":
+        return [body]
+    bits = [p.strip() for p in _TREAT_SPLIT.split(body) if p.strip()]
+    if len(bits) <= 1:
+        return bits or [body]
+    header = ""
+    chems: List[str] = []
+    organic = ""
+    tail: List[str] = []
+    for p in bits:
+        if p.startswith("Chemical option"):
+            chems.append(p)
+        elif p.startswith("Organic /"):
+            organic = p
+        elif p.startswith(("Safety:", "Legal:", "Pack notes:")):
+            tail.append(p)
+        elif not header:
+            header = p
+        else:
+            tail.append(p)
+    prefix = f"{header}\n\n" if header else ""
+    out = [f"{prefix}{c}" for c in chems]
+    if organic:
+        out.append(f"{prefix}{organic}")
+    if tail:
+        out.append("\n\n".join(tail))
+    return out or [body]
 
 
 def _guide_text(key: str, guide: dict) -> str:
@@ -81,20 +125,19 @@ def _pack_chunks() -> List[dict]:
         )
         sections = doc.get("sections") or {}
         for section in SECTION_ORDER:
-            body = str(sections.get(section) or "").strip()
-            if not body:
-                continue
-            text = f"{aliases}\nSection: {section}\n{body}"
-            out.append(
-                {
-                    "key": class_name or kb_key,
-                    "kb_key": kb_key,
-                    "class_name": class_name,
-                    "section": section,
-                    "lang": lang,
-                    "text": text,
-                }
-            )
+            for i, body in enumerate(_section_bodies(section, str(sections.get(section) or ""))):
+                text = f"{aliases}\nSection: {section}\n{body}"
+                out.append(
+                    {
+                        "key": class_name or kb_key,
+                        "kb_key": kb_key,
+                        "class_name": class_name,
+                        "section": section,
+                        "piece": i,
+                        "lang": lang,
+                        "text": text,
+                    }
+                )
     return out
 
 
@@ -126,9 +169,11 @@ def _legacy_chunks() -> List[dict]:
 
 def _chunks() -> List[dict]:
     pack = _pack_chunks()
-    if pack:
-        return pack + _legacy_chunks()
-    return _legacy_chunks()
+    if not pack:
+        return _legacy_chunks()
+    pack_kb = {c.get("kb_key") for c in pack if c.get("kb_key")}
+    extra = [c for c in _legacy_chunks() if c.get("kb_key") not in pack_kb]
+    return pack + extra
 
 
 def clear_index_cache() -> None:
@@ -201,32 +246,44 @@ def retrieve(
     chunks, vectorizer, matrix = _index()
     if not chunks:
         return []
-    scores = cosine_similarity(vectorizer.transform([q]), matrix).ravel()
+    scores = cosine_similarity(vectorizer.transform([q]), matrix).ravel().astype(float)
     for i, chunk in enumerate(chunks):
-        scores[i] = float(scores[i]) + _section_boost(q, chunk.get("section") or "")
+        raw = float(scores[i])
+        # ponytail: section boost only on chunks that already match; else "spray" ranks every treatment page
+        if raw >= 0.04:
+            scores[i] = raw + _section_boost(q, chunk.get("section") or "")
+        else:
+            scores[i] = raw
     prefer = "bn" if (lang or "").lower().startswith("bn") else "en"
     order = np.argsort(scores)[::-1]
     picked: List[str] = []
     seen = set()
     allow = {str(x).lower() for x in (allow_keys or set()) if x}
 
+    floor = 0.08 if not allow else 0.015
     for want_lang in (prefer, None):
         for i in order:
-            if scores[i] < 0.015:
+            if scores[i] < floor:
                 break
             chunk = chunks[int(i)]
             if want_lang and chunk.get("lang") != want_lang:
                 continue
             if not _key_ok(chunk, allow):
                 continue
-            dedupe = (chunk.get("lang"), chunk.get("key"), chunk.get("section"))
+            dedupe = (
+                chunk.get("lang"),
+                chunk.get("key"),
+                chunk.get("section"),
+                chunk.get("piece", 0),
+            )
             if dedupe in seen:
                 continue
             seen.add(dedupe)
             text = chunk.get("text") or ""
-            # Prefer fuller treatment / process sections
-            limit = 2200 if chunk.get("section") in ("treatment", "process") else 1600
-            picked.append(text[:limit])
+            # Pack sections are already disease-sized; only cap leftover guide/info blobs.
+            if chunk.get("section") in ("guide", "info") and len(text) > 1600:
+                text = text[:1600]
+            picked.append(text)
             if len(picked) >= k:
                 return picked
     return picked

@@ -1,0 +1,88 @@
+{
+  "class_name": "Blueberry___healthy",
+  "kb_key": "healthy_blueberry",
+  "crop_en": "Blueberry",
+  "crop_bn": "ব্লুবেরি",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "bangladesh_relevance": "not_grown",
+  "bangladesh_note_en": "Blueberry is not grown in Bangladesh. It needs acidic soil and winter chilling that are not available here. A prediction of this class from a Bangladeshi photo is a misclassification.",
+  "bangladesh_note_bn": "বাংলাদেশে ব্লুবেরি হয় না। এর জন্য যে অম্লীয় মাটি ও শীত দরকার তা এখানে নেই। বাংলাদেশের ছবিতে এই ফলাফল এলে তা ভুল শনাক্তকরণ।",
+  "summary_en": "The leaf looks healthy and no disease was detected. Blueberry is not grown in Bangladesh, so this is almost certainly a misclassification — but no treatment is needed either way.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে, কোনো রোগ ধরা পড়েনি। বাংলাদেশে ব্লুবেরি হয় না, তাই এটি প্রায় নিশ্চিতভাবেই ভুল শনাক্তকরণ — তবে যাই হোক, কোনো চিকিৎসার দরকার নেই।",
+  "symptoms_en": [
+    "No disease symptoms visible"
+  ],
+  "symptoms_bn": [
+    "কোনো রোগের লক্ষণ দেখা যাচ্ছে না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No treatment needed",
+      "detail": "The leaf is healthy. Do not spray anything."
+    },
+    {
+      "step": 2,
+      "title": "Retake the photo for a useful result",
+      "detail": "Blueberry is not grown in Bangladesh. Photograph a single clear leaf in good light against a plain background and rescan."
+    },
+    {
+      "step": 3,
+      "title": "Call 16123 if you are still unsure",
+      "detail": "Take a sample leaf to the Upazila Agriculture Office rather than spraying on a guess."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো চিকিৎসার দরকার নেই",
+      "detail": "পাতা সুস্থ। কিছুই স্প্রে করবেন না।"
+    },
+    {
+      "step": 2,
+      "title": "কাজের ফলাফল পেতে আবার ছবি তুলুন",
+      "detail": "বাংলাদেশে ব্লুবেরি হয় না। সাদামাটা ব্যাকগ্রাউন্ডে ভালো আলোয় একটি পরিষ্কার পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 3,
+      "title": "এখনো নিশ্চিত না হলে ১৬১২৩",
+      "detail": "অনুমানে স্প্রে না করে একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "cultural_control_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "organic_alternatives_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "fertilizer_advice_en": "Not applicable. Identify the actual crop first.",
+  "fertilizer_advice_bn": "প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if you want help identifying your crop.",
+  "when_to_call_helpline_bn": "ফসল চিনতে সাহায্য চাইলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "No action needed.",
+  "expected_outcome_bn": "কিছু করার দরকার নেই।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "BBS Yearbook of Agricultural Statistics 2024 (no blueberry production); PlantVillage class list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS — recommend suppressing this class entirely in the Bangladesh deployment.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

@@ -10,6 +10,10 @@
     return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
   }
 
+  function page(name) {
+    return (cfg.appPath && cfg.appPath(name)) || (name === "home" || !name ? "/" : "/" + name);
+  }
+
   function getSession() {
     try { return JSON.parse(localStorage.getItem(KEY) || "null"); }
     catch (e) { return null; }
@@ -45,8 +49,8 @@
         else fail((data.detail && (typeof data.detail === "string" ? data.detail : data.detail.msg || JSON.stringify(data.detail))) || ("HTTP " + x.status));
       } catch (e) { fail("Bad response"); }
     };
-    x.onerror = function () { fail("Network error"); };
-    x.ontimeout = function () { fail("Request timed out"); };
+    x.onerror = function () { fail(T("auth_err_network")); };
+    x.ontimeout = function () { fail(T("auth_err_network")); };
     x.send(body ? JSON.stringify(body) : null);
   }
 
@@ -56,8 +60,8 @@
     var s = getSession();
     if (!s || !s.user) {
       area.innerHTML =
-        '<a href="/login" class="btn btn-outline btn-sm">' + T("auth_login") + '</a>' +
-        '<a href="/signup" class="btn btn-primary btn-sm">' + T("auth_signup") + '</a>';
+        '<a href="' + page("login") + '" class="btn btn-outline btn-sm">' + T("auth_login") + '</a>' +
+        '<a href="' + page("signup") + '" class="btn btn-primary btn-sm js-auth-signup">' + T("auth_signup") + '</a>';
       return;
     }
     var u = s.user;
@@ -65,11 +69,11 @@
     var displayName = u.provider === "guest" ? T("auth_guest") : (u.name || T("auth_user"));
     var badge = u.provider === "guest" ? '<span class="user-badge">' + T("auth_guest") + '</span>' : "";
     area.innerHTML =
-      '<div class="user-menu">' + pic +
-      '<a class="user-name user-account-link" href="/account" title="' + T("account_kicker") + '">' + displayName + "</a>" + badge +
-      '<a href="/account" class="btn btn-secondary btn-sm account-link-btn">' + T("account_kicker") + "</a>" +
-      '<a href="/logout" class="btn btn-ghost btn-sm auth-logout-btn" title="' + T("auth_logout") + '" aria-label="' + T("auth_logout") + '">' +
-      '<span class="auth-logout-icon" aria-hidden="true">&#128682;</span>' +
+      '<div class="user-menu">' +
+      '<a class="user-account-link" href="' + page("account") + '" title="' + T("account_kicker") + '">' +
+      pic + '<span class="user-name">' + displayName + "</span></a>" + badge +
+      '<a href="' + page("logout") + '" class="btn btn-ghost btn-sm auth-logout-btn" title="' + T("auth_logout") + '" aria-label="' + T("auth_logout") + '">' +
+      '<svg class="auth-logout-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 17v-3H3v-4h7V7l5 5-5 5zm10-14h-9v2h7v14h-7v2h9V3z"/></svg>' +
       '<span class="auth-logout-label">' + T("auth_logout") + "</span></a></div>";
   }
 
@@ -79,7 +83,7 @@
       xhrJson("POST", "/api/auth/logout", {}, function () {}, function () {});
     }
     clearSession();
-    if (window.location.pathname !== "/") window.location.href = "/login";
+    if (window.location.pathname.indexOf("login") < 0) window.location.href = page("login");
   }
 
   function loginGuest() {
@@ -87,15 +91,23 @@
       token: null,
       user: { name: "Guest", email: null, provider: "guest", picture: null },
     });
-    window.location.href = "/";
+    window.location.href = page("home");
   }
 
   function saveAuthResponse(data) {
+    if (!data || !data.token || !data.user) {
+      return;
+    }
     setSession({ token: data.token, user: data.user });
-    window.location.href = "/";
+    window.location.href = page("home");
   }
 
   function loginEmail(email, password, errEl) {
+    email = (email || "").trim();
+    if (!email || !password) {
+      if (errEl) { errEl.textContent = T("auth_err_required"); errEl.className = "auth-error"; }
+      return;
+    }
     xhrJson("POST", "/api/auth/login", { email: email, password: password }, saveAuthResponse, function (m) {
       if (errEl) { errEl.textContent = m; errEl.className = "auth-error"; }
     });
@@ -148,19 +160,17 @@
       xhrJson("POST", "/api/auth/google", {
         id_token: response.credential,
         client_id: cfg.GOOGLE_CLIENT_ID,
-      }, saveAuthResponse, function () {
-        setSession({
-          token: null,
-          user: { name: p.name, email: p.email, picture: p.picture, provider: "google" },
-        });
-        window.location.href = "/";
+      }, saveAuthResponse, function (m) {
+        if ($("authError")) {
+          $("authError").textContent = m || T("auth_err_google");
+          $("authError").className = "auth-error";
+        }
       });
     } else {
-      setSession({
-        token: null,
-        user: { name: p.name, email: p.email, picture: p.picture, provider: "google" },
-      });
-      window.location.href = "/";
+      if ($("authError")) {
+        $("authError").textContent = T("auth_err_google");
+        $("authError").className = "auth-error";
+      }
     }
   }
 
@@ -180,6 +190,8 @@
     function tryRender(n) {
       if (window.google && google.accounts && google.accounts.id) {
         google.accounts.id.initialize({ client_id: cfg.GOOGLE_CLIENT_ID, callback: googleCredential });
+        var locale = (window.AgroScanI18n && window.AgroScanI18n.lang === "bn") ? "bn" : "en";
+        el.innerHTML = "";
         google.accounts.id.renderButton(el, {
           type: "standard",
           theme: "outline",
@@ -187,6 +199,7 @@
           text: "continue_with",
           shape: "pill",
           width: 320,
+          locale: locale,
         });
       } else if (n < 30) {
         setTimeout(function () { tryRender(n + 1); }, 200);
@@ -241,7 +254,26 @@
     loginGuest: loginGuest,
   };
 
+  function rewriteStaticAuthLinks() {
+    var map = {
+      "/login": page("login"),
+      "/signup": page("signup"),
+      "/logout": page("logout"),
+      "/account": page("account"),
+    };
+    var links = document.querySelectorAll("a[href]");
+    var i;
+    for (i = 0; i < links.length; i++) {
+      var href = links[i].getAttribute("href");
+      if (map[href]) links[i].setAttribute("href", map[href]);
+      if (href === "/" && (links[i].classList.contains("auth-brand") || links[i].classList.contains("brand"))) {
+        links[i].setAttribute("href", page("home"));
+      }
+    }
+  }
+
   function boot() {
+    rewriteStaticAuthLinks();
     renderHeader();
     if ($("loginForm") || $("signupForm")) initAuthPage();
   }

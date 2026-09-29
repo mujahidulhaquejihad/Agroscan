@@ -1,0 +1,242 @@
+{
+  "class_name": "Tomato___Leaf_Mold",
+  "kb_key": "leaf_mold",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Leaf mould",
+  "disease_bn": "টমেটোর পাতার ছাতা রোগ",
+  "pathogen": "Passalora fulva (Fulvia fulva / Cladosporium fulvum)",
+  "severity": "medium",
+  "summary_en": "Leaf mould is a humidity disease. Pale yellow patches on the top of the leaf with olive-green to brown velvety mould underneath. It is mainly a problem in polytunnels, net houses and very dense winter plots where the air does not move.",
+  "summary_bn": "এই রোগ হয় বাতাসে বেশি আর্দ্রতা থাকলে। পাতার উপরে ফ্যাকাশে হলুদ ছোপ আর নিচের পিঠে জলপাই-সবুজ থেকে বাদামি মখমলের মতো ছাতা পড়ে। মূলত পলিটানেল, নেট হাউস আর খুব ঘন শীতকালীন জমিতে, যেখানে বাতাস চলাচল করে না, সেখানেই সমস্যা হয়।",
+  "symptoms_en": [
+    "Diffuse pale yellow to greenish patches on the UPPER leaf surface, with no clear border",
+    "Olive-green, greyish or purple-brown velvety mould on the UNDERSIDE directly beneath each patch — this is the giveaway sign",
+    "Older lower leaves affected first",
+    "Leaves curl, dry and drop; heavy defoliation reduces fruit size",
+    "Almost always follows high humidity (above 85%) with poor air movement — very common under polytunnels"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরের পিঠে ফ্যাকাশে হলুদ বা সবুজাভ ছোপ, কিনারা স্পষ্ট নয়",
+    "ঠিক ওই ছোপের নিচের পিঠে জলপাই-সবুজ, ধূসর বা বেগুনি-বাদামি মখমলের মতো ছাতা — এটাই চেনার আসল লক্ষণ",
+    "নিচের পুরনো পাতায় আগে ধরে",
+    "পাতা কুঁকড়ে শুকিয়ে ঝরে যায়; বেশি পাতা ঝরলে ফল ছোট হয়",
+    "প্রায় সবসময় বেশি আর্দ্রতায় (৮৫% এর উপরে) ও বাতাস চলাচল না করলে হয় — পলিটানেলে খুব সাধারণ"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Get the humidity down — this is the whole treatment",
+      "detail": "Open the polytunnel sides and ends every morning. Even in an open field, prune the lower leaves and stake the plants so air moves. Fungicide without ventilation will not fix this."
+    },
+    {
+      "step": 2,
+      "title": "Remove the worst leaves",
+      "detail": "Strip the heavily moulded lower leaves and carry them out. Do not shake them — the spores travel on air."
+    },
+    {
+      "step": 3,
+      "title": "Stop wetting the foliage",
+      "detail": "Switch to drip or furrow irrigation. Irrigate in the morning so any moisture dries before nightfall."
+    },
+    {
+      "step": 4,
+      "title": "Spray if it keeps spreading",
+      "detail": "Chlorothalonil, mancozeb or a difenoconazole product at 7-10 day intervals, spraying the UNDERSIDE of the leaves where the mould actually is."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আর্দ্রতা কমান — চিকিৎসা মূলত এটাই",
+      "detail": "প্রতিদিন সকালে পলিটানেলের পাশ ও দুই মাথা খুলে দিন। খোলা জমিতেও নিচের পাতা ছেঁটে গাছে খুঁটি দিন যাতে বাতাস চলে। বাতাস চলাচল না বাড়িয়ে শুধু ওষুধ দিলে এই রোগ সারবে না।"
+    },
+    {
+      "step": 2,
+      "title": "বেশি আক্রান্ত পাতা সরান",
+      "detail": "নিচের ছাতা পড়া পাতা ছেঁটে বাইরে নিয়ে যান। ঝাঁকাবেন না — জীবাণু বাতাসে উড়ে ছড়ায়।"
+    },
+    {
+      "step": 3,
+      "title": "পাতা ভেজানো বন্ধ করুন",
+      "detail": "ড্রিপ বা নালা সেচে যান। সকালে সেচ দিন যাতে সন্ধ্যার আগেই ভেজা ভাব শুকিয়ে যায়।"
+    },
+    {
+      "step": 4,
+      "title": "ছড়াতে থাকলে স্প্রে করুন",
+      "detail": "৭-১০ দিন পর পর ক্লোরোথ্যালোনিল, ম্যানকোজেব বা ডাইফেনোকোনাজল দিন, আর অবশ্যই পাতার নিচের পিঠে স্প্রে করুন — ছাতা তো ওখানেই।"
+    }
+  ],
+  "cultural_control_en": [
+    "Ventilate polytunnels and net houses every morning without fail",
+    "Wide spacing (60 x 45 cm or more) and staking",
+    "Prune lower leaves regularly to open the base of the canopy",
+    "Use resistant varieties where available — resistance to leaf mould is well established in tomato breeding",
+    "Avoid overhead irrigation entirely in protected cultivation",
+    "Sterilise or replace polytunnel plastic and remove all residue between crops"
+  ],
+  "cultural_control_bn": [
+    "পলিটানেল ও নেট হাউস প্রতিদিন সকালে অবশ্যই খুলে দিন",
+    "বেশি দূরত্বে (৬০x৪৫ সেন্টিমিটার বা বেশি) লাগান এবং খুঁটি দিন",
+    "নিয়মিত নিচের পাতা ছেঁটে গাছের গোড়ার দিক খোলা রাখুন",
+    "সম্ভব হলে প্রতিরোধী জাত নিন — টমেটোতে এই রোগের প্রতিরোধী জাত ভালোভাবেই আছে",
+    "ঘেরা চাষে উপর দিয়ে সেচ একদম দেবেন না",
+    "দুই ফসলের মাঝে পলিথিন পরিষ্কার বা বদলে নিন এবং সব অবশিষ্টাংশ সরিয়ে ফেলুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Angle the nozzle UPWARD to hit the leaf undersides. This is not optional for leaf mould — a top-only spray does almost nothing.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে পাতার নিচের পিঠে স্প্রে করুন। এই রোগে এটা বাধ্যতামূলক — শুধু উপর থেকে স্প্রে করলে প্রায় কোনো কাজই হয় না।",
+      "timing_en": "Preventive, every 7-10 days during humid spells.",
+      "timing_bn": "প্রতিরোধমূলক, স্যাঁতসেঁতে সময়ে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 5,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Difenoconazole 25% EC",
+      "product_name_bn": "ডাইফেনোকোনাজল ২৫% ইসি",
+      "active_ingredient": "Difenoconazole",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with the nozzle angled up into the canopy.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারের নজেল উপরের দিকে তাক করে গাছের ভেতরে স্প্রে করুন।",
+      "timing_en": "Curative, when mould is well established. Maximum 2 per season.",
+      "timing_bn": "রোগ ভালোভাবে ছড়ালে দমনের জন্য। মৌসুমে সর্বোচ্চ ২ বার।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Score 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Score 250 EC, AP-384, Syngenta Bangladesh Limited, appears in the DAE PPW registered list (registered use recorded there for onion purple blotch). Confirm the tomato label claim before presenting as a registered use.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-384"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Ventilation and pruning — genuinely the most effective control, chemical or otherwise",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant on the leaf undersides",
+    "Potassium bicarbonate sprays give some suppression",
+    "Wider spacing and drip irrigation"
+  ],
+  "organic_alternatives_bn": [
+    "বাতাস চলাচল ও ডাল ছাঁটা — ওষুধ হোক বা না হোক, এটাই সবচেয়ে কার্যকর",
+    "পাতার নিচের পিঠে প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে",
+    "পটাশিয়াম বাইকার্বনেট স্প্রে করলে কিছুটা কমে",
+    "বেশি দূরত্বে লাগানো ও ড্রিপ সেচ"
+  ],
+  "fertilizer_advice_en": "Avoid heavy nitrogen, which produces dense soft foliage and traps humidity inside the canopy. Keep potassium at the FRG rate. In polytunnels, use fertigation in small frequent doses rather than large top-dressings.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না, এতে ঘন নরম পাতা হয় আর গাছের ভেতরে আর্দ্রতা আটকে থাকে। এফআরজি মাত্রায় পটাশ দিন। পলিটানেলে একবারে বেশি সার না দিয়ে সেচের সাথে অল্প অল্প করে বারবার দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Spraying upward inside a polytunnel means spray drifts back onto your face and into your breathing zone — a proper cartridge mask and goggles are essential here, not optional. Ventilate the tunnel for at least an hour before re-entering. Respect the 7-day PHI.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। পলিটানেলের ভেতরে উপরের দিকে স্প্রে করলে ওষুধ মুখে ও শ্বাসের সাথে ফিরে আসে — এখানে ভালো কার্তুজওয়ালা মাস্ক ও চশমা বাধ্যতামূলক, ইচ্ছাধীন নয়। স্প্রের পর অন্তত এক ঘণ্টা টানেল খুলে রেখে তারপর ভেতরে ঢুকুন। ৭ দিনের পিএইচআই মেনে চলুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if mould spreads to the upper canopy, if leaves are dropping heavily, or if it recurs in the same polytunnel every season — that usually means a ventilation design problem.",
+  "when_to_call_helpline_bn": "ছাতা গাছের উপরের দিকে ছড়ালে, বেশি পাতা ঝরতে থাকলে, অথবা একই পলিটানেলে প্রতি মৌসুমে ফিরে এলে ১৬১২৩ নম্বরে ফোন করুন — বারবার হওয়া মানে সাধারণত টানেলের বাতাস চলাচলে গলদ আছে।",
+  "expected_outcome_en": "Once ventilation improves, new leaves come out clean within 2 weeks even without more spraying. Existing moulded leaves will not recover.",
+  "expected_outcome_bn": "বাতাস চলাচল ভালো হলে আর স্প্রে না করলেও ২ সপ্তাহের মধ্যে নতুন পাতা পরিষ্কার বের হয়। পুরনো ছাতা পড়া পাতা আর ভালো হবে না।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Score 250 EC (Difenoconazole) 50ml",
+    "Spray mask with cartridge",
+    "Safety goggles",
+    "Drip irrigation kit 1 decimal",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Score 250 EC, AP-384, Syngenta Bangladesh Ltd); BARI protected tomato cultivation guidance; 'Hormonal efficiency and net return of BARI Tomato-4 enhanced under polytunnels during rainy summer season', Archives of Agriculture and Environmental Science (doi 10.26832/24566632.2024.0904011)",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Leaf mould is far more common in Bangladesh under protected cultivation than in open field. If the app knows the farmer grows in a polytunnel, ventilation advice should be shown first and the fungicide second.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Score 250 EC (Difenoconazole) 50ml",
+      "sku": "PEST-0022",
+      "name_en": "Difenoconazole 25% EC 50ml",
+      "category": "pesticide",
+      "match_score": 1.103,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Safety goggles",
+      "sku": "EQ-0014",
+      "name_en": "Safety goggles",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

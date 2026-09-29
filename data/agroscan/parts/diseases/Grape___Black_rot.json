@@ -1,0 +1,92 @@
+{
+  "class_name": "Grape___Black_rot",
+  "kb_key": "grape_black_rot",
+  "crop_en": "Grape",
+  "crop_bn": "আঙুর",
+  "disease_en": "Black rot",
+  "disease_bn": "আঙুরের ব্ল্যাক রট রোগ",
+  "pathogen": "Guignardia bidwellii",
+  "severity": "medium",
+  "bangladesh_relevance": "rare_experimental",
+  "bangladesh_note_en": "Grape is grown only experimentally and in a few homestead plantings in Bangladesh; the humid monsoon climate makes commercial viticulture very difficult. A prediction of this class from a Bangladeshi field photo is most likely a misclassification.",
+  "bangladesh_note_bn": "বাংলাদেশে আঙুর কেবল পরীক্ষামূলকভাবে ও অল্প কিছু বাড়ির আঙিনায় হয়; স্যাঁতসেঁতে বর্ষার আবহাওয়ায় বাণিজ্যিক আঙুর চাষ খুব কঠিন। বাংলাদেশের ছবিতে এই ফলাফল এলে তা সম্ভবত ভুল শনাক্তকরণ।",
+  "summary_en": "A disease of grapevines, which are not a commercial crop in Bangladesh. Included for model completeness. If AgroScan returns this for a Bangladeshi field photo, treat it as a probable misclassification and re-photograph.",
+  "summary_bn": "আঙুর গাছের রোগ, যা বাংলাদেশে বাণিজ্যিক ফসল নয়। শুধু মডেলের পূর্ণতার জন্য রাখা। বাংলাদেশের ছবিতে এই ফলাফল এলে ভুল শনাক্তকরণ ধরে নিয়ে আবার ছবি তুলুন।",
+  "symptoms_en": [
+    "Small reddish-brown circular leaf spots with dark borders and black dots inside",
+    "Fruit shrivels into hard black mummies",
+    "Lesions on shoots and tendrils"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট লালচে-বাদামি গোল দাগ, কিনারা গাঢ়, ভেতরে কালো ফোঁটা",
+    "ফল শুকিয়ে শক্ত কালো মমির মতো হয়ে যায়",
+    "ডগা ও আকর্ষিতেও দাগ পড়ে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check whether this is really grape",
+      "detail": "Grape is not a commercial crop in Bangladesh. Retake the photo of a clearer leaf and rescan."
+    },
+    {
+      "step": 2,
+      "title": "Call 16123 if unsure of the crop",
+      "detail": "Take a sample leaf to your Upazila Agriculture Office."
+    },
+    {
+      "step": 3,
+      "title": "Do not spray on this result",
+      "detail": "Do not treat a crop you are not growing."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "এটা সত্যিই আঙুর কিনা দেখুন",
+      "detail": "বাংলাদেশে আঙুর বাণিজ্যিক ফসল নয়। পরিষ্কার একটা পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 2,
+      "title": "ফসল নিয়ে নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন",
+      "detail": "একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    },
+    {
+      "step": 3,
+      "title": "এই ফলাফল দেখে স্প্রে করবেন না",
+      "detail": "যে ফসল চাষ করছেন না তার চিকিৎসা করবেন না।"
+    }
+  ],
+  "cultural_control_en": [
+    "If you do grow grape experimentally: remove mummified fruit, prune for airflow, and contact BARI Horticulture Research Centre for guidance"
+  ],
+  "cultural_control_bn": [
+    "পরীক্ষামূলকভাবে আঙুর চাষ করলে: শুকিয়ে যাওয়া ফল সরিয়ে ফেলুন, বাতাস চলাচলের জন্য ডাল ছাঁটুন, এবং বারি উদ্যানতত্ত্ব গবেষণা কেন্দ্রে পরামর্শ নিন"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Sanitation and pruning if grown experimentally"
+  ],
+  "organic_alternatives_bn": [
+    "পরীক্ষামূলকভাবে চাষ করলে পরিষ্কার-পরিচ্ছন্নতা ও ডাল ছাঁটাই"
+  ],
+  "fertilizer_advice_en": "Not applicable at scale in Bangladesh. Identify the actual crop first.",
+  "fertilizer_advice_bn": "বাংলাদেশে বড় পরিসরে প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended for this class in Bangladesh.",
+  "safety_warning_bn": "বাংলাদেশে এই শ্রেণির জন্য কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment recommended. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার পরামর্শ নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 to identify your crop.",
+  "when_to_call_helpline_bn": "আপনার ফসল চিনতে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Not applicable — retake the photo.",
+  "expected_outcome_bn": "প্রযোজ্য নয় — আবার ছবি তুলুন।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "BBS Yearbook of Agricultural Statistics 2024 (no commercial grape area); PlantVillage class list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

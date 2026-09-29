@@ -1,0 +1,92 @@
+{
+  "class_name": "Apple___Cedar_apple_rust",
+  "kb_key": "cedar_apple_rust",
+  "crop_en": "Apple",
+  "crop_bn": "আপেল",
+  "disease_en": "Cedar apple rust",
+  "disease_bn": "আপেলের সিডার রাস্ট রোগ",
+  "pathogen": "Gymnosporangium juniperi-virginianae",
+  "severity": "low",
+  "bangladesh_relevance": "not_grown_commercially",
+  "bangladesh_note_en": "This disease requires BOTH apple and Eastern red cedar (Juniperus virginiana) to complete its life cycle. Neither is present in Bangladesh, so this disease cannot occur here. A prediction of this class from a Bangladeshi photo is a misclassification.",
+  "bangladesh_note_bn": "এই রোগের জীবনচক্র সম্পূর্ণ হতে আপেল এবং ইস্টার্ন রেড সিডার — দুটি গাছেরই দরকার। বাংলাদেশে কোনোটিই নেই, তাই এখানে এই রোগ হওয়া সম্ভব নয়। বাংলাদেশের ছবিতে এই ফলাফল এলে তা ভুল শনাক্তকরণ।",
+  "summary_en": "This disease cannot occur in Bangladesh because its alternate host, Eastern red cedar, does not grow here. Included for model completeness only. Any prediction of this class from a Bangladeshi photo should be shown as a misclassification, not a diagnosis.",
+  "summary_bn": "বাংলাদেশে এই রোগ হতেই পারে না, কারণ এর বিকল্প আশ্রয়দাতা গাছ ইস্টার্ন রেড সিডার এখানে জন্মায় না। শুধু মডেলের পূর্ণতার জন্য রাখা। বাংলাদেশের ছবিতে এই ফলাফল এলে তা রোগ নির্ণয় নয়, ভুল শনাক্তকরণ হিসেবে দেখানো উচিত।",
+  "symptoms_en": [
+    "Bright orange-yellow circular spots on apple leaves with small black dots in the centre",
+    "Tube-like structures on the underside",
+    "Orange gelatinous galls on cedar trees in spring"
+  ],
+  "symptoms_bn": [
+    "আপেলের পাতায় উজ্জ্বল কমলা-হলুদ গোল দাগ, মাঝখানে ছোট কালো ফোঁটা",
+    "নিচের পিঠে নলের মতো গঠন",
+    "বসন্তে সিডার গাছে কমলা রঙের আঠালো গুটি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "This result is not possible in Bangladesh",
+      "detail": "The disease needs a cedar host that does not grow here. Retake the photo of a clearer leaf in good light and rescan."
+    },
+    {
+      "step": 2,
+      "title": "If the leaf has orange spots, it is something else",
+      "detail": "Orange or rust-coloured spots on a Bangladeshi leaf are much more likely to be maize rust, wheat rust, bean rust or a leaf-spot fungus. Tell the app the crop name if you can."
+    },
+    {
+      "step": 3,
+      "title": "Call 16123 if unsure",
+      "detail": "Take a sample leaf to your Upazila Agriculture Office."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "বাংলাদেশে এই ফলাফল সম্ভব নয়",
+      "detail": "এই রোগের জন্য যে সিডার গাছ দরকার তা এখানে জন্মায় না। ভালো আলোয় পরিষ্কার একটা পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 2,
+      "title": "পাতায় কমলা দাগ থাকলে সেটা অন্য কিছু",
+      "detail": "বাংলাদেশের কোনো পাতায় কমলা বা মরিচা রঙের দাগ থাকলে তা সম্ভবত ভুট্টার মরিচা, গমের মরিচা, শিমের মরিচা বা কোনো পাতার দাগ রোগ। পারলে অ্যাপে ফসলের নামটা বলে দিন।"
+    },
+    {
+      "step": 3,
+      "title": "নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন",
+      "detail": "একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "cultural_control_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "organic_alternatives_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "fertilizer_advice_en": "Not applicable. Identify the actual crop first.",
+  "fertilizer_advice_bn": "প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended for this class in Bangladesh.",
+  "safety_warning_bn": "বাংলাদেশে এই শ্রেণির জন্য কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment recommended. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার পরামর্শ নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 to identify what your crop and its problem actually are.",
+  "when_to_call_helpline_bn": "আপনার ফসল ও সমস্যা আসলে কী তা জানতে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Not applicable — retake the photo.",
+  "expected_outcome_bn": "প্রযোজ্য নয় — আবার ছবি তুলুন।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "Gymnosporangium juniperi-virginianae requires Juniperus virginiana as alternate host, which is absent from Bangladesh; BBS Yearbook of Agricultural Statistics 2024",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS — biologically impossible in Bangladesh. This is the strongest candidate in the model for a hard 'this cannot be right' UI response, and it is worth suppressing this class entirely in the Bangladesh deployment.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

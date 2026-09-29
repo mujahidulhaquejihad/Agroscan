@@ -1,0 +1,226 @@
+{
+  "class_name": "Rice___Tungro",
+  "kb_key": "tungro",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Rice tungro disease",
+  "disease_bn": "ধানের টুংরো রোগ",
+  "pathogen": "Rice tungro bacilliform virus + Rice tungro spherical virus, transmitted by green leafhopper (Nephotettix spp.)",
+  "severity": "high",
+  "summary_en": "Tungro is a virus carried by green leafhoppers. There is no cure once a plant is infected — no spray will bring it back. Everything you do is aimed at the leafhopper and at removing infected plants so the healthy ones survive.",
+  "summary_bn": "টুংরো একটি ভাইরাস রোগ, সবুজ পাতা ফড়িং এই ভাইরাস বয়ে আনে। একবার গাছে ধরলে আর সারানো যায় না — কোনো স্প্রেতেই গাছ ভালো হবে না। যা করার সব করতে হয় ফড়িং দমনের জন্য আর আক্রান্ত গাছ তুলে ফেলার জন্য, যাতে বাকি সুস্থ গাছ বাঁচে।",
+  "symptoms_en": [
+    "Leaves turn yellow to orange-yellow, starting from the tip and moving down",
+    "Plants are visibly stunted — clearly shorter than the plants around them",
+    "Far fewer tillers than healthy hills",
+    "Young leaves may show fine rust-coloured specks or interveinal mottling",
+    "Panicles are small, poorly filled or do not emerge at all",
+    "Affected plants appear in patches, often starting at the field edge nearest a source of leafhoppers",
+    "Green leafhoppers are usually visible when you sweep the canopy"
+  ],
+  "symptoms_bn": [
+    "পাতা আগা থেকে নিচের দিকে হলুদ বা কমলা-হলুদ হয়ে যায়",
+    "গাছ স্পষ্টভাবে খাটো হয়ে যায় — আশপাশের গাছের চেয়ে ছোট দেখায়",
+    "সুস্থ গোছার তুলনায় কুশি অনেক কম হয়",
+    "কচি পাতায় মরিচার মতো সূক্ষ্ম দাগ বা শিরার ফাঁকে ছোপ ছোপ দাগ পড়তে পারে",
+    "শিষ ছোট হয়, ধান ভালো ভরে না বা শিষ বেরই হয় না",
+    "আক্রান্ত গাছ জমির মধ্যে চাক চাক হয়ে দেখা দেয়, প্রায়ই যে পাশে ফড়িং বেশি সেই কিনারা থেকে শুরু হয়",
+    "গাছের উপর জাল বা হাত চালালে সবুজ পাতা ফড়িং সাধারণত চোখে পড়ে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Pull out infected plants now",
+      "detail": "Uproot every yellow, stunted hill and carry it out of the field in a bag — do not drop it on the bund. Each infected hill is a source the leafhoppers feed on and carry from. Do this before spraying."
+    },
+    {
+      "step": 2,
+      "title": "Check for green leafhoppers",
+      "detail": "Sweep the canopy with your hand or a net at dusk. If you find leafhoppers, the virus is still actively spreading and insecticide is justified."
+    },
+    {
+      "step": 3,
+      "title": "Spray for the leafhopper, not the virus",
+      "detail": "Apply a recommended insecticide against green leafhopper. Understand clearly: this protects the still-healthy plants, it does not cure the yellow ones."
+    },
+    {
+      "step": 4,
+      "title": "Do not replant into gaps",
+      "detail": "Filling gaps with fresh seedlings just gives the leafhoppers new young plants to infect. Leave the gaps for this season."
+    },
+    {
+      "step": 5,
+      "title": "Tell your neighbours",
+      "detail": "Tungro moves between fields. Village-wide synchronous action — everyone roguing and controlling leafhoppers in the same week — works far better than one farmer acting alone."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আক্রান্ত গাছ এখনই তুলে ফেলুন",
+      "detail": "প্রতিটি হলুদ, খাটো গোছা শিকড়সহ তুলে ব্যাগে ভরে জমির বাইরে নিয়ে যান — আইলে ফেলে রাখবেন না। প্রতিটি আক্রান্ত গোছা থেকেই ফড়িং ভাইরাস নিয়ে যায়। স্প্রে করার আগে এই কাজটা করুন।"
+    },
+    {
+      "step": 2,
+      "title": "সবুজ পাতা ফড়িং আছে কিনা দেখুন",
+      "detail": "সন্ধ্যার দিকে হাত বা জাল দিয়ে গাছের উপর চালিয়ে দেখুন। ফড়িং পেলে বুঝবেন ভাইরাস এখনো ছড়াচ্ছে, তখন কীটনাশক দেওয়া যুক্তিসঙ্গত।"
+    },
+    {
+      "step": 3,
+      "title": "ভাইরাসের জন্য নয়, ফড়িংয়ের জন্য স্প্রে",
+      "detail": "সবুজ পাতা ফড়িং দমনের অনুমোদিত কীটনাশক দিন। পরিষ্কার করে বুঝে নিন: এতে সুস্থ গাছগুলো বাঁচবে, হলুদ হয়ে যাওয়া গাছ ভালো হবে না।"
+    },
+    {
+      "step": 4,
+      "title": "ফাঁকা জায়গায় নতুন চারা লাগাবেন না",
+      "detail": "ফাঁক পূরণ করতে নতুন চারা লাগালে ফড়িং সেই কচি গাছেই আবার ভাইরাস ছড়াবে। এই মৌসুমে ফাঁক ফাঁকই রাখুন।"
+    },
+    {
+      "step": 5,
+      "title": "প্রতিবেশীদের জানান",
+      "detail": "টুংরো এক জমি থেকে আরেক জমিতে যায়। পুরো গ্রামে একসাথে — সবাই একই সপ্তাহে আক্রান্ত গাছ তুলে ফড়িং দমন করলে — একজন কৃষকের একা চেষ্টার চেয়ে অনেক ভালো কাজ হয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow tungro-tolerant BRRI varieties where tungro is a regular problem in your area",
+    "Transplant on a synchronised village-wide schedule — staggered planting keeps a continuous food supply for leafhoppers",
+    "Keep a fallow break between crops to break the leafhopper cycle",
+    "Remove weedy rice and grass weeds on bunds where leafhoppers shelter",
+    "Do not raise seedbeds next to a standing infected crop",
+    "Protect natural enemies — spiders and mirid bugs eat leafhoppers; avoid unnecessary broad-spectrum insecticide early in the season"
+  ],
+  "cultural_control_bn": [
+    "যেসব এলাকায় নিয়মিত টুংরো হয় সেখানে ব্রি-র টুংরো সহনশীল জাত লাগান",
+    "পুরো গ্রামে একই সময়ে চারা রোপণ করুন — একেকজন একেক সময়ে লাগালে ফড়িং সারা বছর খাবার পায়",
+    "দুই ফসলের মাঝে জমি কিছুদিন ফাঁকা রাখুন যাতে ফড়িংয়ের জীবনচক্র ভাঙে",
+    "আইলের আগাছা ও ঘাস পরিষ্কার করুন, ওখানেই ফড়িং লুকিয়ে থাকে",
+    "আক্রান্ত জমির পাশে বীজতলা করবেন না",
+    "উপকারী পোকা বাঁচান — মাকড়সা ও মিরিড পোকা ফড়িং খায়; মৌসুমের শুরুতে অকারণে ব্যাপক কীটনাশক দেবেন না"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Imidacloprid 20% SL",
+      "product_name_bn": "ইমিডাক্লোপ্রিড ২০% এসএল",
+      "active_ingredient": "Imidacloprid",
+      "formulation": "SL",
+      "dose_en": "0.5 ml per litre of water (about 5 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ৫ মিলি)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering the whole canopy including the base where leafhoppers rest. Spray in the late afternoon or early evening when leafhoppers are active and bees are not.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে, গোড়ার দিকেও দিন — ফড়িং ওখানেই বসে থাকে। বিকেল বা সন্ধ্যার দিকে স্প্রে করুন, তখন ফড়িং সক্রিয় থাকে আর মৌমাছি থাকে না।",
+      "timing_en": "Only when green leafhoppers are actually present. Do not spray on a calendar schedule — routine spraying kills the spiders that control leafhoppers naturally and can make the problem worse.",
+      "timing_bn": "শুধু তখনই দিন যখন সত্যিই সবুজ পাতা ফড়িং আছে। ক্যালেন্ডার দেখে নিয়ম করে স্প্রে করবেন না — নিয়মিত স্প্রেতে মাকড়সা মরে যায়, যারা এমনিতেই ফড়িং দমন করত, ফলে সমস্যা আরও বাড়তে পারে।",
+      "interval_days": 14,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন ধান কাটবেন না।",
+      "brands_available_bd": [
+        "Admire 20 SL",
+        "Imidor 20 SL",
+        "Tido 20 SL"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Imidacloprid is registered in Bangladesh for rice hoppers. Verify the brand-level AP number against the current PPW list before display.",
+      "treatment_type": "curative",
+      "caution_en": "Imidacloprid is highly toxic to bees. Never spray a flowering crop or a field next to flowering mustard, and never spray in the morning when bees forage.",
+      "caution_bn": "ইমিডাক্লোপ্রিড মৌমাছির জন্য মারাত্মক বিষাক্ত। ফুল আসা ফসলে বা পাশে ফুলে ভরা সরিষার জমি থাকলে কখনো স্প্রে করবেন না, আর সকালে মৌমাছি চলাচলের সময় স্প্রে করবেন না।",
+      "cures_disease": false,
+      "targets_vector": "green leafhopper (Nephotettix spp.)",
+      "purpose_en": "Controls the green leafhopper (Nephotettix spp.) that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Perching (poles for birds) at 8-10 per bigha — birds eat leafhoppers and this is free",
+    "Light traps at night to monitor and reduce leafhopper numbers",
+    "Neem seed kernel extract at 5% or neem oil at 3 ml/L repels leafhoppers and is safer for spiders",
+    "Roguing (pulling infected plants) is the single most effective non-chemical measure"
+  ],
+  "organic_alternatives_bn": [
+    "বিঘা প্রতি ৮-১০টি ডাল বা কঞ্চি পুঁতে দিন (পার্চিং) — পাখি বসে ফড়িং খাবে, খরচ নেই",
+    "রাতে আলোর ফাঁদ পেতে ফড়িংয়ের সংখ্যা দেখুন ও কমান",
+    "৫% নিমবীজের নির্যাস বা প্রতি লিটারে ৩ মিলি নিম তেল দিলে ফড়িং দূরে থাকে, মাকড়সারও ক্ষতি কম হয়",
+    "আক্রান্ত গাছ তুলে ফেলাই ওষুধ ছাড়া সবচেয়ে কার্যকর ব্যবস্থা"
+  ],
+  "fertilizer_advice_en": "Keep nitrogen at the FRG rate and split it — lush green crops attract more leafhoppers. Apply full potash. Do not try to 'feed the plant back to health' with extra urea; an infected plant will not recover and extra nitrogen only draws more leafhoppers.",
+  "fertilizer_advice_bn": "এফআরজি মাত্রায় ইউরিয়া দিন এবং কিস্তিতে দিন — গাঢ় সবুজ সতেজ গাছে ফড়িং বেশি আসে। পুরো পটাশ দিন। বেশি ইউরিয়া দিয়ে গাছ ভালো করার চেষ্টা করবেন না; আক্রান্ত গাছ আর ভালো হবে না, বরং বেশি ইউরিয়ায় আরও ফড়িং আসবে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Imidacloprid is very toxic to bees and to fish — do not spray near flowering crops, and never wash the sprayer into a pond or canal. Keep livestock out for 24 hours. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। ইমিডাক্লোপ্রিড মৌমাছি ও মাছের জন্য খুবই বিষাক্ত — ফুল আসা ফসলের কাছে স্প্রে করবেন না, পুকুর বা খালে স্প্রেয়ার ধোবেন না। ২৪ ঘণ্টা গবাদিপশু দূরে রাখুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered insecticides. Note that some countries restrict imidacloprid for bee safety; in Bangladesh it remains registered, but use it only when leafhoppers are confirmed present. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত কীটনাশক ব্যবহার করুন। মৌমাছির নিরাপত্তার কারণে কিছু দেশে ইমিডাক্লোপ্রিড সীমিত; বাংলাদেশে এটি নিবন্ধিত আছে, তবে ফড়িং আছে নিশ্চিত হলে তবেই ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 as soon as you suspect tungro — do not wait. Tungro spreads field to field and an early village-level response saves crops. Also call if more than 5% of hills are yellow and stunted.",
+  "when_to_call_helpline_bn": "টুংরো সন্দেহ হওয়া মাত্রই ১৬১২৩ নম্বরে ফোন করুন — দেরি করবেন না। টুংরো এক জমি থেকে আরেক জমিতে ছড়ায়, শুরুতেই গ্রামভিত্তিক ব্যবস্থা নিলে ফসল বাঁচে। ৫% এর বেশি গোছা হলুদ ও খাটো হলেও ফোন করুন।",
+  "expected_outcome_en": "Infected plants will not recover — that is normal and not a sign the treatment failed. Success means no NEW yellow stunted hills appear after 2-3 weeks. If you rogue early and control leafhoppers, the rest of the field usually yields normally.",
+  "expected_outcome_bn": "আক্রান্ত গাছ আর ভালো হবে না — এটাই স্বাভাবিক, চিকিৎসা ব্যর্থ হয়েছে ভাববেন না। ২-৩ সপ্তাহ পর নতুন করে আর কোনো হলুদ খাটো গোছা না এলে বুঝবেন কাজ হয়েছে। আগেভাগে আক্রান্ত গাছ তুলে ফড়িং দমন করলে বাকি জমিতে সাধারণত স্বাভাবিক ফলন হয়।",
+  "related_shop_products": [
+    "Imidacloprid 20% SL 100ml",
+    "Neem oil 250ml",
+    "Yellow sticky trap (pack of 10)",
+    "Knapsack sprayer 16L manual",
+    "Spray mask with cartridge"
+  ],
+  "seasons_relevant": [
+    "kharif2",
+    "kharif1"
+  ],
+  "months_relevant": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source": "BRRI extension guidance on tungro and green leafhopper management (brri.gov.bd); IRRI Rice Knowledge Bank tungro; DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "CRITICAL for app logic: viral disease with NO curative treatment. The insecticide recommendation targets the vector only and the UI must say so explicitly, or farmers will spray, see no recovery, and lose trust. Brand AP numbers not individually verified.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Imidacloprid 20% SL 100ml",
+      "sku": "PEST-0048",
+      "name_en": "Imidacloprid 20% SL 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Yellow sticky trap (pack of 10)",
+      "sku": "EQ-0069",
+      "name_en": "Yellow sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

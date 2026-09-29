@@ -1,0 +1,263 @@
+{
+  "class_name": "Banana___Sigatoka_leaf_spot",
+  "kb_key": "sigatoka",
+  "crop_en": "Banana",
+  "crop_bn": "কলা",
+  "disease_en": "Sigatoka leaf spot",
+  "disease_bn": "কলার সিগাটোকা পাতার দাগ রোগ",
+  "pathogen": "Mycosphaerella musicola (yellow Sigatoka) / M. fijiensis (black Sigatoka)",
+  "severity": "high",
+  "summary_en": "Streaks and spots that start as thin yellow lines on the leaf and grow into large dark blotches with grey centres, killing the leaves from the bottom up. Fewer functional leaves means smaller bunches and premature ripening.",
+  "summary_bn": "পাতায় প্রথমে সরু হলুদ রেখা পড়ে, পরে বড় গাঢ় ছোপ হয় যার মাঝখানে ধূসর, আর নিচ থেকে উপরের দিকে পাতা মারতে থাকে। কাজ করার মতো পাতা কমে গেলে কাঁদি ছোট হয় আর কলা আগেভাগে পেকে যায়।",
+  "symptoms_en": [
+    "Thin yellow-green streaks running parallel to the leaf veins on the underside, first visible on leaf 3-4 from the top",
+    "Streaks widen into brown then dark brown-black spots with a grey centre and yellow halo",
+    "Spots merge; the leaf dries and hangs down",
+    "Only a few functional leaves remain at bunch filling, so bunches are small",
+    "Fruit ripens prematurely and unevenly, sometimes before harvest",
+    "Worst in the rainy season with high humidity and in dense, poorly drained plantations"
+  ],
+  "symptoms_bn": [
+    "পাতার নিচের পিঠে শিরার সমান্তরাল সরু হলুদ-সবুজ রেখা, উপর থেকে ৩-৪ নম্বর পাতায় প্রথমে দেখা যায়",
+    "রেখা চওড়া হয়ে বাদামি, পরে গাঢ় বাদামি-কালো দাগ হয়, মাঝখানে ধূসর ও চারপাশে হলুদ বলয়",
+    "দাগ মিশে যায়; পাতা শুকিয়ে ঝুলে পড়ে",
+    "কাঁদি ভরার সময় অল্প কয়েকটা কাজের পাতা থাকে, তাই কাঁদি ছোট হয়",
+    "কলা আগেভাগে ও অসমানভাবে পেকে যায়, কখনো কাটার আগেই",
+    "বর্ষায় বেশি আর্দ্রতায় এবং ঘন, খারাপ নিকাশের বাগানে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Cut off and remove the dead and heavily spotted leaves",
+      "detail": "Cut leaves with more than 50% spotting, drag them out of the plantation and burn or bury. Do not leave them lying between the plants — they keep releasing spores. This is the backbone of Sigatoka control."
+    },
+    {
+      "step": 2,
+      "title": "Desucker to open the plantation",
+      "detail": "Keep only 2-3 healthy suckers per mat. Overcrowded mats hold humidity and the disease never stops."
+    },
+    {
+      "step": 3,
+      "title": "Improve drainage",
+      "detail": "Open drains between rows. Waterlogged banana plantations get Sigatoka far worse."
+    },
+    {
+      "step": 4,
+      "title": "Spray with a sticker or oil",
+      "detail": "Banana leaves are waxy and plain water-based sprays run off. Mix a wetting agent, or use a mineral oil emulsion, so the fungicide sticks."
+    },
+    {
+      "step": 5,
+      "title": "Rotate fungicide groups",
+      "detail": "Sigatoka develops resistance quickly. Alternate mancozeb (contact) with a triazole or strobilurin — never use the same systemic twice in a row."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "মরা ও বেশি দাগওয়ালা পাতা কেটে সরিয়ে ফেলুন",
+      "detail": "যে পাতার ৫০% এর বেশি দাগ পড়েছে তা কেটে বাগানের বাইরে টেনে নিয়ে পুড়িয়ে বা পুঁতে ফেলুন। গাছের মাঝে ফেলে রাখবেন না — ওখান থেকে জীবাণু ছড়াতেই থাকে। সিগাটোকা দমনের মূল ভিত্তি এটাই।"
+    },
+    {
+      "step": 2,
+      "title": "অতিরিক্ত চারা কেটে বাগান খোলা করুন",
+      "detail": "প্রতি ঝাড়ে ২-৩টি সুস্থ চারা রাখুন। ঘন ঝাড়ে আর্দ্রতা জমে থাকে আর রোগ কখনো থামে না।"
+    },
+    {
+      "step": 3,
+      "title": "নিকাশ ঠিক করুন",
+      "detail": "সারির মাঝে নালা কেটে দিন। পানি জমা কলা বাগানে সিগাটোকা অনেক বেশি হয়।"
+    },
+    {
+      "step": 4,
+      "title": "আঠালো পদার্থ বা তেল মিশিয়ে স্প্রে করুন",
+      "detail": "কলার পাতা মোমের মতো পিচ্ছিল, শুধু পানির স্প্রে গড়িয়ে পড়ে যায়। আঠালো পদার্থ মেশান বা খনিজ তেলের মিশ্রণ দিন যাতে ওষুধ পাতায় লেগে থাকে।"
+    },
+    {
+      "step": 5,
+      "title": "ওষুধের গ্রুপ পাল্টে দিন",
+      "detail": "সিগাটোকা দ্রুত ওষুধ সহ্য করা শেখে। ম্যানকোজেব (স্পর্শক) আর ট্রায়াজল বা স্ট্রোবিলিউরিন পালা করে দিন — একই সিস্টেমিক ওষুধ পরপর দুইবার কখনো নয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Weekly deleafing of spotted leaves — the single most effective practice",
+    "Desuckering to 2-3 followers per mat",
+    "Adequate spacing (2 x 2 m or wider) so air moves",
+    "Open drainage channels between rows",
+    "Use clean, tissue-culture or disease-free suckers when establishing a new plantation",
+    "Do not plant a new banana block next to an old heavily infected one",
+    "Balanced potash — potassium-deficient banana loses leaves much faster"
+  ],
+  "cultural_control_bn": [
+    "প্রতি সপ্তাহে দাগওয়ালা পাতা কেটে ফেলা — একক ব্যবস্থা হিসেবে সবচেয়ে কার্যকর",
+    "প্রতি ঝাড়ে ২-৩টি চারা রেখে বাকিগুলো কেটে ফেলা",
+    "পর্যাপ্ত দূরত্ব (২x২ মিটার বা বেশি) যাতে বাতাস চলে",
+    "সারির মাঝে নিকাশ নালা খোলা রাখা",
+    "নতুন বাগান করার সময় পরিষ্কার, টিস্যু কালচার বা রোগমুক্ত চারা নিন",
+    "পুরনো বেশি আক্রান্ত বাগানের পাশে নতুন কলার ব্লক করবেন না",
+    "সুষম পটাশ — পটাশের ঘাটতি থাকলে কলার পাতা অনেক দ্রুত ঝরে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP + wetting agent",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি + আঠালো পদার্থ",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2.5 g per litre of water plus 1 ml/L wetting agent",
+      "dose_bn": "প্রতি লিটার পানিতে ২.৫ গ্রাম, সাথে প্রতি লিটারে ১ মিলি আঠালো পদার্থ",
+      "water_volume_per_decimal": "Roughly 8-12 litres of spray solution per decimal in an established plantation",
+      "application_method_en": "Power sprayer or high-volume knapsack, directed at the UNDERSIDE of the youngest 4-5 leaves — that is where new infection starts. The wetting agent is not optional on banana.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ার বা বেশি পানির ন্যাপস্যাকে সবচেয়ে কচি ৪-৫টি পাতার নিচের পিঠে দিন — নতুন সংক্রমণ ওখানেই শুরু হয়। কলায় আঠালো পদার্থ বাদ দেওয়ার সুযোগ নেই।",
+      "timing_en": "Preventive, every 14-21 days through the rainy season.",
+      "timing_bn": "প্রতিরোধমূলক, বর্ষার সময়জুড়ে ১৪-২১ দিন পর পর।",
+      "interval_days": 14,
+      "max_applications_per_season": 6,
+      "phi_days": 15,
+      "pre_harvest_interval_note_en": "Do not harvest for 15 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৫ দিন কলা কাটবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and banana label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water plus a wetting agent",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার, সাথে আঠালো পদার্থ",
+      "water_volume_per_decimal": "8-12 litres of spray solution per decimal",
+      "application_method_en": "Power sprayer to leaf undersides, especially the youngest leaves.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ারে পাতার নিচের পিঠে, বিশেষ করে কচি পাতায়।",
+      "timing_en": "Curative, when streaking is already present. Alternate with mancozeb; do not use two triazole sprays in a row.",
+      "timing_bn": "রেখা দেখা দিলে দমনের জন্য। ম্যানকোজেবের সাথে পালা করে দিন; পরপর দুইবার ট্রায়াজল দেবেন না।",
+      "interval_days": 21,
+      "max_applications_per_season": 3,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন কলা কাটবেন না।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole registered in Bangladesh and named in national HHP surveys. Verify brand AP number and banana label claim.",
+      "treatment_type": "both",
+      "caution_en": "Listed among highly hazardous pesticides in wide use in Bangladesh. Sigatoka resistance to triazoles is well documented worldwide — rotation is essential.",
+      "caution_bn": "বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে। বিশ্বজুড়ে সিগাটোকার ট্রায়াজল সহ্য করার প্রমাণ আছে — পালা করে দেওয়া বাধ্যতামূলক।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Weekly deleafing — genuinely the most effective control available and it costs only labour",
+    "Desuckering and drainage",
+    "Mineral oil emulsion sprays (used commercially against Sigatoka worldwide)",
+    "Copper oxychloride 50% WP at 3 g/L with a wetting agent",
+    "Adequate potash"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতি সপ্তাহে দাগওয়ালা পাতা কেটে ফেলা — সত্যিকার অর্থে সবচেয়ে কার্যকর ব্যবস্থা, শুধু শ্রম ছাড়া খরচ নেই",
+    "অতিরিক্ত চারা কাটা ও নিকাশ",
+    "খনিজ তেলের মিশ্রণ স্প্রে (বিশ্বজুড়ে সিগাটোকার বিরুদ্ধে বাণিজ্যিকভাবে ব্যবহৃত)",
+    "আঠালো পদার্থসহ প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+    "পর্যাপ্ত পটাশ"
+  ],
+  "fertilizer_advice_en": "Banana is a very heavy potassium feeder. Follow FRG-2018 and apply potash in splits through the growing period. Potassium-deficient plants lose leaves to Sigatoka far faster. Adequate nitrogen keeps new leaves emerging to replace those lost.",
+  "fertilizer_advice_bn": "কলার পটাশ খুব বেশি লাগে। এফআরজি-২০১৮ মেনে চলুন এবং গাছ বাড়ার সময়জুড়ে কিস্তিতে পটাশ দিন। পটাশের ঘাটতি থাকলে সিগাটোকায় পাতা অনেক দ্রুত ঝরে। পর্যাপ্ত ইউরিয়া দিলে ঝরা পাতার বদলে নতুন পাতা বের হতে থাকে।",
+  "safety_warning_en": "Wear gloves, mask, goggles, hat and full-sleeve waterproof clothing. Spraying upward under a banana canopy means heavy spray fallback — this is one of the highest-exposure spraying jobs in Bangladeshi agriculture. Never spray without eye and respiratory protection. Observe the PHI.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, টুপি ও ফুলহাতা পানিরোধী পোশাক পরুন। কলা গাছের নিচে উপরের দিকে স্প্রে করলে প্রচুর ওষুধ গায়ে ফিরে পড়ে — বাংলাদেশের কৃষিকাজে সবচেয়ে বেশি ওষুধ শরীরে লাগার কাজগুলোর একটি এটি। চোখ ও শ্বাসের সুরক্ষা ছাড়া কখনো স্প্রে করবেন না। পিএইচআই মানুন।",
+  "legal_note_en": "Use only DAE-registered products. Do not use unapproved ripening chemicals such as calcium carbide on banana — this is illegal and dangerous. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কলা পাকাতে ক্যালসিয়াম কার্বাইডের মতো অননুমোদিত রাসায়নিক ব্যবহার করবেন না — এটি বেআইনি ও বিপজ্জনক। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if plants have fewer than 6 functional leaves at bunch emergence, if bunches are ripening prematurely, or if the disease continues despite deleafing and two sprays.",
+  "when_to_call_helpline_bn": "কাঁদি বের হওয়ার সময় ৬টির কম কাজের পাতা থাকলে, কাঁদি আগেভাগে পাকতে থাকলে, অথবা পাতা কাটা ও দুইবার স্প্রের পরও রোগ চলতে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Weekly deleafing plus a rotated fungicide programme normally keeps 8-10 functional leaves through bunch filling, which is what determines bunch size. Leaves already dead do not come back — the aim is to keep the young leaves clean.",
+  "expected_outcome_bn": "প্রতি সপ্তাহে পাতা কাটা ও পালা করে ওষুধ দিলে সাধারণত কাঁদি ভরার সময় পর্যন্ত ৮-১০টি কাজের পাতা থাকে — কাঁদির আকার এতেই ঠিক হয়। মরা পাতা আর ফিরবে না — লক্ষ্য হলো কচি পাতাগুলো পরিষ্কার রাখা।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Propiconazole 25% EC 100ml",
+    "Wetting agent/sticker 100ml",
+    "Power sprayer (petrol) 25L",
+    "Banana pruning knife",
+    "MoP (Muriate of Potash) 50kg bag"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": "BARI banana production and disease management guidance; DAE Plant Protection Wing registered pesticide list; The Daily Star, '17 highly harmful pesticides widely used across country' (propiconazole HHP status)",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Deleafing is deliberately placed above spraying — it is the intervention with the best evidence and the lowest cost. Banana spraying is flagged as a high-exposure operation for PPE messaging.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Wetting agent/sticker 100ml",
+      "sku": "PEST-0102",
+      "name_en": "Wetting agent / spreader-sticker Non-ionic surfactant 100ml",
+      "category": "pesticide",
+      "match_score": 1.125,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Power sprayer (petrol) 25L",
+      "sku": "EQ-0005",
+      "name_en": "Power sprayer (petrol) 25L",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Banana pruning knife",
+      "sku": "EQ-0045",
+      "name_en": "Banana harvesting knife (long handle)",
+      "category": "equipment",
+      "match_score": 0.71,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

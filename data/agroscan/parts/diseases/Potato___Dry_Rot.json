@@ -1,0 +1,126 @@
+{
+  "class_name": "Potato___Dry_Rot",
+  "kb_key": "dry_rot",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Fusarium dry rot",
+  "disease_bn": "আলুর ড্রাই রট",
+  "pathogen": "Fusarium spp.",
+  "severity": "high",
+  "summary_en": "Fusarium dry rot on Potato (Fusarium spp.). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "আলু-এ আলুর ড্রাই রট (Fusarium spp.)। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Sunken dry wrinkles on stored tubers; white or pink mould inside cavities",
+    "Starts at wounds and bruises",
+    "Do not plant from rotten bags"
+  ],
+  "symptoms_bn": [
+    "গুদামি আলুতে বসে যাওয়া শুকনো ভাঁজ; গর্তে সাদা বা গোলাপি ছত্রাক",
+    "কাটা ও আঘাত থেকে শুরু",
+    "পচা বস্তার আলু বীজ হিসেবে লাগাবেন না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Sort today — do not store wet or wounded produce",
+      "detail": "One rotten fruit or tuber inoculates the crate. Discard and bury or feed to animals only if appropriate."
+    },
+    {
+      "step": 2,
+      "title": "Cure / dry before the store",
+      "detail": "Potatoes: skin-set in the dark. Banana crowns: keep the cut dry. Fruit: harvest at firm-ripe, not overripe."
+    },
+    {
+      "step": 3,
+      "title": "Keep the store cool and ventilated",
+      "detail": "Do not pile in sealed plastic. Heat and humidity finish the rot."
+    },
+    {
+      "step": 4,
+      "title": "Do not plant from rotten bags",
+      "detail": "Seed from a diseased heap restarts black scurf, dry rot and crown rot."
+    },
+    {
+      "step": 5,
+      "title": "Field spray only if the crop is still standing and the label allows it",
+      "detail": "Postharvest rot is mostly won or lost at harvest hygiene, not by extra mancozeb on dead tissue."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আজই বাছাই — ভেজা বা কাটা ফসল গুদাম নয়",
+      "detail": "একটি পচা ফল বা আলু পুরো ক্রেট নষ্ট করে। ফেলে পুঁতে ফেলুন।"
+    },
+    {
+      "step": 2,
+      "title": "গুদামের আগে শুকান",
+      "detail": "আলু: অন্ধকারে খোসা সেট। কলার মুকুট: কাটা মুখ শুকনো। ফল: শক্ত-পাকা, অতিরিক্ত পাকা নয়।"
+    },
+    {
+      "step": 3,
+      "title": "গুদাম ঠান্ডা ও বাতাসযুক্ত রাখুন",
+      "detail": "বন্ধ পলিথিনে স্তূপ করবেন না। গরম ও আর্দ্রতায় পচন শেষ করে।"
+    },
+    {
+      "step": 4,
+      "title": "পচা বস্তার জিনিস লাগাবেন না",
+      "detail": "রোগা স্তূপের বীজ আবার ব্ল্যাক স্কার্ফ, ড্রাই রট ও ক্রাউন রট আনে।"
+    },
+    {
+      "step": 5,
+      "title": "গাছ মাঠে থাকলে এবং লেবেল থাকলে তবেই স্প্রে",
+      "detail": "তোলার পরের পচন বেশিরভাগই তোলার পরিচ্ছন্নতায় হয়, মরা অংশে বাড়তি ম্যানকোজেবে নয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum seed or sett treatment at the labelled rate where a product is available",
+    "Neem oil 3-5 ml/L as a first insect/mite option",
+    "These reduce pressure; they will not stop an explosive outbreak on their own"
+  ],
+  "organic_alternatives_bn": [
+    "পাওয়া গেলে লেবেলমাফিক ট্রাইকোডার্মা দিয়ে বীজ/কাটিং শোধন",
+    "পোকা/মাকড়ে প্রথমে প্রতি লিটারে ৩-৫ মিলি নিম তেল",
+    "এগুলো চাপ কমায়; বিস্ফোরক প্রাদুর্ভাব একা থামায় না"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "No pesticide is recommended for this class.",
+  "safety_warning_bn": "এই শ্রেণিতে কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Potato keeps getting worse after the steps above, or if you are not sure this is Fusarium dry rot.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও আলু খারাপ হতে থাকলে, অথবা এটা আলুর ড্রাই রট কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    2,
+    3,
+    4
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Potato___Dry_Rot. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": []
+}

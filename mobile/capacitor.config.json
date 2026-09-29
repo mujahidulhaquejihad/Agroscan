@@ -15,6 +15,9 @@
   "plugins": {
     "SplashScreen": {
       "launchAutoHide": true
+    },
+    "Geolocation": {
+      "permissions": ["location"]
     }
   }
 }

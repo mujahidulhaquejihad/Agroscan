@@ -1,0 +1,302 @@
+{
+  "class_name": "Mango___Anthracnose",
+  "kb_key": "anthracnose",
+  "crop_en": "Mango",
+  "crop_bn": "আম",
+  "disease_en": "Mango anthracnose",
+  "disease_bn": "আমের অ্যানথ্রাকনোজ রোগ",
+  "pathogen": "Colletotrichum gloeosporioides",
+  "severity": "high",
+  "summary_en": "Black sunken spots on leaves, blackened flower panicles and black rotten patches on the fruit — often appearing only after the fruit is picked and ripening. In Bangladesh's mango belt the flowering-time sprays decide the crop, because infection happens at flowering and stays hidden until ripening.",
+  "summary_bn": "পাতায় কালো বসে যাওয়া দাগ, মুকুল কালো হয়ে যাওয়া আর ফলে কালো পচা দাগ — অনেক সময় আম পাড়ার পর পাকার সময় দাগ দেখা দেয়। বাংলাদেশের আমের এলাকায় মুকুল আসার সময়ের স্প্রেই ফসল ঠিক করে দেয়, কারণ রোগ ধরে মুকুল অবস্থায় কিন্তু লুকিয়ে থাকে পাকার সময় পর্যন্ত।",
+  "symptoms_en": [
+    "Small dark brown to black irregular spots on leaves that later dry and drop out leaving holes",
+    "Blackening and drying of flower panicles — this is where the crop is lost",
+    "Black sunken spots on young fruit, causing fruit drop",
+    "On ripening fruit: black sunken lesions, often in a tear-stain pattern running down the fruit, that spread and rot the flesh",
+    "Pink spore masses on lesions in wet weather",
+    "Worst when it rains or there is heavy dew during flowering (February-March)"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট গাঢ় বাদামি বা কালো অনিয়মিত দাগ, পরে শুকিয়ে খসে গিয়ে ছিদ্র হয়ে যায়",
+    "মুকুল কালো হয়ে শুকিয়ে যায় — ফসল হারানোর আসল জায়গা এটাই",
+    "কচি আমে কালো বসে যাওয়া দাগ, আম ঝরে পড়ে",
+    "পাকা আমে: কালো বসে যাওয়া দাগ, প্রায়ই ফলের গা বেয়ে চোখের পানির দাগের মতো নেমে আসে, ছড়িয়ে শাঁস পচিয়ে দেয়",
+    "ভেজা আবহাওয়ায় দাগের উপর গোলাপি জীবাণুর স্তর",
+    "মুকুল আসার সময় (ফেব্রুয়ারি-মার্চ) বৃষ্টি বা ভারী কুয়াশা হলে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray at the right growth stages, not randomly",
+      "detail": "The three sprays that matter are: (1) at panicle emergence, (2) at full bloom or just after, and (3) at pea-stage fruit. Sprays outside these windows do very little."
+    },
+    {
+      "step": 2,
+      "title": "Do not spray during full bloom if bees are working",
+      "detail": "Mango needs insect pollination. Spray early morning or late evening, or shift the spray to just after petal fall."
+    },
+    {
+      "step": 3,
+      "title": "Prune out dead twigs and mummified fruit",
+      "detail": "The fungus overwinters in dead twigs, old panicles and dried fruit left in the tree. Remove and burn them before flowering."
+    },
+    {
+      "step": 4,
+      "title": "Open up the canopy",
+      "detail": "Prune to let light and air into the centre of the tree. A dense mango canopy stays wet for hours after dew and that is what the fungus needs."
+    },
+    {
+      "step": 5,
+      "title": "Handle fruit carefully at harvest",
+      "detail": "Harvest with 1-2 cm of stalk attached, avoid sap burn, and do not bruise the fruit. Latent infections become visible rot during ripening and transport."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "যখন তখন নয়, সঠিক সময়ে স্প্রে করুন",
+      "detail": "যে তিনটি স্প্রে আসল কাজ করে: (১) মুকুল বের হওয়ার সময়, (২) পুরো ফুল ফোটা অবস্থায় বা তার ঠিক পরে, (৩) মটরদানার সমান আম হলে। এই সময়ের বাইরে স্প্রে করে খুব কমই লাভ হয়।"
+    },
+    {
+      "step": 2,
+      "title": "মৌমাছি কাজ করলে পুরো ফুল ফোটা অবস্থায় স্প্রে নয়",
+      "detail": "আমের পরাগায়ন পোকা করে। খুব সকালে বা সন্ধ্যায় স্প্রে করুন, অথবা পাপড়ি ঝরার পরে সরিয়ে নিন।"
+    },
+    {
+      "step": 3,
+      "title": "মরা ডাল ও শুকনো আম কেটে ফেলুন",
+      "detail": "মরা ডাল, পুরনো মুকুল আর গাছে ঝুলে থাকা শুকনো আমেই ছত্রাক বেঁচে থাকে। মুকুল আসার আগে এগুলো কেটে পুড়িয়ে ফেলুন।"
+    },
+    {
+      "step": 4,
+      "title": "গাছের ভেতর খোলা করুন",
+      "detail": "ডাল ছেঁটে গাছের ভেতরে আলো-বাতাস ঢোকান। ঘন আম গাছে শিশিরের পর কয়েক ঘণ্টা ভেজা থাকে, ছত্রাকের ঠিক সেটাই দরকার।"
+    },
+    {
+      "step": 5,
+      "title": "আম পাড়ার সময় যত্ন নিন",
+      "detail": "১-২ সেন্টিমিটার বোঁটা রেখে পাড়ুন, আঠা যেন গায়ে না লাগে, আঘাত লাগতে দেবেন না। লুকিয়ে থাকা রোগ পাকার সময় ও পরিবহনে পচন হয়ে বেরিয়ে আসে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Prune annually after harvest to open the canopy",
+    "Remove and burn dead twigs, old panicles and mummified fruit before flowering",
+    "Keep the orchard floor clean of fallen leaves and fruit",
+    "Do not plant too densely; maintain proper tree spacing",
+    "Harvest at the correct maturity with stalk attached; de-sap carefully",
+    "Hot water treatment of harvested fruit at 52-55°C for 5 minutes greatly reduces post-harvest anthracnose",
+    "Avoid nitrogen excess, which produces dense soft flushes"
+  ],
+  "cultural_control_bn": [
+    "ফল পাড়ার পর প্রতি বছর ডাল ছেঁটে গাছ খোলা রাখুন",
+    "মুকুল আসার আগে মরা ডাল, পুরনো মুকুল ও শুকনো আম কেটে পুড়িয়ে ফেলুন",
+    "বাগানের নিচে ঝরা পাতা ও ফল পরিষ্কার রাখুন",
+    "খুব ঘন করে গাছ লাগাবেন না; সঠিক দূরত্ব রাখুন",
+    "সঠিক পরিপক্বতায় বোঁটাসহ আম পাড়ুন; আঠা সাবধানে ঝরিয়ে নিন",
+    "পাড়া আম ৫২-৫৫ ডিগ্রি গরম পানিতে ৫ মিনিট ডুবিয়ে রাখলে পরে পচা অনেক কমে",
+    "বেশি ইউরিয়া দেবেন না, এতে ঘন নরম কুশি হয়"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "A mature mango tree needs roughly 40-100 litres of spray solution depending on canopy size",
+      "application_method_en": "Power sprayer or high-volume knapsack. You must reach the top of the canopy and the inside branches — this is why hand knapsacks often fail on large trees.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ার বা বেশি পানির ন্যাপস্যাক ব্যবহার করুন। গাছের মাথা ও ভেতরের ডাল পর্যন্ত ওষুধ পৌঁছাতে হবে — বড় গাছে হাতের ন্যাপস্যাকে সাধারণত এজন্যই কাজ হয় না।",
+      "timing_en": "Preventive: at panicle emergence and again at pea-stage fruit.",
+      "timing_bn": "প্রতিরোধমূলক: মুকুল বের হওয়ার সময় এবং মটরদানার সমান আম হলে আরেকবার।",
+      "interval_days": 15,
+      "max_applications_per_season": 4,
+      "phi_days": 15,
+      "pre_harvest_interval_note_en": "Do not harvest for 15 days after the last spray. Mango for export has strict residue limits — check with your buyer.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৫ দিন আম পাড়বেন না। রপ্তানির আমে অবশিষ্টাংশের সীমা খুব কড়া — ক্রেতার সাথে কথা বলে নিন।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and mango label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Azoxystrobin 20% + Cyproconazole 8% SC",
+      "product_name_bn": "অ্যাজোক্সিস্ট্রোবিন ২০% + সাইপ্রোকোনাজল ৮% এসসি",
+      "active_ingredient": "Azoxystrobin + Cyproconazole",
+      "formulation": "SC",
+      "dose_en": "1 ml per litre of water (label field rate recorded as 1200 ml per hectare)",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার (লেবেলে হেক্টর প্রতি ১২০০ মিলি লেখা আছে)",
+      "water_volume_per_decimal": "Volume depends on tree size; ensure full canopy coverage",
+      "application_method_en": "Power sprayer covering the whole canopy including panicles.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ারে মুকুলসহ পুরো গাছ ভিজিয়ে দিন।",
+      "timing_en": "At panicle emergence and after petal fall. Maximum 2 per season; alternate with mancozeb.",
+      "timing_bn": "মুকুল বের হওয়ার সময় ও পাপড়ি ঝরার পর। মৌসুমে সর্বোচ্চ ২ বার; ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন আম পাড়বেন না।",
+      "brands_available_bd": [
+        "Karishma 28 SC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Karishma 28 SC (Azoxystrobin 20% + Cyproconazole 8%), AP-2431, Eon Trading House — recorded in the DAE Plant Protection Wing registered pesticide list for MANGO ANTHRACNOSE at 1200 ml. This is a directly verified, crop-matched registration.",
+      "treatment_type": "both",
+      "caution_en": "Cyproconazole appears in national surveys of highly hazardous pesticides used in Bangladesh. Do not exceed the label dose and observe the PHI strictly, especially for export fruit.",
+      "caution_bn": "বাংলাদেশে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের জাতীয় জরিপে সাইপ্রোকোনাজলের নাম আছে। লেবেলের মাত্রার বেশি দেবেন না এবং বিশেষ করে রপ্তানির আমে পিএইচআই কড়াভাবে মানুন।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-2431"
+      ]
+    },
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার",
+      "water_volume_per_decimal": "Volume depends on tree size",
+      "application_method_en": "Power sprayer, full canopy.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ারে পুরো গাছে।",
+      "timing_en": "At flowering and pea stage. Rotate with mancozeb and the strobilurin mix.",
+      "timing_bn": "মুকুল ও মটরদানা অবস্থায়। ম্যানকোজেব ও স্ট্রোবিলিউরিন মিশ্রণের সাথে পালা করে।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন আম পাড়বেন না।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole is documented for mango anthracnose control in the Plantwise knowledge bank (pwkb.20167800026) and is registered in Bangladesh. Verify the brand AP number and mango label claim.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Hot water treatment of harvested fruit at 52-55°C for 5 minutes — the single most effective post-harvest measure and chemical-free",
+    "Sanitation pruning: removing dead twigs and mummified fruit before flowering",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant at panicle emergence",
+    "Bordeaux mixture 1% on the trunk and main branches after pruning",
+    "Canopy opening to reduce leaf wetness duration"
+  ],
+  "organic_alternatives_bn": [
+    "পাড়া আম ৫২-৫৫ ডিগ্রি গরম পানিতে ৫ মিনিট — ওষুধ ছাড়াই সবচেয়ে কার্যকর ব্যবস্থা",
+    "মুকুল আসার আগে মরা ডাল ও শুকনো আম কেটে ফেলা",
+    "মুকুল বের হওয়ার সময় প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+    "ডাল ছাঁটার পর কাণ্ড ও মোটা ডালে ১% বোর্দো মিশ্রণ",
+    "গাছ খোলা রেখে পাতা ভেজা থাকার সময় কমানো"
+  ],
+  "fertilizer_advice_en": "Apply the annual dose after harvest, not during flowering. Avoid heavy nitrogen before flowering — it produces vegetative flushes instead of panicles and makes anthracnose worse. Potassium and calcium improve fruit skin quality and shelf life.",
+  "fertilizer_advice_bn": "বছরের সার আম পাড়ার পর দিন, মুকুলের সময় নয়। মুকুল আসার আগে বেশি ইউরিয়া দেবেন না — এতে মুকুলের বদলে পাতা গজায় আর রোগ বাড়ে। পটাশ ও ক্যালসিয়াম দিলে আমের খোসা ভালো হয় ও বেশি দিন টেকে।",
+  "safety_warning_en": "Spraying tall mango trees means heavy overhead exposure — a hat, goggles, cartridge mask, gloves and a waterproof jacket are essential, not optional. Never spray upward without eye protection. Do not spray in wind. Protect bees: never spray at full bloom during the day. Observe the PHI, and remember that mango is often sold quickly after harvest, so plan the last spray at least 3 weeks before picking.",
+  "safety_warning_bn": "লম্বা আম গাছে স্প্রে করলে ওষুধ মাথার উপর দিয়ে গায়ে পড়ে — টুপি, চশমা, কার্তুজওয়ালা মাস্ক, হাতমোজা ও পানিরোধী জ্যাকেট এখানে বাধ্যতামূলক। চোখের সুরক্ষা ছাড়া কখনো উপরের দিকে স্প্রে করবেন না। বাতাসে স্প্রে করবেন না। মৌমাছি বাঁচান: দিনের বেলা পুরো ফুল ফোটা অবস্থায় কখনো স্প্রে নয়। পিএইচআই মানুন, আর মনে রাখুন আম পেড়ে দ্রুত বিক্রি হয়, তাই শেষ স্প্রে আম পাড়ার অন্তত ৩ সপ্তাহ আগে দিন।",
+  "legal_note_en": "Use only DAE-registered products. Mango has been a focus of residue concern in Bangladesh — never use ripening chemicals such as calcium carbide, which is illegal and dangerous. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। বাংলাদেশে আমে ওষুধের অবশিষ্টাংশ নিয়ে বিশেষ নজরদারি আছে — ক্যালসিয়াম কার্বাইডের মতো পাকানোর রাসায়নিক কখনো ব্যবহার করবেন না, এটি বেআইনি ও বিপজ্জনক। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if panicles are blackening across the orchard, if there is heavy fruit drop at pea stage, or if fruit is rotting during ripening despite field sprays.",
+  "when_to_call_helpline_bn": "বাগানজুড়ে মুকুল কালো হতে থাকলে, মটরদানা অবস্থায় বেশি আম ঝরলে, অথবা মাঠে স্প্রের পরও পাকার সময় আম পচলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A properly timed flowering-stage spray programme plus sanitation normally protects both the panicles and the fruit. Post-harvest hot water treatment catches the latent infections that survive the field programme. Fruit already showing black rot cannot be saved.",
+  "expected_outcome_bn": "মুকুল অবস্থায় সঠিক সময়ে স্প্রে আর বাগান পরিষ্কার রাখলে সাধারণত মুকুল ও ফল দুটোই বাঁচে। মাঠের স্প্রেতে যেসব লুকানো সংক্রমণ বেঁচে যায় সেগুলো ধরা পড়ে গরম পানির শোধনে। যে আমে কালো পচা ধরে গেছে তা আর বাঁচানো যাবে না।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Karishma 28 SC 100ml",
+    "Propiconazole 25% EC 100ml",
+    "Power sprayer (petrol) 25L",
+    "Pruning saw",
+    "Safety goggles",
+    "Spray mask with cartridge"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Karishma 28 SC, AP-2431, Eon Trading House — registered for mango anthracnose at 1200 ml); Plantwise knowledge bank, 'Propiconazole to control Anthracnose in mango' (doi 10.1079/pwkb.20167800026); 'Management of anthracnose disease of Mango by pre and post harvest treatments' (AGRIS); 'Present Scenario of Insecticides and Fungicides Use in Largest Mango Cultivation Area in Bangladesh' (academia.edu 25079065)",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Karishma 28 SC AP-2431 is a directly verified crop-matched registration (mango/anthracnose) from the published PPW list — one of the strongest citations in this dataset. Post-harvest hot water treatment is emphasised because most Bangladeshi mango anthracnose loss shows up after harvest.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Karishma 28 SC 100ml",
+      "sku": "PEST-0030",
+      "name_en": "Azoxystrobin + Cyproconazole 20% + 8% SC 100ml",
+      "category": "pesticide",
+      "match_score": 1.056,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Power sprayer (petrol) 25L",
+      "sku": "EQ-0005",
+      "name_en": "Power sprayer (petrol) 25L",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Pruning saw",
+      "sku": "EQ-0041",
+      "name_en": "Pruning saw",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Safety goggles",
+      "sku": "EQ-0014",
+      "name_en": "Safety goggles",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

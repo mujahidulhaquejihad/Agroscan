@@ -1,0 +1,181 @@
+{
+  "class_name": "Brinjal___Healthy",
+  "kb_key": "healthy_brinjal",
+  "crop_en": "Brinjal (eggplant)",
+  "crop_bn": "বেগুন",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. For brinjal the two things that keep it healthy are pheromone traps for the borer and good drainage against bacterial wilt.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। বেগুন সুস্থ রাখার দুটি আসল কাজ হলো — ছিদ্রকারী পোকার জন্য ফেরোমন ফাঁদ আর ঢলে পড়া রোগ ঠেকাতে ভালো নিকাশ।",
+  "symptoms_en": [
+    "Even green leaves, no spots or wilting",
+    "Shoot tips upright and firm, no drooping",
+    "No holes plugged with brown excreta on shoots or fruit",
+    "No sudden midday wilting"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ বা ঢলে পড়া নেই",
+    "ডগা সোজা ও শক্ত, নেতিয়ে পড়েনি",
+    "ডগা বা ফলে বাদামি বিষ্ঠায় বন্ধ কোনো ছিদ্র নেই",
+    "দুপুরে হঠাৎ ঢলে পড়া নেই"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray. Brinjal is the most over-sprayed vegetable in Bangladesh and routine spraying is the reason the borer has become so hard to control."
+    },
+    {
+      "step": 2,
+      "title": "Put up pheromone traps now",
+      "detail": "40-60 per acre, before you see damage. Traps installed early keep the borer population low all season and save you several sprays."
+    },
+    {
+      "step": 3,
+      "title": "Check drainage before the rains",
+      "detail": "Open drains, raise the beds. Waterlogging leads directly to bacterial wilt, which has no cure."
+    },
+    {
+      "step": 4,
+      "title": "Walk the field twice a week",
+      "detail": "Look for drooping shoot tips (borer) and for any plant that wilts at midday while its leaves are still green (bacterial wilt). Both need action within days."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "স্প্রে করবেন না। বাংলাদেশে বেগুনেই সবচেয়ে বেশি ওষুধ দেওয়া হয়, আর নিয়মিত স্প্রের কারণেই ছিদ্রকারী পোকা দমন করা এত কঠিন হয়ে গেছে।"
+    },
+    {
+      "step": 2,
+      "title": "এখনই ফেরোমন ফাঁদ লাগান",
+      "detail": "ক্ষতি দেখার আগেই একরে ৪০-৬০টি লাগান। আগেভাগে ফাঁদ দিলে সারা মৌসুম পোকা কম থাকে আর কয়েকটা স্প্রে বেঁচে যায়।"
+    },
+    {
+      "step": 3,
+      "title": "বর্ষার আগে নিকাশ দেখে নিন",
+      "detail": "নালা কেটে দিন, বেড উঁচু করুন। পানি জমলে সরাসরি ঢলে পড়া রোগ হয়, যার কোনো চিকিৎসা নেই।"
+    },
+    {
+      "step": 4,
+      "title": "সপ্তাহে দুইবার জমি ঘুরে দেখুন",
+      "detail": "নেতিয়ে পড়া ডগা (ছিদ্রকারী পোকা) আর পাতা সবুজ থাকতেই দুপুরে ঢলে পড়া গাছ (ঢলে পড়া রোগ) খুঁজুন। দুটোতেই কয়েক দিনের মধ্যে ব্যবস্থা নিতে হয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use grafted seedlings on wilt-resistant rootstock in wilt-prone land",
+    "Plant on raised beds with open drains",
+    "Pheromone traps from the start of the season",
+    "Intercrop with coriander or cowpea",
+    "Rotate with rice or a non-solanaceous crop",
+    "Stake plants and keep fruit off the soil"
+  ],
+  "cultural_control_bn": [
+    "ঢলে পড়া রোগপ্রবণ জমিতে প্রতিরোধী গোড়ায় কলম করা চারা ব্যবহার করুন",
+    "উঁচু বেডে লাগান ও নালা খোলা রাখুন",
+    "মৌসুমের শুরু থেকেই ফেরোমন ফাঁদ",
+    "ধনিয়া বা বরবটির সাথে মিশ্র চাষ",
+    "ধান বা টমেটো গোত্রের বাইরের ফসলের সাথে পালা করুন",
+    "গাছে খুঁটি দিন, ফল মাটি থেকে দূরে রাখুন"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Pheromone traps and neem-based sprays as the standing pest programme",
+    "Trichoderma harzianum in the nursery and at transplanting",
+    "Well-decomposed organic manure",
+    "Trichogramma releases where available"
+  ],
+  "organic_alternatives_bn": [
+    "নিয়মিত ব্যবস্থা হিসেবে ফেরোমন ফাঁদ ও নিমভিত্তিক স্প্রে",
+    "বীজতলায় ও চারা রোপণের সময় ট্রাইকোডার্মা হারজিয়ানাম",
+    "ভালোভাবে পচা জৈব সার",
+    "সম্ভব হলে ট্রাইকোগ্রামা অবমুক্তকরণ"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for brinjal. Apply well-decomposed organic manure with the basal dose and split urea across the long picking period. Avoid excess nitrogen, which produces soft shoots that the borer prefers.",
+  "fertilizer_advice_bn": "বেগুনের জন্য বিএআরসি এফআরজি-২০১৮ মেনে চলুন। জমি তৈরির সারের সাথে ভালোভাবে পচা জৈব সার দিন এবং লম্বা ফল তোলার সময়জুড়ে ইউরিয়া কিস্তিতে দিন। বেশি ইউরিয়া দেবেন না, এতে নরম ডগা হয় যা ছিদ্রকারী পোকার প্রিয়।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, labelled and away from food, water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তালাবদ্ধ, লেবেলসহ এবং খাবার, পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if shoots start drooping, if any plant wilts suddenly with green leaves, or if fruit shows holes.",
+  "when_to_call_helpline_bn": "ডগা নেতিয়ে পড়তে শুরু করলে, পাতা সবুজ থাকা অবস্থায় কোনো গাছ হঠাৎ ঢলে পড়লে, অথবা ফলে ছিদ্র দেখা দিলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With early pheromone traps, good drainage and twice-weekly scouting, brinjal can be grown in Bangladesh with far fewer sprays than is common practice.",
+  "expected_outcome_bn": "শুরু থেকে ফেরোমন ফাঁদ, ভালো নিকাশ আর সপ্তাহে দুইবার জমি দেখলে বাংলাদেশে প্রচলিত অভ্যাসের তুলনায় অনেক কম স্প্রেতেই বেগুন চাষ করা যায়।",
+  "related_shop_products": [
+    "BSFB pheromone trap with lure (pack of 10)",
+    "Grafted brinjal seedlings (per 100)",
+    "Neem oil 250ml",
+    "Bamboo staking poles (bundle of 20)",
+    "TSP 50kg bag"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018; Plantwise Bangladesh factsheet on brinjal shoot and fruit borer (SPIED, 2013); 'Eggplant Integrated Pest Management: An Ecological Guide', FAO",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Healthy class — zero pesticide recommendations. Preventive pheromone trapping is presented as an agronomic practice rather than a treatment.",
+  "related_shop_skus": [
+    {
+      "ref_text": "BSFB pheromone trap with lure (pack of 10)",
+      "sku": "EQ-0066",
+      "name_en": "BSFB pheromone trap with lure (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Grafted brinjal seedlings (per 100)",
+      "sku": "SEED-0049",
+      "name_en": "Grafted brinjal seedlings (wilt-resistant rootstock) 100 seedlings",
+      "category": "seed",
+      "match_score": 0.923,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bamboo staking poles (bundle of 20)",
+      "sku": "EQ-0080",
+      "name_en": "Bamboo staking poles (bundle of 20)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

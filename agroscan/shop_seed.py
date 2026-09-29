@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from agroscan.bd_data import equipment, products, suppliers, upazilas
-from agroscan.shop_db import _connect, init_shop_db
+from agroscan.shop_db import _connect, _ensure_default_vendor, init_shop_db
 
 _PACK = Path(__file__).resolve().parents[1] / "data" / "agroscan"
 
@@ -69,9 +69,10 @@ def seed_from_pack(replace_catalog: bool = True) -> dict:
     n_upazila = n_sup = n_prod = n_link = 0
     imap = _product_image_map()
     dmap = _short_desc_map()
+    skipped = False
     with _connect() as con:
+        n_orders = con.execute("SELECT COUNT(*) FROM orders").fetchone()[0]
         if replace_catalog:
-            n_orders = con.execute("SELECT COUNT(*) FROM orders").fetchone()[0]
             if n_orders == 0:
                 con.execute("PRAGMA foreign_keys = OFF")
                 con.execute("DELETE FROM supplier_products")
@@ -79,6 +80,21 @@ def seed_from_pack(replace_catalog: bool = True) -> dict:
                 con.execute("DELETE FROM suppliers")
                 con.execute("DELETE FROM upazilas")
                 con.execute("PRAGMA foreign_keys = ON")
+            else:
+                skipped = True
+
+        if skipped:
+            _ensure_default_vendor()
+            return {
+                "ok": True,
+                "skipped": True,
+                "reason": "Orders already exist — catalogue was left unchanged to avoid duplicates.",
+                "upazilas": 0,
+                "suppliers": 0,
+                "products": 0,
+                "listings": 0,
+                "images": sum(1 for v in imap.values() if v),
+            }
 
         for u in upazilas():
             con.execute(
@@ -228,6 +244,7 @@ def seed_from_pack(replace_catalog: bool = True) -> dict:
                 )
                 n_link += 1
 
+    _ensure_default_vendor()
     return {
         "upazilas": n_upazila,
         "suppliers": n_sup,

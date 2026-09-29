@@ -1,0 +1,240 @@
+{
+  "class_name": "Tomato___Target_Spot",
+  "kb_key": "target_spot",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Target spot",
+  "disease_bn": "টমেটোর টার্গেট স্পট রোগ",
+  "pathogen": "Corynespora cassiicola",
+  "severity": "medium",
+  "summary_en": "Small brown spots with light centres and faint rings, on leaves, stems and fruit. It looks a lot like early blight but the rings are fainter and it attacks the fruit more often. It is a warm humid weather disease.",
+  "summary_bn": "পাতা, কাণ্ড ও ফলে ছোট বাদামি দাগ, মাঝখানে হালকা রং আর অস্পষ্ট বলয়। দেখতে অনেকটা আগাম ধ্বসার মতো, তবে বলয় কম স্পষ্ট আর ফলে বেশি আক্রমণ করে। গরম ও স্যাঁতসেঁতে আবহাওয়ার রোগ।",
+  "symptoms_en": [
+    "Small brown spots that enlarge to 5-10 mm with a light tan centre and faint concentric rings",
+    "Spots on leaves, leaf stalks, stems AND fruit — the fruit involvement is the main clue",
+    "Sunken circular lesions with cracked centres on green and ripening fruit",
+    "Heavy defoliation in humid weather",
+    "Common in warm humid conditions and in dense unpruned plantings"
+  ],
+  "symptoms_bn": [
+    "ছোট বাদামি দাগ বড় হয়ে ৫-১০ মিলিমিটার হয়, মাঝখানে হালকা বাদামি আর অস্পষ্ট গোল বলয়",
+    "পাতা, বোঁটা, কাণ্ড এবং ফল — সবখানেই দাগ পড়ে; ফলে দাগ পড়াটাই মূল লক্ষণ",
+    "কাঁচা ও পাকা ফলে বসে যাওয়া গোল দাগ, মাঝখানে ফেটে যায়",
+    "স্যাঁতসেঁতে আবহাওয়ায় প্রচুর পাতা ঝরে যায়",
+    "গরম স্যাঁতসেঁতে অবস্থায় এবং ঘন, ডাল না ছাঁটা জমিতে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Prune and open the canopy",
+      "detail": "Remove the lower and inner leaves so air moves and the canopy dries. This is the fastest way to slow it."
+    },
+    {
+      "step": 2,
+      "title": "Remove spotted fruit and leaves",
+      "detail": "Pick off and bag affected fruit and heavily spotted leaves. Fruit lesions do not heal and will rot in transport."
+    },
+    {
+      "step": 3,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb or chlorothalonil every 7-10 days. If already on the fruit, use a difenoconazole or azoxystrobin product once, then return to protectants."
+    },
+    {
+      "step": 4,
+      "title": "Switch to drip or furrow irrigation",
+      "detail": "Stop wetting the foliage. Irrigate in the morning."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ডাল ছেঁটে গাছ খোলা করুন",
+      "detail": "নিচের ও ভেতরের পাতা ছেঁটে ফেলুন যাতে বাতাস চলে ও গাছ শুকায়। রোগ থামানোর সবচেয়ে দ্রুত উপায় এটাই।"
+    },
+    {
+      "step": 2,
+      "title": "দাগওয়ালা ফল ও পাতা সরান",
+      "detail": "আক্রান্ত ফল ও বেশি দাগওয়ালা পাতা তুলে ব্যাগে ভরুন। ফলের দাগ আর সারে না, পরিবহনে পচে যাবে।"
+    },
+    {
+      "step": 3,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "৭-১০ দিন পর পর ম্যানকোজেব বা ক্লোরোথ্যালোনিল দিন। ফলে দাগ পড়ে গেলে একবার ডাইফেনোকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিয়ে আবার প্রতিরোধক ওষুধে ফিরুন।"
+    },
+    {
+      "step": 4,
+      "title": "ড্রিপ বা নালা সেচে যান",
+      "detail": "পাতা ভেজানো বন্ধ করুন। সকালে সেচ দিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Prune and stake to keep the canopy open",
+    "Rotate away from tomato and cucurbits for 2 years — Corynespora has a wide host range",
+    "Use certified seed and clean nursery beds",
+    "Mulch to reduce soil splash",
+    "Remove all crop residue at the end of the season",
+    "Avoid overhead irrigation"
+  ],
+  "cultural_control_bn": [
+    "ডাল ছেঁটে ও খুঁটি দিয়ে গাছ খোলা রাখুন",
+    "২ বছর টমেটো ও কুমড়া জাতীয় ফসল বাদ দিন — এই ছত্রাক অনেক ফসলে আক্রমণ করে",
+    "সার্টিফাইড বীজ ও পরিষ্কার বীজতলা ব্যবহার করুন",
+    "মাটির ছিটা কমাতে মালচ দিন",
+    "মৌসুম শেষে সব অবশিষ্টাংশ সরিয়ে ফেলুন",
+    "উপর দিয়ে সেচ এড়িয়ে চলুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray, full coverage of leaves, stems and fruit.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতা, কাণ্ড ও ফল সব ভিজিয়ে দিন।",
+      "timing_en": "Preventive, every 7-10 days in humid weather.",
+      "timing_bn": "প্রতিরোধমূলক, স্যাঁতসেঁতে আবহাওয়ায় ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 5,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Azoxystrobin 25% SC",
+      "product_name_bn": "অ্যাজোক্সিস্ট্রোবিন ২৫% এসসি",
+      "active_ingredient": "Azoxystrobin",
+      "formulation": "SC",
+      "dose_en": "1 ml per litre of water (about 10 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ১০ মিলি)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with full coverage.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে দিন।",
+      "timing_en": "Curative, when lesions are on the fruit. Maximum 2 per season and always alternate with a different mode of action — strobilurin resistance develops quickly.",
+      "timing_bn": "ফলে দাগ পড়লে দমনের জন্য। মৌসুমে সর্বোচ্চ ২ বার, সবসময় ভিন্ন গ্রুপের ওষুধের সাথে পালা করে — এই গ্রুপে জীবাণু দ্রুত সহ্য করা শেখে।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Amistar 25 SC",
+        "Sitro 25 SC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Sitro 25 SC, AP-3153, S I Agro International — recorded in the DAE PPW registered list (registered use there shown for tea die-back). Amistar Top (azoxystrobin + difenoconazole), AP-2312, Syngenta Bangladesh Limited, is registered for rice sheath blight and blast. Confirm the tomato label claim before presenting as a registered use.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-2312",
+        "AP-3153"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Pruning and canopy management — the highest-value non-chemical action",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant",
+    "Mulching and drip irrigation",
+    "Removing infected fruit promptly so it does not shed spores across the crop"
+  ],
+  "organic_alternatives_bn": [
+    "ডাল ছাঁটা ও গাছ খোলা রাখা — ওষুধ ছাড়া সবচেয়ে কার্যকর কাজ",
+    "প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে",
+    "মালচ ও ড্রিপ সেচ",
+    "আক্রান্ত ফল সাথে সাথে তুলে ফেলা যাতে ওখান থেকে জীবাণু না ছড়ায়"
+  ],
+  "fertilizer_advice_en": "Keep nitrogen moderate — dense soft canopies trap humidity. Maintain potassium at the FRG rate to firm up fruit skin.",
+  "fertilizer_advice_bn": "ইউরিয়া মাঝারি মাত্রায় রাখুন — ঘন নরম গাছে আর্দ্রতা আটকে থাকে। ফলের খোসা শক্ত রাখতে এফআরজি মাত্রায় পটাশ দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Respect the 7-day PHI before each picking. Wash with soap after spraying. Never rinse the sprayer into a pond or canal.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। প্রতিবার ফল তোলার আগে ৭ দিনের পিএইচআই মানুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন। পুকুর বা খালে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if fruit lesions appear, if defoliation is heavy, or if you cannot distinguish this from early blight.",
+  "when_to_call_helpline_bn": "ফলে দাগ পড়লে, বেশি পাতা ঝরলে, অথবা এটা আগাম ধ্বসা কিনা বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Pruning plus a protectant programme normally stops new lesions within 2 weeks. Fruit already marked stays marked and should be graded out.",
+  "expected_outcome_bn": "ডাল ছেঁটে প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহে নতুন দাগ পড়া বন্ধ হয়। যে ফলে দাগ পড়ে গেছে তা ওরকমই থাকবে, বাছাইয়ে আলাদা করে ফেলুন।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Azoxystrobin 25% SC 100ml",
+    "Pruning shears",
+    "Straw mulch",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    11
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Sitro 25 SC, AP-3153, S I Agro International; Amistar Top, AP-2312, Syngenta Bangladesh Ltd); BARI tomato disease management guidance",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Target spot is less commonly reported in Bangladesh extension literature than early blight and is frequently misdiagnosed as it. The PPW entries found for azoxystrobin record tea and rice uses; the tomato claim needs label confirmation.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Azoxystrobin 25% SC 100ml",
+      "sku": "PEST-0029",
+      "name_en": "Azoxystrobin 25% SC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Pruning shears",
+      "sku": "EQ-0040",
+      "name_en": "Pruning shears (secateurs)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

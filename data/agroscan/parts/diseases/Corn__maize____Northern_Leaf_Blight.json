@@ -1,0 +1,235 @@
+{
+  "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+  "kb_key": "northern_leaf_blight",
+  "crop_en": "Maize",
+  "crop_bn": "ভুট্টা",
+  "disease_en": "Northern corn leaf blight",
+  "disease_bn": "ভুট্টার পাতা ঝলসানো রোগ",
+  "pathogen": "Exserohilum turcicum (Setosphaeria turcica)",
+  "severity": "high",
+  "summary_en": "Long grey-green cigar-shaped lesions on the leaves, starting on the lower leaves and moving up. If these reach the leaves above the cob before grain filling, yield drops sharply. Cool wet weather with long dew periods drives it.",
+  "summary_bn": "পাতায় লম্বা ধূসর-সবুজ চুরুটের মতো দাগ পড়ে, নিচের পাতা থেকে শুরু হয়ে উপরে ওঠে। দানা ভরার আগেই মোচার উপরের পাতায় পৌঁছে গেলে ফলন অনেক কমে যায়। ঠান্ডা ভেজা আবহাওয়া আর দীর্ঘক্ষণ শিশির থাকলে রোগ বাড়ে।",
+  "symptoms_en": [
+    "Long (2-15 cm) elliptical, cigar-shaped grey-green to tan lesions running along the leaf",
+    "Lesions have smooth edges and are much bigger than rust pustules or gray leaf spot",
+    "Starts on the lowest leaves and moves upward",
+    "In severe attacks lesions merge and whole leaves die, giving a scorched look",
+    "Dark olive fungal growth visible on lesions in humid weather",
+    "Favoured by 18-27°C with 6+ hours of leaf wetness"
+  ],
+  "symptoms_bn": [
+    "পাতায় লম্বা (২-১৫ সেন্টিমিটার) ডিম্বাকার, চুরুটের মতো ধূসর-সবুজ থেকে হালকা বাদামি দাগ",
+    "দাগের কিনারা মসৃণ, মরিচার ফোস্কা বা গ্রে লিফ স্পটের চেয়ে অনেক বড়",
+    "সবচেয়ে নিচের পাতা থেকে শুরু হয়ে উপরে ওঠে",
+    "বেশি আক্রমণে দাগ মিশে গিয়ে পুরো পাতা মরে যায়, দেখতে ঝলসানো লাগে",
+    "স্যাঁতসেঁতে আবহাওয়ায় দাগের উপর গাঢ় জলপাই রঙের ছত্রাক দেখা যায়",
+    "১৮-২৭ ডিগ্রি তাপমাত্রা ও ৬ ঘণ্টার বেশি পাতা ভেজা থাকলে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check how high the lesions have climbed",
+      "detail": "If lesions are still below the cob, you have time. If they are on the ear leaf or above before grain filling, spray now — this is where the yield loss happens."
+    },
+    {
+      "step": 2,
+      "title": "Spray a triazole or strobilurin",
+      "detail": "Propiconazole, tebuconazole or azoxystrobin at label rate, targeting the upper canopy. One well-timed spray at tasselling is usually worth more than two late ones."
+    },
+    {
+      "step": 3,
+      "title": "Do not add extra nitrogen",
+      "detail": "Soft nitrogen-rich tissue blights faster. Stick to the FRG rate."
+    },
+    {
+      "step": 4,
+      "title": "Plan crop rotation now",
+      "detail": "The fungus survives on maize residue. If you plant maize after maize on the same land, this disease will get worse every year. Decide the rotation before the next season."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "দাগ কতটা উপরে উঠেছে দেখুন",
+      "detail": "দাগ এখনো মোচার নিচে থাকলে সময় আছে। দানা ভরার আগেই মোচার পাতা বা তার উপরে উঠে গেলে এখনই স্প্রে করুন — ফলনের ক্ষতি এখানেই হয়।"
+    },
+    {
+      "step": 2,
+      "title": "ট্রায়াজল বা স্ট্রোবিলিউরিন স্প্রে করুন",
+      "detail": "লেবেল অনুযায়ী প্রোপিকোনাজল, টেবুকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিন, উপরের পাতায় তাক করে। মোচা আসার সময় সঠিকভাবে একবার স্প্রে করা দেরিতে দুইবার স্প্রের চেয়ে ভালো।"
+    },
+    {
+      "step": 3,
+      "title": "বাড়তি ইউরিয়া দেবেন না",
+      "detail": "নরম, বেশি নাইট্রোজেনযুক্ত পাতায় রোগ দ্রুত ছড়ায়। এফআরজি মাত্রাতেই থাকুন।"
+    },
+    {
+      "step": 4,
+      "title": "এখনই পালা চাষের পরিকল্পনা করুন",
+      "detail": "এই ছত্রাক ভুট্টার নাড়ায় বেঁচে থাকে। একই জমিতে ভুট্টার পর ভুট্টা করলে প্রতি বছর রোগ বাড়বে। পরের মৌসুমের আগেই পালা ঠিক করে নিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow resistant or tolerant hybrids — the most effective and cheapest control",
+    "Rotate maize with rice, wheat, potato or legumes for at least one season",
+    "Plough in or remove maize residue after harvest; the fungus overwinters there",
+    "Avoid very dense planting; keep rows wide enough for air movement",
+    "Plant on time so the crop passes grain filling before the wettest period",
+    "Apply balanced potash"
+  ],
+  "cultural_control_bn": [
+    "প্রতিরোধী বা সহনশীল হাইব্রিড লাগান — সবচেয়ে কার্যকর ও সস্তা ব্যবস্থা",
+    "অন্তত এক মৌসুম ভুট্টার বদলে ধান, গম, আলু বা ডাল জাতীয় ফসল করুন",
+    "ফসল কাটার পর ভুট্টার নাড়া চাষ দিয়ে মাটিতে মিশিয়ে দিন বা সরিয়ে ফেলুন; ছত্রাক ওখানেই বেঁচে থাকে",
+    "খুব ঘন করে বপন করবেন না; সারির ফাঁক এমন রাখুন যাতে বাতাস চলে",
+    "সময়মতো বপন করুন যাতে সবচেয়ে ভেজা সময়ের আগেই দানা ভরা শেষ হয়",
+    "সুষম পটাশ দিন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with a lance extension, targeting the ear leaf and the leaves above it.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে নলে বাড়তি লাঠি লাগিয়ে মোচার পাতা ও তার উপরের পাতায় দিন।",
+      "timing_en": "At tasselling, or earlier if lesions reach the ear leaf before then.",
+      "timing_bn": "মোচা আসার সময়, অথবা তার আগেই দাগ মোচার পাতায় পৌঁছালে তখনই।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray; do not feed sprayed green maize to livestock inside this period.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ফসল কাটবেন না; এই সময়ে স্প্রে করা কাঁচা ভুট্টা গবাদিপশুকে খাওয়াবেন না।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole registered in Bangladesh; verify brand AP number and maize label claim against the current PPW list.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Azoxystrobin 20% + Difenoconazole 12.5% SC",
+      "product_name_bn": "অ্যাজোক্সিস্ট্রোবিন ২০% + ডাইফেনোকোনাজল ১২.৫% এসসি",
+      "active_ingredient": "Azoxystrobin + Difenoconazole",
+      "formulation": "SC",
+      "dose_en": "1 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray targeting the upper canopy.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে গাছের উপরের পাতায় দিন।",
+      "timing_en": "At tasselling. Maximum 2 per season; rotate with a triazole so strobilurin resistance does not build.",
+      "timing_bn": "মোচা আসার সময়। মৌসুমে সর্বোচ্চ ২ বার; ট্রায়াজলের সাথে পালা করে দিন যাতে জীবাণু এই গ্রুপ সহ্য করা না শেখে।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ফসল কাটবেন না।",
+      "brands_available_bd": [
+        "Amistar Top"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Amistar Top, AP-2312, Syngenta Bangladesh Limited — recorded in the DAE PPW registered list at 1 ml per litre of water (registered use shown there for rice sheath blight and blast). Confirm the maize label claim before presenting as a registered use.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-2312"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Resistant hybrids and crop rotation — the only genuinely effective non-chemical controls for this disease",
+    "Residue incorporation or removal after harvest",
+    "Wider row spacing"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতিরোধী হাইব্রিড ও পালা চাষ — এই রোগে ওষুধ ছাড়া সত্যিকারের কার্যকর ব্যবস্থা কেবল এই দুটি",
+    "ফসল কাটার পর নাড়া মাটিতে মিশিয়ে দেওয়া বা সরিয়ে ফেলা",
+    "সারির ফাঁক বাড়ানো"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for maize. Apply the full potash dose. Avoid heavy late nitrogen, which delays maturity and extends the window in which the disease can damage the crop.",
+  "fertilizer_advice_bn": "ভুট্টার জন্য এফআরজি-২০১৮ মেনে চলুন। পুরো পটাশ মাত্রা দিন। দেরিতে বেশি ইউরিয়া দেবেন না, এতে ফসল পাকতে দেরি হয় আর রোগের ক্ষতি করার সময় বেড়ে যায়।",
+  "safety_warning_en": "Wear gloves, mask, goggles, hat and full-sleeve clothing. Spray drifts back onto you in a tall crop. Do not eat, drink or smoke while spraying. Wash with soap afterwards. Observe the 30-day PHI, including for green fodder.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, টুপি ও ফুলহাতা পোশাক পরুন। লম্বা ফসলে ওষুধ গায়ে ফিরে পড়ে। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। পরে সাবান দিয়ে ধুয়ে ফেলুন। কাঁচা ঘাস হিসেবে খাওয়ানোর ক্ষেত্রেও ৩০ দিনের পিএইচআই মানুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if lesions reach the ear leaf before tasselling, if more than 30% of leaf area is blighted, or if the same field gets it every year despite rotation.",
+  "when_to_call_helpline_bn": "মোচা আসার আগেই দাগ মোচার পাতায় পৌঁছালে, ৩০% এর বেশি পাতা ঝলসে গেলে, অথবা পালা করার পরও একই জমিতে প্রতি বছর হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A spray at tasselling normally keeps the upper three leaves green through grain filling, which is where most of the yield comes from. Lower leaves already blighted stay blighted.",
+  "expected_outcome_bn": "মোচা আসার সময় স্প্রে করলে সাধারণত দানা ভরার সময় পর্যন্ত উপরের তিনটি পাতা সবুজ থাকে — ফলনের বেশিরভাগ ওখান থেকেই আসে। নিচের যেসব পাতা ঝলসে গেছে সেগুলো ওরকমই থাকবে।",
+  "related_shop_products": [
+    "Propiconazole 25% EC 100ml",
+    "Amistar Top 100ml",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Spray lance extension"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Amistar Top, AP-2312, Syngenta Bangladesh Ltd, 1 ml/L); BARI maize production guidance; BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Amistar Top AP-2312 and its 1 ml/L rate are verified from the published PPW list, but the registered crop there is rice — confirm the maize claim before showing a registration number against maize.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Amistar Top 100ml",
+      "sku": "PEST-0026",
+      "name_en": "Azoxystrobin + Difenoconazole 20% + 12.5% SC 100ml",
+      "category": "pesticide",
+      "match_score": 0.889,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray lance extension",
+      "sku": "EQ-0009",
+      "name_en": "Spray lance extension (1.5 m)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

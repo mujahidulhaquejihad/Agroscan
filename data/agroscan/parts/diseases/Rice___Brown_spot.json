@@ -1,0 +1,249 @@
+{
+  "class_name": "Rice___Brown_spot",
+  "kb_key": "brown_spot",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Brown spot",
+  "disease_bn": "ধানের বাদামি দাগ রোগ",
+  "pathogen": "Bipolaris oryzae (Cochliobolus miyabeanus)",
+  "severity": "medium",
+  "summary_en": "Brown spot is mainly a hunger disease — it shows up on poor, sandy or drought-stressed soil where the crop is short of nitrogen, potash or silicon. Oval brown spots cover the leaves and the grain becomes discoloured and light. Fixing the soil matters more than spraying.",
+  "summary_bn": "বাদামি দাগ রোগ মূলত পুষ্টির অভাবের রোগ — খারাপ, বেলে বা খরাপ্রবণ জমিতে যেখানে নাইট্রোজেন, পটাশ বা সিলিকনের ঘাটতি আছে সেখানেই বেশি হয়। পাতায় ডিমের মতো বাদামি দাগ পড়ে, ধান রং নষ্ট হয়ে হালকা হয়ে যায়। স্প্রে করার চেয়ে মাটির যত্ন নেওয়াই বেশি জরুরি।",
+  "symptoms_en": [
+    "Round to oval brown spots on leaves, like sesame seeds, with a grey centre and dark brown edge",
+    "Unlike blast, the spots are blunt and oval — not pointed and diamond-shaped",
+    "Many small spots on the seedling leaves in the nursery, sometimes killing seedlings",
+    "Brown or black spots on the glumes; grain is shrivelled and discoloured (dirty rice)",
+    "Worst on droughty, sandy or unfertilised land and in fields short of potash"
+  ],
+  "symptoms_bn": [
+    "পাতায় গোল বা ডিম্বাকার বাদামি দাগ, দেখতে তিলের দানার মতো, মাঝখানে ধূসর ও কিনারা গাঢ় বাদামি",
+    "ব্লাস্টের মতো ছুঁচালো হীরা আকৃতির নয় — এই দাগ ভোঁতা ও ডিম্বাকার",
+    "বীজতলায় চারার পাতায় অনেক ছোট ছোট দাগ, কখনো চারা মরে যায়",
+    "ধানের তুষে বাদামি বা কালো দাগ; চাল চিমসে ও রং নষ্ট হয়",
+    "খরাপ্রবণ, বেলে বা সার না দেওয়া জমিতে এবং পটাশের ঘাটতি থাকলে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check the water first",
+      "detail": "Brown spot almost always follows water stress. Keep 3-5 cm of standing water in the field. If the field has been dry, irrigate immediately — this alone often stops it."
+    },
+    {
+      "step": 2,
+      "title": "Feed the crop",
+      "detail": "Top-dress urea if the leaves are pale yellow and the crop is clearly underfed. Unlike blast, brown spot gets BETTER with adequate nitrogen, not worse."
+    },
+    {
+      "step": 3,
+      "title": "Apply potash",
+      "detail": "Give 5-7 kg MoP per bigha (33 decimal). Potash deficiency is the single most common cause of brown spot in Bangladesh."
+    },
+    {
+      "step": 4,
+      "title": "Spray only if severe",
+      "detail": "If more than 10% of leaf area is spotted or the flag leaf is affected, spray a propiconazole or mancozeb product. Light infection on a well-fed crop does not need spraying."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আগে পানি দেখুন",
+      "detail": "বাদামি দাগ রোগ প্রায় সবসময় পানির অভাবের পর হয়। জমিতে ৩-৫ সেন্টিমিটার পানি ধরে রাখুন। জমি শুকনো থাকলে এখনই সেচ দিন — অনেক সময় শুধু এতেই রোগ থেমে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "গাছকে খাবার দিন",
+      "detail": "পাতা ফ্যাকাশে হলুদ হয়ে গেলে এবং গাছ দুর্বল দেখালে ইউরিয়া উপরি প্রয়োগ করুন। ব্লাস্টের উল্টো — এখানে ঠিকমতো নাইট্রোজেন দিলে রোগ কমে, বাড়ে না।"
+    },
+    {
+      "step": 3,
+      "title": "পটাশ সার দিন",
+      "detail": "বিঘা প্রতি (৩৩ শতাংশ) ৫-৭ কেজি এমওপি দিন। বাংলাদেশে বাদামি দাগ রোগের সবচেয়ে বড় কারণ পটাশের ঘাটতি।"
+    },
+    {
+      "step": 4,
+      "title": "বেশি হলে তবেই স্প্রে",
+      "detail": "পাতার ১০% এর বেশি দাগ পড়লে বা ফ্ল্যাগ লিফ আক্রান্ত হলে প্রোপিকোনাজল বা ম্যানকোজেব স্প্রে করুন। ভালো সার দেওয়া জমিতে হালকা দাগে স্প্রে দরকার নেই।"
+    }
+  ],
+  "cultural_control_en": [
+    "Treat seed before sowing — this is the cheapest and most effective step",
+    "Do not save seed from a field that had discoloured, spotted grain",
+    "Apply the full FRG dose of potash and, on old rice land, add zinc sulphate",
+    "Incorporate rice straw or husk ash to restore silicon on long-cropped land",
+    "Level the field so water does not drain off one corner and stress that patch",
+    "Deep-plough and destroy stubble after harvest"
+  ],
+  "cultural_control_bn": [
+    "বপনের আগে বীজ শোধন করুন — এটাই সবচেয়ে সস্তা ও কার্যকর ব্যবস্থা",
+    "যে জমির ধানে দাগ ও রং নষ্ট ছিল সেখান থেকে বীজ রাখবেন না",
+    "এফআরজি অনুযায়ী পুরো পটাশ মাত্রা দিন; পুরনো ধানি জমিতে জিংক সালফেটও দিন",
+    "বহু বছর ধান করা জমিতে খড় বা তুষের ছাই মিশিয়ে সিলিকনের ঘাটতি পূরণ করুন",
+    "জমি সমান করুন যাতে এক কোণা থেকে পানি সরে গিয়ে ওই অংশ শুকিয়ে না যায়",
+    "ফসল কাটার পর গভীর চাষ দিয়ে নাড়া নষ্ট করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water (about 10 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ১০ মিলি)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal at full canopy",
+      "application_method_en": "Knapsack spray over the whole canopy, wetting both leaf surfaces. Late afternoon application, no wind.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে, পাতার দুই পিঠ ভিজিয়ে স্প্রে করুন। বিকেলে বাতাস কম থাকলে দিন।",
+      "timing_en": "At first appearance of spots on the upper leaves; repeat once after 12-15 days if it keeps spreading.",
+      "timing_bn": "উপরের পাতায় প্রথম দাগ দেখা মাত্র; ছড়াতে থাকলে ১২-১৫ দিন পর আরেকবার।",
+      "interval_days": 14,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray. Propiconazole is classed as a highly hazardous pesticide in some reviews — use it only when the infection justifies it.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ধান কাটবেন না। কিছু পর্যালোচনায় প্রোপিকোনাজলকে অতি ঝুঁকিপূর্ণ ওষুধ বলা হয়েছে — সত্যিই দরকার হলে তবেই ব্যবহার করুন।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole is registered in Bangladesh and named in national HHP surveys as a widely used active. Verify brand-level AP number against the current PPW list.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water (about 20 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০ গ্রাম)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Contact fungicide — it only protects the leaf surface it lands on, so cover the crop thoroughly. Re-spray if it rains within 4 hours.",
+      "application_method_bn": "এটি স্পর্শক ছত্রাকনাশক — যেখানে ওষুধ লাগবে শুধু সেখানেই কাজ করে, তাই পুরো গাছ ভালোভাবে ভেজাতে হবে। ৪ ঘণ্টার মধ্যে বৃষ্টি হলে আবার স্প্রে করুন।",
+      "timing_en": "Protective spray when weather turns humid and spots are just starting.",
+      "timing_bn": "আবহাওয়া স্যাঁতসেঁতে হলে এবং সবে দাগ দেখা দিলে প্রতিরোধমূলক স্প্রে করুন।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন ধান কাটবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb is registered in Bangladesh (e.g. in combination products such as Galben M, AP-374, ACI Formulations Ltd). Verify the straight-mancozeb brand's AP number.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Hot water seed treatment: soak seed at 53-54°C for 12 minutes, then cool and dry — kills seed-borne Bipolaris without any chemical",
+    "Trichoderma harzianum seed treatment at 4-5 g/kg seed",
+    "Apply well-rotted cowdung or compost at 5-8 tonnes/ha to build organic matter on sandy soils",
+    "Rice husk ash worked into the soil supplies silicon and hardens the leaf"
+  ],
+  "organic_alternatives_bn": [
+    "গরম পানিতে বীজ শোধন: ৫৩-৫৪ ডিগ্রি সেলসিয়াস পানিতে ১২ মিনিট ভিজিয়ে রেখে ঠান্ডা করে শুকিয়ে নিন — কোনো ওষুধ ছাড়াই বীজবাহিত জীবাণু মরে যায়",
+    "প্রতি কেজি বীজে ৪-৫ গ্রাম ট্রাইকোডার্মা হারজিয়ানাম দিয়ে বীজ শোধন",
+    "বেলে মাটিতে হেক্টর প্রতি ৫-৮ টন পচা গোবর বা কম্পোস্ট দিন",
+    "মাটিতে তুষের ছাই মেশালে সিলিকন পাওয়া যায়, পাতা শক্ত হয়"
+  ],
+  "fertilizer_advice_en": "This is the disease where fertiliser IS the treatment. Give the full FRG-2018 dose, especially potash (MoP) and, on old rice soils, zinc sulphate at 8-10 kg/ha and gypsum for sulphur. Do not under-fertilise to save money — the yield loss from brown spot will cost far more than the fertiliser.",
+  "fertilizer_advice_bn": "এই রোগে সারই আসল চিকিৎসা। এফআরজি-২০১৮ অনুযায়ী পুরো মাত্রা দিন, বিশেষ করে পটাশ (এমওপি); পুরনো ধানি জমিতে হেক্টর প্রতি ৮-১০ কেজি জিংক সালফেট আর সালফারের জন্য জিপসাম দিন। টাকা বাঁচাতে সার কম দেবেন না — বাদামি দাগ রোগে ফলন কমে যাওয়ার ক্ষতি সারের দামের চেয়ে অনেক বেশি।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing when mixing and spraying. Mancozeb powder irritates the skin and eyes — do not tip it out in a breeze. Do not eat, drink or smoke while spraying. Wash with soap afterwards. Do not rinse equipment near ponds or ditches.",
+  "safety_warning_bn": "মেশানো ও স্প্রের সময় হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। ম্যানকোজেব গুঁড়া চামড়া ও চোখে জ্বালা ধরায় — বাতাসে ঢালবেন না। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। পরে সাবান দিয়ে ধুয়ে ফেলুন। পুকুর বা নালার পাশে যন্ত্র ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products bought from a licensed dealer. Keep the label and the receipt. Free advice: Krishi Call Center 16123.",
+  "legal_note_bn": "লাইসেন্সধারী দোকান থেকে ডিএই-নিবন্ধিত ওষুধ কিনুন। লেবেল ও রসিদ রাখুন। বিনামূল্যে পরামর্শ: কৃষি কল সেন্টার ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if spots cover more than 20% of leaf area, if seedlings are dying in the nursery, or if the same field gets brown spot every year — that points to a soil problem your Sub-Assistant Agriculture Officer should look at with a soil test.",
+  "when_to_call_helpline_bn": "পাতার ২০% এর বেশি দাগ পড়লে, বীজতলায় চারা মরতে থাকলে, অথবা একই জমিতে প্রতি বছর এই রোগ হলে ১৬১২৩ নম্বরে ফোন করুন — প্রতি বছর হওয়া মানে মাটির সমস্যা, উপসহকারী কৃষি অফিসারকে দিয়ে মাটি পরীক্ষা করান।",
+  "expected_outcome_en": "Once water and potash are corrected, new leaves come out clean within 2-3 weeks. Old spotted leaves will not recover — judge success by whether the new growth is clean.",
+  "expected_outcome_bn": "পানি ও পটাশ ঠিক করলে ২-৩ সপ্তাহের মধ্যে নতুন পাতা পরিষ্কার বের হয়। পুরনো দাগওয়ালা পাতা আর ভালো হবে না — নতুন পাতা পরিষ্কার আসছে কিনা দেখেই বুঝবেন কাজ হয়েছে।",
+  "related_shop_products": [
+    "Propiconazole 25% EC 100ml",
+    "Mancozeb 80% WP 500g",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Zinc sulphate monohydrate 1kg",
+    "Gypsum 50kg bag",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "source": "BRRI extension guidance on rice diseases (brri.gov.bd); BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd); IRRI Rice Knowledge Bank brown spot management; DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Nitrogen advice here is the OPPOSITE of blast — the app must not merge the two. Brand AP registration numbers not individually verified.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Zinc sulphate monohydrate 1kg",
+      "sku": "FERT-0017",
+      "name_en": "Zinc sulphate monohydrate 33% Zn 1kg",
+      "category": "fertilizer",
+      "match_score": 1.212,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Gypsum 50kg bag",
+      "sku": "FERT-0015",
+      "name_en": "Gypsum (Calcium sulphate) 50kg",
+      "category": "fertilizer",
+      "match_score": 0.829,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

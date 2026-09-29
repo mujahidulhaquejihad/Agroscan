@@ -1,0 +1,273 @@
+{
+  "class_name": "Brinjal___Shoot_and_fruit_borer",
+  "kb_key": "shoot_and_fruit_borer",
+  "crop_en": "Brinjal (eggplant)",
+  "crop_bn": "বেগুন",
+  "disease_en": "Brinjal shoot and fruit borer (BSFB)",
+  "disease_bn": "বেগুনের ডগা ও ফল ছিদ্রকারী পোকা",
+  "pathogen": "Leucinodes orbonalis (an insect pest, not a disease)",
+  "severity": "high",
+  "summary_en": "This is Bangladesh's most damaging brinjal pest, not a disease. The caterpillar bores into the shoot tip (which droops and dies) and into the fruit (which becomes unsellable). It is also the reason brinjal is one of the most heavily sprayed crops in the country — pheromone traps and weekly clipping cut that spraying dramatically.",
+  "summary_bn": "এটি রোগ নয়, বাংলাদেশে বেগুনের সবচেয়ে ক্ষতিকর পোকা। কীড়া ডগার ভেতরে ঢুকে পড়ে (ডগা নেতিয়ে মরে যায়) আর ফলের ভেতরে ঢোকে (ফল আর বিক্রি হয় না)। এই পোকার কারণেই দেশে বেগুনে সবচেয়ে বেশি ওষুধ দেওয়া হয় — ফেরোমন ফাঁদ আর প্রতি সপ্তাহে আক্রান্ত ডগা কাটলে এই স্প্রে অনেক কমে যায়।",
+  "symptoms_en": [
+    "Young shoot tips wilt, droop and dry up — the classic 'dead heart' look",
+    "A small round hole plugged with brown excreta on the shoot or fruit",
+    "Fruit looks fine outside but is tunnelled and full of frass inside when you cut it",
+    "Damaged fruit is rejected at the market",
+    "Small brown-white moths with a triangular resting posture, active at night",
+    "Present all season wherever brinjal is grown continuously"
+  ],
+  "symptoms_bn": [
+    "কচি ডগা নেতিয়ে ঝুলে পড়ে ও শুকিয়ে যায় — একেই বলে 'ডেড হার্ট'",
+    "ডগা বা ফলের গায়ে ছোট গোল ছিদ্র, বাদামি বিষ্ঠা দিয়ে বন্ধ করা",
+    "ফল বাইরে থেকে ভালো দেখায়, কিন্তু কাটলে ভেতরে সুড়ঙ্গ আর বিষ্ঠা ভরা",
+    "আক্রান্ত ফল বাজারে বাতিল হয়ে যায়",
+    "ছোট বাদামি-সাদা মথ, বসলে ত্রিভুজের মতো দেখায়, রাতে সক্রিয়",
+    "যেখানে সারা বছর বেগুন হয় সেখানে সব সময়ই থাকে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Clip and destroy every wilted shoot",
+      "detail": "Cut each drooping shoot about 5 cm BELOW the wilted part (the caterpillar is inside, below the visible damage), collect them in a bag and burn or bury. Do this twice a week. This is the highest-value action and costs nothing but labour."
+    },
+    {
+      "step": 2,
+      "title": "Remove all bored fruit",
+      "detail": "Pick every fruit with a hole in it, including those on the ground. Each one contains a caterpillar that will become a moth."
+    },
+    {
+      "step": 3,
+      "title": "Install pheromone traps",
+      "detail": "Put up 40-60 pheromone traps per acre (about 15-25 per bigha), at canopy height, and change the lure every 4-6 weeks. This is a proven Bangladesh recommendation and greatly reduces the need for insecticide."
+    },
+    {
+      "step": 4,
+      "title": "Only spray if damage stays above threshold",
+      "detail": "If more than 5% of shoots or fruit are damaged despite clipping and trapping, spray. Rotate insecticide groups every time."
+    },
+    {
+      "step": 5,
+      "title": "Never spray just before picking",
+      "detail": "This pest tempts farmers into spraying a few days before harvest. That is exactly how residue problems happen. Respect the PHI without exception."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "প্রতিটি নেতিয়ে পড়া ডগা কেটে নষ্ট করুন",
+      "detail": "নেতিয়ে যাওয়া অংশের প্রায় ৫ সেন্টিমিটার নিচ থেকে ডগা কাটুন (কীড়া ভেতরে থাকে, দৃশ্যমান ক্ষতির নিচে), ব্যাগে ভরে পুড়িয়ে বা পুঁতে ফেলুন। সপ্তাহে দুইবার করুন। শুধু শ্রম ছাড়া কোনো খরচ নেই, অথচ এটাই সবচেয়ে কাজের ব্যবস্থা।"
+    },
+    {
+      "step": 2,
+      "title": "ছিদ্রওয়ালা সব ফল তুলে ফেলুন",
+      "detail": "যে ফলে ছিদ্র আছে সব তুলে ফেলুন, মাটিতে পড়ে থাকা ফলও। প্রতিটির ভেতরে একটি কীড়া আছে যা পরে মথ হবে।"
+    },
+    {
+      "step": 3,
+      "title": "ফেরোমন ফাঁদ লাগান",
+      "detail": "একরে ৪০-৬০টি (বিঘায় প্রায় ১৫-২৫টি) ফেরোমন ফাঁদ গাছের সমান উচ্চতায় লাগান, ৪-৬ সপ্তাহ পর পর লিওর বদলান। এটি বাংলাদেশে প্রমাণিত সুপারিশ এবং এতে কীটনাশকের প্রয়োজন অনেক কমে যায়।"
+    },
+    {
+      "step": 4,
+      "title": "ক্ষতি সীমার উপরে থাকলে তবেই স্প্রে",
+      "detail": "ডগা কাটা ও ফাঁদ দেওয়ার পরও ৫% এর বেশি ডগা বা ফল আক্রান্ত থাকলে স্প্রে করুন। প্রতিবার কীটনাশকের গ্রুপ পাল্টে দিন।"
+    },
+    {
+      "step": 5,
+      "title": "ফল তোলার ঠিক আগে কখনো স্প্রে নয়",
+      "detail": "এই পোকার জ্বালায় অনেকে ফল তোলার কয়েক দিন আগে স্প্রে করে ফেলেন। ওষুধের অবশিষ্টাংশের সমস্যা ঠিক এভাবেই হয়। পিএইচআই কোনো ব্যতিক্রম ছাড়াই মেনে চলুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Clip and destroy infested shoots twice weekly — the backbone of BSFB management",
+    "Pheromone traps at 40-60 per acre",
+    "Grow tolerant varieties: Jhumka, Shingnath, Nayantara and Uttara are noted as tolerant in Bangladesh",
+    "Intercrop with cowpea, maize or coriander to support natural enemies",
+    "Rotate with non-solanaceous crops",
+    "Do not grow brinjal continuously in the same area year-round — a break starves the pest",
+    "Remove and destroy the crop completely at the end of the season",
+    "Release Trichogramma egg parasitoids where available"
+  ],
+  "cultural_control_bn": [
+    "সপ্তাহে দুইবার আক্রান্ত ডগা কেটে নষ্ট করুন — এই পোকা দমনের মূল ভিত্তি এটাই",
+    "একরে ৪০-৬০টি ফেরোমন ফাঁদ",
+    "সহনশীল জাত লাগান: বাংলাদেশে ঝুমকা, শিংনাথ, নয়নতারা ও উত্তরা সহনশীল হিসেবে পরিচিত",
+    "উপকারী পোকা বাড়াতে ফেলন/বরবটি, ভুট্টা বা ধনিয়ার সাথে মিশ্র চাষ করুন",
+    "টমেটো গোত্রের বাইরের ফসলের সাথে পালা করে চাষ করুন",
+    "একই এলাকায় সারা বছর একটানা বেগুন করবেন না — মাঝে বিরতি দিলে পোকা খাবার পায় না",
+    "মৌসুম শেষে পুরো ফসল সরিয়ে নষ্ট করুন",
+    "সম্ভব হলে ট্রাইকোগ্রামা পরজীবী পোকা অবমুক্ত করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Emamectin benzoate 5% SG",
+      "product_name_bn": "ইমামেকটিন বেনজোয়েট ৫% এসজি",
+      "active_ingredient": "Emamectin benzoate",
+      "formulation": "SG",
+      "dose_en": "0.5 g per litre of water (about 5 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray directed at the growing tips and the fruit trusses where eggs are laid. Spray in the late afternoon or evening — the moths are night-active.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে কচি ডগা ও ফলের থোকায় তাক করে দিন, ডিম ওখানেই পাড়ে। বিকেল বা সন্ধ্যায় স্প্রে করুন — মথ রাতে সক্রিয়।",
+      "timing_en": "Only when damage exceeds 5% after clipping and trapping. Time it right after a picking so the PHI clears before the next picking.",
+      "timing_bn": "ডগা কাটা ও ফাঁদ দেওয়ার পরও ৫% এর বেশি ক্ষতি হলে তবেই। ফল তোলার ঠিক পরে স্প্রে করুন যাতে পরের বার তোলার আগেই পিএইচআই পার হয়ে যায়।",
+      "interval_days": 12,
+      "max_applications_per_season": 3,
+      "phi_days": 5,
+      "pre_harvest_interval_note_en": "Do not pick brinjal for 5 days after the last spray. Plan sprays immediately after a picking round.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৫ দিন বেগুন তুলবেন না। ফল তোলার রাউন্ড শেষ হওয়ার সাথে সাথে স্প্রের পরিকল্পনা করুন।",
+      "brands_available_bd": [
+        "Proclaim 5 SG",
+        "Emastar 5 SG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Emamectin benzoate is registered in Bangladesh; verify the brand AP number and the brinjal label claim against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Toxic to bees and aquatic organisms. Do not spray during flowering hours. Rotate with a different chemical group every application — BSFB has developed resistance to many older insecticides in Bangladesh.",
+      "caution_bn": "মৌমাছি ও জলজ প্রাণীর জন্য বিষাক্ত। ফুল ফোটার সময়ে স্প্রে করবেন না। প্রতিবার ভিন্ন গ্রুপের ওষুধ দিন — বাংলাদেশে এই পোকা অনেক পুরনো কীটনাশক সহ্য করা শিখে গেছে।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Flubendiamide 20% WG",
+      "product_name_bn": "ফ্লুবেনডায়ামাইড ২০% ডব্লিউজি",
+      "active_ingredient": "Flubendiamide",
+      "formulation": "WG",
+      "dose_en": "0.25-0.5 g per litre of water; follow the label rate exactly",
+      "dose_bn": "প্রতি লিটার পানিতে ০.২৫-০.৫ গ্রাম; লেবেলের মাত্রা হুবহু মেনে চলুন",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray on growing tips and fruit. Rotation partner for emamectin.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে কচি ডগা ও ফলে দিন। ইমামেকটিনের সাথে পালা করে দেওয়ার জন্য।",
+      "timing_en": "When damage exceeds threshold; the Plantwise Bangladesh factsheet recommends application at label dose every 15 days in severe cases.",
+      "timing_bn": "ক্ষতি সীমা ছাড়ালে; প্ল্যান্টওয়াইজ বাংলাদেশ ফ্যাক্টশিট অনুযায়ী মারাত্মক আক্রমণে লেবেলের মাত্রায় ১৫ দিন পর পর দিতে বলা হয়েছে।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick brinjal for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন বেগুন তুলবেন না।",
+      "brands_available_bd": [
+        "Belt 24 WG",
+        "Fame 480 SC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Flubendiamide (Belt) is named in the Plantwise Bangladesh factsheet on brinjal shoot and fruit borer (factsheetadmin.plantwise.org/Uploads/PDFs/20157800236.pdf, SPIED, September 2013). Verify the current AP number against the PPW list.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Pheromone traps at 40-60 per acre — the most effective non-chemical tool and widely available in Bangladesh",
+    "Twice-weekly clipping and destruction of infested shoots",
+    "Neem seed kernel extract at 5% sprayed on growing tips",
+    "Bacillus thuringiensis (Bt) sprays against young larvae before they bore in",
+    "Trichogramma releases",
+    "Intercropping with coriander or cowpea to support parasitoids"
+  ],
+  "organic_alternatives_bn": [
+    "একরে ৪০-৬০টি ফেরোমন ফাঁদ — ওষুধ ছাড়া সবচেয়ে কার্যকর ব্যবস্থা এবং বাংলাদেশে সহজেই পাওয়া যায়",
+    "সপ্তাহে দুইবার আক্রান্ত ডগা কেটে নষ্ট করা",
+    "কচি ডগায় ৫% নিমবীজের নির্যাস স্প্রে",
+    "কীড়া ভেতরে ঢোকার আগেই ব্যাসিলাস থুরিনজিয়েনসিস (বিটি) স্প্রে",
+    "ট্রাইকোগ্রামা অবমুক্তকরণ",
+    "পরজীবী পোকা বাড়াতে ধনিয়া বা বরবটির সাথে মিশ্র চাষ"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen — soft succulent shoots are exactly what the larvae prefer. Follow FRG-2018 for brinjal and keep potassium adequate.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না — নরম রসালো ডগাই কীড়ার পছন্দ। বেগুনের জন্য এফআরজি-২০১৮ মেনে চলুন এবং পটাশ পর্যাপ্ত রাখুন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. This is the crop where PHI violations are most common in Bangladesh because picking is frequent and pressure to spray is high. Never pick within the PHI, whatever the market price. Do not spray during flowering hours — brinjal flowers are visited by bees. Wash with soap after spraying and never rinse the sprayer into a pond.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। ঘন ঘন ফল তোলা আর স্প্রের চাপ — এই কারণে বাংলাদেশে এই ফসলেই পিএইচআই সবচেয়ে বেশি ভাঙা হয়। বাজারদর যাই হোক, পিএইচআই-এর মধ্যে কখনো ফল তুলবেন না। ফুল ফোটার সময় স্প্রে করবেন না — বেগুনের ফুলে মৌমাছি আসে। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন, পুকুরে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered insecticides at the label dose. Mixing two or three insecticides in one tank, which is common practice for this pest, is not recommended, increases residues and speeds up resistance. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত কীটনাশক লেবেলের মাত্রায় ব্যবহার করুন। এই পোকার জন্য এক ট্যাংকে দুই-তিনটি কীটনাশক মেশানোর চল আছে — এটি সুপারিশকৃত নয়, এতে অবশিষ্টাংশ বাড়ে আর পোকা দ্রুত ওষুধ সহ্য করা শেখে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if damage stays above 10% despite clipping, traps and two sprays — that usually means insecticide resistance and you need a different approach, not a stronger dose.",
+  "when_to_call_helpline_bn": "ডগা কাটা, ফাঁদ ও দুইবার স্প্রের পরও ১০% এর বেশি ক্ষতি থাকলে ১৬১২৩ নম্বরে ফোন করুন — এর মানে সাধারণত পোকা ওষুধ সহ্য করা শিখে গেছে, তখন বেশি মাত্রা নয়, ভিন্ন পদ্ধতি লাগবে।",
+  "expected_outcome_en": "Clipping plus pheromone traps typically brings damage down substantially within 3-4 weeks and lets you cut insecticide sprays by half or more. Fruit already bored cannot be saved. Farmers who rely on spraying alone usually end up spraying more each year for the same result.",
+  "expected_outcome_bn": "ডগা কাটা ও ফেরোমন ফাঁদ দিলে সাধারণত ৩-৪ সপ্তাহেই ক্ষতি অনেক কমে আসে এবং কীটনাশক অর্ধেক বা তারও কম লাগে। যে ফলে পোকা ঢুকে গেছে তা আর বাঁচানো যাবে না। যারা শুধু স্প্রের উপর ভরসা করেন তাদের প্রতি বছর একই ফল পেতে আরও বেশি স্প্রে করতে হয়।",
+  "related_shop_products": [
+    "BSFB pheromone trap with lure (pack of 10)",
+    "Emamectin benzoate 5% SG 50g",
+    "Neem oil 250ml",
+    "Bacillus thuringiensis var. kurstaki Bio-insecticide 100g",
+    "Pruning shears",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "Plantwise factsheet for farmers, 'Shoot and fruit borer of brinjal', Bangladesh, SPIED, September 2013 (factsheetadmin.plantwise.org/Uploads/PDFs/20157800236.pdf); 'Management of brinjal shoot and fruit borer, Leucinodes orbonalis using some selected insecticides in field condition, Bangladesh' (researchgate 319322900); 'Eggplant Integrated Pest Management: An Ecological Guide', FAO; Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook",
+  "source_type": "field_guide",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "This class is an INSECT PEST, not a disease — UI wording should reflect that. Tolerant variety names (Jhumka, Shingnath, Nayantara, Uttara) and the 40-60 traps/acre figure come directly from the Plantwise Bangladesh factsheet. IPM-first ordering is deliberate: brinjal is Bangladesh's most over-sprayed vegetable.",
+  "related_shop_skus": [
+    {
+      "ref_text": "BSFB pheromone trap with lure (pack of 10)",
+      "sku": "EQ-0066",
+      "name_en": "BSFB pheromone trap with lure (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Emamectin benzoate 5% SG 50g",
+      "sku": "PEST-0054",
+      "name_en": "Emamectin benzoate 5% SG 50g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bacillus thuringiensis var. kurstaki Bio-insecticide 100g",
+      "sku": "PEST-0093",
+      "name_en": "Bacillus thuringiensis var. kurstaki Bio-insecticide 100g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Pruning shears",
+      "sku": "EQ-0040",
+      "name_en": "Pruning shears (secateurs)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

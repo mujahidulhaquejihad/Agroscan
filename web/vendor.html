@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8" />
+  <script>(function(){try{var l=localStorage.getItem("agroscan_lang")||"bn";if(l!=="en"&&l!=="bn")l="bn";var h=document.documentElement;h.lang=l==="en"?"en":"bn";h.classList.remove("lang-bn","lang-en");h.classList.add(l==="en"?"lang-en":"lang-bn");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#067a42" />
+  <title>AgroScan Vendor</title>
+  <link rel="icon" href="/static/icons/icon-192.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css?v=84" />
+  <link rel="stylesheet" href="/static/ops.css?v=6" />
+</head>
+<body class="ops-body app-panes" data-app-pane="ops" data-title-key="vendor_title">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="brand brand-logo-only" aria-label="AgroScan home">
+        <span class="logo-chip logo-chip-header">
+          <img src="/static/AgroScan_logo-main.png" alt="AgroScan" class="logo-img logo-img-white logo-img-brand" />
+        </span>
+      </a>
+      <div class="header-right">
+        <div class="header-tools">
+          <button id="langToggle" class="icon-btn" data-i18n-title="language" title="Language">বাং</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-scroll mobile-scroll">
+  <div class="layout ops-layout">
+    <aside class="sidebar left ops-side" id="opsSide">
+      <div class="widget">
+        <h3 id="shopLabel">Vendor</h3>
+        <nav class="ops-nav" id="vendorNav">
+          <button type="button" class="active" data-tab="overview" data-i18n="ops_overview">Overview</button>
+          <button type="button" data-tab="orders" data-i18n="ops_orders">Orders</button>
+          <button type="button" data-tab="stock" data-i18n="ops_stock">Stock</button>
+          <button type="button" data-tab="shop" data-i18n="ops_shop_profile">Shop</button>
+        </nav>
+        <div class="ops-side-foot">
+          <a class="btn btn-secondary btn-sm" href="/" data-i18n="ops_farmer_app">Farmer app</a>
+          <button id="vendorLogout" type="button" class="btn btn-ghost btn-sm" data-i18n="auth_logout">Log out</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="center">
+    <div id="vendorLogin" class="ops-login">
+      <div class="login-card">
+        <div class="ops-brand-mark">
+          <img src="/static/AgroScan_logo-main.png" alt="" />
+          <div>
+            <strong>AgroScan</strong>
+            <span data-i18n="ops_dealer_desk">Dealer desk</span>
+          </div>
+        </div>
+        <h1 data-i18n="ops_vendor_signin">Vendor sign-in</h1>
+        <p class="hint" data-i18n="ops_vendor_signin_hint">See your shop’s orders and update stock. Farmers keep using the main app.</p>
+        <label class="field"><span data-i18n="ops_username">Username</span>
+          <input id="vendorUser" type="text" autocomplete="username" />
+        </label>
+        <label class="field"><span data-i18n="ops_password">Password</span>
+          <div class="password-wrap">
+            <input id="vendorPass" type="password" autocomplete="current-password" />
+            <button type="button" class="password-toggle" data-target="vendorPass" data-i18n-aria="ops_show_password" aria-label="Show password">
+              <span class="pw-icon-show" aria-hidden="true">&#128065;</span>
+              <span class="pw-icon-hide hidden" aria-hidden="true">&#128064;</span>
+            </button>
+          </div>
+        </label>
+        <button id="vendorLoginBtn" class="btn btn-primary btn-block" data-i18n="ops_enter_shop">Enter shop</button>
+        <p id="vendorLoginErr" class="error hidden"></p>
+        <p class="login-switch"><span data-i18n="ops_vendor_signin_home">Farmers use the main AgroScan app.</span> <a href="/" data-i18n="ops_farmer_app">Farmer app</a></p>
+      </div>
+    </div>
+
+    <div id="vendorApp" class="hidden">
+          <div class="ops-nav ops-tabs-mobile" id="vendorNavMobile"></div>
+          <div class="ops-page-head">
+            <h2 id="pageTitle" data-i18n="ops_overview">Overview</h2>
+            <p id="pageSub" data-i18n="ops_vendor_overview_sub">Orders and stock for your shop</p>
+          </div>
+
+          <section id="tabOverview" class="ops-panel">
+            <div class="stats">
+              <div class="stat green"><div class="label" data-i18n="ops_stat_orders">Orders</div><div class="value" id="stOrders">—</div></div>
+              <div class="stat accent go" id="statOpen"><div class="label" data-i18n="ops_stat_open">Open</div><div class="value" id="stOpen">—</div></div>
+              <div class="stat green"><div class="label" data-i18n="ops_stat_listings">Listings</div><div class="value" id="stListings">—</div></div>
+              <div class="stat accent"><div class="label" data-i18n="ops_stat_revenue">Revenue (BDT)</div><div class="value" id="stRevenue">—</div></div>
+              <div class="stat go" id="statLow"><div class="label" data-i18n="ops_stat_low">Low stock</div><div class="value" id="stLow">—</div></div>
+            </div>
+            <div class="split">
+              <div class="mini">
+                <h4 data-i18n="ops_pipeline">Pipeline</h4>
+                <div class="pill-row" id="orderPills"></div>
+              </div>
+              <div class="mini">
+                <h4 data-i18n="ops_shop">Shop</h4>
+                <div class="pill-row" id="shopPills"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tabOrders" class="ops-panel hidden">
+            <h3 data-i18n="ops_incoming_orders">Incoming orders</h3>
+            <p class="hint" data-i18n="ops_incoming_hint">Confirm, pack, ship, or cancel orders assigned to this shop.</p>
+            <div class="toolbar">
+              <input id="orderSearch" type="search" data-i18n-ph="ops_search_orders_short" placeholder="Search code, name, phone" />
+              <select id="orderStatusFilter">
+                <option value="" data-i18n="ops_all_statuses">All statuses</option>
+                <option value="pending" data-i18n="ops_st_pending">Pending</option>
+                <option value="confirmed" data-i18n="ops_st_confirmed">Confirmed</option>
+                <option value="processing" data-i18n="ops_st_processing">Processing</option>
+                <option value="shipped" data-i18n="ops_st_shipped">Shipped</option>
+                <option value="delivered" data-i18n="ops_st_delivered">Delivered</option>
+                <option value="cancelled" data-i18n="ops_st_cancelled">Cancelled</option>
+              </select>
+              <button id="orderRefresh" type="button" class="btn btn-primary btn-sm" data-i18n="ops_refresh">Refresh</button>
+            </div>
+            <div id="vendorOrders" class="list"></div>
+          </section>
+
+          <section id="tabStock" class="ops-panel hidden">
+            <h3 data-i18n="ops_stock_title">Stock &amp; listing price</h3>
+            <p class="hint" data-i18n="ops_stock_hint">Your shop price and stock. Catalogue price on the farmer app is still set by admin.</p>
+            <div class="toolbar">
+              <input id="stockSearch" type="search" data-i18n-ph="ops_search_products" placeholder="Search name / SKU / brand" />
+              <label class="field" style="margin:0;display:flex;align-items:center;gap:6px;font-weight:600">
+                <input id="stockLowOnly" type="checkbox" style="width:auto;min-height:0" /> <span data-i18n="ops_low_stock_only">Low stock only</span>
+              </label>
+              <button id="stockRefresh" type="button" class="btn btn-primary btn-sm" data-i18n="ops_refresh">Refresh</button>
+            </div>
+            <div id="vendorStock" class="list"></div>
+            <div class="create-box">
+              <strong data-i18n="ops_add_listing">Add to shop</strong>
+              <div class="order-add-row" style="margin-top:10px">
+                <input id="addProductSearch" type="search" data-i18n-ph="ops_search_products" placeholder="Search name / SKU / brand" />
+                <select id="addProductPick"></select>
+                <input id="addProductQty" type="number" min="0" step="1" value="10" style="width:72px" />
+                <button type="button" class="btn btn-primary btn-sm" id="addListingBtn" data-i18n="ops_add_listing">Add to shop</button>
+              </div>
+            </div>
+            <div class="pager">
+              <button type="button" class="btn btn-ghost btn-sm" id="stockPrev" data-i18n="ops_prev">Previous</button>
+              <span id="stockPage">Page 1</span>
+              <button type="button" class="btn btn-ghost btn-sm" id="stockNext" data-i18n="ops_next">Next</button>
+            </div>
+          </section>
+
+          <section id="tabShop" class="ops-panel hidden">
+            <h3 data-i18n="ops_shop_profile">Shop</h3>
+            <p class="hint" data-i18n="ops_shop_profile_sub">Phone, address, and password for this dealer account</p>
+            <div class="modal-grid">
+              <label class="field"><span data-i18n="ops_phone">Phone</span><input id="shopPhone" inputmode="tel" /></label>
+              <label class="field"><span data-i18n="ops_username">Username</span><input id="shopUser" disabled /></label>
+              <label class="field full"><span data-i18n="ops_address">Address</span><textarea id="shopAddress"></textarea></label>
+              <label class="field full"><span data-i18n="ops_new_password">New password (optional)</span><input id="shopPassword" type="password" data-i18n-ph="ops_keep_password" placeholder="Leave blank to keep current" autocomplete="new-password" /></label>
+            </div>
+            <div class="modal-actions" style="justify-content:flex-start">
+              <button type="button" class="btn btn-primary btn-sm" id="shopSaveBtn" data-i18n="ops_save_shop">Save shop</button>
+            </div>
+          </section>
+    </div>
+    </main>
+  </div>
+  </div>
+
+  <div id="orderModal" class="modal-back hidden" role="dialog" aria-modal="true">
+    <div class="modal wide">
+      <h3 id="orderModalTitle">Order</h3>
+      <p class="hint" id="orderModalSub"></p>
+      <div id="orderModalBody"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="orderModalClose" data-i18n="close">Close</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="confirmed" data-i18n="ops_confirm">Confirm</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="processing" data-i18n="ops_process">Process</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="shipped" data-i18n="ops_ship">Ship</button>
+        <button type="button" class="btn btn-primary btn-sm" data-st="delivered" data-i18n="ops_deliver">Deliver</button>
+        <button type="button" class="btn btn-danger btn-sm" data-st="cancelled" data-i18n="ops_cancel_order">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="/static/config.js?v=26"></script>
+  <script src="/static/i18n.js?v=67"></script>
+  <script src="/static/auth.js?v=25"></script>
+  <script src="/static/ops.js?v=3"></script>
+  <script>
+(function () {
+  var O = window.AgroOps;
+  var $ = O.$;
+  var esc = O.esc;
+  var toast = O.toast;
+  function t(k, vars) { return O.t(k, vars); }
+  var KEY = "agroscan_vendor_token";
+  function titles() {
+    return {
+      overview: [t("ops_overview"), t("ops_vendor_overview_sub")],
+      orders: [t("ops_orders"), t("ops_vendor_orders_sub")],
+      stock: [t("ops_stock"), t("ops_vendor_stock_sub")],
+      shop: [t("ops_shop_profile"), t("ops_shop_profile_sub")]
+    };
+  }
+  var currentTab = "overview";
+  var stockOffset = 0;
+  var PAGE = 80;
+  var currentOrder = "";
+  var me = null;
+
+  function token() { return localStorage.getItem(KEY) || ""; }
+  function setToken(t) {
+    if (t) localStorage.setItem(KEY, t);
+    else localStorage.removeItem(KEY);
+  }
+  function showApp(on) {
+    document.body.classList.toggle("ops-authed", !!on);
+    $("vendorLogin").className = on ? "ops-login hidden" : "ops-login";
+    $("vendorApp").className = on ? "" : "hidden";
+  }
+  function api(method, path, body, ok, fail) {
+    O.xhr(method, path, body, token(), ok, function (m) {
+      if (O.authFail(m) && path.indexOf("/login") < 0) {
+        setToken("");
+        showApp(false);
+      }
+      fail(m);
+    });
+  }
+  function setTab(tab) {
+    currentTab = tab || currentTab;
+    var pack = titles()[tab] || titles().overview;
+    $("pageTitle").textContent = pack[0];
+    $("pageSub").textContent = pack[1];
+    ["overview", "orders", "stock", "shop"].forEach(function (id) {
+      var el = $("tab" + id.charAt(0).toUpperCase() + id.slice(1));
+      if (el) el.className = id === tab ? "ops-panel" : "ops-panel hidden";
+    });
+    var nav = document.querySelectorAll(".ops-nav button");
+    for (var i = 0; i < nav.length; i++) {
+      nav[i].className = nav[i].getAttribute("data-tab") === tab ? "active" : "";
+    }
+    if (tab === "overview") loadStats();
+    if (tab === "orders") loadOrders();
+    if (tab === "stock") loadStock();
+    if (tab === "shop") fillShopForm();
+  }
+
+  function applyMe(v) {
+    me = v || {};
+    $("shopLabel").textContent = me.supplier_name || me.username || t("ops_vendor");
+    fillShopForm();
+  }
+
+  function fillShopForm() {
+    if (!$("shopPhone")) return;
+    $("shopPhone").value = (me && me.phone) || "";
+    $("shopAddress").value = (me && me.address) || "";
+    $("shopUser").value = (me && me.username) || "";
+    $("shopPassword").value = "";
+  }
+
+  function login() {
+    var user = ($("vendorUser").value || "").trim();
+    var pass = ($("vendorPass").value || "").trim();
+    var err = $("vendorLoginErr");
+    if (!user || !pass) {
+      err.textContent = t("ops_need_login");
+      err.className = "error";
+      return;
+    }
+    O.xhr("POST", "/api/vendor/login", { username: user, password: pass }, "", function (data) {
+      setToken(data.token);
+      applyMe(data.vendor);
+      err.className = "error hidden";
+      showApp(true);
+      setTab("overview");
+    }, function (m) {
+      setToken("");
+      err.textContent = m || t("ops_bad_login");
+      err.className = "error";
+    });
+  }
+
+  function loadStats() {
+    api("GET", "/api/vendor/stats", null, function (data) {
+      applyMe(data.vendor);
+      var shop = data.shop || {};
+      $("stOrders").textContent = shop.orders != null ? shop.orders : "—";
+      $("stOpen").textContent = shop.orders_open != null ? shop.orders_open : "—";
+      $("stListings").textContent = shop.listings != null ? shop.listings : "—";
+      $("stRevenue").textContent = shop.revenue_bdt != null ? O.money(shop.revenue_bdt) : "—";
+      $("stLow").textContent = shop.low_stock != null ? shop.low_stock : "—";
+      var by = shop.orders_by_status || {};
+      var keys = Object.keys(by);
+      $("orderPills").innerHTML = keys.length
+        ? keys.map(function (k) {
+            return "<button type='button' class='ops-pill go" + (k === "pending" ? " warn" : "") + "' data-st='" + esc(k) + "'>" + esc(O.st(k)) + ": " + by[k] + "</button>";
+          }).join("")
+        : "<span class='meta'>" + esc(t("ops_no_orders")) + "</span>";
+      var pills = $("orderPills").querySelectorAll("[data-st]");
+      for (var p = 0; p < pills.length; p++) {
+        pills[p].onclick = function () {
+          $("orderStatusFilter").value = this.getAttribute("data-st") || "";
+          setTab("orders");
+        };
+      }
+      $("shopPills").innerHTML =
+        "<span class='ops-pill'>" + esc(me.supplier_name || t("ops_shop")) + "</span>" +
+        "<span class='ops-pill'>" + esc([me.upazila, me.district].filter(Boolean).join(", ") || t("ops_location_unset")) + "</span>" +
+        (me.phone ? "<span class='ops-pill'>" + esc(me.phone) + "</span>" : "");
+    }, function (m) { toast(m); });
+  }
+
+  function loadOrders() {
+    var st = ($("orderStatusFilter").value || "").trim();
+    var q = ($("orderSearch").value || "").trim();
+    var path = "/api/vendor/orders?";
+    if (st) path += "status=" + encodeURIComponent(st) + "&";
+    if (q) path += "search=" + encodeURIComponent(q) + "&";
+    api("GET", path, null, function (data) {
+      var el = $("vendorOrders");
+      var html = "";
+      (data.orders || []).forEach(function (o) {
+        html += "<div class='row-card order-row' role='button' tabindex='0' data-code='" + esc(o.order_code) + "'>" +
+          "<div><strong>" + esc(o.order_code) + "</strong>" +
+          "<div class='meta'><span class='badge " + esc(o.status || "") + "'>" + esc(O.st(o.status)) + "</span> · " +
+          O.money(o.total_bdt) + " BDT · " + esc(t("ops_item_n", { n: o.item_count || 0 })) + "<br/>" +
+          esc(o.user_name || t("ops_guest")) + (o.user_phone ? (" · " + esc(o.user_phone)) : "") +
+          " · " + esc([o.upazila, o.district].filter(Boolean).join(", ")) +
+          "</div></div>" +
+          "<div class='actions'><button type='button' class='btn btn-primary btn-sm open-order' data-code='" + esc(o.order_code) + "'>" + esc(t("ops_open")) + "</button></div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_orders_shop")) + "</p>";
+      var rows = el.querySelectorAll(".order-row");
+      for (var i = 0; i < rows.length; i++) {
+        rows[i].onclick = function () {
+          var code = this.getAttribute("data-code");
+          if (code) openOrder(code);
+        };
+      }
+    }, function (m) {
+      $("vendorOrders").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  function openOrder(code) {
+    currentOrder = code;
+    $("orderModalTitle").textContent = code;
+    $("orderModalSub").textContent = t("ops_loading");
+    $("orderModalBody").innerHTML = "";
+    $("orderModal").className = "modal-back";
+    api("GET", "/api/vendor/orders/" + encodeURIComponent(code), null, function (o) {
+      $("orderModalTitle").textContent = o.order_code;
+      $("orderModalSub").textContent = O.st(o.status) + " · " + O.money(o.total_bdt) + " BDT";
+      var call = o.user_phone
+        ? "<a class='btn btn-secondary btn-sm' href='tel:" + esc(String(o.user_phone).replace(/[^+0-9]/g, "")) + "'>" + esc(t("ops_call")) + "</a>"
+        : "";
+      var items = (o.items || []).map(function (it) {
+        return "<div class='item-line'><span>" + esc(it.product_name) + " × " + it.qty + "</span><span>" + O.money(it.line_total_bdt) + " BDT</span></div>";
+      }).join("") || "<p class='meta'>" + esc(t("ops_no_items")) + "</p>";
+      var events = (o.events || []).map(function (ev) {
+        return "<li>" + esc(O.st(ev.status)) + " — " + esc(ev.message || "") + "</li>";
+      }).join("");
+      $("orderModalBody").innerHTML =
+        "<p class='meta'>" + esc(o.user_name || t("ops_guest")) +
+        (o.user_phone ? (" · " + esc(o.user_phone)) : "") + " " + call + "<br/>" +
+        esc(o.address || "") + "<br/>" +
+        esc([o.upazila, o.district].filter(Boolean).join(", ")) +
+        (o.notes ? ("<br/>" + esc(t("ops_notes")) + ": " + esc(o.notes)) : "") + "</p>" +
+        "<h4>" + esc(t("ops_items")) + "</h4>" + items +
+        "<h4>" + esc(t("ops_history")) + "</h4>" +
+        "<ul class='timeline'>" + (events || "<li>" + esc(t("ops_no_events")) + "</li>") + "</ul>";
+      $("orderModal").className = "modal-back";
+    }, function (m) {
+      $("orderModal").className = "modal-back hidden";
+      toast(m);
+    });
+  }
+
+  function loadStock() {
+    var q = ($("stockSearch").value || "").trim();
+    var path = "/api/vendor/listings?limit=" + PAGE + "&offset=" + stockOffset;
+    if (q) path += "&search=" + encodeURIComponent(q);
+    if ($("stockLowOnly") && $("stockLowOnly").checked) path += "&low_stock=true";
+    api("GET", path, null, function (data) {
+      var el = $("vendorStock");
+      var list = data.products || [];
+      var html = "";
+      list.forEach(function (p) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(p.name || "") + "</strong>" +
+          "<div class='meta'>" + esc(p.sku || "") + " · " + esc(p.category || "") + "</div></div>" +
+          "<div class='actions'>" +
+          "<input class='price-input' type='number' min='0' step='1' value='" + (p.price_bdt || 0) + "' data-id='" + p.id + "' />" +
+          "<span class='meta'>BDT</span>" +
+          "<input class='stock-input' type='number' min='0' step='1' value='" + (p.stock || 0) + "' data-stock='" + p.id + "' />" +
+          "<span class='meta'>" + esc(t("ops_qty")) + "</span>" +
+          "<button type='button' class='btn btn-primary btn-sm save-list' data-id='" + p.id + "'>" + esc(t("ops_save")) + "</button>" +
+          "</div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_listings")) + "</p>";
+      $("stockPage").textContent = t("ops_page", { n: Math.floor(stockOffset / PAGE) + 1 });
+      $("stockPrev").disabled = stockOffset <= 0;
+      $("stockNext").disabled = list.length < PAGE;
+      var btns = el.querySelectorAll(".save-list");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          var id = this.getAttribute("data-id");
+          var price = parseFloat(el.querySelector(".price-input[data-id='" + id + "']").value);
+          var stock = parseInt(el.querySelector(".stock-input[data-stock='" + id + "']").value, 10);
+          if (!(price >= 0) || !(stock >= 0)) { toast(t("ops_need_price_stock")); return; }
+          api("PATCH", "/api/vendor/listings/" + id, { price_bdt: price, stock: stock }, function () {
+            toast(t("ops_listing_saved"));
+          }, function (m) { toast(m); });
+        };
+      }
+    }, function (m) {
+      $("vendorStock").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  var addSearchT = 0;
+  function searchAddProducts() {
+    var q = ($("addProductSearch").value || "").trim();
+    var path = "/api/shop/products?limit=20" + (q ? "&search=" + encodeURIComponent(q) : "");
+    api("GET", path, null, function (data) {
+      var sel = $("addProductPick");
+      var html = "<option value=''>" + esc(t("ops_product")) + "</option>";
+      (data.products || []).forEach(function (p) {
+        html += "<option value='" + p.id + "' data-price='" + (p.price_bdt || 0) + "'>" +
+          esc(p.name || "") + " — " + O.money(p.price_bdt) + " BDT</option>";
+      });
+      sel.innerHTML = html;
+    }, function () {});
+  }
+
+  $("vendorLoginBtn").onclick = login;
+  $("vendorPass").onkeydown = function (e) { if (e.key === "Enter") login(); };
+  $("vendorLogout").onclick = function () {
+    api("POST", "/api/vendor/logout", null, function () {}, function () {});
+    setToken("");
+    showApp(false);
+  };
+  $("orderRefresh").onclick = loadOrders;
+  $("orderStatusFilter").onchange = loadOrders;
+  $("orderSearch").onkeydown = function (e) { if (e.key === "Enter") loadOrders(); };
+  $("stockRefresh").onclick = function () { stockOffset = 0; loadStock(); };
+  $("stockLowOnly").onchange = function () { stockOffset = 0; loadStock(); };
+  $("stockSearch").onkeydown = function (e) { if (e.key === "Enter") { stockOffset = 0; loadStock(); } };
+  $("stockPrev").onclick = function () { stockOffset = Math.max(0, stockOffset - PAGE); loadStock(); };
+  $("stockNext").onclick = function () { stockOffset += PAGE; loadStock(); };
+  $("statOpen").onclick = function () { $("orderStatusFilter").value = "pending"; setTab("orders"); };
+  $("statLow").onclick = function () { $("stockLowOnly").checked = true; stockOffset = 0; setTab("stock"); };
+  $("shopSaveBtn").onclick = function () {
+    var body = { phone: $("shopPhone").value, address: $("shopAddress").value };
+    var pw = ($("shopPassword").value || "").trim();
+    if (pw) body.password = pw;
+    api("PATCH", "/api/vendor/me", body, function (d) {
+      applyMe(d.vendor);
+      toast(pw ? t("ops_pw_updated") : t("ops_shop_saved"));
+    }, function (m) { toast(m); });
+  };
+  $("addProductSearch").onkeydown = function (e) {
+    if (e.key === "Enter") { e.preventDefault(); searchAddProducts(); }
+  };
+  $("addProductSearch").oninput = function () {
+    clearTimeout(addSearchT);
+    addSearchT = setTimeout(searchAddProducts, 280);
+  };
+  $("addListingBtn").onclick = function () {
+    var pid = parseInt($("addProductPick").value, 10);
+    var qty = parseInt($("addProductQty").value, 10);
+    var opt = $("addProductPick").options[$("addProductPick").selectedIndex];
+    var price = opt ? parseFloat(opt.getAttribute("data-price") || "0") : 0;
+    if (!pid) { toast(t("ops_need_product")); return; }
+    if (!(qty >= 0)) qty = 0;
+    api("POST", "/api/vendor/listings", { product_id: pid, stock: qty, price_bdt: price }, function () {
+      toast(t("ops_listing_added"));
+      loadStock();
+      loadStats();
+    }, function (m) { toast(m); });
+  };
+  $("orderModalClose").onclick = function () { $("orderModal").className = "modal-back hidden"; };
+  $("orderModal").onclick = function (e) { if (e.target === $("orderModal")) $("orderModal").className = "modal-back hidden"; };
+  var stBtns = document.querySelectorAll("#orderModal [data-st]");
+  for (var s = 0; s < stBtns.length; s++) {
+    stBtns[s].onclick = function () {
+      if (!currentOrder) return;
+      api("PATCH", "/api/vendor/orders/" + encodeURIComponent(currentOrder), {
+        status: this.getAttribute("data-st"),
+        message: "Updated by vendor"
+      }, function () {
+        toast(t("ops_order_updated"));
+        openOrder(currentOrder);
+        loadOrders();
+        loadStats();
+      }, function (m) { toast(m); });
+    };
+  }
+  var mobileNav = $("vendorNavMobile");
+  var sideNav = $("vendorNav");
+  if (mobileNav && sideNav) mobileNav.innerHTML = sideNav.innerHTML;
+  var nav = document.querySelectorAll(".ops-nav button");
+  for (var n = 0; n < nav.length; n++) {
+    nav[n].onclick = function () { setTab(this.getAttribute("data-tab")); };
+  }
+  O.bindPasswordToggles();
+  document.addEventListener("langchange", function () {
+    if (me) applyMe(me);
+    if ($("vendorApp") && !$("vendorApp").classList.contains("hidden")) setTab(currentTab);
+  });
+
+  if (token()) {
+    api("GET", "/api/vendor/me", null, function (data) {
+      applyMe(data.vendor);
+      showApp(true);
+      setTab("overview");
+    }, function () {
+      setToken("");
+      showApp(false);
+    });
+  }
+})();
+  </script>
+</body>
+</html>

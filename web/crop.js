@@ -1,10 +1,5 @@
-/* Leaf crop editor: 4 corners + auto leaf crop (ES5) */
+/* Leaf crop editor: local preprocess + 4-corner tweak (ES5) */
 (function () {
-  var API = "";
-  if (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) {
-    API = window.AGROSCAN_CONFIG.API_BASE;
-  }
-
   var state = {
     open: false,
     file: null,
@@ -13,13 +8,102 @@
     points: [],
     dragging: -1,
     onDone: null,
-    busy: false
+    busy: false,
+    moved: false,
+    gen: 0
   };
+  var checkTimer = null;
+  var checkStage = 0;
+  var checkSub = 0;
+
+  function checkStageCopy() {
+    return [
+      { title: "scan_l2_title", subs: ["scan_l2_sub", "scan_l2_sub2"] },
+      { title: "scan_l3_title", subs: ["scan_l3_sub", "scan_l3_sub2", "scan_l3_sub3"] }
+    ];
+  }
+
+  function applyCheckStage(stage, subIdx) {
+    var spec = checkStageCopy()[stage] || checkStageCopy()[0];
+    var subKey = spec.subs[subIdx % spec.subs.length];
+    showScan(T(spec.title), T(subKey), { allowSkip: false, keepTimer: true });
+  }
 
   function $(id) { return document.getElementById(id); }
 
   function T(key, vars) {
     return window.AgroScanI18n ? window.AgroScanI18n.t(key, vars) : key;
+  }
+
+  function ensureOverlay() {
+    if ($("scanOverlay")) return;
+    var el = document.createElement("div");
+    el.id = "scanOverlay";
+    el.className = "scan-overlay hidden";
+    el.setAttribute("role", "status");
+    el.setAttribute("aria-live", "polite");
+    el.innerHTML =
+      '<div class="scan-overlay-card">' +
+      '<div class="spinner" aria-hidden="true"></div>' +
+      '<p id="scanOverlayTitle"></p>' +
+      '<p id="scanOverlaySub" class="muted small"></p>' +
+      '<ol id="scanOverlaySteps" class="scan-overlay-steps" hidden></ol>' +
+      '<button type="button" id="scanOverlaySkip" class="btn btn-ghost">' + T("crop_skip") + "</button>" +
+      "</div>";
+    document.body.appendChild(el);
+    $("scanOverlaySkip").onclick = function () {
+      var f = state.file || state.originalFile;
+      if (state.onDone) finish(f);
+      else hideScan();
+    };
+  }
+
+  function stopCheckStages() {
+    if (checkTimer) {
+      clearInterval(checkTimer);
+      checkTimer = null;
+    }
+  }
+
+  function showScan(title, sub, opts) {
+    opts = opts || {};
+    ensureOverlay();
+    if (!opts.keepTimer) stopCheckStages();
+    var skip = $("scanOverlaySkip");
+    var steps = $("scanOverlaySteps");
+    $("scanOverlayTitle").textContent = title || "";
+    $("scanOverlaySub").textContent = sub || "";
+    if (skip) skip.hidden = !opts.allowSkip;
+    if (steps) steps.hidden = true;
+    $("scanOverlay").className = "scan-overlay";
+    $("scanOverlay").setAttribute("aria-busy", "true");
+  }
+
+  function hideScan() {
+    stopCheckStages();
+    var el = $("scanOverlay");
+    if (el) {
+      el.className = "scan-overlay hidden";
+      el.setAttribute("aria-busy", "false");
+    }
+  }
+
+  function startCheckStages() {
+    ensureOverlay();
+    checkStage = 0;
+    checkSub = 0;
+    applyCheckStage(0, 0);
+    stopCheckStages();
+    checkTimer = setInterval(function () {
+      var stages = checkStageCopy();
+      if (checkStage < stages.length - 1) {
+        checkStage += 1;
+        checkSub = 0;
+      } else {
+        checkSub += 1;
+      }
+      applyCheckStage(checkStage, checkSub);
+    }, 1800);
   }
 
   function setBusy(on) {
@@ -44,17 +128,17 @@
     wrap.className = "crop-modal hidden";
     wrap.innerHTML =
       '<div class="crop-dialog">' +
-      '<div class="crop-head"><h3 id="cropTitle">' + T("crop_title") + '</h3>' +
+      '<div class="crop-head"><h3 id="cropTitle">' + T("crop_title") + "</h3>" +
       '<button type="button" id="cropClose" class="chat-close" aria-label="Close">&times;</button></div>' +
-      '<p class="muted small" id="cropHint">' + T("crop_hint") + '</p>' +
+      '<p class="muted small" id="cropHint">' + T("crop_hint") + "</p>" +
       '<p id="cropStatus" class="muted small crop-status hidden"></p>' +
       '<div class="crop-stage"><canvas id="cropCanvas"></canvas></div>' +
       '<div class="crop-actions">' +
-      '<button type="button" id="cropAutoBtn" class="btn btn-secondary">' + T("crop_auto") + '</button>' +
-      '<button type="button" id="cropResetBtn" class="btn btn-ghost">' + T("crop_reset") + '</button>' +
-      '<button type="button" id="cropSkipBtn" class="btn btn-ghost">' + T("crop_skip") + '</button>' +
-      '<button type="button" id="cropApplyBtn" class="btn btn-primary">' + T("crop_apply") + '</button>' +
-      '</div></div>';
+      '<button type="button" id="cropAutoBtn" class="btn btn-secondary">' + T("crop_auto") + "</button>" +
+      '<button type="button" id="cropResetBtn" class="btn btn-ghost">' + T("crop_reset") + "</button>" +
+      '<button type="button" id="cropSkipBtn" class="btn btn-ghost">' + T("crop_skip") + "</button>" +
+      '<button type="button" id="cropApplyBtn" class="btn btn-primary">' + T("crop_apply") + "</button>" +
+      "</div></div>";
     document.body.appendChild(wrap);
     $("cropClose").onclick = function () { skipOriginal(); };
     $("cropAutoBtn").onclick = runAutoCrop;
@@ -80,6 +164,7 @@
     if ($("cropResetBtn")) $("cropResetBtn").textContent = T("crop_reset");
     if ($("cropSkipBtn")) $("cropSkipBtn").textContent = T("crop_skip");
     if ($("cropApplyBtn")) $("cropApplyBtn").textContent = T("crop_apply");
+    if ($("scanOverlaySkip")) $("scanOverlaySkip").textContent = T("crop_skip");
   }
 
   function defaultPoints(w, h) {
@@ -155,6 +240,7 @@
       Math.max(0, Math.min(w, p.x)),
       Math.max(0, Math.min(h, p.y))
     ];
+    state.moved = true;
     draw();
   }
   function onUp() { state.dragging = -1; }
@@ -173,6 +259,7 @@
     canvas.height = h;
     state.img = img;
     state.points = defaultPoints(w, h);
+    state.moved = false;
     draw();
   }
 
@@ -185,22 +272,168 @@
     img.src = URL.createObjectURL(file);
   }
 
+  function blobToFile(blob, name) {
+    try {
+      return new File([blob], name || "leaf_cropped.jpg", { type: blob.type || "image/jpeg" });
+    } catch (e) {
+      return blob;
+    }
+  }
+
+  function loadImg(file, ok, fail) {
+    var img = new Image();
+    img.onload = function () { ok(img); };
+    img.onerror = function () { if (fail) fail(); };
+    img.src = URL.createObjectURL(file);
+  }
+
+  function canvasToFile(canvas, name, ok) {
+    if (canvas.toBlob) {
+      canvas.toBlob(function (blob) {
+        ok(blob ? blobToFile(blob, name) : null);
+      }, "image/jpeg", 0.85);
+      return;
+    }
+    ok(null);
+  }
+
+  function shrinkFile(file, maxSide, ok) {
+    loadImg(file, function (img) {
+      var w = img.width, h = img.height;
+      if (w > maxSide || h > maxSide) {
+        if (w > h) { h = Math.round(h * maxSide / w); w = maxSide; }
+        else { w = Math.round(w * maxSide / h); h = maxSide; }
+      }
+      var c = document.createElement("canvas");
+      c.width = w;
+      c.height = h;
+      c.getContext("2d").drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(img.src);
+      canvasToFile(c, "leaf.jpg", function (f) { ok(f || file); });
+    }, function () { ok(file); });
+  }
+
+  function hsv255(r, g, b) {
+    var rr = r / 255, gg = g / 255, bb = b / 255;
+    var max = Math.max(rr, gg, bb), min = Math.min(rr, gg, bb), d = max - min;
+    var h = 0;
+    if (d !== 0) {
+      if (max === rr) h = ((gg - bb) / d + (gg < bb ? 6 : 0)) * 60;
+      else if (max === gg) h = ((bb - rr) / d + 2) * 60;
+      else h = ((rr - gg) / d + 4) * 60;
+    }
+    return { h: h / 2, s: max === 0 ? 0 : (d / max) * 255, v: max * 255 };
+  }
+
+  function isLeafPixel(r, g, b) {
+    var hsv = hsv255(r, g, b);
+    if (hsv.v > 210 && hsv.s < 40) return false;
+    if (hsv.h >= 25 && hsv.h <= 95 && hsv.s >= 25 && hsv.v >= 25) return true;
+    if (hsv.h >= 15 && hsv.h <= 35 && hsv.s >= 30 && hsv.v >= 40) return true;
+    if (hsv.h >= 5 && hsv.h <= 25 && hsv.s >= 20 && hsv.v >= 20 && hsv.v <= 180) return true;
+    return (2 * g - r - b) > 18;
+  }
+
+  function localAutoCrop(file, ok) {
+    loadImg(file, function (img) {
+      var max = 480;
+      var w = img.width, h = img.height;
+      var tw = w, th = h;
+      if (w > max || h > max) {
+        if (w > h) { th = Math.round(h * max / w); tw = max; }
+        else { tw = Math.round(w * max / h); th = max; }
+      }
+      var c = document.createElement("canvas");
+      c.width = tw;
+      c.height = th;
+      var ctx = c.getContext("2d");
+      ctx.drawImage(img, 0, 0, tw, th);
+      var pix = ctx.getImageData(0, 0, tw, th).data;
+      var minX = tw, minY = th, maxX = 0, maxY = 0, count = 0;
+      var i, x, y, r, g, b;
+      for (y = 0; y < th; y++) {
+        for (x = 0; x < tw; x++) {
+          i = (y * tw + x) * 4;
+          r = pix[i];
+          g = pix[i + 1];
+          b = pix[i + 2];
+          if (!isLeafPixel(r, g, b)) continue;
+          count++;
+          if (x < minX) minX = x;
+          if (y < minY) minY = y;
+          if (x > maxX) maxX = x;
+          if (y > maxY) maxY = y;
+        }
+      }
+      if (count < 0.015 * tw * th || maxX <= minX || maxY <= minY) {
+        URL.revokeObjectURL(img.src);
+        ok(file);
+        return;
+      }
+      var padX = Math.round((maxX - minX) * 0.06);
+      var padY = Math.round((maxY - minY) * 0.06);
+      var sx = w / tw, sy = h / th;
+      var x0 = Math.max(0, Math.round((minX - padX) * sx));
+      var y0 = Math.max(0, Math.round((minY - padY) * sy));
+      var x1 = Math.min(w, Math.round((maxX + padX) * sx));
+      var y1 = Math.min(h, Math.round((maxY + padY) * sy));
+      if (x1 - x0 < 16 || y1 - y0 < 16) {
+        URL.revokeObjectURL(img.src);
+        ok(file);
+        return;
+      }
+      var out = document.createElement("canvas");
+      out.width = x1 - x0;
+      out.height = y1 - y0;
+      out.getContext("2d").drawImage(img, x0, y0, out.width, out.height, 0, 0, out.width, out.height);
+      URL.revokeObjectURL(img.src);
+      canvasToFile(out, "leaf_auto.jpg", function (f) { ok(f || file); });
+    }, function () { ok(file); });
+  }
+
+  function revealModal(file) {
+    ensureModal();
+    refreshLabels();
+    state.open = true;
+    $("cropModal").className = "crop-modal";
+    setBusy(false);
+    loadFileToCanvas(file, false);
+    hideScan();
+  }
+
   function open(file, done, opts) {
     opts = opts || {};
     ensureModal();
+    ensureOverlay();
     refreshLabels();
     state.originalFile = file;
     state.file = file;
     state.onDone = done;
-    state.open = true;
-    var modal = $("cropModal");
-    modal.className = "crop-modal";
-    loadFileToCanvas(file, opts.autoLeaf !== false);
+    state.moved = false;
+    state.gen += 1;
+    var gen = state.gen;
+    showScan(T("scan_prep"), T("scan_prep_sub"), { allowSkip: true });
+    shrinkFile(file, 1024, function (small) {
+      if (gen !== state.gen) return;
+      state.file = small;
+      if (opts.autoLeaf === false) {
+        revealModal(small);
+        return;
+      }
+      showScan(T("crop_working"), T("scan_prep_leaf_sub"), { allowSkip: true });
+      localAutoCrop(small, function (cropped) {
+        if (gen !== state.gen) return;
+        state.file = cropped || small;
+        revealModal(state.file);
+      });
+    });
   }
 
   function close() {
+    state.gen += 1;
     state.open = false;
     setBusy(false);
+    hideScan();
     var modal = $("cropModal");
     if (modal) modal.className = "crop-modal hidden";
   }
@@ -217,34 +450,11 @@
 
   function resetToOriginal() {
     if (!state.originalFile) return;
-    state.file = state.originalFile;
-    loadFileToCanvas(state.originalFile, false);
-  }
-
-  function blobToFile(blob, name) {
-    try {
-      return new File([blob], name || "leaf_cropped.jpg", { type: "image/jpeg" });
-    } catch (e) {
-      return blob;
-    }
-  }
-
-  function postCrop(url, file, extra, ok, fail) {
-    var fd = new FormData();
-    fd.append("file", file, file.name || "leaf.jpg");
-    if (extra && extra.points) fd.append("points", JSON.stringify(extra.points));
-    if (extra && extra.isolate) fd.append("isolate", "true");
-    var x = new XMLHttpRequest();
-    x.open("POST", url, true);
-    x.timeout = 120000;
-    x.responseType = "blob";
-    x.onload = function () {
-      if (x.status >= 200 && x.status < 300) ok(x.response);
-      else fail("HTTP " + x.status);
-    };
-    x.onerror = function () { fail("network"); };
-    x.ontimeout = function () { fail("timeout"); };
-    x.send(fd);
+    showScan(T("scan_prep"), T("scan_prep_sub"), { allowSkip: true });
+    shrinkFile(state.originalFile, 1024, function (small) {
+      state.file = small;
+      revealModal(small);
+    });
   }
 
   function scalePointsToImage() {
@@ -260,41 +470,63 @@
   }
 
   function runAutoCrop() {
-    var src = state.originalFile || state.file;
+    var src = state.file || state.originalFile;
     if (!src || state.busy) return;
     setBusy(true);
-    postCrop(API + "/api/preprocess/auto-crop", src, { isolate: true }, function (blob) {
-      var f = blobToFile(blob, "leaf_auto.jpg");
+    showScan(T("crop_working"), T("scan_prep_leaf_sub"), { allowSkip: true });
+    localAutoCrop(src, function (cropped) {
+      var f = cropped || src;
       state.file = f;
       var img = new Image();
       img.onload = function () {
         fitCanvas(img);
         setBusy(false);
+        hideScan();
       };
-      img.onerror = function () { setBusy(false); };
+      img.onerror = function () {
+        setBusy(false);
+        hideScan();
+      };
       img.src = URL.createObjectURL(f);
-    }, function () {
-      setBusy(false);
     });
   }
 
   function applyCrop() {
     if (!state.file || state.busy) return;
-    setBusy(true);
-    var pts = scalePointsToImage();
-    postCrop(API + "/api/preprocess/perspective-crop", state.file, { points: pts }, function (blob) {
-      var f = blobToFile(blob, "leaf_crop.jpg");
-      setBusy(false);
-      finish(f);
-    }, function () {
-      setBusy(false);
+    if (!state.moved || !state.img) {
       finish(state.file);
+      return;
+    }
+    var pts = scalePointsToImage();
+    var xs = [pts[0][0], pts[1][0], pts[2][0], pts[3][0]];
+    var ys = [pts[0][1], pts[1][1], pts[2][1], pts[3][1]];
+    var x0 = Math.max(0, Math.min.apply(null, xs));
+    var y0 = Math.max(0, Math.min.apply(null, ys));
+    var x1 = Math.min(state.img.width, Math.max.apply(null, xs));
+    var y1 = Math.min(state.img.height, Math.max.apply(null, ys));
+    if (x1 - x0 < 8 || y1 - y0 < 8) {
+      finish(state.file);
+      return;
+    }
+    var c = document.createElement("canvas");
+    c.width = x1 - x0;
+    c.height = y1 - y0;
+    c.getContext("2d").drawImage(state.img, x0, y0, c.width, c.height, 0, 0, c.width, c.height);
+    canvasToFile(c, "leaf_crop.jpg", function (f) {
+      finish(f || state.file);
     });
   }
 
   document.addEventListener("langchange", function () {
     if (state.open) refreshLabels();
+    if ($("scanOverlay") && $("scanOverlay").className.indexOf("hidden") < 0) refreshLabels();
   });
+
+  window.AgroScanBusy = {
+    show: showScan,
+    hide: hideScan,
+    startChecking: startCheckStages
+  };
 
   window.AgroScanCrop = {
     open: open,

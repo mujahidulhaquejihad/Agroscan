@@ -1,0 +1,264 @@
+{
+  "class_name": "Tomato___Spider_mites_Two-spotted_spider_mite",
+  "kb_key": "spider_mites",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Two-spotted spider mite",
+  "disease_bn": "টমেটোর লাল মাকড় (দুই ফোঁটা মাকড়)",
+  "pathogen": "Tetranychus urticae (a mite, not a disease)",
+  "severity": "medium",
+  "summary_en": "These are tiny mites, not a disease. They live on the underside of leaves and suck sap, leaving fine pale speckling and later a silvery bronze look and fine webbing. They explode in hot dry weather and after broad-spectrum insecticide sprays that kill their natural enemies.",
+  "summary_bn": "এগুলো রোগ নয়, খুব ছোট মাকড়। পাতার নিচের পিঠে থেকে রস চুষে খায়, ফলে পাতায় সূক্ষ্ম ফ্যাকাশে ছিট পড়ে, পরে পাতা রুপালি-তামাটে দেখায় আর সূক্ষ্ম জাল পড়ে। গরম শুকনো আবহাওয়ায় এবং উপকারী পোকা মেরে ফেলে এমন ব্যাপক কীটনাশক দেওয়ার পর হঠাৎ বেড়ে যায়।",
+  "symptoms_en": [
+    "Fine pale yellow or white speckling (stippling) on the upper leaf surface",
+    "Leaves later turn bronze, silvery or reddish and become dry and brittle",
+    "Very fine webbing on the underside of leaves and between leaflets in heavy attacks",
+    "Tiny moving specks on the leaf underside — hold a white paper under the leaf and tap; the moving dots are mites",
+    "Starts in the hot dry patches of the field, often near a dusty path or field edge",
+    "Explodes after a broad-spectrum insecticide spray (predatory mites are killed first)"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরের পিঠে সূক্ষ্ম ফ্যাকাশে হলুদ বা সাদা ছিট ছিট দাগ",
+    "পরে পাতা তামাটে, রুপালি বা লালচে হয়ে শুকনো ও খসখসে হয়ে যায়",
+    "বেশি আক্রমণে পাতার নিচে ও পাতার ফাঁকে খুব সূক্ষ্ম জাল দেখা যায়",
+    "পাতার নিচে ছোট ছোট নড়াচড়া করা কণা — পাতার নিচে সাদা কাগজ ধরে টোকা দিন; যেগুলো নড়ে সেগুলোই মাকড়",
+    "জমির গরম শুকনো অংশে, প্রায়ই ধুলাভরা রাস্তা বা জমির কিনারার দিকে শুরু হয়",
+    "ব্যাপক কীটনাশক স্প্রের পর হঠাৎ বেড়ে যায় (আগে উপকারী মাকড়গুলো মরে যায়)"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Stop broad-spectrum insecticides",
+      "detail": "If you have been spraying cypermethrin or similar, stop. Pyrethroids kill the predatory mites that keep spider mites down and are a common cause of mite outbreaks."
+    },
+    {
+      "step": 2,
+      "title": "Raise the humidity around the plants",
+      "detail": "Irrigate properly and, in small plots, wash the leaf undersides with a strong jet of plain water in the morning. Spider mites hate moisture and this alone knocks the population down."
+    },
+    {
+      "step": 3,
+      "title": "Remove the worst leaves",
+      "detail": "Strip and bag the heavily webbed and bronzed leaves. Do not shake them across the field."
+    },
+    {
+      "step": 4,
+      "title": "Use a specific miticide, not an insecticide",
+      "detail": "Ordinary insecticides do not kill mites. Use abamectin, spiromesifen or sulphur. Aim entirely at the leaf UNDERSIDE."
+    },
+    {
+      "step": 5,
+      "title": "Rotate the miticide",
+      "detail": "Mites develop resistance within a season. Never use the same miticide twice in a row."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ব্যাপক কীটনাশক বন্ধ করুন",
+      "detail": "সাইপারমেথ্রিন জাতীয় ওষুধ দিয়ে থাকলে বন্ধ করুন। এসব ওষুধে যেসব উপকারী মাকড় লাল মাকড় খেয়ে নিয়ন্ত্রণে রাখত সেগুলোই আগে মরে যায় — মাকড়ের প্রকোপের এটাই সাধারণ কারণ।"
+    },
+    {
+      "step": 2,
+      "title": "গাছের চারপাশে আর্দ্রতা বাড়ান",
+      "detail": "ঠিকমতো সেচ দিন এবং ছোট জমিতে সকালে শুধু পানির জোর ধারা দিয়ে পাতার নিচের পিঠ ধুয়ে দিন। লাল মাকড় ভেজা সহ্য করতে পারে না, শুধু এতেই সংখ্যা অনেক কমে।"
+    },
+    {
+      "step": 3,
+      "title": "বেশি আক্রান্ত পাতা সরান",
+      "detail": "জাল পড়া ও তামাটে হয়ে যাওয়া পাতা ছিঁড়ে ব্যাগে ভরুন। জমির মধ্যে ঝাঁকাবেন না।"
+    },
+    {
+      "step": 4,
+      "title": "কীটনাশক নয়, মাকড়নাশক দিন",
+      "detail": "সাধারণ কীটনাশকে মাকড় মরে না। অ্যাবামেকটিন, স্পাইরোমেসিফেন বা সালফার ব্যবহার করুন। পুরোটাই পাতার নিচের পিঠে তাক করে দিন।"
+    },
+    {
+      "step": 5,
+      "title": "মাকড়নাশক পাল্টে দিন",
+      "detail": "এক মৌসুমেই মাকড় ওষুধ সহ্য করা শিখে ফেলে। পরপর দুইবার একই মাকড়নাশক দেবেন না।"
+    }
+  ],
+  "cultural_control_en": [
+    "Keep the field free of dust — dusty conditions favour mites",
+    "Irrigate adequately; drought-stressed plants get mites badly",
+    "Avoid unnecessary pyrethroid sprays that destroy predatory mites",
+    "Remove and destroy crop residue and weed hosts at the field edge",
+    "Do not plant tomato next to a mite-infested crop such as brinjal, bean or cucurbits",
+    "Scout leaf undersides weekly with a hand lens during hot dry spells"
+  ],
+  "cultural_control_bn": [
+    "জমি ধুলামুক্ত রাখুন — ধুলাভরা অবস্থায় মাকড় বেশি হয়",
+    "পর্যাপ্ত সেচ দিন; খরায় কষ্ট পাওয়া গাছে মাকড় বেশি ধরে",
+    "অকারণে পাইরেথ্রয়েড জাতীয় ওষুধ দেবেন না, এতে উপকারী মাকড় মরে যায়",
+    "জমির কিনারার আগাছা ও ফসলের অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "বেগুন, শিম বা কুমড়া জাতীয় মাকড় আক্রান্ত ফসলের পাশে টমেটো লাগাবেন না",
+    "গরম শুকনো সময়ে সপ্তাহে একবার ম্যাগনিফাইং গ্লাস দিয়ে পাতার নিচের পিঠ দেখুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Abamectin 1.8% EC",
+      "product_name_bn": "অ্যাবামেকটিন ১.৮% ইসি",
+      "active_ingredient": "Abamectin",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water (about 5 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ৫ মিলি)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Nozzle angled UP for complete leaf-underside coverage. Mites not touched by the spray survive, so coverage decides success. Use a wetting agent.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে পাতার নিচের পিঠ পুরোপুরি ভিজিয়ে দিন। যে মাকড়ে ওষুধ লাগবে না সেটি বেঁচে যাবে, তাই ভালো করে লাগানোই আসল কথা। ভেজানোর জন্য আঠালো পদার্থ মেশান।",
+      "timing_en": "When mites are confirmed on the leaf underside. Repeat once after 7 days to catch newly hatched mites, then switch chemical group.",
+      "timing_bn": "পাতার নিচে মাকড় আছে নিশ্চিত হলে দিন। নতুন ফোটা মাকড় মারতে ৭ দিন পর আরেকবার, তারপর ওষুধের গ্রুপ পাল্টে দিন।",
+      "interval_days": 7,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Vertimec 1.8 EC",
+        "Abamec 1.8 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Abamectin is registered in Bangladesh and appears in national HHP surveys as a widely used active. Verify the brand AP number and the registered crop/pest claim against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Abamectin is listed among highly hazardous pesticides in wide use in Bangladesh and is very toxic to bees and aquatic life. Use only when mites are confirmed, never routinely, and never near water.",
+      "caution_bn": "অ্যাবামেকটিন বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে এবং মৌমাছি ও জলজ প্রাণীর জন্য খুবই বিষাক্ত। মাকড় আছে নিশ্চিত হলে তবেই দিন, নিয়ম করে কখনো নয়, আর পানির উৎসের কাছে কখনো নয়।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Sulphur 80% WP (wettable sulphur)",
+      "product_name_bn": "সালফার ৮০% ডব্লিউপি (গন্ধক)",
+      "active_ingredient": "Sulphur",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water (about 20 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray on leaf undersides. Do NOT apply when the temperature is above 32°C — sulphur burns the leaves in heat. Spray in the early morning or evening.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার নিচের পিঠে দিন। তাপমাত্রা ৩২ ডিগ্রির উপরে থাকলে দেবেন না — গরমে সালফারে পাতা পুড়ে যায়। খুব সকালে বা সন্ধ্যায় স্প্রে করুন।",
+      "timing_en": "Early infestation, or as a rotation partner. Also suppresses powdery mildew at the same time.",
+      "timing_bn": "শুরুর দিকের আক্রমণে, অথবা পালা করে দেওয়ার জন্য। একই সাথে পাউডারি মিলডিউও কমে।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 3,
+      "pre_harvest_interval_note_en": "Do not pick for 3 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Thiovit Jet 80 WG",
+        "Microthiol Special 80 WP",
+        "Sulcox 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Microthiol Special 80 WP, AP-252, Shetu Pesticides Limited — recorded in the DAE PPW registered list for mite control (registered use shown there for tea red mites; confirm the tomato label claim).",
+      "treatment_type": "both",
+      "caution_en": "Do not apply sulphur within 2 weeks of an oil spray — the combination burns foliage badly.",
+      "caution_bn": "তেল জাতীয় স্প্রের ২ সপ্তাহের মধ্যে সালফার দেবেন না — একসাথে পড়লে পাতা মারাত্মকভাবে পুড়ে যায়।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-252"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "A strong jet of plain water on the leaf undersides in the morning — genuinely effective in small plots and free",
+    "Neem oil at 3-5 ml/L with a wetting agent, on leaf undersides",
+    "Wettable sulphur (also acceptable in most organic systems)",
+    "Conserve predatory mites and ladybird beetles by not spraying pyrethroids",
+    "Keep dust down by watering paths and field edges"
+  ],
+  "organic_alternatives_bn": [
+    "সকালে পাতার নিচের পিঠে শুধু পানির জোর ধারা — ছোট জমিতে সত্যিই কাজ করে এবং বিনা খরচে",
+    "প্রতি লিটারে ৩-৫ মিলি নিম তেল আঠালো পদার্থসহ পাতার নিচের পিঠে",
+    "ভেজানো সালফার (বেশিরভাগ জৈব চাষেও চলে)",
+    "পাইরেথ্রয়েড না দিয়ে উপকারী মাকড় ও লেডিবার্ড পোকা বাঁচান",
+    "রাস্তা ও জমির কিনারায় পানি ছিটিয়ে ধুলা কমান"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen — soft, high-nitrogen foliage lets mite populations grow much faster. Keep the plant adequately watered and fed at FRG rates; drought stress is the main trigger.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না — নরম, বেশি নাইট্রোজেনযুক্ত পাতায় মাকড় অনেক দ্রুত বাড়ে। এফআরজি মাত্রায় সার ও পর্যাপ্ত পানি দিন; পানির অভাবই এই সমস্যার প্রধান কারণ।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Abamectin is highly toxic to bees and fish — do not spray flowering plants and never rinse the sprayer near water. Sulphur irritates the eyes and skin; do not apply in hot midday sun. Respect the PHI before each picking.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। অ্যাবামেকটিন মৌমাছি ও মাছের জন্য খুবই বিষাক্ত — ফুল ফোটা গাছে স্প্রে করবেন না, পানির উৎসের কাছে স্প্রেয়ার ধোবেন না। সালফার চোখ ও চামড়ায় জ্বালা ধরায়; দুপুরের কড়া রোদে দেবেন না। প্রতিবার ফল তোলার আগে পিএইচআই মানুন।",
+  "legal_note_en": "Use only DAE-registered products. Abamectin is flagged as a highly hazardous pesticide in national surveys — use it sparingly. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। জাতীয় জরিপে অ্যাবামেকটিনকে অতি ঝুঁকিপূর্ণ ওষুধ হিসেবে চিহ্নিত করা হয়েছে — কম ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves are bronzing across the field, if webbing is visible, or if mites return within 2 weeks of a miticide spray — that means resistance and you need a different group.",
+  "when_to_call_helpline_bn": "জমিজুড়ে পাতা তামাটে হয়ে গেলে, জাল দেখা গেলে, অথবা মাকড়নাশক দেওয়ার ২ সপ্তাহের মধ্যে আবার মাকড় ফিরে এলে ১৬১২৩ নম্বরে ফোন করুন — এর মানে ওষুধ আর কাজ করছে না, ভিন্ন গ্রুপ লাগবে।",
+  "expected_outcome_en": "A well-covered miticide spray plus water washing usually drops the population sharply within 5-7 days. Bronzed leaves will not turn green again — judge by whether new growth stays clean and whether you can still find moving mites on the underside.",
+  "expected_outcome_bn": "ভালোভাবে মাকড়নাশক দিয়ে পানি দিয়ে ধুলে সাধারণত ৫-৭ দিনে মাকড় অনেক কমে যায়। তামাটে হয়ে যাওয়া পাতা আর সবুজ হবে না — নতুন পাতা পরিষ্কার থাকছে কিনা আর পাতার নিচে এখনো নড়াচড়া করা মাকড় পাওয়া যায় কিনা, তা দেখেই বুঝবেন।",
+  "related_shop_products": [
+    "Abamectin 1.8% EC 100ml",
+    "Wettable sulphur 80% WP 500g",
+    "Neem oil 250ml",
+    "Wetting agent/sticker 100ml",
+    "Knapsack sprayer 16L manual",
+    "Hand lens 20x"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Microthiol Special 80 WP, AP-252, Shetu Pesticides Ltd; Vertimec/abamectin registrations); The Daily Star, '17 highly harmful pesticides widely used across country' (abamectin HHP status); 'Tomato pests and diseases in Bangladesh and India', International Journal of Pest Management",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "This class is an ARTHROPOD PEST, not a disease. The app's UI wording ('disease detected') should be adjusted for mite and borer classes. The PPW entries found for sulphur and abamectin record tea/cotton uses; the tomato claim needs label confirmation.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Abamectin 1.8% EC 100ml",
+      "sku": "PEST-0059",
+      "name_en": "Abamectin 1.8% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Wettable sulphur 80% WP 500g",
+      "sku": "PEST-0041",
+      "name_en": "Sulphur (wettable) 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.053,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Wetting agent/sticker 100ml",
+      "sku": "PEST-0102",
+      "name_en": "Wetting agent / spreader-sticker Non-ionic surfactant 100ml",
+      "category": "pesticide",
+      "match_score": 1.125,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Hand lens 20x",
+      "sku": "EQ-0064",
+      "name_en": "Hand lens 20x",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

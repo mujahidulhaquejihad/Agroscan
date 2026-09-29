@@ -1,0 +1,234 @@
+{
+  "class_name": "Wheat___Blast",
+  "kb_key": "wheat_blast",
+  "crop_en": "Wheat",
+  "crop_bn": "গম",
+  "disease_en": "Wheat blast",
+  "disease_bn": "গমের ব্লাস্ট রোগ",
+  "pathogen": "Magnaporthe oryzae Triticum pathotype (MoT)",
+  "severity": "high",
+  "summary_en": "Wheat blast first appeared in Bangladesh in 2016 and is a national quarantine-level concern. The spike turns completely white and bleached above the point of infection while the leaves stay green, and the grains are shrivelled or absent. Warm humid weather at heading is what triggers it.",
+  "summary_bn": "২০১৬ সালে বাংলাদেশে প্রথম গমের ব্লাস্ট দেখা যায় এবং এটি এখন জাতীয় পর্যায়ের গুরুতর উদ্বেগের বিষয়। আক্রান্ত জায়গার উপর থেকে পুরো শিষ সাদা হয়ে যায় অথচ পাতা সবুজই থাকে, আর দানা চিটা হয় বা একদম হয় না। শিষ বের হওয়ার সময় গরম স্যাঁতসেঁতে আবহাওয়াই এর কারণ।",
+  "symptoms_en": [
+    "The spike bleaches to a straw-white colour ABOVE a dark lesion on the rachis, while the part below stays green",
+    "Leaves often remain green — this is the classic contrast that identifies wheat blast",
+    "A dark brown to black band at the point of infection on the spike stem",
+    "Grains are shrivelled, small, discoloured or completely absent",
+    "Whole fields can turn white within days at heading in warm humid weather",
+    "Diamond-shaped grey lesions with dark borders may appear on leaves"
+  ],
+  "symptoms_bn": [
+    "শিষের কাণ্ডে যেখানে কালো দাগ, তার উপরের পুরো অংশ খড়ের মতো সাদা হয়ে যায়, নিচের অংশ সবুজ থাকে",
+    "পাতা প্রায়ই সবুজই থাকে — এই পার্থক্যেই গমের ব্লাস্ট চেনা যায়",
+    "শিষের কাণ্ডে আক্রান্ত জায়গায় গাঢ় বাদামি বা কালো বলয়",
+    "দানা চিটা, ছোট, রং নষ্ট বা একেবারেই হয় না",
+    "শিষ বের হওয়ার সময় গরম স্যাঁতসেঁতে আবহাওয়ায় কয়েক দিনেই পুরো জমি সাদা হয়ে যেতে পারে",
+    "পাতায় গাঢ় কিনারাযুক্ত হীরার মতো ধূসর দাগ দেখা যেতে পারে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Report it — this is a notifiable-level concern",
+      "detail": "Call the Krishi Call Center on 16123 and inform your Upazila Agriculture Office immediately. Wheat blast is under national surveillance in Bangladesh and early reporting helps contain spread across districts."
+    },
+    {
+      "step": 2,
+      "title": "Do not save seed from this field",
+      "detail": "The pathogen is seed-transmitted. Seed from a blast-affected field will carry it to new areas. This is the single most important thing you can do."
+    },
+    {
+      "step": 3,
+      "title": "Spray only if the crop is not yet fully bleached",
+      "detail": "A tricyclazole or trifloxystrobin+tebuconazole spray at heading can protect spikes not yet infected. Once a spike is white it cannot be saved."
+    },
+    {
+      "step": 4,
+      "title": "Do not move the crop residue to a new area",
+      "detail": "Burn or deep-bury residue in place. Do not sell or transport straw from an affected field."
+    },
+    {
+      "step": 5,
+      "title": "Plan an early-sown, short-duration variety next year",
+      "detail": "Sowing early so heading finishes before the warm humid window is the most reliable protection available."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "জানিয়ে দিন — এটি জাতীয় নজরদারির বিষয়",
+      "detail": "সাথে সাথে কৃষি কল সেন্টার ১৬১২৩ নম্বরে ফোন করুন এবং উপজেলা কৃষি অফিসে জানান। বাংলাদেশে গমের ব্লাস্ট জাতীয় নজরদারিতে আছে, আগেভাগে জানালে জেলায় জেলায় ছড়ানো ঠেকানো যায়।"
+    },
+    {
+      "step": 2,
+      "title": "এই জমি থেকে বীজ রাখবেন না",
+      "detail": "জীবাণু বীজের সাথে যায়। আক্রান্ত জমির বীজ নতুন এলাকায় রোগ নিয়ে যাবে। আপনি যা করতে পারেন তার মধ্যে এটাই সবচেয়ে জরুরি।"
+    },
+    {
+      "step": 3,
+      "title": "পুরো শিষ সাদা না হয়ে থাকলে তবেই স্প্রে করুন",
+      "detail": "শিষ বের হওয়ার সময় ট্রাইসাইক্লাজল বা ট্রাইফ্লক্সিস্ট্রোবিন+টেবুকোনাজল দিলে যেসব শিষে এখনো রোগ ধরেনি সেগুলো বাঁচতে পারে। যে শিষ সাদা হয়ে গেছে তা আর বাঁচবে না।"
+    },
+    {
+      "step": 4,
+      "title": "নাড়া নতুন এলাকায় নিয়ে যাবেন না",
+      "detail": "জমিতেই পুড়িয়ে বা গভীরে পুঁতে ফেলুন। আক্রান্ত জমির খড় বিক্রি বা অন্যত্র পাঠাবেন না।"
+    },
+    {
+      "step": 5,
+      "title": "আগামী বছর আগাম বপন ও স্বল্পমেয়াদি জাত নিন",
+      "detail": "গরম স্যাঁতসেঁতে সময় আসার আগেই যেন শিষ বের হওয়া শেষ হয় — এভাবে আগাম বপনই সবচেয়ে নির্ভরযোগ্য সুরক্ষা।"
+    }
+  ],
+  "cultural_control_en": [
+    "Sow early (mid-November) so heading finishes before mid-February warmth and humidity",
+    "Grow BARI-released blast-tolerant varieties such as BARI Gom 33 where available",
+    "Use certified seed only — never seed saved from a blast area",
+    "Rotate away from wheat in affected fields",
+    "Destroy wheat residue after harvest",
+    "Avoid wheat next to a previously affected field",
+    "Follow national wheat blast advisories issued during the Rabi season"
+  ],
+  "cultural_control_bn": [
+    "আগাম বপন করুন (নভেম্বরের মাঝামাঝি) যাতে ফেব্রুয়ারির মাঝামাঝি গরম ও আর্দ্রতা আসার আগেই শিষ বের হওয়া শেষ হয়",
+    "সম্ভব হলে বারি উদ্ভাবিত ব্লাস্ট সহনশীল জাত যেমন বারি গম ৩৩ লাগান",
+    "শুধু সার্টিফাইড বীজ ব্যবহার করুন — ব্লাস্ট এলাকার বীজ কখনো নয়",
+    "আক্রান্ত জমিতে গমের বদলে অন্য ফসল করুন",
+    "ফসল কাটার পর গমের নাড়া নষ্ট করুন",
+    "আগে আক্রান্ত হয়েছিল এমন জমির পাশে গম করবেন না",
+    "রবি মৌসুমে জারি করা জাতীয় গম ব্লাস্ট সতর্কবার্তা মেনে চলুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Tricyclazole 75% WP",
+      "product_name_bn": "ট্রাইসাইক্লাজল ৭৫% ডব্লিউপি",
+      "active_ingredient": "Tricyclazole",
+      "formulation": "WP",
+      "dose_en": "0.6 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৬ গ্রাম",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray directed at the spikes. Coverage of the spike, not the leaves, is what matters here.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে শিষে তাক করে দিন। এখানে পাতা নয়, শিষে ওষুধ লাগাটাই আসল।",
+      "timing_en": "Preventive at heading (when 50% of spikes have emerged) and again 7-10 days later if warm humid weather continues.",
+      "timing_bn": "শিষ বের হওয়ার সময় (৫০% শিষ বের হলে) প্রতিরোধমূলকভাবে, এবং গরম স্যাঁতসেঁতে আবহাওয়া চলতে থাকলে ৭-১০ দিন পর আরেকবার।",
+      "interval_days": 10,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন গম কাটবেন না।",
+      "brands_available_bd": [
+        "Trooper 75 WP",
+        "Beam 75 WP",
+        "Sunny 75 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Tricyclazole is registered in Bangladesh as a rice blast fungicide. Its use on wheat blast is based on national emergency-management advice following the 2016 outbreak — confirm the current DAE recommendation and label status for wheat before presenting it as a registered wheat use.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Trifloxystrobin 25% + Tebuconazole 50% WG",
+      "product_name_bn": "ট্রাইফ্লক্সিস্ট্রোবিন ২৫% + টেবুকোনাজল ৫০% ডব্লিউজি",
+      "active_ingredient": "Trifloxystrobin + Tebuconazole",
+      "formulation": "WG",
+      "dose_en": "0.4 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৪ গ্রাম",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray targeting the spikes at heading.",
+      "application_method_bn": "শিষ বের হওয়ার সময় ন্যাপস্যাক স্প্রেয়ারে শিষে দিন।",
+      "timing_en": "At heading, as the main preventive spray. Widely recommended internationally for wheat blast suppression.",
+      "timing_bn": "শিষ বের হওয়ার সময় প্রধান প্রতিরোধমূলক স্প্রে হিসেবে। আন্তর্জাতিকভাবে গমের ব্লাস্ট দমনে ব্যাপকভাবে সুপারিশকৃত।",
+      "interval_days": 10,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন গম কাটবেন না।",
+      "brands_available_bd": [
+        "Nativo 75 WG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Nativo 75 WG (Bayer CropScience) is marketed in Bangladesh. Confirm the AP number and the wheat label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Early sowing and tolerant varieties — the only genuinely reliable non-chemical protection against wheat blast",
+    "Certified clean seed",
+    "There is no effective organic curative option; do not rely on one for this disease"
+  ],
+  "organic_alternatives_bn": [
+    "আগাম বপন ও সহনশীল জাত — গমের ব্লাস্টে ওষুধ ছাড়া সত্যিকারের নির্ভরযোগ্য সুরক্ষা কেবল এটাই",
+    "সার্টিফাইড পরিষ্কার বীজ",
+    "কার্যকর কোনো জৈব চিকিৎসা নেই; এই রোগে জৈব ওষুধের ভরসায় থাকবেন না"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for wheat. Avoid excess nitrogen, which delays maturity and pushes heading into the risky warm humid window. Apply the full potash dose.",
+  "fertilizer_advice_bn": "গমের জন্য এফআরজি-২০১৮ মেনে চলুন। বেশি ইউরিয়া দেবেন না, এতে ফসল পাকতে দেরি হয় আর শিষ বের হওয়া ঝুঁকিপূর্ণ গরম স্যাঁতসেঁতে সময়ে গিয়ে পড়ে। পুরো পটাশ মাত্রা দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Wash with soap after spraying. Observe the 21-day PHI. Do not feed sprayed green wheat to livestock within the PHI.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন। ২১ দিনের পিএইচআই মানুন। পিএইচআই-এর মধ্যে স্প্রে করা কাঁচা গম গবাদিপশুকে খাওয়াবেন না।",
+  "legal_note_en": "Wheat blast is a nationally monitored disease in Bangladesh following the 2016 outbreak. Report suspected cases. Do not sell or move seed from an affected field — this is how the disease spreads between districts. Krishi Call Center: 16123.",
+  "legal_note_bn": "২০১৬ সালের প্রাদুর্ভাবের পর থেকে গমের ব্লাস্ট বাংলাদেশে জাতীয়ভাবে পর্যবেক্ষণাধীন। সন্দেহ হলে জানান। আক্রান্ত জমির বীজ বিক্রি বা অন্যত্র নেবেন না — এভাবেই এক জেলা থেকে আরেক জেলায় রোগ ছড়ায়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 immediately on first suspicion. Do not wait to confirm. Early district-level reporting is the main national defence against wheat blast.",
+  "when_to_call_helpline_bn": "সন্দেহ হওয়া মাত্রই ১৬১২৩ নম্বরে ফোন করুন। নিশ্চিত হওয়ার জন্য অপেক্ষা করবেন না। জেলা পর্যায়ে আগেভাগে খবর দেওয়াই গমের ব্লাস্টের বিরুদ্ধে দেশের প্রধান প্রতিরোধ।",
+  "expected_outcome_en": "Spikes already bleached will not recover and give no grain. A spray at heading protects spikes not yet infected. In a bad year with late sowing, losses can be severe regardless of spraying — which is why sowing date and variety choice matter more than the fungicide.",
+  "expected_outcome_bn": "যে শিষ সাদা হয়ে গেছে তা আর ভালো হবে না, দানাও দেবে না। শিষ বের হওয়ার সময় স্প্রে করলে এখনো আক্রান্ত হয়নি এমন শিষ বাঁচে। দেরিতে বপন করা খারাপ বছরে স্প্রে করেও অনেক ক্ষতি হতে পারে — এজন্যই ছত্রাকনাশকের চেয়ে বপনের সময় আর জাত বাছাই বেশি জরুরি।",
+  "related_shop_products": [
+    "Tricyclazole 75% WP 100g",
+    "Nativo 75 WG 30g",
+    "BARI Gom 33 certified seed 10kg",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3
+  ],
+  "source": "BARI wheat blast management advisories following the 2016 Bangladesh outbreak; 'Progress and Challenges of Wheat Production in the Era of Climate Change: A Bangladesh Perspective', Springer (doi 10.1007/978-981-13-6883-7_24); DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "The reporting obligation is placed first deliberately — wheat blast is a national biosecurity issue in Bangladesh, not just a field problem. Fungicide label status for WHEAT specifically must be confirmed; tricyclazole's Bangladesh registration is for rice.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Tricyclazole 75% WP 100g",
+      "sku": "PEST-0011",
+      "name_en": "Tricyclazole 75% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nativo 75 WG 30g",
+      "sku": "PEST-0033",
+      "name_en": "Trifloxystrobin + Tebuconazole 25% + 50% WG 30g",
+      "category": "pesticide",
+      "match_score": 1.017,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "BARI Gom 33 certified seed 10kg",
+      "sku": "SEED-0033",
+      "name_en": "Wheat seed — BARI Gom 33 10kg",
+      "category": "seed",
+      "match_score": 0.835,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

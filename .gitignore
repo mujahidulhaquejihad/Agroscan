@@ -23,6 +23,9 @@ archive/
 mobile/node_modules/
 mobile/android/
 mobile/www/
+mobile/*.apk
+models/mobile/
+models/*.onnx
 
 # Logs / editor
 *.log

@@ -1,7 +1,8 @@
 # AgroScan Android (Capacitor)
 
 Package id: `com.mujahidulhaquejihad.agroscan`  
-API host: `https://agroscan.mujahidulhaquejihad.com`
+Hosted app: `https://agroscan.mujahidulhaquejihad.com`  
+No on-device models. Scan, chat, and shop call the live site. A header pill shows connected / offline.
 
 ## Prerequisites
 
@@ -14,13 +15,8 @@ API host: `https://agroscan.mujahidulhaquejihad.com`
 ```bash
 cd mobile
 npm install
-npm run sync:web
-npx cap sync android
-cd android
-# Windows:
-gradlew.bat assembleDebug
-# Linux/macOS:
-./gradlew assembleDebug
+npx cap add android
+npm run build:apk
 ```
 
 APK output:
@@ -30,13 +26,7 @@ APK output:
 Install on a phone:
 
 ```bash
-adb install -r app/build/outputs/apk/debug/app-debug.apk
-```
-
-Or open in Android Studio:
-
-```bash
-npx cap open android
+adb install -r android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
 ## After changing the web UI
@@ -46,10 +36,3 @@ npm run cap:sync
 ```
 
 Then rebuild the APK.
-
-## Play Store later
-
-1. Create a release keystore (keep it offline / secret).
-2. Uncomment `signingConfigs` in `android/app/build.gradle`.
-3. Build an AAB: `./gradlew bundleRelease`
-4. Upload to Play Console with privacy policy URL and screenshots.

@@ -1,0 +1,159 @@
+{
+  "class_name": "Pepper,_bell___healthy",
+  "kb_key": "healthy_pepper",
+  "crop_en": "Bell pepper / Capsicum",
+  "crop_bn": "ক্যাপসিকাম / মিষ্টি মরিচ",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "bangladesh_relevance": "grown_commercially_small_scale",
+  "bangladesh_note_en": "Bell pepper is grown commercially on a small scale in Bangladesh, mostly under protected cultivation for hotels and supermarkets.",
+  "bangladesh_note_bn": "বাংলাদেশে ক্যাপসিকাম অল্প পরিসরে বাণিজ্যিকভাবে হয়, বেশিরভাগই হোটেল ও সুপারশপের জন্য ঘেরা চাষে।",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Keep it that way with drip irrigation, morning ventilation and weekly checks of the leaf undersides.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। ড্রিপ সেচ, সকালে বাতাস চলাচল আর সপ্তাহে একবার পাতার নিচের পিঠ দেখে গাছ এমনই রাখুন।",
+  "symptoms_en": [
+    "Even green leaves, no spots, curling or mould",
+    "No whiteflies, thrips or mites on the leaf undersides",
+    "Steady growth and good fruit set"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ, কোঁকড়ানো বা ছাতা নেই",
+    "পাতার নিচে সাদা মাছি, থ্রিপস বা মাকড় নেই",
+    "গাছ ভালোভাবে বাড়ছে ও ফল ধরছে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray a healthy crop. Under protected cultivation, routine spraying kills the beneficial insects and causes mite and thrips outbreaks."
+    },
+    {
+      "step": 2,
+      "title": "Ventilate every morning",
+      "detail": "Open the polytunnel sides and ends. Most capsicum disease problems in Bangladesh start with trapped humidity."
+    },
+    {
+      "step": 3,
+      "title": "Check leaf undersides weekly",
+      "detail": "Thrips and mites are the main capsicum problems here and both start underneath."
+    },
+    {
+      "step": 4,
+      "title": "Use drip irrigation only",
+      "detail": "Water at the base in the morning."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "সুস্থ ফসলে স্প্রে করবেন না। ঘেরা চাষে নিয়মিত স্প্রেতে উপকারী পোকা মরে যায় আর মাকড়-থ্রিপসের আক্রমণ বাড়ে।"
+    },
+    {
+      "step": 2,
+      "title": "প্রতিদিন সকালে বাতাস চলাচল করান",
+      "detail": "পলিটানেলের পাশ ও দুই মাথা খুলে দিন। বাংলাদেশে ক্যাপসিকামের বেশিরভাগ রোগ শুরু হয় আটকে থাকা আর্দ্রতা থেকে।"
+    },
+    {
+      "step": 3,
+      "title": "সপ্তাহে একবার পাতার নিচ দেখুন",
+      "detail": "এখানে ক্যাপসিকামের প্রধান সমস্যা থ্রিপস ও মাকড়, দুটোই নিচ থেকে শুরু হয়।"
+    },
+    {
+      "step": 4,
+      "title": "শুধু ড্রিপ সেচ দিন",
+      "detail": "সকালে গাছের গোড়ায় পানি দিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Insect-proof netting on tunnel openings",
+    "Drip irrigation and mulch",
+    "Blue sticky traps for thrips monitoring",
+    "Sanitation between crops"
+  ],
+  "cultural_control_bn": [
+    "টানেলের মুখে পোকা-প্রতিরোধী নেট",
+    "ড্রিপ সেচ ও মালচ",
+    "থ্রিপস নজরদারির জন্য নীল আঠালো ফাঁদ",
+    "দুই ফসলের মাঝে পরিষ্কার-পরিচ্ছন্নতা"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Blue and yellow sticky traps",
+    "Trichoderma in the growing medium",
+    "Well-decomposed compost"
+  ],
+  "organic_alternatives_bn": [
+    "নীল ও হলুদ আঠালো ফাঁদ",
+    "চাষের মাটিতে ট্রাইকোডার্মা",
+    "ভালোভাবে পচা কম্পোস্ট"
+  ],
+  "fertilizer_advice_en": "Use fertigation in small frequent doses under protected cultivation. Keep calcium adequate to prevent blossom-end rot, which is common in capsicum.",
+  "fertilizer_advice_bn": "ঘেরা চাষে সেচের সাথে অল্প অল্প করে বারবার সার দিন। ক্যালসিয়াম পর্যাপ্ত রাখুন যাতে ফলের গোড়া পচা না হয় — ক্যাপসিকামে এটি সাধারণ সমস্যা।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, labelled and away from food, water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তালাবদ্ধ, লেবেলসহ এবং খাবার, পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves start spotting, curling or silvering.",
+  "when_to_call_helpline_bn": "পাতায় দাগ পড়লে, কুঁকড়ে গেলে বা রুপালি হয়ে গেলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With ventilation, drip irrigation and weekly scouting, protected capsicum normally stays clean through the picking period.",
+  "expected_outcome_bn": "বাতাস চলাচল, ড্রিপ সেচ আর সপ্তাহে একবার জমি দেখলে ঘেরা চাষের ক্যাপসিকাম সাধারণত ফল তোলার পুরো সময় পরিষ্কার থাকে।",
+  "related_shop_products": [
+    "Drip irrigation kit 1 decimal",
+    "Blue sticky trap (pack of 10)",
+    "Insect-proof net 50 mesh (per metre)",
+    "Calcium nitrate 1kg"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018; BARI protected vegetable cultivation guidance",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Healthy class — zero pesticide recommendations.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Blue sticky trap (pack of 10)",
+      "sku": "EQ-0070",
+      "name_en": "Blue sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Insect-proof net 50 mesh (per metre)",
+      "sku": "EQ-0074",
+      "name_en": "Insect-proof net 50 mesh (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Calcium nitrate 1kg",
+      "sku": "FERT-0023",
+      "name_en": "Calcium nitrate 1kg",
+      "category": "fertilizer",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

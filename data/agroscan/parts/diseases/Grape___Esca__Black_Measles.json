@@ -1,0 +1,92 @@
+{
+  "class_name": "Grape___Esca_(Black_Measles)",
+  "kb_key": "grape_esca",
+  "crop_en": "Grape",
+  "crop_bn": "আঙুর",
+  "disease_en": "Esca (black measles)",
+  "disease_bn": "আঙুরের এসকা (ব্ল্যাক মিজলস) রোগ",
+  "pathogen": "Phaeomoniella chlamydospora and associated fungi",
+  "severity": "medium",
+  "bangladesh_relevance": "rare_experimental",
+  "bangladesh_note_en": "Grape is not a commercial crop in Bangladesh. A prediction of this class from a Bangladeshi field photo is most likely a misclassification.",
+  "bangladesh_note_bn": "বাংলাদেশে আঙুর বাণিজ্যিক ফসল নয়। বাংলাদেশের ছবিতে এই ফলাফল এলে তা সম্ভবত ভুল শনাক্তকরণ।",
+  "summary_en": "A trunk disease of grapevines, not relevant to Bangladeshi farming. Included for model completeness. Treat a Bangladeshi prediction as a probable misclassification.",
+  "summary_bn": "আঙুর গাছের কাণ্ডের রোগ, বাংলাদেশের কৃষিতে প্রযোজ্য নয়। শুধু মডেলের পূর্ণতার জন্য রাখা। বাংলাদেশে এই ফলাফল এলে ভুল শনাক্তকরণ ধরে নিন।",
+  "symptoms_en": [
+    "Tiger-stripe pattern of yellow or red between the veins on leaves",
+    "Small dark spots on berries",
+    "Sudden collapse of whole vines in hot weather"
+  ],
+  "symptoms_bn": [
+    "পাতার শিরার ফাঁকে হলুদ বা লাল বাঘের ডোরার মতো নকশা",
+    "আঙুরে ছোট গাঢ় দাগ",
+    "গরমে হঠাৎ পুরো লতা ঢলে পড়া"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check whether this is really grape",
+      "detail": "Retake the photo of a clearer leaf and rescan."
+    },
+    {
+      "step": 2,
+      "title": "Call 16123 if unsure",
+      "detail": "Take a sample leaf to your Upazila Agriculture Office."
+    },
+    {
+      "step": 3,
+      "title": "Call 16123 if you are still unsure",
+      "detail": "Take a sample leaf to the Upazila Agriculture Office rather than spraying on a guess."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "এটা সত্যিই আঙুর কিনা দেখুন",
+      "detail": "পরিষ্কার একটা পাতার ছবি তুলে আবার স্ক্যান করুন।"
+    },
+    {
+      "step": 2,
+      "title": "নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন",
+      "detail": "একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    },
+    {
+      "step": 3,
+      "title": "এখনো নিশ্চিত না হলে ১৬১২৩",
+      "detail": "অনুমানে স্প্রে না করে একটি পাতা নিয়ে উপজেলা কৃষি অফিসে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "cultural_control_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Not applicable in Bangladesh"
+  ],
+  "organic_alternatives_bn": [
+    "বাংলাদেশে প্রযোজ্য নয়"
+  ],
+  "fertilizer_advice_en": "Not applicable. Identify the actual crop first.",
+  "fertilizer_advice_bn": "প্রযোজ্য নয়। আগে আসল ফসলটি চিনে নিন।",
+  "safety_warning_en": "No pesticide is recommended for this class in Bangladesh.",
+  "safety_warning_bn": "বাংলাদেশে এই শ্রেণির জন্য কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "No treatment recommended. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার পরামর্শ নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 to identify your crop.",
+  "when_to_call_helpline_bn": "আপনার ফসল চিনতে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Not applicable — retake the photo.",
+  "expected_outcome_bn": "প্রযোজ্য নয় — আবার ছবি তুলুন।",
+  "related_shop_products": [],
+  "seasons_relevant": [],
+  "months_relevant": [],
+  "source": "BBS Yearbook of Agricultural Statistics 2024; PlantVillage class list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "MISCLASSIFICATION GUARD CLASS.",
+  "related_shop_skus": [],
+  "is_curable_with_chemicals": true
+}

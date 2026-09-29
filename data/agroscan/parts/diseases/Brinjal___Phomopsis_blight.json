@@ -1,0 +1,260 @@
+{
+  "class_name": "Brinjal___Phomopsis_blight",
+  "kb_key": "phomopsis_blight",
+  "crop_en": "Brinjal (eggplant)",
+  "crop_bn": "বেগুন",
+  "disease_en": "Phomopsis blight and fruit rot",
+  "disease_bn": "বেগুনের ফোমোপসিস ধ্বসা ও ফল পচা রোগ",
+  "pathogen": "Phomopsis vexans",
+  "severity": "medium",
+  "summary_en": "Grey-brown spots with pale centres on leaves and stems, and sunken soft rotten patches on the fruit that make it unsellable. It is seed-borne, so treated seed and clean nursery beds prevent most of it.",
+  "summary_bn": "পাতা ও কাণ্ডে ধূসর-বাদামি দাগ, মাঝখানে ফ্যাকাশে; ফলে বসে যাওয়া নরম পচা দাগ পড়ে, তাতে ফল আর বিক্রির যোগ্য থাকে না। রোগটি বীজবাহিত, তাই বীজ শোধন ও পরিষ্কার বীজতলাতেই বেশিরভাগ ঠেকানো যায়।",
+  "symptoms_en": [
+    "Small circular to oval grey-brown spots on leaves with pale grey centres and dark margins",
+    "Tiny black dots (pycnidia) in the centre of older spots",
+    "Dark sunken cankers on the stem near the base, sometimes girdling and killing the plant",
+    "On fruit: pale sunken soft patches that spread and turn the fruit into a soft rotten mass, often with black dots on the surface",
+    "Seedlings damp off or develop stem cankers in the nursery",
+    "Worse in warm humid weather and where seed was saved from an infected crop"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট গোল বা ডিম্বাকার ধূসর-বাদামি দাগ, মাঝখানে ফ্যাকাশে ধূসর, কিনারা গাঢ়",
+    "পুরনো দাগের মাঝখানে খুব ছোট কালো ফোঁটা",
+    "গোড়ার কাছে কাণ্ডে বসে যাওয়া গাঢ় ক্ষত, কখনো কাণ্ড ঘিরে ধরে গাছ মেরে ফেলে",
+    "ফলে: ফ্যাকাশে বসে যাওয়া নরম দাগ ছড়িয়ে পুরো ফল নরম পচা হয়ে যায়, উপরে প্রায়ই কালো ফোঁটা দেখা যায়",
+    "বীজতলায় চারা ঢলে পড়ে বা কাণ্ডে ক্ষত হয়",
+    "গরম স্যাঁতসেঁতে আবহাওয়ায় এবং আক্রান্ত ফসল থেকে বীজ রাখলে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Pick off and remove all rotting fruit",
+      "detail": "Every rotting fruit is releasing spores onto the rest of the crop. Bag them and take them out of the field — do not drop them between the rows."
+    },
+    {
+      "step": 2,
+      "title": "Cut out stem cankers",
+      "detail": "Where a canker is on a branch, cut the branch below it and remove it. If the canker girdles the main stem near the base, remove the whole plant."
+    },
+    {
+      "step": 3,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb at 2-2.5 g/L or carbendazim at 1 g/L, every 10-12 days, covering fruit and stems as well as leaves."
+    },
+    {
+      "step": 4,
+      "title": "Stop overhead watering",
+      "detail": "Switch to furrow or drip. Wet fruit surfaces are what let the fruit rot phase start."
+    },
+    {
+      "step": 5,
+      "title": "Do not save seed from this crop",
+      "detail": "The fungus is carried inside the seed. Saving seed guarantees the problem returns next year."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "পচা ফল সব তুলে সরিয়ে ফেলুন",
+      "detail": "প্রতিটি পচা ফল থেকে বাকি ফসলে জীবাণু ছড়াচ্ছে। ব্যাগে ভরে জমির বাইরে নিয়ে যান — সারির মাঝে ফেলবেন না।"
+    },
+    {
+      "step": 2,
+      "title": "কাণ্ডের ক্ষত কেটে ফেলুন",
+      "detail": "ডালে ক্ষত থাকলে তার নিচ থেকে ডাল কেটে সরিয়ে ফেলুন। গোড়ার কাছে মূল কাণ্ড ঘিরে ক্ষত হলে পুরো গাছটাই তুলে ফেলুন।"
+    },
+    {
+      "step": 3,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "১০-১২ দিন পর পর প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব বা ১ গ্রাম কার্বেন্ডাজিম দিন, পাতার সাথে ফল ও কাণ্ডেও লাগান।"
+    },
+    {
+      "step": 4,
+      "title": "উপর দিয়ে পানি দেওয়া বন্ধ করুন",
+      "detail": "নালা বা ড্রিপ সেচে যান। ফলের গা ভেজা থাকলেই ফল পচা শুরু হয়।"
+    },
+    {
+      "step": 5,
+      "title": "এই ফসল থেকে বীজ রাখবেন না",
+      "detail": "ছত্রাক বীজের ভেতরেই থাকে। বীজ রাখলে আগামী বছরও একই সমস্যা নিশ্চিত।"
+    }
+  ],
+  "cultural_control_en": [
+    "Treat seed before sowing — carbendazim or Trichoderma at 4-5 g/kg seed, or hot water at 50°C for 30 minutes",
+    "Use certified seed from BADC or a licensed supplier",
+    "Raise seedlings in a clean, well-drained nursery bed; solarise the bed before sowing",
+    "Rotate away from brinjal for 2 years",
+    "Remove and destroy all crop residue after harvest",
+    "Stake plants so fruit does not touch the soil",
+    "Pick fruit regularly — over-mature fruit left on the plant is the most common starting point"
+  ],
+  "cultural_control_bn": [
+    "বপনের আগে বীজ শোধন করুন — প্রতি কেজি বীজে ৪-৫ গ্রাম কার্বেন্ডাজিম বা ট্রাইকোডার্মা, অথবা ৫০ ডিগ্রি গরম পানিতে ৩০ মিনিট",
+    "বিএডিসি বা লাইসেন্সধারী সরবরাহকারীর সার্টিফাইড বীজ নিন",
+    "পরিষ্কার, ভালো নিকাশযুক্ত বীজতলায় চারা তৈরি করুন; বপনের আগে বীজতলা পলিথিন দিয়ে ঢেকে রোদে শোধন করুন",
+    "২ বছর বেগুন বাদ দিয়ে অন্য ফসল করুন",
+    "ফসল শেষে সব অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "গাছে খুঁটি দিন যাতে ফল মাটি না ছোঁয়",
+    "নিয়মিত ফল তুলুন — গাছে বেশি পেকে থাকা ফল থেকেই সাধারণত রোগ শুরু হয়"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering leaves, stems and fruit surfaces.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতা, কাণ্ড ও ফলের গায়ে দিন।",
+      "timing_en": "Preventive, every 10-12 days from first fruit set in humid weather.",
+      "timing_bn": "প্রতিরোধমূলক, স্যাঁতসেঁতে আবহাওয়ায় প্রথম ফল ধরার পর থেকে ১০-১২ দিন পর পর।",
+      "interval_days": 10,
+      "max_applications_per_season": 5,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick brinjal for 7 days after the last spray. Brinjal is picked continuously, so plan sprays around the picking cycle.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন বেগুন তুলবেন না। বেগুন বারবার তোলা হয়, তাই তোলার সময়সূচি দেখে স্প্রের পরিকল্পনা করুন।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and brinjal label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Carbendazim 50% WP",
+      "product_name_bn": "কার্বেন্ডাজিম ৫০% ডব্লিউপি",
+      "active_ingredient": "Carbendazim",
+      "formulation": "WP",
+      "dose_en": "1 g per litre of water for foliar spray; 4-5 g per kg of seed for seed treatment",
+      "dose_bn": "পাতায় স্প্রের জন্য প্রতি লিটার পানিতে ১ গ্রাম; বীজ শোধনের জন্য প্রতি কেজি বীজে ৪-৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Seed treatment is the highest-value use here. For foliar use, spray leaves, stems and fruit.",
+      "application_method_bn": "এখানে বীজ শোধনেই সবচেয়ে বেশি কাজ হয়। পাতায় দিলে পাতা, কাণ্ড ও ফলে স্প্রে করুন।",
+      "timing_en": "Seed treatment before sowing; foliar spray at first symptoms, maximum twice, alternated with mancozeb.",
+      "timing_bn": "বপনের আগে বীজ শোধন; লক্ষণ দেখা মাত্র পাতায় স্প্রে, সর্বোচ্চ দুইবার, ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 10,
+      "pre_harvest_interval_note_en": "Do not pick brinjal for 10 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১০ দিন বেগুন তুলবেন না।",
+      "brands_available_bd": [
+        "Bavistin DF",
+        "Knowin 50 WP",
+        "Autostin 50 WDG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Carbendazim is registered in Bangladesh — Bavistin DF, AP-176, BASF Bangladesh Ltd and Knowin 50 WP, AP-241, McDonald Bangladesh (Pvt) Ltd appear in the PPW list (registered uses recorded there for rice sheath blight and sugarcane). Confirm the brinjal label claim.",
+      "treatment_type": "both",
+      "caution_en": "Carbendazim is listed among highly hazardous pesticides in wide use in Bangladesh. Prefer seed treatment (very small quantity, high benefit) over repeated foliar spraying on a crop that is picked every few days.",
+      "caution_bn": "কার্বেন্ডাজিম বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে। যে ফসল কয়েক দিন পর পর তোলা হয় তাতে বারবার পাতায় স্প্রে না করে বীজ শোধনকেই প্রাধান্য দিন (খুব অল্প ওষুধে অনেক বেশি উপকার)।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-176",
+        "AP-241"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Hot water seed treatment at 50°C for 30 minutes — removes the seed-borne source without any chemical",
+    "Trichoderma harzianum seed treatment and nursery bed application",
+    "Nursery bed solarisation with clear polythene for 3-4 weeks in the hot season",
+    "Prompt removal of rotting fruit — the cheapest and most effective in-season action",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant"
+  ],
+  "organic_alternatives_bn": [
+    "৫০ ডিগ্রি গরম পানিতে ৩০ মিনিট বীজ শোধন — কোনো ওষুধ ছাড়াই বীজের ভেতরের জীবাণু দূর হয়",
+    "ট্রাইকোডার্মা হারজিয়ানাম দিয়ে বীজ শোধন ও বীজতলায় প্রয়োগ",
+    "গরমের সময় ৩-৪ সপ্তাহ স্বচ্ছ পলিথিন দিয়ে ঢেকে বীজতলা শোধন",
+    "পচা ফল সাথে সাথে তুলে ফেলা — মৌসুমের মধ্যে সবচেয়ে সস্তা ও কার্যকর কাজ",
+    "প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for brinjal. Keep potassium adequate to firm up fruit skin, which resists rot better. Avoid excess nitrogen, which produces soft fruit and dense humid canopies.",
+  "fertilizer_advice_bn": "বেগুনের জন্য এফআরজি-২০১৮ মেনে চলুন। পটাশ পর্যাপ্ত রাখুন, এতে ফলের খোসা শক্ত হয় ও পচা কম ধরে। বেশি ইউরিয়া দেবেন না, এতে ফল নরম হয় আর গাছ ঘন ও স্যাঁতসেঁতে থাকে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Brinjal is picked every 3-5 days — this makes PHI compliance genuinely difficult, so favour seed treatment and sanitation over repeated spraying. Never pick within the PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। বেগুন ৩-৫ দিন পর পর তোলা হয় — তাই পিএইচআই মানা সত্যিই কঠিন, বারবার স্প্রের বদলে বীজ শোধন ও পরিচ্ছন্নতাকেই প্রাধান্য দিন। পিএইচআই-এর মধ্যে কখনো ফল তুলবেন না। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products and respect the PHI. Brinjal has a poor reputation for pesticide residues in Bangladesh precisely because of frequent picking combined with frequent spraying — following the PHI protects both consumers and your market reputation. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন ও পিএইচআই মানুন। ঘন ঘন ফল তোলা আর ঘন ঘন স্প্রে — এই কারণেই বাংলাদেশে বেগুনে ওষুধের অবশিষ্টাংশ নিয়ে দুর্নাম আছে। পিএইচআই মানলে ক্রেতাও নিরাপদ থাকে, আপনার বাজারের সুনামও থাকে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if more than 10% of fruit is rotting, if plants are dying from stem cankers, or if seedlings are collapsing in the nursery.",
+  "when_to_call_helpline_bn": "১০% এর বেশি ফল পচলে, কাণ্ডের ক্ষতে গাছ মরতে থাকলে, অথবা বীজতলায় চারা ঢলে পড়লে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Removing rotting fruit plus a protectant programme usually cuts new fruit rot sharply within 2 weeks. The lasting fix is treated seed and a clean nursery next season.",
+  "expected_outcome_bn": "পচা ফল তুলে ফেলে প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহে নতুন করে ফল পচা অনেক কমে যায়। স্থায়ী সমাধান হলো পরের মৌসুমে শোধন করা বীজ ও পরিষ্কার বীজতলা।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Carbendazim 50% WP 100g",
+    "Trichoderma harzianum bio-fungicide 1kg",
+    "Certified brinjal seed 10g",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Bavistin DF AP-176 BASF Bangladesh Ltd; Knowin 50 WP AP-241 McDonald Bangladesh); 'Eggplant Integrated Pest Management: An Ecological Guide', FAO; Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "The PHI-vs-picking-frequency conflict is called out explicitly because brinjal is the crop most associated with residue problems in Bangladesh. Seed treatment is deliberately positioned as the primary chemical use.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Carbendazim 50% WP 100g",
+      "sku": "PEST-0014",
+      "name_en": "Carbendazim 50% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Trichoderma harzianum bio-fungicide 1kg",
+      "sku": "PEST-0092",
+      "name_en": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+      "category": "pesticide",
+      "match_score": 1.7,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Certified brinjal seed 10g",
+      "sku": "SEED-0026",
+      "name_en": "Hybrid brinjal seed 10g",
+      "category": "seed",
+      "match_score": 0.873,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

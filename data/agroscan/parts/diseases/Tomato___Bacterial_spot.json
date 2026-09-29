@@ -1,0 +1,235 @@
+{
+  "class_name": "Tomato___Bacterial_spot",
+  "kb_key": "bacterial_spot",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Bacterial spot",
+  "disease_bn": "টমেটোর ব্যাকটেরিয়াজনিত দাগ রোগ",
+  "pathogen": "Xanthomonas spp. (X. euvesicatoria, X. perforans and related)",
+  "severity": "medium",
+  "summary_en": "This is a bacterial disease, so fungicides do not cure it. Small dark greasy spots appear on leaves and raised scabby spots on the fruit, which makes the fruit unsellable. It spreads in warm wet weather and through infected seed.",
+  "summary_bn": "এটি ব্যাকটেরিয়ার রোগ, তাই ছত্রাকনাশকে সারে না। পাতায় ছোট ছোট গাঢ় তেলতেলে দাগ আর ফলের গায়ে উঁচু খসখসে দাগ পড়ে, ফলে ফল আর বিক্রির যোগ্য থাকে না। গরম ভেজা আবহাওয়ায় এবং আক্রান্ত বীজের মাধ্যমে ছড়ায়।",
+  "symptoms_en": [
+    "Small dark brown to black spots on leaves, often with a yellow halo, looking greasy or water-soaked when fresh",
+    "Spots may drop out leaving a shot-hole appearance",
+    "Raised, rough, scabby spots on the fruit — this is what destroys the market value",
+    "Elongated dark lesions on stems and leaf stalks",
+    "Leaves yellow and drop, exposing fruit to sunscald",
+    "Worst in warm (24-30°C) wet weather, after heavy rain or overhead irrigation"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট গাঢ় বাদামি বা কালো দাগ, প্রায়ই চারপাশে হলুদ বলয়, নতুন অবস্থায় তেলতেলে বা ভেজা দেখায়",
+    "দাগের মাঝখান খসে গিয়ে ছিদ্র হয়ে যেতে পারে",
+    "ফলের গায়ে উঁচু, খসখসে, আঁচিলের মতো দাগ — এতেই ফলের দাম শেষ হয়ে যায়",
+    "কাণ্ড ও পাতার বোঁটায় লম্বাটে গাঢ় দাগ",
+    "পাতা হলুদ হয়ে ঝরে যায়, ফলে রোদ লেগে ফল পুড়ে যায়",
+    "গরম (২৪-৩০ ডিগ্রি) ভেজা আবহাওয়ায়, ভারী বৃষ্টি বা উপর দিয়ে সেচের পর সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do not spray an ordinary fungicide expecting a cure",
+      "detail": "Bacteria do not respond to fungicides. Only copper-based products help, and they only slow the spread — they do not cure infected tissue."
+    },
+    {
+      "step": 2,
+      "title": "Stop overhead irrigation today",
+      "detail": "The bacteria spread in splashing water. Switch to drip or furrow irrigation immediately. This is the most effective single action."
+    },
+    {
+      "step": 3,
+      "title": "Stay out of wet plants",
+      "detail": "Do not prune, tie or pick when plants are wet. Wet hands and clothes spread bacterial spot faster than rain does."
+    },
+    {
+      "step": 4,
+      "title": "Remove badly infected plants",
+      "detail": "Pull out and bag heavily infected plants and all spotted fruit. Bury deep or burn."
+    },
+    {
+      "step": 5,
+      "title": "Apply copper",
+      "detail": "Copper oxychloride or copper hydroxide at 2-3 g/L every 7-10 days as a protectant on the healthy tissue."
+    },
+    {
+      "step": 6,
+      "title": "Do not save seed from this crop",
+      "detail": "The bacteria are seed-borne. Saving seed from an infected field guarantees the same problem next year."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "সাধারণ ছত্রাকনাশক দিয়ে সারবে না",
+      "detail": "ব্যাকটেরিয়ায় ছত্রাকনাশকে কাজ হয় না। শুধু কপারভিত্তিক ওষুধ কিছুটা কাজ করে, তাও শুধু ছড়ানো ধীর করে — আক্রান্ত অংশ সারায় না।"
+    },
+    {
+      "step": 2,
+      "title": "উপর দিয়ে সেচ আজই বন্ধ করুন",
+      "detail": "পানির ছিটার সাথে জীবাণু ছড়ায়। এখনই ড্রিপ বা নালা সেচে চলে যান। একক কাজ হিসেবে এটাই সবচেয়ে কার্যকর।"
+    },
+    {
+      "step": 3,
+      "title": "ভেজা গাছে হাত দেবেন না",
+      "detail": "গাছ ভেজা থাকলে ডাল ছাঁটা, বাঁধা বা ফল তোলা করবেন না। ভেজা হাত ও কাপড় বৃষ্টির চেয়েও দ্রুত এই রোগ ছড়ায়।"
+    },
+    {
+      "step": 4,
+      "title": "বেশি আক্রান্ত গাছ তুলে ফেলুন",
+      "detail": "খারাপভাবে আক্রান্ত গাছ ও দাগওয়ালা ফল ব্যাগে ভরে তুলে নিন। গভীরে পুঁতে ফেলুন বা পুড়িয়ে দিন।"
+    },
+    {
+      "step": 5,
+      "title": "কপার দিন",
+      "detail": "৭-১০ দিন পর পর প্রতি লিটারে ২-৩ গ্রাম কপার অক্সিক্লোরাইড বা কপার হাইড্রক্সাইড দিয়ে সুস্থ অংশ রক্ষা করুন।"
+    },
+    {
+      "step": 6,
+      "title": "এই ফসল থেকে বীজ রাখবেন না",
+      "detail": "জীবাণু বীজের সাথে যায়। আক্রান্ত জমির বীজ রাখলে আগামী বছরও একই সমস্যা নিশ্চিত।"
+    }
+  ],
+  "cultural_control_en": [
+    "Buy certified, treated seed; never save seed from an infected crop",
+    "Hot water seed treatment at 50°C for 25 minutes kills seed-borne Xanthomonas",
+    "Rotate away from tomato, chilli and capsicum for 2 years",
+    "Use drip or furrow irrigation only",
+    "Stake plants and mulch so fruit and leaves stay off the soil",
+    "Disinfect stakes, ties and tools between seasons",
+    "Remove all crop residue and solanaceous weeds"
+  ],
+  "cultural_control_bn": [
+    "সার্টিফাইড, শোধন করা বীজ কিনুন; আক্রান্ত ফসল থেকে কখনো বীজ রাখবেন না",
+    "৫০ ডিগ্রি সেলসিয়াস গরম পানিতে ২৫ মিনিট বীজ শোধন করলে বীজবাহিত জীবাণু মরে যায়",
+    "২ বছর টমেটো, মরিচ ও ক্যাপসিকাম বাদ দিয়ে অন্য ফসল করুন",
+    "শুধু ড্রিপ বা নালা সেচ দিন",
+    "খুঁটি ও মালচ দিন যাতে ফল ও পাতা মাটি না ছোঁয়",
+    "দুই মৌসুমের মাঝে খুঁটি, বাঁধার দড়ি ও যন্ত্রপাতি জীবাণুমুক্ত করুন",
+    "সব ফসলের অবশিষ্টাংশ ও টমেটো গোত্রের আগাছা সরিয়ে ফেলুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Copper oxychloride 50% WP",
+      "product_name_bn": "কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+      "active_ingredient": "Copper oxychloride",
+      "formulation": "WP",
+      "dose_en": "3 g per litre of water (about 30 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ৩ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৩০ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering leaves, stems and fruit. Protectant only — the aim is to keep healthy tissue healthy.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতা, কাণ্ড ও ফলে দিন। শুধু প্রতিরোধক — লক্ষ্য হলো সুস্থ অংশকে সুস্থ রাখা।",
+      "timing_en": "Every 7-10 days while warm wet weather continues.",
+      "timing_bn": "গরম ভেজা আবহাওয়া চলতে থাকলে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 5,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray. Copper accumulates in soil — avoid using it every season on the same land.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না। কপার মাটিতে জমে — একই জমিতে প্রতি মৌসুমে ব্যবহার এড়িয়ে চলুন।",
+      "brands_available_bd": [
+        "Cupravit 50 WP",
+        "Champion 77 WP",
+        "Blue Copper"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Champion 77 WP, AP-354, Petrochem (Bangladesh) Limited, in the DAE PPW registered pesticide list at 2 g/L for tomato. Active ingredient reported inconsistently (copper hydroxide vs copper oxychloride) across extracts — confirm from the label.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-354"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Hot water seed treatment (50°C for 25 minutes) — removes the main source of the problem, free of cost",
+    "Copper products are accepted in most organic systems",
+    "Drip irrigation and mulch",
+    "Strict field hygiene — never work in wet plants"
+  ],
+  "organic_alternatives_bn": [
+    "গরম পানিতে বীজ শোধন (৫০ ডিগ্রিতে ২৫ মিনিট) — বিনা খরচে রোগের মূল উৎসই সরিয়ে দেয়",
+    "বেশিরভাগ জৈব চাষ পদ্ধতিতে কপার ব্যবহার করা যায়",
+    "ড্রিপ সেচ ও মালচ",
+    "কঠোর পরিচ্ছন্নতা — ভেজা গাছে কখনো কাজ করবেন না"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen, which produces soft tissue that infects easily. Maintain calcium and potassium at FRG rates. Do not apply foliar fertiliser sprays while the disease is active — you would be spreading bacteria in the spray water.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না, এতে নরম পাতা হয় আর সহজেই রোগ ধরে। এফআরজি মাত্রায় ক্যালসিয়াম ও পটাশ রাখুন। রোগ চলাকালীন পাতায় সার স্প্রে করবেন না — স্প্রের পানির সাথে জীবাণুই ছড়াবেন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Copper is toxic to fish — never rinse the sprayer into a pond, canal or ditch. Respect the 7-day PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। কপার মাছের জন্য বিষাক্ত — পুকুর, খাল বা নালায় স্প্রেয়ার ধোবেন না। ৭ দিনের পিএইচআই মেনে চলুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Do not use agricultural antibiotics — antibiotic use on crops drives antimicrobial resistance and is not a DAE recommendation. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। ফসলে অ্যান্টিবায়োটিক ব্যবহার করবেন না — এতে জীবাণু ওষুধ-প্রতিরোধী হয়ে ওঠে এবং এটি ডিএই-র সুপারিশ নয়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if fruit is developing scabby spots, if more than 20% of plants are affected, or if you are not sure whether this is bacterial spot or early blight — the management differs.",
+  "when_to_call_helpline_bn": "ফলে খসখসে দাগ পড়তে শুরু করলে, ২০% এর বেশি গাছ আক্রান্ত হলে, অথবা এটা ব্যাকটেরিয়ার দাগ না আগাম ধ্বসা তা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন — চিকিৎসা আলাদা।",
+  "expected_outcome_en": "Stopping overhead irrigation plus copper sprays usually halts new spotting within 10-14 days. Fruit already scabbed will not recover and should be sorted out at grading. Expect to lose the affected fruit but save the rest of the picking.",
+  "expected_outcome_bn": "উপর দিয়ে সেচ বন্ধ করে কপার স্প্রে দিলে সাধারণত ১০-১৪ দিনে নতুন দাগ পড়া বন্ধ হয়। যে ফলে দাগ পড়ে গেছে তা আর ভালো হবে না, বাছাইয়ের সময় আলাদা করে ফেলুন। আক্রান্ত ফল যাবে, বাকি ফল বাঁচবে।",
+  "related_shop_products": [
+    "Copper oxychloride 50% WP 500g",
+    "Champion 77 WP 500g",
+    "Drip irrigation kit 1 decimal",
+    "Straw mulch",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    11
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Champion 77 WP, AP-354, Petrochem Bangladesh Ltd); 'Tomato pests and diseases in Bangladesh and India: farmers' management and potential economic gains', International Journal of Pest Management (doi 10.1080/09670874.2023.2252760)",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Bacterial — the app must not route this class to a fungicide-only treatment path. Shares kb_key 'bacterial_spot' with Pepper___Bacterial_spot; management is essentially identical.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Champion 77 WP 500g",
+      "sku": "PEST-0039",
+      "name_en": "Copper hydroxide 77% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.084,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

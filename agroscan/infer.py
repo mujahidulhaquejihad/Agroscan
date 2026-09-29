@@ -20,8 +20,51 @@ from . import config
 from .data import infer_transform
 from .image_io import load_rgb_image
 from .knowledge import advice_for
-from .label_map import classes_for_crop, crop_from_class
+from .label_map import classes_for_crop, crop_from_class, is_other_crop
 from .models import load_checkpoint
+
+
+def _ensure_other_option(top3: List[dict]) -> List[dict]:
+    """Always offer Other so an out-of-set plant is not forced into a trained crop."""
+    out = [dict(x) for x in (top3 or [])]
+    if not any(is_other_crop(x.get("crop")) for x in out):
+        out.append({"crop": config.CROP_OTHER_LABEL, "confidence": 0.0})
+    return out
+
+
+def _decorate_crop(stage: dict) -> dict:
+    """Flag low-confidence L2 as Other and append the Other picker option."""
+    stage = dict(stage or {})
+    top3 = stage.get("top3") or []
+    if not top3 and stage.get("crop"):
+        top3 = [{"crop": stage.get("crop"), "confidence": stage.get("confidence") or 0.0}]
+    stage["top3"] = _ensure_other_option(top3)
+    conf = float(stage.get("confidence") or 0.0)
+    if (
+        stage.get("available")
+        and not is_other_crop(stage.get("crop"))
+        and conf < config.CROP_OTHER_THRESHOLD
+    ):
+        stage["guess"] = stage.get("crop")
+        stage["crop"] = config.CROP_OTHER_LABEL
+        stage["is_other"] = True
+    else:
+        stage["is_other"] = is_other_crop(stage.get("crop"))
+    return stage
+
+
+def _other_crop_message(lang: str) -> str:
+    if (lang or "").startswith("en"):
+        return (
+            "This plant is not in AgroScan's trained crops, so disease "
+            "diagnosis was skipped. Pick a listed crop if this is a known plant, "
+            "or use Other if it is not."
+        )
+    return (
+        "এই গাছ AgroScan-এর প্রশিক্ষিত ফসলের তালিকায় নেই, তাই রোগ "
+        "বিশ্লেষণ করা হয়নি। তালিকার কোনো ফসল হলে সেটি বেছে নিন, "
+        "না হলে অন্যান্য চাপুন।"
+    )
 
 
 def _pretty(class_name: str) -> Dict[str, str]:
@@ -190,20 +233,22 @@ class InferenceEngine:
             conf, idx = torch.max(p, dim=0)
             crop = self.crop.class_names[int(idx)]
             top = torch.topk(p, k=min(3, p.numel()))
-            return {
-                "available": True,
-                "source": "leaf_type",
-                "model": config.model_display_name(self.crop.arch),
-                "crop": crop,
-                "confidence": round(float(conf), 4),
-                "top3": [
-                    {
-                        "crop": self.crop.class_names[int(i)],
-                        "confidence": round(float(v), 4),
-                    }
-                    for v, i in zip(top.values, top.indices)
-                ],
-            }
+            return _decorate_crop(
+                {
+                    "available": True,
+                    "source": "leaf_type",
+                    "model": config.model_display_name(self.crop.arch),
+                    "crop": crop,
+                    "confidence": round(float(conf), 4),
+                    "top3": [
+                        {
+                            "crop": self.crop.class_names[int(i)],
+                            "confidence": round(float(v), 4),
+                        }
+                        for v, i in zip(top.values, top.indices)
+                    ],
+                }
+            )
 
         if not self.disease:
             return {
@@ -217,21 +262,25 @@ class InferenceEngine:
             mean_p, _, _ = self._disease_prob_stack(img)
         top3 = self._top_crops_from_probs(mean_p)
         best = top3[0] if top3 else {"crop": None, "confidence": 0.0}
-        return {
-            "available": True,
-            "source": "disease_aggregate",
-            "model": "Disease ensemble (plant from class probs)",
-            "crop": best.get("crop"),
-            "confidence": best.get("confidence", 0.0),
-            "top3": top3,
-            "note": (
-                "Dedicated leaf_type.pt not found; plant type estimated "
-                "from disease models."
-            ),
-        }
+        return _decorate_crop(
+            {
+                "available": True,
+                "source": "disease_aggregate",
+                "model": "Disease ensemble (plant from class probs)",
+                "crop": best.get("crop"),
+                "confidence": best.get("confidence", 0.0),
+                "top3": top3,
+                "note": (
+                    "Dedicated leaf_type.pt not found; plant type estimated "
+                    "from disease models."
+                ),
+            }
+        )
 
     def _mask_probs(self, probs: torch.Tensor, crop: Optional[str]) -> torch.Tensor:
-        if not crop or not self.disease_classes:
+        if not crop or not self.disease_classes or is_other_crop(crop):
+            if is_other_crop(crop):
+                return torch.zeros_like(probs)
             return probs
         idx = classes_for_crop(self.disease_classes, crop)
         masked = torch.zeros_like(probs)
@@ -374,9 +423,14 @@ class InferenceEngine:
         if crop_override:
             crop = dict(crop)
             crop["crop"] = crop_override
+            crop["is_other"] = is_other_crop(crop_override)
             crop["user_selected"] = True
             crop["needs_user_pick"] = False
-        elif crop.get("available") and crop.get("confidence", 1.0) < config.CROP_USER_CONFIRM_THRESHOLD:
+            crop["top3"] = _ensure_other_option(crop.get("top3") or [])
+        elif crop.get("available") and (
+            crop.get("confidence", 1.0) < config.CROP_USER_CONFIRM_THRESHOLD
+            or crop.get("is_other")
+        ):
             crop = dict(crop)
             crop["needs_user_pick"] = True
         else:
@@ -391,8 +445,16 @@ class InferenceEngine:
         if crop and crop.get("needs_user_pick") and not crop_override:
             result["message"] = (
                 "ফসল চেনার আত্মবিশ্বাস ৯০% এর নিচে। নিচ থেকে সঠিক ফসল বেছে নিন, "
-                "তারপর রোগ বিশ্লেষণ চালিয়ে যান।"
+                "অথবা তালিকায় না থাকলে অন্যান্য চাপুন।"
+                if not (lang or "").startswith("en")
+                else (
+                    "Crop confidence is below 90%. Pick the correct crop below, "
+                    "or Other if this plant is not in the list."
+                )
             )
+            return result
+        if is_other_crop(chosen_crop):
+            result["message"] = _other_crop_message(lang)
             return result
         if aligned is None:
             disease_mean, aligned, models = self._disease_prob_stack(img)

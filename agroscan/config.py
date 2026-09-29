@@ -1,6 +1,7 @@
 """Central configuration: dataset paths, model list, hyperparameters."""
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 # --------------------------------------------------------------------------- #
@@ -30,7 +31,7 @@ LEAF_SPLIT_TRAIN = LEAF_GATE_DIR / "train"
 LEAF_SPLIT_VALID = LEAF_GATE_DIR / "valid"
 LEAF_SPLIT_TEST = LEAF_GATE_DIR / "test"
 LEAF_DATA = LEAF_SPLIT_TRAIN
-EXTRA_NON_LEAF: list[Path] = []
+EXTRA_NON_LEAF: list[Path] = []      # optional extra non-leaf images (fashion, etc.) to supplement the leaf gate training set
 
 # Stage 2 - crop / leaf-type (Datasets/leaf_type/{train,valid,test})
 CROP_TRAIN = CROP_DIR / "train"
@@ -39,7 +40,7 @@ CROP_TEST = CROP_DIR / "test"
 CROP_ARCH = "efficientnet_b3"
 CROP_EPOCHS = 6
 CROP_BATCH = 32
-CROP_LR = 1e-3
+CROP_LR = 1e-3          # fits EfficientNet-B3 @300px on a 12GB RTX 3060
 
 # Stage 3 - unified disease splits: Datasets/{train,valid,test}/<class>/
 DISEASE_TRAIN = DATASETS / "train"
@@ -161,6 +162,9 @@ LOW_CONFIDENCE_THRESHOLD = 0.80
 LEAF_ACCEPT_THRESHOLD = 0.5
 # Level-2 crop confidence below which the user must pick from top-3 options.
 CROP_USER_CONFIRM_THRESHOLD = 0.90
+# Softmax below this → plant is treated as out of the trained crop set.
+CROP_OTHER_THRESHOLD = 0.55
+CROP_OTHER_LABEL = "Other"
 
 # Friendly names shown in the web UI and API responses.
 MODEL_DISPLAY_NAMES = {
@@ -173,3 +177,26 @@ MODEL_DISPLAY_NAMES = {
 
 def model_display_name(arch: str) -> str:
     return MODEL_DISPLAY_NAMES.get(arch, arch)
+
+
+def load_dotenv() -> None:
+    """Load KEY=VAL from .env without overriding existing process env."""
+    for path in (ROOT / ".env", ROOT.parent / ".env"):
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for raw in text.splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            key = key.strip()
+            val = val.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = val
+
+
+load_dotenv()

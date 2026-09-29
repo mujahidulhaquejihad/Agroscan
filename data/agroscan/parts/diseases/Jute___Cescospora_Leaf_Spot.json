@@ -1,0 +1,178 @@
+{
+  "class_name": "Jute___Cescospora Leaf Spot",
+  "kb_key": "cercospora_leaf_spot",
+  "crop_en": "Jute",
+  "crop_bn": "পাট",
+  "disease_en": "Cercospora leaf spot",
+  "disease_bn": "পাটের সারকোস্পোরা পাতাদাগ",
+  "pathogen": "Cercospora corchori",
+  "severity": "medium",
+  "summary_en": "Cercospora leaf spot on Jute (Cercospora corchori). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "পাট-এ পাটের সারকোস্পোরা পাতাদাগ (Cercospora corchori)। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Round brown spots with a grey centre on leaves",
+    "Spots join; leaves drop early",
+    "Worse in dense wet stands"
+  ],
+  "symptoms_bn": [
+    "পাতায় গোল বাদামি দাগ, মাঝ ধূসর",
+    "দাগ মিশে পাতা আগে ঝরে",
+    "ঘন ভেজা জমিতে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Remove the worst infected leaves",
+      "detail": "Pick off heavily spotted Jute leaves and destroy them off the plot. Do not compost wet diseased leaves in the open."
+    },
+    {
+      "step": 2,
+      "title": "Help the canopy dry",
+      "detail": "Widen spacing, prune, stop evening overhead irrigation. Fungi need hours of leaf wetness."
+    },
+    {
+      "step": 3,
+      "title": "Spray a protectant on still-green tissue",
+      "detail": "Mancozeb or the labelled mix at the dose on this card. Dead tissue will not turn green again."
+    },
+    {
+      "step": 4,
+      "title": "Repeat only as labelled",
+      "detail": "Do not tank-mix extra fungicides. Alternate modes of action if you need a second product."
+    },
+    {
+      "step": 5,
+      "title": "Call 16123 if it still climbs after two sprays",
+      "detail": "You may have the wrong disease (blight vs bacterial vs pest)."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "সবচেয়ে খারাপ পাতা তুলুন",
+      "detail": "বেশি দাগওয়ালা পাট-এর পাতা ছিঁড়ে জমির বাইরে নষ্ট করুন। ভেজা রোগা পাতা খোলা কম্পোস্টে নয়।"
+    },
+    {
+      "step": 2,
+      "title": "পাতা শুকাতে দিন",
+      "detail": "ফাঁক বাড়ান, ছাঁটুন, সন্ধ্যার উপরের সেচ বন্ধ। ছত্রাকের ঘণ্টার পর ঘণ্টা ভেজা পাতা লাগে।"
+    },
+    {
+      "step": 3,
+      "title": "এখনো সবুজ অংশে প্রতিরোধক স্প্রে",
+      "detail": "এই কার্ডের মাত্রায় ম্যানকোজেব বা লেবেলের মিশ্রণ। মরা অংশ আর সবুজ হবে না।"
+    },
+    {
+      "step": 4,
+      "title": "শুধু লেবেলমতো আবার দিন",
+      "detail": "ট্যাংকে বাড়তি ছত্রাকনাশক মেশাবেন না। দ্বিতীয় ওষুধ লাগলে ভিন্ন ধরনের ওষুধ পাল্টান।"
+    },
+    {
+      "step": 5,
+      "title": "দুই স্প্রের পরও উঠলে ১৬১২৩",
+      "detail": "হয়তো ভুল রোগ (ধ্বসা না ব্যাকটেরিয়া না পোকা)।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water (about 20-25 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০-২৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack sprayer. Wet both leaf surfaces. Late afternoon, low wind.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার দুই পিঠ ভিজিয়ে দিন। বিকেলে বাতাস কম থাকলে।",
+      "timing_en": "At first spots, then repeat at the labelled interval while weather stays wet.",
+      "timing_bn": "প্রথম দাগ দেখা মাত্র, ভেজা আবহাওয়া থাকলে লেবেলের বিরতিতে আবার।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray. Read the pack if the label differs.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফসল তুলবেন না। লেবেলে অন্য কিছু থাকলে লেবেল মানুন।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb is registered in Bangladesh. Brand-level AP numbers were not individually verified for this card.",
+      "registration_verified": false,
+      "verified_ap_numbers": [],
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null
+    }
+  ],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum seed or sett treatment at the labelled rate where a product is available",
+    "Neem oil 3-5 ml/L as a first insect/mite option",
+    "These reduce pressure; they will not stop an explosive outbreak on their own"
+  ],
+  "organic_alternatives_bn": [
+    "পাওয়া গেলে লেবেলমাফিক ট্রাইকোডার্মা দিয়ে বীজ/কাটিং শোধন",
+    "পোকা/মাকড়ে প্রথমে প্রতি লিটারে ৩-৫ মিলি নিম তেল",
+    "এগুলো চাপ কমায়; বিস্ফোরক প্রাদুর্ভাব একা থামায় না"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, a mask, goggles, full-sleeve shirt and long trousers. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind at your back. Wash the sprayer and your body with soap afterwards. Keep children and livestock out of the field for 24 hours. Do not wash the sprayer in a pond, canal or irrigation channel.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। খোলা জায়গায় মেশান, খালি হাতে নয়। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে স্প্রেয়ার ও শরীর ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমিতে ঢুকতে দেবেন না। পুকুর, খাল বা সেচ নালায় স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Jute keeps getting worse after the steps above, or if you are not sure this is Cercospora leaf spot.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও পাট খারাপ হতে থাকলে, অথবা এটা পাটের সারকোস্পোরা পাতাদাগ কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif2"
+  ],
+  "months_relevant": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Jute___Cescospora Leaf Spot. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ]
+}

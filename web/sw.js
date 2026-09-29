@@ -1,18 +1,23 @@
 /* AgroScan PWA service worker — cache app shell; always network for API. */
-const CACHE = "agroscan-shell-v2";
+const CACHE = "agroscan-shell-v24";
 const SHELL = [
   "/",
-  "/static/styles.css?v=47",
-  "/static/config.js?v=24",
-  "/static/i18n.js?v=42",
-  "/static/auth.js?v=22",
-  "/static/core.js?v=32",
-  "/static/features.js?v=29",
-  "/static/farmer-ux.js?v=1",
-  "/static/app-extra.js?v=18",
-  "/static/shop.js?v=14",
-  "/static/mobile.js?v=25",
-  "/static/pwa.js?v=21",
+  "/login",
+  "/signup",
+  "/static/styles.css?v=84",
+  "/static/config.js?v=26",
+  "/static/i18n.js?v=66",
+  "/static/auth.js?v=25",
+  "/static/core.js?v=41",
+  "/static/crop.js?v=5",
+  "/static/features.js?v=40",
+  "/static/farmer-ux.js?v=4",
+  "/static/app-extra.js?v=31",
+  "/static/shop.js?v=17",
+  "/static/geo.js?v=2",
+  "/static/mobile.js?v=28",
+  "/static/ads.js?v=3",
+  "/static/pwa.js?v=23",
   "/static/AgroScan_logo-main.png",
   "/static/icons/icon-192.png",
   "/static/icons/icon-512.png",
@@ -39,7 +44,11 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(req.url);
   // Never cache API / auth / uploads
-  if (url.pathname.startsWith("/api/")) {
+  if (
+    url.pathname.startsWith("/api/") ||
+    url.pathname.startsWith("/admin") ||
+    url.pathname.startsWith("/vendor")
+  ) {
     event.respondWith(fetch(req));
     return;
   }
@@ -50,10 +59,10 @@ self.addEventListener("fetch", (event) => {
       fetch(req)
         .then((res) => {
           const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put("/", copy));
+          caches.open(CACHE).then((c) => c.put(req, copy));
           return res;
         })
-        .catch(() => caches.match("/") || caches.match(req))
+        .catch(() => caches.match(req).then((hit) => hit || caches.match("/") || caches.match("/index.html")))
     );
     return;
   }

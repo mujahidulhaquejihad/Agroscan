@@ -1,0 +1,179 @@
+{
+  "class_name": "Rice___dead_heart",
+  "kb_key": "dead_heart",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Dead heart (stem borer)",
+  "disease_bn": "ধানের ডেড হার্ট (মাজরা পোকা)",
+  "pathogen": "Scirpophaga incertulas / Chilo spp. (insect)",
+  "severity": "high",
+  "summary_en": "Dead heart (stem borer) on Rice (Scirpophaga incertulas / Chilo spp. (insect)). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "ধান-এ ধানের ডেড হার্ট (মাজরা পোকা) (Scirpophaga incertulas / Chilo spp. (insect))। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Central tiller dries and pulls out easily (dead heart)",
+    "At heading, white empty panicles (white head)",
+    "Look for holes and frass in the stem — this is not blast"
+  ],
+  "symptoms_bn": [
+    "মাঝের কুশি শুকিয়ে সহজে উঠে আসে (ডেড হার্ট)",
+    "শিষে সাদা চিটা শিষ (হোয়াইট হেড)",
+    "কাণ্ডে গর্ত ও বিষ্ঠা দেখুন — এটা ব্লাস্ট নয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Confirm the pest before you buy a bottle",
+      "detail": "Look for the live insect, frass or typical feeding on Rice. A leaf spot is not an insect."
+    },
+    {
+      "step": 2,
+      "title": "Start with cultural control",
+      "detail": "Hand-pick, bag bunches, clip mined leaves, or collect cut flushes. This is often enough at low numbers."
+    },
+    {
+      "step": 3,
+      "title": "Spray only if the attack is still rising",
+      "detail": "Use a labelled insecticide at dusk, undersides and growing points. Do not mix two insecticides in one tank."
+    },
+    {
+      "step": 4,
+      "title": "Respect PHI — especially on vegetables and fruit",
+      "detail": "Count the days on the pack before you pick. Children eat these crops."
+    },
+    {
+      "step": 5,
+      "title": "Call 16123 if it is a village outbreak",
+      "detail": "Armyworm and hispa can move field to field in days."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ওষুধ কেনার আগে পোকা নিশ্চিত করুন",
+      "detail": "ধান-এ জীবিত পোকা, বিষ্ঠা বা খাওয়ার দাগ দেখুন। পাতার দাগ মানে পোকা নয়।"
+    },
+    {
+      "step": 2,
+      "title": "আগে পরিচর্যা করুন",
+      "detail": "হাতে কুড়ানো, ঝুড়ি ঢাকা, খাওয়া পাতা ছাঁটা বা কাটা পাতা কুড়ানো। কম সংখ্যায় এতেই হয়।"
+    },
+    {
+      "step": 3,
+      "title": "আক্রমণ বাড়লে তবেই স্প্রে",
+      "detail": "সন্ধ্যায় লেবেলমাফিক কীটনাশক, নিচের পিঠ ও ডগায়। এক ট্যাংকে দুই কীটনাশক মেশাবেন না।"
+    },
+    {
+      "step": 4,
+      "title": "পিএইচআই মানুন — সবজি ও ফলে বিশেষ করে",
+      "detail": "তোলার আগে প্যাকেটের দিন গুনুন। এসব ফসল শিশুরাও খায়।"
+    },
+    {
+      "step": 5,
+      "title": "গ্রামজুড়ে হলে ১৬১২৩",
+      "detail": "আর্মিওয়ার্ম ও হিসপা কয়েক দিনে জমি থেকে জমিতে যায়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Chlorantraniliprole 18.5% SC",
+      "product_name_bn": "ক্লোরানট্রানিলিপ্রোল ১৮.৫% এসসি",
+      "active_ingredient": "Chlorantraniliprole",
+      "formulation": "SC",
+      "dose_en": "0.4 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৪ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Spray at dusk when caterpillars feed. Cover the growing point and leaf whorls.",
+      "application_method_bn": "কীড়া খাওয়ার সময় সন্ধ্যায় স্প্রে করুন। ডগা ও পাতার খোলে ভালো করে লাগান।",
+      "timing_en": "Only after you confirm the pest (holes, frass, live larvae), not on a guess.",
+      "timing_bn": "পোকা নিশ্চিত করে তবেই (গর্ত, বিষ্ঠা, জীবিত কীড়া), অনুমানে নয়।",
+      "interval_days": 14,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফসল তুলবেন না।",
+      "brands_available_bd": [
+        "Coragen 18.5 SC",
+        "Prevathon-type products"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Chlorantraniliprole is marketed in Bangladesh. Confirm the crop on the label and the AP number in the current PPW list.",
+      "registration_verified": false,
+      "verified_ap_numbers": [],
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null
+    }
+  ],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum seed or sett treatment at the labelled rate where a product is available",
+    "Neem oil 3-5 ml/L as a first insect/mite option",
+    "These reduce pressure; they will not stop an explosive outbreak on their own"
+  ],
+  "organic_alternatives_bn": [
+    "পাওয়া গেলে লেবেলমাফিক ট্রাইকোডার্মা দিয়ে বীজ/কাটিং শোধন",
+    "পোকা/মাকড়ে প্রথমে প্রতি লিটারে ৩-৫ মিলি নিম তেল",
+    "এগুলো চাপ কমায়; বিস্ফোরক প্রাদুর্ভাব একা থামায় না"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, a mask, goggles, full-sleeve shirt and long trousers. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind at your back. Wash the sprayer and your body with soap afterwards. Keep children and livestock out of the field for 24 hours. Do not wash the sprayer in a pond, canal or irrigation channel.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। খোলা জায়গায় মেশান, খালি হাতে নয়। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে স্প্রেয়ার ও শরীর ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমিতে ঢুকতে দেবেন না। পুকুর, খাল বা সেচ নালায় স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Rice keeps getting worse after the steps above, or if you are not sure this is Dead heart (stem borer).",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও ধান খারাপ হতে থাকলে, অথবা এটা ধানের ডেড হার্ট (মাজরা পোকা) কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [
+    "Chlorantraniliprole 18.5% SC 50ml",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Rice___dead_heart. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": [
+    {
+      "ref_text": "Chlorantraniliprole 18.5% SC 50ml",
+      "sku": "PEST-0077",
+      "name_en": "Chlorantraniliprole 18.5% SC 50ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ]
+}

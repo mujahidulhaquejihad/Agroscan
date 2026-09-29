@@ -10,10 +10,10 @@ from typing import Optional
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "users.db"
-SESSION_DAYS = 30
+SESSION_DAYS = 30           # one session is 30 days##
 
 
-def _connect():
+def _connect():             ###    This function establishes a connection to the SQLite database located at DB_PATH.##
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
@@ -21,7 +21,9 @@ def _connect():
 
 
 def _ensure_delivery_columns(con: sqlite3.Connection) -> None:
-    cols = {r[1] for r in con.execute("PRAGMA table_info(users)").fetchall()}
+    cols = {r[1] for r in con.execute("PRAGMA table_info(users)").fetchall()}           ####    We are making sure that the users table has the necessary columns
+                                                                                        ####for delivery information and active status. If any of these columns are missing,
+                                                                                        #### we will add them to the table.####
     for name, decl in (
         ("phone", "TEXT"),
         ("address", "TEXT"),
@@ -36,7 +38,10 @@ def _ensure_delivery_columns(con: sqlite3.Connection) -> None:
         con.execute("UPDATE users SET active = 1 WHERE active IS NULL")
 
 
-def init_db():
+def init_db():          ###    This function initializes the database by creating the necessary tables if they do not already exist. ###
+                        ##It creates a users table to store user information and a sessions table to manage user sessions. ###
+                        # ##Additionally, it ensures that the users table has the required columns for delivery information##
+                        # ## and active status. Finally, it commits the changes to the database.####
     with _connect() as con:
         con.executescript(
             """
@@ -63,7 +68,7 @@ def init_db():
         con.commit()
 
 
-def _hash_password(password: str) -> str:
+def _hash_password(password: str) -> str:           #Generates a unique 16-byte cryptographically secure random hexadecimal string as a salt.##
     salt = secrets.token_hex(16)
     digest = hashlib.pbkdf2_hmac("sha256", password.encode(), salt.encode(), 120_000)
     return f"{salt}${digest.hex()}"
@@ -238,7 +243,7 @@ def delete_session(token: str):
         con.execute("DELETE FROM sessions WHERE token=?", (token,))
         con.commit()
 
-
+####User Profile Management###
 def update_user_profile(
     user_id: int,
     *,
@@ -277,7 +282,7 @@ def update_user_profile(
         row = con.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
     return _user_dict(row)
 
-
+###Admin Dashboard Functions####
 def admin_list_users(search: str = "", limit: int = 100, offset: int = 0) -> dict:
     init_db()
     limit = max(1, min(int(limit), 500))
@@ -417,7 +422,7 @@ def admin_delete_user(user_id: int) -> None:
         con.execute("DELETE FROM users WHERE id=?", (user_id,))
         con.commit()
 
-
+####Gathers high-level system metrics for dashboard summaries###
 def admin_user_stats() -> dict:
     init_db()
     with _connect() as con:

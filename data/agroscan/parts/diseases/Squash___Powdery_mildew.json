@@ -1,0 +1,197 @@
+{
+  "class_name": "Squash___Powdery_mildew",
+  "kb_key": "powdery_mildew",
+  "crop_en": "Squash / Pumpkin",
+  "crop_bn": "কুমড়া / মিষ্টি কুমড়া",
+  "disease_en": "Powdery mildew",
+  "disease_bn": "কুমড়ার পাউডারি মিলডিউ রোগ",
+  "pathogen": "Podosphaera xanthii / Erysiphe cichoracearum",
+  "severity": "medium",
+  "bangladesh_relevance": "widely_grown",
+  "bangladesh_note_en": "Sweet gourd (mishti kumra) and other cucurbits are widely grown across Bangladesh, including on homestead land, char land and river banks. Powdery mildew is one of their most common problems.",
+  "bangladesh_note_bn": "মিষ্টি কুমড়া ও অন্যান্য কুমড়া জাতীয় ফসল বাংলাদেশজুড়ে ব্যাপকভাবে চাষ হয় — বাড়ির আঙিনা, চর ও নদীর পাড়েও। পাউডারি মিলডিউ এদের সবচেয়ে সাধারণ সমস্যাগুলোর একটি।",
+  "summary_en": "White powdery patches on the top of the leaves, like flour dusted on them, which wipe off with a finger. It likes warm dry days with humid nights. Wettable sulphur controls it well if you start early.",
+  "summary_bn": "পাতার উপরে সাদা গুঁড়ার মতো ছোপ, যেন ময়দা ছিটানো; আঙুল দিয়ে মুছে ফেলা যায়। গরম শুকনো দিন আর স্যাঁতসেঁতে রাত এর পছন্দ। শুরুতেই ধরলে ভেজানো সালফারেই ভালো দমন হয়।",
+  "symptoms_en": [
+    "White to greyish powdery patches on the upper leaf surface, stems and leaf stalks",
+    "Patches merge until the leaf looks whitewashed",
+    "Leaves yellow, dry and die from the oldest first",
+    "Fruit is not directly infected but is small, poorly coloured and sunburnt once the leaves go",
+    "Does NOT need leaf wetness — thrives in warm dry days with humid nights"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরের পিঠে, কাণ্ডে ও বোঁটায় সাদা বা ধূসর গুঁড়ার মতো ছোপ",
+    "ছোপ মিশে গিয়ে পাতা যেন চুনকাম করা দেখায়",
+    "সবচেয়ে পুরনো পাতা থেকে শুরু করে পাতা হলুদ হয়ে শুকিয়ে মরে",
+    "ফলে সরাসরি রোগ ধরে না, তবে পাতা চলে গেলে ফল ছোট, রং খারাপ ও রোদে পোড়া হয়",
+    "পাতা ভেজা থাকার দরকার নেই — গরম শুকনো দিন আর স্যাঁতসেঁতে রাতেই বাড়ে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray wettable sulphur at the first white patches",
+      "detail": "2 g per litre, both leaf surfaces. Early treatment is far more effective than late."
+    },
+    {
+      "step": 2,
+      "title": "Never apply sulphur above 32°C",
+      "detail": "Cucurbits scorch badly. In hot weather use hexaconazole or difenoconazole instead."
+    },
+    {
+      "step": 3,
+      "title": "Remove the worst old leaves",
+      "detail": "Strip whitened lower leaves and take them out of the field."
+    },
+    {
+      "step": 4,
+      "title": "Improve air movement",
+      "detail": "Trellis vines where practical and thin dense growth."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "প্রথম সাদা ছোপেই সালফার স্প্রে করুন",
+      "detail": "প্রতি লিটারে ২ গ্রাম, পাতার দুই পিঠে। দেরিতে নয়, শুরুতে দিলে অনেক বেশি কাজ হয়।"
+    },
+    {
+      "step": 2,
+      "title": "৩২ ডিগ্রির উপরে সালফার কখনো নয়",
+      "detail": "কুমড়া জাতীয় ফসল মারাত্মকভাবে পুড়ে যায়। গরমে হেক্সাকোনাজল বা ডাইফেনোকোনাজল দিন।"
+    },
+    {
+      "step": 3,
+      "title": "বেশি আক্রান্ত পুরনো পাতা সরান",
+      "detail": "সাদা হয়ে যাওয়া নিচের পাতা ছিঁড়ে জমির বাইরে নিয়ে যান।"
+    },
+    {
+      "step": 4,
+      "title": "বাতাস চলাচল বাড়ান",
+      "detail": "সম্ভব হলে লতায় মাচা দিন এবং ঘন অংশ পাতলা করুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Trellis where practical; wide spacing",
+    "Remove old lower leaves regularly",
+    "Grow tolerant varieties",
+    "Avoid heavy shade",
+    "Destroy crop residue and rotate for a season"
+  ],
+  "cultural_control_bn": [
+    "সম্ভব হলে মাচা দিন; বেশি দূরত্বে লাগান",
+    "নিয়মিত নিচের পুরনো পাতা ছেঁটে ফেলুন",
+    "সহনশীল জাত লাগান",
+    "বেশি ছায়া এড়িয়ে চলুন",
+    "অবশিষ্টাংশ নষ্ট করুন ও এক মৌসুম পালা করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Sulphur 80% WP / WG",
+      "product_name_bn": "সালফার ৮০% ডব্লিউপি / ডব্লিউজি",
+      "active_ingredient": "Sulphur",
+      "formulation": "WP/WG",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray on both leaf surfaces. Only below 32°C — early morning or evening.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার দুই পিঠে। শুধু ৩২ ডিগ্রির নিচে — খুব সকালে বা সন্ধ্যায়।",
+      "timing_en": "At the first white patches, repeat every 10 days.",
+      "timing_bn": "প্রথম সাদা ছোপে, ১০ দিন পর পর।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 3,
+      "pre_harvest_interval_note_en": "Do not pick for 3 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Thiovit Jet 80 WG",
+        "Microthiol Special 80 WP",
+        "Sulcox 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Microthiol Special 80 WP, AP-252, Shetu Pesticides Limited, in the DAE PPW registered list. Confirm the cucurbit label claim.",
+      "treatment_type": "both",
+      "caution_en": "Cucurbits are especially sensitive to sulphur burn — never above 32°C or within 2 weeks of an oil spray.",
+      "caution_bn": "কুমড়া জাতীয় ফসল সালফারে পোড়ার ব্যাপারে বিশেষভাবে সংবেদনশীল — ৩২ ডিগ্রির উপরে বা তেল স্প্রের ২ সপ্তাহের মধ্যে কখনো নয়।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-252"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Wettable sulphur (accepted in most organic systems)",
+    "Potassium bicarbonate at 5 g/L with a wetting agent",
+    "Milk spray 1:9 with water applied weekly in sunlight",
+    "Leaf thinning and trellising"
+  ],
+  "organic_alternatives_bn": [
+    "ভেজানো সালফার (বেশিরভাগ জৈব চাষে চলে)",
+    "প্রতি লিটারে ৫ গ্রাম পটাশিয়াম বাইকার্বনেট আঠালো পদার্থসহ",
+    "১ ভাগ দুধ ৯ ভাগ পানি, সপ্তাহে একবার রোদে স্প্রে",
+    "পাতা পাতলা করা ও মাচা দেওয়া"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for cucurbits. Avoid excess nitrogen. Adequate potassium helps the leaves resist infection and improves fruit quality.",
+  "fertilizer_advice_bn": "কুমড়া জাতীয় ফসলের জন্য এফআরজি-২০১৮ মেনে চলুন। বেশি ইউরিয়া দেবেন না। পর্যাপ্ত পটাশে পাতা রোগ সহ্য করতে পারে ও ফলের মান ভালো হয়।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Sulphur dust irritates the eyes, skin and airways. Do not apply in hot midday sun. Respect the 3-day PHI.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। সালফারের গুঁড়া চোখ, চামড়া ও শ্বাসনালিতে জ্বালা ধরায়। দুপুরের কড়া রোদে দেবেন না। ৩ দিনের পিএইচআই মানুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if the whole canopy is whitening or if you cannot tell powdery from downy mildew.",
+  "when_to_call_helpline_bn": "পুরো গাছ সাদা হয়ে গেলে বা পাউডারি না ডাউনি মিলডিউ বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Sulphur applied at the first patches usually stops spread within a week. Whitened leaves will not recover, but new growth stays clean.",
+  "expected_outcome_bn": "প্রথম ছোপেই সালফার দিলে সাধারণত এক সপ্তাহেই ছড়ানো বন্ধ হয়। সাদা হয়ে যাওয়া পাতা আর ভালো হবে না, তবে নতুন পাতা পরিষ্কার থাকবে।",
+  "related_shop_products": [
+    "Wettable sulphur 80% WP 500g",
+    "Contaf 5 EC (Hexaconazole) 100ml",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Microthiol Special 80 WP, AP-252, Shetu Pesticides Ltd); BARI cucurbit production guidance",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Shares kb_key 'powdery_mildew' with Cucumber and Mango classes. Sweet gourd is a genuinely important Bangladesh crop, so this PlantVillage class maps well to local reality.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Wettable sulphur 80% WP 500g",
+      "sku": "PEST-0041",
+      "name_en": "Sulphur (wettable) 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.053,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Contaf 5 EC (Hexaconazole) 100ml",
+      "sku": "PEST-0016",
+      "name_en": "Hexaconazole 5% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.131,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

@@ -2,17 +2,17 @@
   "name": "agroscan-mobile",
   "version": "1.0.0",
   "private": true,
-  "description": "AgroScan Android shell (Capacitor) — UI from ../web, API on agroscan.mujahidulhaquejihad.com",
+  "description": "AgroScan Android shell — wraps the web app at agroscan.mujahidulhaquejihad.com (no on-device models)",
   "scripts": {
     "sync:web": "node scripts/sync-web.js",
     "cap:sync": "npm run sync:web && npx cap sync android",
-    "build:apk": "npm run cap:sync && cd android && .\\gradlew.bat assembleDebug",
+    "build:apk": "npm run cap:sync && node scripts/patch-android.js && cd android && gradlew.bat assembleDebug",
     "open:android": "npx cap open android"
   },
   "dependencies": {
     "@capacitor/android": "^6.2.0",
     "@capacitor/app": "^6.0.2",
-    "@capacitor/camera": "^6.1.0",
+    "@capacitor/geolocation": "^6.0.1",
     "@capacitor/core": "^6.2.0",
     "@capacitor/status-bar": "^6.0.2"
   },

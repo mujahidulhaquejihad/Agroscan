@@ -1,0 +1,110 @@
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}p{4.6cm}p{5.2cm}c@{}}
+\caption{Chat, pack, RAG, and advice.}\\
+\label{tab:pychat}\\
+\toprule
+\textbf{File} & \textbf{Function} & \textbf{Lines} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{File} & \textbf{Function} & \textbf{Lines} \\
+\midrule
+\endhead
+agroscan/farm\_plan.py & season\_for\_month & 22--27 \\
+agroscan/farm\_plan.py & load\_flora\_crops & 75--94 \\
+agroscan/farm\_plan.py & load\_csv\_crop\_rows & 98--116 \\
+agroscan/farm\_plan.py & \_land\_note & 119--138 \\
+agroscan/farm\_plan.py & recommend\_crops & 141--299 \\
+agroscan/farm\_plan.py & cultivation\_outline & 302--370 \\
+agroscan/knowledge.py & \_attach\_guide & 297--309 \\
+agroscan/knowledge.py & \_localize\_info & 312--326 \\
+agroscan/knowledge.py & advice\_for\_key & 329--362 \\
+agroscan/knowledge.py & advice\_for & 365--386 \\
+agroscan/knowledge.py & all\_diseases & 389--409 \\
+agroscan/knowledge.py & \_contacts\_text & 422--430 \\
+agroscan/knowledge.py & \_is\_healthy\_rec & 469--472 \\
+agroscan/knowledge.py & wants\_catalog & 475--485 \\
+agroscan/knowledge.py & \_catalog\_reply\_lang & 488--496 \\
+agroscan/knowledge.py & pack\_catalog\_reply & 499--575 \\
+agroscan/knowledge.py & \_split\_name & 578--579 \\
+agroscan/knowledge.py & \_disease\_name\_tokens & 582--596 \\
+agroscan/knowledge.py & \_format\_pack\_reply & 599--634 \\
+agroscan/knowledge.py & \_option\_label & 637--642 \\
+agroscan/knowledge.py & \_score\_pack\_candidates & 645--725 \\
+agroscan/knowledge.py & \_score\_kb\_candidates & 728--771 \\
+agroscan/knowledge.py & \_clarify\_payload & 774--800 \\
+agroscan/knowledge.py & resolve\_disease\_query & 803--867 \\
+agroscan/knowledge.py & resolve\_disease\_advice & 870--879 \\
+agroscan/knowledge.py & \_suggestions & 882--885 \\
+agroscan/knowledge.py & chatbot\_reply & 888--1014 \\
+agroscan/llm\_chat.py & \_env\_flag & 63--64 \\
+agroscan/llm\_chat.py & \_adapter\_path & 67--74 \\
+agroscan/llm\_chat.py & \_gemini\_key & 77--81 \\
+agroscan/llm\_chat.py & \_gemini\_enabled & 84--88 \\
+agroscan/llm\_chat.py & \_want\_local\_llm & 91--92 \\
+agroscan/llm\_chat.py & \_local\_base\_id & 95--96 \\
+agroscan/llm\_chat.py & \_local\_provider & 99--105 \\
+agroscan/llm\_chat.py & llm\_configured & 108--123 \\
+agroscan/llm\_chat.py & llm\_status & 126--146 \\
+agroscan/llm\_chat.py & \_structural\_intent & 149--170 \\
+agroscan/llm\_chat.py & \_kb\_is\_generic & 173--177 \\
+agroscan/llm\_chat.py & \_relevant\_context & 180--215 \\
+agroscan/llm\_chat.py & \_sanitize\_history & 231--255 \\
+agroscan/llm\_chat.py & \_pack\_keys & 258--265 \\
+agroscan/llm\_chat.py & \_llm\_looks\_unsure & 268--314 \\
+agroscan/llm\_chat.py & \_gemini\_contents & 317--336 \\
+agroscan/llm\_chat.py & \_reply\_lang & 339--353 \\
+agroscan/llm\_chat.py & \_build\_chat\_messages & 356--469 \\
+agroscan/llm\_chat.py & \_fold\_system\_into\_user & 472--484 \\
+agroscan/llm\_chat.py & \_to\_chat\_prompt & 487--498 \\
+agroscan/llm\_chat.py & \_resolve\_device & 501--509 \\
+agroscan/llm\_chat.py & \_want\_4bit & 512--518 \\
+agroscan/llm\_chat.py & \_load\_base & 521--558 \\
+agroscan/llm\_chat.py & \_ensure\_loaded & 561--638 \\
+agroscan/llm\_chat.py & preload & 641--651 \\
+agroscan/llm\_chat.py & \_generate\_text & 654--681 \\
+agroscan/llm\_chat.py & \_gemini\_models & 684--693 \\
+agroscan/llm\_chat.py & \_gemini\_extract\_text & 696--698 \\
+agroscan/llm\_chat.py & \_gemini\_extract & 701--709 \\
+agroscan/llm\_chat.py & \_gemini\_http & 712--725 \\
+agroscan/llm\_chat.py & \_gemini\_generate & 728--813 \\
+agroscan/llm\_chat.py & generate\_reply & 816--836 \\
+agroscan/llm\_chat.py & transcribe\_audio & 842--929 \\
+agroscan/llm\_chat.py & chat\_reply & 932--1026 \\
+agroscan/llm\_chat.py & \_scan\_header & 1029--1046 \\
+agroscan/llm\_chat.py & \_build\_vision\_messages & 1049--1108 \\
+agroscan/llm\_chat.py & \_llm\_text\_is\_bad & 1111--1137 \\
+agroscan/llm\_chat.py & generate\_vision\_feedback & 1140--1163 \\
+agroscan/llm\_chat.py & vision\_scan\_reply & 1166--1310 \\
+agroscan/news.py & \_load\_raw & 14--21 \\
+agroscan/news.py & \_pick & 24--28 \\
+agroscan/news.py & \_seasonal\_extra & 31--70 \\
+agroscan/news.py & list\_news & 73--127 \\
+agroscan/rag.py & \_section\_bodies & 29--64 \\
+agroscan/rag.py & \_guide\_text & 67--78 \\
+agroscan/rag.py & \_info\_text & 81--90 \\
+agroscan/rag.py & \_load\_pack\_docs & 93--109 \\
+agroscan/rag.py & \_pack\_chunks & 112--141 \\
+agroscan/rag.py & \_legacy\_chunks & 144--167 \\
+agroscan/rag.py & \_chunks & 170--176 \\
+agroscan/rag.py & clear\_index\_cache & 179--180 \\
+agroscan/rag.py & \_index & 184--193 \\
+agroscan/rag.py & \_key\_ok & 196--218 \\
+agroscan/rag.py & \_section\_boost & 221--232 \\
+agroscan/rag.py & retrieve & 235--289 \\
+agroscan/rag\_build.py & \_is\_healthy & 19--22 \\
+agroscan/rag\_build.py & \_lines & 25--48 \\
+agroscan/rag\_build.py & \_chem\_block & 51--98 \\
+agroscan/rag\_build.py & \_pick & 101--104 \\
+agroscan/rag\_build.py & build\_disease\_doc & 107--230 \\
+agroscan/rag\_build.py & build\_all & 233--251 \\
+agroscan/treatment\_detail.py & \_pick & 21--24 \\
+agroscan/treatment\_detail.py & \_warnings\_for & 27--81 \\
+agroscan/treatment\_detail.py & \_chem\_display & 84--111 \\
+agroscan/treatment\_detail.py & treatment\_plan\_for & 114--124 \\
+agroscan/treatment\_detail.py & \_plan\_from\_record & 127--164 \\
+agroscan/treatment\_detail.py & advice\_from\_pack & 167--238 \\
+\bottomrule
+\end{longtable}
+\end{center}

@@ -1,0 +1,247 @@
+{
+  "class_name": "Mango___Powdery_mildew",
+  "kb_key": "powdery_mildew",
+  "crop_en": "Mango",
+  "crop_bn": "আম",
+  "disease_en": "Mango powdery mildew",
+  "disease_bn": "আমের পাউডারি মিলডিউ রোগ",
+  "pathogen": "Erysiphe quercicola (Oidium mangiferae)",
+  "severity": "high",
+  "summary_en": "A white powdery coating on the flower panicles, young leaves and small fruit. It hits at flowering time, dries the panicle and causes heavy fruit drop. Dry weather with cool nights and morning dew is exactly what it likes — the opposite of anthracnose.",
+  "summary_bn": "মুকুল, কচি পাতা ও ছোট আমের গায়ে সাদা গুঁড়ার মতো আস্তরণ পড়ে। মুকুল আসার সময় আক্রমণ করে, মুকুল শুকিয়ে দেয় আর প্রচুর আম ঝরে পড়ে। শুকনো আবহাওয়া, ঠান্ডা রাত আর সকালের শিশির — এটাই এর পছন্দ, অ্যানথ্রাকনোজের ঠিক উল্টো।",
+  "symptoms_en": [
+    "White or greyish powdery growth on panicles, young leaves and small fruit — wipes off with a finger",
+    "Affected panicles dry up and turn brown without setting fruit",
+    "Young fruit drops in large numbers; retained fruit is deformed and russeted",
+    "Young leaves curl and become distorted",
+    "Worst in dry weather with cool nights (10-20°C) and heavy morning dew during flowering"
+  ],
+  "symptoms_bn": [
+    "মুকুল, কচি পাতা ও ছোট আমে সাদা বা ধূসর গুঁড়ার মতো আস্তরণ — আঙুল দিয়ে মুছে ফেলা যায়",
+    "আক্রান্ত মুকুল শুকিয়ে বাদামি হয়ে যায়, আম ধরে না",
+    "প্রচুর কচি আম ঝরে পড়ে; যেগুলো থাকে সেগুলো বাঁকা ও খসখসে হয়",
+    "কচি পাতা কুঁকড়ে বিকৃত হয়ে যায়",
+    "মুকুলের সময় শুকনো আবহাওয়া, ঠান্ডা রাত (১০-২০ ডিগ্রি) ও ভারী সকালের শিশিরে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Act at the first white patch on a panicle",
+      "detail": "Powdery mildew moves through an orchard in days at flowering. One spray on the day you first see it is worth three sprays a week later."
+    },
+    {
+      "step": 2,
+      "title": "Use sulphur or a triazole",
+      "detail": "Wettable sulphur at 2 g/L is cheap and effective, or hexaconazole/difenoconazole at label rate. Cover the panicles thoroughly."
+    },
+    {
+      "step": 3,
+      "title": "Do not use sulphur in hot weather",
+      "detail": "Above about 32°C sulphur scorches young leaves and fruit. If it is hot, use a triazole instead."
+    },
+    {
+      "step": 4,
+      "title": "Protect bees",
+      "detail": "Spray very early morning or late evening. Mango pollination depends on flies and bees visiting the panicles."
+    },
+    {
+      "step": 5,
+      "title": "Repeat at 10-15 days if conditions persist",
+      "detail": "Two to three sprays across the flowering period are usually needed in a bad year."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "মুকুলে প্রথম সাদা দাগ দেখা মাত্র ব্যবস্থা নিন",
+      "detail": "মুকুলের সময় এই রোগ কয়েক দিনেই পুরো বাগানে ছড়িয়ে পড়ে। প্রথম দিন একবার স্প্রে করা এক সপ্তাহ পরে তিনবার স্প্রের সমান।"
+    },
+    {
+      "step": 2,
+      "title": "সালফার বা ট্রায়াজল দিন",
+      "detail": "প্রতি লিটারে ২ গ্রাম ভেজানো সালফার সস্তা ও কার্যকর, অথবা লেবেল অনুযায়ী হেক্সাকোনাজল/ডাইফেনোকোনাজল। মুকুল ভালোভাবে ভিজিয়ে দিন।"
+    },
+    {
+      "step": 3,
+      "title": "গরমে সালফার দেবেন না",
+      "detail": "৩২ ডিগ্রির উপরে সালফারে কচি পাতা ও আম পুড়ে যায়। গরম থাকলে সালফারের বদলে ট্রায়াজল দিন।"
+    },
+    {
+      "step": 4,
+      "title": "মৌমাছি বাঁচান",
+      "detail": "খুব ভোরে বা সন্ধ্যায় স্প্রে করুন। আমের পরাগায়ন মাছি ও মৌমাছির উপর নির্ভর করে।"
+    },
+    {
+      "step": 5,
+      "title": "আবহাওয়া একই থাকলে ১০-১৫ দিন পর আবার",
+      "detail": "খারাপ বছরে মুকুলের সময়জুড়ে সাধারণত ২-৩ বার স্প্রে লাগে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Prune to open the canopy so dew dries early",
+    "Remove and destroy affected panicles where practical",
+    "Avoid excess nitrogen before flowering",
+    "Keep the orchard floor clean",
+    "Plan the flowering-stage spray schedule before the panicles emerge, not after symptoms appear"
+  ],
+  "cultural_control_bn": [
+    "ডাল ছেঁটে গাছ খোলা রাখুন যাতে শিশির তাড়াতাড়ি শুকায়",
+    "সম্ভব হলে আক্রান্ত মুকুল ভেঙে নষ্ট করে ফেলুন",
+    "মুকুল আসার আগে বেশি ইউরিয়া দেবেন না",
+    "বাগানের নিচ পরিষ্কার রাখুন",
+    "লক্ষণ দেখার পর নয়, মুকুল বের হওয়ার আগেই স্প্রের সময়সূচি ঠিক করে রাখুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Sulphur 80% WP / WG (wettable sulphur)",
+      "product_name_bn": "সালফার ৮০% ডব্লিউপি / ডব্লিউজি (গন্ধক)",
+      "active_ingredient": "Sulphur",
+      "formulation": "WP/WG",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "Depends on tree size; ensure panicles are fully wetted",
+      "application_method_en": "Power sprayer covering all panicles. Apply only when the temperature is below 32°C — early morning or evening.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ারে সব মুকুলে দিন। শুধু তাপমাত্রা ৩২ ডিগ্রির নিচে থাকলে — খুব সকালে বা সন্ধ্যায়।",
+      "timing_en": "At the first sign of white powder on panicles; repeat after 10-15 days if conditions persist.",
+      "timing_bn": "মুকুলে প্রথম সাদা গুঁড়া দেখা মাত্র; আবহাওয়া একই থাকলে ১০-১৫ দিন পর আবার।",
+      "interval_days": 12,
+      "max_applications_per_season": 3,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন আম পাড়বেন না।",
+      "brands_available_bd": [
+        "Thiovit Jet 80 WG",
+        "Microthiol Special 80 WP",
+        "Sulcox 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Microthiol Special 80 WP, AP-252, Shetu Pesticides Limited, appears in the DAE PPW registered pesticide list (registered use recorded there for tea mites). Confirm the mango powdery mildew label claim.",
+      "treatment_type": "both",
+      "caution_en": "Do not apply above 32°C or within 2 weeks of an oil spray — both cause severe leaf and fruit scorch.",
+      "caution_bn": "৩২ ডিগ্রির উপরে বা তেল জাতীয় স্প্রের ২ সপ্তাহের মধ্যে দেবেন না — দুই ক্ষেত্রেই পাতা ও আম মারাত্মকভাবে পুড়ে যায়।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-252"
+      ]
+    },
+    {
+      "product_name_en": "Hexaconazole 5% EC",
+      "product_name_bn": "হেক্সাকোনাজল ৫% ইসি",
+      "active_ingredient": "Hexaconazole",
+      "formulation": "EC",
+      "dose_en": "2 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ মিলিলিটার",
+      "water_volume_per_decimal": "Depends on tree size",
+      "application_method_en": "Power sprayer, full panicle coverage. Systemic, so it also protects new growth for several days.",
+      "application_method_bn": "পাওয়ার স্প্রেয়ারে সব মুকুলে দিন। সিস্টেমিক হওয়ায় কয়েক দিন নতুন কুশিও সুরক্ষা পায়।",
+      "timing_en": "At panicle emergence as a preventive, or at first symptoms. Safe to use in warm weather when sulphur is not.",
+      "timing_bn": "মুকুল বের হওয়ার সময় প্রতিরোধমূলকভাবে, অথবা প্রথম লক্ষণে। গরমে যখন সালফার দেওয়া যায় না তখন এটি নিরাপদ।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন আম পাড়বেন না।",
+      "brands_available_bd": [
+        "Contaf 5 EC",
+        "Hexa 5 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Contaf 5 EC, AP-460, Auto Crop Care Ltd — in the DAE PPW registered list (registered use recorded there for rice sheath blight). Confirm the mango label claim before presenting as a registered use.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-460"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Wettable sulphur is itself accepted in most organic systems",
+    "Potassium bicarbonate at 5 g/L with a wetting agent gives useful suppression",
+    "Milk spray (1:9 with water) has some documented effect on powdery mildews",
+    "Canopy pruning so dew dries faster"
+  ],
+  "organic_alternatives_bn": [
+    "ভেজানো সালফার নিজেই বেশিরভাগ জৈব চাষে গ্রহণযোগ্য",
+    "প্রতি লিটারে ৫ গ্রাম পটাশিয়াম বাইকার্বনেট আঠালো পদার্থসহ দিলে ভালো কাজ হয়",
+    "দুধের দ্রবণ (১ ভাগ দুধ ৯ ভাগ পানি) পাউডারি মিলডিউতে কিছুটা কাজ করে বলে নথিভুক্ত আছে",
+    "ডাল ছেঁটে গাছ খোলা রাখা যাতে শিশির দ্রুত শুকায়"
+  ],
+  "fertilizer_advice_en": "Apply the annual dose after harvest. Avoid nitrogen before flowering. Adequate potassium supports better fruit set and retention after a mildew attack.",
+  "fertilizer_advice_bn": "বছরের সার আম পাড়ার পর দিন। মুকুল আসার আগে ইউরিয়া দেবেন না। পর্যাপ্ত পটাশ থাকলে রোগের পরও আম ভালো ধরে ও টিকে থাকে।",
+  "safety_warning_en": "Wear a hat, goggles, cartridge mask, gloves and full-sleeve clothing — spraying up into a tree canopy means the spray comes back down on you. Sulphur dust irritates eyes, skin and airways. Never spray at full bloom during the day because of bees. Observe the PHI.",
+  "safety_warning_bn": "টুপি, চশমা, কার্তুজওয়ালা মাস্ক, হাতমোজা ও ফুলহাতা পোশাক পরুন — গাছের উপরের দিকে স্প্রে করলে ওষুধ গায়ে ফিরে পড়ে। সালফারের গুঁড়া চোখ, চামড়া ও শ্বাসনালিতে জ্বালা ধরায়। মৌমাছির কারণে দিনের বেলা পুরো ফুল ফোটা অবস্থায় কখনো স্প্রে নয়। পিএইচআই মানুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if panicles across the orchard are drying without setting fruit, or if fruit drop is heavy after flowering.",
+  "when_to_call_helpline_bn": "বাগানজুড়ে মুকুল শুকিয়ে আম না ধরলে, অথবা মুকুলের পর প্রচুর আম ঝরলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A spray applied within a day or two of the first white patches usually saves the panicles. Panicles already dried and brown will not recover and will not set fruit.",
+  "expected_outcome_bn": "প্রথম সাদা দাগ দেখার এক-দুই দিনের মধ্যে স্প্রে করলে সাধারণত মুকুল বেঁচে যায়। যে মুকুল শুকিয়ে বাদামি হয়ে গেছে তা আর ভালো হবে না, আমও ধরবে না।",
+  "related_shop_products": [
+    "Wettable sulphur 80% WP 500g",
+    "Contaf 5 EC (Hexaconazole) 100ml",
+    "Power sprayer (petrol) 25L",
+    "Safety goggles",
+    "Spray mask with cartridge"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Microthiol Special 80 WP, AP-252, Shetu Pesticides Ltd; Contaf 5 EC, AP-460, Auto Crop Care Ltd); 'Present Scenario of Insecticides and Fungicides Use in Largest Mango Cultivation Area in Bangladesh' (academia.edu 25079065); BARI mango production guidance",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Powdery mildew and anthracnose both strike at flowering but need different weather and different products — the app should present the distinction (dry cool = mildew, wet = anthracnose). PPW entries found record tea and rice uses; mango claims need label confirmation.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Wettable sulphur 80% WP 500g",
+      "sku": "PEST-0041",
+      "name_en": "Sulphur (wettable) 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.053,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Contaf 5 EC (Hexaconazole) 100ml",
+      "sku": "PEST-0016",
+      "name_en": "Hexaconazole 5% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.131,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Power sprayer (petrol) 25L",
+      "sku": "EQ-0005",
+      "name_en": "Power sprayer (petrol) 25L",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Safety goggles",
+      "sku": "EQ-0014",
+      "name_en": "Safety goggles",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

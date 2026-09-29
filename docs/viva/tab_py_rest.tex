@@ -1,0 +1,117 @@
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}p{4.6cm}p{5.2cm}c@{}}
+\caption{Training entrypoints, dataset prep, and helper scripts.}\\
+\label{tab:pyrest}\\
+\toprule
+\textbf{File} & \textbf{Function} & \textbf{Lines} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{File} & \textbf{Function} & \textbf{Lines} \\
+\midrule
+\endhead
+agroscan/bd\_data.py & \_read & 12--16 \\
+agroscan/bd\_data.py & treatments & 20--22 \\
+agroscan/bd\_data.py & treatments\_by\_class & 26--27 \\
+agroscan/bd\_data.py & treatments\_by\_kb & 31--38 \\
+agroscan/bd\_data.py & products & 42--44 \\
+agroscan/bd\_data.py & equipment & 48--50 \\
+agroscan/bd\_data.py & catalogue\_by\_sku & 54--60 \\
+agroscan/bd\_data.py & suppliers & 64--66 \\
+agroscan/bd\_data.py & upazilas & 70--72 \\
+agroscan/bd\_data.py & crops & 76--78 \\
+agroscan/bd\_data.py & safety & 82--84 \\
+agroscan/bd\_data.py & warning\_boxes & 88--90 \\
+agroscan/bd\_data.py & warning\_box & 93--109 \\
+agroscan/bd\_data.py & \_norm & 112--121 \\
+agroscan/bd\_data.py & find\_treatment & 124--158 \\
+agroscan/bd\_data.py & find\_crop & 161--172 \\
+agroscan/bd\_dataset.py & \_require\_datasets & 24--31 \\
+agroscan/bd\_dataset.py & hf\_repo\_id & 34--35 \\
+agroscan/bd\_dataset.py & hf\_access\_help & 38--45 \\
+agroscan/bd\_dataset.py & load\_bd\_splits & 48--68 \\
+agroscan/bd\_dataset.py & \_label\_names\_from\_train & 71--77 \\
+agroscan/bd\_dataset.py & \_row\_label\_name & 80--83 \\
+agroscan/bd\_dataset.py & bd\_label\_names & 86--89 \\
+agroscan/bd\_dataset.py & bd\_split\_stats & 92--94 \\
+agroscan/bd\_dataset.py & export\_to\_imagefolder & 97--127 \\
+agroscan/bd\_dataset.py & \_safe\_class\_dir & 130--132 \\
+agroscan/bd\_dataset.py & print\_dataset\_info & 135--148 \\
+agroscan/bd\_leaf\_dataset.py & find\_bd\_leaf\_zip & 15--20 \\
+agroscan/bd\_leaf\_dataset.py & is\_bd\_leaf\_extracted & 23--30 \\
+agroscan/bd\_leaf\_dataset.py & ensure\_bd\_leaf\_extracted & 33--78 \\
+agroscan/bd\_leaf\_dataset.py & bd\_leaf\_stats & 81--89 \\
+agroscan/disease\_guides.py & guide\_for & 514--515 \\
+agroscan/prepare\_bd\_dataset.py & \_write\_manifest & 30--42 \\
+agroscan/prepare\_bd\_dataset.py & main & 45--95 \\
+agroscan/prepare\_bd\_leaf\_dataset.py & main & 16--44 \\
+agroscan/prepare\_hierarchy.py & \_unique\_path & 18--28 \\
+agroscan/prepare\_hierarchy.py & \_safe\_name & 31--32 \\
+agroscan/prepare\_hierarchy.py & \_hardlink & 35--42 \\
+agroscan/prepare\_hierarchy.py & \_iter\_images & 45--48 \\
+agroscan/prepare\_hierarchy.py & merge\_duplicate\_labels & 51--80 \\
+agroscan/prepare\_hierarchy.py & build\_leaf\_type & 83--107 \\
+agroscan/prepare\_hierarchy.py & drop\_variety\_from\_disease & 110--124 \\
+agroscan/prepare\_hierarchy.py & relocate\_leaf\_gate & 127--140 \\
+agroscan/prepare\_hierarchy.py & main & 143--158 \\
+agroscan/train\_all.py & main & 12--43 \\
+agroscan/train\_crop.py & train\_crop & 15--44 \\
+agroscan/train\_crop.py & main & 47--59 \\
+agroscan/train\_disease.py & train\_one & 15--41 \\
+agroscan/train\_disease.py & main & 44--57 \\
+agroscan/train\_leaf.py & train\_leaf & 15--43 \\
+agroscan/train\_leaf.py & main & 46--58 \\
+scripts/build\_shop\_images.py & load\_font & 48--60 \\
+scripts/build\_shop\_images.py & wrap & 63--82 \\
+scripts/build\_shop\_images.py & short\_desc & 85--111 \\
+scripts/build\_shop\_images.py & palette\_for & 114--127 \\
+scripts/build\_shop\_images.py & draw\_pack & 130--167 \\
+scripts/build\_shop\_images.py & render\_card & 170--234 \\
+scripts/build\_shop\_images.py & load\_rows & 237--247 \\
+scripts/build\_shop\_images.py & main & 250--274 \\
+scripts/check\_auto\_crop\_fast.py & main & 12--23 \\
+scripts/export\_mobile\_onnx.py & \_slim\_advice & 34--52 \\
+scripts/export\_mobile\_onnx.py & \_export\_one & 55--89 \\
+scripts/export\_mobile\_onnx.py & main & 92--132 \\
+scripts/fetch\_shop\_images.py & \_get & 89--92 \\
+scripts/fetch\_shop\_images.py & clean\_name & 95--106 \\
+scripts/fetch\_shop\_images.py & primary\_key & 109--119 \\
+scripts/fetch\_shop\_images.py & search\_terms & 122--150 \\
+scripts/fetch\_shop\_images.py & openverse\_search & 153--172 \\
+scripts/fetch\_shop\_images.py & pick\_from\_results & 175--189 \\
+scripts/fetch\_shop\_images.py & pick\_image & 195--215 \\
+scripts/fetch\_shop\_images.py & download\_image & 218--237 \\
+scripts/fetch\_shop\_images.py & load\_catalog & 240--250 \\
+scripts/fetch\_shop\_images.py & file\_key & 253--256 \\
+scripts/fetch\_shop\_images.py & main & 259--337 \\
+scripts/fix\_split\_leakage.py & log & 32--33 \\
+scripts/fix\_split\_leakage.py & orig\_name & 36--39 \\
+scripts/fix\_split\_leakage.py & pv\_source & 42--49 \\
+scripts/fix\_split\_leakage.py & file\_id\_entry & 52--57 \\
+scripts/fix\_split\_leakage.py & file\_id & 60--65 \\
+scripts/fix\_split\_leakage.py & iter\_images & 68--77 \\
+scripts/fix\_split\_leakage.py & class\_counts & 80--93 \\
+scripts/fix\_split\_leakage.py & keep\_best\_split & 96--103 \\
+scripts/fix\_split\_leakage.py & scan\_leaks & 106--149 \\
+scripts/fix\_split\_leakage.py & protect\_last\_train & 152--171 \\
+scripts/fix\_split\_leakage.py & inode\_index & 174--188 \\
+scripts/fix\_split\_leakage.py & cap\_train & 191--209 \\
+scripts/fix\_split\_leakage.py & summarize & 212--222 \\
+scripts/fix\_split\_leakage.py & main & 225--296 \\
+scripts/make\_app\_icons.py & \_key\_black & 49--61 \\
+scripts/make\_app\_icons.py & \_trim & 64--66 \\
+scripts/make\_app\_icons.py & \_paste\_centered & 69--82 \\
+scripts/make\_app\_icons.py & \_square & 85--89 \\
+scripts/make\_app\_icons.py & \_save & 92--95 \\
+scripts/make\_app\_icons.py & main & 98--154 \\
+scripts/scan\_split\_leakage.py & log & 17--18 \\
+scripts/scan\_split\_leakage.py & orig\_name & 21--24 \\
+scripts/scan\_split\_leakage.py & pv\_source & 27--35 \\
+scripts/scan\_split\_leakage.py & scan\_task & 38--93 \\
+scripts/scan\_split\_leakage.py & main & 96--127 \\
+scripts/test\_rag\_chunking.py & main & 11--47 \\
+scripts/test\_split\_leakage.py & main & 9--27 \\
+\bottomrule
+\end{longtable}
+\end{center}

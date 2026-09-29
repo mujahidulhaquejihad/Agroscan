@@ -1,0 +1,249 @@
+{
+  "class_name": "Tomato___Late_blight",
+  "kb_key": "late_blight",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Late blight",
+  "disease_bn": "টমেটোর নাবি ধ্বসা রোগ",
+  "pathogen": "Phytophthora infestans",
+  "severity": "high",
+  "summary_en": "The same pathogen that destroys potato also attacks tomato, and it moves between the two crops. In foggy December-January weather it can kill a tomato field in about a week. Spray preventively before you see it — once the stems are black it is too late.",
+  "summary_bn": "যে জীবাণু আলু নষ্ট করে সেটাই টমেটোতেও আক্রমণ করে এবং দুই ফসলের মধ্যে যাতায়াত করে। ডিসেম্বর-জানুয়ারির কুয়াশায় এক সপ্তাহেই পুরো টমেটোর জমি শেষ করে দিতে পারে। দেখার আগেই প্রতিরোধমূলক স্প্রে করুন — কাণ্ড কালো হয়ে গেলে আর কিছু করার থাকে না।",
+  "symptoms_en": [
+    "Large water-soaked greyish-green patches on leaves that quickly turn brown-black",
+    "White downy fungal growth on the underside of lesions in the early morning",
+    "Dark brown to black lesions on stems and leaf stalks that girdle and collapse them",
+    "Firm, greasy-looking brown patches on green fruit, often on the shoulder; the fruit stays hard, not soft and watery",
+    "Whole plants collapse within days in fog and drizzle"
+  ],
+  "symptoms_bn": [
+    "পাতায় বড় বড় ভেজা ধূসর-সবুজ ছোপ, দ্রুত বাদামি-কালো হয়ে যায়",
+    "খুব ভোরে দাগের নিচের পিঠে সাদা তুলার মতো ছত্রাক",
+    "কাণ্ড ও পাতার বোঁটায় গাঢ় বাদামি-কালো দাগ, ওখান থেকে ভেঙে ঢলে পড়ে",
+    "কাঁচা ফলের গায়ে, বিশেষ করে বোঁটার দিকে, শক্ত তেলতেলে বাদামি দাগ; ফল শক্তই থাকে, নরম-পানসে হয় না",
+    "কুয়াশা ও গুঁড়ি বৃষ্টিতে কয়েক দিনেই পুরো গাছ ঢলে পড়ে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray the same day",
+      "detail": "Do not wait. Use a systemic + contact combination (metalaxyl/benalaxyl + mancozeb, or cymoxanil + mancozeb) at the first lesion."
+    },
+    {
+      "step": 2,
+      "title": "Remove infected plants and fruit",
+      "detail": "Cut out collapsed plants and pick off blighted fruit. Carry them out of the field in a bag and bury deep or burn. Do not throw them on the bund or feed them to cattle."
+    },
+    {
+      "step": 3,
+      "title": "Stop wetting the leaves",
+      "detail": "Switch to furrow or drip irrigation. Never irrigate in the evening. Wet leaves overnight are exactly what the disease needs."
+    },
+    {
+      "step": 4,
+      "title": "Open up the canopy",
+      "detail": "Remove the lower leaves touching the soil, stake the plants and prune enough to let air through. A dry canopy stops the disease better than any spray."
+    },
+    {
+      "step": 5,
+      "title": "Check what is planted next door",
+      "detail": "If there is potato in the next field, tell that farmer. The disease will bounce between the two crops all season."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "সেদিনই স্প্রে করুন",
+      "detail": "দেরি করবেন না। প্রথম দাগ দেখা মাত্র সিস্টেমিক + স্পর্শক মিশ্র ওষুধ (মেটালাক্সিল/বেনালাক্সিল + ম্যানকোজেব বা সাইমোক্সানিল + ম্যানকোজেব) দিন।"
+    },
+    {
+      "step": 2,
+      "title": "আক্রান্ত গাছ ও ফল সরিয়ে ফেলুন",
+      "detail": "ঢলে পড়া গাছ কেটে ও আক্রান্ত ফল তুলে ব্যাগে ভরে জমির বাইরে নিয়ে গভীরে পুঁতে ফেলুন বা পুড়িয়ে দিন। আইলে ফেলবেন না, গরুকেও খাওয়াবেন না।"
+    },
+    {
+      "step": 3,
+      "title": "পাতা ভেজানো বন্ধ করুন",
+      "detail": "নালা সেচ বা ড্রিপ সেচে যান। সন্ধ্যায় কখনো সেচ দেবেন না। সারারাত পাতা ভেজা থাকাটাই এই রোগের দরকার।"
+    },
+    {
+      "step": 4,
+      "title": "গাছের ফাঁক বাড়ান",
+      "detail": "মাটি ছুঁয়ে থাকা নিচের পাতা ছেঁটে ফেলুন, গাছে খুঁটি দিন এবং প্রয়োজনমতো ডালপালা ছেঁটে বাতাস চলাচলের পথ করুন। শুকনো গাছ যেকোনো স্প্রের চেয়ে ভালো কাজ করে।"
+    },
+    {
+      "step": 5,
+      "title": "পাশের জমিতে কী আছে দেখুন",
+      "detail": "পাশের জমিতে আলু থাকলে ওই কৃষককে জানান। নাহলে সারা মৌসুম রোগ দুই ফসলের মধ্যে লাফিয়ে বেড়াবে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Never plant tomato next to or immediately after potato",
+    "Use raised beds with good drainage and mulch",
+    "Stake and prune so the canopy dries by mid-morning",
+    "Space plants at 60 x 40 cm or wider; crowded plots blight first",
+    "Grow BARI Tomato varieties suited to your season; use polytunnels for summer tomato",
+    "Destroy all crop residue at the end of the season and rotate for 2 years"
+  ],
+  "cultural_control_bn": [
+    "আলুর জমির পাশে বা আলুর ঠিক পরে টমেটো লাগাবেন না",
+    "উঁচু বেড, ভালো নিকাশ ও মালচ ব্যবহার করুন",
+    "খুঁটি দিন ও ডাল ছাঁটুন যাতে বেলা বাড়ার আগেই গাছ শুকিয়ে যায়",
+    "৬০x৪০ সেন্টিমিটার বা তার বেশি দূরত্বে লাগান; ঘন জমিতেই আগে রোগ ধরে",
+    "মৌসুম অনুযায়ী বারি টমেটোর জাত নিন; গ্রীষ্মকালীন টমেটোতে পলিটানেল ব্যবহার করুন",
+    "মৌসুম শেষে সব গাছের অবশিষ্টাংশ নষ্ট করুন এবং ২ বছর পালা করে চাষ করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water (about 20-25 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০-২৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal on a staked crop",
+      "application_method_en": "Knapsack spray covering both leaf surfaces and the stems. On staked tomato, spray from both sides of the row.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার দুই পিঠ ও কাণ্ডে দিন। খুঁটি দেওয়া টমেটোতে সারির দুই দিক থেকেই স্প্রে করুন।",
+      "timing_en": "Preventive, every 7-10 days from the start of the fog period.",
+      "timing_bn": "প্রতিরোধমূলক, কুয়াশা শুরু হওয়ার পর থেকে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick tomatoes for 7 days after the last spray. Tomato is eaten fresh and often raw — the PHI matters more here than in most crops.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন টমেটো তুলবেন না। টমেটো কাঁচা খাওয়া হয় — তাই অন্য ফসলের চেয়ে এখানে পিএইচআই আরও বেশি জরুরি।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; the combination product Galben M (AP-374, ACI Formulations Ltd) is registered for late blight of potato and tomato.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    },
+    {
+      "product_name_en": "Benalaxyl 8% + Mancozeb 64% WP",
+      "product_name_bn": "বেনালাক্সিল ৮% + ম্যানকোজেব ৬৪% ডব্লিউপি",
+      "active_ingredient": "Benalaxyl + Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water (label rate approximately 0.2% of formulated product)",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম (লেবেল অনুযায়ী প্রায় ০.২% দ্রবণ)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray, full coverage of leaves, stems and fruit trusses.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতা, কাণ্ড ও ফলের থোকা সব ভিজিয়ে দিন।",
+      "timing_en": "Curative — at the first visible lesion. Maximum 3 per season, always alternated with a contact fungicide.",
+      "timing_bn": "রোগ দমনের ওষুধ — প্রথম দাগ দেখা মাত্র। মৌসুমে সর্বোচ্চ ৩ বার, সবসময় স্পর্শক ছত্রাকনাশকের সাথে পালা করে।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not pick tomatoes for 14 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৪ দিন টমেটো তুলবেন না।",
+      "brands_available_bd": [
+        "Galben M",
+        "Ridomil Gold MZ 68 WG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Galben M, AP-374, ACI Formulations Limited — registered for late blight of potato and tomato in the DAE Plant Protection Wing registered pesticide list.",
+      "treatment_type": "curative",
+      "caution_en": "Resistance builds fast. Never use alone and never as the routine spray.",
+      "caution_bn": "জীবাণু দ্রুত এই ওষুধ সহ্য করা শেখে। একা বা নিয়মিত স্প্রে হিসেবে কখনো ব্যবহার করবেন না।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Copper oxychloride 50% WP at 3 g/L or 1% Bordeaux mixture as a protectant",
+    "Trichoderma harzianum in the nursery bed and at transplanting",
+    "Straw mulch to stop soil splash",
+    "Removing and burying infected foliage — the most effective non-chemical step"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতি লিটার পানিতে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি বা ১% বোর্দো মিশ্রণ প্রতিরোধক হিসেবে",
+    "বীজতলায় ও চারা রোপণের সময় ট্রাইকোডার্মা হারজিয়ানাম",
+    "মাটির ছিটা ঠেকাতে খড়ের মালচ",
+    "আক্রান্ত পাতা তুলে পুঁতে ফেলা — ওষুধ ছাড়া সবচেয়ে কার্যকর কাজ"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen; soft leaves blight faster. Apply the full FRG-2018 potash dose and keep calcium adequate to avoid blossom-end rot at the same time. Do not top-dress urea once blight has started.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না; নরম পাতায় রোগ দ্রুত ধরে। এফআরজি-২০১৮ অনুযায়ী পুরো পটাশ দিন এবং ক্যালসিয়াম পর্যাপ্ত রাখুন যাতে একই সাথে ফলের গোড়া পচা রোগ না হয়। রোগ শুরু হলে আর ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Tomato is picked repeatedly, so spray only when the next picking is beyond the PHI. Do not spray fruit you plan to sell within a week. Wash hands and clothes with soap. Never rinse the sprayer into a pond or canal.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। টমেটো বারবার তোলা হয়, তাই পরের তোলার তারিখ পিএইচআই-এর পরে পড়লে তবেই স্প্রে করুন। এক সপ্তাহের মধ্যে বিক্রি করবেন এমন ফলে স্প্রে করবেন না। সাবান দিয়ে হাত ও কাপড় ধুয়ে ফেলুন। পুকুর বা খালে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Selling tomato inside the pre-harvest interval can leave residues above the limits set in the Food Safety (Contaminants, Toxins and Harmful Residues) Regulations 2017. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। পিএইচআই-এর মধ্যে টমেটো বিক্রি করলে খাদ্য নিরাপত্তা বিধিমালা ২০১৭ এর সীমার বেশি অবশিষ্টাংশ থেকে যেতে পারে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if plants are collapsing, if the disease continues after two sprays, or if potato and tomato fields in your area are both affected.",
+  "when_to_call_helpline_bn": "গাছ ঢলে পড়তে থাকলে, দুইবার স্প্রের পরও রোগ চলতে থাকলে, অথবা এলাকার আলু ও টমেটো দুটোতেই রোগ দেখা দিলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Preventive spraying started before symptoms usually carries the crop through with minor loss. Started after collapse begins, expect heavy loss — the aim then is to save the remaining green plants and pick clean fruit early.",
+  "expected_outcome_bn": "দাগ দেখার আগে প্রতিরোধমূলক স্প্রে শুরু করলে সাধারণত সামান্য ক্ষতিতেই ফসল উঠে যায়। গাছ ঢলে পড়া শুরুর পর শুরু করলে ক্ষতি অনেক বেশি হবে — তখন লক্ষ্য থাকবে বাকি সবুজ গাছ বাঁচানো আর ভালো ফল আগেভাগে তুলে নেওয়া।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Galben M (Benalaxyl + Mancozeb) 100g",
+    "Knapsack sprayer 16L manual",
+    "Straw mulch",
+    "Bamboo staking poles (bundle of 20)"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Galben M, AP-374, ACI Formulations Ltd — potato and tomato late blight); BARI tomato production guidance; 'Cultivating Profitable and Nutritious Tomatoes: A brief guide for Bangladesh' (researchgate 389900612); BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Shares kb_key 'late_blight' with Potato___Late_blight — the same pathogen. Product recommendations are compatible across both crops but the PHI differs by crop; the app must apply the tomato PHI here.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Galben M (Benalaxyl + Mancozeb) 100g",
+      "sku": "PEST-0004",
+      "name_en": "Benalaxyl + Mancozeb 8% + 64% WP 100g",
+      "category": "pesticide",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bamboo staking poles (bundle of 20)",
+      "sku": "EQ-0080",
+      "name_en": "Bamboo staking poles (bundle of 20)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

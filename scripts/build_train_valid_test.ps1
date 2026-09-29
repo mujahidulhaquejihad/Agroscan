@@ -164,6 +164,34 @@ function Add-FlatImages {
   return $n
 }
 
+function Get-ImageKey([string]$f) {
+  $name = [System.IO.Path]::GetFileName($f).ToLowerInvariant()
+  $sep = $name.IndexOf("___")
+  if ($sep -ge 0) {
+    $tail = $name.Substring($sep + 3)
+    $stem = [System.IO.Path]::GetFileNameWithoutExtension($tail).Trim()
+    if ($stem) { return "pv:$stem" }
+  }
+  return "fn:$name"
+}
+
+function Dedup-Bucket([hashtable]$Bucket) {
+  $skipped = 0
+  foreach ($cls in @($Bucket.Keys)) {
+    $seen = [System.Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    $kept = [System.Collections.Generic.List[string]]::new()
+    $skip = 0
+    foreach ($f in $Bucket[$cls]) {
+      $key = Get-ImageKey $f
+      if ($seen.Add($key)) { [void]$kept.Add($f) } else { $skip++ }
+    }
+    $Bucket[$cls] = $kept
+    $skipped += $skip
+    if ($skip -gt 0) { Write-Log ("  dedup {0} skipped {1} duplicate/aug copies" -f $cls, $skip) }
+  }
+  Write-Log "Dedup total skipped $skipped (same filename or PlantVillage source id)"
+}
+
 function Split-Class([System.Collections.Generic.List[string]]$paths) {
   $arr = $paths.ToArray()
   $rng = [System.Random]::new(42)
@@ -182,9 +210,11 @@ function Split-Class([System.Collections.Generic.List[string]]$paths) {
     for ($i = 0; $i -lt $nTest; $i++) { $test.Add($arr[$i]) }
     for ($i = $nTest; $i -lt ($nTest + $nValid); $i++) { $valid.Add($arr[$i]) }
     for ($i = ($nTest + $nValid); $i -lt $n; $i++) { $train.Add($arr[$i]) }
+  } elseif ($n -eq 2) {
+    $train.Add($arr[0])
+    $test.Add($arr[1])
   } else {
-    # Tiny class: keep the class present in every split (same files).
-    foreach ($p in $arr) { $train.Add($p); $valid.Add($p); $test.Add($p) }
+    $train.Add($arr[0])
   }
   return @{ train = $train; valid = $valid; test = $test }
 }
@@ -260,6 +290,8 @@ Write-Log "mangifera: $n"
 $n = Add-ClassImages (Join-Path $Disease "bd_leaf_disease") "bd_leaf" $diseaseMap
 Write-Log "bd_leaf_disease: $n"
 
+Write-Log "Deduping disease images by filename / PlantVillage source id ..."
+Dedup-Bucket $diseaseMap
 Write-Log "Building Datasets/train|valid|test ..."
 Build-Splits $diseaseMap $TrainRoot $ValidRoot $TestRoot "disease"
 

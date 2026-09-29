@@ -20,8 +20,9 @@ Idempotent: safe to re-run.
 import json, re, unicodedata
 from collections import Counter, defaultdict
 from difflib import SequenceMatcher
+from pathlib import Path
 
-D = "/root/agroscan/data/"
+D = str(Path(__file__).resolve().parent) + "/"
 
 
 def load(n):
@@ -141,6 +142,15 @@ INCURABLE = {
     "chilli_leaf_curl": "whitefly (Bemisia tabaci) — for the viral component only",
     "tomato_mosaic_virus": None,
     "bacterial_wilt": None,
+    "panama": None,
+    "golden_mosaic": "whitefly (Bemisia tabaci)",
+    "papaya_mosaic": "aphids",
+    "papaya_ringspot": "aphids (Aphis gossypii / Myzus persicae)",
+    "papaya_curl": "whitefly (Bemisia tabaci)",
+    "sugarcane_mosaic": "aphids",
+    "sugarcane_yellow": None,
+    "potato_brown_rot": None,
+    "potato_blackleg": None,
 }
 flagged = 0
 for r in dis:

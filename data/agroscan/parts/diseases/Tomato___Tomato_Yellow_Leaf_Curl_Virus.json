@@ -1,0 +1,276 @@
+{
+  "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+  "kb_key": "tylcv",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Tomato yellow leaf curl virus (TYLCV)",
+  "disease_bn": "টমেটোর পাতা কোঁকড়ানো হলুদ ভাইরাস রোগ",
+  "pathogen": "Tomato yellow leaf curl virus, transmitted by whitefly (Bemisia tabaci)",
+  "severity": "high",
+  "summary_en": "A virus carried by whitefly. Leaves curl upward, turn yellow at the edges and the plant stops growing. There is no cure — an infected plant will never produce properly. Everything you do is aimed at the whitefly and at removing infected plants early.",
+  "summary_bn": "সাদা মাছি এই ভাইরাস বয়ে আনে। পাতা উপরের দিকে কুঁকড়ে যায়, কিনারা হলুদ হয় আর গাছের বাড়া বন্ধ হয়ে যায়। এর কোনো চিকিৎসা নেই — আক্রান্ত গাছ কখনোই ভালো ফলন দেবে না। যা করার সব করতে হয় সাদা মাছি দমনের জন্য আর আক্রান্ত গাছ আগেভাগে তুলে ফেলার জন্য।",
+  "symptoms_en": [
+    "Young leaves curl UPWARD and inward, cupping like a bowl",
+    "Leaf margins turn yellow; leaves become small, thick and leathery",
+    "Plant is severely stunted with short bushy internodes",
+    "Flowers drop; very little or no fruit sets after infection",
+    "If infected early the plant may never produce a marketable fruit",
+    "Whiteflies visible on the underside of leaves — shake a plant and a white cloud rises"
+  ],
+  "symptoms_bn": [
+    "কচি পাতা উপরের দিকে ও ভেতরের দিকে কুঁকড়ে বাটির মতো হয়ে যায়",
+    "পাতার কিনারা হলুদ হয়; পাতা ছোট, মোটা ও চামড়ার মতো শক্ত হয়ে যায়",
+    "গাছ খুব খাটো হয়ে যায়, গিঁটের মাঝের দূরত্ব কমে ঝোপের মতো দেখায়",
+    "ফুল ঝরে যায়; আক্রান্ত হওয়ার পর ফল খুব কম ধরে বা একদম ধরে না",
+    "শুরুতেই আক্রান্ত হলে গাছ হয়তো একটাও বিক্রিযোগ্য ফল দেবে না",
+    "পাতার নিচের পিঠে সাদা মাছি দেখা যায় — গাছ ঝাঁকালে সাদা ধোঁয়ার মতো উড়ে যায়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Pull out infected plants today",
+      "detail": "Bag each curled, stunted plant on the spot (so whiteflies do not fly off it) and remove it from the field. Every infected plant is a reservoir the whiteflies feed on and carry from."
+    },
+    {
+      "step": 2,
+      "title": "Attack the whitefly, not the virus",
+      "detail": "No spray cures the virus. Control the whitefly to protect the plants that are still healthy. Be clear about this so you do not waste money on 'virus medicine'."
+    },
+    {
+      "step": 3,
+      "title": "Put up yellow sticky traps",
+      "detail": "Install 8-10 yellow sticky traps per decimal at canopy height. They catch whiteflies and, just as importantly, tell you how bad the population is."
+    },
+    {
+      "step": 4,
+      "title": "Spray for whitefly if numbers are high",
+      "detail": "Use imidacloprid, thiamethoxam or spiromesifen against whitefly, aimed at the UNDERSIDE of leaves where they live. Rotate the chemical group each time — whitefly develops resistance very fast."
+    },
+    {
+      "step": 5,
+      "title": "Protect the nursery",
+      "detail": "Raise seedlings under a 40-50 mesh insect-proof net. Most TYLCV infection happens in the nursery or in the first 3 weeks after transplanting, before you ever see a symptom."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আক্রান্ত গাছ আজই তুলে ফেলুন",
+      "detail": "প্রতিটি কোঁকড়ানো, খাটো গাছ ওখানেই ব্যাগে ভরে ফেলুন (যাতে সাদা মাছি উড়ে না যায়) এবং জমি থেকে সরিয়ে নিন। প্রতিটি আক্রান্ত গাছ থেকেই সাদা মাছি ভাইরাস নিয়ে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "ভাইরাস নয়, সাদা মাছি দমন করুন",
+      "detail": "কোনো স্প্রেতেই ভাইরাস সারে না। বাকি সুস্থ গাছ বাঁচাতে সাদা মাছি দমন করুন। এটা পরিষ্কার বুঝে নিন, নাহলে 'ভাইরাসের ওষুধ' কিনে টাকা নষ্ট করবেন।"
+    },
+    {
+      "step": 3,
+      "title": "হলুদ আঠালো ফাঁদ পাতুন",
+      "detail": "প্রতি শতাংশে ৮-১০টি হলুদ আঠালো ফাঁদ গাছের সমান উচ্চতায় লাগান। এতে সাদা মাছি ধরা পড়ে, আর কতটা বেড়েছে তাও বোঝা যায়।"
+    },
+    {
+      "step": 4,
+      "title": "মাছি বেশি হলে স্প্রে করুন",
+      "detail": "সাদা মাছির বিরুদ্ধে ইমিডাক্লোপ্রিড, থায়ামেথোক্সাম বা স্পাইরোমেসিফেন দিন, পাতার নিচের পিঠে তাক করে — মাছি ওখানেই থাকে। প্রতিবার ওষুধের গ্রুপ পাল্টে দিন — সাদা মাছি খুব দ্রুত ওষুধ সহ্য করা শেখে।"
+    },
+    {
+      "step": 5,
+      "title": "বীজতলা রক্ষা করুন",
+      "detail": "৪০-৫০ মেশ পোকা-প্রতিরোধী নেটের নিচে চারা তৈরি করুন। বেশিরভাগ সংক্রমণ হয় বীজতলায় বা রোপণের প্রথম ৩ সপ্তাহে, লক্ষণ দেখার অনেক আগেই।"
+    }
+  ],
+  "cultural_control_en": [
+    "Raise seedlings under 40-50 mesh insect-proof net — the highest-return single practice for this disease",
+    "Grow TYLCV-tolerant varieties where available",
+    "Plant a barrier crop of maize or sorghum around the plot to slow whitefly entry",
+    "Use silver/reflective plastic mulch, which repels whitefly",
+    "Rogue infected plants weekly, starting from the first week after transplanting",
+    "Do not plant tomato next to an old tomato, brinjal, chilli or cotton field",
+    "Keep the field and bunds free of weeds that host whitefly",
+    "Destroy the crop completely at the end of the season — do not leave a ratoon"
+  ],
+  "cultural_control_bn": [
+    "৪০-৫০ মেশ পোকা-প্রতিরোধী নেটের নিচে চারা তৈরি করুন — এই রোগে একক কাজ হিসেবে এতেই সবচেয়ে বেশি লাভ",
+    "সম্ভব হলে এই ভাইরাস সহনশীল জাত লাগান",
+    "জমির চারপাশে ভুট্টা বা জোয়ারের বেড়া ফসল দিন যাতে সাদা মাছি সহজে ঢুকতে না পারে",
+    "রুপালি/চকচকে প্লাস্টিক মালচ ব্যবহার করুন, এতে সাদা মাছি দূরে থাকে",
+    "রোপণের প্রথম সপ্তাহ থেকেই প্রতি সপ্তাহে আক্রান্ত গাছ তুলে ফেলুন",
+    "পুরনো টমেটো, বেগুন, মরিচ বা তুলার জমির পাশে টমেটো লাগাবেন না",
+    "জমি ও আইল আগাছামুক্ত রাখুন, আগাছায় সাদা মাছি থাকে",
+    "মৌসুম শেষে পুরো ফসল নষ্ট করে ফেলুন — গাছ রেখে দেবেন না"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Imidacloprid 20% SL",
+      "product_name_bn": "ইমিডাক্লোপ্রিড ২০% এসএল",
+      "active_ingredient": "Imidacloprid",
+      "formulation": "SL",
+      "dose_en": "0.5 ml per litre of water (about 5 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ৫ মিলি)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Angle the nozzle UP to reach the leaf undersides where whiteflies sit. Spray in the early morning or late afternoon when whiteflies are less mobile.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে পাতার নিচের পিঠে স্প্রে করুন, সাদা মাছি ওখানেই বসে। খুব সকালে বা বিকেলে স্প্রে করুন, তখন মাছি কম ওড়ে।",
+      "timing_en": "Only when whitefly numbers are high on the sticky traps. Do not spray on a fixed calendar — that only breeds resistant whitefly.",
+      "timing_bn": "আঠালো ফাঁদে সাদা মাছি বেশি ধরা পড়লে তবেই দিন। নিয়ম করে ক্যালেন্ডার দেখে স্প্রে করবেন না — এতে শুধু ওষুধ-সহনশীল মাছিই তৈরি হয়।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 5,
+      "pre_harvest_interval_note_en": "Do not pick for 5 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৫ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Admire 20 SL",
+        "Imidor 20 SL",
+        "Tido 20 SL"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Imidacloprid registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Highly toxic to bees. Tomato is bee-pollinated in open field — do not spray during flowering hours. Rotate with a different chemical group every application.",
+      "caution_bn": "মৌমাছির জন্য মারাত্মক বিষাক্ত। খোলা জমিতে টমেটোর পরাগায়ন মৌমাছি করে — ফুল ফোটার সময় স্প্রে করবেন না। প্রতিবার ভিন্ন গ্রুপের ওষুধ দিন।",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci)",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Thiamethoxam 25% WG",
+      "product_name_bn": "থায়ামেথোক্সাম ২৫% ডব্লিউজি",
+      "active_ingredient": "Thiamethoxam",
+      "formulation": "WG",
+      "dose_en": "0.2 g per litre of water (about 2 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.২ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray, nozzle angled up to the leaf undersides.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে নজেল উপরে তাক করে পাতার নিচের পিঠে দিন।",
+      "timing_en": "Rotation partner for imidacloprid. Note both are neonicotinoids — for a true rotation, alternate with a different group such as spiromesifen or a soap/oil treatment.",
+      "timing_bn": "ইমিডাক্লোপ্রিডের সাথে পালা করে দেওয়ার জন্য। তবে দুটোই একই নিওনিকোটিনয়েড গ্রুপের — সত্যিকারের পালা করতে হলে স্পাইরোমেসিফেন বা সাবান/তেল জাতীয় ভিন্ন গ্রুপের কিছু দিন।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 5,
+      "pre_harvest_interval_note_en": "Do not pick for 5 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৫ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Actara 25 WG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Thiamethoxam (Actara 25 WG, Syngenta Bangladesh Limited) is marketed in Bangladesh; verify the AP number and the registered crop/pest claim against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Highly toxic to bees. Do not spray flowering crops.",
+      "caution_bn": "মৌমাছির জন্য মারাত্মক বিষাক্ত। ফুল ফোটা ফসলে স্প্রে করবেন না।",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci)",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Insect-proof nursery netting — the most effective measure of all, chemical or not",
+    "Yellow sticky traps at 8-10 per decimal",
+    "Neem oil at 3-5 ml/L with a sticker, sprayed on leaf undersides, repels whitefly and is safe for most natural enemies",
+    "Silver reflective mulch",
+    "Barrier crops of maize around the plot",
+    "Conserve whitefly parasitoids (Encarsia) by avoiding routine broad-spectrum sprays"
+  ],
+  "organic_alternatives_bn": [
+    "বীজতলায় পোকা-প্রতিরোধী নেট — ওষুধ হোক বা না হোক, সব ব্যবস্থার মধ্যে এটাই সবচেয়ে কার্যকর",
+    "প্রতি শতাংশে ৮-১০টি হলুদ আঠালো ফাঁদ",
+    "প্রতি লিটারে ৩-৫ মিলি নিম তেল আঠালো পদার্থসহ পাতার নিচের পিঠে স্প্রে করলে সাদা মাছি দূরে থাকে, উপকারী পোকার ক্ষতি হয় না",
+    "রুপালি চকচকে মালচ",
+    "জমির চারপাশে ভুট্টার বেড়া ফসল",
+    "নিয়মিত ব্যাপক কীটনাশক এড়িয়ে সাদা মাছির পরজীবী পোকা (এনকারশিয়া) বাঁচান"
+  ],
+  "fertilizer_advice_en": "Balanced feeding helps healthy plants outgrow light infection, but no amount of fertiliser will recover a badly infected plant. Do not add extra urea hoping the plant will 'come back' — soft new growth just attracts more whitefly.",
+  "fertilizer_advice_bn": "সুষম সার দিলে হালকা আক্রান্ত সুস্থ গাছ কিছুটা সামলে নিতে পারে, কিন্তু বেশি আক্রান্ত গাছ কোনো সারেই ভালো হবে না। গাছ 'ফিরে আসবে' ভেবে বাড়তি ইউরিয়া দেবেন না — নরম নতুন পাতায় আরও সাদা মাছি আসবে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Neonicotinoids are highly toxic to bees — never spray during flowering or when bees are foraging, and warn any beekeeper nearby. Respect the 5-day PHI before picking. Wash with soap after spraying. Never rinse the sprayer into a pond or canal.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। নিওনিকোটিনয়েড ওষুধ মৌমাছির জন্য মারাত্মক বিষাক্ত — ফুল ফোটা অবস্থায় বা মৌমাছি চলাচলের সময় কখনো স্প্রে করবেন না, আশপাশে মৌচাষি থাকলে জানিয়ে দিন। ফল তোলার আগে ৫ দিনের পিএইচআই মানুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন। পুকুর বা খালে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered insecticides. Several countries restrict neonicotinoids for bee safety; in Bangladesh they remain registered but should be used only on evidence of whitefly, not routinely. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত কীটনাশক ব্যবহার করুন। মৌমাছির নিরাপত্তার কারণে কয়েকটি দেশে নিওনিকোটিনয়েড সীমিত; বাংলাদেশে এগুলো নিবন্ধিত, তবে সাদা মাছি আছে প্রমাণ পেলে তবেই দিন, নিয়ম করে নয়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 as soon as you see the first curled stunted plants. Early village-level action on whitefly is the only thing that limits TYLCV. Also call if more than 10% of plants are affected within 4 weeks of transplanting.",
+  "when_to_call_helpline_bn": "প্রথম কোঁকড়ানো খাটো গাছ দেখা মাত্রই ১৬১২৩ নম্বরে ফোন করুন। শুরুতেই গ্রামভিত্তিকভাবে সাদা মাছি দমন করাই একমাত্র উপায়। রোপণের ৪ সপ্তাহের মধ্যে ১০% এর বেশি গাছ আক্রান্ত হলেও ফোন করুন।",
+  "expected_outcome_en": "Infected plants will not recover — this is normal, not a treatment failure. Success means no NEW curled plants appear after 2-3 weeks. Plants infected after fruit set often still give a partial crop; plants infected in the first month usually give nothing.",
+  "expected_outcome_bn": "আক্রান্ত গাছ আর ভালো হবে না — এটাই স্বাভাবিক, চিকিৎসা ব্যর্থ হয়নি। ২-৩ সপ্তাহ পর নতুন করে আর কোঁকড়ানো গাছ না এলে বুঝবেন কাজ হয়েছে। ফল ধরার পর আক্রান্ত হলে কিছু ফসল পাওয়া যায়; প্রথম মাসে আক্রান্ত হলে সাধারণত কিছুই পাওয়া যায় না।",
+  "related_shop_products": [
+    "Imidacloprid 20% SL 100ml",
+    "Actara 25 WG (Thiamethoxam) 10g",
+    "Yellow sticky trap (pack of 10)",
+    "Insect-proof net 50 mesh (per metre)",
+    "Neem oil 250ml",
+    "Silver reflective mulch film"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "'Tomato pests and diseases in Bangladesh and India: farmers' management and potential economic gains from insect resistant varieties and integrated pest management', International Journal of Pest Management (doi 10.1080/09670874.2023.2252760); 'Tomato Cultivation in Bangladesh: Insights into Pest Awareness and Disease Management' (researchgate 391850970); DAE Plant Protection Wing registered pesticide list",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "CRITICAL for app logic: viral, no cure. Insecticide targets the whitefly vector only and the UI must say so plainly. Brand AP numbers not individually verified.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Imidacloprid 20% SL 100ml",
+      "sku": "PEST-0048",
+      "name_en": "Imidacloprid 20% SL 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Actara 25 WG (Thiamethoxam) 10g",
+      "sku": "PEST-0051",
+      "name_en": "Thiamethoxam 25% WG 10g",
+      "category": "pesticide",
+      "match_score": 1.108,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Yellow sticky trap (pack of 10)",
+      "sku": "EQ-0069",
+      "name_en": "Yellow sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Insect-proof net 50 mesh (per metre)",
+      "sku": "EQ-0074",
+      "name_en": "Insect-proof net 50 mesh (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Silver reflective mulch film",
+      "sku": "EQ-0078",
+      "name_en": "Silver reflective mulch film (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

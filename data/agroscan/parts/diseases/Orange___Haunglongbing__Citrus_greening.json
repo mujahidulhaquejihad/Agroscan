@@ -1,0 +1,250 @@
+{
+  "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+  "kb_key": "citrus_greening",
+  "crop_en": "Citrus (orange, malta, lemon)",
+  "crop_bn": "লেবু জাতীয় ফল (কমলা, মাল্টা, লেবু)",
+  "disease_en": "Huanglongbing (citrus greening)",
+  "disease_bn": "সাইট্রাস গ্রিনিং (হুয়াংলংবিং) রোগ",
+  "pathogen": "Candidatus Liberibacter asiaticus, transmitted by Asian citrus psyllid (Diaphorina citri)",
+  "severity": "high",
+  "bangladesh_relevance": "grown_regionally",
+  "bangladesh_note_en": "Citrus is grown in Bangladesh mainly in the Sylhet hill areas and, increasingly, malta and lemon across Sylhet, Moulvibazar and the northern districts under DAE promotion. Citrus greening is a serious regional threat to these plantings.",
+  "bangladesh_note_bn": "বাংলাদেশে লেবু জাতীয় ফল মূলত সিলেটের পাহাড়ি এলাকায় হয়; ডিএই-র প্রচারে সিলেট, মৌলভীবাজার ও উত্তরাঞ্চলে মাল্টা ও লেবুর চাষ বাড়ছে। এই বাগানগুলোর জন্য সাইট্রাস গ্রিনিং একটি গুরুতর হুমকি।",
+  "summary_en": "A bacterial disease spread by the citrus psyllid. There is no cure — an infected tree declines and eventually dies. Leaves get blotchy asymmetric yellowing, fruit stays small, green at one end and bitter. Control means removing infected trees, controlling the psyllid and planting only certified disease-free saplings.",
+  "summary_bn": "সাইট্রাস সিলা পোকা এই ব্যাকটেরিয়া ছড়ায়। এর কোনো চিকিৎসা নেই — আক্রান্ত গাছ ধীরে ধীরে দুর্বল হয়ে মরে যায়। পাতায় অসম ছোপ ছোপ হলুদ দাগ পড়ে, ফল ছোট থাকে, এক দিক সবুজ থেকে যায় আর স্বাদ তেতো হয়। প্রতিকার হলো আক্রান্ত গাছ কেটে ফেলা, সিলা পোকা দমন করা আর শুধু সার্টিফাইড রোগমুক্ত চারা লাগানো।",
+  "symptoms_en": [
+    "Blotchy, ASYMMETRIC yellowing of leaves — the yellow patches do not match on both sides of the midrib. This is the key sign that separates it from a nutrient deficiency, where yellowing is symmetric.",
+    "Yellow shoots standing out against the green canopy",
+    "Leaves become small, upright and leathery, with corky raised veins",
+    "Fruit is small, lopsided, stays green at the bottom end, and tastes bitter and sour",
+    "Seeds inside are aborted and dark",
+    "Heavy premature fruit drop; branch dieback; the tree declines over 2-5 years",
+    "Asian citrus psyllid nymphs on new flush, producing white waxy tubules"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোপ ছোপ হলুদ দাগ, তবে অসমভাবে — মধ্যশিরার দুই পাশে দাগ মেলে না। পুষ্টির ঘাটতি থেকে আলাদা করার মূল লক্ষণ এটাই, কারণ ঘাটতিতে দুই পাশে সমানভাবে হলুদ হয়।",
+    "সবুজ গাছের মধ্যে আলাদা করে চোখে পড়ার মতো হলুদ ডাল",
+    "পাতা ছোট, খাড়া ও চামড়ার মতো শক্ত হয়, শিরা উঁচু ও খসখসে হয়ে যায়",
+    "ফল ছোট, বাঁকা, নিচের দিক সবুজ থেকে যায়, স্বাদ তেতো ও টক",
+    "ভেতরের বীজ নষ্ট ও কালচে হয়ে যায়",
+    "প্রচুর ফল আগেভাগে ঝরে পড়ে; ডাল মরতে থাকে; ২-৫ বছরে গাছ শেষ হয়ে যায়",
+    "কচি কুশিতে সাইট্রাস সিলা পোকার বাচ্চা, সাদা মোমের মতো নল তৈরি করে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Report it — this is a regional threat, not just your tree",
+      "detail": "Call 16123 and inform your Upazila Agriculture Office. Citrus greening destroys whole growing regions once established. Early reporting matters far more than anything you do on your own tree."
+    },
+    {
+      "step": 2,
+      "title": "Do not buy 'greening medicine'",
+      "detail": "There is no cure. Any product sold as a treatment for citrus greening is a waste of money. Trunk injections and foliar nutrients only mask symptoms; they do not remove the bacterium."
+    },
+    {
+      "step": 3,
+      "title": "Remove and destroy confirmed infected trees",
+      "detail": "Cut the tree down and burn or bury it. Spray for psyllids BEFORE removing the tree, otherwise the psyllids on it will simply fly to your healthy trees."
+    },
+    {
+      "step": 4,
+      "title": "Control the psyllid on the new flush",
+      "detail": "The psyllid only breeds on young flush. Time insecticide applications to flush periods, not to a calendar."
+    },
+    {
+      "step": 5,
+      "title": "Only plant certified disease-free saplings",
+      "detail": "Most citrus greening spread in a new area comes in on infected nursery plants. Buy only from a certified nursery, never from a roadside seller."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "জানিয়ে দিন — এটা শুধু আপনার গাছের সমস্যা নয়, পুরো এলাকার হুমকি",
+      "detail": "১৬১২৩ নম্বরে ফোন করুন ও উপজেলা কৃষি অফিসে জানান। একবার ছড়িয়ে পড়লে সাইট্রাস গ্রিনিং পুরো এলাকার বাগান শেষ করে দেয়। নিজের গাছে যা করবেন তার চেয়ে আগেভাগে খবর দেওয়া অনেক বেশি জরুরি।"
+    },
+    {
+      "step": 2,
+      "title": "'গ্রিনিং-এর ওষুধ' কিনবেন না",
+      "detail": "এর কোনো চিকিৎসা নেই। সাইট্রাস গ্রিনিং সারানোর ওষুধ বলে যা বিক্রি হয় তা টাকার অপচয়। কাণ্ডে ইনজেকশন বা পাতায় পুষ্টি দিলে শুধু লক্ষণ চাপা পড়ে, জীবাণু যায় না।"
+    },
+    {
+      "step": 3,
+      "title": "নিশ্চিত আক্রান্ত গাছ কেটে নষ্ট করুন",
+      "detail": "গাছ কেটে পুড়িয়ে বা পুঁতে ফেলুন। গাছ কাটার আগে সিলা পোকার জন্য স্প্রে করে নিন, নাহলে ওই গাছের পোকা উড়ে আপনার সুস্থ গাছেই চলে যাবে।"
+    },
+    {
+      "step": 4,
+      "title": "কচি কুশিতে সিলা পোকা দমন করুন",
+      "detail": "সিলা পোকা শুধু কচি কুশিতেই বংশবৃদ্ধি করে। ক্যালেন্ডার দেখে নয়, কুশি বের হওয়ার সময় দেখে কীটনাশক দিন।"
+    },
+    {
+      "step": 5,
+      "title": "শুধু সার্টিফাইড রোগমুক্ত চারা লাগান",
+      "detail": "নতুন এলাকায় এই রোগ বেশিরভাগ সময় আসে আক্রান্ত নার্সারির চারার সাথে। শুধু সার্টিফাইড নার্সারি থেকে কিনুন, রাস্তার পাশের বিক্রেতার কাছ থেকে কখনো নয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Plant only certified disease-free saplings from a registered nursery",
+    "Remove and destroy infected trees promptly — after spraying for psyllids",
+    "Monitor new flush for psyllid nymphs (white waxy tubules) every 2 weeks",
+    "Do not move citrus planting material between districts",
+    "Remove alternative host plants such as Murraya (kamini) from around the orchard",
+    "Keep trees vigorous with balanced nutrition so they tolerate infection longer",
+    "Coordinate psyllid control across the whole neighbourhood — one untreated orchard reinfects the rest"
+  ],
+  "cultural_control_bn": [
+    "শুধু নিবন্ধিত নার্সারির সার্টিফাইড রোগমুক্ত চারা লাগান",
+    "সিলা পোকার জন্য স্প্রে করার পর আক্রান্ত গাছ দ্রুত কেটে নষ্ট করুন",
+    "প্রতি ২ সপ্তাহে কচি কুশিতে সিলা পোকার বাচ্চা (সাদা মোমের নল) আছে কিনা দেখুন",
+    "এক জেলা থেকে আরেক জেলায় লেবু জাতীয় গাছের চারা নেবেন না",
+    "বাগানের আশপাশ থেকে কামিনী গাছের মতো বিকল্প আশ্রয়দাতা গাছ সরিয়ে ফেলুন",
+    "সুষম সার দিয়ে গাছ সবল রাখুন যাতে রোগ নিয়েও বেশি দিন টেকে",
+    "পুরো এলাকায় একসাথে সিলা পোকা দমন করুন — একটি বাগান বাদ থাকলে সেখান থেকেই আবার ছড়ায়"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Imidacloprid 20% SL (for the psyllid vector only)",
+      "product_name_bn": "ইমিডাক্লোপ্রিড ২০% এসএল (শুধু সিলা পোকার জন্য)",
+      "active_ingredient": "Imidacloprid",
+      "formulation": "SL",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "Depends on tree size; ensure the new flush is thoroughly covered",
+      "application_method_en": "Spray the new flush thoroughly — that is where psyllid nymphs live. Understand clearly: this protects healthy trees from new infection. It does not cure a tree that already has greening.",
+      "application_method_bn": "কচি কুশি ভালোভাবে ভিজিয়ে স্প্রে করুন — সিলা পোকার বাচ্চা ওখানেই থাকে। পরিষ্কার করে বুঝে নিন: এতে সুস্থ গাছ নতুন সংক্রমণ থেকে বাঁচে। যে গাছে রোগ ধরে গেছে তা সারে না।",
+      "timing_en": "At each new flush, when psyllid nymphs are found. Rotate chemical groups.",
+      "timing_bn": "প্রতিবার কচি কুশি বের হলে, সিলা পোকার বাচ্চা পেলে। ওষুধের গ্রুপ পাল্টে দিন।",
+      "interval_days": 21,
+      "max_applications_per_season": 3,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ২১ দিন ফল পাড়বেন না।",
+      "brands_available_bd": [
+        "Admire 20 SL",
+        "Imidor 20 SL",
+        "Tido 20 SL"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Imidacloprid registered in Bangladesh; verify brand AP number and citrus label claim against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Highly toxic to bees. Citrus flowers are heavily visited by bees — never spray during flowering.",
+      "caution_bn": "মৌমাছির জন্য মারাত্মক বিষাক্ত। লেবু জাতীয় গাছের ফুলে প্রচুর মৌমাছি আসে — ফুল ফোটার সময় কখনো স্প্রে করবেন না।",
+      "cures_disease": false,
+      "targets_vector": "Asian citrus psyllid (Diaphorina citri)",
+      "purpose_en": "Controls the Asian citrus psyllid (Diaphorina citri) that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Certified clean planting material — the only measure that reliably keeps greening out of a new orchard",
+    "Neem oil at 5 ml/L on new flush repels and suppresses psyllid nymphs",
+    "Removing Murraya (kamini) hedges and ornamental citrus relatives near the orchard",
+    "Conserving the psyllid parasitoid Tamarixia where present",
+    "Prompt removal of infected trees"
+  ],
+  "organic_alternatives_bn": [
+    "সার্টিফাইড পরিষ্কার চারা — নতুন বাগানে এই রোগ ঢোকা ঠেকানোর একমাত্র নির্ভরযোগ্য উপায়",
+    "কচি কুশিতে প্রতি লিটারে ৫ মিলি নিম তেল দিলে সিলা পোকা দূরে থাকে ও বাচ্চা কমে",
+    "বাগানের কাছে কামিনীর বেড়া ও লেবু গোত্রের শোভাবর্ধক গাছ সরিয়ে ফেলা",
+    "থাকলে সিলা পোকার পরজীবী টামারিক্সিয়া বাঁচানো",
+    "আক্রান্ত গাছ দ্রুত কেটে ফেলা"
+  ],
+  "fertilizer_advice_en": "Balanced nutrition, especially zinc, manganese and magnesium, keeps an infected tree productive for longer, but it does not cure the disease. Do not let a nutrition programme become an excuse to keep an infected tree standing — it will keep infecting the neighbourhood.",
+  "fertilizer_advice_bn": "সুষম সার, বিশেষ করে জিংক, ম্যাঙ্গানিজ ও ম্যাগনেসিয়াম দিলে আক্রান্ত গাছ কিছুদিন বেশি ফলন দেয়, কিন্তু রোগ সারে না। সার দিয়ে চালিয়ে নেওয়ার অজুহাতে আক্রান্ত গাছ দাঁড় করিয়ে রাখবেন না — ওখান থেকে আশপাশে রোগ ছড়াতেই থাকবে।",
+  "safety_warning_en": "Wear gloves, mask, goggles, hat and full-sleeve clothing when spraying trees. Never spray citrus during flowering — bees are essential for the crop and imidacloprid is highly toxic to them. Observe the PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "গাছে স্প্রে করার সময় হাতমোজা, মাস্ক, চশমা, টুপি ও ফুলহাতা পোশাক পরুন। ফুল ফোটার সময় লেবু জাতীয় গাছে কখনো স্প্রে করবেন না — এই ফসলে মৌমাছি অপরিহার্য আর ইমিডাক্লোপ্রিড ওদের জন্য মারাত্মক বিষাক্ত। পিএইচআই মানুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "There is no registered cure for citrus greening anywhere in the world. Report suspected cases to DAE. Do not move citrus planting material between districts — this is how the disease spreads regionally. Krishi Call Center: 16123.",
+  "legal_note_bn": "সারা বিশ্বে কোথাও সাইট্রাস গ্রিনিং সারানোর নিবন্ধিত ওষুধ নেই। সন্দেহ হলে ডিএই-কে জানান। এক জেলা থেকে আরেক জেলায় লেবু জাতীয় গাছের চারা নেবেন না — এভাবেই রোগ এলাকা থেকে এলাকায় ছড়ায়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 on first suspicion. Do not wait. Report even a single suspicious tree — regional containment depends on early reports.",
+  "when_to_call_helpline_bn": "সন্দেহ হওয়া মাত্রই ১৬১২৩ নম্বরে ফোন করুন। দেরি করবেন না। একটি গাছ সন্দেহজনক হলেও জানান — এলাকাভিত্তিক প্রতিরোধ আগেভাগে খবর পাওয়ার উপরই নির্ভর করে।",
+  "expected_outcome_en": "An infected tree will not recover, whatever you spray. Removing it and controlling psyllids protects the healthy trees around it. Orchards that combine clean planting material, prompt tree removal and area-wide psyllid control can stay productive; those that do not usually lose the block within 5-8 years.",
+  "expected_outcome_bn": "যা-ই স্প্রে করুন, আক্রান্ত গাছ আর ভালো হবে না। ওই গাছ কেটে ফেলে সিলা পোকা দমন করলে আশপাশের সুস্থ গাছ বাঁচে। যে বাগানে পরিষ্কার চারা, দ্রুত আক্রান্ত গাছ কাটা আর পুরো এলাকায় পোকা দমন — এই তিনটি একসাথে করা হয়, সেই বাগান টিকে যায়; না করলে সাধারণত ৫-৮ বছরেই পুরো বাগান শেষ হয়ে যায়।",
+  "related_shop_products": [
+    "Imidacloprid 20% SL 100ml",
+    "Neem oil 250ml",
+    "Certified malta/lemon sapling",
+    "Zinc sulphate monohydrate 1kg",
+    "Power sprayer (petrol) 25L",
+    "Pruning saw"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "DAE citrus (malta and lemon) expansion programme guidance for Sylhet and northern districts; international HLB management consensus (no curative treatment exists); DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "CRITICAL for app logic: incurable bacterial disease. The UI must state plainly that no product cures it, because 'greening medicine' is widely mis-sold. The asymmetric vs symmetric yellowing test is the practical field diagnostic and separates HLB from zinc/manganese deficiency, which looks similar.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Imidacloprid 20% SL 100ml",
+      "sku": "PEST-0048",
+      "name_en": "Imidacloprid 20% SL 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Certified malta/lemon sapling",
+      "sku": "SEED-0071",
+      "name_en": "Certified malta / lemon sapling (citrus) 1 sapling",
+      "category": "seed",
+      "match_score": 0.949,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Zinc sulphate monohydrate 1kg",
+      "sku": "FERT-0017",
+      "name_en": "Zinc sulphate monohydrate 33% Zn 1kg",
+      "category": "fertilizer",
+      "match_score": 1.212,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Power sprayer (petrol) 25L",
+      "sku": "EQ-0005",
+      "name_en": "Power sprayer (petrol) 25L",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Pruning saw",
+      "sku": "EQ-0041",
+      "name_en": "Pruning saw",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

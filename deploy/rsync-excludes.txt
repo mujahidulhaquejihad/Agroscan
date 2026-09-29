@@ -1,0 +1,19 @@
+# Runtime-only copy for Proxmox CT 101. No Datasets, no LoRA, no train checkpoints.
+Datasets
+archive
+llm_data
+llm
+mobile
+notebooks
+docs
+.git
+.venv
+.vscode
+__pycache__
+*.pyc
+*.train.pt
+Model_Comparison
+*.7z
+*.zip
+agent-transcripts
+.cursor

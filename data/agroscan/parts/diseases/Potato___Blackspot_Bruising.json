@@ -1,0 +1,112 @@
+{
+  "class_name": "Potato___Blackspot_Bruising",
+  "kb_key": "blackspot_bruising",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Blackspot bruising",
+  "disease_bn": "আলুর ব্ল্যাকস্পট আঘাত",
+  "pathogen": "Abiotic (handling bruise), not a pathogen",
+  "severity": "low",
+  "summary_en": "Blackspot bruising on Potato (Abiotic (handling bruise), not a pathogen). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "আলু-এ আলুর ব্ল্যাকস্পট আঘাত (Abiotic (handling bruise), not a pathogen)। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Grey-black spots under the skin after impact; skin often intact",
+    "Shows after 24-48 hours in store",
+    "Not infectious — do not spray"
+  ],
+  "symptoms_bn": [
+    "আঘাতের পর খোসার নিচে ধূসর-কালো দাগ; খোসা প্রায়ই সালামত",
+    "গুদামে ২৪-৪৮ ঘণ্টা পর দেখা যায়",
+    "ছোঁয়াচে নয় — স্প্রে করবেন না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do not spray",
+      "detail": "This label is not a living disease you can kill with a fungicide or insecticide."
+    },
+    {
+      "step": 2,
+      "title": "Look again at the cause",
+      "detail": "Bruise, nutrient scorch, or an unclear photo are more likely. Retake a close, well-lit picture."
+    },
+    {
+      "step": 3,
+      "title": "Fix handling or feeding, not the bottle",
+      "detail": "For bruising: harvest when skins are set, avoid drops. For hunger: follow FRG-2018, do not dump extra urea on a guess."
+    },
+    {
+      "step": 4,
+      "title": "Call 16123 if the crop is still declining",
+      "detail": "Take a sample leaf or tuber to the Upazila Agriculture Office."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "স্প্রে করবেন না",
+      "detail": "এই লেবেল এমন জীবিত রোগ নয় যা ছত্রাকনাশক বা কীটনাশকে মারা যায়।"
+    },
+    {
+      "step": 2,
+      "title": "কারণ আবার দেখুন",
+      "detail": "আঘাত, সার পোড়া বা অস্পষ্ট ছবিই বেশি সম্ভব। কাছ থেকে ভালো আলোয় ছবি তুলুন।"
+    },
+    {
+      "step": 3,
+      "title": "হাতের কাজ বা সার ঠিক করুন, বোতল নয়",
+      "detail": "আঘাত হলে: খোসা সেট হলে তুলুন, ফেলবেন না। ক্ষুধা হলে: এফআরজি-২০১৮, অনুমানে বাড়তি ইউরিয়া নয়।"
+    },
+    {
+      "step": 4,
+      "title": "ফসল খারাপ হতে থাকলে ১৬১২৩",
+      "detail": "একটি পাতা বা আলু নিয়ে উপজেলা কৃষি অফিসে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Rogueing, rotation and clean seed — not a bottle — are the real organic options here"
+  ],
+  "organic_alternatives_bn": [
+    "এখানে আসল জৈব উপায় গাছ তোলা, পালা ও পরিষ্কার বীজ — বোতল নয়"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "No pesticide is recommended for this class.",
+  "safety_warning_bn": "এই শ্রেণিতে কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Potato keeps getting worse after the steps above, or if you are not sure this is Blackspot bruising.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও আলু খারাপ হতে থাকলে, অথবা এটা আলুর ব্ল্যাকস্পট আঘাত কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Potato___Blackspot_Bruising. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": []
+}

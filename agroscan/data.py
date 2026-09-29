@@ -31,7 +31,7 @@ def _folder_image_loader(path: str):
 # --------------------------------------------------------------------------- #
 # Transforms
 # --------------------------------------------------------------------------- #
-def build_transforms(input_size: int, train: bool) -> transforms.Compose:
+def build_transforms(input_size: int, train: bool) -> transforms.Compose:   ###
     if train:
         return transforms.Compose(
             [

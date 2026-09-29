@@ -1,0 +1,241 @@
+{
+  "class_name": "Tomato___Septoria_leaf_spot",
+  "kb_key": "septoria_leaf_spot",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Septoria leaf spot",
+  "disease_bn": "টমেটোর সেপ্টোরিয়া পাতার দাগ রোগ",
+  "pathogen": "Septoria lycopersici",
+  "severity": "medium",
+  "summary_en": "Many small round spots with grey centres and dark edges cover the lower leaves, each with tiny black dots in the middle. It does not attack the fruit, but it strips the leaves and the exposed fruit then gets sunscald.",
+  "summary_bn": "নিচের পাতা ভরে যায় অনেক ছোট ছোট গোল দাগে — মাঝখানে ধূসর, কিনারা গাঢ়, আর মাঝখানে খুব ছোট কালো ফোঁটা। ফলে আক্রমণ করে না, কিন্তু পাতা ঝরিয়ে দেয়, ফলে রোদ লেগে ফল পুড়ে যায়।",
+  "symptoms_en": [
+    "Many small circular spots, 2-4 mm, with grey or tan centres and dark brown margins",
+    "Tiny black pinhead dots (pycnidia) visible in the centre of older spots — look with a hand lens",
+    "Starts on the lowest leaves after the first fruit set and moves steadily upward",
+    "Leaves yellow, brown and drop; the plant is bare from below",
+    "Fruit is not directly infected, but sunscald follows the leaf loss",
+    "Spreads by rain splash, overhead irrigation and workers moving through wet plants"
+  ],
+  "symptoms_bn": [
+    "অনেক ছোট গোল দাগ, ২-৪ মিলিমিটার, মাঝখানে ধূসর বা হালকা বাদামি, কিনারা গাঢ় বাদামি",
+    "পুরনো দাগের মাঝখানে পিনের মাথার মতো ছোট কালো ফোঁটা দেখা যায় — ম্যাগনিফাইং গ্লাস দিয়ে দেখুন",
+    "প্রথম ফল ধরার পর সবচেয়ে নিচের পাতা থেকে শুরু হয়ে ধীরে ধীরে উপরে ওঠে",
+    "পাতা হলুদ-বাদামি হয়ে ঝরে যায়; গাছ নিচ থেকে ন্যাড়া হয়ে যায়",
+    "ফলে সরাসরি রোগ ধরে না, তবে পাতা ঝরার পর ফলে রোদে পোড়া দাগ পড়ে",
+    "বৃষ্টির ছিটা, উপর দিয়ে সেচ আর ভেজা গাছের মধ্যে হাঁটাচলার মাধ্যমে ছড়ায়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Remove the spotted lower leaves",
+      "detail": "Take off every heavily spotted leaf from the bottom of the plant and carry it out of the field. Do this before spraying — you are removing the spore factory."
+    },
+    {
+      "step": 2,
+      "title": "Mulch immediately",
+      "detail": "Straw or plastic mulch stops rain and irrigation splashing spores from the soil onto the leaves. For this disease mulch is not optional."
+    },
+    {
+      "step": 3,
+      "title": "Stop working in wet plants",
+      "detail": "Your hands and clothes carry the spores from plant to plant. Only prune, tie or pick when the plants are dry."
+    },
+    {
+      "step": 4,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb at 2-2.5 g/L or chlorothalonil every 7-10 days, covering the lower canopy thoroughly. Keep going until the top leaves stay clean."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "নিচের দাগওয়ালা পাতা সরান",
+      "detail": "গাছের নিচের বেশি দাগওয়ালা প্রতিটি পাতা ছিঁড়ে জমির বাইরে নিয়ে যান। স্প্রের আগে এই কাজটা করুন — জীবাণুর কারখানাই সরিয়ে দিচ্ছেন আপনি।"
+    },
+    {
+      "step": 2,
+      "title": "এখনই মালচ দিন",
+      "detail": "খড় বা প্লাস্টিক মালচ দিলে বৃষ্টি ও সেচের ছিটায় মাটি থেকে জীবাণু পাতায় ওঠে না। এই রোগে মালচ বাদ দেওয়ার সুযোগ নেই।"
+    },
+    {
+      "step": 3,
+      "title": "ভেজা গাছে কাজ করবেন না",
+      "detail": "আপনার হাত ও কাপড়েই জীবাণু এক গাছ থেকে আরেক গাছে যায়। গাছ শুকনো থাকলে তবেই ডাল ছাঁটুন, বাঁধুন বা ফল তুলুন।"
+    },
+    {
+      "step": 4,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "৭-১০ দিন পর পর প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব বা ক্লোরোথ্যালোনিল দিন, নিচের পাতায় ভালোভাবে লাগান। উপরের পাতা পরিষ্কার না থাকা পর্যন্ত চালিয়ে যান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Rotate away from tomato for 2 years; the fungus survives on residue and on solanaceous weeds",
+    "Remove and destroy all crop residue after harvest",
+    "Control solanaceous weeds (e.g. wild nightshade) around the field",
+    "Stake plants and mulch every bed",
+    "Use drip or furrow irrigation, never overhead",
+    "Use clean seed and a clean nursery bed"
+  ],
+  "cultural_control_bn": [
+    "২ বছর টমেটো বাদ দিয়ে অন্য ফসল করুন; এই ছত্রাক ফসলের অবশিষ্টাংশ ও একই গোত্রের আগাছায় বেঁচে থাকে",
+    "ফসল কাটার পর সব অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "জমির চারপাশে টমেটো গোত্রের আগাছা (যেমন বন-বেগুন) পরিষ্কার করুন",
+    "গাছে খুঁটি দিন ও প্রতিটি বেডে মালচ দিন",
+    "ড্রিপ বা নালা সেচ দিন, উপর দিয়ে কখনো নয়",
+    "পরিষ্কার বীজ ও পরিষ্কার বীজতলা ব্যবহার করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray focused on the lower and middle canopy, both leaf surfaces.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে গাছের নিচের ও মাঝের অংশে, পাতার দুই পিঠে দিন।",
+      "timing_en": "Preventive, every 7-10 days from first fruit set through the rainy or dewy period.",
+      "timing_bn": "প্রতিরোধমূলক, প্রথম ফল ধরার পর থেকে বৃষ্টি বা শিশিরের সময়জুড়ে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Copper oxychloride 50% WP",
+      "product_name_bn": "কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+      "active_ingredient": "Copper oxychloride",
+      "formulation": "WP",
+      "dose_en": "3 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ৩ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray as a protectant, especially useful in low-input plots.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে প্রতিরোধক হিসেবে দিন, কম খরচের চাষে বিশেষ উপযোগী।",
+      "timing_en": "Preventive, every 10 days in wet weather.",
+      "timing_bn": "প্রতিরোধমূলক, ভেজা আবহাওয়ায় ১০ দিন পর পর।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Cupravit 50 WP",
+        "Champion 77 WP",
+        "Blue Copper"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Copper fungicides registered in Bangladesh; Champion 77 WP recorded as AP-354, Petrochem (Bangladesh) Limited.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-354"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Mulching and leaf removal — the two highest-impact non-chemical actions for this disease",
+    "Copper-based protectants",
+    "Wider spacing and staking so leaves dry fast",
+    "Clean-up of solanaceous weeds around the plot"
+  ],
+  "organic_alternatives_bn": [
+    "মালচ দেওয়া ও আক্রান্ত পাতা ছাঁটা — এই রোগে ওষুধ ছাড়া সবচেয়ে কার্যকর দুটি কাজ",
+    "কপারভিত্তিক প্রতিরোধক ওষুধ",
+    "বেশি দূরত্বে লাগানো ও খুঁটি দেওয়া যাতে পাতা দ্রুত শুকায়",
+    "জমির চারপাশে টমেটো গোত্রের আগাছা পরিষ্কার করা"
+  ],
+  "fertilizer_advice_en": "Keep the plant well fed through fruiting so it can keep producing new leaves faster than the disease removes old ones. Follow FRG-2018 and split top-dressings across the picking period.",
+  "fertilizer_advice_bn": "ফল ধরার সময় গাছকে ভালোভাবে সার দিন যাতে রোগে পুরনো পাতা ঝরার চেয়ে দ্রুত নতুন পাতা গজায়। এফআরজি-২০১৮ মেনে চলুন এবং ফল তোলার সময়জুড়ে কিস্তিতে সার দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Respect the 7-day PHI before each picking. Wash with soap after spraying. Do not rinse the sprayer near ponds or canals.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। প্রতিবার ফল তোলার আগে ৭ দিনের পিএইচআই মেনে চলুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন। পুকুর বা খালের কাছে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if defoliation reaches the middle of the plant or if you cannot tell this apart from early blight.",
+  "when_to_call_helpline_bn": "গাছের মাঝামাঝি পর্যন্ত পাতা ঝরে গেলে, অথবা এটা আগাম ধ্বসা কিনা বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With leaf removal, mulch and a protectant programme the upward march usually stops in 2 weeks. Lower leaves stay gone. Protecting the top canopy is what protects the fruit from sunscald.",
+  "expected_outcome_bn": "পাতা ছাঁটা, মালচ ও প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহে রোগের উপরে ওঠা বন্ধ হয়। নিচের পাতা আর ফিরবে না। উপরের পাতা বাঁচালেই ফল রোদে পোড়া থেকে বাঁচবে।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Copper oxychloride 50% WP 500g",
+    "Straw mulch",
+    "Bamboo staking poles (bundle of 20)",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Champion 77 WP AP-354, Petrochem Bangladesh Ltd); 'Tomato Cultivation in Bangladesh: Insights into Pest Awareness and Disease Management' (researchgate 391850970); BARI tomato production guidance",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Distinguishing feature vs early blight: Septoria spots are many, small and uniform with black pycnidia; early blight spots are fewer, larger and have concentric rings. The app should show this comparison because the two are frequently confused and are managed almost identically anyway.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bamboo staking poles (bundle of 20)",
+      "sku": "EQ-0080",
+      "name_en": "Bamboo staking poles (bundle of 20)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

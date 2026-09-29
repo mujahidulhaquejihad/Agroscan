@@ -1,0 +1,248 @@
+{
+  "class_name": "Brinjal___Bacterial_wilt",
+  "kb_key": "bacterial_wilt",
+  "crop_en": "Brinjal (eggplant)",
+  "crop_bn": "বেগুন",
+  "disease_en": "Bacterial wilt",
+  "disease_bn": "বেগুনের ঢলে পড়া রোগ",
+  "pathogen": "Ralstonia solanacearum",
+  "severity": "high",
+  "summary_en": "The plant wilts suddenly in the middle of the day while the leaves are still green, then dies within days. It is a soil bacterium — there is no spray that cures it. The answer is grafted seedlings, drainage and rotation.",
+  "summary_bn": "পাতা সবুজ থাকতেই দুপুরবেলা গাছ হঠাৎ ঢলে পড়ে, তারপর কয়েক দিনেই মরে যায়। এটি মাটির ব্যাকটেরিয়া — কোনো স্প্রেতেই সারে না। সমাধান হলো কলম করা চারা, ভালো নিকাশ আর পালা করে চাষ।",
+  "symptoms_en": [
+    "Sudden wilting of the whole plant during the hottest part of the day, recovering slightly at night at first, then permanent",
+    "Leaves stay GREEN while the plant wilts — this is the key difference from fungal wilts, where leaves yellow first",
+    "Cut the stem near the base: the vascular ring is brown and a sticky greyish ooze comes out",
+    "The ooze test: hang a cut stem piece in a glass of clear water; within minutes a milky-white thread streams down from the cut. That confirms bacterial wilt.",
+    "Roots and lower stem may be brown and rotten",
+    "Spreads in waterlogged, warm soil and moves with irrigation water"
+  ],
+  "symptoms_bn": [
+    "দিনের সবচেয়ে গরম সময়ে পুরো গাছ হঠাৎ ঢলে পড়ে, প্রথম দিকে রাতে একটু ঠিক হয়, পরে আর হয় না",
+    "গাছ ঢলে পড়লেও পাতা সবুজই থাকে — ছত্রাকজনিত ঢলে পড়া রোগে পাতা আগে হলুদ হয়, এখানেই মূল পার্থক্য",
+    "গোড়ার কাছে কাণ্ড কাটলে ভেতরের বলয় বাদামি দেখাবে এবং আঠালো ধূসর রস বের হবে",
+    "পরীক্ষা: কাটা কাণ্ডের টুকরা পরিষ্কার পানিভর্তি গ্লাসে ঝুলিয়ে রাখুন; কয়েক মিনিটেই কাটা মুখ থেকে দুধ-সাদা সুতার মতো ধোঁয়া নেমে আসবে। তাহলেই নিশ্চিত এটি ঢলে পড়া রোগ।",
+    "শিকড় ও গোড়ার কাণ্ড বাদামি হয়ে পচে যেতে পারে",
+    "পানি জমা গরম মাটিতে ছড়ায় এবং সেচের পানির সাথে চলে যায়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do the ooze test before doing anything else",
+      "detail": "Cut a wilted stem near the base and hang it in clear water. A milky white thread streaming down means bacterial wilt. If you skip this you will probably spend money on a fungicide that cannot work."
+    },
+    {
+      "step": 2,
+      "title": "Remove wilted plants with the soil around the roots",
+      "detail": "Dig out each wilted plant along with a spadeful of surrounding soil, put it in a bag and burn or bury it far from the field. Do not shake soil off in the field."
+    },
+    {
+      "step": 3,
+      "title": "Stop water flowing from infected to healthy areas",
+      "detail": "The bacteria travel in irrigation and rain water. Block the flow from the infected patch. Irrigate the healthy part of the field first, the infected part last."
+    },
+    {
+      "step": 4,
+      "title": "Do not spray a fungicide",
+      "detail": "No fungicide cures bacterial wilt. Copper gives only marginal help. Money spent on spraying here is money wasted."
+    },
+    {
+      "step": 5,
+      "title": "Improve drainage now",
+      "detail": "Open drains and raise the beds. Waterlogging is the single biggest driver of bacterial wilt in Bangladesh."
+    },
+    {
+      "step": 6,
+      "title": "Apply bleaching powder to the removed plant's spot",
+      "detail": "A handful of bleaching powder worked into the hole where the plant was removed reduces the bacterial load in that spot."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "অন্য কিছু করার আগে পানির পরীক্ষাটা করুন",
+      "detail": "ঢলে পড়া গাছের গোড়ার কাছে কাণ্ড কেটে পরিষ্কার পানিতে ঝুলিয়ে রাখুন। দুধ-সাদা সুতার মতো নেমে এলে বুঝবেন ঢলে পড়া রোগ। এটা না করলে সম্ভবত এমন ছত্রাকনাশক কিনে টাকা নষ্ট করবেন যা কাজই করতে পারে না।"
+    },
+    {
+      "step": 2,
+      "title": "শিকড়ের চারপাশের মাটিসহ ঢলে পড়া গাছ তুলে ফেলুন",
+      "detail": "প্রতিটি ঢলে পড়া গাছ চারপাশের এক কোদাল মাটিসহ তুলে ব্যাগে ভরুন, জমি থেকে দূরে পুড়িয়ে বা পুঁতে ফেলুন। জমির মধ্যে মাটি ঝেড়ে ফেলবেন না।"
+    },
+    {
+      "step": 3,
+      "title": "আক্রান্ত অংশ থেকে ভালো অংশে পানি যাওয়া বন্ধ করুন",
+      "detail": "সেচ ও বৃষ্টির পানির সাথে জীবাণু যায়। আক্রান্ত অংশ থেকে পানির প্রবাহ বন্ধ করুন। আগে জমির ভালো অংশে সেচ দিন, আক্রান্ত অংশে সবার শেষে।"
+    },
+    {
+      "step": 4,
+      "title": "ছত্রাকনাশক স্প্রে করবেন না",
+      "detail": "কোনো ছত্রাকনাশকে এই রোগ সারে না। কপারেও সামান্যই উপকার। এখানে স্প্রেতে খরচ করা টাকা পুরোটাই নষ্ট।"
+    },
+    {
+      "step": 5,
+      "title": "এখনই নিকাশ ঠিক করুন",
+      "detail": "নালা কেটে দিন ও বেড উঁচু করুন। বাংলাদেশে ঢলে পড়া রোগের সবচেয়ে বড় কারণ জমিতে পানি জমা।"
+    },
+    {
+      "step": 6,
+      "title": "গাছ তোলা গর্তে ব্লিচিং পাউডার দিন",
+      "detail": "যে গর্ত থেকে গাছ তুলেছেন সেখানে এক মুঠো ব্লিচিং পাউডার মিশিয়ে দিলে ওই জায়গার জীবাণু কমে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use grafted seedlings — brinjal scion grafted onto wilt-resistant rootstock (Solanum torvum, locally 'tit begun', or resistant tomato rootstock). This is the most effective solution available in Bangladesh and is promoted by DAE and BARI.",
+    "Rotate with rice for 2-3 years; flooded rice culture strongly reduces Ralstonia in the soil",
+    "Never rotate brinjal with tomato, potato or chilli — all are hosts",
+    "Plant on raised beds with open drains",
+    "Do not use flood irrigation on brinjal; use furrow irrigation and control the flow direction",
+    "Disinfect tools between plants when pruning or staking",
+    "Add well-decomposed organic matter and lime if the soil is acidic",
+    "Buy seedlings from a reputable nursery, not from a nursery that had wilt last season"
+  ],
+  "cultural_control_bn": [
+    "কলম করা চারা ব্যবহার করুন — রোগ প্রতিরোধী গোড়ার (তিত বেগুন / সোলানাম টরভাম বা প্রতিরোধী টমেটোর গোড়া) উপর বেগুনের কলম। বাংলাদেশে এটাই সবচেয়ে কার্যকর সমাধান এবং ডিএই ও বারি এটি প্রচার করে।",
+    "২-৩ বছর ধানের সাথে পালা করে চাষ করুন; পানি জমিয়ে ধান করলে মাটিতে এই জীবাণু অনেক কমে যায়",
+    "টমেটো, আলু বা মরিচের সাথে বেগুনের পালা কখনো করবেন না — সবগুলোতেই এই রোগ হয়",
+    "উঁচু বেডে লাগান ও নালা খোলা রাখুন",
+    "বেগুনে প্লাবন সেচ দেবেন না; নালা সেচ দিন এবং পানির প্রবাহ নিয়ন্ত্রণ করুন",
+    "ডাল ছাঁটা বা খুঁটি দেওয়ার সময় এক গাছ থেকে আরেক গাছে যাওয়ার আগে যন্ত্রপাতি জীবাণুমুক্ত করুন",
+    "ভালোভাবে পচা জৈব সার দিন এবং মাটি অম্লীয় হলে চুন দিন",
+    "ভালো নার্সারি থেকে চারা কিনুন, গত মৌসুমে যে নার্সারিতে ঢলে পড়া রোগ ছিল সেখান থেকে নয়"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Copper oxychloride 50% WP (soil drench)",
+      "product_name_bn": "কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি (মাটিতে ঢালা)",
+      "active_ingredient": "Copper oxychloride",
+      "formulation": "WP",
+      "dose_en": "3 g per litre of water, drenched around the base of healthy plants next to the infected patch — about 200-250 ml of solution per plant",
+      "dose_bn": "প্রতি লিটার পানিতে ৩ গ্রাম, আক্রান্ত অংশের পাশের সুস্থ গাছের গোড়ায় ঢেলে দিন — প্রতি গাছে প্রায় ২০০-২৫০ মিলি দ্রবণ",
+      "water_volume_per_decimal": "Approximately 15-20 litres of drench solution per decimal",
+      "application_method_en": "Pour around the base of the plant, not as a foliar spray. Understand that this only slows spread — it does not cure infected plants.",
+      "application_method_bn": "পাতায় স্প্রে নয়, গাছের গোড়ায় ঢালুন। মনে রাখবেন এতে শুধু ছড়ানো কিছুটা ধীর হয় — আক্রান্ত গাছ সারে না।",
+      "timing_en": "Immediately after removing wilted plants, applied to the surrounding healthy plants.",
+      "timing_bn": "ঢলে পড়া গাছ তুলে ফেলার সাথে সাথে, চারপাশের সুস্থ গাছে দিন।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick brinjal for 7 days after application.",
+      "pre_harvest_interval_note_bn": "প্রয়োগের পর ৭ দিন বেগুন তুলবেন না।",
+      "brands_available_bd": [
+        "Cupravit 50 WP",
+        "Champion 77 WP",
+        "Blue Copper"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Copper fungicides are registered in Bangladesh (e.g. Champion 77 WP, AP-354, Petrochem Bangladesh Ltd). Soil drenching for bacterial wilt is a supportive field practice, not necessarily a registered label use — confirm before presenting it as one.",
+      "treatment_type": "preventive",
+      "caution_en": "Marginal benefit only. If a dealer tells you a spray will cure bacterial wilt, that is not correct.",
+      "caution_bn": "সামান্যই উপকার। কোনো দোকানদার বললে যে স্প্রে দিলে ঢলে পড়া রোগ সেরে যাবে — কথাটা ঠিক নয়।",
+      "cures_disease": false,
+      "targets_vector": null,
+      "purpose_en": "Suppresses spread only. It does NOT cure infected plants.",
+      "purpose_bn": "শুধু ছড়ানো কমায়। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-354"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Grafting onto resistant rootstock — the highest-impact intervention, chemical or organic",
+    "Bleaching powder (calcium hypochlorite) at 10-15 kg/ha worked into the soil before planting reduces bacterial load",
+    "Rice rotation with flooding",
+    "Soil solarisation with clear polythene for 4-6 weeks in the hot dry months on small plots",
+    "Bio-agents such as Bacillus subtilis and Pseudomonas fluorescens applied at transplanting give partial suppression",
+    "Raised beds and good drainage"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতিরোধী গোড়ায় কলম করা — ওষুধ হোক বা জৈব, সবচেয়ে বেশি কাজে দেয় এটাই",
+    "রোপণের আগে হেক্টর প্রতি ১০-১৫ কেজি ব্লিচিং পাউডার মাটিতে মিশিয়ে দিলে জীবাণু কমে",
+    "পানি জমিয়ে ধানের সাথে পালা চাষ",
+    "ছোট জমিতে গরম শুকনো মাসে ৪-৬ সপ্তাহ স্বচ্ছ পলিথিন বিছিয়ে মাটি শোধন",
+    "চারা রোপণের সময় ব্যাসিলাস সাবটিলিস ও সুডোমোনাস ফ্লুরোসেন্স দিলে কিছুটা উপকার হয়",
+    "উঁচু বেড ও ভালো নিকাশ"
+  ],
+  "fertilizer_advice_en": "Avoid excess nitrogen, which makes plants more susceptible. Use well-decomposed organic manure — fresh cowdung can increase wilt. Apply lime if the soil is acidic; Ralstonia is more damaging in acid soils. Follow FRG-2018 for brinjal.",
+  "fertilizer_advice_bn": "বেশি ইউরিয়া দেবেন না, এতে গাছ আরও সহজে আক্রান্ত হয়। ভালোভাবে পচা জৈব সার দিন — কাঁচা গোবরে রোগ বাড়তে পারে। মাটি অম্লীয় হলে চুন দিন; অম্লীয় মাটিতে এই জীবাণু বেশি ক্ষতি করে। বেগুনের জন্য এফআরজি-২০১৮ মেনে চলুন।",
+  "safety_warning_en": "If applying a copper drench, wear gloves and avoid skin contact. Bleaching powder irritates the eyes, skin and lungs — apply it on a still day wearing gloves and a mask, and do not breathe the dust. Wash hands thoroughly after handling infected plants.",
+  "safety_warning_bn": "কপার দ্রবণ ঢাললে হাতমোজা পরুন ও চামড়ায় লাগা এড়ান। ব্লিচিং পাউডার চোখ, চামড়া ও ফুসফুসে জ্বালা ধরায় — বাতাসহীন দিনে হাতমোজা ও মাস্ক পরে দিন, গুঁড়া শ্বাসে টানবেন না। আক্রান্ত গাছ ধরার পর ভালো করে হাত ধুয়ে ফেলুন।",
+  "legal_note_en": "There is no registered chemical cure for bacterial wilt in Bangladesh. Do not buy antibiotics for crop use — this drives antimicrobial resistance and is not a DAE recommendation. Krishi Call Center: 16123.",
+  "legal_note_bn": "বাংলাদেশে ঢলে পড়া রোগ সারানোর জন্য নিবন্ধিত কোনো ওষুধ নেই। ফসলে ব্যবহারের জন্য অ্যান্টিবায়োটিক কিনবেন না — এতে জীবাণু ওষুধ-প্রতিরোধী হয়ে ওঠে এবং এটি ডিএই-র সুপারিশ নয়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 as soon as you confirm bacterial wilt with the ooze test. Ask your Sub-Assistant Agriculture Officer about grafted seedling sources — this is the practical long-term fix and DAE promotes it.",
+  "when_to_call_helpline_bn": "পানির পরীক্ষায় ঢলে পড়া রোগ নিশ্চিত হওয়া মাত্রই ১৬১২৩ নম্বরে ফোন করুন। কলম করা চারা কোথায় পাওয়া যায় তা উপসহকারী কৃষি অফিসারের কাছে জেনে নিন — দীর্ঘমেয়াদে এটাই ব্যবহারিক সমাধান এবং ডিএই এটি প্রচার করে।",
+  "expected_outcome_en": "Infected plants will die — that is unavoidable. Removing them with the surrounding soil and controlling water flow usually limits the loss to the original patch. On badly infested land, expect to keep losing plants until you switch to grafted seedlings or rotate into rice.",
+  "expected_outcome_bn": "আক্রান্ত গাছ মরে যাবেই — এটা ঠেকানো যায় না। চারপাশের মাটিসহ তুলে ফেলে পানির প্রবাহ নিয়ন্ত্রণ করলে সাধারণত ক্ষতি প্রথম যে অংশে হয়েছিল সেখানেই থেমে যায়। বেশি আক্রান্ত জমিতে কলম করা চারায় না গেলে বা ধানের সাথে পালা না করলে গাছ মরতেই থাকবে।",
+  "related_shop_products": [
+    "Grafted brinjal seedlings (per 100)",
+    "Bleaching powder 1kg",
+    "Copper oxychloride 50% WP 500g",
+    "Agricultural lime 50kg bag",
+    "Spade"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": "DAE and BARI extension promotion of grafted brinjal on wilt-resistant rootstock; 'Eggplant Integrated Pest Management: An Ecological Guide', FAO (openknowledge.fao.org); Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook (ipmworld.umn.edu/rahman); DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Bacterial — no curative chemical. The in-field ooze diagnostic test is included because bacterial wilt is very commonly misdiagnosed as a fungal wilt in Bangladesh, leading to wasted fungicide spending. Grafting is the headline recommendation.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Grafted brinjal seedlings (per 100)",
+      "sku": "SEED-0049",
+      "name_en": "Grafted brinjal seedlings (wilt-resistant rootstock) 100 seedlings",
+      "category": "seed",
+      "match_score": 0.923,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bleaching powder 1kg",
+      "sku": "FERT-0037",
+      "name_en": "Bleaching powder (calcium hypochlorite) 1kg",
+      "category": "fertilizer",
+      "match_score": 1.1,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Agricultural lime 50kg bag",
+      "sku": "PEST-0127",
+      "name_en": "Copper sulphate + lime (Bordeaux mixture components) 1% preparation 5kg copper sulphate",
+      "category": "pesticide",
+      "match_score": 0.892,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spade",
+      "sku": "EQ-0022",
+      "name_en": "Spade (belcha)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

@@ -1,0 +1,221 @@
+{
+  "class_name": "Strawberry___Leaf_scorch",
+  "kb_key": "leaf_scorch",
+  "crop_en": "Strawberry",
+  "crop_bn": "স্ট্রবেরি",
+  "disease_en": "Leaf scorch",
+  "disease_bn": "স্ট্রবেরির পাতা ঝলসানো রোগ",
+  "pathogen": "Diplocarpon earlianum",
+  "severity": "medium",
+  "bangladesh_relevance": "niche_commercial",
+  "bangladesh_note_en": "Strawberry is a small niche winter crop in Bangladesh, grown commercially around Rajshahi, Chapainawabganj, Jashore and on the outskirts of Dhaka for the premium market. It is a real crop here, but on a very small area, so a strawberry prediction from a field photo outside these areas should be treated with suspicion.",
+  "bangladesh_note_bn": "বাংলাদেশে স্ট্রবেরি একটি ছোট বিশেষায়িত শীতকালীন ফসল — রাজশাহী, চাঁপাইনবাবগঞ্জ, যশোর ও ঢাকার আশপাশে দামি বাজারের জন্য বাণিজ্যিকভাবে হয়। ফসলটি এখানে সত্যিই আছে, তবে খুব অল্প জমিতে; তাই এসব এলাকার বাইরের ছবিতে স্ট্রবেরি শনাক্ত হলে সন্দেহ করাই ভালো।",
+  "summary_en": "Many small dark purple spots on the leaves that merge until the whole leaf looks scorched and dries up. It spreads in wet weather and is managed with sanitation, drip irrigation and a protectant fungicide.",
+  "summary_bn": "পাতায় অনেক ছোট গাঢ় বেগুনি দাগ পড়ে, মিশে গিয়ে পুরো পাতা ঝলসানো দেখায় ও শুকিয়ে যায়। ভেজা আবহাওয়ায় ছড়ায়; পরিচ্ছন্নতা, ড্রিপ সেচ ও প্রতিরোধক ছত্রাকনাশক দিয়ে সামলানো যায়।",
+  "symptoms_en": [
+    "Numerous small (1-4 mm) irregular dark purple spots on the upper leaf surface",
+    "Spots have no light centre — this distinguishes leaf scorch from leaf spot, which has a grey centre",
+    "Spots merge and the leaf takes on a scorched, purple-brown, dried appearance",
+    "Petioles, runners and fruit stalks also develop dark lesions",
+    "Heavy infection reduces fruit size and number",
+    "Worst in wet weather, dense plantings and where old leaves are left on the plant"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরের পিঠে অনেক ছোট (১-৪ মিলিমিটার) অনিয়মিত গাঢ় বেগুনি দাগ",
+    "দাগের মাঝখানে হালকা রং থাকে না — এতেই লিফ স্পট থেকে আলাদা, ওটার মাঝখানে ধূসর থাকে",
+    "দাগ মিশে গিয়ে পুরো পাতা ঝলসানো, বেগুনি-বাদামি ও শুকনো দেখায়",
+    "বোঁটা, রানার ও ফলের বোঁটাতেও গাঢ় দাগ পড়ে",
+    "বেশি আক্রমণে ফল ছোট হয় ও সংখ্যা কমে",
+    "ভেজা আবহাওয়া, ঘন করে লাগানো এবং গাছে পুরনো পাতা রেখে দিলে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Remove old and scorched leaves",
+      "detail": "Pick off every heavily spotted leaf and take it out of the field. Regular deleafing is the backbone of strawberry disease management."
+    },
+    {
+      "step": 2,
+      "title": "Switch to drip irrigation",
+      "detail": "Never irrigate strawberry overhead. Wet leaves and wet fruit cause almost every strawberry disease problem."
+    },
+    {
+      "step": 3,
+      "title": "Mulch the beds",
+      "detail": "Straw or plastic mulch keeps leaves and fruit off the soil and stops splash-borne infection."
+    },
+    {
+      "step": 4,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb at 2 g/L or copper oxychloride at 3 g/L every 10-12 days in wet weather."
+    },
+    {
+      "step": 5,
+      "title": "Do not take runners from infected plants",
+      "detail": "The fungus travels on planting material. Take runners only from clean mother plants."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "পুরনো ও ঝলসানো পাতা সরান",
+      "detail": "বেশি দাগওয়ালা প্রতিটি পাতা ছিঁড়ে জমির বাইরে নিয়ে যান। নিয়মিত পাতা ছাঁটাই স্ট্রবেরির রোগ ব্যবস্থাপনার মূল ভিত্তি।"
+    },
+    {
+      "step": 2,
+      "title": "ড্রিপ সেচে যান",
+      "detail": "স্ট্রবেরিতে উপর দিয়ে সেচ কখনো নয়। ভেজা পাতা ও ভেজা ফল থেকেই স্ট্রবেরির প্রায় সব রোগ হয়।"
+    },
+    {
+      "step": 3,
+      "title": "বেডে মালচ দিন",
+      "detail": "খড় বা প্লাস্টিক মালচ দিলে পাতা ও ফল মাটি ছোঁয় না, ছিটা থেকে রোগও ছড়ায় না।"
+    },
+    {
+      "step": 4,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "ভেজা আবহাওয়ায় ১০-১২ দিন পর পর প্রতি লিটারে ২ গ্রাম ম্যানকোজেব বা ৩ গ্রাম কপার অক্সিক্লোরাইড।"
+    },
+    {
+      "step": 5,
+      "title": "আক্রান্ত গাছ থেকে রানার নেবেন না",
+      "detail": "চারার সাথে ছত্রাক যায়। শুধু পরিষ্কার মাতৃগাছ থেকে রানার নিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use clean, certified runners or tissue-culture plants",
+    "Plant on raised beds with plastic mulch",
+    "Drip irrigation only",
+    "Wide spacing for air movement",
+    "Remove old leaves after each harvest flush",
+    "Rotate and destroy old plantings; do not carry plants over year after year",
+    "Do not work in the field when plants are wet"
+  ],
+  "cultural_control_bn": [
+    "পরিষ্কার, সার্টিফাইড রানার বা টিস্যু কালচার চারা ব্যবহার করুন",
+    "প্লাস্টিক মালচসহ উঁচু বেডে লাগান",
+    "শুধু ড্রিপ সেচ",
+    "বাতাস চলাচলের জন্য বেশি দূরত্বে লাগান",
+    "প্রতিবার ফল তোলার পর পুরনো পাতা ছেঁটে ফেলুন",
+    "পুরনো বাগান নষ্ট করে পালা করুন; বছরের পর বছর একই গাছ রাখবেন না",
+    "গাছ ভেজা থাকলে জমিতে কাজ করবেন না"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "2-3 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering the whole plant. Strawberry is low-growing, so spray from above and to the sides.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে দিন। স্ট্রবেরি নিচু গাছ, তাই উপর ও পাশ থেকে স্প্রে করুন।",
+      "timing_en": "Preventive, every 10-12 days in wet weather. Time sprays right after a picking.",
+      "timing_bn": "প্রতিরোধমূলক, ভেজা আবহাওয়ায় ১০-১২ দিন পর পর। ফল তোলার ঠিক পরে স্প্রে করুন।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray. Strawberry is eaten fresh and unwashed by many consumers — the PHI matters a great deal here.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না। অনেকেই স্ট্রবেরি না ধুয়ে কাঁচা খান — এখানে পিএইচআই খুবই জরুরি।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; no strawberry-specific registration was verified. Treat the strawberry use as extrapolated and confirm with your Upazila Agriculture Office.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Deleafing and plastic mulch — the two highest-value actions",
+    "Copper oxychloride 50% WP at 3 g/L",
+    "Drip irrigation and wide spacing",
+    "Clean planting material"
+  ],
+  "organic_alternatives_bn": [
+    "পাতা ছাঁটাই ও প্লাস্টিক মালচ — সবচেয়ে কার্যকর দুটি কাজ",
+    "প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+    "ড্রিপ সেচ ও বেশি দূরত্বে লাগানো",
+    "পরিষ্কার চারা"
+  ],
+  "fertilizer_advice_en": "Use fertigation in small frequent doses. Keep calcium and potassium adequate for firm fruit. Avoid excess nitrogen, which produces soft dense foliage.",
+  "fertilizer_advice_bn": "সেচের সাথে অল্প অল্প করে বারবার সার দিন। শক্ত ভালো ফলের জন্য ক্যালসিয়াম ও পটাশ পর্যাপ্ত রাখুন। বেশি ইউরিয়া দেবেন না, এতে নরম ঘন পাতা হয়।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Strawberry is picked every 2-3 days and eaten fresh, often unwashed — plan sprays immediately after a picking and never pick within the PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। স্ট্রবেরি ২-৩ দিন পর পর তোলা হয় এবং প্রায়ই না ধুয়েই কাঁচা খাওয়া হয় — ফল তোলার ঠিক পরে স্প্রে করুন, পিএইচআই-এর মধ্যে কখনো তুলবেন না। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Because no strawberry-specific registration was verified, consult your Upazila Agriculture Office before spraying. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। স্ট্রবেরির জন্য নির্দিষ্ট নিবন্ধন যাচাই করা যায়নি, তাই স্প্রের আগে উপজেলা কৃষি অফিসে পরামর্শ নিন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if most leaves are scorched, if fruit stalks are dying back, or if the problem returns each season on the same land.",
+  "when_to_call_helpline_bn": "বেশিরভাগ পাতা ঝলসে গেলে, ফলের বোঁটা মরতে থাকলে, অথবা একই জমিতে প্রতি মৌসুমে সমস্যা ফিরে এলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Deleafing, mulching and a protectant programme normally keep new leaves clean within 2-3 weeks. Scorched leaves will not recover.",
+  "expected_outcome_bn": "পাতা ছাঁটাই, মালচ ও প্রতিরোধক স্প্রে দিলে সাধারণত ২-৩ সপ্তাহে নতুন পাতা পরিষ্কার থাকে। ঝলসানো পাতা আর ভালো হবে না।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Copper oxychloride 50% WP 500g",
+    "Black plastic mulch film",
+    "Drip irrigation kit 1 decimal",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "General Diplocarpon earlianum management protocols adapted to Bangladesh conditions; BARI horticulture guidance on strawberry; DAE Plant Protection Wing registered pesticide list",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "low",
+  "notes": "CONFIDENCE LOW: no Bangladesh-specific extension guidance or crop-matched pesticide registration was found for strawberry leaf scorch. Chemical recommendations are extrapolated from general protocols and the legal_note tells the farmer to consult DAE first. Strawberry is a genuine but very small Bangladesh crop.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Black plastic mulch film",
+      "sku": "EQ-0077",
+      "name_en": "Black plastic mulch film (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

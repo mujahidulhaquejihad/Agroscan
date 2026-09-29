@@ -259,10 +259,13 @@
     var i;
     for (i = 0; i < badges.length; i++) {
       if (n > 0) {
-        badges[i].textContent = n > 9 ? "9+" : String(n);
+        var wide = n > 9;
+        badges[i].textContent = wide ? "9+" : String(n);
+        badges[i].classList.toggle("is-wide", wide);
         badges[i].classList.remove("hidden");
       } else {
         badges[i].textContent = "";
+        badges[i].classList.remove("is-wide");
         badges[i].classList.add("hidden");
       }
     }

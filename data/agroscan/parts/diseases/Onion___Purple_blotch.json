@@ -1,0 +1,253 @@
+{
+  "class_name": "Onion___Purple_blotch",
+  "kb_key": "purple_blotch",
+  "crop_en": "Onion",
+  "crop_bn": "পেঁয়াজ",
+  "disease_en": "Purple blotch",
+  "disease_bn": "পেঁয়াজের পার্পল ব্লচ রোগ",
+  "pathogen": "Alternaria porri",
+  "severity": "high",
+  "summary_en": "Small white sunken spots on the leaves that grow into large purplish-brown zoned patches, then the leaf collapses at that point. It is the main foliar disease of onion in Bangladesh and it also rots the bulb neck in storage.",
+  "summary_bn": "পাতায় ছোট সাদা বসে যাওয়া দাগ পড়ে, বড় হয়ে বেগুনি-বাদামি বলয়যুক্ত ছোপ হয়, তারপর ওই জায়গা থেকে পাতা ভেঙে পড়ে। বাংলাদেশে পেঁয়াজের প্রধান পাতার রোগ এটাই, আর গুদামে পেঁয়াজের গলাও পচিয়ে দেয়।",
+  "symptoms_en": [
+    "Small white or greyish sunken spots on the leaf, often with a purple centre as they enlarge",
+    "Spots grow into large zoned (ringed) purple-brown patches with a yellow halo above and below",
+    "The leaf breaks over and collapses at the lesion",
+    "Bulb size drops sharply because the leaves die early",
+    "Neck rot in storage: the neck becomes water-soaked, then yellow-red, then rots",
+    "Worst in warm humid weather, heavy dew and after irrigation over the top"
+  ],
+  "symptoms_bn": [
+    "পাতায় ছোট সাদা বা ধূসর বসে যাওয়া দাগ, বড় হওয়ার সাথে মাঝখানে বেগুনি রং ধরে",
+    "দাগ বড় হয়ে বলয়যুক্ত বেগুনি-বাদামি ছোপ হয়, উপরে-নিচে হলুদ বলয়",
+    "দাগের জায়গা থেকে পাতা মটকে ভেঙে পড়ে",
+    "পাতা আগেভাগে মরে যাওয়ায় পেঁয়াজ অনেক ছোট হয়",
+    "গুদামে গলা পচা: গলা ভেজা ভেজা হয়, পরে হলুদ-লাল হয়ে পচে যায়",
+    "গরম স্যাঁতসেঁতে আবহাওয়া, ভারী শিশির আর উপর দিয়ে সেচ দিলে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray with a sticker — this is the key detail",
+      "detail": "Onion leaves are upright and waxy, so spray runs straight off. Always add a wetting agent or sticker at 1 ml/L. Farmers who skip this often conclude the fungicide 'did not work'."
+    },
+    {
+      "step": 2,
+      "title": "Use mancozeb or a difenoconazole product",
+      "detail": "Mancozeb at 2-2.5 g/L as the protectant backbone, or difenoconazole at 0.5 ml/L where the disease is established."
+    },
+    {
+      "step": 3,
+      "title": "Stop overhead irrigation",
+      "detail": "Switch to furrow irrigation. Keeping the leaves dry matters as much as the spray."
+    },
+    {
+      "step": 4,
+      "title": "Remove badly affected leaves in small plots",
+      "detail": "Cut off collapsed leaves and take them out of the field."
+    },
+    {
+      "step": 5,
+      "title": "Cure the bulbs properly at harvest",
+      "detail": "After lifting, cure the bulbs in shade with good airflow for 2-3 weeks until the necks are tight and dry. This is what prevents storage neck rot."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আঠালো পদার্থ মিশিয়ে স্প্রে করুন — এটাই আসল কথা",
+      "detail": "পেঁয়াজের পাতা সোজা ও মোমের মতো পিচ্ছিল, তাই ওষুধ গড়িয়ে পড়ে যায়। সবসময় প্রতি লিটারে ১ মিলি আঠালো পদার্থ মেশান। এটা না দিলে অনেকেই ভাবেন ওষুধে 'কাজ হলো না'।"
+    },
+    {
+      "step": 2,
+      "title": "ম্যানকোজেব বা ডাইফেনোকোনাজল দিন",
+      "detail": "প্রতিরোধক হিসেবে প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব, আর রোগ ছড়িয়ে গেলে প্রতি লিটারে ০.৫ মিলি ডাইফেনোকোনাজল।"
+    },
+    {
+      "step": 3,
+      "title": "উপর দিয়ে সেচ বন্ধ করুন",
+      "detail": "নালা সেচে যান। পাতা শুকনো রাখা স্প্রের মতোই জরুরি।"
+    },
+    {
+      "step": 4,
+      "title": "ছোট জমিতে বেশি আক্রান্ত পাতা সরান",
+      "detail": "ভেঙে পড়া পাতা কেটে জমির বাইরে নিয়ে যান।"
+    },
+    {
+      "step": 5,
+      "title": "তোলার পর পেঁয়াজ ঠিকমতো শুকান",
+      "detail": "পেঁয়াজ তোলার পর ছায়ায় বাতাস চলাচল আছে এমন জায়গায় ২-৩ সপ্তাহ শুকান, যতক্ষণ না গলা শক্ত ও শুকনো হয়। গুদামে গলা পচা এভাবেই ঠেকে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use certified, disease-free sets or seed",
+    "Treat seed before sowing",
+    "Rotate away from onion, garlic and other alliums for 2-3 years",
+    "Plant on raised beds with good drainage",
+    "Do not plant too densely",
+    "Use furrow irrigation, never overhead, and irrigate in the morning",
+    "Remove and destroy crop residue after harvest",
+    "Cure and dry the bulbs thoroughly before storage; store in a well-ventilated, dry place"
+  ],
+  "cultural_control_bn": [
+    "সার্টিফাইড, রোগমুক্ত কন্দ বা বীজ ব্যবহার করুন",
+    "বপনের আগে বীজ শোধন করুন",
+    "২-৩ বছর পেঁয়াজ, রসুন ও একই গোত্রের ফসল বাদ দিন",
+    "উঁচু বেডে ভালো নিকাশসহ লাগান",
+    "খুব ঘন করে লাগাবেন না",
+    "নালা সেচ দিন, উপর দিয়ে কখনো নয়, আর সকালে দিন",
+    "ফসল শেষে অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "গুদামে রাখার আগে ভালোভাবে শুকিয়ে নিন; বাতাস চলাচল আছে এমন শুকনো জায়গায় রাখুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP + wetting agent",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি + আঠালো পদার্থ",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water plus 1 ml/L wetting agent",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম, সাথে প্রতি লিটারে ১ মিলি আঠালো পদার্থ",
+      "water_volume_per_decimal": "2-3 litres of spray solution per decimal",
+      "application_method_en": "Fine spray over the upright leaves. The sticker is essential — without it most of the spray runs to the ground.",
+      "application_method_bn": "সোজা পাতার উপর মিহি স্প্রে করুন। আঠালো পদার্থ অপরিহার্য — না দিলে বেশিরভাগ ওষুধ গড়িয়ে মাটিতে পড়ে যায়।",
+      "timing_en": "Preventive, every 10-12 days from 30-35 days after planting.",
+      "timing_bn": "প্রতিরোধমূলক, রোপণের ৩০-৩৫ দিন পর থেকে ১০-১২ দিন পর পর।",
+      "interval_days": 10,
+      "max_applications_per_season": 5,
+      "phi_days": 10,
+      "pre_harvest_interval_note_en": "Do not harvest for 10 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১০ দিন পেঁয়াজ তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and onion label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Difenoconazole 25% EC",
+      "product_name_bn": "ডাইফেনোকোনাজল ২৫% ইসি",
+      "active_ingredient": "Difenoconazole",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water plus a wetting agent",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার, সাথে আঠালো পদার্থ",
+      "water_volume_per_decimal": "2-3 litres of spray solution per decimal",
+      "application_method_en": "Fine spray with sticker over the foliage.",
+      "application_method_bn": "আঠালো পদার্থ মিশিয়ে পাতার উপর মিহি স্প্রে।",
+      "timing_en": "Curative, when blotches are already forming. Maximum 2 per season, alternated with mancozeb.",
+      "timing_bn": "ছোপ পড়তে শুরু করলে দমনের জন্য। মৌসুমে সর্বোচ্চ ২ বার, ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not harvest for 14 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৪ দিন পেঁয়াজ তুলবেন না।",
+      "brands_available_bd": [
+        "Score 250 EC",
+        "Difen 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Score 250 EC, AP-384, Syngenta Bangladesh Limited — recorded in the DAE Plant Protection Wing registered pesticide list for ONION PURPLE BLOTCH at 0.5 ml per litre of water. This is a directly verified, crop-matched registration.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-384"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Copper oxychloride 50% WP at 3 g/L with a sticker as a protectant",
+    "Trichoderma harzianum seed and soil treatment",
+    "Proper curing and dry storage — the most effective way to stop the storage phase of this disease",
+    "Furrow irrigation and wider spacing"
+  ],
+  "organic_alternatives_bn": [
+    "আঠালো পদার্থসহ প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে",
+    "ট্রাইকোডার্মা হারজিয়ানাম দিয়ে বীজ ও মাটি শোধন",
+    "ঠিকমতো শুকানো ও শুকনো গুদামজাতকরণ — গুদামে এই রোগ ঠেকানোর সবচেয়ে কার্যকর উপায়",
+    "নালা সেচ ও বেশি দূরত্বে লাগানো"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for onion. Adequate potassium and sulphur improve bulb quality and storage life. Avoid excess nitrogen, which produces soft thick necks that do not cure properly and rot in storage.",
+  "fertilizer_advice_bn": "পেঁয়াজের জন্য এফআরজি-২০১৮ মেনে চলুন। পর্যাপ্ত পটাশ ও সালফার দিলে পেঁয়াজের মান ভালো হয় ও বেশি দিন টেকে। বেশি ইউরিয়া দেবেন না, এতে গলা মোটা ও নরম হয়, ঠিকমতো শুকায় না আর গুদামে পচে যায়।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Observe the PHI. Onion is often harvested and sold quickly — plan the last spray at least 2 weeks before lifting. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। পিএইচআই মানুন। পেঁয়াজ প্রায়ই তুলেই দ্রুত বিক্রি হয় — শেষ স্প্রে তোলার অন্তত ২ সপ্তাহ আগে দিন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves are collapsing across the field before bulbing is complete, or if stored onions are developing neck rot.",
+  "when_to_call_helpline_bn": "পেঁয়াজ পুরোপুরি বড় হওয়ার আগেই জমিজুড়ে পাতা ভেঙে পড়তে থাকলে, অথবা গুদামের পেঁয়াজে গলা পচা দেখা দিলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A sticker-added protectant programme normally keeps enough green leaf to finish bulbing. Leaves already collapsed will not recover. Proper curing then prevents the storage phase, which is where most of the money is actually lost.",
+  "expected_outcome_bn": "আঠালো পদার্থসহ প্রতিরোধক স্প্রে দিলে সাধারণত পেঁয়াজ বড় হওয়ার জন্য যথেষ্ট সবুজ পাতা টিকে থাকে। যে পাতা ভেঙে পড়েছে তা আর ভালো হবে না। এরপর ঠিকমতো শুকালে গুদামের পচা ঠেকে — আসল ক্ষতিটা তো ওখানেই হয়।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Score 250 EC (Difenoconazole) 50ml",
+    "Wetting agent/sticker 100ml",
+    "Knapsack sprayer 16L manual",
+    "Onion storage crate"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Score 250 EC, AP-384, Syngenta Bangladesh Limited — registered for onion purple blotch at 0.5 ml/litre); BARI onion production guidance; BBS Yearbook of Agricultural Statistics 2024 (onion area and production)",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Score 250 EC AP-384 for onion purple blotch is a directly verified crop-matched registration from the published PPW list — one of the strongest citations in this dataset. The sticker/wetting-agent point is emphasised because it is the most common reason onion sprays fail in the field.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Score 250 EC (Difenoconazole) 50ml",
+      "sku": "PEST-0022",
+      "name_en": "Difenoconazole 25% EC 50ml",
+      "category": "pesticide",
+      "match_score": 1.103,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Wetting agent/sticker 100ml",
+      "sku": "PEST-0102",
+      "name_en": "Wetting agent / spreader-sticker Non-ionic surfactant 100ml",
+      "category": "pesticide",
+      "match_score": 1.125,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Onion storage crate",
+      "sku": "EQ-0058",
+      "name_en": "Onion storage crate / net bag",
+      "category": "equipment",
+      "match_score": 0.939,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

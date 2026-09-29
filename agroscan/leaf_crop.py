@@ -1,7 +1,7 @@
 """Leaf image preprocessing: auto-crop and perspective crop from 4 corners.
 
-Uses HSV + excess-green heuristics (works for healthy and diseased leaves)
-and optional GrabCut refine when OpenCV is available. No heavy NN required.
+Uses HSV + excess-green heuristics (works for healthy and diseased leaves).
+No heavy NN required.
 """
 from __future__ import annotations
 
@@ -67,21 +67,10 @@ def _largest_contour(mask: np.ndarray):
     return max(cnts, key=cv2.contourArea)
 
 
-def _refine_grabcut(bgr: np.ndarray, bbox: Tuple[int, int, int, int]) -> Optional[np.ndarray]:
-    """Optional GrabCut refine inside bbox. Returns mask or None."""
-    x0, y0, x1, y1 = bbox
-    w, h = x1 - x0, y1 - y0
-    if w < 32 or h < 32:
-        return None
-    try:
-        gc_mask = np.zeros(bgr.shape[:2], np.uint8)
-        bgd = np.zeros((1, 65), np.float64)
-        fgd = np.zeros((1, 65), np.float64)
-        rect = (x0, y0, w, h)
-        cv2.grabCut(bgr, gc_mask, rect, bgd, fgd, 3, cv2.GC_INIT_WITH_RECT)
-        return np.where((gc_mask == 2) | (gc_mask == 0), 0, 255).astype("uint8")
-    except Exception:
-        return None
+# ponytail: GrabCut on phone photos was multi-second on CPU. HSV bbox on a
+# 640px working copy is enough; upgrade: 1-iter GrabCut on the bbox if isolate
+# quality regresses on busy backgrounds.
+_WORK_MAX = 640
 
 
 def auto_crop_leaf(
@@ -101,38 +90,40 @@ def auto_crop_leaf(
 
     bgr = _pil_to_bgr(img)
     h, w = bgr.shape[:2]
-    mask = _leaf_mask(bgr)
-    c = _largest_contour(mask)
+    scale = min(1.0, _WORK_MAX / float(max(h, w)))
+    if scale < 1.0:
+        small = cv2.resize(
+            bgr,
+            (max(1, int(round(w * scale))), max(1, int(round(h * scale)))),
+            interpolation=cv2.INTER_AREA,
+        )
+    else:
+        small = bgr
+    sh, sw = small.shape[:2]
+    mask_s = _leaf_mask(small)
+    c = _largest_contour(mask_s)
     if c is None:
         meta["note"] = "no leaf contour"
         return img, meta
 
     area = float(cv2.contourArea(c))
-    if area < 0.015 * h * w:
+    if area < 0.015 * sh * sw:
         meta["note"] = "contour too small"
         return img, meta
 
     x, y, bw, bh = cv2.boundingRect(c)
     pad_x = int(bw * padding)
     pad_y = int(bh * padding)
-    x0 = max(0, x - pad_x)
-    y0 = max(0, y - pad_y)
-    x1 = min(w, x + bw + pad_x)
-    y1 = min(h, y + bh + pad_y)
+    inv = 1.0 / scale
+    x0 = max(0, int(round((x - pad_x) * inv)))
+    y0 = max(0, int(round((y - pad_y) * inv)))
+    x1 = min(w, int(round((x + bw + pad_x) * inv)))
+    y1 = min(h, int(round((y + bh + pad_y) * inv)))
+    if x1 - x0 < 8 or y1 - y0 < 8:
+        meta["note"] = "bbox too small"
+        return img, meta
 
-    refined = _refine_grabcut(bgr, (x0, y0, x1, y1))
-    if refined is not None:
-        c2 = _largest_contour(refined)
-        if c2 is not None and cv2.contourArea(c2) > 0.01 * h * w:
-            x, y, bw, bh = cv2.boundingRect(c2)
-            pad_x = int(bw * padding)
-            pad_y = int(bh * padding)
-            x0 = max(0, x - pad_x)
-            y0 = max(0, y - pad_y)
-            x1 = min(w, x + bw + pad_x)
-            y1 = min(h, y + bh + pad_y)
-            meta["method"] = "auto+grabcut"
-            mask = refined
+    mask = cv2.resize(mask_s, (w, h), interpolation=cv2.INTER_NEAREST) if scale < 1.0 else mask_s
 
     cropped = bgr[y0:y1, x0:x1].copy()
     if isolate:

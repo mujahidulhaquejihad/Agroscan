@@ -3,8 +3,9 @@
 """AgroScan dataset validation and cross-reference integrity check."""
 import json, re, sys, unicodedata
 from collections import Counter, defaultdict
+from pathlib import Path
 
-D = "/root/agroscan/data/"
+D = str(Path(__file__).resolve().parent) + "/"
 fails, warns = [], []
 
 
@@ -92,8 +93,12 @@ print(f"  {healthy_n} healthy classes, {len(bad)} violations -> {'OK' if not bad
 
 # ----------------------------- 3. viral / incurable classes must have no chem cure
 print("\n[3] Viral and incurable classes must not imply a cure")
-INCURABLE = {"tylcv", "tomato_mosaic_virus", "tungro", "citrus_greening",
-             "bacterial_wilt", "chilli_leaf_curl"}
+INCURABLE = {
+    "tylcv", "tomato_mosaic_virus", "tungro", "citrus_greening",
+    "bacterial_wilt", "chilli_leaf_curl", "panama", "golden_mosaic",
+    "papaya_mosaic", "papaya_ringspot", "papaya_curl", "sugarcane_mosaic",
+    "sugarcane_yellow", "potato_brown_rot", "potato_blackleg",
+}
 bad_cure = []
 for r in dis:
     inc = r["kb_key"] in INCURABLE
@@ -404,6 +409,36 @@ nobn = [i for i, b in boxes.items()
         if not BN.search(b.get("title_bn","") + b.get("body_bn",""))]
 if nobn: fail(f"warning boxes without Bangla: {nobn}")
 print(f"  {len(boxes)} boxes; required present: {len(REQUIRED)-len(absent)}/{len(REQUIRED)}; without Bangla: {len(nobn)}")
+
+print("\n[19] Disease step files — consecutive bilingual steps, model coverage")
+from pathlib import Path as _P
+_model = _P(__file__).resolve().parents[2] / "web" / "offline-pack.json"
+if _model.exists():
+    _classes = json.load(open(_model, encoding="utf-8"))["models"]["disease"]["classes"]
+    _have = {r["class_name"] for r in dis}
+    _miss = [c for c in _classes if c not in _have]
+    if _miss:
+        fail(f"model classes without a disease card: {len(_miss)} e.g. {_miss[:8]}")
+    print(f"  model classes {len(_classes)}; pack {len(dis)}; missing {len(_miss)}")
+else:
+    print("  offline-pack.json not found — skip model coverage")
+step_fail = 0
+for r in dis:
+    en, bn = r.get("immediate_actions_en") or [], r.get("immediate_actions_bn") or []
+    if len(en) != len(bn) or len(en) < 3:
+        fail(f"{r['class_name']}: steps en={len(en)} bn={len(bn)}")
+        step_fail += 1
+        continue
+    for i, (a, b) in enumerate(zip(en, bn), 1):
+        if a.get("step") != i or b.get("step") != i:
+            fail(f"{r['class_name']}: steps not consecutive at {i}")
+            step_fail += 1
+            break
+        if not BN.search(str(b.get("title", "")) + str(b.get("detail", ""))):
+            fail(f"{r['class_name']}: step {i} missing Bangla")
+            step_fail += 1
+            break
+print(f"  step-structure failures: {step_fail}")
 
 # ------------------------------------------------------------------ summary
 print("\n" + "=" * 78)

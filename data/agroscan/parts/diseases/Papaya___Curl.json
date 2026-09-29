@@ -1,0 +1,184 @@
+{
+  "class_name": "Papaya___Curl",
+  "kb_key": "papaya_curl",
+  "crop_en": "Papaya",
+  "crop_bn": "পেঁপে",
+  "disease_en": "Papaya leaf curl",
+  "disease_bn": "পেঁপের পাতা কোঁকড়ানো",
+  "pathogen": "Papaya leaf curl virus (whitefly-transmitted)",
+  "severity": "high",
+  "summary_en": "Papaya leaf curl on Papaya (Papaya leaf curl virus (whitefly-transmitted)). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "পেঁপে-এ পেঁপের পাতা কোঁকড়ানো (Papaya leaf curl virus (whitefly-transmitted))। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Leaves curl upward, thicken and become leathery",
+    "Plant is stunted; little or no fruit",
+    "Whiteflies present; infected plants do not recover"
+  ],
+  "symptoms_bn": [
+    "পাতা উপরের দিকে কুঁকড়ে মোটা ও চামড়ার মতো হয়",
+    "গাছ খাটো; ফল কম বা নেই",
+    "সাদা মাছি থাকে; আক্রান্ত গাছ সারে না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "There is no chemical cure",
+      "detail": "Once Papaya has this virus, sprays will not make the plant healthy again. Anything you spray is only for the insect that spreads it."
+    },
+    {
+      "step": 2,
+      "title": "Rogue infected plants today",
+      "detail": "Bag stunted, mosaic or curled plants and remove them from the field. Leaving them is a source for the whole plot."
+    },
+    {
+      "step": 3,
+      "title": "Control the insect vector",
+      "detail": "Yellow sticky traps plus a labelled insecticide only if the vector is actually present. Follow PHI."
+    },
+    {
+      "step": 4,
+      "title": "Do not keep seed or cuttings from this crop",
+      "detail": "Infected planting material restarts the disease next season."
+    },
+    {
+      "step": 5,
+      "title": "Call 16123 if it is spreading",
+      "detail": "If several neighbouring plots show the same pattern, the Upazila office needs to know."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ওষুধে সারবে না",
+      "detail": "পেঁপে-এ এই ভাইরাস ঢুকলে স্প্রেতে গাছ আর সুস্থ হয় না। যা স্প্রে করবেন তা শুধু ছড়ানো পোকার জন্য।"
+    },
+    {
+      "step": 2,
+      "title": "আক্রান্ত গাছ আজই তুলুন",
+      "detail": "খাটো, মোজাইক বা কোঁকড়ানো গাছ ব্যাগে ভরে জমি থেকে সরান। ফেলে রাখলে পুরো জমির উৎস হয়।"
+    },
+    {
+      "step": 3,
+      "title": "বাহক পোকা দমন করুন",
+      "detail": "হলুদ আঠালো ফাঁদ, আর পোকা সত্যি থাকলে তবেই লেবেলমাফিক কীটনাশক। পিএইচআই মানুন।"
+    },
+    {
+      "step": 4,
+      "title": "এই ফসলের বীজ বা কলম রাখবেন না",
+      "detail": "আক্রান্ত চারা বা কাটিং পরের মৌসুমে রোগ আবার শুরু করে।"
+    },
+    {
+      "step": 5,
+      "title": "ছড়ালে ১৬১২৩-এ ফোন করুন",
+      "detail": "পাশের কয়েকটি জমিতে একই লক্ষণ থাকলে উপজেলা অফিসকে জানান।"
+    }
+  ],
+  "cultural_control_en": [
+    "Raise seedlings under insect-proof net where the crop is transplanted",
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "চারা রোপণের ফসল হলে পোকা-প্রতিরোধী নেটের নিচে চারা তুলুন",
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Imidacloprid 20% SL",
+      "product_name_bn": "ইমিডাক্লোপ্রিড ২০% এসএল",
+      "active_ingredient": "Imidacloprid",
+      "formulation": "SL",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Aim at leaf undersides. Highly toxic to bees — do not spray in bloom.",
+      "application_method_bn": "পাতার নিচের পিঠে দিন। মৌমাছির জন্য খুব বিষাক্ত — ফুল ফোটার সময় স্প্রে নয়।",
+      "timing_en": "Only when the insect/vector is confirmed. This does not cure a virus already in the plant.",
+      "timing_bn": "পোকা/বাহক নিশ্চিত হলে তবেই। গাছে ঢোকা ভাইরাস এতে সারে না।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফসল তুলবেন না।",
+      "brands_available_bd": [
+        "Admire 20 SL",
+        "Imidor 20 SL"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Imidacloprid is registered in Bangladesh. Brand AP numbers were not individually verified for this card.",
+      "registration_verified": false,
+      "verified_ap_numbers": [],
+      "treatment_type": "curative",
+      "caution_en": "Highly toxic to bees and aquatic life.",
+      "caution_bn": "মৌমাছি ও মাছের জন্য মারাত্মক বিষাক্ত।",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci)",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।"
+    }
+  ],
+  "organic_alternatives_en": [
+    "Rogueing, rotation and clean seed — not a bottle — are the real organic options here"
+  ],
+  "organic_alternatives_bn": [
+    "এখানে আসল জৈব উপায় গাছ তোলা, পালা ও পরিষ্কার বীজ — বোতল নয়"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop at medium fertility. Do not dump extra urea on a diseased canopy unless a step below says to feed a hungry crop.",
+  "fertilizer_advice_bn": "মাঝারি উর্বরতায় এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। নিচের কোনো ধাপে অভুক্ত গাছকে খাবার দিতে না বললে রোগা ছাউনিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, a mask, goggles, full-sleeve shirt and long trousers. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind at your back. Wash the sprayer and your body with soap afterwards. Keep children and livestock out of the field for 24 hours. Do not wash the sprayer in a pond, canal or irrigation channel.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। খোলা জায়গায় মেশান, খালি হাতে নয়। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে স্প্রেয়ার ও শরীর ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমিতে ঢুকতে দেবেন না। পুকুর, খাল বা সেচ নালায় স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Papaya keeps getting worse after the steps above, or if you are not sure this is Papaya leaf curl.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও পেঁপে খারাপ হতে থাকলে, অথবা এটা পেঁপের পাতা কোঁকড়ানো কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [
+    "Imidacloprid 20% SL 100ml",
+    "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Papaya___Curl. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": false,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": [
+    {
+      "ref_text": "Imidacloprid 20% SL 100ml",
+      "sku": "PEST-0048",
+      "name_en": "Imidacloprid 20% SL 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    }
+  ],
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

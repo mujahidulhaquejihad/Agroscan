@@ -1,0 +1,315 @@
+{
+  "class_name": "Chilli___Leaf_curl",
+  "kb_key": "chilli_leaf_curl",
+  "crop_en": "Chilli",
+  "crop_bn": "মরিচ",
+  "disease_en": "Chilli leaf curl (virus complex + mite/thrips damage)",
+  "disease_bn": "মরিচের পাতা কোঁকড়ানো রোগ",
+  "pathogen": "Chilli leaf curl begomovirus complex (whitefly-transmitted), often combined with yellow mite (Polyphagotarsonemus latus) and thrips damage",
+  "severity": "high",
+  "summary_en": "Leaves curl, crinkle and bunch up and the plant stops growing. In Bangladesh this is usually a combination of a whitefly-borne virus and damage from yellow mite and thrips. Which one it is decides the treatment, so look closely before you spray.",
+  "summary_bn": "পাতা কুঁকড়ে, কোঁচকে গুচ্ছ হয়ে যায় আর গাছের বাড়া বন্ধ হয়ে যায়। বাংলাদেশে সাধারণত সাদা মাছিবাহিত ভাইরাস আর হলুদ মাকড় ও থ্রিপসের ক্ষতি একসাথে মিলেই এটা হয়। কোনটা হয়েছে তার উপরই চিকিৎসা নির্ভর করে, তাই স্প্রের আগে ভালো করে দেখুন।",
+  "symptoms_en": [
+    "VIRUS: leaves curl UPWARD, become small, thick and leathery, plant is stunted, internodes short, little or no fruit; whiteflies present",
+    "YELLOW MITE: leaves curl DOWNWARD along the edges, become narrow, elongated and shiny/bronzed underneath, shoot tips look like an inverted boat; mites are microscopic, look for the leaf shape",
+    "THRIPS: leaves curl UPWARD with silvery streaks and tiny black specks of frass on the underside",
+    "All three often occur together, which is why the field looks so badly affected",
+    "Worst in hot dry weather from late Rabi into Kharif-1"
+  ],
+  "symptoms_bn": [
+    "ভাইরাস: পাতা উপরের দিকে কুঁকড়ে যায়, ছোট, মোটা ও চামড়ার মতো শক্ত হয়, গাছ খাটো, গিঁটের দূরত্ব কম, ফল কম বা একদম নেই; সাদা মাছি থাকে",
+    "হলুদ মাকড়: পাতার কিনারা নিচের দিকে কুঁকড়ে যায়, পাতা সরু-লম্বা হয় ও নিচের পিঠ চকচকে/তামাটে দেখায়, ডগা দেখতে উল্টানো নৌকার মতো; মাকড় খালি চোখে দেখা যায় না, পাতার আকৃতি দেখেই বুঝতে হয়",
+    "থ্রিপস: পাতা উপরের দিকে কুঁকড়ে যায়, রুপালি ডোরা পড়ে আর নিচের পিঠে ছোট কালো বিষ্ঠার দাগ থাকে",
+    "প্রায়ই তিনটাই একসাথে হয়, এজন্যই জমি এত খারাপ দেখায়",
+    "রবির শেষ থেকে খরিফ-১ পর্যন্ত গরম শুকনো আবহাওয়ায় সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Work out which one it is first",
+      "detail": "Leaves curling DOWN and looking narrow and shiny = yellow mite (treat with a miticide). Leaves curling UP, thick and leathery, plant stunted, whiteflies flying = virus (no cure, control whitefly and rogue). Silvery streaks = thrips. This one check saves most of the wasted spraying in chilli."
+    },
+    {
+      "step": 2,
+      "title": "If it is the virus, rogue the plants",
+      "detail": "Bag and remove stunted, upward-curled plants. There is no cure for the virus — removing sources and controlling whitefly protects the rest."
+    },
+    {
+      "step": 3,
+      "title": "If it is yellow mite, use a miticide not an insecticide",
+      "detail": "Abamectin, spiromesifen or wettable sulphur, sprayed on the leaf undersides and growing tips. Ordinary insecticides will not kill mites and will make things worse by killing their predators."
+    },
+    {
+      "step": 4,
+      "title": "Put up yellow and blue sticky traps",
+      "detail": "Yellow catches whitefly, blue catches thrips. 8-10 per decimal. They also tell you which pest you actually have."
+    },
+    {
+      "step": 5,
+      "title": "Stop routine broad-spectrum spraying",
+      "detail": "Repeated pyrethroid sprays are a leading cause of yellow mite outbreaks in Bangladeshi chilli."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আগে কোনটা হয়েছে তা বের করুন",
+      "detail": "পাতা নিচের দিকে কুঁকড়ে সরু ও চকচকে = হলুদ মাকড় (মাকড়নাশক দিন)। পাতা উপরের দিকে কুঁকড়ে মোটা ও শক্ত, গাছ খাটো, সাদা মাছি উড়ছে = ভাইরাস (চিকিৎসা নেই, সাদা মাছি দমন ও আক্রান্ত গাছ তুলে ফেলা)। রুপালি ডোরা = থ্রিপস। মরিচে যত অপচয়ের স্প্রে হয় তার বেশিরভাগই এই একটা পরীক্ষায় বেঁচে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "ভাইরাস হলে আক্রান্ত গাছ তুলে ফেলুন",
+      "detail": "খাটো, উপরের দিকে কোঁকড়ানো গাছ ব্যাগে ভরে সরিয়ে ফেলুন। ভাইরাসের কোনো চিকিৎসা নেই — উৎস সরিয়ে আর সাদা মাছি দমন করেই বাকিগুলো বাঁচাতে হয়।"
+    },
+    {
+      "step": 3,
+      "title": "হলুদ মাকড় হলে কীটনাশক নয়, মাকড়নাশক দিন",
+      "detail": "অ্যাবামেকটিন, স্পাইরোমেসিফেন বা ভেজানো সালফার পাতার নিচের পিঠে ও কচি ডগায় স্প্রে করুন। সাধারণ কীটনাশকে মাকড় মরবে না, বরং মাকড়ের শত্রু পোকা মরে অবস্থা আরও খারাপ হবে।"
+    },
+    {
+      "step": 4,
+      "title": "হলুদ ও নীল আঠালো ফাঁদ লাগান",
+      "detail": "হলুদে সাদা মাছি ধরা পড়ে, নীলে থ্রিপস। প্রতি শতাংশে ৮-১০টি। কোন পোকা আসলে আছে তাও এতে বোঝা যায়।"
+    },
+    {
+      "step": 5,
+      "title": "নিয়ম করে ব্যাপক কীটনাশক দেওয়া বন্ধ করুন",
+      "detail": "বাংলাদেশের মরিচে হলুদ মাকড়ের প্রকোপের প্রধান কারণ বারবার পাইরেথ্রয়েড জাতীয় ওষুধ দেওয়া।"
+    }
+  ],
+  "cultural_control_en": [
+    "Raise seedlings under 40-50 mesh insect-proof net",
+    "Grow tolerant varieties where available",
+    "Yellow and blue sticky traps from the start of the season",
+    "Rogue virus-infected plants weekly",
+    "Do not plant chilli next to old chilli, tomato, brinjal or cotton",
+    "Barrier crops of maize around the plot",
+    "Keep the field and bunds weed-free",
+    "Adequate irrigation — drought stress makes mite damage much worse"
+  ],
+  "cultural_control_bn": [
+    "৪০-৫০ মেশ পোকা-প্রতিরোধী নেটের নিচে চারা তৈরি করুন",
+    "সম্ভব হলে সহনশীল জাত লাগান",
+    "মৌসুমের শুরু থেকেই হলুদ ও নীল আঠালো ফাঁদ",
+    "প্রতি সপ্তাহে ভাইরাস আক্রান্ত গাছ তুলে ফেলুন",
+    "পুরনো মরিচ, টমেটো, বেগুন বা তুলার জমির পাশে মরিচ লাগাবেন না",
+    "জমির চারপাশে ভুট্টার বেড়া ফসল",
+    "জমি ও আইল আগাছামুক্ত রাখুন",
+    "পর্যাপ্ত সেচ দিন — পানির অভাবে মাকড়ের ক্ষতি অনেক বেড়ে যায়"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Abamectin 1.8% EC (for yellow mite)",
+      "product_name_bn": "অ্যাবামেকটিন ১.৮% ইসি (হলুদ মাকড়ের জন্য)",
+      "active_ingredient": "Abamectin",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Nozzle angled UP, targeting growing tips and leaf undersides. Use a wetting agent. Coverage decides the result.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে কচি ডগা ও পাতার নিচের পিঠে দিন। আঠালো পদার্থ মেশান। ভালো করে লাগানোর উপরই ফল নির্ভর করে।",
+      "timing_en": "Only when yellow mite damage is confirmed (downward leaf curl). Repeat once after 7 days, then rotate.",
+      "timing_bn": "হলুদ মাকড়ের ক্ষতি নিশ্চিত হলে (পাতা নিচের দিকে কোঁকড়ানো) তবেই। ৭ দিন পর একবার, তারপর ওষুধ পাল্টান।",
+      "interval_days": 7,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন মরিচ তুলবেন না।",
+      "brands_available_bd": [
+        "Vertimec 1.8 EC",
+        "Abamec 1.8 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Abamectin registered in Bangladesh and named in national HHP surveys. Verify brand AP number and chilli label claim against the current PPW list.",
+      "treatment_type": "curative",
+      "caution_en": "Listed among highly hazardous pesticides in wide use in Bangladesh; very toxic to bees and fish. Use only on confirmed mite damage.",
+      "caution_bn": "বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে; মৌমাছি ও মাছের জন্য খুবই বিষাক্ত। মাকড়ের ক্ষতি নিশ্চিত হলে তবেই দিন।",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci) — for the viral component only",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) — for the viral component only that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Sulphur 80% WP (for yellow mite, lower-risk option)",
+      "product_name_bn": "সালফার ৮০% ডব্লিউপি (হলুদ মাকড়ের জন্য, কম ঝুঁকির বিকল্প)",
+      "active_ingredient": "Sulphur",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray on leaf undersides and growing tips. Do not apply above 32°C.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার নিচের পিঠে ও কচি ডগায়। ৩২ ডিগ্রির উপরে দেবেন না।",
+      "timing_en": "Early mite infestation or as a rotation partner for abamectin.",
+      "timing_bn": "শুরুর দিকের মাকড় আক্রমণে, অথবা অ্যাবামেকটিনের সাথে পালা করে।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 3,
+      "pre_harvest_interval_note_en": "Do not pick for 3 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩ দিন মরিচ তুলবেন না।",
+      "brands_available_bd": [
+        "Thiovit Jet 80 WG",
+        "Microthiol Special 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Microthiol Special 80 WP, AP-252, Shetu Pesticides Limited, in the DAE PPW registered list for mite control (registered use recorded there for tea). Confirm the chilli label claim.",
+      "treatment_type": "both",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci) — for the viral component only",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) — for the viral component only that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-252"
+      ]
+    },
+    {
+      "product_name_en": "Imidacloprid 20% SL (for whitefly vector only)",
+      "product_name_bn": "ইমিডাক্লোপ্রিড ২০% এসএল (শুধু সাদা মাছির জন্য)",
+      "active_ingredient": "Imidacloprid",
+      "formulation": "SL",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Nozzle angled up to the leaf undersides where whitefly sit.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে পাতার নিচের পিঠে, যেখানে সাদা মাছি বসে।",
+      "timing_en": "Only when whitefly numbers on sticky traps are high. This protects healthy plants; it does not cure virus-infected ones.",
+      "timing_bn": "আঠালো ফাঁদে সাদা মাছি বেশি ধরা পড়লে তবেই। এতে সুস্থ গাছ বাঁচে; ভাইরাস আক্রান্ত গাছ সারে না।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 5,
+      "pre_harvest_interval_note_en": "Do not pick for 5 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৫ দিন মরিচ তুলবেন না।",
+      "brands_available_bd": [
+        "Admire 20 SL",
+        "Imidor 20 SL",
+        "Tido 20 SL"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Imidacloprid registered in Bangladesh; verify brand AP number and chilli label claim.",
+      "treatment_type": "curative",
+      "caution_en": "Highly toxic to bees. Do not spray during flowering hours.",
+      "caution_bn": "মৌমাছির জন্য মারাত্মক বিষাক্ত। ফুল ফোটার সময়ে স্প্রে করবেন না।",
+      "cures_disease": false,
+      "targets_vector": "whitefly (Bemisia tabaci) — for the viral component only",
+      "purpose_en": "Controls the whitefly (Bemisia tabaci) — for the viral component only that spreads the disease, protecting plants that are still healthy. It does NOT cure infected plants.",
+      "purpose_bn": "রোগ ছড়ানো পোকা দমন করে, ফলে যেসব গাছ এখনো সুস্থ সেগুলো বাঁচে। আক্রান্ত গাছ এতে সারে না।",
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Insect-proof nursery netting",
+    "Yellow and blue sticky traps",
+    "Neem oil at 3-5 ml/L with a wetting agent — works on mites, thrips and whitefly together and is the practical first choice for a mixed problem",
+    "Wettable sulphur for mites",
+    "Adequate irrigation to reduce drought stress",
+    "Conserving predatory mites and Encarsia by avoiding broad-spectrum sprays"
+  ],
+  "organic_alternatives_bn": [
+    "বীজতলায় পোকা-প্রতিরোধী নেট",
+    "হলুদ ও নীল আঠালো ফাঁদ",
+    "প্রতি লিটারে ৩-৫ মিলি নিম তেল আঠালো পদার্থসহ — মাকড়, থ্রিপস ও সাদা মাছি তিনটাতেই কাজ করে, মিশ্র সমস্যায় এটাই প্রথম পছন্দ",
+    "মাকড়ের জন্য ভেজানো সালফার",
+    "পর্যাপ্ত সেচ দিয়ে খরার কষ্ট কমানো",
+    "ব্যাপক কীটনাশক এড়িয়ে উপকারী মাকড় ও এনকারশিয়া বাঁচানো"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for chilli. Balanced feeding helps the plant push out new healthy growth after mite damage. Do not add extra nitrogen to virus-infected plants — soft growth attracts more whitefly and the plant will not recover anyway.",
+  "fertilizer_advice_bn": "মরিচের জন্য এফআরজি-২০১৮ মেনে চলুন। সুষম সার দিলে মাকড়ের ক্ষতির পর গাছ নতুন সুস্থ পাতা বের করতে পারে। ভাইরাস আক্রান্ত গাছে বাড়তি ইউরিয়া দেবেন না — নরম পাতায় আরও সাদা মাছি আসবে আর গাছ এমনিতেও ভালো হবে না।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Chilli is picked frequently — plan sprays right after a picking. Abamectin and imidacloprid are highly toxic to bees and fish. Do not apply sulphur in hot midday sun or within 2 weeks of an oil spray. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। মরিচ ঘন ঘন তোলা হয় — ফল তোলার ঠিক পরে স্প্রে করুন। অ্যাবামেকটিন ও ইমিডাক্লোপ্রিড মৌমাছি ও মাছের জন্য খুবই বিষাক্ত। দুপুরের কড়া রোদে বা তেল জাতীয় স্প্রের ২ সপ্তাহের মধ্যে সালফার দেবেন না। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products at label dose. Do not tank-mix multiple insecticides, which is common in chilli and increases both residues and resistance. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ লেবেলের মাত্রায় ব্যবহার করুন। এক ট্যাংকে একাধিক কীটনাশক মেশাবেন না — মরিচে এই চল আছে, এতে অবশিষ্টাংশ ও পোকার সহনশীলতা দুটোই বাড়ে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if you cannot tell whether it is virus or mite, if more than 20% of plants are stunted, or if curling continues after two miticide sprays.",
+  "when_to_call_helpline_bn": "ভাইরাস না মাকড় বুঝতে না পারলে, ২০% এর বেশি গাছ খাটো হয়ে গেলে, অথবা দুইবার মাকড়নাশক দেওয়ার পরও পাতা কোঁকড়াতে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Mite damage: new leaves come out normal within 2-3 weeks of an effective miticide — the old curled leaves stay curled. Virus: infected plants never recover; success is no new stunted plants appearing.",
+  "expected_outcome_bn": "মাকড়ের ক্ষতি হলে: কার্যকর মাকড়নাশক দেওয়ার ২-৩ সপ্তাহের মধ্যে নতুন পাতা স্বাভাবিক বের হয় — পুরনো কোঁকড়ানো পাতা ওরকমই থাকবে। ভাইরাস হলে: আক্রান্ত গাছ কখনো ভালো হবে না; নতুন করে খাটো গাছ না এলেই বুঝবেন কাজ হয়েছে।",
+  "related_shop_products": [
+    "Abamectin 1.8% EC 100ml",
+    "Wettable sulphur 80% WP 500g",
+    "Imidacloprid 20% SL 100ml",
+    "Neem oil 250ml",
+    "Yellow sticky trap (pack of 10)",
+    "Blue sticky trap (pack of 10)",
+    "Insect-proof net 50 mesh (per metre)"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Microthiol Special 80 WP, AP-252, Shetu Pesticides Ltd); The Daily Star, '17 highly harmful pesticides widely used across country' (abamectin HHP status); Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook; BARI chilli production guidance",
+  "source_type": "field_guide",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "This class covers a symptom complex with three different causes and three different treatments. The differential-diagnosis step is the most important content in this record and should be surfaced first in the UI — up-curl vs down-curl is the key distinction.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Abamectin 1.8% EC 100ml",
+      "sku": "PEST-0059",
+      "name_en": "Abamectin 1.8% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Wettable sulphur 80% WP 500g",
+      "sku": "PEST-0041",
+      "name_en": "Sulphur (wettable) 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.053,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Imidacloprid 20% SL 100ml",
+      "sku": "PEST-0048",
+      "name_en": "Imidacloprid 20% SL 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Neem oil 250ml",
+      "sku": "PEST-0096",
+      "name_en": "Neem oil (azadirachtin) 1500 ppm / 3000 ppm 250ml",
+      "category": "pesticide",
+      "match_score": 1.113,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Yellow sticky trap (pack of 10)",
+      "sku": "EQ-0069",
+      "name_en": "Yellow sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Blue sticky trap (pack of 10)",
+      "sku": "EQ-0070",
+      "name_en": "Blue sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Insect-proof net 50 mesh (per metre)",
+      "sku": "EQ-0074",
+      "name_en": "Insect-proof net 50 mesh (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

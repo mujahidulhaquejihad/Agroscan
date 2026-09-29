@@ -289,16 +289,6 @@
     if (window.AgroScanField && window.AgroScanField.onDiagnosis) {
       window.AgroScanField.onDiagnosis(data);
     }
-
-    // Auto-read once for simple UI (short delay so UI paints)
-    if (document.body.classList.contains("simple-ui") && window.speechSynthesis) {
-      setTimeout(function () {
-        if ($("listenBtn") && !window.__agroscanAutoSpoke) {
-          window.__agroscanAutoSpoke = true;
-          $("listenBtn").click();
-        }
-      }, 900);
-    }
   }
 
   function init() {

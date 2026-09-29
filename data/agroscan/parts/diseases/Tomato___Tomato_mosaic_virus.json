@@ -1,0 +1,181 @@
+{
+  "class_name": "Tomato___Tomato_mosaic_virus",
+  "kb_key": "tomato_mosaic_virus",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Tomato mosaic virus (ToMV / TMV)",
+  "disease_bn": "টমেটোর মোজাইক ভাইরাস রোগ",
+  "pathogen": "Tomato mosaic virus / Tobacco mosaic virus",
+  "severity": "medium",
+  "summary_en": "A virus that makes light and dark green mottled patterns on the leaves. There is no cure. It spreads mainly by hands, tools and tobacco — not by insects — so the control is hygiene, not spraying.",
+  "summary_bn": "এই ভাইরাসে পাতায় হালকা ও গাঢ় সবুজের ছোপ ছোপ নকশা পড়ে। এর কোনো চিকিৎসা নেই। এটি পোকার মাধ্যমে নয়, মূলত হাত, যন্ত্রপাতি ও তামাকের মাধ্যমে ছড়ায় — তাই স্প্রে নয়, পরিচ্ছন্নতাই এর প্রতিকার।",
+  "symptoms_en": [
+    "Light green and dark green mottled (mosaic) pattern on the leaves",
+    "Leaves may be narrow, distorted or fern-like",
+    "Plants mildly to moderately stunted; growth slows",
+    "Uneven ripening and internal browning of fruit; yellow blotches on fruit",
+    "No insects associated — this distinguishes it from TYLCV, which comes with whitefly",
+    "Often appears in a row or line across the field, following the path a worker's hands took"
+  ],
+  "symptoms_bn": [
+    "পাতায় হালকা সবুজ ও গাঢ় সবুজের ছোপ ছোপ (মোজাইক) নকশা",
+    "পাতা সরু, বিকৃত বা ফার্নের পাতার মতো হয়ে যেতে পারে",
+    "গাছ কম থেকে মাঝারি খাটো হয়; বাড়া কমে যায়",
+    "ফল অসমানভাবে পাকে, ভেতরে বাদামি হয়ে যায়; ফলের গায়ে হলুদ ছোপ পড়ে",
+    "সাথে কোনো পোকা থাকে না — এতেই টিওয়াইএলসিভি থেকে আলাদা করা যায়, ওটার সাথে সাদা মাছি থাকে",
+    "প্রায়ই জমির মধ্যে সারি ধরে লম্বালম্বি দেখা দেয় — শ্রমিকের হাত যে পথে গেছে সেই পথেই"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Wash your hands before touching any more plants",
+      "detail": "Wash with soap, then with milk or a 3% trisodium phosphate solution. The virus survives on skin and clothes for a long time and this is how it moves down a row."
+    },
+    {
+      "step": 2,
+      "title": "No tobacco in the field — ever",
+      "detail": "Do not smoke bidi or cigarettes, and do not chew tobacco or jarda, while working with tomato. Tobacco products carry the virus and this is a leading cause of ToMV in Bangladesh."
+    },
+    {
+      "step": 3,
+      "title": "Pull out infected plants",
+      "detail": "Bag and remove mottled plants. Wash your hands afterwards before touching healthy plants."
+    },
+    {
+      "step": 4,
+      "title": "Do not spray for it",
+      "detail": "There is no chemical treatment for a plant virus. Do not buy any product sold as a 'virus cure' — no such registered product exists."
+    },
+    {
+      "step": 5,
+      "title": "Disinfect tools and stakes",
+      "detail": "Dip pruning knives and shears in a 1% bleach or 3% trisodium phosphate solution between plants."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আর কোনো গাছে হাত দেওয়ার আগে হাত ধুয়ে নিন",
+      "detail": "সাবান দিয়ে ধুয়ে তারপর দুধ বা ৩% ট্রাইসোডিয়াম ফসফেট দ্রবণ দিয়ে ধুয়ে নিন। এই ভাইরাস হাত ও কাপড়ে অনেকক্ষণ বেঁচে থাকে, এভাবেই সারি ধরে ছড়ায়।"
+    },
+    {
+      "step": 2,
+      "title": "জমিতে তামাক একদম নয়",
+      "detail": "টমেটোর কাজ করার সময় বিড়ি-সিগারেট খাবেন না, জর্দা বা তামাকও খাবেন না। তামাকজাত জিনিসে এই ভাইরাস থাকে এবং বাংলাদেশে এটাই এই রোগের বড় কারণ।"
+    },
+    {
+      "step": 3,
+      "title": "আক্রান্ত গাছ তুলে ফেলুন",
+      "detail": "ছোপ ছোপ দাগওয়ালা গাছ ব্যাগে ভরে সরিয়ে নিন। এরপর সুস্থ গাছে হাত দেওয়ার আগে হাত ধুয়ে নিন।"
+    },
+    {
+      "step": 4,
+      "title": "এর জন্য স্প্রে করবেন না",
+      "detail": "গাছের ভাইরাসের কোনো ওষুধ নেই। 'ভাইরাসের ওষুধ' বলে কিছু বিক্রি হলে কিনবেন না — এমন কোনো নিবন্ধিত ওষুধ নেই।"
+    },
+    {
+      "step": 5,
+      "title": "যন্ত্রপাতি ও খুঁটি জীবাণুমুক্ত করুন",
+      "detail": "এক গাছ থেকে আরেক গাছে যাওয়ার সময় ছুরি ও কাঁচি ১% ব্লিচ বা ৩% ট্রাইসোডিয়াম ফসফেট দ্রবণে ডুবিয়ে নিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Use certified virus-free seed; hot water or trisodium phosphate seed treatment removes seed-borne virus",
+    "Grow resistant varieties carrying the Tm-2a gene where available",
+    "Strict hand hygiene for everyone working in the field",
+    "Absolute ban on tobacco use in and around the tomato field",
+    "Do not transplant seedlings from a nursery where mottling has been seen",
+    "Remove all crop residue; the virus survives a long time in dry plant debris and on stakes",
+    "Rotate away from tomato, chilli, brinjal and tobacco"
+  ],
+  "cultural_control_bn": [
+    "সার্টিফাইড ভাইরাসমুক্ত বীজ ব্যবহার করুন; গরম পানি বা ট্রাইসোডিয়াম ফসফেট দিয়ে বীজ শোধন করলে বীজবাহিত ভাইরাস দূর হয়",
+    "সম্ভব হলে Tm-2a জিনযুক্ত প্রতিরোধী জাত লাগান",
+    "জমিতে কাজ করা সবার জন্য কঠোর হাত পরিষ্কারের নিয়ম",
+    "টমেটোর জমিতে ও আশপাশে তামাক ব্যবহার সম্পূর্ণ নিষিদ্ধ",
+    "যে বীজতলায় ছোপ ছোপ দাগ দেখা গেছে সেখান থেকে চারা লাগাবেন না",
+    "সব অবশিষ্টাংশ সরিয়ে ফেলুন; শুকনো গাছের অবশিষ্টাংশ ও খুঁটিতে ভাইরাস অনেক দিন বেঁচে থাকে",
+    "টমেটো, মরিচ, বেগুন ও তামাক বাদ দিয়ে পালা করে চাষ করুন"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Milk spray (1 part milk to 9 parts water) on hands and tools reduces virus transmission — a well-documented practical measure",
+    "Hot water seed treatment",
+    "Rigorous sanitation is the only effective control; there is no product, organic or otherwise, that cures a plant virus"
+  ],
+  "organic_alternatives_bn": [
+    "হাত ও যন্ত্রপাতিতে দুধের দ্রবণ (১ ভাগ দুধ ৯ ভাগ পানি) লাগালে ভাইরাস ছড়ানো কমে — এটি বহুল প্রমাণিত ব্যবহারিক পদ্ধতি",
+    "গরম পানিতে বীজ শোধন",
+    "কঠোর পরিচ্ছন্নতাই একমাত্র কার্যকর ব্যবস্থা; জৈব হোক বা রাসায়নিক, গাছের ভাইরাস সারায় এমন কোনো ওষুধ নেই"
+  ],
+  "fertilizer_advice_en": "Balanced feeding at FRG rates helps the plant tolerate infection and keep producing, but it does not cure it. Avoid nitrogen excess.",
+  "fertilizer_advice_bn": "এফআরজি মাত্রায় সুষম সার দিলে গাছ রোগ সয়ে কিছুটা ফলন দিতে পারে, তবে রোগ সারবে না। বেশি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "No pesticide is recommended for this class. If someone tries to sell you a spray for it, they are selling you something that cannot work.",
+  "safety_warning_bn": "এই রোগের জন্য কোনো ওষুধের পরামর্শ নেই। কেউ এর জন্য স্প্রে বিক্রি করতে চাইলে বুঝবেন এমন জিনিস বিক্রি করছেন যা কাজ করতেই পারে না।",
+  "legal_note_en": "No registered chemical treatment exists for plant viruses in Bangladesh. Report any dealer selling a 'virus cure' to your Upazila Agriculture Officer. Krishi Call Center: 16123.",
+  "legal_note_bn": "বাংলাদেশে গাছের ভাইরাসের জন্য নিবন্ধিত কোনো ওষুধ নেই। কোনো দোকানদার 'ভাইরাসের ওষুধ' বিক্রি করলে উপজেলা কৃষি অফিসারকে জানান। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if mottling appears in the nursery, if more than 10% of plants show mosaic, or if you cannot tell this apart from a nutrient deficiency.",
+  "when_to_call_helpline_bn": "বীজতলায় ছোপ ছোপ দাগ দেখা দিলে, ১০% এর বেশি গাছে মোজাইক দেখা দিলে, অথবা এটা পুষ্টির অভাব কিনা বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Infected plants stay infected. With strict hygiene, spread stops and the healthy plants stay healthy. Mildly affected plants often still give a usable crop, though fruit quality is reduced.",
+  "expected_outcome_bn": "আক্রান্ত গাছ আক্রান্তই থাকবে। কঠোর পরিচ্ছন্নতা মানলে ছড়ানো বন্ধ হয় এবং সুস্থ গাছ সুস্থ থাকে। হালকা আক্রান্ত গাছ থেকে প্রায়ই কিছু ফসল পাওয়া যায়, তবে ফলের মান কমে যায়।",
+  "related_shop_products": [
+    "Certified virus-free tomato seed (10g)",
+    "Nitrile gloves (box of 100)",
+    "Pruning shears",
+    "Trisodium phosphate 500g"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "'Tomato Cultivation in Bangladesh: Insights into Pest Awareness and Disease Management' (researchgate 391850970); BARI tomato production guidance; standard tobamovirus sanitation protocols",
+  "source_type": "academic",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Zero chemical treatments by design — no registered product treats plant viruses. The tobacco/bidi warning is specifically relevant in the Bangladesh context and should be prominent in the UI.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Certified virus-free tomato seed (10g)",
+      "sku": "SEED-0053",
+      "name_en": "Certified virus-free tomato seed 1g",
+      "category": "seed",
+      "match_score": 0.984,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nitrile gloves (box of 100)",
+      "sku": "EQ-0011",
+      "name_en": "Nitrile spray gloves (pair)",
+      "category": "equipment",
+      "match_score": 0.938,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Pruning shears",
+      "sku": "EQ-0040",
+      "name_en": "Pruning shears (secateurs)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Trisodium phosphate 500g",
+      "sku": "FERT-0035",
+      "name_en": "Trisodium phosphate (seed and tool disinfectant) 500g",
+      "category": "fertilizer",
+      "match_score": 1.1,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": false,
+  "no_cure_notice_en": "There is no chemical cure for this condition. Plants already affected will not recover. Any product recommended below protects the plants that are still healthy or slows the spread — it does not cure an infected plant.",
+  "no_cure_notice_bn": "এই সমস্যার কোনো ওষুধ নেই। যেসব গাছ আক্রান্ত হয়ে গেছে সেগুলো আর ভালো হবে না। নিচে যে ওষুধের কথা বলা হয়েছে তা কেবল সুস্থ গাছগুলোকে রক্ষা করে বা রোগ ছড়ানো ধীর করে — আক্রান্ত গাছ সারায় না।"
+}

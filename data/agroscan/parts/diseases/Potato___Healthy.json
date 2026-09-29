@@ -1,0 +1,167 @@
+{
+  "class_name": "Potato___healthy",
+  "kb_key": "healthy_potato",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed right now. But potato in Bangladesh is grown through the fog season, so the important thing is to start preventive late blight sprays before symptoms appear, not after.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। এখন কোনো ওষুধ দেওয়ার দরকার নেই। তবে বাংলাদেশে আলু হয় কুয়াশার মৌসুমে, তাই দাগ দেখার আগেই নাবি ধ্বসার প্রতিরোধমূলক স্প্রে শুরু করাই আসল কাজ।",
+  "symptoms_en": [
+    "Uniform green leaves, no spots, rings, water-soaked patches or yellowing",
+    "Plants standing upright with a full canopy",
+    "No white downy growth on leaf undersides in the early morning"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ, বলয়, ভেজা ছোপ বা হলুদ ভাব নেই",
+    "গাছ সোজা দাঁড়িয়ে আছে, পাতা ভরা",
+    "খুব ভোরেও পাতার নিচের পিঠে সাদা তুলার মতো কিছু নেই"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No curative treatment needed",
+      "detail": "Do not spray any systemic or curative fungicide on a healthy crop. It wastes money and speeds up fungicide resistance in your field."
+    },
+    {
+      "step": 2,
+      "title": "Start the preventive schedule on time",
+      "detail": "From about 30-35 days after planting, or the moment fog starts, begin protectant sprays (mancozeb at 2-2.5 g/L) every 7-10 days. This is the single decision that decides whether your potato crop survives."
+    },
+    {
+      "step": 3,
+      "title": "Check the field every 2-3 days in fog",
+      "detail": "In December and January, walk the field every 2-3 days and look at the lower leaves and the leaf edges in the early morning while the dew is still on. The first lesion is what you are looking for."
+    },
+    {
+      "step": 4,
+      "title": "Earth up properly",
+      "detail": "Keep the ridges high and covered so tubers are never exposed. This is your insurance against tuber blight even if the leaves get infected later."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "চিকিৎসার ওষুধ লাগবে না",
+      "detail": "সুস্থ ফসলে কোনো সিস্টেমিক বা রোগ দমনের ওষুধ স্প্রে করবেন না। এতে টাকা নষ্ট হয় আর আপনার জমির জীবাণু দ্রুত ওষুধ সহ্য করা শিখে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "প্রতিরোধমূলক স্প্রে সময়মতো শুরু করুন",
+      "detail": "রোপণের ৩০-৩৫ দিন পর থেকে, অথবা কুয়াশা শুরু হওয়া মাত্র, ৭-১০ দিন পর পর প্রতিরোধক ওষুধ (প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব) দিন। আপনার আলু বাঁচবে কিনা তা এই একটা সিদ্ধান্তেই ঠিক হয়।"
+    },
+    {
+      "step": 3,
+      "title": "কুয়াশায় ২-৩ দিন পর পর জমি দেখুন",
+      "detail": "ডিসেম্বর-জানুয়ারিতে ২-৩ দিন পর পর জমি ঘুরে দেখুন, খুব ভোরে শিশির থাকতে থাকতে নিচের পাতা ও পাতার কিনারা দেখুন। প্রথম দাগটাই খুঁজছেন আপনি।"
+    },
+    {
+      "step": 4,
+      "title": "ঠিকমতো মাটি তুলে দিন",
+      "detail": "আইল উঁচু ও ঢাকা রাখুন যাতে আলু কখনো বেরিয়ে না থাকে। পরে পাতায় রোগ ধরলেও এতে আলু পচা থেকে বাঁচবে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Plant certified seed tubers from BADC or a licensed dealer",
+    "Plant mid-October to early November so bulking finishes before the worst fog",
+    "Keep drainage channels open — waterlogged potato land invites both blight and soft rot",
+    "Do not plant next to a tomato field",
+    "Record your spray dates so you never leave a gap longer than 10 days during fog"
+  ],
+  "cultural_control_bn": [
+    "বিএডিসি বা লাইসেন্সধারী দোকান থেকে সার্টিফাইড বীজ আলু নিন",
+    "অক্টোবরের মাঝামাঝি থেকে নভেম্বরের শুরুতে লাগান যাতে বেশি কুয়াশার আগেই আলু বড় হয়ে যায়",
+    "নিকাশ নালা খোলা রাখুন — পানি জমা আলুর জমিতে ধ্বসা ও পচা দুটোই হয়",
+    "টমেটোর জমির পাশে লাগাবেন না",
+    "স্প্রের তারিখ লিখে রাখুন যাতে কুয়াশার সময় ১০ দিনের বেশি ফাঁক না পড়ে"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum at planting builds soil suppression before any disease arrives",
+    "Well-rotted cowdung or compost improves soil structure and drainage",
+    "Straw mulch between ridges reduces splash-borne infection"
+  ],
+  "organic_alternatives_bn": [
+    "রোপণের সময় ট্রাইকোডার্মা হারজিয়ানাম দিলে রোগ আসার আগেই মাটিতে প্রতিরোধ গড়ে ওঠে",
+    "পচা গোবর বা কম্পোস্ট দিলে মাটির গঠন ও নিকাশ ভালো হয়",
+    "আইলের মাঝে খড়ের মালচ দিলে ছিটেফোঁটায় রোগ ছড়ানো কমে"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for potato at your soil fertility level. Apply the full basal TSP, MoP and organic manure at planting, and split urea between basal and earthing-up. Do not over-apply nitrogen — soft foliage is the main risk factor for late blight later in the season.",
+  "fertilizer_advice_bn": "আপনার মাটির উর্বরতা অনুযায়ী আলুর জন্য বিএআরসি এফআরজি-২০১৮ মেনে চলুন। রোপণের সময় পুরো টিএসপি, এমওপি ও জৈব সার দিন, ইউরিয়া রোপণ ও মাটি তোলার সময় ভাগ করে দিন। ইউরিয়া বেশি দেবেন না — নরম পাতাই পরে নাবি ধ্বসার সবচেয়ে বড় ঝুঁকি।",
+  "safety_warning_en": "No pesticide is recommended now. When you do start the preventive programme, wear gloves, mask, goggles and full-sleeve clothing every single time — routine sprays over a whole season add up to a lot of exposure.",
+  "safety_warning_bn": "এখন কোনো ওষুধের পরামর্শ নেই। প্রতিরোধমূলক স্প্রে শুরু করলে প্রতিবারই হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন — পুরো মৌসুমে নিয়মিত স্প্রে করলে শরীরে অনেক ওষুধ ঢোকে।",
+  "legal_note_en": "No treatment required now. Buy only DAE-registered products when you start spraying. Krishi Call Center: 16123.",
+  "legal_note_bn": "এখন কোনো চিকিৎসার দরকার নেই। স্প্রে শুরু করলে শুধু ডিএই-নিবন্ধিত ওষুধ কিনবেন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if a late blight warning is issued for your district, or the moment you see the first water-soaked dark patch on any leaf.",
+  "when_to_call_helpline_bn": "আপনার জেলায় নাবি ধ্বসার সতর্কবার্তা এলে, অথবা যেকোনো পাতায় প্রথম ভেজা কালচে দাগ দেখা মাত্রই ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A healthy potato crop kept on a preventive schedule through the fog season normally reaches harvest with the canopy green and tubers clean.",
+  "expected_outcome_bn": "কুয়াশার মৌসুমজুড়ে প্রতিরোধমূলক স্প্রে চালিয়ে গেলে সুস্থ আলুর জমি সাধারণত সবুজ পাতা আর পরিষ্কার আলু নিয়েই ফসল তোলা পর্যন্ত পৌঁছায়।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "TSP 50kg bag",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Trichoderma harzianum bio-fungicide 1kg"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd); Potato Late Blight Warning System in Bangladesh (potatocongress.org); DAE extension guidance on potato production",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Healthy class — no pesticide recommended. Preventive mancozeb is described as a scheduled agronomic practice for the Rabi fog window, not as a treatment for a detected disease; the UI should present it as optional seasonal guidance. | class_name aligned to model spelling (Potato___Healthy -> Potato___healthy).",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Trichoderma harzianum bio-fungicide 1kg",
+      "sku": "PEST-0092",
+      "name_en": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+      "category": "pesticide",
+      "match_score": 1.7,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

@@ -1,0 +1,266 @@
+{
+  "class_name": "Chilli___Anthracnose",
+  "kb_key": "chilli_anthracnose",
+  "crop_en": "Chilli",
+  "crop_bn": "মরিচ",
+  "disease_en": "Chilli anthracnose (ripe fruit rot / die-back)",
+  "disease_bn": "মরিচের অ্যানথ্রাকনোজ (ফল পচা ও ডগা মরা) রোগ",
+  "pathogen": "Colletotrichum capsici / C. gloeosporioides",
+  "severity": "high",
+  "summary_en": "Sunken dark circular spots with rings of tiny black dots on ripening chillies, plus die-back of the shoot tips. It is the main reason chilli growers lose their crop at the ripe stage in Bangladesh, and it is seed-borne, so treated seed prevents most of it.",
+  "summary_bn": "পাকা মরিচে বসে যাওয়া গোল কালচে দাগ পড়ে, তার উপর গোল গোল সারিতে ছোট কালো ফোঁটা; সাথে ডগা মরে যায়। বাংলাদেশে পাকার সময় মরিচ নষ্ট হওয়ার প্রধান কারণ এটাই। রোগটি বীজবাহিত, তাই বীজ শোধন করলেই বেশিরভাগ ঠেকানো যায়।",
+  "symptoms_en": [
+    "Small water-soaked spots on ripening fruit that become sunken, circular, dark and enlarge",
+    "Concentric rings of tiny black dots (acervuli) inside the lesion — the identifying feature",
+    "In wet weather, pink-orange spore masses ooze from the lesions",
+    "Die-back: shoot tips blacken and die downward from the top",
+    "Whole fruit shrivels and dries on the plant, becoming straw-coloured",
+    "Worst when fruit ripens during rainy or very humid weather"
+  ],
+  "symptoms_bn": [
+    "পাকা মরিচে ছোট ভেজা দাগ পড়ে, পরে বসে গিয়ে গোল, কালচে ও বড় হয়",
+    "দাগের ভেতরে গোল গোল সারিতে ছোট কালো ফোঁটা — চেনার আসল লক্ষণ",
+    "ভেজা আবহাওয়ায় দাগ থেকে গোলাপি-কমলা রসের মতো জীবাণু বের হয়",
+    "ডগা মরা: ডগার আগা কালো হয়ে উপর থেকে নিচের দিকে মরতে থাকে",
+    "পুরো মরিচ গাছেই শুকিয়ে খড়ের রং ধরে",
+    "বৃষ্টি বা খুব স্যাঁতসেঁতে আবহাওয়ায় মরিচ পাকলে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Pick and remove every infected fruit",
+      "detail": "Each spotted fruit is producing millions of spores. Collect them in a bag — including fallen ones — and burn or bury deep. Doing this twice a week matters more than the spray."
+    },
+    {
+      "step": 2,
+      "title": "Harvest ripe fruit promptly",
+      "detail": "Do not leave ripe chillies on the plant waiting for a better price. Ripe fruit left on the plant in humid weather is where anthracnose multiplies."
+    },
+    {
+      "step": 3,
+      "title": "Cut back die-back shoots",
+      "detail": "Prune blackened shoot tips back into healthy green wood and remove the cuttings from the field."
+    },
+    {
+      "step": 4,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb at 2-2.5 g/L or copper oxychloride at 3 g/L every 10 days. Where the disease is established, use a difenoconazole or azoxystrobin product once, then return to protectants."
+    },
+    {
+      "step": 5,
+      "title": "Do not save seed",
+      "detail": "The fungus lives inside the seed. Saving seed from this crop guarantees the same disease next season."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আক্রান্ত প্রতিটি মরিচ তুলে সরিয়ে ফেলুন",
+      "detail": "প্রতিটি দাগওয়ালা মরিচ থেকে লক্ষ লক্ষ জীবাণু বের হচ্ছে। মাটিতে পড়ে থাকা মরিচসহ সব ব্যাগে ভরে পুড়িয়ে বা গভীরে পুঁতে ফেলুন। সপ্তাহে দুইবার এই কাজটা স্প্রের চেয়েও জরুরি।"
+    },
+    {
+      "step": 2,
+      "title": "পাকা মরিচ সময়মতো তুলে নিন",
+      "detail": "ভালো দামের আশায় পাকা মরিচ গাছে ফেলে রাখবেন না। স্যাঁতসেঁতে আবহাওয়ায় গাছে পড়ে থাকা পাকা মরিচেই রোগ বাড়ে।"
+    },
+    {
+      "step": 3,
+      "title": "মরা ডগা কেটে ফেলুন",
+      "detail": "কালো হয়ে যাওয়া ডগা সবুজ সুস্থ অংশ পর্যন্ত ছেঁটে ফেলুন এবং কাটা অংশ জমি থেকে সরিয়ে নিন।"
+    },
+    {
+      "step": 4,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "১০ দিন পর পর প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব বা ৩ গ্রাম কপার অক্সিক্লোরাইড দিন। রোগ ছড়িয়ে গেলে একবার ডাইফেনোকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিয়ে আবার প্রতিরোধক ওষুধে ফিরুন।"
+    },
+    {
+      "step": 5,
+      "title": "বীজ রাখবেন না",
+      "detail": "ছত্রাক বীজের ভেতরেই থাকে। এই ফসল থেকে বীজ রাখলে আগামী মৌসুমেও একই রোগ নিশ্চিত।"
+    }
+  ],
+  "cultural_control_en": [
+    "Treat seed before sowing — carbendazim at 2-3 g/kg or Trichoderma at 4-5 g/kg, or hot water at 52°C for 30 minutes",
+    "Use certified seed from BADC, Lal Teer, ACI or another licensed supplier",
+    "Rotate away from chilli, tomato and brinjal for 2 years",
+    "Plant on raised beds with good drainage; avoid waterlogging",
+    "Space plants for air movement and mulch the beds",
+    "Harvest ripe fruit every 5-7 days without fail",
+    "Dry harvested chilli quickly and properly — slow drying in humid conditions causes post-harvest anthracnose",
+    "Destroy all crop residue after the final harvest"
+  ],
+  "cultural_control_bn": [
+    "বপনের আগে বীজ শোধন করুন — প্রতি কেজিতে ২-৩ গ্রাম কার্বেন্ডাজিম বা ৪-৫ গ্রাম ট্রাইকোডার্মা, অথবা ৫২ ডিগ্রি গরম পানিতে ৩০ মিনিট",
+    "বিএডিসি, লাল তীর, এসিআই বা অন্য লাইসেন্সধারী সরবরাহকারীর সার্টিফাইড বীজ নিন",
+    "২ বছর মরিচ, টমেটো ও বেগুন বাদ দিয়ে অন্য ফসল করুন",
+    "উঁচু বেডে ভালো নিকাশসহ লাগান; পানি জমতে দেবেন না",
+    "বাতাস চলাচলের জন্য ফাঁক রেখে লাগান ও বেডে মালচ দিন",
+    "৫-৭ দিন পর পর অবশ্যই পাকা মরিচ তুলুন",
+    "তোলা মরিচ দ্রুত ও ঠিকমতো শুকান — স্যাঁতসেঁতে অবস্থায় ধীরে শুকালে পরে পচা ধরে",
+    "শেষ ফসল তোলার পর সব অবশিষ্টাংশ নষ্ট করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering fruit as well as leaves — the fruit is what you are protecting.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতার সাথে ফলেও দিন — আপনি তো ফলই বাঁচাতে চাইছেন।",
+      "timing_en": "Preventive, every 10 days from first fruit set through the ripening period, especially in wet weather.",
+      "timing_bn": "প্রতিরোধমূলক, প্রথম ফল ধরার পর থেকে পাকার সময়জুড়ে ১০ দিন পর পর, বিশেষ করে ভেজা আবহাওয়ায়।",
+      "interval_days": 10,
+      "max_applications_per_season": 5,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray. Green chilli is eaten fresh, so this matters.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন মরিচ তুলবেন না। কাঁচা মরিচ কাঁচাই খাওয়া হয়, তাই এটা জরুরি।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and chilli label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Difenoconazole 25% EC",
+      "product_name_bn": "ডাইফেনোকোনাজল ২৫% ইসি",
+      "active_ingredient": "Difenoconazole",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with full fruit and foliage coverage.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে ফল ও পাতা সব ভিজিয়ে দিন।",
+      "timing_en": "Curative, when lesions are already on the fruit. Maximum 2 per season, alternated with mancozeb.",
+      "timing_bn": "ফলে দাগ পড়ে গেলে দমনের জন্য। মৌসুমে সর্বোচ্চ ২ বার, ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন মরিচ তুলবেন না।",
+      "brands_available_bd": [
+        "Score 250 EC",
+        "Difen 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Score 250 EC, AP-384, Syngenta Bangladesh Limited, in the DAE PPW registered list (registered use recorded there for onion purple blotch). Confirm the chilli label claim.",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-384"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Hot water seed treatment at 52°C for 30 minutes — removes the seed-borne source with no chemical",
+    "Trichoderma harzianum seed treatment and soil application",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant",
+    "Prompt harvest and rapid drying — the two cheapest and most effective actions",
+    "Mulching and raised beds"
+  ],
+  "organic_alternatives_bn": [
+    "৫২ ডিগ্রি গরম পানিতে ৩০ মিনিট বীজ শোধন — কোনো ওষুধ ছাড়াই বীজের জীবাণু দূর হয়",
+    "ট্রাইকোডার্মা হারজিয়ানাম দিয়ে বীজ শোধন ও মাটিতে প্রয়োগ",
+    "প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে",
+    "সময়মতো ফল তোলা ও দ্রুত শুকানো — সবচেয়ে সস্তা ও কার্যকর দুটি কাজ",
+    "মালচ ও উঁচু বেড"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for chilli. Keep potassium and calcium adequate — they firm up the fruit wall and reduce infection. Avoid excess nitrogen, which produces soft fruit and a dense humid canopy.",
+  "fertilizer_advice_bn": "মরিচের জন্য এফআরজি-২০১৮ মেনে চলুন। পটাশ ও ক্যালসিয়াম পর্যাপ্ত রাখুন — এতে ফলের খোসা শক্ত হয় ও রোগ কম ধরে। বেশি ইউরিয়া দেবেন না, এতে ফল নরম হয় আর গাছ ঘন ও স্যাঁতসেঁতে থাকে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Chilli is harvested every 5-7 days — plan sprays right after a picking so the PHI clears. Chilli residues are a common food-safety concern; never pick inside the PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। মরিচ ৫-৭ দিন পর পর তোলা হয় — ফল তোলার ঠিক পরে স্প্রে করুন যাতে পিএইচআই পার হয়ে যায়। মরিচে ওষুধের অবশিষ্টাংশ নিয়ে অভিযোগ সাধারণ; পিএইচআই-এর মধ্যে কখনো তুলবেন না। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Never use unregistered colouring or preservative chemicals on dried chilli. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। শুকনো মরিচে অননুমোদিত রং বা সংরক্ষণকারী রাসায়নিক কখনো ব্যবহার করবেন না। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if more than 15% of ripening fruit is affected, if shoot die-back is spreading, or if the same field gets it every year.",
+  "when_to_call_helpline_bn": "১৫% এর বেশি পাকা মরিচ আক্রান্ত হলে, ডগা মরা ছড়াতে থাকলে, অথবা একই জমিতে প্রতি বছর হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Removing infected fruit twice a week plus a protectant programme normally cuts new infection sharply within 2 weeks. Fruit already spotted cannot be sold as fresh and should be destroyed, not dried and mixed with the good crop.",
+  "expected_outcome_bn": "সপ্তাহে দুইবার আক্রান্ত মরিচ তুলে ফেলে প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহেই নতুন সংক্রমণ অনেক কমে যায়। যে মরিচে দাগ পড়ে গেছে তা কাঁচা বিক্রি করা যাবে না — শুকিয়ে ভালো মরিচের সাথে মেশাবেন না, নষ্ট করে ফেলুন।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Score 250 EC (Difenoconazole) 50ml",
+    "Trichoderma harzianum bio-fungicide 1kg",
+    "Certified chilli seed 10g",
+    "Knapsack sprayer 16L manual",
+    "Straw mulch"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Score 250 EC, AP-384, Syngenta Bangladesh Ltd); BARI chilli production guidance; Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook (ipmworld.umn.edu/rahman)",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Seed treatment is the highest-value intervention and is positioned first. PPW entries found record other crops; chilli claims need label confirmation. Post-harvest drying speed is included because much Bangladeshi chilli anthracnose loss occurs during slow drying.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Score 250 EC (Difenoconazole) 50ml",
+      "sku": "PEST-0022",
+      "name_en": "Difenoconazole 25% EC 50ml",
+      "category": "pesticide",
+      "match_score": 1.103,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Trichoderma harzianum bio-fungicide 1kg",
+      "sku": "PEST-0092",
+      "name_en": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+      "category": "pesticide",
+      "match_score": 1.7,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Certified chilli seed 10g",
+      "sku": "SEED-0054",
+      "name_en": "Certified virus-free tomato seed 10g",
+      "category": "seed",
+      "match_score": 0.817,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

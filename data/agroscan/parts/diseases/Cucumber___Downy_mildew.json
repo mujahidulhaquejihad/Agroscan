@@ -1,0 +1,269 @@
+{
+  "class_name": "Cucumber___Downy_mildew",
+  "kb_key": "downy_mildew",
+  "crop_en": "Cucumber (and other cucurbits)",
+  "crop_bn": "শসা (ও অন্যান্য কুমড়া জাতীয় ফসল)",
+  "disease_en": "Downy mildew",
+  "disease_bn": "শসার ডাউনি মিলডিউ রোগ",
+  "pathogen": "Pseudoperonospora cubensis",
+  "severity": "high",
+  "summary_en": "Angular yellow patches on the upper leaf surface that stop sharply at the leaf veins, with grey-purple fuzz underneath in the morning. In Bangladesh's humid weather it can strip a cucumber field of leaves in 10-14 days.",
+  "summary_bn": "পাতার উপরের পিঠে কোণাকৃতি হলুদ ছোপ পড়ে যা শিরায় গিয়ে হঠাৎ থেমে যায়, আর সকালে নিচের পিঠে ধূসর-বেগুনি ছাতা দেখা যায়। বাংলাদেশের স্যাঁতসেঁতে আবহাওয়ায় ১০-১৪ দিনেই পুরো শসার জমির পাতা ঝরিয়ে দিতে পারে।",
+  "symptoms_en": [
+    "Angular yellow patches on the upper leaf surface, squared off by the leaf veins — this angular shape is the identifying feature",
+    "Grey to purple-grey downy fungal growth on the UNDERSIDE of the patches, best seen in the early morning",
+    "Patches turn brown and the leaf dries and curls upward",
+    "Starts on the oldest leaves near the base and moves outward along the vine",
+    "Fruit is not directly infected but becomes small and poor-tasting because the leaves have gone",
+    "Explodes in humid, rainy or heavy-dew weather"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরের পিঠে কোণাকৃতি হলুদ ছোপ, শিরায় গিয়ে চারকোনা হয়ে থেমে যায় — এই কোণাকৃতিই চেনার লক্ষণ",
+    "ছোপের নিচের পিঠে ধূসর বা বেগুনি-ধূসর ছাতা, খুব ভোরে সবচেয়ে ভালো দেখা যায়",
+    "ছোপ বাদামি হয়ে পাতা শুকিয়ে উপরের দিকে কুঁকড়ে যায়",
+    "গোড়ার কাছের পুরনো পাতা থেকে শুরু হয়ে লতা বেয়ে বাইরের দিকে ছড়ায়",
+    "ফলে সরাসরি রোগ ধরে না, কিন্তু পাতা না থাকায় ফল ছোট ও বিস্বাদ হয়",
+    "স্যাঁতসেঁতে, বৃষ্টি বা ভারী শিশিরের আবহাওয়ায় হঠাৎ ছড়িয়ে পড়ে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Spray immediately — this one moves fast",
+      "detail": "Downy mildew can defoliate a cucurbit field in under two weeks. A systemic + contact combination (metalaxyl + mancozeb or cymoxanil + mancozeb) at the first angular patch."
+    },
+    {
+      "step": 2,
+      "title": "Trellis the vines if you have not",
+      "detail": "Getting the vines off the ground onto a trellis or bamboo frame dramatically reduces leaf wetness and slows the disease. It also improves fruit quality."
+    },
+    {
+      "step": 3,
+      "title": "Remove the worst lower leaves",
+      "detail": "Strip and bag the heavily affected leaves near the base."
+    },
+    {
+      "step": 4,
+      "title": "Stop overhead irrigation",
+      "detail": "Switch to furrow or drip and irrigate in the morning."
+    },
+    {
+      "step": 5,
+      "title": "Keep the protectant going",
+      "detail": "After the knockdown spray, continue with mancozeb every 7 days while humid weather lasts."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "এখনই স্প্রে করুন — এটা খুব দ্রুত ছড়ায়",
+      "detail": "ডাউনি মিলডিউ দুই সপ্তাহের মধ্যেই কুমড়া জাতীয় ফসলের সব পাতা ঝরিয়ে দিতে পারে। প্রথম কোণাকৃতি ছোপ দেখা মাত্র সিস্টেমিক + স্পর্শক মিশ্র ওষুধ (মেটালাক্সিল + ম্যানকোজেব বা সাইমোক্সানিল + ম্যানকোজেব) দিন।"
+    },
+    {
+      "step": 2,
+      "title": "মাচা না দিয়ে থাকলে এখনই দিন",
+      "detail": "লতা মাটি থেকে তুলে মাচা বা বাঁশের কাঠামোয় দিলে পাতা অনেক কম ভেজা থাকে, রোগ ধীর হয়। ফলের মানও ভালো হয়।"
+    },
+    {
+      "step": 3,
+      "title": "নিচের বেশি আক্রান্ত পাতা সরান",
+      "detail": "গোড়ার কাছের বেশি আক্রান্ত পাতা ছিঁড়ে ব্যাগে ভরুন।"
+    },
+    {
+      "step": 4,
+      "title": "উপর দিয়ে সেচ বন্ধ করুন",
+      "detail": "নালা বা ড্রিপ সেচে যান এবং সকালে সেচ দিন।"
+    },
+    {
+      "step": 5,
+      "title": "প্রতিরোধক স্প্রে চালিয়ে যান",
+      "detail": "প্রথম দমনের স্প্রের পর স্যাঁতসেঁতে আবহাওয়া থাকা পর্যন্ত ৭ দিন পর পর ম্যানকোজেব দিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Trellis all vining cucurbits — the highest-value structural change",
+    "Wide spacing and good drainage",
+    "Grow tolerant varieties where available",
+    "Remove and destroy crop residue after harvest",
+    "Rotate away from cucurbits for at least one season",
+    "Avoid evening irrigation",
+    "Mulch to reduce splash and keep the soil surface drier"
+  ],
+  "cultural_control_bn": [
+    "সব লতানো কুমড়া জাতীয় ফসলে মাচা দিন — কাঠামোগত পরিবর্তনের মধ্যে এটাই সবচেয়ে কার্যকর",
+    "বেশি দূরত্বে লাগান ও নিকাশ ভালো রাখুন",
+    "সম্ভব হলে সহনশীল জাত নিন",
+    "ফসল শেষে সব অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "অন্তত এক মৌসুম কুমড়া জাতীয় ফসল বাদ দিন",
+    "সন্ধ্যায় সেচ দেবেন না",
+    "মালচ দিন যাতে ছিটা কমে ও মাটির উপর শুকনো থাকে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Angle the nozzle UP to hit the leaf undersides where the fungus grows. On a trellis, spray from both sides.",
+      "application_method_bn": "নজেল উপরের দিকে তাক করে পাতার নিচের পিঠে দিন, ছত্রাক ওখানেই জন্মায়। মাচায় দুই দিক থেকে স্প্রে করুন।",
+      "timing_en": "Preventive, every 7 days once humid weather starts.",
+      "timing_bn": "প্রতিরোধমূলক, স্যাঁতসেঁতে আবহাওয়া শুরু হলে ৭ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 5,
+      "pre_harvest_interval_note_en": "Do not pick for 5 days after the last spray. Cucumber is eaten raw — respect this strictly.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৫ দিন শসা তুলবেন না। শসা কাঁচা খাওয়া হয় — এটা কড়াভাবে মানুন।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number and cucurbit label claim against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Metalaxyl 8% + Mancozeb 64% WP",
+      "product_name_bn": "মেটালাক্সিল ৮% + ম্যানকোজেব ৬৪% ডব্লিউপি",
+      "active_ingredient": "Metalaxyl + Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with the nozzle angled up, full coverage of leaf undersides.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারের নজেল উপরে তাক করে পাতার নিচের পিঠ ভালোভাবে ভিজিয়ে দিন।",
+      "timing_en": "Curative, at the first angular yellow patches. Maximum 3 per season, always alternated with mancozeb.",
+      "timing_bn": "প্রথম কোণাকৃতি হলুদ ছোপ দেখা মাত্র দমনের জন্য। মৌসুমে সর্বোচ্চ ৩ বার, সবসময় ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 10,
+      "max_applications_per_season": 3,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন শসা তুলবেন না।",
+      "brands_available_bd": [
+        "Ridomil Gold MZ 68 WG",
+        "Galben M",
+        "Krilaxyl Gold"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Galben M (Benalaxyl + Mancozeb), AP-374, ACI Formulations Ltd is registered in Bangladesh for late blight of potato and tomato. Confirm the cucurbit downy mildew label claim before presenting as a registered use.",
+      "treatment_type": "curative",
+      "caution_en": "Resistance to phenylamide fungicides develops quickly in Pseudoperonospora. Never use alone, never routinely.",
+      "caution_bn": "এই ছত্রাক মেটালাক্সিল জাতীয় ওষুধ দ্রুত সহ্য করা শিখে যায়। কখনো একা বা নিয়মিতভাবে ব্যবহার করবেন না।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-374"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Trellising and wider spacing — the most effective structural controls",
+    "Copper oxychloride 50% WP at 3 g/L as a protectant on leaf undersides",
+    "Bordeaux mixture 1%",
+    "Removing lower infected leaves",
+    "Drip irrigation and mulch"
+  ],
+  "organic_alternatives_bn": [
+    "মাচা দেওয়া ও বেশি দূরত্বে লাগানো — সবচেয়ে কার্যকর কাঠামোগত ব্যবস্থা",
+    "পাতার নিচের পিঠে প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+    "১% বোর্দো মিশ্রণ",
+    "নিচের আক্রান্ত পাতা ছেঁটে ফেলা",
+    "ড্রিপ সেচ ও মালচ"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for cucurbits. Keep potassium adequate — potassium-deficient cucurbits lose leaves to downy mildew much faster. Avoid excess nitrogen, which produces dense humid canopies.",
+  "fertilizer_advice_bn": "কুমড়া জাতীয় ফসলের জন্য এফআরজি-২০১৮ মেনে চলুন। পটাশ পর্যাপ্ত রাখুন — পটাশের ঘাটতি থাকলে এই রোগে পাতা অনেক দ্রুত ঝরে। বেশি ইউরিয়া দেবেন না, এতে গাছ ঘন ও স্যাঁতসেঁতে থাকে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Spraying upward under a trellis means spray falls on your face — a cartridge mask and goggles are essential. Cucumber is picked every 2-3 days and eaten raw, so plan sprays immediately after a picking and never pick within the PHI. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। মাচার নিচে উপরের দিকে স্প্রে করলে ওষুধ মুখে পড়ে — কার্তুজওয়ালা মাস্ক ও চশমা বাধ্যতামূলক। শসা ২-৩ দিন পর পর তোলা হয় এবং কাঁচা খাওয়া হয়, তাই ফল তোলার ঠিক পরে স্প্রে করুন এবং পিএইচআই-এর মধ্যে কখনো তুলবেন না। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Cucumber and other salad vegetables are eaten raw, so PHI compliance is a direct food safety issue under the Food Safety (Contaminants, Toxins and Harmful Residues) Regulations 2017. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। শসা ও সালাদের সবজি কাঁচা খাওয়া হয়, তাই পিএইচআই মানা খাদ্য নিরাপত্তা বিধিমালা ২০১৭ অনুযায়ী সরাসরি খাদ্য নিরাপত্তার বিষয়। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves are drying across the field, if the disease continues after two sprays, or if you are unsure whether it is downy or powdery mildew — they need different products.",
+  "when_to_call_helpline_bn": "জমিজুড়ে পাতা শুকাতে থাকলে, দুইবার স্প্রের পরও রোগ চলতে থাকলে, অথবা এটা ডাউনি না পাউডারি মিলডিউ বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন — দুটোর ওষুধ আলাদা।",
+  "expected_outcome_en": "A knockdown spray plus trellising usually stops new angular patches within 7-10 days. Leaves already dried will not recover. If more than half the leaves are gone, the remaining fruit will be small — harvest what you can.",
+  "expected_outcome_bn": "দমনের স্প্রে ও মাচা দিলে সাধারণত ৭-১০ দিনে নতুন কোণাকৃতি ছোপ পড়া বন্ধ হয়। যে পাতা শুকিয়ে গেছে তা আর ফিরবে না। অর্ধেকের বেশি পাতা চলে গেলে বাকি ফল ছোটই হবে — যা পারেন তুলে নিন।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Metalaxyl + Mancozeb 68% WP 100g",
+    "Bamboo trellis poles (bundle of 20)",
+    "Nylon trellis net (per metre)",
+    "Knapsack sprayer 16L manual",
+    "Spray mask with cartridge"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Galben M, AP-374, ACI Formulations Ltd); BARI cucurbit production guidance; Vegetable IPM in Bangladesh, Radcliffe's IPM World Textbook",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Downy vs powdery mildew differential is flagged because the two are constantly confused and take different products (downy = under-leaf grey fuzz, angular patches; powdery = white powder on top surface). Registered label claims for cucurbits need confirmation.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Metalaxyl + Mancozeb 68% WP 100g",
+      "sku": "PEST-0006",
+      "name_en": "Metalaxyl + Mancozeb 8% + 64% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.092,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Bamboo trellis poles (bundle of 20)",
+      "sku": "EQ-0080",
+      "name_en": "Bamboo staking poles (bundle of 20)",
+      "category": "equipment",
+      "match_score": 0.696,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Nylon trellis net (per metre)",
+      "sku": "EQ-0081",
+      "name_en": "Nylon trellis net (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

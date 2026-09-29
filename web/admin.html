@@ -1,653 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn" class="lang-bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{var l=localStorage.getItem("agroscan_lang")||"bn";if(l!=="en"&&l!=="bn")l="bn";var h=document.documentElement;h.lang=l==="en"?"en":"bn";h.classList.remove("lang-bn","lang-en");h.classList.add(l==="en"?"lang-en":"lang-bn");}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#067a42" />
   <title>AgroScan Admin</title>
-  <link rel="icon" href="/static/AgroScan_logo-main.png" type="image/png" />
+  <link rel="icon" href="/static/icons/icon-192.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink: #12241a;
-      --muted: #5a6f62;
-      --panel: rgba(255, 252, 247, 0.92);
-      --panel-solid: #fffdf8;
-      --line: rgba(18, 36, 26, 0.12);
-      --green: #1f6b3a;
-      --green-d: #154d2a;
-      --green-soft: #d8eedf;
-      --accent: #c45c26;
-      --accent-soft: #f6e0d4;
-      --warn: #9a3412;
-      --ok: #166534;
-      --shadow: 0 18px 50px rgba(12, 32, 20, 0.14);
-      --radius: 18px;
-      --font-en: "Poppins", system-ui, sans-serif;
-      --font-bn: "Noto Sans Bengali", "Noto Sans", system-ui, sans-serif;
-      --font: var(--font-en);
-      --display: "Fraunces", Georgia, serif;
-    }
-    html[lang="bn"], html.lang-bn { --font: var(--font-bn); }
-    html[lang="en"], html.lang-en { --font: var(--font-en); }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body {
-      font-family: var(--font);
-      color: var(--ink);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(196, 92, 38, 0.18), transparent 55%),
-        radial-gradient(900px 500px at 100% 0%, rgba(31, 107, 58, 0.28), transparent 50%),
-        linear-gradient(165deg, #0f2a1a 0%, #1a4730 38%, #245c3c 70%, #173526 100%);
-      background-attachment: fixed;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.08;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 4c8 10 8 22 0 32-8-10-8-22 0-32zm0 20c10 6 18 4 26-4-10 4-20 2-26 4zm0 0c-10 6-18 4-26-4 10 4 20 2 26 4z' fill='%23fff' fill-opacity='0.9'/%3E%3C/svg%3E");
-    }
-    .hidden { display: none !important; }
-    button, input, select, textarea { font: inherit; }
-    a { color: inherit; }
-
-    .shell {
-      width: min(1240px, calc(100% - 24px));
-      margin: 20px auto 40px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Login */
-    .login-stage {
-      min-height: calc(100vh - 40px);
-      display: grid;
-      place-items: center;
-      animation: rise 0.55s ease both;
-    }
-    .login-card {
-      width: min(440px, 100%);
-      background: var(--panel);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.35);
-      border-radius: 24px;
-      padding: 28px 26px 24px;
-      box-shadow: var(--shadow);
-    }
-    .brand-mark {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .brand-mark img { width: 48px; height: 48px; object-fit: contain; }
-    .brand-mark strong {
-      font-family: var(--display);
-      font-size: 1.55rem;
-      letter-spacing: -0.02em;
-      display: block;
-      line-height: 1.1;
-    }
-    .brand-mark span { color: var(--muted); font-size: 13px; }
-    .login-card h1 {
-      font-family: var(--display);
-      font-size: 1.8rem;
-      margin: 0 0 6px;
-      letter-spacing: -0.02em;
-    }
-    .hint { color: var(--muted); font-size: 13px; margin: 0 0 16px; line-height: 1.45; }
-    label.field { display: block; font-weight: 600; font-size: 13px; margin: 12px 0 6px; }
-    input, select, textarea {
-      width: 100%;
-      border: 1.5px solid var(--line);
-      border-radius: 12px;
-      padding: 12px 14px;
-      background: #fff;
-      color: var(--ink);
-      min-height: 46px;
-    }
-    textarea { min-height: 88px; resize: vertical; }
-    input:focus, select:focus, textarea:focus {
-      outline: 2px solid rgba(31, 107, 58, 0.35);
-      border-color: var(--green);
-    }
-    .password-wrap { position: relative; }
-    .password-wrap input { padding-right: 48px; }
-    .password-toggle {
-      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
-      border: 0; background: transparent; width: 40px; height: 40px; cursor: pointer;
-    }
-    .btn {
-      border: 0; border-radius: 12px; padding: 11px 16px; font-weight: 700;
-      cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-    }
-    .btn:active { transform: translateY(1px); }
-    .btn-primary { background: var(--green); color: #fff; box-shadow: 0 10px 24px rgba(31,107,58,.28); }
-    .btn-primary:hover { background: var(--green-d); }
-    .btn-secondary { background: var(--green-soft); color: var(--green-d); }
-    .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
-    .btn-danger { background: #fee2e2; color: #991b1b; }
-    .btn-accent { background: var(--accent); color: #fff; }
-    .btn-sm { padding: 8px 12px; font-size: 13px; border-radius: 10px; }
-    .btn-block { width: 100%; margin-top: 16px; }
-    .error { color: #b42318; font-size: 13px; font-weight: 600; margin-top: 10px; }
-    .ok-msg { color: var(--ok); font-size: 13px; font-weight: 600; }
-
-    /* App chrome */
-    .app-frame {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 18px;
-      animation: rise 0.45s ease both;
-    }
-    @media (max-width: 900px) {
-      .app-frame { grid-template-columns: 1fr; }
-    }
-    .side {
-      background: rgba(10, 28, 18, 0.72);
-      color: #e8f5ec;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 24px;
-      padding: 20px 16px;
-      backdrop-filter: blur(10px);
-      align-self: start;
-      position: sticky;
-      top: 16px;
-    }
-    @media (max-width: 900px) {
-      .side { position: static; }
-    }
-    .side .brand-mark strong, .side .brand-mark span { color: #f3faf5; }
-    .side .brand-mark span { color: rgba(243,250,245,0.7); }
-    .nav {
-      display: grid;
-      gap: 6px;
-      margin-top: 18px;
-    }
-    .nav button {
-      text-align: left;
-      background: transparent;
-      color: rgba(243,250,245,0.82);
-      border: 0;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .18s ease, transform .18s ease;
-    }
-    .nav button:hover { background: rgba(255,255,255,0.08); }
-    .nav button.active {
-      background: linear-gradient(120deg, rgba(196,92,38,0.95), rgba(31,107,58,0.95));
-      color: #fff;
-      transform: translateX(2px);
-    }
-    .side-foot {
-      margin-top: 20px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      display: grid;
-      gap: 8px;
-    }
-    .side-foot .btn { width: 100%; }
-
-    .main { min-width: 0; }
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 12px;
-      margin-bottom: 16px;
-      color: #f4faf6;
-    }
-    .topbar h2 {
-      font-family: var(--display);
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
-    .topbar p { margin: 4px 0 0; opacity: 0.78; font-size: 14px; }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-      animation: fade 0.35s ease both;
-    }
-    .panel + .panel { margin-top: 14px; }
-    .panel h3 {
-      margin: 0 0 4px;
-      font-family: var(--display);
-      font-size: 1.25rem;
-    }
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      margin: 14px 0 8px;
-    }
-    .toolbar input, .toolbar select { max-width: 280px; min-height: 42px; }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-    @media (max-width: 900px) {
-      .stats { grid-template-columns: repeat(2, 1fr); }
-    }
-    .stat {
-      background: linear-gradient(160deg, #fff 0%, #f3f8f4 100%);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      overflow: hidden;
-      position: relative;
-      transition: transform .2s ease;
-    }
-    .stat:hover { transform: translateY(-2px); }
-    .stat::after {
-      content: "";
-      position: absolute;
-      right: -20px; top: -20px;
-      width: 90px; height: 90px;
-      border-radius: 50%;
-      background: rgba(31,107,58,0.08);
-    }
-    .stat .label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-    .stat .value {
-      font-family: var(--display);
-      font-size: 2rem;
-      margin-top: 6px;
-      letter-spacing: -0.03em;
-    }
-    .stat.accent .value { color: var(--accent); }
-    .stat.green .value { color: var(--green-d); }
-
-    .split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; margin-top: 12px; }
-    @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
-    .mini {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-    }
-    .mini h4 { margin: 0 0 10px; font-size: 14px; }
-    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
-    .pill {
-      background: var(--green-soft);
-      color: var(--green-d);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .pill.warn { background: var(--accent-soft); color: var(--warn); }
-
-    .list { display: grid; gap: 10px; margin-top: 12px; }
-    .row-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      align-items: center;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
-      transition: border-color .15s ease, box-shadow .15s ease;
-    }
-    .row-card:hover { border-color: rgba(31,107,58,0.35); box-shadow: 0 8px 20px rgba(18,36,26,0.06); }
-    @media (max-width: 700px) {
-      .row-card { grid-template-columns: 1fr; }
-    }
-    .row-card strong { display: block; font-size: 15px; }
-    .meta { color: var(--muted); font-size: 12.5px; margin-top: 3px; line-height: 1.4; }
-    .actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-end; }
-    .price-input { max-width: 110px; min-height: 40px; padding: 8px 10px; }
-    .badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: var(--green-soft);
-      color: var(--green-d);
-      text-transform: uppercase;
-      letter-spacing: .03em;
-    }
-    .badge.off { background: #fee2e2; color: #991b1b; }
-    .badge.pending { background: #fef3c7; color: #92400e; }
-    .badge.shipped, .badge.processing { background: #dbeafe; color: #1e40af; }
-    .badge.delivered { background: var(--green-soft); color: var(--ok); }
-    .badge.cancelled { background: #f3f4f6; color: #4b5563; }
-
-    /* Modal */
-    .modal-back {
-      position: fixed; inset: 0; z-index: 40;
-      background: rgba(8, 20, 14, 0.55);
-      display: grid; place-items: center;
-      padding: 16px;
-      animation: fade 0.2s ease both;
-    }
-    .modal {
-      width: min(560px, 100%);
-      background: var(--panel-solid);
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: var(--shadow);
-      max-height: min(90vh, 760px);
-      overflow: auto;
-      animation: rise 0.25s ease both;
-    }
-    .modal h3 { margin: 0 0 4px; font-family: var(--display); }
-    .modal-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    @media (max-width: 560px) { .modal-grid { grid-template-columns: 1fr; } }
-    .modal-grid .full { grid-column: 1 / -1; }
-    .modal-actions {
-      display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end;
-      margin-top: 16px;
-    }
-
-    .toast {
-      position: fixed; right: 18px; bottom: 18px; z-index: 50;
-      background: var(--ink); color: #fff;
-      padding: 12px 16px; border-radius: 12px;
-      box-shadow: var(--shadow);
-      transform: translateY(20px); opacity: 0;
-      transition: all .25s ease;
-      max-width: min(360px, calc(100% - 32px));
-      font-size: 14px; font-weight: 600;
-    }
-    .toast.show { transform: translateY(0); opacity: 1; }
-
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 12px;
-    }
-    .tool {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px;
-      display: grid;
-      gap: 10px;
-    }
-    .tool p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: none; }
-    }
-    @keyframes fade {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css?v=84" />
+  <link rel="stylesheet" href="/static/ops.css?v=6" />
 </head>
-<body>
-  <div class="shell">
-    <div id="adminLogin" class="login-stage">
+<body class="ops-body app-panes mobile-tabs" data-app-pane="ops" data-title-key="admin_title">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="brand brand-logo-only" aria-label="AgroScan home">
+        <span class="logo-chip logo-chip-header">
+          <img src="/static/AgroScan_logo-main.png" alt="AgroScan" class="logo-img logo-img-white logo-img-brand" />
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/#diagnose" data-i18n="nav_diagnose">Photo</a>
+        <a href="/#field" data-i18n="nav_field">Field</a>
+        <a href="/#notifications" data-i18n="nav_notifications">News</a>
+        <a href="/#shop" data-i18n="nav_shop">Shop</a>
+        <a href="/#emergency" data-i18n="nav_emergency">Call</a>
+        <a href="/#library" data-i18n="nav_help">Help</a>
+      </nav>
+      <div class="header-right">
+        <div class="header-tools">
+          <button id="langToggle" class="icon-btn" data-i18n-title="language" title="Language">বাং</button>
+        </div>
+        <div id="authArea" class="auth-area"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-scroll mobile-scroll">
+  <div class="layout ops-layout">
+    <aside class="sidebar left ops-side" id="opsSide">
+      <div class="widget">
+        <h3 data-i18n="ops_admin">Admin</h3>
+        <nav class="ops-nav" id="adminNav">
+          <button type="button" class="active" data-tab="overview" data-i18n="ops_overview">Overview</button>
+          <button type="button" data-tab="users" data-i18n="ops_users">Users</button>
+          <button type="button" data-tab="orders" data-i18n="ops_orders">Orders</button>
+          <button type="button" data-tab="products" data-i18n="ops_products">Products</button>
+          <button type="button" data-tab="suppliers" data-i18n="ops_suppliers">Suppliers</button>
+          <button type="button" data-tab="vendors" data-i18n="ops_vendors">Vendors</button>
+          <button type="button" data-tab="tools" data-i18n="ops_tools">Tools</button>
+        </nav>
+        <div class="ops-side-foot">
+          <a class="btn btn-secondary btn-sm" href="/vendor" data-i18n="ops_vendor_panel">Vendor panel</a>
+          <button id="adminLogout" type="button" class="btn btn-ghost btn-sm" data-i18n="auth_logout">Log out</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="center">
+    <div id="adminLogin" class="ops-login">
       <div class="login-card">
-        <div class="brand-mark">
+        <div class="ops-brand-mark">
           <img src="/static/AgroScan_logo-main.png" alt="" />
           <div>
             <strong>AgroScan</strong>
-            <span>Operations console</span>
+            <span data-i18n="ops_console">Operations console</span>
           </div>
         </div>
-        <h1>Admin sign-in</h1>
-        <p class="hint">Local default password is set by <code>AGROSCAN_ADMIN_TOKEN</code> (or <code>agroscan-admin</code>).</p>
-        <label class="field">Username
+        <h1 data-i18n="ops_admin_signin">Admin sign-in</h1>
+        <p class="hint" data-i18n="ops_admin_signin_hint">Staff only. Dealers use the vendor panel.</p>
+        <label class="field"><span data-i18n="ops_username">Username</span>
           <input id="adminUser" type="text" autocomplete="username" value="admin" />
         </label>
-        <label class="field">Password
+        <label class="field"><span data-i18n="ops_password">Password</span>
           <div class="password-wrap">
             <input id="adminPass" type="password" autocomplete="current-password" />
-            <button type="button" class="password-toggle" data-target="adminPass" aria-label="Show password">
+            <button type="button" class="password-toggle" data-target="adminPass" data-i18n-aria="ops_show_password" aria-label="Show password">
               <span class="pw-icon-show" aria-hidden="true">&#128065;</span>
               <span class="pw-icon-hide hidden" aria-hidden="true">&#128064;</span>
             </button>
           </div>
         </label>
-        <button id="adminLoginBtn" class="btn btn-primary btn-block">Enter dashboard</button>
+        <button id="adminLoginBtn" class="btn btn-primary btn-block" data-i18n="ops_enter_dashboard">Enter dashboard</button>
         <p id="adminLoginErr" class="error hidden"></p>
+        <p class="login-switch"><span data-i18n="ops_dealer_q">Shop dealer?</span> <a href="/vendor" data-i18n="ops_open_vendor">Open vendor panel</a></p>
       </div>
     </div>
 
     <div id="adminApp" class="hidden">
-      <div class="app-frame">
-        <aside class="side">
-          <div class="brand-mark">
-            <img src="/static/AgroScan_logo-main.png" alt="" />
-            <div>
-              <strong>AgroScan</strong>
-              <span>Admin</span>
-            </div>
-          </div>
-          <nav class="nav" id="adminNav">
-            <button type="button" class="active" data-tab="overview">Overview</button>
-            <button type="button" data-tab="users">Users</button>
-            <button type="button" data-tab="orders">Orders</button>
-            <button type="button" data-tab="products">Products</button>
-            <button type="button" data-tab="tools">Tools</button>
-          </nav>
-          <div class="side-foot">
-            <a class="btn btn-ghost btn-sm" href="/" style="text-align:center;text-decoration:none;display:block;color:#e8f5ec;border-color:rgba(255,255,255,.2)">Open shop</a>
-            <button id="adminLogout" type="button" class="btn btn-secondary btn-sm">Log out</button>
-          </div>
-        </aside>
-
-        <main class="main">
-          <div class="topbar">
-            <div>
-              <h2 id="pageTitle">Overview</h2>
-              <p id="pageSub">Live snapshot of AgroScan commerce &amp; accounts</p>
-            </div>
+          <div class="ops-nav ops-tabs-mobile" id="adminNavMobile"></div>
+          <div class="ops-page-head">
+            <h2 id="pageTitle" data-i18n="ops_overview">Overview</h2>
+            <p id="pageSub" data-i18n="ops_admin_overview_sub">Live snapshot of AgroScan commerce &amp; accounts</p>
           </div>
 
-          <section id="tabOverview" class="panel">
+          <section id="tabOverview" class="ops-panel">
             <div class="stats" id="statGrid">
-              <div class="stat green"><div class="label">Users</div><div class="value" id="stUsers">—</div></div>
-              <div class="stat accent"><div class="label">Orders</div><div class="value" id="stOrders">—</div></div>
-              <div class="stat green"><div class="label">Products</div><div class="value" id="stProducts">—</div></div>
-              <div class="stat accent"><div class="label">Revenue (BDT)</div><div class="value" id="stRevenue">—</div></div>
+              <div class="stat green"><div class="label" data-i18n="ops_stat_users">Users</div><div class="value" id="stUsers">—</div></div>
+              <div class="stat accent"><div class="label" data-i18n="ops_stat_orders">Orders</div><div class="value" id="stOrders">—</div></div>
+              <div class="stat green"><div class="label" data-i18n="ops_stat_products">Products</div><div class="value" id="stProducts">—</div></div>
+              <div class="stat accent"><div class="label" data-i18n="ops_stat_revenue">Revenue (BDT)</div><div class="value" id="stRevenue">—</div></div>
+              <div class="stat"><div class="label" data-i18n="ops_stat_unassigned">Unassigned</div><div class="value" id="stUnassigned">—</div></div>
+              <div class="stat green"><div class="label" data-i18n="ops_stat_vendors">Vendors</div><div class="value" id="stVendors">—</div></div>
             </div>
             <div class="split">
               <div class="mini">
-                <h4>Order pipeline</h4>
+                <h4 data-i18n="ops_pipeline">Order pipeline</h4>
                 <div class="pill-row" id="orderPills"></div>
               </div>
               <div class="mini">
-                <h4>System</h4>
+                <h4 data-i18n="ops_system">System</h4>
                 <div class="pill-row" id="sysPills"></div>
               </div>
             </div>
           </section>
 
-          <section id="tabUsers" class="panel hidden">
-            <h3>Users</h3>
-            <p class="hint">Search, edit profile details, reset password, disable accounts, or revoke sessions.</p>
+          <section id="tabUsers" class="ops-panel hidden">
+            <h3 data-i18n="ops_users">Users</h3>
+            <p class="hint" data-i18n="ops_users_hint">Search, edit profile details, reset password, disable accounts, or revoke sessions.</p>
             <div class="toolbar">
-              <input id="userSearch" type="search" placeholder="Search name, email, phone, place" />
-              <button id="userRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+              <input id="userSearch" type="search" data-i18n-ph="ops_search_users" placeholder="Search name, email, phone, place" />
+              <button id="userAdd" type="button" class="btn btn-primary btn-sm" data-i18n="ops_add_user">Add user</button>
+              <button id="userRefresh" type="button" class="btn btn-secondary btn-sm" data-i18n="ops_refresh">Refresh</button>
             </div>
             <div id="adminUsers" class="list"></div>
           </section>
 
-          <section id="tabOrders" class="panel hidden">
-            <h3>Orders</h3>
-            <p class="hint">Update fulfilment status for customer orders.</p>
+          <section id="tabOrders" class="ops-panel hidden">
+            <h3 data-i18n="ops_orders">Orders</h3>
+            <p class="hint" data-i18n="ops_orders_hint">Open an order for items and address. Assign a supplier if it is still unassigned.</p>
             <div class="toolbar">
+              <input id="orderSearch" type="search" data-i18n-ph="ops_search_orders" placeholder="Search code, name, phone, shop" />
               <select id="orderStatusFilter">
-                <option value="">All statuses</option>
-                <option value="pending">Pending</option>
-                <option value="confirmed">Confirmed</option>
-                <option value="processing">Processing</option>
-                <option value="shipped">Shipped</option>
-                <option value="delivered">Delivered</option>
-                <option value="cancelled">Cancelled</option>
+                <option value="" data-i18n="ops_all_statuses">All statuses</option>
+                <option value="pending" data-i18n="ops_st_pending">Pending</option>
+                <option value="confirmed" data-i18n="ops_st_confirmed">Confirmed</option>
+                <option value="processing" data-i18n="ops_st_processing">Processing</option>
+                <option value="shipped" data-i18n="ops_st_shipped">Shipped</option>
+                <option value="delivered" data-i18n="ops_st_delivered">Delivered</option>
+                <option value="cancelled" data-i18n="ops_st_cancelled">Cancelled</option>
               </select>
-              <button id="adminRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+              <label class="field" style="margin:0;display:flex;align-items:center;gap:6px;font-weight:600">
+                <input id="orderUnassigned" type="checkbox" style="width:auto;min-height:0" /> <span data-i18n="ops_unassigned_only">Unassigned only</span>
+              </label>
+              <button id="orderAdd" type="button" class="btn btn-primary btn-sm" data-i18n="ops_add_order">Add order</button>
+              <button id="adminRefresh" type="button" class="btn btn-secondary btn-sm" data-i18n="ops_refresh">Refresh</button>
             </div>
             <div id="adminOrders" class="list"></div>
           </section>
 
-          <section id="tabProducts" class="panel hidden">
-            <h3>Product prices</h3>
-            <p class="hint">Fixed shop prices (BDT). Changes show immediately in the storefront.</p>
+          <section id="tabProducts" class="ops-panel hidden">
+            <h3 data-i18n="ops_products">Product prices</h3>
+            <p class="hint" data-i18n="ops_products_hint">Catalogue prices (BDT). Changes show immediately in the storefront.</p>
             <div class="toolbar">
-              <input id="prodSearch" type="search" placeholder="Search name / SKU / brand" />
-              <button id="prodRefresh" type="button" class="btn btn-primary btn-sm">Refresh</button>
+              <input id="prodSearch" type="search" data-i18n-ph="ops_search_products" placeholder="Search name / SKU / brand" />
+              <select id="prodCategory">
+                <option value="" data-i18n="ops_all_categories">All categories</option>
+                <option value="pesticide" data-i18n="ops_cat_pesticide">Pesticide</option>
+                <option value="medicine" data-i18n="ops_cat_medicine">Medicine</option>
+                <option value="seed" data-i18n="ops_cat_seed">Seed</option>
+                <option value="fertilizer" data-i18n="ops_cat_fertilizer">Fertilizer</option>
+                <option value="equipment" data-i18n="ops_cat_equipment">Equipment</option>
+              </select>
+              <button id="prodRefresh" type="button" class="btn btn-primary btn-sm" data-i18n="ops_refresh">Refresh</button>
             </div>
             <div id="adminProducts" class="list"></div>
+            <div class="pager">
+              <button type="button" class="btn btn-ghost btn-sm" id="prodPrev" data-i18n="ops_prev">Previous</button>
+              <span id="prodPage">Page 1</span>
+              <button type="button" class="btn btn-ghost btn-sm" id="prodNext" data-i18n="ops_next">Next</button>
+            </div>
           </section>
 
-          <section id="tabTools" class="panel hidden">
-            <h3>Maintenance tools</h3>
-            <p class="hint">Use carefully on production data.</p>
+          <section id="tabSuppliers" class="ops-panel hidden">
+            <h3 data-i18n="ops_suppliers">Suppliers</h3>
+            <p class="hint" data-i18n="ops_suppliers_hint">Local dealers and government offices used for delivery assignment.</p>
+            <div class="toolbar">
+              <input id="supSearch" type="search" data-i18n-ph="ops_search_suppliers" placeholder="Search shop, district, phone" />
+              <button id="supRefresh" type="button" class="btn btn-primary btn-sm" data-i18n="ops_refresh">Refresh</button>
+            </div>
+            <div id="adminSuppliers" class="list"></div>
+          </section>
+
+          <section id="tabVendors" class="ops-panel hidden">
+            <h3 data-i18n="ops_vendors">Vendor accounts</h3>
+            <p class="hint" data-i18n="ops_vendors_hint">Each vendor logs in at <code>/vendor</code> and only sees their shop’s orders and stock.</p>
+            <div class="create-box">
+              <strong data-i18n="ops_create_vendor">Create vendor</strong>
+              <div class="modal-grid" style="margin-top:10px">
+                <label class="field"><span data-i18n="ops_username">Username</span><input id="newVendorUser" data-i18n-ph="ops_username_eg" placeholder="e.g. dhaka_shop" /></label>
+                <label class="field"><span data-i18n="ops_password">Password</span><input id="newVendorPass" type="password" data-i18n-ph="ops_pw_ph" placeholder="min 6 characters" /></label>
+                <label class="field full"><span data-i18n="ops_supplier">Supplier</span>
+                  <select id="newVendorSupplier"><option value="" data-i18n="ops_loading">Loading…</option></select>
+                </label>
+                <input type="hidden" id="editVendorId" value="" />
+              </div>
+              <div class="modal-actions" style="margin-top:8px">
+                <button type="button" class="btn btn-ghost btn-sm hidden" id="vendorEditCancel" data-i18n="ops_cancel">Cancel</button>
+                <button type="button" class="btn btn-primary btn-sm" id="vendorCreateBtn" data-i18n="ops_create_account">Create account</button>
+              </div>
+            </div>
+            <div id="adminVendors" class="list"></div>
+          </section>
+
+          <section id="tabTools" class="ops-panel hidden">
+            <h3 data-i18n="ops_tools">Maintenance tools</h3>
+            <p class="hint" data-i18n="ops_tools_hint">Seed is blocked once real orders exist, so the catalogue cannot duplicate.</p>
             <div class="tools-grid">
               <div class="tool">
-                <strong>Seed shop catalogue</strong>
-                <p>Reload upazilas, suppliers, and products from the Bangladesh data pack.</p>
-                <button id="adminSeed" type="button" class="btn btn-accent btn-sm">Run seed</button>
+                <strong data-i18n="ops_seed_title">Seed shop catalogue</strong>
+                <p data-i18n="ops_seed_body">Reload upazilas, suppliers, and products from the Bangladesh data pack.</p>
+                <button id="adminSeed" type="button" class="btn btn-accent btn-sm" data-i18n="ops_seed_run">Run seed</button>
               </div>
               <div class="tool">
-                <strong>Apply product images</strong>
-                <p>Attach image URLs from <code>product_images.json</code> to existing products.</p>
-                <button id="adminApplyImages" type="button" class="btn btn-secondary btn-sm">Apply images</button>
+                <strong data-i18n="ops_images_title">Apply product images</strong>
+                <p data-i18n="ops_images_body">Attach image URLs from <code>product_images.json</code> to existing products.</p>
+                <button id="adminApplyImages" type="button" class="btn btn-secondary btn-sm" data-i18n="ops_images_run">Apply images</button>
               </div>
               <div class="tool">
-                <strong>Refresh overview</strong>
-                <p>Reload live counts for users, orders, and catalogue.</p>
-                <button id="adminStatsRefresh" type="button" class="btn btn-secondary btn-sm">Refresh stats</button>
+                <strong data-i18n="ops_stats_title">Refresh overview</strong>
+                <p data-i18n="ops_stats_body">Reload live counts for users, orders, and catalogue.</p>
+                <button id="adminStatsRefresh" type="button" class="btn btn-secondary btn-sm" data-i18n="ops_stats_run">Refresh stats</button>
               </div>
             </div>
           </section>
-        </main>
+    </div>
+    </main>
+  </div>
+  </div>
+
+  <nav class="mobile-bottom-nav" aria-label="Main navigation">
+    <a href="/#diagnose" class="mob-nav-item" data-section="diagnose">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.25"/></svg>
+      </span>
+      <span data-i18n="nav_diagnose">Photo</span>
+    </a>
+    <a href="/#field" class="mob-nav-item" data-section="field">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 11c-2.5-1.2-5.5-.6-7.5 1.2 0-4.2 3.2-7.7 7.5-8.2 4.3.5 7.5 4 7.5 8.2-2-1.8-5-2.4-7.5-1.2z"/></svg>
+      </span>
+      <span data-i18n="nav_field">Field</span>
+    </a>
+    <a href="/#notifications" class="mob-nav-item" data-section="notifications">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+      </span>
+      <span data-i18n="nav_notifications">News</span>
+    </a>
+    <a href="/#shop" class="mob-nav-item" data-section="shop">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      </span>
+      <span data-i18n="nav_shop">Shop</span>
+    </a>
+    <a href="/#emergency" class="mob-nav-item" data-section="emergency">
+      <span class="mob-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 3.8 6 6.8c-.5.7-.4 1.6.2 2.2l1.8 1.8a16 16 0 0 0 5.2 5.2l1.8 1.8c.6.6 1.5.7 2.2.2l3-2.2c.6-.4.7-1.3.3-1.9l-1.6-2.4a1.4 1.4 0 0 0-1.7-.5l-2 .8a1.4 1.4 0 0 1-1.5-.4L10.4 8.7a1.4 1.4 0 0 1-.4-1.5l.8-2a1.4 1.4 0 0 0-.5-1.7L7.9 3.5a1.4 1.4 0 0 0-1.7.3z"/></svg>
+      </span>
+      <span data-i18n="nav_emergency">Call</span>
+    </a>
+  </nav>
+
+  <div id="userModal" class="modal-back hidden" role="dialog" aria-modal="true">
+    <div class="modal">
+      <h3 id="userModalTitle" data-i18n="ops_edit_user">Edit user</h3>
+      <p class="hint" id="userModalSub" data-i18n="ops_update_account">Update account details</p>
+      <input type="hidden" id="editUserId" />
+      <div class="modal-grid">
+        <label class="field"><span data-i18n="ops_name">Name</span><input id="editName" /></label>
+        <label class="field"><span data-i18n="ops_email">Email</span><input id="editEmail" type="email" /></label>
+        <label class="field"><span data-i18n="ops_phone">Phone</span><input id="editPhone" inputmode="tel" /></label>
+        <label class="field"><span data-i18n="ops_status">Status</span>
+          <select id="editActive">
+            <option value="1" data-i18n="ops_active">Active</option>
+            <option value="0" data-i18n="ops_disabled">Disabled</option>
+          </select>
+        </label>
+        <label class="field"><span data-i18n="ops_district">District</span><input id="editDistrict" /></label>
+        <label class="field"><span data-i18n="ops_upazila">Upazila</span><input id="editUpazila" /></label>
+        <label class="field full"><span data-i18n="ops_address">Address</span><textarea id="editAddress"></textarea></label>
+        <label class="field full"><span data-i18n="ops_new_password">New password (optional)</span><input id="editPassword" type="password" data-i18n-ph="ops_keep_password" placeholder="Leave blank to keep current" autocomplete="new-password" /></label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="userModalClose" data-i18n="ops_cancel">Cancel</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="userRevokeBtn" data-i18n="ops_revoke">Revoke sessions</button>
+        <button type="button" class="btn btn-danger btn-sm" id="userDeleteBtn" data-i18n="ops_delete">Delete</button>
+        <button type="button" class="btn btn-primary btn-sm" id="userSaveBtn" data-i18n="ops_save_changes">Save changes</button>
       </div>
     </div>
   </div>
 
-  <div id="userModal" class="modal-back hidden" role="dialog" aria-modal="true">
-    <div class="modal">
-      <h3>Edit user</h3>
-      <p class="hint" id="userModalSub">Update account details</p>
-      <input type="hidden" id="editUserId" />
+  <div id="orderModal" class="modal-back hidden" role="dialog" aria-modal="true">
+    <div class="modal wide">
+      <h3 id="orderModalTitle">Order</h3>
+      <p class="hint" id="orderModalSub"></p>
       <div class="modal-grid">
-        <label class="field">Name<input id="editName" /></label>
-        <label class="field">Email<input id="editEmail" type="email" /></label>
-        <label class="field">Phone<input id="editPhone" inputmode="tel" /></label>
-        <label class="field">Status
-          <select id="editActive">
-            <option value="1">Active</option>
-            <option value="0">Disabled</option>
-          </select>
-        </label>
-        <label class="field">District<input id="editDistrict" /></label>
-        <label class="field">Upazila<input id="editUpazila" /></label>
-        <label class="field full">Address<textarea id="editAddress"></textarea></label>
-        <label class="field full">New password (optional)<input id="editPassword" type="password" placeholder="Leave blank to keep current" autocomplete="new-password" /></label>
+        <label class="field"><span data-i18n="ops_name">Name</span><input id="orderName" /></label>
+        <label class="field"><span data-i18n="ops_phone">Phone</span><input id="orderPhone" inputmode="tel" /></label>
+        <label class="field"><span data-i18n="ops_district">District</span><input id="orderDistrict" /></label>
+        <label class="field"><span data-i18n="ops_upazila">Upazila</span><input id="orderUpazila" /></label>
+        <label class="field full"><span data-i18n="ops_address">Address</span><textarea id="orderAddress"></textarea></label>
+        <label class="field full"><span data-i18n="ops_notes">Notes</span><input id="orderNotes" /></label>
       </div>
+      <h4 data-i18n="ops_items">Items</h4>
+      <div id="orderItemsEdit"></div>
+      <div class="order-add-row">
+        <select id="orderProductPick"></select>
+        <input id="orderProductQty" type="number" min="1" step="1" value="1" style="width:72px" />
+        <button type="button" class="btn btn-secondary btn-sm" id="orderAddItemBtn" data-i18n="ops_add_item">Add item</button>
+      </div>
+      <div id="orderHistoryWrap">
+        <h4 data-i18n="ops_history">History</h4>
+        <ul class="timeline" id="orderHistory"></ul>
+      </div>
+      <label class="field"><span data-i18n="ops_assign_supplier">Assign supplier</span>
+        <select id="orderAssignSupplier"></select>
+      </label>
       <div class="modal-actions">
-        <button type="button" class="btn btn-ghost btn-sm" id="userModalClose">Cancel</button>
-        <button type="button" class="btn btn-secondary btn-sm" id="userRevokeBtn">Revoke sessions</button>
-        <button type="button" class="btn btn-danger btn-sm" id="userDeleteBtn">Delete</button>
-        <button type="button" class="btn btn-primary btn-sm" id="userSaveBtn">Save changes</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="orderModalClose" data-i18n="close">Close</button>
+        <button type="button" class="btn btn-primary btn-sm" id="orderSaveBtn" data-i18n="ops_save_order">Save order</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="orderAssignBtn" data-i18n="ops_assign">Assign</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="confirmed" data-i18n="ops_confirm">Confirm</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="processing" data-i18n="ops_process">Process</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-st="shipped" data-i18n="ops_ship">Ship</button>
+        <button type="button" class="btn btn-primary btn-sm" data-st="delivered" data-i18n="ops_deliver">Deliver</button>
+        <button type="button" class="btn btn-danger btn-sm" data-st="cancelled" data-i18n="ops_cancel_order">Cancel</button>
       </div>
     </div>
   </div>
 
   <div id="toast" class="toast" role="status"></div>
 
-  <script src="/static/config.js"></script>
+  <script src="/static/config.js?v=26"></script>
+  <script src="/static/i18n.js?v=66"></script>
+  <script src="/static/auth.js?v=25"></script>
+  <script src="/static/ops.js?v=3"></script>
   <script>
 (function () {
-  var API = (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) || "";
+  var O = window.AgroOps;
+  var $ = O.$;
+  var esc = O.esc;
+  var toast = O.toast;
+  function t(k, vars) { return O.t(k, vars); }
   var KEY = "agroscan_admin_token";
-  var DEFAULT_PASS = "agroscan-admin";
-  var TITLES = {
-    overview: ["Overview", "Live snapshot of AgroScan commerce & accounts"],
-    users: ["Users", "Manage farmer and customer accounts"],
-    orders: ["Orders", "Fulfilment and delivery status"],
-    products: ["Products", "Fixed shop prices in BDT"],
-    tools: ["Tools", "Catalogue seed and maintenance"]
-  };
+  function titles() {
+    return {
+      overview: [t("ops_overview"), t("ops_admin_overview_sub")],
+      users: [t("ops_users"), t("ops_users_sub")],
+      orders: [t("ops_orders"), t("ops_orders_sub")],
+      products: [t("ops_products"), t("ops_products_sub")],
+      suppliers: [t("ops_suppliers"), t("ops_suppliers_sub")],
+      vendors: [t("ops_vendors"), t("ops_vendors_sub")],
+      tools: [t("ops_tools"), t("ops_tools_sub")]
+    };
+  }
+  var prodOffset = 0;
+  var PROD_PAGE = 80;
+  var currentOrder = "";
+  var supplierCache = [];
+  var productCache = [];
+  var orderLines = [];
+  var editingVendorId = "";
 
-  function $(id) { return document.getElementById(id); }
   function token() { return localStorage.getItem(KEY) || ""; }
   function setToken(t) {
     if (t) localStorage.setItem(KEY, t);
     else localStorage.removeItem(KEY);
   }
-  function esc(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-  function toast(msg) {
-    var el = $("toast");
-    el.textContent = msg;
-    el.className = "toast show";
-    clearTimeout(toast._t);
-    toast._t = setTimeout(function () { el.className = "toast"; }, 2600);
-  }
-  function formatDetail(detail) {
-    if (detail == null || detail === "") return "";
-    if (typeof detail === "string") return detail;
-    if (Array.isArray(detail)) {
-      return detail.map(function (d) {
-        if (!d) return "";
-        if (typeof d === "string") return d;
-        if (d.msg) return d.msg;
-        try { return JSON.stringify(d); } catch (e) { return String(d); }
-      }).filter(Boolean).join("; ") || "Request failed";
-    }
-    if (typeof detail === "object" && detail.msg) return detail.msg;
-    try { return JSON.stringify(detail); } catch (e) { return String(detail); }
-  }
-  function xhr(method, path, body, ok, fail) {
-    var x = new XMLHttpRequest();
-    x.open(method, API + path, true);
-    x.setRequestHeader("Authorization", "Bearer " + token());
-    if (body != null) x.setRequestHeader("Content-Type", "application/json");
-    x.onload = function () {
-      var data = {};
-      try { data = x.responseText ? JSON.parse(x.responseText) : {}; }
-      catch (e) {
-        if (x.status >= 200 && x.status < 300) return fail("Invalid JSON response");
+  function api(method, path, body, ok, fail) {
+    O.xhr(method, path, body, token(), ok, function (m) {
+      if (O.authFail(m) && path.indexOf("/api/admin/login") < 0) {
+        setToken("");
+        showApp(false);
       }
-      if (x.status >= 200 && x.status < 300) ok(data);
-      else fail(formatDetail(data.detail) || ("HTTP " + x.status));
-    };
-    x.onerror = function () { fail("Network error"); };
-    x.send(body != null ? JSON.stringify(body) : null);
+      fail(m);
+    });
   }
   function showApp(on) {
-    $("adminLogin").className = on ? "login-stage hidden" : "login-stage";
+    document.body.classList.toggle("ops-authed", !!on);
+    $("adminLogin").className = on ? "ops-login hidden" : "ops-login";
     $("adminApp").className = on ? "" : "hidden";
   }
+  var currentTab = "overview";
   function setTab(tab) {
-    var titles = TITLES[tab] || TITLES.overview;
-    $("pageTitle").textContent = titles[0];
-    $("pageSub").textContent = titles[1];
-    var tabs = ["overview", "users", "orders", "products", "tools"];
-    tabs.forEach(function (t) {
-      var el = $("tab" + t.charAt(0).toUpperCase() + t.slice(1));
-      if (el) el.className = t === tab ? "panel" : "panel hidden";
+    currentTab = tab || currentTab;
+    var pack = titles()[tab] || titles().overview;
+    $("pageTitle").textContent = pack[0];
+    $("pageSub").textContent = pack[1];
+    var tabs = ["overview", "users", "orders", "products", "suppliers", "vendors", "tools"];
+    tabs.forEach(function (id) {
+      var el = $("tab" + id.charAt(0).toUpperCase() + id.slice(1));
+      if (el) el.className = id === tab ? "ops-panel" : "ops-panel hidden";
     });
-    var nav = document.querySelectorAll("#adminNav button");
+    var nav = document.querySelectorAll(".ops-nav button");
     for (var i = 0; i < nav.length; i++) {
       nav[i].className = nav[i].getAttribute("data-tab") === tab ? "active" : "";
     }
@@ -655,86 +403,84 @@
     if (tab === "users") loadUsers();
     if (tab === "orders") loadOrders();
     if (tab === "products") loadProducts();
+    if (tab === "suppliers") loadSuppliers();
+    if (tab === "vendors") { loadSupplierOptions(); loadVendors(); }
   }
 
   function login() {
     var user = ($("adminUser").value || "").trim();
     var pass = ($("adminPass").value || "").trim();
     var err = $("adminLoginErr");
-    if (user !== "admin" || !pass) {
-      err.textContent = "Use username admin and the admin password.";
+    if (!user || !pass) {
+      err.textContent = t("ops_need_login");
       err.className = "error";
       return;
     }
-    setToken(pass);
-    xhr("GET", "/api/admin/stats", null, function () {
+    O.xhr("POST", "/api/admin/login", { username: user, password: pass }, "", function (data) {
+      setToken(data.token || pass);
       err.className = "error hidden";
       showApp(true);
       setTab("overview");
-    }, function () {
+    }, function (m) {
       setToken("");
-      err.textContent = "Wrong password. Default local password: agroscan-admin";
+      err.textContent = m || t("ops_bad_login");
       err.className = "error";
       showApp(false);
     });
   }
 
   function loadStats() {
-    xhr("GET", "/api/admin/stats", null, function (data) {
+    api("GET", "/api/admin/stats", null, function (data) {
       var shop = data.shop || {};
       var users = data.users || {};
       var models = data.models || {};
       $("stUsers").textContent = users.users_total != null ? users.users_total : "—";
       $("stOrders").textContent = shop.orders != null ? shop.orders : "—";
       $("stProducts").textContent = shop.products != null ? shop.products : "—";
-      $("stRevenue").textContent = shop.revenue_bdt != null ? Math.round(shop.revenue_bdt).toLocaleString() : "—";
+      $("stRevenue").textContent = shop.revenue_bdt != null ? O.money(shop.revenue_bdt) : "—";
+      $("stUnassigned").textContent = shop.orders_unassigned != null ? shop.orders_unassigned : "—";
+      $("stVendors").textContent = shop.vendors != null ? shop.vendors : "—";
       var pills = $("orderPills");
       var by = shop.orders_by_status || {};
       var keys = Object.keys(by);
       pills.innerHTML = keys.length
         ? keys.map(function (k) {
-            return "<span class='pill" + (k === "pending" ? " warn" : "") + "'>" + esc(k) + ": " + by[k] + "</span>";
+            return "<span class='ops-pill" + (k === "pending" ? " warn" : "") + "'>" + esc(O.st(k)) + ": " + by[k] + "</span>";
           }).join("")
-        : "<span class='meta'>No orders yet</span>";
+        : "<span class='meta'>" + esc(t("ops_no_orders")) + "</span>";
       var sys = $("sysPills");
       var llm = models.llm || {};
       var vision = models.vision || {};
       sys.innerHTML =
-        "<span class='pill'>Active users: " + (users.users_active || 0) + "</span>" +
-        "<span class='pill'>Sessions: " + (users.sessions_active || 0) + "</span>" +
-        "<span class='pill'>Suppliers: " + (shop.suppliers || 0) + "</span>" +
-        "<span class='pill'>" + (vision.loaded ? "Vision ready" : "Vision offline") + "</span>" +
-        "<span class='pill'>" + ((llm.loaded || llm.enabled) ? "LLM configured" : "LLM off") + "</span>";
-    }, function (m) {
-      toast(m);
-      if (String(m).toLowerCase().indexOf("admin") >= 0 || String(m).indexOf("401") >= 0) {
-        setToken("");
-        showApp(false);
-      }
-    });
+        "<span class='ops-pill'>" + esc(t("ops_active_users", { n: users.users_active || 0 })) + "</span>" +
+        "<span class='ops-pill'>" + esc(t("ops_sessions_n", { n: users.sessions_active || 0 })) + "</span>" +
+        "<span class='ops-pill'>" + esc(t("ops_suppliers_n", { n: shop.suppliers || 0 })) + "</span>" +
+        "<span class='ops-pill'>" + esc(vision.loaded ? t("ops_vision_on") : t("ops_vision_off")) + "</span>" +
+        "<span class='ops-pill'>" + esc((llm.loaded || llm.enabled) ? t("ops_llm_on") : t("ops_llm_off")) + "</span>";
+    }, function (m) { toast(m); });
   }
 
   function loadUsers() {
     var q = ($("userSearch").value || "").trim();
     var path = "/api/admin/users?limit=150" + (q ? ("&search=" + encodeURIComponent(q)) : "");
-    xhr("GET", path, null, function (data) {
+    api("GET", path, null, function (data) {
       var el = $("adminUsers");
       var html = "";
       (data.users || []).forEach(function (u) {
         html += "<div class='row-card'>" +
-          "<div><strong>" + esc(u.name || "User") + "</strong>" +
+          "<div><strong>" + esc(u.name || t("auth_user")) + "</strong>" +
           "<div class='meta'>" + esc(u.email || "") +
           (u.phone ? (" · " + esc(u.phone)) : "") +
           (u.district || u.upazila ? (" · " + esc([u.upazila, u.district].filter(Boolean).join(", "))) : "") +
           "<br/>#" + u.id + " · " + esc(u.provider || "local") +
-          " · sessions " + (u.active_sessions || 0) +
-          " · <span class='badge " + (u.active ? "" : "off") + "'>" + (u.active ? "active" : "disabled") + "</span>" +
+          " · " + esc(t("ops_sessions")) + " " + (u.active_sessions || 0) +
+          " · <span class='badge " + (u.active ? "" : "off") + "'>" + esc(u.active ? t("ops_active") : t("ops_disabled")) + "</span>" +
           "</div></div>" +
           "<div class='actions'>" +
-          "<button type='button' class='btn btn-primary btn-sm edit-user' data-id='" + u.id + "'>Edit</button>" +
+          "<button type='button' class='btn btn-primary btn-sm edit-user' data-id='" + u.id + "'>" + esc(t("ops_edit")) + "</button>" +
           "</div></div>";
       });
-      el.innerHTML = html || "<p class='meta'>No users found.</p>";
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_users")) + "</p>";
       var btns = el.querySelectorAll(".edit-user");
       for (var i = 0; i < btns.length; i++) {
         btns[i].onclick = function () { openUserModal(parseInt(this.getAttribute("data-id"), 10)); };
@@ -745,7 +491,26 @@
   }
 
   function openUserModal(id) {
-    xhr("GET", "/api/admin/users/" + id, null, function (data) {
+    var creating = !id;
+    $("editUserId").value = creating ? "" : String(id);
+    $("userModalTitle").textContent = creating ? t("ops_add_user") : t("ops_edit_user");
+    $("userRevokeBtn").classList.toggle("hidden", creating);
+    $("userDeleteBtn").classList.toggle("hidden", creating);
+    if (creating) {
+      $("editName").value = "";
+      $("editEmail").value = "";
+      $("editPhone").value = "";
+      $("editDistrict").value = "";
+      $("editUpazila").value = "";
+      $("editAddress").value = "";
+      $("editActive").value = "1";
+      $("editPassword").value = "";
+      $("editPassword").parentNode.querySelector("span").textContent = t("ops_pw_required");
+      $("userModalSub").textContent = t("ops_add_user_sub");
+      $("userModal").className = "modal-back";
+      return;
+    }
+    api("GET", "/api/admin/users/" + id, null, function (data) {
       var u = data.user || {};
       $("editUserId").value = u.id;
       $("editName").value = u.name || "";
@@ -756,14 +521,15 @@
       $("editAddress").value = u.address || "";
       $("editActive").value = u.active ? "1" : "0";
       $("editPassword").value = "";
-      $("userModalSub").textContent = "User #" + u.id + " · " + (u.provider || "local");
+      $("editPassword").parentNode.querySelector("span").textContent = t("ops_new_password");
+      $("userModalSub").textContent = t("ops_user_n", { id: u.id }) + " · " + (u.provider || "local");
       $("userModal").className = "modal-back";
     }, function (m) { toast(m); });
   }
   function closeUserModal() { $("userModal").className = "modal-back hidden"; }
 
   function saveUser() {
-    var id = $("editUserId").value;
+    var id = ($("editUserId").value || "").trim();
     var body = {
       name: $("editName").value,
       email: $("editEmail").value,
@@ -775,8 +541,21 @@
     };
     var pw = ($("editPassword").value || "").trim();
     if (pw) body.password = pw;
-    xhr("PATCH", "/api/admin/users/" + id, body, function () {
-      toast("User updated");
+    if (!id) {
+      if (!(body.name || "").trim() || !(body.email || "").trim() || pw.length < 6) {
+        toast(t("ops_need_user_fields"));
+        return;
+      }
+      api("POST", "/api/admin/users", body, function () {
+        toast(t("ops_user_created"));
+        closeUserModal();
+        loadUsers();
+        loadStats();
+      }, function (m) { toast(m); });
+      return;
+    }
+    api("PATCH", "/api/admin/users/" + id, body, function () {
+      toast(t("ops_updated"));
       closeUserModal();
       loadUsers();
       loadStats();
@@ -785,54 +564,254 @@
 
   function loadOrders() {
     var st = ($("orderStatusFilter").value || "").trim();
-    var path = "/api/admin/orders" + (st ? ("?status=" + encodeURIComponent(st)) : "");
-    xhr("GET", path, null, function (data) {
+    var q = ($("orderSearch").value || "").trim();
+    var un = $("orderUnassigned").checked;
+    var path = "/api/admin/orders?";
+    if (st) path += "status=" + encodeURIComponent(st) + "&";
+    if (q) path += "search=" + encodeURIComponent(q) + "&";
+    if (un) path += "unassigned=true&";
+    api("GET", path, null, function (data) {
       var el = $("adminOrders");
       var html = "";
       (data.orders || []).forEach(function (o) {
-        html += "<div class='row-card'>" +
+        var cls = o.supplier_id ? "row-card order-row" : "row-card order-row unassigned";
+        html += "<div class='" + cls + "' role='button' tabindex='0' data-code='" + esc(o.order_code) + "'>" +
           "<div><strong>" + esc(o.order_code) + "</strong>" +
           "<div class='meta'>" +
-          "<span class='badge " + esc(o.status || "") + "'>" + esc(o.status || "") + "</span> · " +
-          Math.round(o.total_bdt || 0) + " BDT · " + esc(o.user_name || "guest") +
-          " · " + esc([o.upazila, o.district].filter(Boolean).join(", ")) +
+          "<span class='badge " + esc(o.status || "") + "'>" + esc(O.st(o.status)) + "</span> · " +
+          O.money(o.total_bdt) + " BDT · " + esc(t("ops_item_n", { n: o.item_count || 0 })) + "<br/>" +
+          esc(o.user_name || t("ops_guest")) +
           (o.user_phone ? (" · " + esc(o.user_phone)) : "") +
+          " · " + esc([o.upazila, o.district].filter(Boolean).join(", ")) +
+          "<br/>" + esc(t("ops_shop_label")) + ": " + esc(o.supplier_name || t("ops_unassigned")) +
           "</div></div>" +
           "<div class='actions'>" +
-          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='confirmed'>Confirm</button>" +
-          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='processing'>Process</button>" +
-          "<button type='button' class='btn btn-secondary btn-sm' data-code='" + esc(o.order_code) + "' data-st='shipped'>Ship</button>" +
-          "<button type='button' class='btn btn-primary btn-sm' data-code='" + esc(o.order_code) + "' data-st='delivered'>Deliver</button>" +
-          "<button type='button' class='btn btn-danger btn-sm' data-code='" + esc(o.order_code) + "' data-st='cancelled'>Cancel</button>" +
+          "<button type='button' class='btn btn-primary btn-sm open-order' data-code='" + esc(o.order_code) + "'>" + esc(t("ops_open")) + "</button>" +
           "</div></div>";
       });
-      el.innerHTML = html || "<p class='meta'>No orders yet.</p>";
-      var btns = el.querySelectorAll("button[data-code]");
-      for (var i = 0; i < btns.length; i++) {
-        btns[i].onclick = function () {
-          var code = this.getAttribute("data-code");
-          var status = this.getAttribute("data-st");
-          xhr("PATCH", "/api/admin/orders/" + encodeURIComponent(code), {
-            status: status, message: "Updated by admin"
-          }, function () {
-            toast("Order " + code + " → " + status);
-            loadOrders();
-            loadStats();
-          }, function (m) { toast(m); });
-        };
-      }
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_orders")) + "</p>";
+      bindOrderRows(el);
     }, function (m) {
       $("adminOrders").innerHTML = "<p class='error'>" + esc(m) + "</p>";
     });
   }
 
+  function bindOrderRows(el) {
+    var rows = el.querySelectorAll(".order-row");
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].onclick = function (e) {
+        var code = this.getAttribute("data-code");
+        if (code) openOrder(code);
+      };
+      rows[i].onkeydown = function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openOrder(this.getAttribute("data-code"));
+        }
+      };
+    }
+  }
+
+  function fillSupplierSelect(sel, selected) {
+    var html = "<option value=''>" + esc(t("ops_select_supplier")) + "</option>";
+    supplierCache.forEach(function (s) {
+      html += "<option value='" + s.id + "'" + (String(s.id) === String(selected || "") ? " selected" : "") + ">" +
+        esc(s.name) + " — " + esc([s.upazila, s.district].filter(Boolean).join(", ")) + "</option>";
+    });
+    sel.innerHTML = html;
+  }
+
+  function loadSupplierOptions(done) {
+    api("GET", "/api/admin/suppliers?limit=200", null, function (data) {
+      supplierCache = data.suppliers || [];
+      fillSupplierSelect($("newVendorSupplier"), $("newVendorSupplier").value);
+      if (done) done();
+    }, function () { if (done) done(); });
+  }
+
+  function fillProductPick() {
+    var sel = $("orderProductPick");
+    if (!sel) return;
+    var html = "<option value=''>" + esc(t("ops_product")) + "</option>";
+    productCache.forEach(function (p) {
+      html += "<option value='" + p.id + "' data-price='" + (p.price_bdt || 0) + "'>" +
+        esc(p.name || "") + " — " + O.money(p.price_bdt) + " BDT</option>";
+    });
+    sel.innerHTML = html;
+  }
+
+  function loadProductCache(done) {
+    if (productCache.length) { fillProductPick(); if (done) done(); return; }
+    api("GET", "/api/admin/products?limit=200", null, function (data) {
+      productCache = data.products || [];
+      fillProductPick();
+      if (done) done();
+    }, function () { if (done) done(); });
+  }
+
+  function renderOrderLines() {
+    var el = $("orderItemsEdit");
+    if (!el) return;
+    if (!orderLines.length) {
+      el.innerHTML = "<p class='meta'>" + esc(t("ops_no_items")) + "</p>";
+      return;
+    }
+    el.innerHTML = orderLines.map(function (it, idx) {
+      return "<div class='order-edit-line'><span>" + esc(it.product_name) + " × " + it.qty +
+        " — " + O.money((it.unit_price_bdt || 0) * it.qty) + " BDT</span>" +
+        "<button type='button' class='btn btn-ghost btn-sm rm-item' data-i='" + idx + "'>" + esc(t("ops_delete")) + "</button></div>";
+    }).join("");
+    var rms = el.querySelectorAll(".rm-item");
+    for (var i = 0; i < rms.length; i++) {
+      rms[i].onclick = function () {
+        orderLines.splice(parseInt(this.getAttribute("data-i"), 10), 1);
+        renderOrderLines();
+      };
+    }
+  }
+
+  function orderFormBody() {
+    var sid = parseInt($("orderAssignSupplier").value, 10);
+    return {
+      user_name: $("orderName").value,
+      user_phone: $("orderPhone").value,
+      district: $("orderDistrict").value,
+      upazila: $("orderUpazila").value,
+      address: $("orderAddress").value,
+      notes: $("orderNotes").value,
+      supplier_id: sid || null,
+      items: orderLines.map(function (it) {
+        return { product_id: it.product_id, qty: it.qty, unit_price_bdt: it.unit_price_bdt };
+      })
+    };
+  }
+
+  function setOrderCreateMode(creating) {
+    $("orderAssignBtn").classList.toggle("hidden", !!creating);
+    var stBtns = document.querySelectorAll("#orderModal [data-st]");
+    for (var i = 0; i < stBtns.length; i++) {
+      var st = stBtns[i].getAttribute("data-st");
+      stBtns[i].classList.toggle("hidden", !!creating && st !== "confirmed");
+    }
+  }
+
+  function openNewOrder() {
+    currentOrder = "";
+    orderLines = [];
+    setOrderCreateMode(true);
+    $("orderModalTitle").textContent = t("ops_new_order");
+    $("orderModalSub").textContent = "";
+    $("orderName").value = "";
+    $("orderPhone").value = "";
+    $("orderDistrict").value = "";
+    $("orderUpazila").value = "";
+    $("orderAddress").value = "";
+    $("orderNotes").value = "";
+    $("orderHistory").innerHTML = "";
+    $("orderHistoryWrap").classList.add("hidden");
+    renderOrderLines();
+    function show() {
+      fillSupplierSelect($("orderAssignSupplier"), "");
+      fillProductPick();
+      $("orderModal").className = "modal-back";
+    }
+    loadProductCache(function () {
+      if (!supplierCache.length) loadSupplierOptions(show);
+      else show();
+    });
+  }
+
+  function openOrder(code) {
+    currentOrder = code;
+    setOrderCreateMode(false);
+    $("orderHistoryWrap").classList.remove("hidden");
+    $("orderModalTitle").textContent = code;
+    $("orderModalSub").textContent = t("ops_loading");
+    $("orderModal").className = "modal-back";
+    api("GET", "/api/admin/orders/" + encodeURIComponent(code), null, function (o) {
+      $("orderModalTitle").textContent = o.order_code;
+      $("orderModalSub").textContent = O.st(o.status) + " · " + O.money(o.total_bdt) + " BDT";
+      $("orderName").value = o.user_name || "";
+      $("orderPhone").value = o.user_phone || "";
+      $("orderDistrict").value = o.district || "";
+      $("orderUpazila").value = o.upazila || "";
+      $("orderAddress").value = o.address || "";
+      $("orderNotes").value = o.notes || "";
+      orderLines = (o.items || []).map(function (it) {
+        return {
+          product_id: it.product_id,
+          product_name: it.product_name,
+          qty: it.qty,
+          unit_price_bdt: it.unit_price_bdt
+        };
+      });
+      renderOrderLines();
+      var events = (o.events || []).map(function (ev) {
+        return "<li>" + esc(O.st(ev.status)) + " — " + esc(ev.message || "") + " <span>(" + esc(ev.actor || "") + ")</span></li>";
+      }).join("");
+      $("orderHistory").innerHTML = events || "<li>" + esc(t("ops_no_events")) + "</li>";
+      fillSupplierSelect($("orderAssignSupplier"), o.supplier_id);
+      fillProductPick();
+      loadProductCache(function () {
+        fillProductPick();
+        if (!supplierCache.length) loadSupplierOptions(function () {
+          fillSupplierSelect($("orderAssignSupplier"), o.supplier_id);
+        });
+        else fillSupplierSelect($("orderAssignSupplier"), o.supplier_id);
+      });
+    }, function (m) {
+      $("orderModal").className = "modal-back hidden";
+      toast(m);
+    });
+  }
+
+  function saveOrder(confirmAfter) {
+    var body = orderFormBody();
+    if (!body.items.length) { toast(t("ops_need_items")); return; }
+    if (!currentOrder) {
+      body.confirm = !!confirmAfter;
+      api("POST", "/api/admin/orders", body, function (data) {
+        toast(confirmAfter ? t("ops_order_updated") : t("ops_order_created"));
+        currentOrder = data.order && data.order.order_code;
+        if (currentOrder) openOrder(currentOrder);
+        loadOrders();
+        loadStats();
+      }, function (m) { toast(m); });
+      return;
+    }
+    api("PATCH", "/api/admin/orders/" + encodeURIComponent(currentOrder), body, function () {
+      if (confirmAfter) {
+        patchOrder({ status: "confirmed", message: "Confirmed by admin" });
+        return;
+      }
+      toast(t("ops_order_updated"));
+      openOrder(currentOrder);
+      loadOrders();
+      loadStats();
+    }, function (m) { toast(m); });
+  }
+
+  function patchOrder(body) {
+    if (!currentOrder) return;
+    api("PATCH", "/api/admin/orders/" + encodeURIComponent(currentOrder), body, function () {
+      toast(t("ops_order_updated"));
+      openOrder(currentOrder);
+      loadOrders();
+      loadStats();
+    }, function (m) { toast(m); });
+  }
+
   function loadProducts() {
     var q = ($("prodSearch").value || "").trim();
-    var path = "/api/admin/products?limit=120" + (q ? ("&search=" + encodeURIComponent(q)) : "");
-    xhr("GET", path, null, function (data) {
+    var cat = ($("prodCategory").value || "").trim();
+    var path = "/api/admin/products?limit=" + PROD_PAGE + "&offset=" + prodOffset;
+    if (q) path += "&search=" + encodeURIComponent(q);
+    if (cat) path += "&category=" + encodeURIComponent(cat);
+    api("GET", path, null, function (data) {
       var el = $("adminProducts");
+      var list = data.products || [];
       var html = "";
-      (data.products || []).forEach(function (p) {
+      list.forEach(function (p) {
         html += "<div class='row-card'>" +
           "<div><strong>" + esc(p.name || "") + "</strong>" +
           "<div class='meta'>" + esc(p.sku || "") + " · " + esc(p.category || "") +
@@ -840,19 +819,22 @@
           "<div class='actions'>" +
           "<input class='price-input' type='number' min='0' step='1' value='" + (p.price_bdt || 0) + "' data-id='" + p.id + "' />" +
           "<span class='meta'>BDT</span>" +
-          "<button type='button' class='btn btn-primary btn-sm save-price' data-id='" + p.id + "'>Save</button>" +
+          "<button type='button' class='btn btn-primary btn-sm save-price' data-id='" + p.id + "'>" + esc(t("ops_save")) + "</button>" +
           "</div></div>";
       });
-      el.innerHTML = html || "<p class='meta'>No products.</p>";
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_products")) + "</p>";
+      $("prodPage").textContent = t("ops_page", { n: Math.floor(prodOffset / PROD_PAGE) + 1 });
+      $("prodPrev").disabled = prodOffset <= 0;
+      $("prodNext").disabled = list.length < PROD_PAGE;
       var btns = el.querySelectorAll(".save-price");
       for (var i = 0; i < btns.length; i++) {
         btns[i].onclick = function () {
           var id = this.getAttribute("data-id");
           var input = el.querySelector(".price-input[data-id='" + id + "']");
           var price = parseFloat(input && input.value);
-          if (!(price >= 0)) { toast("Enter a valid price"); return; }
-          xhr("POST", "/api/admin/products/" + id + "/price?price_bdt=" + encodeURIComponent(price), null,
-            function () { toast("Price updated"); },
+          if (!(price >= 0)) { toast(t("ops_need_price")); return; }
+          api("POST", "/api/admin/products/" + id + "/price?price_bdt=" + encodeURIComponent(price), null,
+            function () { toast(t("ops_price_updated")); },
             function (m) { toast(m); });
         };
       }
@@ -861,82 +843,233 @@
     });
   }
 
+  function loadSuppliers() {
+    var q = ($("supSearch").value || "").trim();
+    var path = "/api/admin/suppliers?limit=120" + (q ? ("&search=" + encodeURIComponent(q)) : "");
+    api("GET", path, null, function (data) {
+      supplierCache = data.suppliers || [];
+      var el = $("adminSuppliers");
+      var html = "";
+      supplierCache.forEach(function (s) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(s.name || "") + "</strong>" +
+          "<div class='meta'>" + esc([s.upazila, s.district].filter(Boolean).join(", ")) +
+          (s.phone ? (" · " + esc(s.phone)) : "") +
+          " · " + esc(t("ops_orders_n")) + " " + (s.order_count || 0) +
+          " · <span class='badge " + (s.verified ? "" : "off") + "'>" + esc(s.verified ? t("ops_listed") : t("ops_unverified")) + "</span>" +
+          "</div></div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_suppliers")) + "</p>";
+    }, function (m) {
+      $("adminSuppliers").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
+  function loadVendors() {
+    api("GET", "/api/admin/vendors", null, function (data) {
+      var el = $("adminVendors");
+      var html = "";
+      (data.vendors || []).forEach(function (v) {
+        html += "<div class='row-card'>" +
+          "<div><strong>" + esc(v.username) + "</strong>" +
+          "<div class='meta'>" + esc(v.supplier_name || ("Supplier #" + v.supplier_id)) +
+          " · " + esc([v.upazila, v.district].filter(Boolean).join(", ")) +
+          " · <span class='badge " + (v.active ? "" : "off") + "'>" + esc(v.active ? t("ops_active") : t("ops_disabled")) + "</span>" +
+          "</div></div>" +
+          "<div class='actions'>" +
+          "<button type='button' class='btn btn-primary btn-sm edit-v' data-id='" + v.id + "' data-user='" + esc(v.username) + "' data-sid='" + v.supplier_id + "'>" + esc(t("ops_edit_vendor")) + "</button>" +
+          "<button type='button' class='btn btn-secondary btn-sm reset-v' data-id='" + v.id + "'>" + esc(t("ops_reset_pw")) + "</button>" +
+          "<button type='button' class='btn " + (v.active ? "btn-danger" : "btn-primary") + " btn-sm tog-v' data-id='" + v.id + "' data-on='" + (v.active ? "0" : "1") + "'>" +
+          esc(v.active ? t("ops_disable") : t("ops_enable")) + "</button>" +
+          "</div></div>";
+      });
+      el.innerHTML = html || "<p class='meta'>" + esc(t("ops_no_vendors")) + "</p>";
+      var eds = el.querySelectorAll(".edit-v");
+      for (var e = 0; e < eds.length; e++) {
+        eds[e].onclick = function () {
+          editingVendorId = this.getAttribute("data-id");
+          $("editVendorId").value = editingVendorId;
+          $("newVendorUser").value = this.getAttribute("data-user") || "";
+          $("newVendorPass").value = "";
+          fillSupplierSelect($("newVendorSupplier"), this.getAttribute("data-sid"));
+          $("vendorCreateBtn").textContent = t("ops_save");
+          $("vendorEditCancel").classList.remove("hidden");
+          $("newVendorUser").scrollIntoView({ behavior: "smooth", block: "center" });
+        };
+      }
+      var rs = el.querySelectorAll(".reset-v");
+      for (var i = 0; i < rs.length; i++) {
+        rs[i].onclick = function () {
+          var pw = prompt(t("ops_prompt_pw"));
+          if (!pw) return;
+          api("PATCH", "/api/admin/vendors/" + this.getAttribute("data-id"), { password: pw }, function () {
+            toast(t("ops_pw_reset"));
+          }, function (m) { toast(m); });
+        };
+      }
+      var ts = el.querySelectorAll(".tog-v");
+      for (var j = 0; j < ts.length; j++) {
+        ts[j].onclick = function () {
+          var on = parseInt(this.getAttribute("data-on"), 10);
+          api("PATCH", "/api/admin/vendors/" + this.getAttribute("data-id"), { active: on }, function () {
+            toast(on ? t("ops_vendor_on") : t("ops_vendor_off"));
+            loadVendors();
+            loadStats();
+          }, function (m) { toast(m); });
+        };
+      }
+    }, function (m) {
+      $("adminVendors").innerHTML = "<p class='error'>" + esc(m) + "</p>";
+    });
+  }
+
   $("adminLoginBtn").onclick = login;
   $("adminPass").onkeydown = function (e) { if (e.key === "Enter") login(); };
   $("adminLogout").onclick = function () { setToken(""); showApp(false); };
+  $("userAdd").onclick = function () { openUserModal(null); };
   $("userRefresh").onclick = loadUsers;
   $("userSearch").onkeydown = function (e) { if (e.key === "Enter") loadUsers(); };
+  $("orderAdd").onclick = openNewOrder;
   $("adminRefresh").onclick = loadOrders;
   $("orderStatusFilter").onchange = loadOrders;
-  $("prodRefresh").onclick = loadProducts;
-  $("prodSearch").onkeydown = function (e) { if (e.key === "Enter") loadProducts(); };
+  $("orderUnassigned").onchange = loadOrders;
+  $("orderSearch").onkeydown = function (e) { if (e.key === "Enter") loadOrders(); };
+  $("prodRefresh").onclick = function () { prodOffset = 0; loadProducts(); };
+  $("prodSearch").onkeydown = function (e) { if (e.key === "Enter") { prodOffset = 0; loadProducts(); } };
+  $("prodCategory").onchange = function () { prodOffset = 0; loadProducts(); };
+  $("prodPrev").onclick = function () { prodOffset = Math.max(0, prodOffset - PROD_PAGE); loadProducts(); };
+  $("prodNext").onclick = function () { prodOffset += PROD_PAGE; loadProducts(); };
+  $("supRefresh").onclick = loadSuppliers;
+  $("supSearch").onkeydown = function (e) { if (e.key === "Enter") loadSuppliers(); };
   $("adminStatsRefresh").onclick = loadStats;
   $("userModalClose").onclick = closeUserModal;
   $("userModal").onclick = function (e) { if (e.target === $("userModal")) closeUserModal(); };
+  $("orderModalClose").onclick = function () { $("orderModal").className = "modal-back hidden"; };
+  $("orderModal").onclick = function (e) { if (e.target === $("orderModal")) $("orderModal").className = "modal-back hidden"; };
+  $("orderSaveBtn").onclick = function () { saveOrder(false); };
+  $("orderAddItemBtn").onclick = function () {
+    var sel = $("orderProductPick");
+    var pid = parseInt(sel.value, 10);
+    var qty = parseFloat($("orderProductQty").value);
+    if (!pid || !(qty > 0)) { toast(t("ops_need_items")); return; }
+    var opt = sel.options[sel.selectedIndex];
+    orderLines.push({
+      product_id: pid,
+      product_name: opt.textContent.replace(/\s—.*$/, "") || opt.textContent,
+      qty: qty,
+      unit_price_bdt: parseFloat(opt.getAttribute("data-price") || "0")
+    });
+    renderOrderLines();
+  };
+  $("orderAssignBtn").onclick = function () {
+    var sid = parseInt($("orderAssignSupplier").value, 10);
+    if (!sid) { toast(t("ops_pick_supplier")); return; }
+    patchOrder({ supplier_id: sid, message: "Assigned by admin" });
+  };
+  var stBtns = document.querySelectorAll("#orderModal [data-st]");
+  for (var s = 0; s < stBtns.length; s++) {
+    stBtns[s].onclick = function () {
+      var st = this.getAttribute("data-st");
+      if (!currentOrder) {
+        saveOrder(st === "confirmed");
+        return;
+      }
+      if (st === "confirmed") {
+        saveOrder(true);
+        return;
+      }
+      patchOrder({ status: st, message: "Updated by admin" });
+    };
+  }
   $("userSaveBtn").onclick = saveUser;
   $("userRevokeBtn").onclick = function () {
     var id = $("editUserId").value;
-    if (!confirm("Revoke all active sessions for this user?")) return;
-    xhr("POST", "/api/admin/users/" + id + "/revoke-sessions", null, function (d) {
-      toast("Revoked " + (d.revoked || 0) + " session(s)");
+    if (!confirm(t("ops_confirm_revoke"))) return;
+    api("POST", "/api/admin/users/" + id + "/revoke-sessions", null, function (d) {
+      toast(t("ops_revoked", { n: d.revoked || 0 }));
       openUserModal(parseInt(id, 10));
       loadUsers();
     }, function (m) { toast(m); });
   };
   $("userDeleteBtn").onclick = function () {
     var id = $("editUserId").value;
-    if (!confirm("Permanently delete this user? This cannot be undone.")) return;
-    xhr("DELETE", "/api/admin/users/" + id, null, function () {
-      toast("User deleted");
+    if (!confirm(t("ops_confirm_delete"))) return;
+    api("DELETE", "/api/admin/users/" + id, null, function () {
+      toast(t("ops_user_deleted"));
       closeUserModal();
       loadUsers();
       loadStats();
     }, function (m) { toast(m); });
   };
+  function resetVendorForm() {
+    editingVendorId = "";
+    $("editVendorId").value = "";
+    $("newVendorUser").value = "";
+    $("newVendorPass").value = "";
+    $("vendorCreateBtn").textContent = t("ops_create_account");
+    $("vendorEditCancel").classList.add("hidden");
+  }
+  $("vendorEditCancel").onclick = resetVendorForm;
+  $("vendorCreateBtn").onclick = function () {
+    var username = ($("newVendorUser").value || "").trim();
+    var password = ($("newVendorPass").value || "").trim();
+    var supplier_id = parseInt($("newVendorSupplier").value, 10);
+    var vid = ($("editVendorId").value || "").trim();
+    if (vid) {
+      if (!username || !supplier_id) { toast(t("ops_need_vendor_fields")); return; }
+      var body = { username: username, supplier_id: supplier_id };
+      if (password) body.password = password;
+      api("PATCH", "/api/admin/vendors/" + vid, body, function () {
+        toast(t("ops_vendor_saved"));
+        resetVendorForm();
+        loadVendors();
+        loadStats();
+      }, function (m) { toast(m); });
+      return;
+    }
+    if (!username || !password || !supplier_id) { toast(t("ops_need_vendor_fields")); return; }
+    api("POST", "/api/admin/vendors", { username: username, password: password, supplier_id: supplier_id }, function () {
+      toast(t("ops_vendor_created"));
+      resetVendorForm();
+      loadVendors();
+      loadStats();
+    }, function (m) { toast(m); });
+  };
   $("adminSeed").onclick = function () {
-    if (!confirm("Re-seed shop catalogue from the data pack?")) return;
-    xhr("POST", "/api/admin/seed", null, function () {
-      toast("Shop seeded");
+    if (!confirm(t("ops_confirm_seed"))) return;
+    api("POST", "/api/admin/seed", null, function (d) {
+      toast(d && d.skipped ? (d.reason || t("ops_seed_skipped")) : t("ops_shop_seeded"));
       loadStats();
       loadProducts();
+      loadSuppliers();
     }, function (m) { toast(m); });
   };
   $("adminApplyImages").onclick = function () {
-    xhr("POST", "/api/admin/apply-images", null, function (d) {
-      toast("Images applied: " + (d.updated || 0));
+    api("POST", "/api/admin/apply-images", null, function (d) {
+      toast(t("ops_images_applied", { n: d.updated || 0 }));
     }, function (m) { toast(m); });
   };
 
-  var nav = document.querySelectorAll("#adminNav button");
+  var mobileNav = $("adminNavMobile");
+  var sideNav = $("adminNav");
+  if (mobileNav && sideNav) mobileNav.innerHTML = sideNav.innerHTML;
+  var nav = document.querySelectorAll(".ops-nav button");
   for (var n = 0; n < nav.length; n++) {
     nav[n].onclick = function () { setTab(this.getAttribute("data-tab")); };
   }
-
-  var toggles = document.querySelectorAll(".password-toggle");
-  for (var i = 0; i < toggles.length; i++) {
-    toggles[i].onclick = function () {
-      var input = $(this.getAttribute("data-target"));
-      if (!input) return;
-      var show = input.type === "password";
-      input.type = show ? "text" : "password";
-      var a = this.querySelector(".pw-icon-show");
-      var b = this.querySelector(".pw-icon-hide");
-      if (a) a.className = show ? "pw-icon-show hidden" : "pw-icon-show";
-      if (b) b.className = show ? "pw-icon-hide" : "pw-icon-hide hidden";
-    };
-  }
+  O.bindPasswordToggles();
+  document.addEventListener("langchange", function () {
+    if ($("adminApp") && !$("adminApp").classList.contains("hidden")) setTab(currentTab);
+  });
 
   if (token()) {
-    xhr("GET", "/api/admin/stats", null, function () {
+    api("GET", "/api/admin/stats", null, function () {
       showApp(true);
       setTab("overview");
     }, function () {
       setToken("");
       showApp(false);
-      $("adminPass").placeholder = DEFAULT_PASS;
     });
-  } else {
-    $("adminPass").placeholder = DEFAULT_PASS;
   }
 })();
   </script>

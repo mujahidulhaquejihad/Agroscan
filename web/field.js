@@ -394,7 +394,6 @@
     }
     if (!plots.length) {
       selectEl.innerHTML = "<option value=''>" + T("diagnose_no_field") + "</option>";
-      if (quick) quick.className = "diagnose-field-quick";
     } else {
       selectEl.innerHTML = plots.map(function (p) {
         return "<option value='" + esc(p.id) + "'" +

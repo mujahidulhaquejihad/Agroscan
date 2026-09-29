@@ -2,15 +2,16 @@
 <html lang="bn" class="lang-bn">
 <head>
   <meta charset="UTF-8">
+  <script>(function(){try{var l=localStorage.getItem("agroscan_lang")||"bn";if(l!=="en"&&l!=="bn")l="bn";var h=document.documentElement;h.lang=l==="en"?"en":"bn";h.classList.remove("lang-bn","lang-en");h.classList.add(l==="en"?"lang-en":"lang-bn");}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signing out — AgroScan</title>
-  <link rel="icon" href="/static/AgroScan_logo-main.png" type="image/png" />
+  <link rel="icon" href="/static/icons/icon-192.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/styles.css?v=44">
-  <script src="/static/config.js?v=11"></script>
-  <script src="/static/i18n.js?v=38"></script>
+  <link rel="stylesheet" href="/static/styles.css?v=84">
+  <script src="/static/config.js?v=26"></script>
+  <script src="/static/i18n.js?v=66"></script>
 </head>
 <body class="auth-body" data-title-key="logout_title">
   <div class="auth-shell">
@@ -21,18 +22,22 @@
       <a href="/" class="btn btn-secondary btn-block" data-i18n="logout_home">Continue as guest on home</a>
     </div>
   </div>
-  <script src="/static/auth.js?v=11"></script>
+  <script src="/static/auth.js?v=25"></script>
   <script>
     (function () {
       var s = window.AgroScanAuth && window.AgroScanAuth.getSession();
+      var api = (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE) || "";
+      var goLogin = (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.appPath)
+        ? window.AGROSCAN_CONFIG.appPath("login")
+        : "/login";
       if (s && s.token) {
         var x = new XMLHttpRequest();
-        x.open("POST", (window.AGROSCAN_CONFIG && window.AGROSCAN_CONFIG.API_BASE || "") + "/api/auth/logout", true);
+        x.open("POST", api + "/api/auth/logout", true);
         x.setRequestHeader("Authorization", "Bearer " + s.token);
         x.send();
       }
       if (window.AgroScanAuth) window.AgroScanAuth.clearSession();
-      setTimeout(function () { window.location.href = "/login"; }, 1200);
+      setTimeout(function () { window.location.href = goLogin; }, 1200);
     })();
   </script>
 </body>

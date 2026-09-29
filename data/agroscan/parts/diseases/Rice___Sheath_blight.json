@@ -1,0 +1,253 @@
+{
+  "class_name": "Rice___Sheath_blight",
+  "kb_key": "sheath_blight",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Sheath blight",
+  "disease_bn": "ধানের খোলপোড়া রোগ",
+  "pathogen": "Rhizoctonia solani",
+  "severity": "high",
+  "summary_en": "Sheath blight starts as greenish-grey water-soaked patches on the leaf sheath at the water line and climbs up the plant. It thrives in dense, heavily fertilised Boro crops in warm humid weather and can cut yield badly if it reaches the flag leaf.",
+  "summary_bn": "খোলপোড়া রোগ পানির সমান বরাবর পাতার খোলে সবুজাভ-ধূসর ভেজা ভেজা দাগ দিয়ে শুরু হয়ে গাছ বেয়ে উপরে ওঠে। ঘন করে লাগানো, বেশি সার দেওয়া বোরো ধানে গরম ও স্যাঁতসেঁতে আবহাওয়ায় বেশি হয়। ফ্ল্যাগ লিফ পর্যন্ত উঠে গেলে ফলন অনেক কমে যায়।",
+  "symptoms_en": [
+    "Oval, greenish-grey water-soaked patches on the leaf sheath just above the water line",
+    "Patches enlarge, dry to straw colour with an irregular purple-brown border — like a snake-skin pattern",
+    "Lesions climb the tiller; when they reach the flag leaf sheath the panicle fills poorly",
+    "White cottony fungal threads and small brown mustard-seed-like sclerotia on the sheath in humid weather",
+    "Worst in thick stands, high nitrogen, and in the warm humid end of the Boro season"
+  ],
+  "symptoms_bn": [
+    "পানির সমান বরাবর একটু উপরে পাতার খোলে ডিম্বাকার সবুজাভ-ধূসর ভেজা দাগ",
+    "দাগ বড় হয়ে খড়ের রং ধরে, চারপাশে অনিয়মিত বেগুনি-বাদামি বর্ডার — দেখতে সাপের চামড়ার মতো",
+    "দাগ কুশি বেয়ে উপরে ওঠে; ফ্ল্যাগ লিফের খোল পর্যন্ত উঠলে শিষে ধান ভালো ভরে না",
+    "স্যাঁতসেঁতে আবহাওয়ায় খোলে সাদা তুলার মতো ছত্রাক ও সরিষার দানার মতো ছোট বাদামি দানা (স্ক্লেরোশিয়া) দেখা যায়",
+    "ঘন করে লাগানো, বেশি ইউরিয়া দেওয়া জমিতে এবং বোরোর শেষ দিকের গরম-স্যাঁতসেঁতে সময়ে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Drain the field",
+      "detail": "Drain to alternate wetting and drying. Lowering the water line takes the fungus away from the sheath and slows it noticeably."
+    },
+    {
+      "step": 2,
+      "title": "Stop urea",
+      "detail": "Hold back remaining nitrogen top-dress. Dense, lush, over-fertilised crops get sheath blight badly."
+    },
+    {
+      "step": 3,
+      "title": "Open the canopy",
+      "detail": "Remove weeds and, where practical, keep walking gaps so air and sunlight reach the base of the plants."
+    },
+    {
+      "step": 4,
+      "title": "Spray at the base, not the top",
+      "detail": "Aim the spray at the lower third of the plant where the lesions are. Spraying only the top leaves is the most common mistake and wastes the whole application."
+    },
+    {
+      "step": 5,
+      "title": "Protect the flag leaf",
+      "detail": "If lesions have climbed above the middle of the tiller, spray immediately — once the flag leaf sheath is infected the yield loss is locked in."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "জমির পানি সরান",
+      "detail": "একবার ভেজা একবার শুকনো (এডব্লিউডি) পদ্ধতিতে পানি দিন। পানির স্তর নামালে ছত্রাক খোল থেকে দূরে সরে যায়, রোগ অনেকটা কমে।"
+    },
+    {
+      "step": 2,
+      "title": "ইউরিয়া বন্ধ করুন",
+      "detail": "বাকি ইউরিয়া দেওয়া বন্ধ রাখুন। ঘন, সতেজ, বেশি সার দেওয়া জমিতে এই রোগ মারাত্মক হয়।"
+    },
+    {
+      "step": 3,
+      "title": "গাছের ফাঁক বাড়ান",
+      "detail": "আগাছা পরিষ্কার করুন এবং সম্ভব হলে হাঁটার নালা রাখুন যাতে গাছের গোড়ায় বাতাস ও রোদ পৌঁছায়।"
+    },
+    {
+      "step": 4,
+      "title": "উপরে নয়, গোড়ায় স্প্রে করুন",
+      "detail": "গাছের নিচের এক-তৃতীয়াংশে, যেখানে দাগ আছে সেখানে স্প্রে করুন। শুধু উপরের পাতায় স্প্রে করাটাই সবচেয়ে বড় ভুল — এতে পুরো স্প্রে বৃথা যায়।"
+    },
+    {
+      "step": 5,
+      "title": "ফ্ল্যাগ লিফ বাঁচান",
+      "detail": "দাগ কুশির মাঝামাঝির উপরে উঠে গেলে সাথে সাথে স্প্রে করুন — ফ্ল্যাগ লিফের খোলে একবার রোগ ধরলে ফলনের ক্ষতি আর ঠেকানো যায় না।"
+    }
+  ],
+  "cultural_control_en": [
+    "Do not transplant too densely — keep 20 x 15 cm or 25 x 15 cm spacing",
+    "Use alternate wetting and drying (AWD) irrigation instead of continuous flooding",
+    "Apply nitrogen in splits at the FRG rate; do not exceed it",
+    "Apply the full potash dose",
+    "Remove and destroy stubble and the floating sclerotia after land preparation — skim them off the puddled water surface",
+    "Control weeds, especially grasses that host Rhizoctonia"
+  ],
+  "cultural_control_bn": [
+    "খুব ঘন করে চারা রোপণ করবেন না — ২০x১৫ সেমি বা ২৫x১৫ সেমি দূরত্ব রাখুন",
+    "সবসময় পানি জমিয়ে না রেখে এডব্লিউডি (একবার ভেজা একবার শুকনো) পদ্ধতিতে সেচ দিন",
+    "এফআরজি মাত্রায় ইউরিয়া কিস্তিতে দিন; মাত্রার বেশি দেবেন না",
+    "পুরো পটাশ মাত্রা দিন",
+    "জমি তৈরির পর নাড়া এবং পানির উপর ভেসে থাকা স্ক্লেরোশিয়া (ছোট বাদামি দানা) ছেঁকে তুলে ফেলুন",
+    "আগাছা, বিশেষ করে ঘাসজাতীয় আগাছা দমন করুন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Hexaconazole 5% EC",
+      "product_name_bn": "হেক্সাকোনাজল ৫% ইসি",
+      "active_ingredient": "Hexaconazole",
+      "formulation": "EC",
+      "dose_en": "2 ml per litre of water (about 20 ml per 10 litre sprayer load); label field rate around 500 ml per acre",
+      "dose_bn": "প্রতি লিটার পানিতে ২ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০ মিলি); লেবেল অনুযায়ী একরে প্রায় ৫০০ মিলি",
+      "water_volume_per_decimal": "5 litres of spray solution per decimal, directed low into the canopy",
+      "application_method_en": "Use a knapsack sprayer with the lance angled down into the base of the crop. Walk slowly. Higher water volume than usual is needed to reach the sheath.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারের নলটা নিচের দিকে গাছের গোড়ার দিকে তাক করে স্প্রে করুন। ধীরে হাঁটুন। খোল পর্যন্ত ওষুধ পৌঁছাতে স্বাভাবিকের চেয়ে বেশি পানি লাগবে।",
+      "timing_en": "At first appearance of sheath lesions, typically maximum tillering to booting. Repeat after 15 days if lesions keep climbing.",
+      "timing_bn": "খোলে প্রথম দাগ দেখা মাত্র, সাধারণত সর্বোচ্চ কুশি থেকে থোড় অবস্থায়। দাগ উপরে উঠতে থাকলে ১৫ দিন পর আবার।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ধান কাটবেন না।",
+      "brands_available_bd": [
+        "Contaf 5 EC",
+        "Hexa 5 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Contaf 5 EC, AP-460, Auto Crop Care Ltd — registered for rice sheath blight in the DAE Plant Protection Wing registered pesticide list (dose listed as 500 ml).",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-460"
+      ]
+    },
+    {
+      "product_name_en": "Carbendazim 50% WP",
+      "product_name_bn": "কার্বেন্ডাজিম ৫০% ডব্লিউপি",
+      "active_ingredient": "Carbendazim",
+      "formulation": "WP",
+      "dose_en": "1 g per litre of water (about 10 g per 10 litre sprayer load); label field rate around 500 g per acre",
+      "dose_bn": "প্রতি লিটার পানিতে ১ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ১০ গ্রাম); লেবেল অনুযায়ী একরে প্রায় ৫০০ গ্রাম",
+      "water_volume_per_decimal": "5 litres of spray solution per decimal, directed low",
+      "application_method_en": "Knapsack spray directed at the lower canopy and sheath.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে গাছের নিচের অংশ ও খোল লক্ষ্য করে স্প্রে করুন।",
+      "timing_en": "At first lesions. Rotate with hexaconazole rather than using carbendazim repeatedly — Rhizoctonia develops resistance to it quickly.",
+      "timing_bn": "প্রথম দাগ দেখা মাত্র। বারবার কার্বেন্ডাজিম না দিয়ে হেক্সাকোনাজলের সাথে পালা করে দিন — নাহলে ছত্রাক দ্রুত এই ওষুধ সহ্য করা শিখে যায়।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ধান কাটবেন না।",
+      "brands_available_bd": [
+        "Bavistin DF",
+        "Knowin 50 WP",
+        "Autostin 50 WDG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Bavistin DF, AP-176, BASF Bangladesh Ltd (rice, sheath blight); Knowin 50 WP, AP-241, McDonald Bangladesh (Pvt) Ltd (rice, sheath blight) — both in the DAE PPW registered pesticide list.",
+      "treatment_type": "curative",
+      "caution_en": "Carbendazim appears on national lists of highly hazardous pesticides in wide use in Bangladesh and is banned or restricted in several countries. Prefer hexaconazole or a strobilurin rotation partner where available, and never exceed the label dose.",
+      "caution_bn": "কার্বেন্ডাজিম বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে এবং কয়েকটি দেশে নিষিদ্ধ বা সীমিত। সম্ভব হলে হেক্সাকোনাজল বা অন্য গ্রুপের ওষুধ ব্যবহার করুন, এবং লেবেলের মাত্রার বেশি কখনো দেবেন না।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-176",
+        "AP-241"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum or T. viride soil/seedling application at land preparation — good Bangladesh trial support for suppression",
+    "Pseudomonas fluorescens foliar spray at 5 g/L at tillering",
+    "Skimming off floating sclerotia after puddling removes a large part of the inoculum for free",
+    "Alternate wetting and drying is itself a strong non-chemical control"
+  ],
+  "organic_alternatives_bn": [
+    "জমি তৈরির সময় মাটিতে বা চারায় ট্রাইকোডার্মা হারজিয়ানাম/ট্রাইকোডার্মা ভিরিডি প্রয়োগ — বাংলাদেশে পরীক্ষায় ভালো ফল পাওয়া গেছে",
+    "কুশি অবস্থায় প্রতি লিটার পানিতে ৫ গ্রাম সুডোমোনাস ফ্লুরোসেন্স স্প্রে",
+    "কাদা করার পর পানিতে ভেসে ওঠা স্ক্লেরোশিয়া ছেঁকে ফেলে দিলে বিনা খরচে রোগের বীজ অনেকটা কমে যায়",
+    "এডব্লিউডি সেচ পদ্ধতি নিজেই একটি শক্তিশালী ওষুধবিহীন প্রতিরোধ"
+  ],
+  "fertilizer_advice_en": "Do not exceed the FRG-2018 nitrogen rate and always split it. Apply the full MoP dose — potash strengthens the sheath. Avoid late nitrogen top-dressing in a crop that already looks dark green and dense.",
+  "fertilizer_advice_bn": "এফআরজি-২০১৮ এর নাইট্রোজেন মাত্রার বেশি দেবেন না, সবসময় কিস্তিতে দিন। পুরো এমওপি মাত্রা দিন — পটাশ খোল শক্ত করে। গাছ ইতিমধ্যে গাঢ় সবুজ ও ঘন দেখালে দেরিতে ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Because you spray low into the canopy, your legs and feet get more exposure — wear long trousers and boots, and wash them afterwards. Do not spray against the wind. Keep out of the field for 24 hours after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। গোড়ার দিকে স্প্রে করায় পা ও পায়ের পাতায় বেশি ওষুধ লাগে — ফুলপ্যান্ট ও জুতা পরুন এবং পরে ধুয়ে ফেলুন। বাতাসের বিপরীতে স্প্রে করবেন না। স্প্রের পর ২৪ ঘণ্টা জমিতে ঢুকবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Carbendazim is flagged as a highly hazardous pesticide in national surveys — use it sparingly and only within the label dose. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। জাতীয় জরিপে কার্বেন্ডাজিমকে অতি ঝুঁকিপূর্ণ ওষুধ হিসেবে চিহ্নিত করা হয়েছে — কম ব্যবহার করুন এবং লেবেলের মাত্রার মধ্যেই রাখুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if lesions have reached the flag leaf sheath on more than 10% of tillers, or if the disease returns every Boro season in the same plot.",
+  "when_to_call_helpline_bn": "১০% এর বেশি কুশিতে দাগ ফ্ল্যাগ লিফের খোল পর্যন্ত উঠে গেলে, অথবা একই জমিতে প্রতি বোরো মৌসুমে এই রোগ ফিরে এলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A well-directed spray plus draining usually stops lesions climbing within 10-14 days. Existing lesions stay — success means they stop moving upward. If lesions were still below the middle of the tiller when you treated, yield loss is usually small.",
+  "expected_outcome_bn": "গোড়ায় ঠিকমতো স্প্রে ও পানি সরানোর পর সাধারণত ১০-১৪ দিনে দাগ উপরে ওঠা বন্ধ হয়। পুরনো দাগ থেকেই যাবে — দাগ আর উপরে উঠছে না, এটাই সফলতার লক্ষণ। চিকিৎসার সময় দাগ কুশির মাঝামাঝির নিচে থাকলে ফলনের ক্ষতি সাধারণত কম হয়।",
+  "related_shop_products": [
+    "Contaf 5 EC (Hexaconazole) 100ml",
+    "Carbendazim 50% WP 100g",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Trichoderma harzianum bio-fungicide 1kg",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif2"
+  ],
+  "months_relevant": [
+    2,
+    3,
+    4,
+    8,
+    9,
+    10
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Contaf 5 EC AP-460 Auto Crop Care; Bavistin DF AP-176 BASF Bangladesh; Knowin 50 WP AP-241 McDonald Bangladesh); BRRI extension guidance; The Daily Star, '17 highly harmful pesticides widely used across country' (carbendazim HHP status)",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Registration numbers for Contaf, Bavistin and Knowin come from the published PPW registered list and are the most reliably verified entries in this dataset. Per-litre doses are converted from the label's per-acre rates at typical Bangladesh spray volumes — verify against the physical label.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Contaf 5 EC (Hexaconazole) 100ml",
+      "sku": "PEST-0016",
+      "name_en": "Hexaconazole 5% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.131,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Carbendazim 50% WP 100g",
+      "sku": "PEST-0014",
+      "name_en": "Carbendazim 50% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Trichoderma harzianum bio-fungicide 1kg",
+      "sku": "PEST-0092",
+      "name_en": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+      "category": "pesticide",
+      "match_score": 1.7,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

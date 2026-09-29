@@ -1,0 +1,171 @@
+{
+  "class_name": "Soybean___healthy",
+  "kb_key": "healthy_soybean",
+  "crop_en": "Soybean",
+  "crop_bn": "সয়াবিন",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "bangladesh_relevance": "grown_regionally",
+  "bangladesh_note_en": "Soybean is grown commercially in Bangladesh mainly in the coastal Noakhali, Laxmipur and Bhola belt, largely for the poultry feed industry. It is a real but regionally concentrated crop.",
+  "bangladesh_note_bn": "বাংলাদেশে সয়াবিন মূলত উপকূলীয় নোয়াখালী, লক্ষ্মীপুর ও ভোলা অঞ্চলে বাণিজ্যিকভাবে চাষ হয়, বেশিরভাগই পোল্ট্রি খাদ্যের জন্য। ফসলটি বাস্তব, তবে নির্দিষ্ট অঞ্চলেই সীমাবদ্ধ।",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Soybean in the Bangladesh coastal belt mainly needs good drainage, rhizobium inoculation and watching for pod borer and stem fly.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। বাংলাদেশের উপকূলীয় অঞ্চলে সয়াবিনের মূলত দরকার ভালো নিকাশ, রাইজোবিয়াম প্রয়োগ আর শুঁটি ছিদ্রকারী পোকা ও কাণ্ড মাছির দিকে নজর রাখা।",
+  "symptoms_en": [
+    "Even green trifoliate leaves with no spots, mottling or yellowing",
+    "No leaf-feeding damage or pod holes",
+    "Good nodulation on the roots (pink inside when cut open)"
+  ],
+  "symptoms_bn": [
+    "তিন পাতার সমান সবুজ পাতা, কোনো দাগ, ছোপ বা হলুদ ভাব নেই",
+    "পাতা খাওয়ার ক্ষতি বা শুঁটিতে ছিদ্র নেই",
+    "শিকড়ে ভালো গুটি হয়েছে (কেটে দেখলে ভেতরে গোলাপি)"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray a healthy crop. Soybean has strong natural enemy populations that routine spraying destroys."
+    },
+    {
+      "step": 2,
+      "title": "Check root nodules",
+      "detail": "Dig up a plant and cut a nodule. Pink inside means nitrogen fixation is working and you need less urea. White or green means poor nodulation — use rhizobium inoculant next season."
+    },
+    {
+      "step": 3,
+      "title": "Keep drainage open",
+      "detail": "Soybean does not tolerate waterlogging. In the coastal belt this is the main cause of crop failure."
+    },
+    {
+      "step": 4,
+      "title": "Scout weekly for pod borer and stem fly",
+      "detail": "Look for holes in pods and for wilting seedlings with tunnelled stems."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "সুস্থ ফসলে স্প্রে করবেন না। সয়াবিনে প্রচুর উপকারী পোকা থাকে, নিয়মিত স্প্রেতে সেগুলো মরে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "শিকড়ের গুটি দেখুন",
+      "detail": "একটি গাছ তুলে গুটি কেটে দেখুন। ভেতরে গোলাপি মানে নাইট্রোজেন তৈরি হচ্ছে, ইউরিয়া কম লাগবে। সাদা বা সবুজ মানে গুটি ভালো হয়নি — পরের মৌসুমে রাইজোবিয়াম ব্যবহার করুন।"
+    },
+    {
+      "step": 3,
+      "title": "নিকাশ খোলা রাখুন",
+      "detail": "সয়াবিন পানি জমা সহ্য করে না। উপকূলীয় অঞ্চলে ফসল নষ্ট হওয়ার প্রধান কারণ এটাই।"
+    },
+    {
+      "step": 4,
+      "title": "সপ্তাহে একবার শুঁটি ছিদ্রকারী পোকা ও কাণ্ড মাছি দেখুন",
+      "detail": "শুঁটিতে ছিদ্র আর কাণ্ডে সুড়ঙ্গসহ ঢলে পড়া চারা খুঁজুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Inoculate seed with rhizobium before sowing",
+    "Sow on raised beds or ridges in the coastal belt for drainage",
+    "Use certified seed of BARI-released varieties",
+    "Rotate with rice",
+    "Keep the field weed-free for the first 30-40 days"
+  ],
+  "cultural_control_bn": [
+    "বপনের আগে বীজে রাইজোবিয়াম মিশিয়ে নিন",
+    "উপকূলীয় অঞ্চলে নিকাশের জন্য উঁচু বেড বা আইলে বপন করুন",
+    "বারি উদ্ভাবিত জাতের সার্টিফাইড বীজ নিন",
+    "ধানের সাথে পালা করে চাষ করুন",
+    "প্রথম ৩০-৪০ দিন জমি আগাছামুক্ত রাখুন"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Rhizobium inoculation",
+    "Pheromone traps for pod borer monitoring",
+    "Well-decomposed organic manure"
+  ],
+  "organic_alternatives_bn": [
+    "রাইজোবিয়াম প্রয়োগ",
+    "শুঁটি ছিদ্রকারী পোকার নজরদারিতে ফেরোমন ফাঁদ",
+    "ভালোভাবে পচা জৈব সার"
+  ],
+  "fertilizer_advice_en": "Soybean fixes most of its own nitrogen when properly inoculated, so it needs only a small starter dose of urea. Follow FRG-2018 and make sure phosphorus, potash, sulphur and molybdenum are adequate — sulphur especially matters for oilseed quality.",
+  "fertilizer_advice_bn": "ঠিকমতো রাইজোবিয়াম দিলে সয়াবিন নিজেই বেশিরভাগ নাইট্রোজেন তৈরি করে, তাই শুরুতে অল্প ইউরিয়াই যথেষ্ট। এফআরজি-২০১৮ মেনে চলুন এবং ফসফরাস, পটাশ, সালফার ও মলিবডেনাম পর্যাপ্ত রাখুন — তেলবীজের মানের জন্য সালফার বিশেষভাবে জরুরি।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, labelled and away from food, water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তালাবদ্ধ, লেবেলসহ এবং খাবার, পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves start yellowing between the veins, if pods show holes, or if seedlings wilt and die.",
+  "when_to_call_helpline_bn": "শিরার ফাঁকে পাতা হলুদ হতে শুরু করলে, শুঁটিতে ছিদ্র দেখা দিলে, অথবা চারা ঢলে পড়ে মরলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With rhizobium, drainage and weekly scouting, coastal-belt soybean normally reaches harvest without any fungicide.",
+  "expected_outcome_bn": "রাইজোবিয়াম, ভালো নিকাশ আর সপ্তাহে একবার জমি দেখলে উপকূলীয় অঞ্চলের সয়াবিন সাধারণত কোনো ছত্রাকনাশক ছাড়াই ফসল তোলা পর্যন্ত পৌঁছায়।",
+  "related_shop_products": [
+    "Rhizobium inoculant 200g",
+    "TSP 50kg bag",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Gypsum 50kg bag",
+    "Certified soybean seed 5kg"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    11,
+    12
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018; BARI soybean production guidance; BBS Yearbook of Agricultural Statistics 2024",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Healthy class — zero pesticide recommendations. Soybean is regionally concentrated in Bangladesh; the app could reasonably down-weight this class outside the Noakhali-Laxmipur-Bhola belt.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Rhizobium inoculant 200g",
+      "sku": "FERT-0033",
+      "name_en": "Rhizobium inoculant 200g",
+      "category": "fertilizer",
+      "match_score": 1.1,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Gypsum 50kg bag",
+      "sku": "FERT-0015",
+      "name_en": "Gypsum (Calcium sulphate) 50kg",
+      "category": "fertilizer",
+      "match_score": 0.829,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Certified soybean seed 5kg",
+      "sku": "SEED-0051",
+      "name_en": "Certified Aus rice seed 5kg",
+      "category": "seed",
+      "match_score": 0.865,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

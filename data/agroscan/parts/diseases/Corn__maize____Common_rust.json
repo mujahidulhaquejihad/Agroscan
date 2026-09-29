@@ -1,0 +1,193 @@
+{
+  "class_name": "Corn_(maize)___Common_rust_",
+  "kb_key": "common_rust",
+  "crop_en": "Maize",
+  "crop_bn": "ভুট্টা",
+  "disease_en": "Common rust",
+  "disease_bn": "ভুট্টার সাধারণ মরিচা রোগ",
+  "pathogen": "Puccinia sorghi",
+  "severity": "medium",
+  "summary_en": "Small cinnamon-brown powdery pustules on both sides of the leaf that rub off orange onto your fingers. It likes cool humid weather and is common in Bangladesh's Rabi maize. Most hybrid maize grown here tolerates it well, so spraying is only worth it if it starts before flowering.",
+  "summary_bn": "পাতার দুই পিঠে ছোট ছোট দারুচিনি-বাদামি গুঁড়া গুঁড়া ফোস্কা পড়ে, হাত দিলে আঙুলে কমলা রং লেগে যায়। ঠান্ডা স্যাঁতসেঁতে আবহাওয়ায় হয়, বাংলাদেশের রবি ভুট্টায় সাধারণ। এখানে চাষ হওয়া বেশিরভাগ হাইব্রিড ভুট্টা এই রোগ ভালোই সয়ে নেয়, তাই ফুল আসার আগে শুরু হলে তবেই স্প্রে করে লাভ।",
+  "symptoms_en": [
+    "Small oval to elongated cinnamon-brown pustules scattered on BOTH upper and lower leaf surfaces",
+    "Pustules break open and release orange-brown powder that rubs off on your hand",
+    "Later in the season pustules turn brownish-black",
+    "In heavy attacks leaves dry prematurely and stalks weaken",
+    "Favoured by cool (16-25°C) humid weather with heavy dew"
+  ],
+  "symptoms_bn": [
+    "পাতার উপরে ও নিচে দুই পিঠেই ছোট ডিম্বাকার বা লম্বাটে দারুচিনি-বাদামি ফোস্কা ছড়ানো থাকে",
+    "ফোস্কা ফেটে কমলা-বাদামি গুঁড়া বের হয়, হাত দিলে লেগে যায়",
+    "মৌসুমের শেষ দিকে ফোস্কা বাদামি-কালো হয়ে যায়",
+    "বেশি আক্রমণে পাতা আগেভাগে শুকিয়ে যায় ও কাণ্ড দুর্বল হয়",
+    "ঠান্ডা (১৬-২৫ ডিগ্রি) স্যাঁতসেঁতে আবহাওয়া ও ভারী শিশিরে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Judge the growth stage first",
+      "detail": "If the crop has already passed grain filling, rust will not cost you much and spraying is not worth the money. If it is before or at tasselling, act."
+    },
+    {
+      "step": 2,
+      "title": "Count affected leaves",
+      "detail": "Spray only if rust is on the ear leaf or the two leaves above it, and more than about 5-10% of that leaf area is covered."
+    },
+    {
+      "step": 3,
+      "title": "Spray a triazole or strobilurin",
+      "detail": "Propiconazole, tebuconazole or azoxystrobin at label rate, covering the upper leaves that feed the cob."
+    },
+    {
+      "step": 4,
+      "title": "Do not add nitrogen",
+      "detail": "Extra urea at this stage will not help and produces soft tissue that rusts more."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আগে গাছের অবস্থা দেখুন",
+      "detail": "দানা ভরা শেষ হয়ে গেলে মরিচায় তেমন ক্ষতি হবে না, স্প্রে করে টাকা নষ্ট করার দরকার নেই। মোচা আসার আগে বা মোচা আসার সময় হলে ব্যবস্থা নিন।"
+    },
+    {
+      "step": 2,
+      "title": "কতটা পাতা আক্রান্ত গুনে দেখুন",
+      "detail": "মোচার পাতা বা তার উপরের দুই পাতায় মরিচা ধরলে এবং ওই পাতার ৫-১০% এর বেশি ঢেকে গেলে তবেই স্প্রে করুন।"
+    },
+    {
+      "step": 3,
+      "title": "ট্রায়াজল বা স্ট্রোবিলিউরিন স্প্রে করুন",
+      "detail": "লেবেল অনুযায়ী প্রোপিকোনাজল, টেবুকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিন, বিশেষ করে যে উপরের পাতাগুলো মোচাকে খাবার দেয় সেগুলোতে।"
+    },
+    {
+      "step": 4,
+      "title": "বাড়তি ইউরিয়া দেবেন না",
+      "detail": "এই সময়ে বাড়তি ইউরিয়ায় কোনো লাভ হবে না, বরং নরম পাতায় মরিচা বেশি ধরবে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow rust-tolerant hybrids — most commercial hybrids sold in Bangladesh have useful tolerance",
+    "Do not plant maize too densely; wider rows dry faster",
+    "Rotate and destroy infected residue after harvest",
+    "Plant at the recommended time so grain filling finishes before peak rust weather",
+    "Apply balanced potash, which improves stalk strength and disease tolerance"
+  ],
+  "cultural_control_bn": [
+    "মরিচা সহনশীল হাইব্রিড লাগান — বাংলাদেশে বিক্রি হওয়া বেশিরভাগ বাণিজ্যিক হাইব্রিডে ভালো সহনশীলতা আছে",
+    "খুব ঘন করে ভুট্টা লাগাবেন না; সারির ফাঁক বেশি হলে তাড়াতাড়ি শুকায়",
+    "পালা করে চাষ করুন এবং ফসল কাটার পর আক্রান্ত অবশিষ্টাংশ নষ্ট করুন",
+    "সঠিক সময়ে বপন করুন যাতে মরিচার মৌসুম আসার আগেই দানা ভরা শেষ হয়",
+    "সুষম পটাশ দিন, এতে কাণ্ড শক্ত হয় ও রোগ সহ্য করার ক্ষমতা বাড়ে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water (about 10 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ১০ মিলি)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal on a tall crop",
+      "application_method_en": "Knapsack spray. Maize is tall, so use a lance extension and aim at the upper leaves around the cob. Spray in the late afternoon.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে দিন। ভুট্টা গাছ লম্বা, তাই নলে বাড়তি লাঠি লাগিয়ে মোচার আশপাশের উপরের পাতায় তাক করুন। বিকেলে স্প্রে করুন।",
+      "timing_en": "At tasselling to early silking if rust reaches the ear leaf. One spray is usually enough.",
+      "timing_bn": "মোচার পাতায় মরিচা পৌঁছালে ফুল আসা থেকে দানা বাঁধার শুরুর দিকে দিন। সাধারণত একবারেই যথেষ্ট।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray. Do not feed sprayed green maize to cattle inside this period.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ভুট্টা কাটবেন না। এই সময়ের মধ্যে স্প্রে করা কাঁচা ভুট্টা গরুকে খাওয়াবেন না।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole is registered in Bangladesh and named in national HHP surveys as a widely used active. Verify the brand AP number and the maize label claim against the current PPW list.",
+      "treatment_type": "both",
+      "caution_en": "Propiconazole appears on national lists of highly hazardous pesticides in wide use in Bangladesh. Use only when the economic threshold is met.",
+      "caution_bn": "প্রোপিকোনাজল বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে। সত্যিই দরকার হলে তবেই ব্যবহার করুন।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Tolerant hybrids are the practical organic answer — resistance does the work no spray can",
+    "Wider spacing and residue destruction",
+    "Sulphur 80% WP at 2 g/L gives partial suppression if applied early"
+  ],
+  "organic_alternatives_bn": [
+    "সহনশীল হাইব্রিডই ব্যবহারিক জৈব সমাধান — জাতের প্রতিরোধ ক্ষমতা যা করে কোনো স্প্রে তা পারে না",
+    "বেশি দূরত্বে বপন ও অবশিষ্টাংশ নষ্ট করা",
+    "শুরুতে প্রতি লিটারে ২ গ্রাম সালফার ৮০% ডব্লিউপি দিলে কিছুটা কমে"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for maize. Ensure the full potash dose — potassium improves both stalk strength and rust tolerance. Do not apply late extra nitrogen.",
+  "fertilizer_advice_bn": "ভুট্টার জন্য এফআরজি-২০১৮ মেনে চলুন। পুরো পটাশ মাত্রা নিশ্চিত করুন — পটাশে কাণ্ড শক্ত হয় ও মরিচা সহ্য করার ক্ষমতা বাড়ে। দেরিতে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Spraying a tall crop means spray falls back on you — a hat and cartridge mask matter here. Do not eat, drink or smoke while spraying. Wash with soap afterwards. Do not graze cattle in a sprayed field within the PHI.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। লম্বা ফসলে স্প্রে করলে ওষুধ গায়ে ফিরে পড়ে — টুপি ও কার্তুজওয়ালা মাস্ক এখানে জরুরি। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। পরে সাবান দিয়ে ধুয়ে ফেলুন। পিএইচআই-এর মধ্যে স্প্রে করা জমিতে গরু চরাবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if rust covers the ear leaf before tasselling or if leaves are drying prematurely across the field.",
+  "when_to_call_helpline_bn": "মোচা আসার আগেই মোচার পাতা মরিচায় ঢেকে গেলে, অথবা জমিজুড়ে পাতা আগেভাগে শুকাতে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "One well-timed spray usually keeps the upper leaves green through grain filling. Existing pustules stay; success is measured by the ear leaf staying green.",
+  "expected_outcome_bn": "সঠিক সময়ে একবার স্প্রে করলেই সাধারণত দানা ভরার সময় পর্যন্ত উপরের পাতা সবুজ থাকে। পুরনো ফোস্কা থেকেই যাবে; মোচার পাতা সবুজ থাকছে কিনা তা দেখেই সফলতা বুঝবেন।",
+  "related_shop_products": [
+    "Propiconazole 25% EC 100ml",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Spray lance extension"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "DAE Plant Protection Wing registered pesticide list; BARI maize production guidance; The Daily Star, '17 highly harmful pesticides widely used across country' (propiconazole HHP status); BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Economic threshold guidance is included deliberately — common rust rarely justifies spraying in Bangladesh hybrid maize and the app should discourage unnecessary applications.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray lance extension",
+      "sku": "EQ-0009",
+      "name_en": "Spray lance extension (1.5 m)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

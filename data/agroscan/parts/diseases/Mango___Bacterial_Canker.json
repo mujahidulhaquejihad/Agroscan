@@ -1,0 +1,181 @@
+{
+  "class_name": "Mango___Bacterial_Canker",
+  "kb_key": "bacterial_canker",
+  "crop_en": "Mango",
+  "crop_bn": "আম",
+  "disease_en": "Mango bacterial canker",
+  "disease_bn": "আমের ব্যাকটেরিয়া ক্যাংকার",
+  "pathogen": "Xanthomonas citri pv. mangiferaeindicae",
+  "severity": "medium",
+  "summary_en": "Mango bacterial canker on Mango (Xanthomonas citri pv. mangiferaeindicae). Follow the numbered steps in order. Confirm the crop in the photo before you buy a bottle. Label dose and PHI override this card. Confidence is medium — doses are standard Bangladesh extension rates, not a transcription of one pack.",
+  "summary_bn": "আম-এ আমের ব্যাকটেরিয়া ক্যাংকার (Xanthomonas citri pv. mangiferaeindicae)। ধাপগুলো ক্রম অনুযায়ী করুন। বোতল কেনার আগে ছবির ফসল নিশ্চিত করুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। আত্মবিশ্বাস medium — মাত্রা বাংলাদেশের প্রচলিত সম্প্রসারণ হার, একটি প্যাকেটের নকল নয়।",
+  "symptoms_en": [
+    "Angular water-soaked leaf spots that turn black",
+    "Raised black cankers on twigs and fruit",
+    "Spreads in wind-driven rain"
+  ],
+  "symptoms_bn": [
+    "পাতায় কোণাকার ভেজা দাগ, পরে কালো",
+    "ডাল ও ফলে উঁচু কালো ক্ষত",
+    "ঝড়বৃষ্টিতে ছড়ায়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do not spray a fungicide",
+      "detail": "Mango bacterial canker is bacterial. Ordinary fungicides waste money and delay the steps that help."
+    },
+    {
+      "step": 2,
+      "title": "Stop overhead water",
+      "detail": "Switch to furrow or drip. Wet leaves and tools spread bacteria faster than rain."
+    },
+    {
+      "step": 3,
+      "title": "Do not work in wet plants",
+      "detail": "Hands, clothes and knives carry the bacteria. Wait until the canopy is dry."
+    },
+    {
+      "step": 4,
+      "title": "Rogue the worst plants",
+      "detail": "Bag and remove slimy or blighted plants. Do not throw them on the bund."
+    },
+    {
+      "step": 5,
+      "title": "Copper on healthy tissue",
+      "detail": "Copper oxychloride 50% WP at 3 g/L protects tissue that is still green. It does not resurrect dead leaves. Read the label."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ছত্রাকনাশক দেবেন না",
+      "detail": "আম-এর এই সমস্যা ব্যাকটেরিয়ার। সাধারণ ছত্রাকনাশকে টাকা নষ্ট হয় আর আসল কাজ দেরি হয়।"
+    },
+    {
+      "step": 2,
+      "title": "উপর দিয়ে পানি বন্ধ করুন",
+      "detail": "নালা বা ড্রিপ সেচে যান। ভেজা পাতা ও যন্ত্রপাতি বৃষ্টির চেয়েও দ্রুত ব্যাকটেরিয়া ছড়ায়।"
+    },
+    {
+      "step": 3,
+      "title": "ভেজা গাছে কাজ করবেন না",
+      "detail": "হাত, কাপড় ও ছুরি দিয়ে জীবাণু যায়। পাতা শুকনো না হওয়া পর্যন্ত অপেক্ষা করুন।"
+    },
+    {
+      "step": 4,
+      "title": "সবচেয়ে খারাপ গাছ তুলে ফেলুন",
+      "detail": "পিচ্ছিল বা পোড়া গাছ ব্যাগে ভরে সরান। আইলে ফেলবেন না।"
+    },
+    {
+      "step": 5,
+      "title": "সুস্থ অংশে কপার দিন",
+      "detail": "প্রতি লিটারে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি এখনো সবুজ অংশ রক্ষা করে। মরা পাতা বাঁচায় না। লেবেল পড়ুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Disinfect knives; never clip wet seedlings as a routine",
+    "Use healthy seed / planting material; do not keep seed from a badly diseased crop",
+    "Rotate away from the same crop family for at least one season where practical",
+    "Keep the field and bunds reasonably weed-free",
+    "Follow BARC FRG-2018 fertiliser rates — both hunger and extra urea can worsen disease"
+  ],
+  "cultural_control_bn": [
+    "ছুরি জীবাণুমুক্ত করুন; ভেজা চারার ডগা নিয়ম করে কাটবেন না",
+    "সুস্থ বীজ/চারা ব্যবহার করুন; খুব রোগা ফসলের বীজ রাখবেন না",
+    "সম্ভব হলে এক মৌসুম একই গোত্রের ফসল এড়িয়ে পালা করুন",
+    "জমি ও আইল যথাসম্ভব আগাছামুক্ত রাখুন",
+    "বিএআরসি এফআরজি-২০১৮ সার মাত্রা মানুন — ক্ষুধা ও বাড়তি ইউরিয়া দুটোই রোগ বাড়াতে পারে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Copper oxychloride 50% WP",
+      "product_name_bn": "কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+      "active_ingredient": "Copper oxychloride",
+      "formulation": "WP",
+      "dose_en": "3 g per litre of water (about 30 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ৩ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৩০ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Protectant spray on still-healthy tissue. Do not mix with very hard water. Shake often.",
+      "application_method_bn": "এখনো সুস্থ অংশে প্রতিরোধক স্প্রে। খুব শক্ত পানিতে মেশাবেন না। মাঝে মাঝে ঝাঁকান।",
+      "timing_en": "After rain or at first greasy spots. Repeat every 7-10 days while wet weather lasts.",
+      "timing_bn": "বৃষ্টির পর বা প্রথম তেলতেলে দাগে। ভেজা আবহাওয়া থাকলে ৭-১০ দিন পর পর।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray unless the label says longer.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফসল তুলবেন না, লেবেলে বেশি থাকলে ততদিন।",
+      "brands_available_bd": [
+        "Blitox",
+        "Champion-type copper products"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Copper oxychloride / copper hydroxide products are registered in Bangladesh (e.g. Champion 77 WP AP-354). Confirm the brand in the current PPW list.",
+      "registration_verified": false,
+      "verified_ap_numbers": [],
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null
+    }
+  ],
+  "organic_alternatives_en": [
+    "Trichoderma harzianum seed or sett treatment at the labelled rate where a product is available",
+    "Neem oil 3-5 ml/L as a first insect/mite option",
+    "These reduce pressure; they will not stop an explosive outbreak on their own"
+  ],
+  "organic_alternatives_bn": [
+    "পাওয়া গেলে লেবেলমাফিক ট্রাইকোডার্মা দিয়ে বীজ/কাটিং শোধন",
+    "পোকা/মাকড়ে প্রথমে প্রতি লিটারে ৩-৫ মিলি নিম তেল",
+    "এগুলো চাপ কমায়; বিস্ফোরক প্রাদুর্ভাব একা থামায় না"
+  ],
+  "fertilizer_advice_en": "Stop extra urea while the bacteria are active. Apply the full MoP (potash) dose — potash slows several bacterial blights. Follow FRG-2018 for the rest.",
+  "fertilizer_advice_bn": "ব্যাকটেরিয়া চলাকালীন বাড়তি ইউরিয়া বন্ধ রাখুন। পুরো এমওপি (পটাশ) দিন — পটাশ কয়েকটি ব্যাকটেরিয়া ব্লাইট ধীর করে। বাকিটা এফআরজি-২০১৮।",
+  "safety_warning_en": "Wear gloves, a mask, goggles, full-sleeve shirt and long trousers. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind at your back. Wash the sprayer and your body with soap afterwards. Keep children and livestock out of the field for 24 hours. Do not wash the sprayer in a pond, canal or irrigation channel.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। খোলা জায়গায় মেশান, খালি হাতে নয়। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন। পরে সাবান দিয়ে স্প্রেয়ার ও শরীর ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমিতে ঢুকতে দেবেন না। পুকুর, খাল বা সেচ নালায় স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if Mango keeps getting worse after the steps above, or if you are not sure this is Mango bacterial canker.",
+  "when_to_call_helpline_bn": "উপরের ধাপের পরও আম খারাপ হতে থাকলে, অথবা এটা আমের ব্যাকটেরিয়া ক্যাংকার কিনা নিশ্চিত না হলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "New growth should look cleaner within 10-14 days if the diagnosis and the first steps were right. Tissue already dead will not recover.",
+  "expected_outcome_bn": "রোগ চেনা ও প্রথম ধাপ ঠিক থাকলে ১০-১৪ দিনে নতুন পাতা পরিষ্কার দেখায়। যা মরে গেছে তা আর ফিরে আসে না।",
+  "related_shop_products": [
+    "Copper oxychloride 50% WP 500g",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "source": "BARI/BRRI/DAE-style extension practice for Bangladesh; CABI/Plantwise disease biology; PPW-registered active ingredients already in the AgroScan shop pack. Brand AP numbers on new cards are unverified.",
+  "source_type": "field_guide",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Generated card for model class Mango___Bacterial_Canker. Doses are extension rates. registration_verified is false. Officer review of Bangla still required (LIMITS L3).",
+  "is_curable_with_chemicals": true,
+  "bangladesh_relevance": "grown",
+  "related_shop_skus": [
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ]
+}

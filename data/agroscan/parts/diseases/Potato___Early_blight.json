@@ -1,0 +1,248 @@
+{
+  "class_name": "Potato___Early_blight",
+  "kb_key": "early_blight",
+  "crop_en": "Potato",
+  "crop_bn": "আলু",
+  "disease_en": "Early blight",
+  "disease_bn": "আলুর আগাম ধ্বসা রোগ",
+  "pathogen": "Alternaria solani",
+  "severity": "medium",
+  "summary_en": "Early blight makes brown spots with dark rings inside them, like a target board, starting on the older lower leaves. It is slower and less deadly than late blight but it steals yield quietly, and it hits hardest where the crop is short of nitrogen or under stress.",
+  "summary_bn": "আগাম ধ্বসা রোগে বাদামি দাগের ভেতরে গাঢ় রঙের গোল গোল বলয় থাকে, দেখতে তীর ছোড়ার তক্তার মতো। নিচের পুরনো পাতা থেকে শুরু হয়। নাবি ধ্বসার চেয়ে ধীরে ছড়ায় ও কম মারাত্মক, কিন্তু চুপচাপ ফলন কমিয়ে দেয়। গাছে নাইট্রোজেনের অভাব বা কষ্ট থাকলে বেশি হয়।",
+  "symptoms_en": [
+    "Brown to dark brown round spots with concentric rings inside, like a target",
+    "Starts on the oldest, lowest leaves and works upward",
+    "A yellow halo often surrounds the spot",
+    "Leaves yellow, dry and drop; the plant looks bare from the bottom up",
+    "Dark, sunken, dry lesions on tubers with a raised rim, rot is dry and firm not slimy",
+    "Worse in warm weather with alternating wet and dry spells, and on nitrogen-starved plants"
+  ],
+  "symptoms_bn": [
+    "বাদামি থেকে গাঢ় বাদামি গোল দাগ, ভেতরে গোল গোল বলয়, দেখতে তীর ছোড়ার তক্তার মতো",
+    "সবচেয়ে পুরনো নিচের পাতা থেকে শুরু হয়ে উপরের দিকে ওঠে",
+    "দাগের চারপাশে প্রায়ই হলুদ বলয় থাকে",
+    "পাতা হলুদ হয়ে শুকিয়ে ঝরে পড়ে; গাছ নিচ থেকে খালি হয়ে যায়",
+    "আলুতে গাঢ়, বসে যাওয়া, শুকনো দাগ পড়ে, কিনারা উঁচু থাকে; পচন শুকনো ও শক্ত, পিচ্ছিল নয়",
+    "গরম আবহাওয়ায়, একবার ভেজা একবার শুকনো হলে, আর নাইট্রোজেনের অভাব থাকলে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Tell it apart from late blight first",
+      "detail": "Early blight spots have rings inside and start on the OLD lower leaves; the plant does not collapse. Late blight starts anywhere, has a white downy edge in the morning and collapses the plant fast. The treatments differ, so get this right before spending money."
+    },
+    {
+      "step": 2,
+      "title": "Feed the crop",
+      "detail": "Early blight attacks weak, hungry plants. If leaves are pale, give a nitrogen top-dress at the FRG rate. This is the opposite of late blight advice."
+    },
+    {
+      "step": 3,
+      "title": "Remove the lowest infected leaves",
+      "detail": "Pick off and remove badly spotted bottom leaves in small plots. This slows the climb up the plant."
+    },
+    {
+      "step": 4,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb or chlorothalonil at 7-10 day intervals. If it is already well established, use a difenoconazole or azoxystrobin product once, then go back to protectants."
+    },
+    {
+      "step": 5,
+      "title": "Keep the soil evenly moist",
+      "detail": "Wet-dry stress cycles make early blight worse. Irrigate regularly rather than letting the crop dry out and then flooding it."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "আগে নাবি ধ্বসা থেকে আলাদা করুন",
+      "detail": "আগাম ধ্বসার দাগের ভেতরে গোল বলয় থাকে এবং নিচের পুরনো পাতা থেকে শুরু হয়; গাছ ঢলে পড়ে না। নাবি ধ্বসা যেকোনো জায়গা থেকে শুরু হয়, ভোরে দাগের কিনারায় সাদা তুলার মতো থাকে আর গাছ দ্রুত ঢলে পড়ে। চিকিৎসা আলাদা, তাই টাকা খরচের আগে ঠিকমতো চিনে নিন।"
+    },
+    {
+      "step": 2,
+      "title": "গাছকে খাবার দিন",
+      "detail": "আগাম ধ্বসা দুর্বল, অভুক্ত গাছে বেশি হয়। পাতা ফ্যাকাশে হলে এফআরজি মাত্রায় ইউরিয়া উপরি প্রয়োগ করুন। এটা নাবি ধ্বসার উল্টো পরামর্শ।"
+    },
+    {
+      "step": 3,
+      "title": "নিচের আক্রান্ত পাতা তুলে ফেলুন",
+      "detail": "ছোট জমিতে নিচের বেশি দাগওয়ালা পাতা ছিঁড়ে সরিয়ে ফেলুন। এতে রোগ উপরে ওঠা ধীর হয়।"
+    },
+    {
+      "step": 4,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "৭-১০ দিন পর পর ম্যানকোজেব বা ক্লোরোথ্যালোনিল দিন। রোগ ভালোভাবে ছড়িয়ে গেলে একবার ডাইফেনোকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিয়ে তারপর আবার প্রতিরোধক ওষুধে ফিরে যান।"
+    },
+    {
+      "step": 5,
+      "title": "মাটি সমানভাবে ভেজা রাখুন",
+      "detail": "একবার শুকনো একবার ভেজা হলে এই রোগ বাড়ে। জমি শুকিয়ে ফেলে হঠাৎ পানি না দিয়ে নিয়মিত সেচ দিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Rotate with non-solanaceous crops (rice, maize, mustard) for at least 2 years",
+    "Use certified seed tubers and destroy infected crop residue after harvest",
+    "Maintain adequate nitrogen and potassium — hungry crops get early blight badly",
+    "Avoid overhead irrigation late in the day",
+    "Space plants so the canopy dries; earth up ridges well",
+    "Harvest at full maturity and cure tubers before storage so lesions do not develop in store"
+  ],
+  "cultural_control_bn": [
+    "অন্তত ২ বছর ধান, ভুট্টা বা সরিষার মতো ভিন্ন গোত্রের ফসলের সাথে পালা করে চাষ করুন",
+    "সার্টিফাইড বীজ আলু ব্যবহার করুন এবং ফসল কাটার পর আক্রান্ত অবশিষ্টাংশ নষ্ট করুন",
+    "পর্যাপ্ত নাইট্রোজেন ও পটাশ দিন — অভুক্ত গাছে এই রোগ মারাত্মক হয়",
+    "দিনের শেষে উপর দিয়ে সেচ দেবেন না",
+    "গাছের মধ্যে ফাঁক রাখুন যাতে শুকায়; আইলে ভালোভাবে মাটি তুলে দিন",
+    "পুরোপুরি পেকে গেলে আলু তুলুন এবং গুদামে রাখার আগে ভালোভাবে শুকিয়ে নিন যাতে গুদামে দাগ না বাড়ে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water (about 20-25 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ২০-২৫ গ্রাম)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray. Cover the lower leaves properly — that is where the disease lives and where farmers usually miss.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে দিন। নিচের পাতায় ভালোভাবে ওষুধ লাগান — রোগ ওখানেই থাকে আর কৃষকরা সাধারণত ওখানেই স্প্রে করতে ভুলে যান।",
+      "timing_en": "Preventive, from 30-35 days after planting, every 7-10 days.",
+      "timing_bn": "প্রতিরোধমূলক, রোপণের ৩০-৩৫ দিন পর থেকে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not harvest for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন আলু তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Difenoconazole 25% EC",
+      "product_name_bn": "ডাইফেনোকোনাজল ২৫% ইসি",
+      "active_ingredient": "Difenoconazole",
+      "formulation": "EC",
+      "dose_en": "0.5 ml per litre of water (about 5 ml per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৫ মিলিলিটার (১০ লিটারের এক স্প্রেয়ারে প্রায় ৫ মিলি)",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with full coverage including lower leaves.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে নিচের পাতাসহ পুরো গাছে দিন।",
+      "timing_en": "Curative — use when spots are already spreading. Maximum 2 sprays per season, alternated with mancozeb.",
+      "timing_bn": "রোগ দমনের ওষুধ — দাগ ছড়াতে শুরু করলে দিন। মৌসুমে সর্বোচ্চ ২ বার, ম্যানকোজেবের সাথে পালা করে।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 14,
+      "pre_harvest_interval_note_en": "Do not harvest for 14 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৪ দিন আলু তুলবেন না।",
+      "brands_available_bd": [
+        "Score 250 EC",
+        "Difen 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Score 250 EC, AP-384, Syngenta Bangladesh Limited, appears in the DAE PPW registered pesticide list (registered use shown there for onion purple blotch — confirm the potato label claim before showing it as a registered use for potato).",
+      "treatment_type": "curative",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-384"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Copper oxychloride 50% WP at 3 g/L as a protectant",
+    "Trichoderma harzianum soil application at planting — Bangladeshi trials report useful suppression of early blight alongside late blight",
+    "Neem oil at 3-5 ml/L gives mild suppression and helps with mites at the same time",
+    "Mulching reduces soil splash, which is how the first infections usually start"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতি লিটার পানিতে ৩ গ্রাম কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি প্রতিরোধক হিসেবে",
+    "রোপণের সময় মাটিতে ট্রাইকোডার্মা হারজিয়ানাম — বাংলাদেশের গবেষণায় নাবি ধ্বসার পাশাপাশি আগাম ধ্বসাতেও উপকার পাওয়া গেছে",
+    "প্রতি লিটারে ৩-৫ মিলি নিম তেল দিলে রোগ কিছুটা কমে, সাথে মাকড়ও দমন হয়",
+    "মাটিতে খড় বিছিয়ে দিলে বৃষ্টির ছিটায় মাটি পাতায় ওঠে না — প্রথম সংক্রমণ সাধারণত ওভাবেই হয়"
+  ],
+  "fertilizer_advice_en": "Unlike late blight, early blight is a disease of hungry plants. Make sure the full FRG-2018 nitrogen dose is applied on schedule and keep potassium adequate. Pale, prematurely yellowing plants are an invitation to Alternaria.",
+  "fertilizer_advice_bn": "নাবি ধ্বসার উল্টো — আগাম ধ্বসা অভুক্ত গাছের রোগ। এফআরজি-২০১৮ অনুযায়ী পুরো নাইট্রোজেন মাত্রা সময়মতো দিন এবং পটাশ পর্যাপ্ত রাখুন। ফ্যাকাশে, আগেভাগে হলুদ হয়ে যাওয়া গাছেই এই রোগ এসে বসে।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Do not eat, drink or smoke while spraying. Spray with the wind behind you and wash with soap afterwards. Keep children and livestock out of the field for 24 hours. Never rinse the sprayer into a pond or canal.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। স্প্রের সময় খাওয়া, পান বা ধূমপান নয়। বাতাস পিছনে রেখে স্প্রে করুন এবং পরে সাবান দিয়ে ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমি থেকে দূরে রাখুন। পুকুর বা খালে স্প্রেয়ার ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products from a licensed dealer. Respect the pre-harvest interval. Krishi Call Center: 16123.",
+  "legal_note_bn": "লাইসেন্সধারী দোকান থেকে শুধু ডিএই-নিবন্ধিত ওষুধ কিনুন। পিএইচআই মেনে চলুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if more than 30% of leaves are affected, if you are not sure whether it is early or late blight, or if the disease is climbing quickly to the top of the plants.",
+  "when_to_call_helpline_bn": "৩০% এর বেশি পাতা আক্রান্ত হলে, আগাম না নাবি ধ্বসা তা নিশ্চিত না হলে, অথবা রোগ দ্রুত গাছের মাথার দিকে উঠতে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With correct feeding and a protectant spray programme, spread usually stops within 2 weeks and the upper canopy stays green through tuber bulking. Yield loss is usually modest if the top third of the canopy is protected.",
+  "expected_outcome_bn": "ঠিকমতো সার ও প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহে ছড়ানো বন্ধ হয় এবং আলু বড় হওয়ার সময় উপরের পাতা সবুজ থাকে। গাছের উপরের এক-তৃতীয়াংশ বাঁচাতে পারলে ফলনের ক্ষতি সাধারণত কম হয়।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Score 250 EC (Difenoconazole) 50ml",
+    "Urea 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Trichoderma harzianum bio-fungicide 1kg"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Score 250 EC, AP-384, Syngenta Bangladesh Ltd); Efficacy of Trichoderma harzianum as a biological fungicide against potato late and early blight, ScienceDirect S2773078623000286; BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "The PPW entry for Score 250 EC records onion/purple blotch as the registered use; using it on potato early blight is a common field practice but the app should not claim it as a registered label use for potato without confirming the current label. Differential-diagnosis guidance vs late blight is deliberately included in step 1.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Score 250 EC (Difenoconazole) 50ml",
+      "sku": "PEST-0022",
+      "name_en": "Difenoconazole 25% EC 50ml",
+      "category": "pesticide",
+      "match_score": 1.103,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Urea 50kg bag",
+      "sku": "FERT-0003",
+      "name_en": "Urea 46% N 50kg",
+      "category": "fertilizer",
+      "match_score": 0.758,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Trichoderma harzianum bio-fungicide 1kg",
+      "sku": "PEST-0092",
+      "name_en": "Trichoderma harzianum Bio-fungicide (10^8 cfu/g) 1kg",
+      "category": "pesticide",
+      "match_score": 1.7,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

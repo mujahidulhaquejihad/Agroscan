@@ -1,0 +1,193 @@
+{
+  "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+  "kb_key": "gray_leaf_spot",
+  "crop_en": "Maize",
+  "crop_bn": "ভুট্টা",
+  "disease_en": "Gray leaf spot",
+  "disease_bn": "ভুট্টার ধূসর পাতার দাগ রোগ",
+  "pathogen": "Cercospora zeae-maydis / C. zeina",
+  "severity": "medium",
+  "summary_en": "Narrow rectangular grey to tan lesions that run in straight lines between the leaf veins, like matchsticks laid on the leaf. It builds up where maize follows maize with the residue left on the surface.",
+  "summary_bn": "পাতার শিরার মাঝে সোজা লম্বালম্বি সরু চারকোনা ধূসর বা হালকা বাদামি দাগ পড়ে, দেখতে পাতার উপর দেশলাই কাঠি সাজিয়ে রাখার মতো। যেখানে ভুট্টার পর ভুট্টা করা হয় আর নাড়া জমিতেই পড়ে থাকে, সেখানে রোগ বাড়তে থাকে।",
+  "symptoms_en": [
+    "Narrow, rectangular lesions with straight parallel sides, bounded by the leaf veins",
+    "Lesions start grey-green and turn grey to tan, 2-6 cm long and 2-4 mm wide",
+    "Held up to the light, the lesion edges are sharp and straight — this distinguishes it from northern leaf blight's rounded cigar shape",
+    "Starts on lower leaves and moves up; lesions merge and kill whole leaves",
+    "Worst in continuous maize with surface residue, in warm humid weather with long dew"
+  ],
+  "symptoms_bn": [
+    "সরু, চারকোনা দাগ, দুই পাশ সোজা ও সমান্তরাল, পাতার শিরায় গিয়ে থেমে যায়",
+    "দাগ প্রথমে ধূসর-সবুজ, পরে ধূসর বা হালকা বাদামি হয়; ২-৬ সেন্টিমিটার লম্বা, ২-৪ মিলিমিটার চওড়া",
+    "আলোর দিকে ধরলে দাগের কিনারা ধারালো ও সোজা দেখায় — এতেই পাতা ঝলসানো রোগের গোল চুরুট আকৃতি থেকে আলাদা করা যায়",
+    "নিচের পাতা থেকে শুরু হয়ে উপরে ওঠে; দাগ মিশে গিয়ে পুরো পাতা মেরে ফেলে",
+    "একই জমিতে বারবার ভুট্টা করলে ও নাড়া উপরে পড়ে থাকলে, গরম স্যাঁতসেঁতে আবহাওয়ায় দীর্ঘ শিশিরে সবচেয়ে বেশি"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Confirm it is gray leaf spot",
+      "detail": "Hold a leaf up to the sunlight. Gray leaf spot lesions are rectangular with straight edges stopped by the veins. Northern leaf blight lesions are cigar-shaped with rounded ends that cross veins."
+    },
+    {
+      "step": 2,
+      "title": "Check the position on the plant",
+      "detail": "Spray only if lesions have reached the leaf below the cob before or at tasselling. Below that, the yield effect is small."
+    },
+    {
+      "step": 3,
+      "title": "Spray a strobilurin + triazole",
+      "detail": "Azoxystrobin + difenoconazole or propiconazole at label rate, targeting the upper canopy at tasselling."
+    },
+    {
+      "step": 4,
+      "title": "Fix the residue problem",
+      "detail": "The real cure is next season: plough in the residue or rotate out of maize. Surface maize trash is where this fungus lives."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "সত্যিই এই রোগ কিনা নিশ্চিত হোন",
+      "detail": "একটি পাতা রোদের দিকে ধরুন। এই রোগের দাগ চারকোনা, কিনারা সোজা, শিরায় গিয়ে থেমে যায়। পাতা ঝলসানো রোগের দাগ চুরুটের মতো, দুই মাথা গোল, শিরা পেরিয়ে যায়।"
+    },
+    {
+      "step": 2,
+      "title": "গাছের কোথায় দাগ দেখুন",
+      "detail": "মোচা আসার সময় বা তার আগেই দাগ মোচার নিচের পাতায় পৌঁছালে তবেই স্প্রে করুন। তার নিচে থাকলে ফলনে তেমন প্রভাব পড়ে না।"
+    },
+    {
+      "step": 3,
+      "title": "স্ট্রোবিলিউরিন + ট্রায়াজল স্প্রে করুন",
+      "detail": "মোচা আসার সময় লেবেল অনুযায়ী অ্যাজোক্সিস্ট্রোবিন + ডাইফেনোকোনাজল বা প্রোপিকোনাজল উপরের পাতায় দিন।"
+    },
+    {
+      "step": 4,
+      "title": "নাড়ার সমস্যাটা ঠিক করুন",
+      "detail": "আসল সমাধান পরের মৌসুমে: নাড়া চাষ দিয়ে মাটিতে মিশিয়ে দিন বা ভুট্টা বাদ দিয়ে অন্য ফসল করুন। জমির উপর পড়ে থাকা ভুট্টার নাড়াতেই এই ছত্রাক বেঁচে থাকে।"
+    }
+  ],
+  "cultural_control_en": [
+    "Rotate out of maize for at least one season — the single most effective measure",
+    "Plough residue under rather than leaving it on the surface",
+    "Grow tolerant hybrids",
+    "Avoid dense planting; keep rows open for air movement",
+    "Apply balanced fertiliser at FRG rates"
+  ],
+  "cultural_control_bn": [
+    "অন্তত এক মৌসুম ভুট্টা বাদ দিয়ে অন্য ফসল করুন — সবচেয়ে কার্যকর ব্যবস্থা এটাই",
+    "নাড়া জমির উপর ফেলে না রেখে চাষ দিয়ে মাটির নিচে দিন",
+    "সহনশীল হাইব্রিড লাগান",
+    "ঘন করে বপন করবেন না; সারি খোলা রাখুন যাতে বাতাস চলে",
+    "এফআরজি মাত্রায় সুষম সার দিন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Azoxystrobin 20% + Difenoconazole 12.5% SC",
+      "product_name_bn": "অ্যাজোক্সিস্ট্রোবিন ২০% + ডাইফেনোকোনাজল ১২.৫% এসসি",
+      "active_ingredient": "Azoxystrobin + Difenoconazole",
+      "formulation": "SC",
+      "dose_en": "1 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray with a lance extension to reach the upper leaves.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে নলে বাড়তি লাঠি লাগিয়ে উপরের পাতায় পৌঁছান।",
+      "timing_en": "At tasselling, once, if lesions have reached the leaf below the cob.",
+      "timing_bn": "দাগ মোচার নিচের পাতায় পৌঁছালে মোচা আসার সময় একবার।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন ফসল কাটবেন না।",
+      "brands_available_bd": [
+        "Amistar Top"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Amistar Top, AP-2312, Syngenta Bangladesh Limited, 1 ml/L — in the DAE PPW registered list for rice sheath blight and blast. Confirm the maize label claim.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-2312"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Rotation and residue burial — genuinely the most effective control available",
+    "Tolerant hybrids",
+    "Wider spacing"
+  ],
+  "organic_alternatives_bn": [
+    "পালা চাষ ও নাড়া মাটিতে পুঁতে দেওয়া — সত্যিকার অর্থে সবচেয়ে কার্যকর ব্যবস্থা",
+    "সহনশীল হাইব্রিড",
+    "বেশি দূরত্বে বপন"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for maize with the full potash dose. Balanced nutrition helps the plant hold its upper leaves through grain filling.",
+  "fertilizer_advice_bn": "ভুট্টার জন্য এফআরজি-২০১৮ ও পুরো পটাশ মাত্রা মেনে চলুন। সুষম সার দিলে দানা ভরার সময় পর্যন্ত গাছ উপরের পাতা ধরে রাখতে পারে।",
+  "safety_warning_en": "Wear gloves, mask, goggles, hat and full-sleeve clothing. Observe the 30-day PHI including for green fodder. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা, টুপি ও ফুলহাতা পোশাক পরুন। কাঁচা ঘাস হিসেবে খাওয়ানোর ক্ষেত্রেও ৩০ দিনের পিএইচআই মানুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if lesions reach above the cob before grain filling or if you cannot distinguish this from northern leaf blight.",
+  "when_to_call_helpline_bn": "দানা ভরার আগেই দাগ মোচার উপরে উঠে গেলে, অথবা এটা পাতা ঝলসানো রোগ কিনা বুঝতে না পারলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "A tasselling-stage spray keeps the upper leaves functional through grain fill. The lasting fix is rotation and residue management, not the spray.",
+  "expected_outcome_bn": "মোচা আসার সময় স্প্রে করলে দানা ভরার সময় পর্যন্ত উপরের পাতা কাজ করে যায়। স্থায়ী সমাধান স্প্রে নয় — পালা চাষ আর নাড়া ব্যবস্থাপনা।",
+  "related_shop_products": [
+    "Amistar Top 100ml",
+    "Propiconazole 25% EC 100ml",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Amistar Top, AP-2312, Syngenta Bangladesh Ltd); BARI maize production guidance",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "low",
+  "notes": "Gray leaf spot is less frequently reported in Bangladesh extension literature than northern leaf blight; it is more associated with continuous conservation-tillage maize. Confidence is set low because Bangladesh-specific incidence and threshold data are limited. Differential diagnosis vs northern leaf blight is included.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Amistar Top 100ml",
+      "sku": "PEST-0026",
+      "name_en": "Azoxystrobin + Difenoconazole 20% + 12.5% SC 100ml",
+      "category": "pesticide",
+      "match_score": 0.889,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

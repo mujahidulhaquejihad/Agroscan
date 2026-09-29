@@ -1,0 +1,196 @@
+{
+  "class_name": "Wheat___Brown_rust",
+  "kb_key": "brown_rust",
+  "crop_en": "Wheat",
+  "crop_bn": "গম",
+  "disease_en": "Brown rust (leaf rust)",
+  "disease_bn": "গমের বাদামি মরিচা",
+  "pathogen": "Puccinia triticina",
+  "severity": "medium",
+  "summary_en": "Small round orange-brown pustules scattered on the upper leaf surface that leave orange powder on your fingers. It is common in Bangladesh's Rabi wheat and is easy to manage if you spray before it reaches the flag leaf.",
+  "summary_bn": "পাতার উপরের পিঠে ছোট গোল কমলা-বাদামি ফোস্কা ছড়ানো থাকে, হাত দিলে আঙুলে কমলা গুঁড়া লাগে। বাংলাদেশের রবি মৌসুমের গমে সাধারণ রোগ, ফ্ল্যাগ লিফে পৌঁছানোর আগেই স্প্রে করলে সহজেই সামলানো যায়।",
+  "symptoms_en": [
+    "Small round to oval orange-brown pustules, mostly on the UPPER leaf surface",
+    "Orange powder rubs off on your fingers or clothes",
+    "Pustules are scattered randomly, not in lines",
+    "Leaves yellow and dry from the bottom up in heavy attacks",
+    "Grains are shrivelled and test weight drops",
+    "Favoured by 15-22°C with dew; common in the middle of the Bangladesh Rabi season"
+  ],
+  "symptoms_bn": [
+    "ছোট গোল বা ডিম্বাকার কমলা-বাদামি ফোস্কা, বেশিরভাগ পাতার উপরের পিঠে",
+    "হাত বা কাপড়ে কমলা গুঁড়া লেগে যায়",
+    "ফোস্কা এলোমেলোভাবে ছড়ানো থাকে, সারি ধরে নয়",
+    "বেশি আক্রমণে নিচ থেকে উপরের দিকে পাতা হলুদ হয়ে শুকিয়ে যায়",
+    "দানা চিটা হয়, ওজন কমে যায়",
+    "১৫-২২ ডিগ্রি তাপমাত্রা ও শিশিরে বেশি হয়; বাংলাদেশে রবি মৌসুমের মাঝামাঝি সাধারণ"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Check whether the flag leaf is affected",
+      "detail": "The flag leaf and the leaf below it fill the grain. If rust is only on the lower leaves and the crop is close to maturity, spraying may not pay."
+    },
+    {
+      "step": 2,
+      "title": "Spray if rust is on or approaching the flag leaf",
+      "detail": "Propiconazole or tebuconazole at label rate, one spray, targeting the upper leaves."
+    },
+    {
+      "step": 3,
+      "title": "Do not add late nitrogen",
+      "detail": "It delays maturity and extends the period the rust can damage the crop."
+    },
+    {
+      "step": 4,
+      "title": "Note the variety for next season",
+      "detail": "If your variety rusts badly every year, switch to a BARI-released rust-resistant variety — rust resistance breaks down over time and varieties need refreshing."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ফ্ল্যাগ লিফ আক্রান্ত কিনা দেখুন",
+      "detail": "ফ্ল্যাগ লিফ ও তার নিচের পাতাই দানা ভরায়। মরিচা যদি শুধু নিচের পাতায় থাকে আর ফসল পাকার কাছাকাছি হয়, তাহলে স্প্রে করে খরচ নাও উঠতে পারে।"
+    },
+    {
+      "step": 2,
+      "title": "ফ্ল্যাগ লিফে থাকলে বা কাছাকাছি এলে স্প্রে করুন",
+      "detail": "লেবেল অনুযায়ী প্রোপিকোনাজল বা টেবুকোনাজল একবার, উপরের পাতায় তাক করে।"
+    },
+    {
+      "step": 3,
+      "title": "দেরিতে ইউরিয়া দেবেন না",
+      "detail": "এতে ফসল পাকতে দেরি হয় আর মরিচার ক্ষতি করার সময় বেড়ে যায়।"
+    },
+    {
+      "step": 4,
+      "title": "পরের মৌসুমের জন্য জাতটা মনে রাখুন",
+      "detail": "প্রতি বছর যদি আপনার জাতে মরিচা বেশি হয়, তাহলে বারি উদ্ভাবিত মরিচা প্রতিরোধী জাতে যান — মরিচা প্রতিরোধ ক্ষমতা সময়ের সাথে নষ্ট হয়ে যায়, জাত বদলাতে হয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow BARI-released rust-resistant wheat varieties and change them every few years",
+    "Sow on time (mid-November) so grain filling finishes before rust peaks",
+    "Use certified seed",
+    "Do not over-apply nitrogen",
+    "Remove volunteer wheat plants that carry rust between seasons",
+    "Apply the full potash dose"
+  ],
+  "cultural_control_bn": [
+    "বারি উদ্ভাবিত মরিচা প্রতিরোধী গমের জাত লাগান এবং কয়েক বছর পর পর জাত বদলান",
+    "সময়মতো বপন করুন (নভেম্বরের মাঝামাঝি) যাতে মরিচা বাড়ার আগেই দানা ভরা শেষ হয়",
+    "সার্টিফাইড বীজ ব্যবহার করুন",
+    "বেশি ইউরিয়া দেবেন না",
+    "আগের ফসলের পড়ে থাকা গমের গাছ তুলে ফেলুন, এগুলোতেই মরিচা টিকে থাকে",
+    "পুরো পটাশ মাত্রা দিন"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Propiconazole 25% EC",
+      "product_name_bn": "প্রোপিকোনাজল ২৫% ইসি",
+      "active_ingredient": "Propiconazole",
+      "formulation": "EC",
+      "dose_en": "1 ml per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ১ মিলিলিটার",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering the upper canopy, especially the flag leaf.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে উপরের পাতায়, বিশেষ করে ফ্ল্যাগ লিফে দিন।",
+      "timing_en": "When rust reaches the leaf below the flag leaf, typically at booting to early heading. One spray is usually enough.",
+      "timing_bn": "ফ্ল্যাগ লিফের নিচের পাতায় মরিচা পৌঁছালে, সাধারণত থোড় থেকে শিষ বের হওয়ার শুরুতে। সাধারণত একবারেই যথেষ্ট।",
+      "interval_days": 15,
+      "max_applications_per_season": 2,
+      "phi_days": 30,
+      "pre_harvest_interval_note_en": "Do not harvest for 30 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৩০ দিন গম কাটবেন না।",
+      "brands_available_bd": [
+        "Tilt 250 EC",
+        "Propicon 250 EC"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Propiconazole registered in Bangladesh; verify brand AP number and wheat label claim against the current PPW list.",
+      "treatment_type": "both",
+      "caution_en": "Propiconazole appears on national lists of highly hazardous pesticides in wide use in Bangladesh — spray only when the flag leaf is at risk.",
+      "caution_bn": "প্রোপিকোনাজল বাংলাদেশে ব্যাপকভাবে ব্যবহৃত অতি ঝুঁকিপূর্ণ ওষুধের তালিকায় আছে — ফ্ল্যাগ লিফ ঝুঁকিতে থাকলে তবেই স্প্রে করুন।",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Resistant varieties and timely sowing — the practical answer, since no organic spray controls cereal rusts effectively",
+    "Sulphur 80% WP at 2 g/L gives partial suppression if applied very early",
+    "Balanced potash"
+  ],
+  "organic_alternatives_bn": [
+    "প্রতিরোধী জাত ও সময়মতো বপন — ব্যবহারিক সমাধান এটাই, কারণ কোনো জৈব স্প্রেতেই গমের মরিচা ভালোভাবে দমন হয় না",
+    "খুব শুরুতে প্রতি লিটারে ২ গ্রাম সালফার ৮০% ডব্লিউপি দিলে কিছুটা কমে",
+    "সুষম পটাশ"
+  ],
+  "fertilizer_advice_en": "Follow FRG-2018 for wheat with the full potash dose. Avoid heavy or late nitrogen.",
+  "fertilizer_advice_bn": "গমের জন্য এফআরজি-২০১৮ ও পুরো পটাশ মাত্রা মেনে চলুন। বেশি বা দেরিতে ইউরিয়া দেবেন না।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Observe the 30-day PHI including for green fodder. Wash with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। কাঁচা ঘাস হিসেবে খাওয়ানোর ক্ষেত্রেও ৩০ দিনের পিএইচআই মানুন। স্প্রের পর সাবান দিয়ে ধুয়ে ফেলুন।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if rust covers the flag leaf, if leaves are drying across the field, or if the spike is bleaching white — that last one may be wheat blast, which is far more serious.",
+  "when_to_call_helpline_bn": "ফ্ল্যাগ লিফ মরিচায় ঢেকে গেলে, জমিজুড়ে পাতা শুকাতে থাকলে, অথবা শিষ সাদা হয়ে গেলে ১৬১২৩ নম্বরে ফোন করুন — শেষেরটা গমের ব্লাস্ট হতে পারে, যা অনেক বেশি মারাত্মক।",
+  "expected_outcome_en": "One well-timed spray keeps the flag leaf green through grain filling. Existing pustules stay; success is a green flag leaf at the dough stage.",
+  "expected_outcome_bn": "সঠিক সময়ে একবার স্প্রে করলেই দানা ভরার সময় পর্যন্ত ফ্ল্যাগ লিফ সবুজ থাকে। পুরনো ফোস্কা থেকেই যাবে; দানা নরম অবস্থায় ফ্ল্যাগ লিফ সবুজ থাকলেই বুঝবেন কাজ হয়েছে।",
+  "related_shop_products": [
+    "Propiconazole 25% EC 100ml",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Certified wheat seed 10kg"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "BARI wheat production and disease management guidance; 'Progress and Challenges of Wheat Production in the Era of Climate Change: A Bangladesh Perspective', Springer; DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-09-24",
+  "confidence": "medium",
+  "notes": "Cross-reference to wheat blast is included in the helpline trigger because a bleached spike is the symptom farmers must not mistake for rust. | Cloned from Wheat___Leaf_rust for model class Wheat___Brown_rust.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Propiconazole 25% EC 100ml",
+      "sku": "PEST-0019",
+      "name_en": "Propiconazole 25% EC 100ml",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Certified wheat seed 10kg",
+      "sku": "SEED-0052",
+      "name_en": "Certified Aus rice seed 10kg",
+      "category": "seed",
+      "match_score": 0.865,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

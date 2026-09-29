@@ -41,22 +41,39 @@ from agroscan.knowledge import (
     advice_for,
 )
 from agroscan.leaf_crop import auto_crop_leaf, image_to_jpeg_bytes, perspective_crop
-from agroscan.llm_chat import chat_reply, llm_status, preload as llm_preload, vision_scan_reply
+from agroscan.llm_chat import chat_reply, llm_status, preload as llm_preload, transcribe_audio, vision_scan_reply
 from agroscan.news import list_news
 from agroscan.shop_db import (
     admin_shop_stats,
+    assign_order_supplier,
     create_order,
+    create_vendor,
     get_order,
+    get_vendor_by_token,
     init_shop_db,
     list_orders,
     list_products,
+    list_supplier_listings,
     list_suppliers,
+    list_suppliers_admin,
     list_upazilas,
+    list_vendors,
     nearest_upazila,
     product_with_suppliers,
     recommended_products_for_disease,
+    reset_vendor_password,
+    set_vendor_active,
+    update_order,
     update_order_status,
     update_product_price,
+    update_supplier_listing,
+    update_supplier_profile,
+    upsert_supplier_listing,
+    vendor_self_update,
+    update_vendor,
+    vendor_login,
+    vendor_logout,
+    vendor_stats,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -118,7 +135,7 @@ def status():
 
 @app.post("/api/llm/load")
 def llm_load():
-    """Retry loading Qwen2.5-3B (call after freeing RAM / closing browsers)."""
+    """Retry loading the local LLM (Gemma 9B). Call after freeing VRAM."""
     # Allow retry even if a previous pagefile error soft-disabled the LLM.
     import agroscan.llm_chat as lc
 
@@ -211,21 +228,61 @@ async def preprocess_perspective_crop(
 # --------------------------------------------------------------------------- #
 # Chatbot, resources and advice (also consumable by the mobile app)
 # --------------------------------------------------------------------------- #
+class ChatTurn(BaseModel):
+    role: str
+    content: str
+
+
 class ChatIn(BaseModel):
     message: str
     context_disease: str | None = None
     lang: str | None = "bn"
     confirm_class: str | None = None
+    district: str | None = None
+    upazila: str | None = None
+    lat: float | None = None
+    lng: float | None = None
+    history: list[ChatTurn] | None = None
+
+
+@app.post("/api/chat/stt")
+async def chat_stt(
+    file: UploadFile = File(...),
+    lang: str | None = Form(default="bn"),
+):
+    raw = await file.read()
+    if not raw or len(raw) < 400:
+        raise HTTPException(400, "Audio too short.")
+    if len(raw) > 2_000_000:
+        raise HTTPException(400, "Audio too long.")
+    mime = (file.content_type or "audio/wav").split(";")[0].strip()
+    text = transcribe_audio(raw, mime, lang or "bn")
+    if not text:
+        raise HTTPException(502, "Could not transcribe speech.")
+    return {"text": text}
 
 
 @app.post("/api/chat")
 def chat(body: ChatIn):
-    # Qwen2.5-3B-Instruct + RAG when available; knowledge-base fallback otherwise.
+    # Gemini + RAG when enabled; pack/KB fallback otherwise.
+    loc = None
+    if body.district or body.upazila or body.lat is not None:
+        loc = {
+            "district": body.district,
+            "upazila": body.upazila,
+            "lat": body.lat,
+            "lng": body.lng,
+        }
+    hist = None
+    if body.history:
+        hist = [{"role": t.role, "content": t.content} for t in body.history]
     return chat_reply(
         body.message,
         body.context_disease,
-        body.lang or "en",
+        body.lang or "bn",
         confirm_class=body.confirm_class,
+        location=loc,
+        history=hist,
     )
 
 
@@ -365,11 +422,61 @@ class CreateOrderIn(BaseModel):
     lng: float | None = None
     supplier_id: int | None = None
     notes: str = ""
+    user_id: int | None = None
+    confirm: bool = False
 
 
 class OrderStatusIn(BaseModel):
-    status: str
+    status: str = ""
     message: str = ""
+    supplier_id: int | None = None
+    user_name: str | None = None
+    user_phone: str | None = None
+    district: str | None = None
+    upazila: str | None = None
+    address: str | None = None
+    notes: str | None = None
+    items: list[OrderItemIn] | None = None
+
+
+class AdminLoginIn(BaseModel):
+    username: str = "admin"
+    password: str = ""
+
+
+class VendorLoginIn(BaseModel):
+    username: str = ""
+    password: str = ""
+
+
+class VendorIn(BaseModel):
+    username: str
+    password: str
+    supplier_id: int
+
+
+class VendorPatchIn(BaseModel):
+    password: str | None = None
+    active: int | None = None
+    supplier_id: int | None = None
+    username: str | None = None
+
+
+class ListingPatchIn(BaseModel):
+    price_bdt: float | None = None
+    stock: int | None = None
+
+
+class ListingCreateIn(BaseModel):
+    product_id: int
+    price_bdt: float | None = None
+    stock: int | None = 0
+
+
+class VendorMeIn(BaseModel):
+    phone: str | None = None
+    address: str | None = None
+    password: str | None = None
 
 
 @app.get("/api/shop/upazilas")
@@ -473,6 +580,10 @@ def _admin_expected_token() -> str:
     return (os.environ.get("AGROSCAN_ADMIN_TOKEN") or DEFAULT_ADMIN_TOKEN).strip()
 
 
+def _admin_expected_user() -> str:
+    return (os.environ.get("AGROSCAN_ADMIN_USER") or "admin").strip() or "admin"
+
+
 def _admin_token_ok(authorization: str | None = Header(default=None)) -> bool:
     expected = _admin_expected_token()
     if not expected:
@@ -482,11 +593,48 @@ def _admin_token_ok(authorization: str | None = Header(default=None)) -> bool:
     return authorization[7:] == expected
 
 
+def _vendor_user(authorization: str | None = Header(default=None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(401, "Vendor sign-in required.")
+    vendor = get_vendor_by_token(authorization[7:])
+    if not vendor:
+        raise HTTPException(401, "Vendor sign-in required.")
+    return vendor
+
+
+@app.post("/api/admin/login")
+def admin_login(body: AdminLoginIn):
+    user = (body.username or "").strip()
+    password = body.password or ""
+    if user != _admin_expected_user() or password != _admin_expected_token():
+        raise HTTPException(401, "Wrong username or password.")
+    return {"ok": True, "token": password, "role": "admin"}
+
+
 @app.get("/api/admin/orders")
-def admin_orders(status: str = "", authorization: str | None = Header(default=None)):
+def admin_orders(
+    status: str = "",
+    search: str = "",
+    unassigned: bool = False,
+    authorization: str | None = Header(default=None),
+):
     if not _admin_token_ok(authorization):
         raise HTTPException(401, "Admin token required.")
-    return {"orders": list_orders(status=status, limit=200)}
+    return {
+        "orders": list_orders(
+            status=status, search=search, unassigned=unassigned, limit=200
+        )
+    }
+
+
+@app.get("/api/admin/orders/{order_code}")
+def admin_order_detail(order_code: str, authorization: str | None = Header(default=None)):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    try:
+        return get_order(order_code)
+    except ValueError:
+        raise HTTPException(404, "Order not found.")
 
 
 @app.get("/api/admin/stats")
@@ -566,6 +714,30 @@ def admin_user_update(
     return {"ok": True, "user": user}
 
 
+@app.post("/api/admin/users")
+def admin_user_create(body: AdminUserIn, authorization: str | None = Header(default=None)):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    name = (body.name or "").strip()
+    email = (body.email or "").strip()
+    password = (body.password or "").strip()
+    if not name or not email or len(password) < 6:
+        raise HTTPException(400, "Name, email, and a password of at least 6 characters are required.")
+    try:
+        user = create_local_user(
+            name,
+            email,
+            password,
+            phone=body.phone or "",
+            address=body.address or "",
+            district=body.district or "",
+            upazila=body.upazila or "",
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "user": user}
+
+
 @app.post("/api/admin/users/{user_id}/revoke-sessions")
 def admin_user_revoke(user_id: int, authorization: str | None = Header(default=None)):
     if not _admin_token_ok(authorization):
@@ -594,7 +766,58 @@ def admin_update_order(
     if not _admin_token_ok(authorization):
         raise HTTPException(401, "Admin token required.")
     try:
-        order = update_order_status(order_code, body.status, body.message, "admin")
+        if (
+            body.user_name is not None
+            or body.user_phone is not None
+            or body.district is not None
+            or body.upazila is not None
+            or body.address is not None
+            or body.notes is not None
+            or body.items is not None
+            or body.supplier_id is not None
+        ):
+            update_order(
+                order_code,
+                user_name=body.user_name,
+                user_phone=body.user_phone,
+                district=body.district,
+                upazila=body.upazila,
+                address=body.address,
+                notes=body.notes,
+                supplier_id=body.supplier_id,
+                items=[it.model_dump() for it in body.items] if body.items is not None else None,
+                actor="admin",
+            )
+        if body.status:
+            order = update_order_status(order_code, body.status, body.message, "admin")
+        else:
+            order = get_order(order_code)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "order": order}
+
+
+@app.post("/api/admin/orders")
+def admin_create_order(body: CreateOrderIn, authorization: str | None = Header(default=None)):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    try:
+        order = create_order(
+            items=[it.model_dump() for it in body.items],
+            user_id=body.user_id,
+            user_name=body.user_name,
+            user_phone=body.user_phone,
+            district=body.district,
+            upazila=body.upazila,
+            address=body.address,
+            lat=body.lat,
+            lng=body.lng,
+            supplier_id=body.supplier_id,
+            notes=body.notes,
+            actor="admin",
+        )
+        if body.confirm:
+            order = update_order_status(order["order_code"], "confirmed", "Confirmed by admin", "admin")
     except ValueError as e:
         raise HTTPException(400, str(e))
     return {"ok": True, "order": order}
@@ -683,6 +906,195 @@ async def admin_update_product_price(
         raise HTTPException(400, "price_bdt is required.")
     product = _apply_admin_product_price(product_id, value)
     return {"ok": True, "product": product}
+
+
+@app.get("/api/admin/suppliers")
+def admin_suppliers(
+    search: str = "",
+    limit: int = 80,
+    offset: int = 0,
+    authorization: str | None = Header(default=None),
+):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    return list_suppliers_admin(search=search, limit=limit, offset=offset)
+
+
+@app.get("/api/admin/vendors")
+def admin_vendors_list(authorization: str | None = Header(default=None)):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    return {"vendors": list_vendors()}
+
+
+@app.post("/api/admin/vendors")
+def admin_vendors_create(body: VendorIn, authorization: str | None = Header(default=None)):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    try:
+        vendor = create_vendor(body.username, body.password, body.supplier_id)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "vendor": vendor}
+
+
+@app.patch("/api/admin/vendors/{vendor_id}")
+def admin_vendors_patch(
+    vendor_id: int,
+    body: VendorPatchIn,
+    authorization: str | None = Header(default=None),
+):
+    if not _admin_token_ok(authorization):
+        raise HTTPException(401, "Admin token required.")
+    try:
+        vendor = update_vendor(
+            vendor_id,
+            username=body.username,
+            supplier_id=body.supplier_id,
+            password=body.password,
+            active=body.active,
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "vendor": vendor}
+
+
+@app.post("/api/vendor/login")
+def vendor_login_api(body: VendorLoginIn):
+    try:
+        return vendor_login(body.username, body.password)
+    except ValueError as e:
+        raise HTTPException(401, str(e))
+
+
+@app.post("/api/vendor/logout")
+def vendor_logout_api(vendor=Depends(_vendor_user), authorization: str | None = Header(default=None)):
+    if authorization and authorization.startswith("Bearer "):
+        vendor_logout(authorization[7:])
+    return {"ok": True}
+
+
+@app.get("/api/vendor/me")
+def vendor_me(vendor=Depends(_vendor_user)):
+    return {"vendor": vendor}
+
+
+@app.patch("/api/vendor/me")
+def vendor_me_patch(
+    body: VendorMeIn,
+    vendor=Depends(_vendor_user),
+    authorization: str | None = Header(default=None),
+):
+    try:
+        if body.phone is not None or body.address is not None:
+            update_supplier_profile(
+                vendor["supplier_id"],
+                phone=body.phone,
+                address=body.address,
+            )
+        if body.password:
+            keep = authorization[7:] if authorization and authorization.startswith("Bearer ") else None
+            vendor_self_update(vendor["id"], password=body.password, keep_token=keep)
+        fresh = get_vendor_by_token(
+            authorization[7:] if authorization and authorization.startswith("Bearer ") else ""
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "vendor": fresh or vendor}
+
+
+@app.get("/api/vendor/stats")
+def vendor_stats_api(vendor=Depends(_vendor_user)):
+    return {"vendor": vendor, "shop": vendor_stats(vendor["supplier_id"])}
+
+
+@app.get("/api/vendor/orders")
+def vendor_orders_api(
+    status: str = "",
+    search: str = "",
+    vendor=Depends(_vendor_user),
+):
+    return {
+        "orders": list_orders(
+            supplier_id=vendor["supplier_id"],
+            status=status,
+            search=search,
+            limit=200,
+        )
+    }
+
+
+@app.get("/api/vendor/orders/{order_code}")
+def vendor_order_detail(order_code: str, vendor=Depends(_vendor_user)):
+    try:
+        order = get_order(order_code)
+    except ValueError:
+        raise HTTPException(404, "Order not found.")
+    if int(order.get("supplier_id") or 0) != int(vendor["supplier_id"]):
+        raise HTTPException(403, "Not your order.")
+    return order
+
+
+@app.patch("/api/vendor/orders/{order_code}")
+def vendor_update_order(order_code: str, body: OrderStatusIn, vendor=Depends(_vendor_user)):
+    if not body.status:
+        raise HTTPException(400, "status is required.")
+    try:
+        order = update_order_status(
+            order_code,
+            body.status,
+            body.message or "Updated by vendor",
+            f"vendor:{vendor['username']}",
+            supplier_id=vendor["supplier_id"],
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "order": order}
+
+
+@app.get("/api/vendor/listings")
+def vendor_listings(
+    search: str = "",
+    limit: int = 80,
+    offset: int = 0,
+    low_stock: bool = False,
+    vendor=Depends(_vendor_user),
+):
+    return list_supplier_listings(
+        vendor["supplier_id"],
+        search=search,
+        limit=min(limit, 300),
+        offset=offset,
+        low_stock=low_stock,
+    )
+
+
+@app.post("/api/vendor/listings")
+def vendor_listing_create(body: ListingCreateIn, vendor=Depends(_vendor_user)):
+    try:
+        item = upsert_supplier_listing(
+            vendor["supplier_id"],
+            body.product_id,
+            price_bdt=body.price_bdt,
+            stock=body.stock,
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "product": item}
+
+
+@app.patch("/api/vendor/listings/{product_id}")
+def vendor_listing_patch(product_id: int, body: ListingPatchIn, vendor=Depends(_vendor_user)):
+    try:
+        item = update_supplier_listing(
+            vendor["supplier_id"],
+            product_id,
+            price_bdt=body.price_bdt,
+            stock=body.stock,
+        )
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return {"ok": True, "product": item}
 
 
 @app.get("/api/safety")
@@ -842,22 +1254,60 @@ if WEB_DIR.exists():
     def index():
         return FileResponse(str(WEB_DIR / "index.html"))
 
+    @app.get("/index.html")
+    def index_html():
+        return index()
+
     @app.get("/login")
     def login_page():
         return FileResponse(str(WEB_DIR / "login.html"))
+
+    @app.get("/login.html")
+    def login_html():
+        return login_page()
 
     @app.get("/signup")
     def signup_page():
         return FileResponse(str(WEB_DIR / "signup.html"))
 
+    @app.get("/signup.html")
+    def signup_html():
+        return signup_page()
+
     @app.get("/logout")
     def logout_page():
         return FileResponse(str(WEB_DIR / "logout.html"))
+
+    @app.get("/logout.html")
+    def logout_html():
+        return logout_page()
 
     @app.get("/account")
     def account_page():
         return FileResponse(str(WEB_DIR / "account.html"))
 
+    @app.get("/account.html")
+    def account_html():
+        return account_page()
+
     @app.get("/admin")
     def admin_page():
-        return FileResponse(str(WEB_DIR / "admin.html"))
+        return FileResponse(
+            str(WEB_DIR / "admin.html"),
+            headers={"Cache-Control": "no-store"},
+        )
+
+    @app.get("/admin.html")
+    def admin_html():
+        return admin_page()
+
+    @app.get("/vendor")
+    def vendor_page():
+        return FileResponse(
+            str(WEB_DIR / "vendor.html"),
+            headers={"Cache-Control": "no-store"},
+        )
+
+    @app.get("/vendor.html")
+    def vendor_html():
+        return vendor_page()

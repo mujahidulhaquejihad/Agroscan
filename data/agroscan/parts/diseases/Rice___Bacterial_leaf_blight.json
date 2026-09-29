@@ -1,0 +1,226 @@
+{
+  "class_name": "Rice___bacterial_leaf_blight",
+  "kb_key": "bacterial_leaf_blight",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Bacterial leaf blight (BLB)",
+  "disease_bn": "ধানের ব্যাকটেরিয়াজনিত পাতা পোড়া রোগ",
+  "pathogen": "Xanthomonas oryzae pv. oryzae",
+  "severity": "high",
+  "summary_en": "BLB is a bacterial disease, so ordinary fungicides do nothing against it. Leaves dry from the tip and edges inwards in wavy yellow streaks. It spreads through flood water, wind-driven rain and cut leaf tips, and it is worst in Aman after storms.",
+  "summary_bn": "এটি ব্যাকটেরিয়ার রোগ, তাই সাধারণ ছত্রাকনাশকে কোনো কাজ হয় না। পাতার আগা ও কিনারা থেকে ঢেউ খেলানো হলুদ দাগ হয়ে শুকিয়ে আসে। বন্যার পানি, ঝড়-বৃষ্টি আর পাতার কাটা আগা দিয়ে ছড়ায়; আমন মৌসুমে ঝড়ের পর সবচেয়ে বেশি হয়।",
+  "symptoms_en": [
+    "Yellow to straw-coloured wavy streaks starting at the leaf tip or edge and moving down",
+    "In early morning, milky or yellowish bacterial ooze beads on fresh lesions — press a cut leaf end in clear water and you will see a cloudy stream",
+    "Whole leaves dry to straw colour and the field looks scorched",
+    "Kresek phase: young transplanted seedlings wilt and die completely within days",
+    "Follows storms, flooding, and fields given heavy urea"
+  ],
+  "symptoms_bn": [
+    "পাতার আগা বা কিনারা থেকে হলুদ বা খড়ের রঙের ঢেউ খেলানো দাগ নিচের দিকে নামে",
+    "খুব ভোরে নতুন দাগের গায়ে দুধের মতো বা হলদেটে আঠালো ফোঁটা দেখা যায় — কাটা পাতার আগা পরিষ্কার পানিতে চেপে ধরলে ঘোলা ধোঁয়ার মতো বের হয়",
+    "পুরো পাতা খড়ের রঙে শুকিয়ে যায়, জমি দেখলে মনে হয় পুড়ে গেছে",
+    "ক্রেসেক অবস্থা: রোপণের পর অল্পবয়সী চারা কয়েক দিনেই ঢলে পড়ে মরে যায়",
+    "ঝড়, বন্যা এবং বেশি ইউরিয়া দেওয়া জমিতে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do NOT spray a fungicide",
+      "detail": "Fungicides do not work on bacteria. Spraying one wastes money and delays the actions that actually help. Many farmers lose the crop this way."
+    },
+    {
+      "step": 2,
+      "title": "Stop all nitrogen immediately",
+      "detail": "Hold back every remaining urea top-dress. Nitrogen makes BLB spread dramatically faster. This is the single most important step."
+    },
+    {
+      "step": 3,
+      "title": "Drain the field",
+      "detail": "Drain standing water and keep the field just moist for 3-4 days. Standing water carries the bacteria from plant to plant."
+    },
+    {
+      "step": 4,
+      "title": "Apply potash",
+      "detail": "Top-dress 5-7 kg MoP per bigha (33 decimal). Potash noticeably slows BLB."
+    },
+    {
+      "step": 5,
+      "title": "Stop moving through the field",
+      "detail": "The bacteria spread on wet clothes, hands and tools. Do not walk through a wet infected field, and never move from an infected field into a clean one without washing."
+    },
+    {
+      "step": 6,
+      "title": "Do not clip seedling tips",
+      "detail": "Clipping leaf tips at transplanting is a main entry route for the bacteria. Stop the practice in BLB-prone areas."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ছত্রাকনাশক স্প্রে করবেন না",
+      "detail": "ব্যাকটেরিয়ার রোগে ছত্রাকনাশকে কাজ হয় না। স্প্রে করলে শুধু টাকা নষ্ট হয় আর আসল কাজ পিছিয়ে যায়। অনেক কৃষক এভাবেই ফসল হারান।"
+    },
+    {
+      "step": 2,
+      "title": "নাইট্রোজেন সার এখনই বন্ধ",
+      "detail": "বাকি ইউরিয়া দেওয়া পুরোপুরি বন্ধ রাখুন। নাইট্রোজেন দিলে এই রোগ অনেক দ্রুত ছড়ায়। এটাই সবচেয়ে জরুরি কাজ।"
+    },
+    {
+      "step": 3,
+      "title": "জমির পানি বের করে দিন",
+      "detail": "দাঁড়ানো পানি সরিয়ে ৩-৪ দিন জমি শুধু ভেজা রাখুন। দাঁড়ানো পানি এক গাছ থেকে আরেক গাছে জীবাণু নিয়ে যায়।"
+    },
+    {
+      "step": 4,
+      "title": "পটাশ সার দিন",
+      "detail": "বিঘা প্রতি (৩৩ শতাংশ) ৫-৭ কেজি এমওপি উপরি প্রয়োগ করুন। পটাশ দিলে রোগ ছড়ানো লক্ষণীয়ভাবে কমে।"
+    },
+    {
+      "step": 5,
+      "title": "জমিতে ঘোরাঘুরি বন্ধ করুন",
+      "detail": "ভেজা কাপড়, হাত ও যন্ত্রপাতির মাধ্যমে জীবাণু ছড়ায়। ভেজা আক্রান্ত জমিতে হাঁটবেন না, আর আক্রান্ত জমি থেকে সোজা ভালো জমিতে যাবেন না — আগে ধুয়ে নিন।"
+    },
+    {
+      "step": 6,
+      "title": "চারার আগা কাটবেন না",
+      "detail": "রোপণের সময় চারার পাতার আগা কাটলে সেই ক্ষত দিয়েই জীবাণু ঢোকে। এই রোগপ্রবণ এলাকায় আগা কাটার অভ্যাস বন্ধ করুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow resistant varieties — BRRI dhan51, BRRI dhan52, BRRI dhan62, BRRI dhan75 and newer BLB-resistant BRRI releases",
+    "Use certified, disease-free seed from BADC or a licensed dealer",
+    "Split nitrogen into 3 doses and never exceed the FRG rate",
+    "Do not transplant into flooded fields immediately after a storm",
+    "Keep the field free of weedy rice and grass weeds, which host the bacteria",
+    "Burn or deep-bury infected straw and stubble; do not feed it to cattle that will return manure to the same field"
+  ],
+  "cultural_control_bn": [
+    "প্রতিরোধী জাত লাগান — ব্রি ধান৫১, ব্রি ধান৫২, ব্রি ধান৬২, ব্রি ধান৭৫ এবং নতুন বিএলবি-প্রতিরোধী ব্রি জাতসমূহ",
+    "বিএডিসি বা লাইসেন্সধারী দোকান থেকে সার্টিফাইড, রোগমুক্ত বীজ নিন",
+    "নাইট্রোজেন ৩ কিস্তিতে দিন এবং এফআরজি মাত্রার বেশি কখনো নয়",
+    "ঝড়ের পরপরই ডুবে থাকা জমিতে চারা রোপণ করবেন না",
+    "জমিতে আগাছা ও ঘাস পরিষ্কার রাখুন, এগুলোতে জীবাণু আশ্রয় নেয়",
+    "আক্রান্ত খড় ও নাড়া পুড়িয়ে বা গভীরে পুঁতে ফেলুন; ওই খড় গরুকে খাওয়ালে গোবরের সাথে আবার জমিতেই ফিরে আসে"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Copper oxychloride 50% WP",
+      "product_name_bn": "কপার অক্সিক্লোরাইড ৫০% ডব্লিউপি",
+      "active_ingredient": "Copper oxychloride",
+      "formulation": "WP",
+      "dose_en": "3 g per litre of water (about 30 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ৩ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৩০ গ্রাম)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray over the canopy. Copper only suppresses surface bacteria and slows spread — it does not cure infected leaves. Use it as support alongside draining and stopping nitrogen, not instead of them.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছে দিন। কপার শুধু পাতার উপরের জীবাণু কমায় ও ছড়ানো ধীর করে — আক্রান্ত পাতা সারায় না। পানি সরানো ও ইউরিয়া বন্ধ করার বিকল্প নয়, সহায়ক হিসেবে ব্যবহার করুন।",
+      "timing_en": "As soon as streaks are confirmed, and again after 10 days if the disease is still moving. Do not spray during flowering.",
+      "timing_bn": "দাগ নিশ্চিত হওয়া মাত্র, আর রোগ ছড়াতে থাকলে ১০ দিন পর আরেকবার। ফুল ফোটা অবস্থায় স্প্রে করবেন না।",
+      "interval_days": 10,
+      "max_applications_per_season": 2,
+      "phi_days": 15,
+      "pre_harvest_interval_note_en": "Do not harvest for 15 days after the last spray. Copper accumulates in soil — do not use it season after season on the same plot.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ১৫ দিন ধান কাটবেন না। কপার মাটিতে জমা হয় — একই জমিতে বছরের পর বছর ব্যবহার করবেন না।",
+      "brands_available_bd": [
+        "Cupravit 50 WP",
+        "Champion 77 WP",
+        "Blue Copper"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Copper-based fungicides are registered in Bangladesh; the PPW list records Champion 77 WP under AP-354 (Petrochem Bangladesh Ltd), though the list's stated active for that entry varies between copper hydroxide and copper oxychloride across sources — verify before display.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-354"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Draining plus stopping nitrogen plus potash is the real 'organic' treatment here and works better than any spray",
+    "Cowdung slurry extract sprays are traditional but there is no reliable Bangladesh trial data supporting them — treat as unproven",
+    "Pseudomonas fluorescens seed and seedling-root treatment gives some suppression when used preventively"
+  ],
+  "organic_alternatives_bn": [
+    "পানি সরানো + ইউরিয়া বন্ধ + পটাশ দেওয়া — এটাই এখানে আসল জৈব চিকিৎসা, যেকোনো স্প্রের চেয়ে ভালো কাজ করে",
+    "গোবরের নির্যাস স্প্রে করার চল আছে, তবে বাংলাদেশে এর নির্ভরযোগ্য পরীক্ষার ফল নেই — প্রমাণিত নয় ধরে নিন",
+    "আগেভাগে সুডোমোনাস ফ্লুরোসেন্স দিয়ে বীজ ও চারার শিকড় শোধন করলে কিছুটা উপকার হয়"
+  ],
+  "fertilizer_advice_en": "Cut nitrogen, raise potash. Do not apply any urea while the disease is active. Give the full MoP dose and consider a foliar potash spray. Resume normal nitrogen only after new leaves come out clean.",
+  "fertilizer_advice_bn": "নাইট্রোজেন কমান, পটাশ বাড়ান। রোগ চলাকালীন কোনো ইউরিয়া দেবেন না। পুরো এমওপি মাত্রা দিন, দরকারে পাতায় পটাশ স্প্রে করুন। নতুন পাতা পরিষ্কার বের হলে তবেই আবার স্বাভাবিক ইউরিয়া দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Copper compounds stain and irritate skin and are toxic to fish — never rinse the sprayer into a pond, canal or ditch. Keep away from livestock drinking water. Wash thoroughly with soap after spraying.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। কপার চামড়ায় দাগ ও জ্বালা ধরায় এবং মাছের জন্য বিষাক্ত — পুকুর, খাল বা নালায় স্প্রেয়ার ধোবেন না। গবাদিপশুর খাওয়ার পানি থেকে দূরে রাখুন। স্প্রের পর সাবান দিয়ে ভালো করে ধুয়ে ফেলুন।",
+  "legal_note_en": "Antibiotic sprays (streptomycin and similar) are sometimes sold for BLB. Using antibiotics on crops drives antimicrobial resistance and is not an approved DAE recommendation — do not use them. Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "বিএলবি-র জন্য কখনো কখনো অ্যান্টিবায়োটিক (স্ট্রেপ্টোমাইসিন জাতীয়) বিক্রি হয়। ফসলে অ্যান্টিবায়োটিক ব্যবহার করলে জীবাণু ওষুধ-প্রতিরোধী হয়ে ওঠে এবং এটি ডিএই-র অনুমোদিত সুপারিশ নয় — ব্যবহার করবেন না। শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 immediately if seedlings are wilting and dying (kresek), if more than 20% of the field is scorched, or if the disease appeared after flood water entered the field. BLB outbreaks after floods need Upazila-level coordination.",
+  "when_to_call_helpline_bn": "চারা ঢলে পড়ে মরতে থাকলে (ক্রেসেক), জমির ২০% এর বেশি পুড়ে গেলে, অথবা বন্যার পানি ঢোকার পর রোগ দেখা দিলে সাথে সাথে ১৬১২৩ নম্বরে ফোন করুন। বন্যার পর বিএলবি ছড়ালে উপজেলা পর্যায়ে সমন্বিত ব্যবস্থা লাগে।",
+  "expected_outcome_en": "With nitrogen stopped, field drained and potash applied, spread usually slows within 7-10 days and new leaves emerge clean. Leaves already scorched will not recover. Yield loss depends on how early the flag leaf was hit — if the flag leaf stays green, most of the yield is saved.",
+  "expected_outcome_bn": "ইউরিয়া বন্ধ, পানি সরানো ও পটাশ দেওয়ার পর সাধারণত ৭-১০ দিনের মধ্যে ছড়ানো কমে আসে এবং নতুন পাতা পরিষ্কার বের হয়। যে পাতা পুড়ে গেছে তা আর ভালো হবে না। ফ্ল্যাগ লিফ কত আগে আক্রান্ত হয়েছে তার উপর ফলন নির্ভর করে — ফ্ল্যাগ লিফ সবুজ থাকলে ফলনের বেশিরভাগ বাঁচে।",
+  "related_shop_products": [
+    "Copper oxychloride 50% WP 500g",
+    "MoP (Muriate of Potash) 50kg bag",
+    "BRRI dhan75 certified seed 10kg",
+    "Knapsack sprayer 16L manual",
+    "Nitrile spray gloves"
+  ],
+  "seasons_relevant": [
+    "kharif2",
+    "rabi"
+  ],
+  "months_relevant": [
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source": "BRRI BLB-resistant variety releases and extension guidance (brri.gov.bd); The Asian Age, 'BLB and Blast-Resistant Rice Varieties: BRRI's Breakthrough'; IRRI Rice Knowledge Bank bacterial blight; DAE Plant Protection Wing registered pesticide list",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "CRITICAL for app logic: this is bacterial, not fungal. The app must never recommend a fungicide-only pathway for this class. Antibiotic use is explicitly discouraged. Champion 77 WP active ingredient is reported inconsistently across sources — flagged in registration_ref. | class_name aligned to model spelling (Rice___Bacterial_leaf_blight -> Rice___bacterial_leaf_blight).",
+  "related_shop_skus": [
+    {
+      "ref_text": "Copper oxychloride 50% WP 500g",
+      "sku": "PEST-0036",
+      "name_en": "Copper oxychloride 50% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "BRRI dhan75 certified seed 10kg",
+      "sku": "SEED-0012",
+      "name_en": "BRRI dhan75 certified Aman rice seed 10kg",
+      "category": "seed",
+      "match_score": 1.051,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nitrile spray gloves",
+      "sku": "EQ-0011",
+      "name_en": "Nitrile spray gloves (pair)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

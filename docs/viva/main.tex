@@ -1,0 +1,213 @@
+\documentclass[Times,11pt,oneside,openany]{report}
+\usepackage[a4paper,width=155mm,top=22mm,bottom=22mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+\urlstyle{same}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.45em}
+\setlist[itemize]{leftmargin=1.3em}
+\setlist[enumerate]{leftmargin=1.3em}
+
+\title{\textbf{AgroScan Viva Guide}\\[0.4em]
+\large Code map, architecture, and functions with file locations}
+\author{Study notes for the CSE400 viva\\AgroScan --- leaf photo $\rightarrow$ crop $\rightarrow$ disease $\rightarrow$ advice}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\listoftables
+\listoffigures
+
+\chapter{What to say first}
+AgroScan is a Bangladesh farmer decision-support app. A user photographs a leaf. The server asks three questions in order: is this a leaf, which crop is it, which disease is it. Treatment text does not come from the neural net. It comes from a written bilingual pack. Chat uses that pack first. A language model is only for leftover questions. The same API also runs a local shop, a dealer desk, and an admin desk.
+
+\textbf{One sentence if they interrupt:} ``It is a gated three-level CNN pipeline plus a written advice pack, served as a Bengali web app.''
+
+\textbf{Numbers they will ask.} 27 crops. About 123 disease classes. Three disease backbones: EfficientNet-B3, ResNet-50, DenseNet-121. Test accuracy about 97.9\% / 97.9\% / 97.6\%. Leaf accept 0.50. Crop confirm 0.90. Uncertain 0.45. Low confidence 0.80. Production: \url{https://agroscan.mujahidulhaquejihad.com}.
+
+\textbf{This repo has 434 Python functions and 425 JavaScript functions} in \texttt{agroscan/}, \texttt{backend/}, \texttt{scripts/}, and \texttt{web/*.js}. You do not memorise all of them. You memorise the ones in Chapter~\ref{ch:must} and you can find the rest in the tables.
+
+\chapter{Must-know functions}
+\label{ch:must}
+If they ask ``where is that in the code?'', these are the answers.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}p{4.1cm}p{3.3cm}X@{}}
+\toprule
+\textbf{What they ask} & \textbf{Where} & \textbf{What it does} \\
+\midrule
+Whole diagnosis & \texttt{infer.py} \texttt{InferenceEngine.predict} 392--472 & Leaf $\rightarrow$ crop $\rightarrow$ disease, early exits \\
+Is it a leaf? & \texttt{infer.py} \texttt{\_leaf\_stage} 187--211 & MobileNetV3-Large, threshold 0.50 \\
+Which crop? & \texttt{infer.py} \texttt{\_crop\_stage} 225--278 & EfficientNet-B3, or disease-prob fallback \\
+Which disease? & \texttt{infer.py} \texttt{\_disease\_stage} 292--389 & Mask to crop, max-confidence winner \\
+Mask to crop & \texttt{infer.py} \texttt{\_mask\_probs} 280--290 & Zero out other crops' classes \\
+HTTP upload & \texttt{backend/main.py} \texttt{predict} 152--180 & \texttt{POST /api/predict} \\
+Build a CNN & \texttt{models.py} \texttt{build\_model} 11--42 & timm/torchvision backbone + head \\
+Load \texttt{.pt} & \texttt{models.py} \texttt{load\_checkpoint} 70--80 & arch, class names, weights \\
+Train loop & \texttt{engine.py} \texttt{train\_model} 53-- & Focal loss, AMP, resume \\
+Advice text & \texttt{knowledge.py} \texttt{advice\_for} 365-- & Pack lookup by class name \\
+Chat ladder & \texttt{llm\_chat.py} \texttt{chat\_reply} 932--1026 & clarify $\rightarrow$ pack $\rightarrow$ KB $\rightarrow$ Gemini \\
+RAG fetch & \texttt{rag.py} \texttt{retrieve} 235-- & TF-IDF + cosine, $k=6$ \\
+Shop order & \texttt{shop\_db.py} \texttt{create\_order} 529-- & Insert order, pick supplier \\
+Vendor login & \texttt{shop\_db.py} \texttt{vendor\_login} 1261-- & Token for \texttt{/vendor} \\
+Farmer login & \texttt{auth\_store.py} \texttt{login\_local} 168-- & Session token \\
+Click Analyze & \texttt{web/core.js} \texttt{runAnalyze} 750-- & Compress image, POST predict \\
+Draw result & \texttt{web/core.js} \texttt{renderResult} 359-- & Gate / crop picker / disease card \\
+Chat UI & \texttt{web/app-extra.js} \texttt{sendChat} 945-- & \texttt{POST /api/chat} \\
+Shop cart & \texttt{web/shop.js} \texttt{checkout} 809-- & \texttt{POST /api/shop/orders} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\chapter{How a request travels}
+\begin{enumerate}
+    \item Browser: \texttt{web/index.html} loads \texttt{config.js}, \texttt{i18n.js}, \texttt{core.js}, \texttt{app.js}, \texttt{app-extra.js}, \texttt{shop.js}.
+    \item User taps capture. \texttt{core.js} \texttt{runAnalyze} compresses the photo and POSTs to \texttt{/api/predict}.
+    \item \texttt{backend/main.py} \texttt{predict} reads bytes, \texttt{load\_rgb\_image}, calls \texttt{engine.predict}.
+    \item \texttt{InferenceEngine} was created at startup in \texttt{\_load} (line 102).
+    \item JSON comes back: \texttt{stage1\_leaf\_gate}, \texttt{stage2\_leaf\_type}, \texttt{stage3\_disease}.
+    \item If crop confidence $< 0.90$, UI asks the farmer to pick. Then \texttt{runAnalyzeWithCrop} (line 831) sends \texttt{crop=} again.
+    \item Advice is already inside \texttt{best\_answer.advice} from \texttt{advice\_for}. Chat is a separate \texttt{POST /api/chat}.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig_pipeline.png}
+\caption{Leaf gate, crop, disease, then pack advice.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig_architecture.png}
+\caption{Web / APK / vendor / admin all hit the same FastAPI process.}
+\end{figure}
+
+\chapter{Vision pipeline (say this slowly)}
+\section{Level 1 --- leaf gate}
+File: \texttt{agroscan/infer.py}. Model file: \texttt{models/leaf\_gate.pt}. Architecture: MobileNetV3-Large. Size $224\times224$. Classes: \texttt{leaf}, \texttt{non\_leaf}. Threshold \texttt{LEAF\_ACCEPT\_THRESHOLD = 0.5} in \texttt{agroscan/config.py} line 162.
+
+\texttt{\_leaf\_stage} (187--211) runs softmax, finds the leaf index, returns \texttt{is\_leaf}. If false, \texttt{predict} returns immediately with a Bangla message (409--413). \textbf{Why:} a disease net always picks \emph{some} class. A selfie would become ``tomato blight'' without the gate.
+
+\section{Level 2 --- crop}
+File: same. Checkpoint: \texttt{models/leaf\_type.pt}. EfficientNet-B3. Size $300\times300$. 27 crops. \texttt{\_crop\_stage} (225--278). If confidence $<$ \texttt{CROP\_USER\_CONFIRM\_THRESHOLD} (0.90, config line 164), \texttt{needs\_user\_pick} is set and disease is skipped (445--455). If the crop looks like ``Other'' (\texttt{CROP\_OTHER\_THRESHOLD} 0.55), disease is skipped.
+
+\textbf{Why crop first:} tomato early blight and potato early blight are different pack cards. Masking happens in \texttt{\_mask\_probs}.
+
+\section{Level 3 --- disease ensemble}
+Three checkpoints from \texttt{config.DISEASE\_ARCHS}: EfficientNet-B3, ResNet-50, DenseNet-121. About 123 classes named \texttt{Crop\_\_\_Disease}. Each model softmax is aligned onto the largest vocabulary (\texttt{\_align\_probs}, 157--165). Then each vector is masked to the chosen crop. \textbf{We do not average.} Line 341: \texttt{winner = max(per\_model, key=confidence)}. That is the sentence they want.
+
+Flags on the winner: \texttt{uncertain} if conf $< 0.45$, \texttt{low\_confidence} if conf $< 0.80$ (\texttt{config.py} 158--160). Advice is attached via \texttt{advice\_for} (380--382).
+
+\texttt{\_pretty} (70--91) splits \texttt{Tomato\_\_\_Late\_blight} into plant + condition.
+
+\section{Preprocessing}
+\texttt{agroscan/image\_io.py} \texttt{load\_rgb\_image} turns bytes/PIL into RGB. Optional auto-crop: \texttt{agroscan/leaf\_crop.py} \texttt{auto\_crop\_leaf} (HSV green mask + largest contour), exposed as \texttt{POST /api/preprocess/auto-crop}. Transforms: \texttt{agroscan/data.py} \texttt{infer\_transform}.
+
+\chapter{Training and data}
+Command: \texttt{python -m agroscan.train\_all} $\rightarrow$ \texttt{train\_leaf.py}, \texttt{train\_crop.py}, \texttt{train\_disease.py}. Shared loop: \texttt{engine.train\_model}. Loss: \texttt{FocalLoss} (engine.py 18--33) if \texttt{USE\_FOCAL\_LOSS}. Checkpoints: \texttt{models/leaf\_gate.pt}, \texttt{leaf\_type.pt}, \texttt{disease\_efficientnet\_b3.pt}, \texttt{disease\_resnet50.pt}, \texttt{disease\_densenet121.pt}. Resume files: \texttt{*.train.pt}.
+
+Folders: \texttt{Datasets/leaf\_gate/}, \texttt{Datasets/leaf\_type/}, \texttt{Datasets/train|valid|test/}. Sources: PlantVillage, PlantDoc, Bangladesh sets. \texttt{data.py} \texttt{disease\_loaders} / \texttt{combined\_disease\_loaders} build the DataLoaders.
+
+\textbf{If they ask why accuracy is high:} large test set ($\sim$30k images), transfer learning, three similar CNNs. \textbf{Honest limit:} test photos are still cleaner than a dark field phone photo. That is why the gate and the 90\% crop confirm exist.
+
+\chapter{Advice, chat, RAG}
+\section{Pack}
+\texttt{data/agroscan/} JSON cards (about 44 diseases, EN+BN). \texttt{knowledge.py} \texttt{advice\_for} maps a vision class name onto a card (pathogen, symptoms, cultural control, chemicals, 16123). Chat formatting: \texttt{\_format\_pack\_reply} (599). Name matching: \texttt{resolve\_disease\_query} (803).
+
+\section{Chat order (memorise)}
+\texttt{llm\_chat.chat\_reply} (932--1026):
+\begin{enumerate}
+    \item Clarify if the name fits several crops (\texttt{source: clarify}).
+    \item Pack catalog / matched pack (\texttt{source: pack}) --- LLM is not called.
+    \item Small KB: hello, 16123, how to use the app (\texttt{knowledge.chatbot\_reply}, 888).
+    \item If Gemini is on: \texttt{generate\_reply} with RAG snippets (\texttt{source: gemini+rag}).
+    \item Else optional local Qwen. If the text looks bad, fall back to KB.
+\end{enumerate}
+
+\section{RAG}
+Not FAISS. Sklearn TF-IDF + cosine in \texttt{agroscan/rag.py} \texttt{retrieve}. Top 6 chunks. If a disease key is already known, \texttt{allow\_keys} pins retrieval so rice blast pages cannot leak maize blight doses.
+
+HTTP: \texttt{POST /api/chat} $\rightarrow$ \texttt{backend/main.py} \texttt{chat} (265). Vision+chat wrap: \texttt{POST /api/chat/vision} $\rightarrow$ \texttt{vision\_scan\_reply} (1166).
+
+\chapter{Shop, vendor, admin, accounts}
+SQLite \texttt{shop.db}. Schema and queries: \texttt{agroscan/shop\_db.py}. Seed from pack: \texttt{shop\_seed.py} \texttt{seed\_from\_pack}, called at API startup if the catalogue is thin.
+
+Farmer: \texttt{GET /api/shop/products}, \texttt{POST /api/shop/orders}. Vendor token $\neq$ farmer token $\neq$ admin token. Vendor may only see their \texttt{supplier\_id} orders (\texttt{vendor\_order\_detail}, main.py 1028). Vendor shop profile: \texttt{PATCH /api/vendor/me} (982). Farmer auth: \texttt{auth\_store.py} + \texttt{/api/auth/*}.
+
+\chapter{Frontend files (what each JS file is for)}
+\begin{itemize}
+    \item \texttt{config.js} --- \texttt{API\_BASE}, online pill against \texttt{/api/status}.
+    \item \texttt{i18n.js} --- Bangla/English strings.
+    \item \texttt{core.js} --- status, upload, analyze, render diagnosis.
+    \item \texttt{app.js} --- page init, older upload/chat wiring.
+    \item \texttt{app-extra.js} --- chat panel, mic, speech, vision-in-chat.
+    \item \texttt{shop.js} --- catalogue, cart, checkout, orders.
+    \item \texttt{field.js} --- named plots.
+    \item \texttt{auth.js} / \texttt{account.js} --- login header and account page.
+    \item \texttt{crop.js} --- perspective / auto-crop UI.
+    \item \texttt{offline-infer.js} --- leftover ONNX path; production APK does not ship models.
+    \item \texttt{ops.js} --- shared helpers for vendor/admin HTML.
+    \item Vendor UI lives in \texttt{web/vendor.html} (inline script). Admin in \texttt{web/admin.html}.
+    \item Android: \texttt{mobile/} Capacitor shell. No on-device ensemble.
+\end{itemize}
+
+\chapter{API list you should be able to name}
+Diagnosis: \texttt{GET /api/status}, \texttt{POST /api/predict}, \texttt{POST /api/preprocess/auto-crop}. Chat: \texttt{POST /api/chat}, \texttt{POST /api/chat/vision}, \texttt{POST /api/chat/stt}. Shop: \texttt{/api/shop/products}, \texttt{/api/shop/orders}. Auth: \texttt{/api/auth/signup|login|me}. Vendor: \texttt{/api/vendor/login}, \texttt{/me}, \texttt{/orders}, \texttt{/listings}. Admin: \texttt{/api/admin/login}, users, orders, products, vendors. HTML pages: \texttt{/}, \texttt{/vendor}, \texttt{/admin}. Every route function is in Table~\ref{tab:pyapi}.
+
+\chapter{Likely viva questions}
+\begin{enumerate}
+    \item \textbf{Why three levels?} Disease nets always output a class. Gate stops non-leaves. Crop locking stops tomato spots being called rice blast.
+    \item \textbf{Why not average the three disease models?} A weak model would dilute a confident one. Code takes the max confidence (infer.py 341).
+    \item \textbf{Why is advice not from the CNN?} CNNs see pixels. Doses and 16123 come from a curated pack (\texttt{advice\_for}).
+    \item \textbf{What if crop confidence is 70\%?} Farmer must pick from top-3. Disease does not run yet.
+    \item \textbf{Bengali?} Default UI language. Pack and chat have BN strings. \texttt{i18n.js}.
+    \item \textbf{Can it work offline?} Shell/PWA cache the UI. Diagnosis needs the server. ONNX was removed from the APK.
+    \item \textbf{Animal disease?} In the literature, not in the running app. Say that clearly.
+    \item \textbf{Grad-CAM?} Used in the model-comparison notebook, not on every farmer card. Trust in production is gate + crop confirm + pack + helpline.
+    \item \textbf{Imbalance?} Focal loss + balanced sampler in \texttt{engine.py} / \texttt{data.py}.
+    \item \textbf{Security?} Separate tokens; vendor scoped to supplier; hashed passwords; no mixing farmer and admin sessions.
+\end{enumerate}
+
+\chapter{Python function index}
+Open the file at the line in the right-hand column. Nested helpers inside a function are not listed; only top-level functions and class methods.
+
+\input{tab_py_infer}
+\input{tab_py_chat}
+\input{tab_py_shop}
+\input{tab_py_api}
+\input{tab_py_rest}
+
+\chapter{JavaScript function index}
+These are \texttt{function name(} declarations inside \texttt{web/*.js}. Vendor and admin logic that sits in the HTML script tags is not in this list; read \texttt{web/vendor.html} and \texttt{web/admin.html} for those desks.
+
+\input{tab_js}
+
+\chapter{Counts}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Python functions (agroscan + backend + scripts) & 434 \\
+Python classes & 25 \\
+JavaScript functions (\texttt{web/*.js}) & 425 \\
+Largest Python files & \texttt{backend/main.py} 72, \texttt{shop\_db.py} 44, \texttt{llm\_chat.py} 39 \\
+Largest JS files & \texttt{shop.js} 58, \texttt{app-extra.js} 51, \texttt{field.js} 41 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+If a lecturer asks ``how many functions does the project have?'': \textbf{about 860 in application code}, plus HTML-inline vendor/admin scripts. Do not count \texttt{site-packages}.
+
+\end{document}

@@ -1,0 +1,152 @@
+{
+  "class_name": "Strawberry___healthy",
+  "kb_key": "healthy_strawberry",
+  "crop_en": "Strawberry",
+  "crop_bn": "স্ট্রবেরি",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "bangladesh_relevance": "niche_commercial",
+  "bangladesh_note_en": "Strawberry is a small niche winter crop in Bangladesh, grown around Rajshahi, Chapainawabganj, Jashore and near Dhaka.",
+  "bangladesh_note_bn": "বাংলাদেশে স্ট্রবেরি ছোট পরিসরের শীতকালীন ফসল — রাজশাহী, চাঁপাইনবাবগঞ্জ, যশোর ও ঢাকার আশপাশে হয়।",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Plastic mulch, drip irrigation and regular removal of old leaves keep strawberry healthy through the short Bangladeshi winter season.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। প্লাস্টিক মালচ, ড্রিপ সেচ আর নিয়মিত পুরনো পাতা ছাঁটাই — এতেই বাংলাদেশের ছোট শীত মৌসুমজুড়ে স্ট্রবেরি সুস্থ থাকে।",
+  "symptoms_en": [
+    "Even green leaves with no purple spots or scorching",
+    "No grey mould on fruit",
+    "Healthy runners and crowns"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো বেগুনি দাগ বা ঝলসানো ভাব নেই",
+    "ফলে ধূসর ছাতা নেই",
+    "রানার ও গোড়া সুস্থ"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray. Strawberry is picked every 2-3 days and eaten fresh, so every avoidable spray is worth avoiding."
+    },
+    {
+      "step": 2,
+      "title": "Keep the plastic mulch intact",
+      "detail": "Mulch is what keeps fruit off the soil and prevents most strawberry rots."
+    },
+    {
+      "step": 3,
+      "title": "Remove old leaves after each flush",
+      "detail": "This keeps the crown open and dry."
+    },
+    {
+      "step": 4,
+      "title": "Drip irrigate in the morning only",
+      "detail": "Never wet the leaves or fruit."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "স্প্রে করবেন না। স্ট্রবেরি ২-৩ দিন পর পর তোলা হয় ও কাঁচা খাওয়া হয়, তাই যতটা স্প্রে এড়ানো যায় ততই ভালো।"
+    },
+    {
+      "step": 2,
+      "title": "প্লাস্টিক মালচ ঠিক রাখুন",
+      "detail": "মালচের কারণেই ফল মাটি ছোঁয় না আর স্ট্রবেরির বেশিরভাগ পচা রোগ হয় না।"
+    },
+    {
+      "step": 3,
+      "title": "প্রতিবার ফল তোলার পর পুরনো পাতা সরান",
+      "detail": "এতে গাছের গোড়া খোলা ও শুকনো থাকে।"
+    },
+    {
+      "step": 4,
+      "title": "শুধু সকালে ড্রিপ সেচ দিন",
+      "detail": "পাতা বা ফল কখনো ভেজাবেন না।"
+    }
+  ],
+  "cultural_control_en": [
+    "Raised beds with plastic mulch",
+    "Drip irrigation",
+    "Clean certified planting material",
+    "Wide spacing",
+    "Do not work in wet plants"
+  ],
+  "cultural_control_bn": [
+    "প্লাস্টিক মালচসহ উঁচু বেড",
+    "ড্রিপ সেচ",
+    "পরিষ্কার সার্টিফাইড চারা",
+    "বেশি দূরত্বে লাগানো",
+    "ভেজা গাছে কাজ না করা"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Plastic mulch",
+    "Trichoderma in the bed",
+    "Well-decomposed compost"
+  ],
+  "organic_alternatives_bn": [
+    "প্লাস্টিক মালচ",
+    "বেডে ট্রাইকোডার্মা",
+    "ভালোভাবে পচা কম্পোস্ট"
+  ],
+  "fertilizer_advice_en": "Fertigate in small frequent doses. Adequate calcium and potassium give firm fruit with better shelf life.",
+  "fertilizer_advice_bn": "সেচের সাথে অল্প অল্প করে বারবার সার দিন। পর্যাপ্ত ক্যালসিয়াম ও পটাশে ফল শক্ত হয় ও বেশি দিন টেকে।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, labelled and away from food, water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তালাবদ্ধ, লেবেলসহ এবং খাবার, পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Krishi Call Center: 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if purple spots appear on leaves or if fruit develops grey fuzzy mould.",
+  "when_to_call_helpline_bn": "পাতায় বেগুনি দাগ দেখা দিলে বা ফলে ধূসর তুলার মতো ছাতা পড়লে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With mulch, drip irrigation and deleafing, strawberry normally completes the short Bangladeshi winter season with little or no spraying.",
+  "expected_outcome_bn": "মালচ, ড্রিপ সেচ ও পাতা ছাঁটাই করলে বাংলাদেশের ছোট শীত মৌসুমে স্ট্রবেরি সাধারণত খুব কম বা কোনো স্প্রে ছাড়াই শেষ হয়।",
+  "related_shop_products": [
+    "Black plastic mulch film",
+    "Drip irrigation kit 1 decimal",
+    "Calcium nitrate 1kg"
+  ],
+  "seasons_relevant": [
+    "rabi"
+  ],
+  "months_relevant": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3
+  ],
+  "source": "BARI horticulture guidance on strawberry; general strawberry good agricultural practice",
+  "source_type": "inferred",
+  "last_verified": "2026-08-19",
+  "confidence": "low",
+  "notes": "Healthy class — zero pesticide recommendations. Bangladesh-specific strawberry extension material is limited.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Black plastic mulch film",
+      "sku": "EQ-0077",
+      "name_en": "Black plastic mulch film (per metre)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Calcium nitrate 1kg",
+      "sku": "FERT-0023",
+      "name_en": "Calcium nitrate 1kg",
+      "category": "fertilizer",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

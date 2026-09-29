@@ -1,0 +1,195 @@
+{
+  "class_name": "Tomato___healthy",
+  "kb_key": "healthy_tomato",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Keep it that way with staking, mulching, morning irrigation at the base, and a weekly look at the underside of the leaves.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ লাগবে না। খুঁটি দিয়ে, মালচ দিয়ে, সকালে গোড়ায় সেচ দিয়ে আর সপ্তাহে একবার পাতার নিচের পিঠ দেখে গাছ এমনই রাখুন।",
+  "symptoms_en": [
+    "Even green leaves with no spots, mottling, curling or mould",
+    "No whiteflies rising when the plant is shaken",
+    "No fine speckling or webbing on leaf undersides",
+    "Steady growth with normal internode length"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ, ছোপ, কোঁকড়ানো বা ছাতা নেই",
+    "গাছ ঝাঁকালে সাদা মাছি উড়ছে না",
+    "পাতার নিচে সূক্ষ্ম ছিট বা জাল নেই",
+    "গাছ স্বাভাবিকভাবে বাড়ছে, গিঁটের দূরত্ব ঠিক আছে"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray. Routine spraying on a healthy tomato crop kills the natural enemies of whitefly and mites and often causes the very outbreak you were trying to avoid."
+    },
+    {
+      "step": 2,
+      "title": "Stake and mulch",
+      "detail": "Get every plant onto a stake and every bed under straw or plastic mulch. These two jobs prevent most of the soil-splash diseases in tomato."
+    },
+    {
+      "step": 3,
+      "title": "Check leaf undersides weekly",
+      "detail": "Turn over leaves on 10 plants across the field once a week. Whitefly, mites and leaf mould all show up underneath first."
+    },
+    {
+      "step": 4,
+      "title": "Water at the base in the morning",
+      "detail": "Drip or furrow irrigation, early in the day, so the leaves are dry by evening."
+    },
+    {
+      "step": 5,
+      "title": "Put up yellow sticky traps",
+      "detail": "8-10 per decimal, so you see a whitefly build-up before it becomes a virus problem."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "স্প্রে করবেন না। সুস্থ টমেটোতে নিয়মিত স্প্রে করলে সাদা মাছি ও মাকড়ের শত্রু উপকারী পোকা মরে যায়, ফলে যা ঠেকাতে চেয়েছিলেন সেই আক্রমণই ডেকে আনেন।"
+    },
+    {
+      "step": 2,
+      "title": "খুঁটি ও মালচ দিন",
+      "detail": "প্রতিটি গাছে খুঁটি আর প্রতিটি বেডে খড় বা প্লাস্টিক মালচ দিন। টমেটোর মাটি-ছিটার বেশিরভাগ রোগ এই দুটি কাজেই ঠেকে যায়।"
+    },
+    {
+      "step": 3,
+      "title": "সপ্তাহে একবার পাতার নিচ দেখুন",
+      "detail": "সপ্তাহে একদিন জমির বিভিন্ন জায়গার ১০টি গাছের পাতা উল্টে দেখুন। সাদা মাছি, মাকড় ও ছাতা রোগ — সবই আগে নিচেই দেখা যায়।"
+    },
+    {
+      "step": 4,
+      "title": "সকালে গোড়ায় পানি দিন",
+      "detail": "দিনের শুরুতে ড্রিপ বা নালা সেচ দিন যাতে সন্ধ্যার আগেই পাতা শুকিয়ে যায়।"
+    },
+    {
+      "step": 5,
+      "title": "হলুদ আঠালো ফাঁদ লাগান",
+      "detail": "প্রতি শতাংশে ৮-১০টি, যাতে ভাইরাসের সমস্যা হওয়ার আগেই সাদা মাছি বাড়ছে কিনা বুঝতে পারেন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Raise seedlings under insect-proof net",
+    "Stake every plant and prune the lower leaves",
+    "Mulch all beds",
+    "Keep bunds and field edges free of solanaceous weeds",
+    "Never work in the field when plants are wet",
+    "No tobacco use in or near the field"
+  ],
+  "cultural_control_bn": [
+    "পোকা-প্রতিরোধী নেটের নিচে চারা তৈরি করুন",
+    "প্রতিটি গাছে খুঁটি দিন এবং নিচের পাতা ছেঁটে দিন",
+    "সব বেডে মালচ দিন",
+    "আইল ও জমির কিনারা টমেটো গোত্রের আগাছামুক্ত রাখুন",
+    "গাছ ভেজা থাকলে জমিতে কাজ করবেন না",
+    "জমিতে ও আশপাশে তামাক ব্যবহার করবেন না"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Straw mulch and drip irrigation",
+    "Yellow sticky traps for monitoring",
+    "Trichoderma harzianum in the nursery bed",
+    "Well-rotted cowdung or compost before transplanting"
+  ],
+  "organic_alternatives_bn": [
+    "খড়ের মালচ ও ড্রিপ সেচ",
+    "নজরদারির জন্য হলুদ আঠালো ফাঁদ",
+    "বীজতলায় ট্রাইকোডার্মা হারজিয়ানাম",
+    "চারা রোপণের আগে পচা গোবর বা কম্পোস্ট"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for tomato at your soil fertility level. Apply organic manure and the full basal TSP and MoP before transplanting, then split urea and MoP top-dressings across the growing period. Adequate calcium prevents blossom-end rot.",
+  "fertilizer_advice_bn": "আপনার মাটির উর্বরতা অনুযায়ী টমেটোর জন্য বিএআরসি এফআরজি-২০১৮ মেনে চলুন। চারা রোপণের আগে জৈব সার এবং পুরো টিএসপি ও এমওপি দিন, তারপর গাছ বাড়ার সময়জুড়ে ইউরিয়া ও এমওপি কিস্তিতে উপরি প্রয়োগ করুন। পর্যাপ্ত ক্যালসিয়াম দিলে ফলের গোড়া পচা রোগ হয় না।",
+  "safety_warning_en": "No pesticide is recommended. Keep any stored pesticides locked, in their original containers with labels, away from food, drinking water and children.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই। ঘরে ওষুধ থাকলে তা তালাবদ্ধ, আসল কৌটায় লেবেলসহ, খাবার, খাওয়ার পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. Free advice any time: Krishi Call Center 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। যেকোনো সময় বিনামূল্যে পরামর্শ: কৃষি কল সেন্টার ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if leaves start curling, mottling, spotting, or if whitefly numbers rise on the traps.",
+  "when_to_call_helpline_bn": "পাতা কোঁকড়াতে, ছোপ পড়তে বা দাগ পড়তে শুরু করলে, অথবা ফাঁদে সাদা মাছি বাড়তে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "With staking, mulch, base irrigation and weekly scouting, a tomato crop normally stays healthy through the picking period.",
+  "expected_outcome_bn": "খুঁটি, মালচ, গোড়ায় সেচ আর সপ্তাহে একবার জমি দেখলে টমেটো সাধারণত ফল তোলার পুরো সময় সুস্থ থাকে।",
+  "related_shop_products": [
+    "Bamboo staking poles (bundle of 20)",
+    "Straw mulch",
+    "Yellow sticky trap (pack of 10)",
+    "Drip irrigation kit 1 decimal",
+    "TSP 50kg bag",
+    "MoP (Muriate of Potash) 50kg bag"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    9,
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd); BARI tomato production guidance; 'Cultivating Profitable and Nutritious Tomatoes: A brief guide for Bangladesh' (researchgate 389900612)",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Healthy class — zero pesticide recommendations by design. | class_name aligned to model spelling (Tomato___Healthy -> Tomato___healthy).",
+  "related_shop_skus": [
+    {
+      "ref_text": "Bamboo staking poles (bundle of 20)",
+      "sku": "EQ-0080",
+      "name_en": "Bamboo staking poles (bundle of 20)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Yellow sticky trap (pack of 10)",
+      "sku": "EQ-0069",
+      "name_en": "Yellow sticky trap (pack of 10)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Drip irrigation kit 1 decimal",
+      "sku": "EQ-0028",
+      "name_en": "Drip irrigation kit (1 decimal)",
+      "category": "equipment",
+      "match_score": 0.667,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

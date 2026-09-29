@@ -1,0 +1,260 @@
+{
+  "class_name": "Tomato___Early_blight",
+  "kb_key": "early_blight",
+  "crop_en": "Tomato",
+  "crop_bn": "টমেটো",
+  "disease_en": "Early blight",
+  "disease_bn": "টমেটোর আগাম ধ্বসা রোগ",
+  "pathogen": "Alternaria solani / Alternaria linariae",
+  "severity": "medium",
+  "summary_en": "Brown target-like spots start on the oldest bottom leaves and climb up, stripping the plant from below. The fruit loses its shade and gets sunscald. It is slower than late blight and very manageable if you catch it on the lower leaves.",
+  "summary_bn": "নিচের পুরনো পাতায় তীর ছোড়ার তক্তার মতো বাদামি দাগ দিয়ে শুরু হয়ে উপরে উঠতে থাকে, গাছ নিচ থেকে ন্যাড়া হয়ে যায়। পাতার ছায়া না থাকায় ফলে রোদে পোড়া দাগ পড়ে। নাবি ধ্বসার চেয়ে ধীরে ছড়ায়, নিচের পাতায় থাকতেই ধরতে পারলে সহজেই সামলানো যায়।",
+  "symptoms_en": [
+    "Brown spots with concentric rings inside, surrounded by a yellow halo",
+    "Always starts on the oldest leaves nearest the ground",
+    "Leaves yellow and fall; the plant becomes bare at the bottom",
+    "Dark sunken lesions with rings at the stem end of the fruit",
+    "Dark elongated lesions on the stem, sometimes girdling seedlings (collar rot)",
+    "Worse in warm humid weather and on nitrogen-starved or fruit-loaded plants"
+  ],
+  "symptoms_bn": [
+    "বাদামি দাগ, ভেতরে গোল গোল বলয়, চারপাশে হলুদ বলয়",
+    "সবসময় মাটির কাছের সবচেয়ে পুরনো পাতা থেকে শুরু হয়",
+    "পাতা হলুদ হয়ে ঝরে যায়; গাছ নিচের দিকে ন্যাড়া হয়ে যায়",
+    "ফলের বোঁটার দিকে বসে যাওয়া গাঢ় দাগ, ভেতরে বলয়",
+    "কাণ্ডে লম্বাটে গাঢ় দাগ, চারার গোড়া ঘিরে ধরে মেরে ফেলতে পারে",
+    "গরম স্যাঁতসেঁতে আবহাওয়ায় এবং নাইট্রোজেনের অভাব বা বেশি ফল ধরা গাছে বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Strip the lower leaves",
+      "detail": "Remove all spotted leaves from the bottom 30 cm of the plant and carry them out of the field. This alone slows early blight a lot and costs nothing."
+    },
+    {
+      "step": 2,
+      "title": "Mulch the beds",
+      "detail": "Put straw or plastic mulch under the plants. Most first infections come from soil splashing onto the lowest leaves in rain or irrigation."
+    },
+    {
+      "step": 3,
+      "title": "Feed the plant",
+      "detail": "Early blight hits hungry, stressed, heavily-fruiting plants. Give a nitrogen and potassium top-dress at the FRG rate if the plant looks pale or exhausted."
+    },
+    {
+      "step": 4,
+      "title": "Spray a protectant",
+      "detail": "Mancozeb at 2-2.5 g/L or chlorothalonil, every 7-10 days, covering the lower canopy properly. If already spreading, use difenoconazole or azoxystrobin once, then return to protectants."
+    },
+    {
+      "step": 5,
+      "title": "Keep the leaves dry",
+      "detail": "Irrigate at the base in the morning, not overhead in the evening."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "নিচের পাতা ছেঁটে ফেলুন",
+      "detail": "গাছের নিচের ৩০ সেন্টিমিটারের সব দাগওয়ালা পাতা ছিঁড়ে জমির বাইরে নিয়ে যান। শুধু এতেই রোগ অনেকটা কমে, আর কোনো খরচ নেই।"
+    },
+    {
+      "step": 2,
+      "title": "বেডে মালচ দিন",
+      "detail": "গাছের নিচে খড় বা প্লাস্টিক মালচ দিন। বৃষ্টি বা সেচের সময় মাটির ছিটা নিচের পাতায় লেগেই সাধারণত প্রথম সংক্রমণ হয়।"
+    },
+    {
+      "step": 3,
+      "title": "গাছকে খাবার দিন",
+      "detail": "দুর্বল, কষ্টে থাকা, বেশি ফল ধরা গাছে এই রোগ বেশি হয়। গাছ ফ্যাকাশে বা ক্লান্ত দেখালে এফআরজি মাত্রায় ইউরিয়া ও পটাশ উপরি প্রয়োগ করুন।"
+    },
+    {
+      "step": 4,
+      "title": "প্রতিরোধক ওষুধ স্প্রে করুন",
+      "detail": "প্রতি লিটারে ২-২.৫ গ্রাম ম্যানকোজেব বা ক্লোরোথ্যালোনিল ৭-১০ দিন পর পর, নিচের পাতায় ভালোভাবে লাগিয়ে। ছড়িয়ে গেলে একবার ডাইফেনোকোনাজল বা অ্যাজোক্সিস্ট্রোবিন দিয়ে আবার প্রতিরোধক ওষুধে ফিরুন।"
+    },
+    {
+      "step": 5,
+      "title": "পাতা শুকনো রাখুন",
+      "detail": "সন্ধ্যায় উপর দিয়ে নয়, সকালে গাছের গোড়ায় সেচ দিন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Rotate away from tomato, potato, brinjal and chilli for at least 2 years",
+    "Use certified disease-free seed; treat seed before sowing",
+    "Stake plants so no leaf touches the soil",
+    "Mulch every bed",
+    "Remove and destroy all crop residue at the end of the season",
+    "Do not work in the field when the plants are wet"
+  ],
+  "cultural_control_bn": [
+    "অন্তত ২ বছর টমেটো, আলু, বেগুন ও মরিচ বাদ দিয়ে অন্য ফসল করুন",
+    "সার্টিফাইড রোগমুক্ত বীজ নিন; বপনের আগে বীজ শোধন করুন",
+    "গাছে খুঁটি দিন যাতে কোনো পাতা মাটি না ছোঁয়",
+    "প্রতিটি বেডে মালচ দিন",
+    "মৌসুম শেষে সব গাছের অবশিষ্টাংশ সরিয়ে নষ্ট করুন",
+    "গাছ ভেজা থাকা অবস্থায় জমিতে কাজ করবেন না"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Mancozeb 80% WP",
+      "product_name_bn": "ম্যানকোজেব ৮০% ডব্লিউপি",
+      "active_ingredient": "Mancozeb",
+      "formulation": "WP",
+      "dose_en": "2-2.5 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২-২.৫ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray directed especially at the lower half of the plant.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে, বিশেষ করে গাছের নিচের অর্ধেকে ভালোভাবে দিন।",
+      "timing_en": "Preventive, every 7-10 days from first flowering.",
+      "timing_bn": "প্রতিরোধমূলক, প্রথম ফুল আসার পর থেকে ৭-১০ দিন পর পর।",
+      "interval_days": 7,
+      "max_applications_per_season": 6,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না।",
+      "brands_available_bd": [
+        "Dithane M-45",
+        "Indofil M-45",
+        "Manco 80 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Mancozeb registered in Bangladesh; verify brand AP number against the current PPW list.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Copper hydroxide 77% WP",
+      "product_name_bn": "কপার হাইড্রক্সাইড ৭৭% ডব্লিউপি",
+      "active_ingredient": "Copper hydroxide (or copper oxychloride, depending on brand)",
+      "formulation": "WP",
+      "dose_en": "2 g per litre of water",
+      "dose_bn": "প্রতি লিটার পানিতে ২ গ্রাম",
+      "water_volume_per_decimal": "3-4 litres of spray solution per decimal",
+      "application_method_en": "Knapsack spray covering leaves and stems. Copper is protectant only.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পাতা ও কাণ্ডে দিন। কপার শুধু প্রতিরোধক, রোগ সারায় না।",
+      "timing_en": "Preventive, and acceptable in low-input or organic-leaning systems.",
+      "timing_bn": "প্রতিরোধমূলক; কম ওষুধ ব্যবহার বা জৈব চাষে গ্রহণযোগ্য।",
+      "interval_days": 10,
+      "max_applications_per_season": 4,
+      "phi_days": 7,
+      "pre_harvest_interval_note_en": "Do not pick for 7 days after the last spray. Copper accumulates in soil with repeated seasons.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর ৭ দিন ফল তুলবেন না। বছরের পর বছর দিলে কপার মাটিতে জমে যায়।",
+      "brands_available_bd": [
+        "Champion 77 WP",
+        "Cupravit 50 WP",
+        "Blue Copper"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Champion 77 WP, AP-354, Petrochem (Bangladesh) Limited — recorded in the DAE PPW registered pesticide list for tomato early/late blight at 2 g per litre of water. Note: the list's stated active ingredient for this entry is reported as copper hydroxide in one extract and copper oxychloride in another; confirm from the physical label.",
+      "treatment_type": "preventive",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": true,
+      "verified_ap_numbers": [
+        "AP-354"
+      ]
+    }
+  ],
+  "organic_alternatives_en": [
+    "Straw or plastic mulch — the single highest-value organic measure for this disease",
+    "Trichoderma harzianum in the nursery and at transplanting",
+    "Copper-based protectants where permitted in the production system",
+    "Removing lower infected leaves weekly"
+  ],
+  "organic_alternatives_bn": [
+    "খড় বা প্লাস্টিক মালচ — এই রোগে সবচেয়ে বেশি কাজে দেয় এমন জৈব ব্যবস্থা",
+    "বীজতলায় ও চারা রোপণের সময় ট্রাইকোডার্মা হারজিয়ানাম",
+    "চাষ পদ্ধতিতে অনুমোদিত হলে কপারভিত্তিক প্রতিরোধক ওষুধ",
+    "প্রতি সপ্তাহে নিচের আক্রান্ত পাতা ছেঁটে ফেলা"
+  ],
+  "fertilizer_advice_en": "Keep nitrogen and potassium adequate throughout fruiting — early blight is a stress disease. A heavy fruit load with no top-dressing is the classic trigger. Follow FRG-2018 and split the top-dressings across the picking period.",
+  "fertilizer_advice_bn": "ফল ধরার পুরো সময় নাইট্রোজেন ও পটাশ পর্যাপ্ত রাখুন — এটি কষ্টে থাকা গাছের রোগ। বেশি ফল ধরেছে অথচ উপরি সার দেওয়া হয়নি — এই অবস্থাতেই সাধারণত রোগ শুরু হয়। এফআরজি-২০১৮ মেনে চলুন এবং ফল তোলার সময়জুড়ে কিস্তিতে সার দিন।",
+  "safety_warning_en": "Wear gloves, mask, goggles and full-sleeve clothing. Respect the 7-day PHI before each picking. Wash hands and clothes with soap. Do not rinse equipment near ponds or canals.",
+  "safety_warning_bn": "হাতমোজা, মাস্ক, চশমা ও ফুলহাতা পোশাক পরুন। প্রতিবার ফল তোলার আগে ৭ দিনের পিএইচআই মেনে চলুন। সাবান দিয়ে হাত ও কাপড় ধুয়ে ফেলুন। পুকুর বা খালের পাশে যন্ত্র ধোবেন না।",
+  "legal_note_en": "Use only DAE-registered products. Krishi Call Center: 16123.",
+  "legal_note_bn": "শুধু ডিএই-নিবন্ধিত ওষুধ ব্যবহার করুন। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if defoliation reaches the middle of the plant, if fruit is developing lesions, or if seedlings are dying of collar rot in the nursery.",
+  "when_to_call_helpline_bn": "গাছের মাঝামাঝি পর্যন্ত পাতা ঝরে গেলে, ফলে দাগ পড়তে শুরু করলে, অথবা বীজতলায় চারার গোড়া পচে মরতে থাকলে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "Leaf-stripping, mulching, feeding and a protectant programme usually stop the climb within 2 weeks. The lower leaves will not grow back, but if the top two-thirds of the canopy stays green the fruit will size and colour normally.",
+  "expected_outcome_bn": "নিচের পাতা ছাঁটা, মালচ, সার ও প্রতিরোধক স্প্রে দিলে সাধারণত ২ সপ্তাহে রোগের উপরে ওঠা বন্ধ হয়। নিচের পাতা আর গজাবে না, তবে উপরের দুই-তৃতীয়াংশ সবুজ থাকলে ফল স্বাভাবিকভাবেই বড় হবে ও রং ধরবে।",
+  "related_shop_products": [
+    "Mancozeb 80% WP 500g",
+    "Champion 77 WP (Copper) 500g",
+    "Straw mulch",
+    "Urea 50kg bag",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1"
+  ],
+  "months_relevant": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+  ],
+  "source": "DAE Plant Protection Wing Registered Pesticides List (Champion 77 WP, AP-354, Petrochem Bangladesh Ltd — tomato early/late blight, 2 g/L); BARI tomato production guidance; BARC Fertilizer Recommendation Guide 2018",
+  "source_type": "label",
+  "last_verified": "2026-08-19",
+  "confidence": "medium",
+  "notes": "Champion 77 WP active ingredient reported inconsistently across extracts of the PPW list (copper hydroxide vs copper oxychloride) — flagged in registration_ref and should be confirmed from the physical label before display.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Mancozeb 80% WP 500g",
+      "sku": "PEST-0002",
+      "name_en": "Mancozeb 80% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Champion 77 WP (Copper) 500g",
+      "sku": "PEST-0039",
+      "name_en": "Copper hydroxide 77% WP 500g",
+      "category": "pesticide",
+      "match_score": 1.084,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Straw mulch",
+      "sku": "EQ-0079",
+      "name_en": "Straw mulch (per bundle)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Urea 50kg bag",
+      "sku": "FERT-0003",
+      "name_en": "Urea 46% N 50kg",
+      "category": "fertilizer",
+      "match_score": 0.758,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

@@ -1,0 +1,256 @@
+{
+  "class_name": "Rice___Blast",
+  "kb_key": "blast",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Rice blast",
+  "disease_bn": "ধানের ব্লাস্ট রোগ",
+  "pathogen": "Magnaporthe oryzae (Pyricularia oryzae)",
+  "severity": "high",
+  "summary_en": "Blast is the most damaging rice disease in Bangladesh and can attack the leaf, the node and the neck of the panicle. Neck blast is the dangerous stage — the panicle turns white and gives no grain. Cool nights with heavy dew, cloudy days and too much urea make it spread fast.",
+  "summary_bn": "ব্লাস্ট বাংলাদেশে ধানের সবচেয়ে ক্ষতিকর রোগ। এটি পাতা, গিঁট আর শিষের গোড়ায় আক্রমণ করে। শিষের গোড়ায় ধরলে (নেক ব্লাস্ট) শিষ সাদা হয়ে যায়, ধান চিটা হয়। রাতে ঠান্ডা ও কুয়াশা, দিনে মেঘলা আবহাওয়া এবং বেশি ইউরিয়া দিলে রোগ দ্রুত ছড়ায়।",
+  "symptoms_en": [
+    "Diamond or eye-shaped spots on leaves — grey/ash centre with a brown or reddish-brown border",
+    "Spots join together and whole leaves dry up in bad attacks",
+    "Black-brown ring around the node; the stem breaks easily at that point (node blast)",
+    "Blackish-brown band at the base of the panicle; the panicle stands white and upright with empty grain (neck blast)",
+    "Worst in fields given heavy urea, and after foggy nights followed by warm days"
+  ],
+  "symptoms_bn": [
+    "পাতায় চোখের মতো বা হীরার মতো দাগ — মাঝখানে ছাই রঙের, চারপাশে বাদামি বা লালচে বাদামি বর্ডার",
+    "দাগ বড় হয়ে মিশে গিয়ে পুরো পাতা শুকিয়ে যায়",
+    "গিঁটে কালচে বাদামি দাগ পড়ে, ওই জায়গায় গাছ সহজে ভেঙে যায় (নোড ব্লাস্ট)",
+    "শিষের গোড়ায় কালচে বাদামি দাগ, শিষ সাদা হয়ে খাড়া থাকে, ধান চিটা হয় (নেক ব্লাস্ট)",
+    "যে জমিতে ইউরিয়া বেশি দেওয়া হয়েছে এবং কুয়াশার পর রোদ উঠলে রোগ বেশি হয়"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Stop urea at once",
+      "detail": "Do not give any more urea top-dressing until the disease is under control. Extra nitrogen makes blast much worse. If you were about to top-dress, hold it back."
+    },
+    {
+      "step": 2,
+      "title": "Drain and re-flood the field",
+      "detail": "Drain the field, let the soil crack slightly for 1-2 days, then flood again to about 5 cm. Never let a blast-affected field dry out completely — water stress makes blast worse."
+    },
+    {
+      "step": 3,
+      "title": "Add MoP (potash)",
+      "detail": "Top-dress 5-7 kg MoP per bigha (33 decimal) if you have not already applied the full potash dose. Potash helps the plant resist blast."
+    },
+    {
+      "step": 4,
+      "title": "Spray a recommended fungicide",
+      "detail": "Spray a tricyclazole or trifloxystrobin+tebuconazole product in the late afternoon when there is no wind. Wet the leaves and the panicle base properly. Do not mix with urea in the same tank."
+    },
+    {
+      "step": 5,
+      "title": "Protect the panicle stage",
+      "detail": "The critical time is booting to just before flowering. If blast is anywhere in your village, spray once at booting and again at 50% heading even if your own field looks clean."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "ইউরিয়া দেওয়া বন্ধ করুন",
+      "detail": "রোগ নিয়ন্ত্রণে না আসা পর্যন্ত আর ইউরিয়া উপরি প্রয়োগ করবেন না। বেশি ইউরিয়া দিলে ব্লাস্ট অনেক বেড়ে যায়। ইউরিয়া দেওয়ার কথা থাকলে আপাতত বন্ধ রাখুন।"
+    },
+    {
+      "step": 2,
+      "title": "জমির পানি সরিয়ে আবার দিন",
+      "detail": "জমির পানি বের করে দিন, ১-২ দিন মাটি একটু ফাটতে দিন, তারপর আবার ৫ সেন্টিমিটার পানি দিন। ব্লাস্ট আক্রান্ত জমি কখনো একদম শুকিয়ে ফেলবেন না — পানির অভাবে রোগ আরও বাড়ে।"
+    },
+    {
+      "step": 3,
+      "title": "এমওপি (পটাশ) সার দিন",
+      "detail": "পুরো পটাশ সার দেওয়া না হয়ে থাকলে বিঘা প্রতি (৩৩ শতাংশ) ৫-৭ কেজি এমওপি উপরি প্রয়োগ করুন। পটাশ গাছকে ব্লাস্ট সহ্য করার শক্তি দেয়।"
+    },
+    {
+      "step": 4,
+      "title": "অনুমোদিত ছত্রাকনাশক স্প্রে করুন",
+      "detail": "বিকেলের দিকে বাতাস কম থাকলে ট্রাইসাইক্লাজল অথবা ট্রাইফ্লক্সিস্ট্রোবিন+টেবুকোনাজল জাতীয় ওষুধ স্প্রে করুন। পাতা ও শিষের গোড়া ভালোভাবে ভিজিয়ে দিন। একই ট্যাংকে ইউরিয়া মেশাবেন না।"
+    },
+    {
+      "step": 5,
+      "title": "শিষ বের হওয়ার সময় বাঁচান",
+      "detail": "থোড় আসা থেকে ফুল ফোটার আগ পর্যন্ত সময়টাই সবচেয়ে জরুরি। গ্রামে কোথাও ব্লাস্ট থাকলে নিজের জমি ভালো দেখালেও থোড় অবস্থায় একবার আর ৫০% শিষ বের হলে আরেকবার স্প্রে করুন।"
+    }
+  ],
+  "cultural_control_en": [
+    "Grow BRRI blast-tolerant varieties such as BRRI dhan63, BRRI dhan81, BRRI dhan89 or BRRI dhan92 in blast-prone areas",
+    "Use healthy, treated seed; do not keep seed from a blast-affected field",
+    "Apply nitrogen in 3 equal splits instead of one heavy dose",
+    "Keep 20 cm wide walking gaps every 2 metres so air moves through the field",
+    "Do not plant too densely; wider spacing dries the canopy faster",
+    "Burn or bury infected stubble after harvest; do not leave it on the bund"
+  ],
+  "cultural_control_bn": [
+    "ব্লাস্টপ্রবণ এলাকায় ব্রি ধান৬৩, ব্রি ধান৮১, ব্রি ধান৮৯ বা ব্রি ধান৯২ এর মতো সহনশীল জাত লাগান",
+    "সুস্থ ও শোধন করা বীজ ব্যবহার করুন; আক্রান্ত জমির ধান বীজ হিসেবে রাখবেন না",
+    "ইউরিয়া একবারে না দিয়ে ৩ কিস্তিতে সমান ভাগে দিন",
+    "প্রতি ২ মিটার পর পর ২০ সেন্টিমিটার চওড়া লোগো (হাঁটার নালা) রাখুন যাতে বাতাস চলাচল করে",
+    "খুব ঘন করে চারা লাগাবেন না; ফাঁক রাখলে গাছ তাড়াতাড়ি শুকায়",
+    "ফসল কাটার পর আক্রান্ত নাড়া পুড়িয়ে বা মাটিতে পুঁতে ফেলুন; আইলে ফেলে রাখবেন না"
+  ],
+  "chemical_treatments": [
+    {
+      "product_name_en": "Tricyclazole 75% WP",
+      "product_name_bn": "ট্রাইসাইক্লাজল ৭৫% ডব্লিউপি",
+      "active_ingredient": "Tricyclazole",
+      "formulation": "WP",
+      "dose_en": "0.6 g per litre of water (about 6 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৬ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৬ গ্রাম)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal at full canopy (about 150 litres per bigha of 33 decimal)",
+      "application_method_en": "Knapsack sprayer with a hollow-cone or flat-fan nozzle. Spray in the late afternoon when wind is low. Aim the spray at the panicle base and upper leaves; walk slowly so the canopy is evenly wet without run-off.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে হলো-কোন বা ফ্ল্যাট-ফ্যান নজেল লাগিয়ে বিকেলে বাতাস কম থাকলে স্প্রে করুন। শিষের গোড়া ও উপরের পাতায় ওষুধ লাগান; ধীরে হাঁটুন যাতে সমানভাবে ভেজে কিন্তু ওষুধ গড়িয়ে না পড়ে।",
+      "timing_en": "Preventive spray at booting stage, and a second spray at 50% heading. For leaf blast, spray as soon as the first eye-shaped spots appear.",
+      "timing_bn": "থোড় অবস্থায় একবার প্রতিরোধমূলক স্প্রে, আর ৫০% শিষ বের হলে দ্বিতীয়বার। পাতার ব্লাস্টের জন্য প্রথম চোখের মতো দাগ দেখা মাত্রই স্প্রে করুন।",
+      "interval_days": 12,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for at least 21 days after the last spray. Tricyclazole residues in rice grain are strictly limited in export markets.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর কমপক্ষে ২১ দিন ধান কাটবেন না। রপ্তানি বাজারে ধানে ট্রাইসাইক্লাজলের অবশিষ্টাংশের সীমা খুবই কড়া।",
+      "brands_available_bd": [
+        "Trooper 75 WP",
+        "Beam 75 WP",
+        "Blasticure",
+        "Sunny 75 WP"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Tricyclazole is a registered fungicide class under the Plant Protection Wing, DAE. Verify the exact AP registration number of the specific brand against the current PPW Registered Pesticides List before publishing.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    },
+    {
+      "product_name_en": "Trifloxystrobin 25% + Tebuconazole 50% WG",
+      "product_name_bn": "ট্রাইফ্লক্সিস্ট্রোবিন ২৫% + টেবুকোনাজল ৫০% ডব্লিউজি",
+      "active_ingredient": "Trifloxystrobin + Tebuconazole",
+      "formulation": "WG",
+      "dose_en": "0.4 g per litre of water (about 4 g per 10 litre sprayer load)",
+      "dose_bn": "প্রতি লিটার পানিতে ০.৪ গ্রাম (১০ লিটারের এক স্প্রেয়ারে প্রায় ৪ গ্রাম)",
+      "water_volume_per_decimal": "4-5 litres of spray solution per decimal at full canopy",
+      "application_method_en": "Knapsack spray covering the whole canopy and panicle base. Use a fresh tank mix each time; do not keep leftover mixed solution overnight.",
+      "application_method_bn": "ন্যাপস্যাক স্প্রেয়ারে পুরো গাছ ও শিষের গোড়া ভিজিয়ে দিন। প্রতিবার নতুন করে মিশিয়ে নিন; মেশানো ওষুধ সারারাত রেখে দেবেন না।",
+      "timing_en": "Booting to early heading. Useful where tricyclazole has been used repeatedly, to rotate the mode of action and slow resistance.",
+      "timing_bn": "থোড় থেকে শিষ বের হওয়ার শুরুর দিকে। যেখানে বারবার ট্রাইসাইক্লাজল ব্যবহার হয়েছে, সেখানে ওষুধ পাল্টে দিলে রোগের প্রতিরোধ ক্ষমতা গড়ে ওঠা দেরি হয়।",
+      "interval_days": 14,
+      "max_applications_per_season": 2,
+      "phi_days": 21,
+      "pre_harvest_interval_note_en": "Do not harvest for at least 21 days after the last spray.",
+      "pre_harvest_interval_note_bn": "শেষ স্প্রের পর কমপক্ষে ২১ দিন ধান কাটবেন না।",
+      "brands_available_bd": [
+        "Nativo 75 WG"
+      ],
+      "registered_in_bd": true,
+      "registration_ref": "Nativo 75 WG (Bayer CropScience) is marketed in Bangladesh; confirm the AP number in the current PPW Registered Pesticides List.",
+      "treatment_type": "both",
+      "cures_disease": true,
+      "targets_vector": null,
+      "registration_verified": false,
+      "verified_ap_numbers": []
+    }
+  ],
+  "organic_alternatives_en": [
+    "Seed treatment with Trichoderma harzianum based bio-fungicide at 4-5 g per kg of seed before sowing",
+    "Foliar spray of Pseudomonas fluorescens formulation at 5 g/L at booting — gives partial protection only, use alongside cultural control",
+    "Balanced potash plus silicon-rich amendments (rice husk ash worked into the seedbed) harden the leaf and reduce infection",
+    "These reduce blast pressure but will NOT stop an active neck blast outbreak on their own"
+  ],
+  "organic_alternatives_bn": [
+    "বীজ বপনের আগে প্রতি কেজি বীজে ৪-৫ গ্রাম ট্রাইকোডার্মা হারজিয়ানাম জাতীয় জৈব ছত্রাকনাশক দিয়ে বীজ শোধন করুন",
+    "থোড় অবস্থায় প্রতি লিটার পানিতে ৫ গ্রাম সুডোমোনাস ফ্লুরোসেন্স স্প্রে করলে কিছুটা সুরক্ষা মেলে — একা নয়, পরিচর্যার সাথে দিন",
+    "সুষম পটাশ এবং সিলিকনসমৃদ্ধ উপকরণ (বীজতলায় তুষের ছাই মেশানো) পাতা শক্ত করে, রোগ কম হয়",
+    "এগুলো রোগের চাপ কমায়, কিন্তু চলমান নেক ব্লাস্ট একা এগুলো দিয়ে থামানো যাবে না"
+  ],
+  "fertilizer_advice_en": "Follow the BARC FRG-2018 dose for your soil. Split urea into 3 equal top-dressings (at 15, 30 and 45 days after transplanting for Boro) rather than one heavy dose. Apply the full MoP dose — potash is the single most useful nutrient against blast. Never top-dress urea while blast is active.",
+  "fertilizer_advice_bn": "বিএআরসি এফআরজি-২০১৮ অনুযায়ী আপনার মাটির জন্য নির্ধারিত মাত্রা দিন। ইউরিয়া একবারে না দিয়ে ৩ কিস্তিতে দিন (বোরোতে চারা রোপণের ১৫, ৩০ ও ৪৫ দিন পর)। পুরো এমওপি মাত্রা দিন — ব্লাস্টের বিরুদ্ধে পটাশই সবচেয়ে কাজে দেয়। ব্লাস্ট চলাকালীন কখনো ইউরিয়া উপরি প্রয়োগ করবেন না।",
+  "safety_warning_en": "Wear gloves, a mask, goggles, full-sleeve shirt and long trousers while mixing and spraying. Mix outdoors, never with bare hands. Do not eat, drink or smoke while spraying. Spray with the wind at your back, never against it. Wash the sprayer and your body with soap afterwards. Keep children and livestock out of the field for 24 hours. Do not wash the sprayer in a pond, canal or irrigation channel — these fungicides are toxic to fish.",
+  "safety_warning_bn": "ওষুধ মেশানো ও স্প্রে করার সময় হাতমোজা, মাস্ক, চশমা, ফুলহাতা জামা ও ফুলপ্যান্ট পরুন। খোলা জায়গায় মেশান, খালি হাতে কখনো নয়। স্প্রে করার সময় খাওয়া, পান করা বা ধূমপান করবেন না। বাতাস পিছন দিকে রেখে স্প্রে করুন, বাতাসের বিপরীতে নয়। পরে সাবান দিয়ে স্প্রেয়ার ও শরীর ধুয়ে ফেলুন। ২৪ ঘণ্টা শিশু ও গবাদিপশু জমিতে ঢুকতে দেবেন না। পুকুর, খাল বা সেচ নালায় স্প্রেয়ার ধোবেন না — এসব ওষুধ মাছের জন্য বিষাক্ত।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check that the pack is sealed and the label is in Bangla, and keep the receipt. Never buy loose or repacked pesticide. For free advice call the Krishi Call Center on 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী কৃষি সম্প্রসারণ অধিদপ্তরের উদ্ভিদ সংরক্ষণ উইং কর্তৃক নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে কিনুন, প্যাকেট সিলগালা আছে কিনা ও বাংলায় লেবেল আছে কিনা দেখুন, রসিদ রাখুন। খোলা বা অন্য প্যাকেটে ভরা ওষুধ কখনো কিনবেন না। বিনামূল্যে পরামর্শের জন্য কৃষি কল সেন্টার ১৬১২৩ নম্বরে ফোন করুন।",
+  "when_to_call_helpline_en": "Call 16123 or go to your Upazila Agriculture Office if neck blast has appeared on more than 5% of panicles, if the disease is spreading despite two sprays, or if blast has appeared across several fields in your village. Neck blast spreads village-wide very fast and needs a coordinated response.",
+  "when_to_call_helpline_bn": "৫% এর বেশি শিষে নেক ব্লাস্ট দেখা দিলে, দুইবার স্প্রের পরও রোগ ছড়াতে থাকলে, অথবা গ্রামের কয়েকটি জমিতে একসাথে ব্লাস্ট দেখা দিলে ১৬১২৩ নম্বরে ফোন করুন বা উপজেলা কৃষি অফিসে যান। নেক ব্লাস্ট গ্রামজুড়ে খুব দ্রুত ছড়ায়, সবাই মিলে ব্যবস্থা নিতে হয়।",
+  "expected_outcome_en": "Leaf blast caught early usually stops spreading within 10-14 days of the first spray. Neck blast cannot be cured once the panicle is infected — spraying at that point only protects panicles not yet infected, so preventive spraying at booting is what actually saves the yield.",
+  "expected_outcome_bn": "পাতার ব্লাস্ট শুরুতেই ধরতে পারলে প্রথম স্প্রের ১০-১৪ দিনের মধ্যে সাধারণত ছড়ানো বন্ধ হয়। শিষে একবার রোগ ধরে গেলে আর সারানো যায় না — তখন স্প্রে করলে শুধু বাকি সুস্থ শিষগুলো বাঁচে। তাই থোড় অবস্থায় আগেভাগে স্প্রে করাই ফলন বাঁচানোর আসল উপায়।",
+  "related_shop_products": [
+    "Tricyclazole 75% WP 100g",
+    "Nativo 75 WG 30g",
+    "MoP (Muriate of Potash) 50kg bag",
+    "Knapsack sprayer 16L manual",
+    "Nitrile spray gloves",
+    "Spray mask with cartridge"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif2"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    9,
+    10,
+    11
+  ],
+  "source": "BRRI variety and blast-management extension guidance (brri.gov.bd); DAE upazila office blast advisories; Bangladesh Phytopathological Society, 'Survey on rice blast in some selected areas of Bangladesh and in vitro evaluation of fungicides against Pyricularia oryzae' (bps.net.bd); BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd)",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Doses are the commonly extended Bangladesh field rates. Brand-level AP registration numbers were NOT individually verified against the current PPW list — verify before showing a registration number in the app. Tricyclazole is under review in several export markets; check current MRL status if the buyer exports rice.",
+  "related_shop_skus": [
+    {
+      "ref_text": "Tricyclazole 75% WP 100g",
+      "sku": "PEST-0011",
+      "name_en": "Tricyclazole 75% WP 100g",
+      "category": "pesticide",
+      "match_score": 1.25,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nativo 75 WG 30g",
+      "sku": "PEST-0033",
+      "name_en": "Trifloxystrobin + Tebuconazole 25% + 50% WG 30g",
+      "category": "pesticide",
+      "match_score": 1.017,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Knapsack sprayer 16L manual",
+      "sku": "EQ-0001",
+      "name_en": "Knapsack sprayer 16L manual",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Nitrile spray gloves",
+      "sku": "EQ-0011",
+      "name_en": "Nitrile spray gloves (pair)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Spray mask with cartridge",
+      "sku": "EQ-0012",
+      "name_en": "Spray mask with replaceable cartridge",
+      "category": "equipment",
+      "match_score": 0.919,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

@@ -1,0 +1,171 @@
+{
+  "class_name": "Rice___healthy",
+  "kb_key": "healthy_rice",
+  "crop_en": "Rice",
+  "crop_bn": "ধান",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ গাছ",
+  "pathogen": null,
+  "severity": "none",
+  "summary_en": "The leaf looks healthy — no disease detected. No pesticide is needed. Keep the crop this way with balanced fertiliser, correct water management and a weekly walk through the field.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে — কোনো রোগ ধরা পড়েনি। কোনো ওষুধ দেওয়ার দরকার নেই। সুষম সার, ঠিকমতো পানি ব্যবস্থাপনা আর সপ্তাহে একবার জমি ঘুরে দেখলে গাছ এমনই থাকবে।",
+  "symptoms_en": [
+    "Uniform green leaves with no spots, streaks, yellowing or wilting",
+    "Good tillering, plants of even height",
+    "No visible insect damage or bacterial ooze"
+  ],
+  "symptoms_bn": [
+    "পাতা সমান সবুজ, কোনো দাগ, রেখা, হলুদ ভাব বা ঢলে পড়া নেই",
+    "কুশি ভালো এসেছে, গাছের উচ্চতা সমান",
+    "পোকার ক্ষতি বা আঠালো ফোঁটা কিছু দেখা যাচ্ছে না"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "No pesticide needed",
+      "detail": "Do not spray anything. Spraying a healthy crop wastes money, kills the spiders and beneficial insects that protect your field, and can trigger pest outbreaks later."
+    },
+    {
+      "step": 2,
+      "title": "Walk the field weekly",
+      "detail": "Check 10 hills at 5 spots across the field once a week, looking at the leaf sheath near the water line and the underside of leaves. Most diseases are cheap to stop if you catch them in the first week."
+    },
+    {
+      "step": 3,
+      "title": "Keep to the fertiliser schedule",
+      "detail": "Follow your FRG-2018 split urea plan and make sure the full potash dose goes on. Do not add extra urea just because the crop looks good."
+    },
+    {
+      "step": 4,
+      "title": "Manage water",
+      "detail": "Use alternate wetting and drying — let the water drop to 15 cm below the soil surface (use a field water tube) before re-irrigating. This saves water and reduces sheath blight."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "কোনো ওষুধ লাগবে না",
+      "detail": "কিছুই স্প্রে করবেন না। সুস্থ ফসলে স্প্রে করলে টাকা নষ্ট হয়, জমির উপকারী মাকড়সা ও পোকা মরে যায়, পরে বরং পোকার আক্রমণ বেড়ে যেতে পারে।"
+    },
+    {
+      "step": 2,
+      "title": "সপ্তাহে একবার জমি ঘুরে দেখুন",
+      "detail": "সপ্তাহে একদিন জমির ৫ জায়গায় ১০টি করে গোছা দেখুন — পানির সমান বরাবর পাতার খোল আর পাতার নিচের পিঠ ভালো করে দেখুন। প্রথম সপ্তাহে ধরতে পারলে বেশিরভাগ রোগ অল্প খরচেই থামানো যায়।"
+    },
+    {
+      "step": 3,
+      "title": "সারের সময়সূচি মেনে চলুন",
+      "detail": "এফআরজি-২০১৮ অনুযায়ী কিস্তিতে ইউরিয়া দিন এবং পুরো পটাশ মাত্রা দিতে ভুলবেন না। ফসল ভালো দেখাচ্ছে বলে বাড়তি ইউরিয়া দেবেন না।"
+    },
+    {
+      "step": 4,
+      "title": "পানি ব্যবস্থাপনা",
+      "detail": "এডব্লিউডি পদ্ধতি ব্যবহার করুন — মাটির ১৫ সেন্টিমিটার নিচে পানি নেমে গেলে (পানি মাপার পাইপ ব্যবহার করুন) তারপর সেচ দিন। এতে পানি বাঁচে আর খোলপোড়া রোগ কম হয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Install a field water tube for AWD irrigation",
+    "Put up 8-10 perches per bigha for insect-eating birds",
+    "Keep bunds weed-free",
+    "Keep a record of which variety, which fertiliser dose and which problems appeared, so next season is easier to plan"
+  ],
+  "cultural_control_bn": [
+    "এডব্লিউডি সেচের জন্য জমিতে পানি মাপার পাইপ বসান",
+    "বিঘা প্রতি ৮-১০টি ডাল পুঁতে দিন যাতে পোকাখেকো পাখি বসে",
+    "আইল আগাছামুক্ত রাখুন",
+    "কোন জাত, কত সার আর কী কী সমস্যা হয়েছিল লিখে রাখুন, পরের মৌসুমে পরিকল্পনা করা সহজ হবে"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "Compost or well-rotted cowdung at 5 tonnes/ha before land preparation improves soil and reduces disease pressure over time",
+    "Encourage natural enemies by avoiding early-season insecticide"
+  ],
+  "organic_alternatives_bn": [
+    "জমি তৈরির আগে হেক্টর প্রতি ৫ টন কম্পোস্ট বা পচা গোবর দিলে মাটি ভালো হয় এবং ধীরে ধীরে রোগের চাপ কমে",
+    "মৌসুমের শুরুতে কীটনাশক না দিয়ে উপকারী পোকা বাঁচান"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for your soil fertility level. For Boro HYV rice on medium-fertility soil this is broadly urea in 3 splits plus the full TSP as basal, MoP split between basal and top-dress, and gypsum and zinc where the soil test shows a need. Get a soil test from your Upazila Agriculture Office if you have never had one.",
+  "fertilizer_advice_bn": "আপনার মাটির উর্বরতা অনুযায়ী বিএআরসি এফআরজি-২০১৮ মেনে চলুন। মাঝারি উর্বর মাটিতে বোরো উফশী ধানে সাধারণত ইউরিয়া ৩ কিস্তিতে, পুরো টিএসপি জমি তৈরির সময়, এমওপি জমি তৈরির সময় ও উপরি প্রয়োগে ভাগ করে, আর মাটি পরীক্ষায় দরকার দেখালে জিপসাম ও জিংক দিতে হয়। কখনো মাটি পরীক্ষা না করালে উপজেলা কৃষি অফিস থেকে করিয়ে নিন।",
+  "safety_warning_en": "No pesticide is being recommended, so no spraying precautions apply. If you store pesticides at home from an earlier crop, keep them locked, in the original container with the label, away from food, drinking water and children.",
+  "safety_warning_bn": "কোনো ওষুধ দেওয়ার পরামর্শ দেওয়া হচ্ছে না, তাই স্প্রের সতর্কতাও লাগবে না। আগের ফসলের ওষুধ ঘরে থাকলে তা তালাবদ্ধ রাখুন, আসল কৌটায় লেবেলসহ রাখুন, খাবার, খাওয়ার পানি ও শিশুদের থেকে দূরে রাখুন।",
+  "legal_note_en": "No treatment required. For free crop advice at any time, call the Krishi Call Center on 16123.",
+  "legal_note_bn": "কোনো চিকিৎসার দরকার নেই। যেকোনো সময় ফসল নিয়ে বিনামূল্যে পরামর্শের জন্য কৃষি কল সেন্টার ১৬১২৩ নম্বরে ফোন করুন।",
+  "when_to_call_helpline_en": "Call 16123 if you see anything change — yellowing, spots, wilting, or insects appearing in numbers.",
+  "when_to_call_helpline_bn": "কোনো পরিবর্তন চোখে পড়লে ১৬১২৩ নম্বরে ফোন করুন — হলুদ হওয়া, দাগ, ঢলে পড়া বা পোকা বেড়ে যাওয়া।",
+  "expected_outcome_en": "With balanced fertiliser, AWD water management and weekly scouting, most Bangladeshi rice fields stay healthy through to harvest.",
+  "expected_outcome_bn": "সুষম সার, এডব্লিউডি পানি ব্যবস্থাপনা আর সপ্তাহে একবার জমি দেখলে বাংলাদেশের বেশিরভাগ ধানের জমি ফসল কাটা পর্যন্ত সুস্থ থাকে।",
+  "related_shop_products": [
+    "MoP (Muriate of Potash) 50kg bag",
+    "Urea 50kg bag",
+    "TSP 50kg bag",
+    "AWD field water tube",
+    "Soil pH meter"
+  ],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "BARC Fertilizer Recommendation Guide 2018 (https://barc.portal.gov.bd); BRRI good agricultural practice and AWD guidance (brri.gov.bd); DAE Krishi Call Center 16123",
+  "source_type": "official",
+  "last_verified": "2026-08-19",
+  "confidence": "high",
+  "notes": "Healthy class — zero pesticide recommendations by design, per Quality Rule 9. | class_name aligned to model spelling (Rice___Healthy -> Rice___healthy).",
+  "related_shop_skus": [
+    {
+      "ref_text": "MoP (Muriate of Potash) 50kg bag",
+      "sku": "FERT-0009",
+      "name_en": "MoP (Muriate of Potash) 60% K2O 50kg",
+      "category": "fertilizer",
+      "match_score": 0.733,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "Urea 50kg bag",
+      "sku": "FERT-0003",
+      "name_en": "Urea 46% N 50kg",
+      "category": "fertilizer",
+      "match_score": 0.758,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "TSP 50kg bag",
+      "sku": "FERT-0006",
+      "name_en": "TSP (Triple Super Phosphate) 46% P2O5 50kg",
+      "category": "fertilizer",
+      "match_score": 0.726,
+      "match_confidence": "medium"
+    },
+    {
+      "ref_text": "AWD field water tube",
+      "sku": "EQ-0034",
+      "name_en": "AWD field water tube (perforated pipe)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    },
+    {
+      "ref_text": "Soil pH meter",
+      "sku": "EQ-0061",
+      "name_en": "Soil pH meter (digital)",
+      "category": "equipment",
+      "match_score": 1.0,
+      "match_confidence": "high"
+    }
+  ],
+  "is_curable_with_chemicals": true
+}

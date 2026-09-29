@@ -1,0 +1,106 @@
+{
+  "class_name": "Tea___healthy",
+  "kb_key": "healthy_tea",
+  "crop_en": "Tea",
+  "crop_bn": "চা",
+  "disease_en": "Healthy",
+  "disease_bn": "সুস্থ",
+  "pathogen": "None",
+  "severity": "none",
+  "summary_en": "The leaf looks healthy. Do not spray Tea for disease on this result. Keep ordinary field care and watch the plot.",
+  "summary_bn": "পাতা সুস্থ দেখাচ্ছে। এই ফল দেখে চা-এ রোগের স্প্রে করবেন না। সাধারণ যত্ন চালিয়ে জমি দেখুন।",
+  "symptoms_en": [
+    "Even green colour without expanding spots, mosaic or wilting",
+    "No greasy lesions, no orange rust pustules, no insect webbing"
+  ],
+  "symptoms_bn": [
+    "সমান সবুজ রং, বাড়তে থাকা দাগ, মোজাইক বা ঢলে পড়া নেই",
+    "তেলতেলে ক্ষত, কমলা মরিচা ফোস্কা বা পোকার জাল নেই"
+  ],
+  "immediate_actions_en": [
+    {
+      "step": 1,
+      "title": "Do not spray",
+      "detail": "Healthy classes carry zero pesticide in AgroScan. A spray now is money and residue for no disease."
+    },
+    {
+      "step": 2,
+      "title": "Keep normal care",
+      "detail": "Water and fertiliser as for a healthy crop (FRG-2018). Walk the field twice a week."
+    },
+    {
+      "step": 3,
+      "title": "Scan again if something changes",
+      "detail": "New spots, mosaic or wilt mean a new photo, not a preventive cocktail."
+    }
+  ],
+  "immediate_actions_bn": [
+    {
+      "step": 1,
+      "title": "স্প্রে করবেন না",
+      "detail": "সুস্থ শ্রেণিতে অ্যাগ্রোস্ক্যানে কোনো ওষুধ নেই। এখন স্প্রে মানে অকারণে টাকা ও অবশিষ্টাংশ।"
+    },
+    {
+      "step": 2,
+      "title": "স্বাভাবিক যত্ন রাখুন",
+      "detail": "সুস্থ ফসলের মতো সেচ ও সার (এফআরজি-২০১৮)। সপ্তাহে দুইবার জমি হাঁটুন।"
+    },
+    {
+      "step": 3,
+      "title": "কিছু বদলালে আবার স্ক্যান করুন",
+      "detail": "নতুন দাগ, মোজাইক বা ঢলে পড়া মানে নতুন ছবি, আগাম মিশ্র ওষুধ নয়।"
+    }
+  ],
+  "cultural_control_en": [
+    "Keep walking gaps so you see the first real lesion early",
+    "Do not apply pesticide 'just in case' on a healthy scan"
+  ],
+  "cultural_control_bn": [
+    "হাঁটার ফাঁক রাখুন যাতে আসল দাগ তাড়াতাড়ি দেখেন",
+    "সুস্থ স্ক্যানে 'হয়ে যেতে পারে' বলে ওষুধ দেবেন না"
+  ],
+  "chemical_treatments": [],
+  "organic_alternatives_en": [
+    "None needed on a healthy crop"
+  ],
+  "organic_alternatives_bn": [
+    "সুস্থ ফসলে দরকার নেই"
+  ],
+  "fertilizer_advice_en": "Follow BARC FRG-2018 for this crop. Do not add extra urea because the scan was healthy.",
+  "fertilizer_advice_bn": "এই ফসলের জন্য বিএআরসি এফআরজি-২০১৮ মানুন। স্ক্যান সুস্থ বলে বাড়তি ইউরিয়া দেবেন না।",
+  "safety_warning_en": "No pesticide is recommended.",
+  "safety_warning_bn": "কোনো ওষুধের পরামর্শ নেই।",
+  "legal_note_en": "Use only pesticides registered with the Plant Protection Wing of DAE under the Pesticide Act 2018. Buy from a licensed dealer, check a sealed pack and a Bangla label, keep the receipt. The label dose and PHI override this card. Krishi Call Center: 16123.",
+  "legal_note_bn": "পেস্টিসাইড আইন ২০১৮ অনুযায়ী ডিএই উদ্ভিদ সংরক্ষণ উইং-এ নিবন্ধিত ওষুধ ছাড়া ব্যবহার করবেন না। লাইসেন্সধারী দোকান থেকে সিলগালা প্যাকেট ও বাংলা লেবেল দেখে কিনুন, রসিদ রাখুন। লেবেলের মাত্রা ও পিএইচআই এই কার্ডের উপরে। কৃষি কল সেন্টার: ১৬১২৩।",
+  "when_to_call_helpline_en": "Call 16123 if the crop looks worse than this healthy result within a few days.",
+  "when_to_call_helpline_bn": "কয়েক দিনের মধ্যে ফসল এই সুস্থ ফলের চেয়ে খারাপ দেখালে ১৬১২৩ নম্বরে ফোন করুন।",
+  "expected_outcome_en": "No treatment. Continue ordinary scouting.",
+  "expected_outcome_bn": "কোনো চিকিৎসা নেই। সাধারণ নজরদারি চালিয়ে যান।",
+  "related_shop_products": [],
+  "seasons_relevant": [
+    "rabi",
+    "kharif1",
+    "kharif2"
+  ],
+  "months_relevant": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "AgroScan healthy-class rule (Quality Rule 9): healthy labels carry no pesticide. BARC FRG-2018 for background feeding.",
+  "source_type": "official",
+  "last_verified": "2026-09-24",
+  "confidence": "high",
+  "notes": "HEALTHY CLASS. UI must show warn_healthy_no_spray. Zero chemical_treatments.",
+  "is_curable_with_chemicals": true,
+  "related_shop_skus": []
+}

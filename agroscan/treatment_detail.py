@@ -13,8 +13,17 @@ from agroscan.land_scale import (
 )
 
 GUARD_RELEVANCE = {"not_grown", "not_grown_commercially", "rare_experimental"}
-VIRUS_KEYS = {"tylcv", "tomato_mosaic_virus", "tungro", "citrus_greening", "chilli_leaf_curl"}
-BACTERIAL_KEYS = {"bacterial_leaf_blight", "bacterial_wilt", "bacterial_spot", "peach_bacterial_spot"}
+VIRUS_KEYS = {
+    "tylcv", "tomato_mosaic_virus", "tungro", "citrus_greening", "chilli_leaf_curl",
+    "golden_mosaic", "papaya_mosaic", "papaya_ringspot", "papaya_curl",
+    "sugarcane_mosaic", "sugarcane_yellow",
+}
+BACTERIAL_KEYS = {
+    "bacterial_leaf_blight", "bacterial_wilt", "bacterial_spot", "peach_bacterial_spot",
+    "bacterial_leaf_streak", "bacterial_panicle_blight", "bacterial_blight",
+    "bacterial_canker", "cauliflower_black_rot", "bacterial_spot_rot",
+    "potato_brown_rot", "potato_blackleg",
+}
 HEALTHY_PREFIX = "healthy"
 
 

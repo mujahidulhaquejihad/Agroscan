@@ -434,7 +434,166 @@ def _contacts_text(lang: str = "en") -> str:
 _WEAK_DISEASE_TOKENS = {
     "leaf", "spot", "blight", "rust", "mold", "virus", "disease", "plant", "crop",
     "common", "black", "brown", "yellow", "green", "gray", "grey",
+    "রোগ", "পাতা", "গাছ", "ফসল",
 }
+
+# App-usage questions only — not "how do I treat X" / "what pesticide to use".
+_APP_HOWTO_RE = re.compile(
+    r"(how\s+(?:do\s+i\s+|to\s+)?(?:use|start|upload|scan)(?:\s+(?:this|the|agroscan|the\s+app|this\s+app))?"
+    r"|how\s+does\s+(?:this|it|the\s+app|agroscan)\s+work"
+    r"|কীভাবে\s+(?:ব্যবহার|আপলোড|স্ক্যান)"
+    r"|অ্যাপ(?:টি)?\s*(?:কীভাবে|ব্যবহার)"
+    r"|(?:upload|scan)\s+(?:a\s+)?(?:photo|leaf|image|picture))",
+    re.I,
+)
+
+# "which diseases can you help with?" / "potato diseases list" — not a named-disease lookup.
+_CATALOG_RE = re.compile(
+    r"("
+    r"\bki\s*ki\s+rog"
+    r"|\bkon\s*kon\s+rog"
+    r"|কোন\s*কোন\s*রোগ"
+    r"|কী\s*কী\s*রোগ"
+    r"|রোগ(?:ের)?\s*(?:তালিকা|লিস্ট|list)"
+    r"|\b(?:disease|diseases)\s*(?:list|names?)"
+    r"|\blist\s+(?:of\s+)?(?:\w+\s+)?(?:disease|diseases)"
+    r"|\bwhich\s+diseases"
+    r"|help\s+korte\s+par"
+    r"|সাহায্য\s*করতে\s*পার"
+    r"|\bwhat can you\b"
+    r")",
+    re.I,
+)
+
+
+def _is_healthy_rec(rec: dict) -> bool:
+    kb = str(rec.get("kb_key") or "").lower()
+    cn = str(rec.get("class_name") or "").lower()
+    return "healthy" in kb or "healthy" in cn
+
+
+def wants_catalog(message: str) -> bool:
+    msg = (message or "").strip()
+    if not msg:
+        return False
+    if _CATALOG_RE.search(msg):
+        return True
+    low = msg.lower()
+    return bool(
+        re.search(r"\b(diseases|রোগ)\b", low)
+        and re.search(r"\b(list|all|সব|names?)\b", low)
+    )
+
+
+def _catalog_reply_lang(message: str, lang: str) -> str:
+    text = message or ""
+    ascii_n = len(re.findall(r"[A-Za-z]", text))
+    bn_n = len(re.findall(r"[\u0980-\u09FF]", text))
+    if bn_n >= 6:
+        return "bn"
+    if ascii_n >= 10 and ascii_n > bn_n * 2:
+        return "en"
+    return lang or "bn"
+
+
+def pack_catalog_reply(message: str, lang: str) -> Optional[dict]:
+    """List verified treatment pages. Qwen cannot see this catalog."""
+    if not wants_catalog(message):
+        return None
+    try:
+        from agroscan.bd_data import treatments
+    except Exception:
+        return None
+
+    lang = _catalog_reply_lang(message, lang)
+    bn = (lang or "").startswith("bn")
+    msg = (message or "").lower()
+    recs = [r for r in treatments() if not _is_healthy_rec(r)]
+    if not recs:
+        return None
+
+    mentioned = []
+    seen_crop = set()
+    for rec in recs:
+        crop_en = str(rec.get("crop_en") or "").strip()
+        crop_bn = str(rec.get("crop_bn") or "").strip()
+        key = crop_en.lower() or crop_bn.lower()
+        if not key or key in seen_crop:
+            continue
+        if (len(crop_en) >= 3 and crop_en.lower() in msg) or (
+            len(crop_bn) >= 2 and crop_bn.lower() in msg
+        ):
+            mentioned.append(key)
+            seen_crop.add(key)
+
+    grouped: Dict[str, List[str]] = {}
+    crop_label: Dict[str, str] = {}
+    for rec in recs:
+        crop_en = str(rec.get("crop_en") or "").strip()
+        crop_bn = str(rec.get("crop_bn") or "").strip()
+        key = crop_en.lower() or crop_bn.lower()
+        if not key:
+            continue
+        if mentioned and key not in mentioned:
+            continue
+        dis = str(rec.get("disease_bn") if bn else rec.get("disease_en") or rec.get("disease_bn") or "").strip()
+        if not dis:
+            continue
+        grouped.setdefault(key, [])
+        if dis not in grouped[key]:
+            grouped[key].append(dis)
+        crop_label[key] = crop_bn if bn and crop_bn else crop_en or crop_bn
+
+    if not grouped:
+        return None
+
+    lines = []
+    if mentioned:
+        lines.append(
+            "এই ফসলের যে রোগগুলোর verified চিকিৎসা পাতা আছে:"
+            if bn
+            else "I have verified treatment pages for these diseases:"
+        )
+    else:
+        lines.append(
+            "আমি এই ফসলগুলোর verified চিকিৎসা পাতায় সাহায্য করতে পারি (নাম বলে জিজ্ঞাসা করুন, অথবা পাতার ছবি দিন):"
+            if bn
+            else "I can help with these crops (ask by disease name, or upload a leaf photo):"
+        )
+    for key, names in grouped.items():
+        lines.append(f"{crop_label[key]}: " + ", ".join(names))
+    n = sum(len(v) for v in grouped.values())
+    lines.append(
+        f"মোট {n}টি রোগের লেখা আছে। ক্যামেরা আরও ক্লাস চিনতে পারে, কিন্তু চিকিৎসার পাতা শুধু এগুলোর।"
+        if bn
+        else f"{n} treatment write-ups in total. The camera can flag more classes; only these have a treatment page."
+    )
+    return {
+        "reply": "\n".join(lines),
+        "suggestions": _suggestions("bn" if bn else "en"),
+        "source": "catalog",
+    }
+
+
+def _split_name(text: str) -> list:
+    return [t for t in re.split(r"[\s,./;:()+\-]+", (text or "").strip().lower()) if t]
+
+
+def _disease_name_tokens(dis_en: str, dis_bn: str, crop_en: str, crop_bn: str) -> list:
+    """Tokens that identify the disease, not the crop or generic words.
+
+    Farmer Bangla inflects ('ব্লাস্টে' vs pack 'ব্লাস্ট রোগ'); full-phrase match misses.
+    Split on spaces — do not use \\w, which tears Bangla into single consonants.
+    """
+    crop_bits = _split_name(f"{crop_en} {crop_bn}")
+    out = []
+    for tok in _split_name(f"{dis_en} {dis_bn}"):
+        if len(tok) < 3 or tok in _WEAK_DISEASE_TOKENS:
+            continue
+        if tok in crop_bits or any(c and len(c) >= 2 and (c in tok or tok in c) for c in crop_bits):
+            continue
+        out.append(tok)
+    return out
 
 
 def _format_pack_reply(info: dict, lang: str) -> str:
@@ -506,6 +665,10 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
             score += 12
         if dis_bn and dis_bn in msg:
             score += 12
+        name_toks = _disease_name_tokens(dis_en, dis_bn, crop_en, crop_bn)
+        token_hit = any(t in msg for t in name_toks)
+        if token_hit:
+            score += 12
         if phrase and phrase in msg:
             score += 10
         if crop_en and crop_en in msg:
@@ -528,6 +691,7 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
         disease_hit = bool(
             (dis_en and dis_en in msg)
             or (dis_bn and dis_bn in msg)
+            or token_hit
             or (phrase and phrase in msg)
             or (kb == "late_blight" and "late" in msg and "blight" in msg)
             or (kb == "early_blight" and "early" in msg and "blight" in msg)
@@ -776,8 +940,8 @@ def chatbot_reply(
             "suggestions": suggestions,
         }
 
-    # How to use
-    if msg and re.search(r"\b(how|use|work|start|upload|scan|guide|help|কীভাবে|ব্যবহার|আপলোড|সাহায্য)\b", msg):
+    # How to use the app — not "how do I treat X"
+    if msg and _APP_HOWTO_RE.search(message or ""):
         return {
             "reply": (
                 "১) একটি পাতার পরিষ্কার ছবি আপলোড বা টেনে আনুন।\n"
@@ -817,6 +981,10 @@ def chatbot_reply(
             "options": query.get("options") or [],
             "source": "clarify",
         }
+
+    catalog = pack_catalog_reply(message, lang)
+    if catalog:
+        return catalog
 
     # Context fallback only if the user did not name a disease family
     if context_disease and not re.search(

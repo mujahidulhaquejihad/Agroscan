@@ -72,7 +72,15 @@
       }
       lastResultData.stage3_disease.best_answer.advice = advice;
       renderResult(lastResultData);
-    }, function () {});
+    }, function () {
+      if (window.AgroScanOffline && window.AgroScanOffline.adviceFor) {
+        var local = window.AgroScanOffline.adviceFor(cls, lang);
+        if (local && lastResultData && lastResultData.stage3_disease && lastResultData.stage3_disease.best_answer) {
+          lastResultData.stage3_disease.best_answer.advice = local;
+          renderResult(lastResultData);
+        }
+      }
+    });
   }
 
   function setStatus(text, isBad) {
@@ -119,12 +127,15 @@
     }
     var x = new XMLHttpRequest();
     x.open("POST", url, true);
-    x.timeout = 300000;
+    x.timeout = 90000;
     if (x.upload && onProgress) {
       x.upload.onprogress = function (ev) {
         if (ev.lengthComputable) {
           onProgress(T("uploading_pct", { pct: Math.round(ev.loaded / ev.total * 100) }));
         }
+      };
+      x.upload.onload = function () {
+        onProgress(T("scan_checking"), "checking");
       };
     }
     x.onload = function () {
@@ -141,11 +152,15 @@
       }
     };
     x.onerror = function () { fail("Network error during upload."); };
-    x.ontimeout = function () { fail("Timed out after 5 min."); };
+    x.ontimeout = function () { fail("Timed out after 90 sec."); };
     x.send(fd);
   }
 
   function compressForUpload(file, done) {
+    if (file && file.size && file.size < 380000 && /jpe?g/i.test(file.type || file.name || "")) {
+      done(file);
+      return;
+    }
     if (!window.FileReader || !document.createElement("canvas").getContext) {
       done(file);
       return;
@@ -198,24 +213,44 @@
     return /\.(jpe?g|png|webp|bmp|gif)$/i.test(file.name || "");
   }
 
+  function hasOfflineVision() {
+    return !!(window.AgroScanOffline);
+  }
+
+  function networkLooksUp() {
+    try {
+      if (navigator.onLine === false) return false;
+    } catch (e) {}
+    return true;
+  }
+
+  function preferServer() {
+    if (apiOnline) return true;
+    return networkLooksUp();
+  }
+
   function updateAnalyzeBtn() {
     var btn = $("analyzeBtn");
-    if (btn) btn.disabled = !(selectedFile && apiOnline);
+    if (btn) btn.disabled = !(selectedFile && (apiOnline || hasOfflineVision()));
   }
 
   function refreshStatusText() {
     setStatus(T(lastStatusKey, lastStatusVars), lastStatusBad);
   }
 
-  function checkStatus() {
-    lastStatusKey = "status_checking";
-    lastStatusVars = null;
-    lastStatusBad = false;
-    refreshStatusText();
+  function checkStatus(opts) {
+    opts = opts || {};
+    if (!opts.quiet) {
+      lastStatusKey = "status_checking";
+      lastStatusVars = null;
+      lastStatusBad = false;
+      refreshStatusText();
+    }
     xhrGet(API + "/api/status", function (s) {
       var models = s.disease_models_loaded || [];
       if (models.length) {
         apiOnline = true;
+        statusTry = 0;
         lastStatusKey = "status_models";
         lastStatusVars = { n: models.length, device: s.device || "cpu" };
         lastStatusBad = false;
@@ -231,7 +266,8 @@
       updateAnalyzeBtn();
     }, function () {
       statusTry++;
-      if (statusTry < 20) {
+      var maxTries = 8;
+      if (statusTry < maxTries) {
         lastStatusKey = statusTry < 3 ? "status_loading" : "status_connecting";
         lastStatusVars = statusTry < 3 ? null : { n: statusTry };
         lastStatusBad = false;
@@ -239,20 +275,32 @@
         setTimeout(checkStatus, 2000);
       } else {
         apiOnline = false;
-        lastStatusKey = "status_api_offline";
+        lastStatusKey = hasOfflineVision() && !networkLooksUp()
+          ? "status_offline_vision"
+          : "status_api_offline";
         lastStatusVars = null;
-        lastStatusBad = true;
+        lastStatusBad = !hasOfflineVision() || networkLooksUp();
         refreshStatusText();
         var banner = $("offlineBanner");
-        if (banner) {
+        if (banner && !networkLooksUp()) {
           banner.className = "offline-banner";
           var urlEl = $("offlineApiUrl");
           if (urlEl) {
             var base = (window.AGROSCAN_CONFIG && (window.AGROSCAN_CONFIG.API_BASE || window.AGROSCAN_CONFIG.PRODUCTION_API)) || "";
             urlEl.textContent = base || (window.location.origin || "");
           }
+          if (hasOfflineVision()) {
+            var title = banner.querySelector("strong");
+            var step = banner.querySelector("[data-i18n='offline_step1']");
+            if (title) title.textContent = T("offline_title_scan");
+            if (step) step.textContent = T("offline_step1_scan");
+          }
         }
         updateAnalyzeBtn();
+        if (networkLooksUp()) {
+          statusTry = 3;
+          setTimeout(function () { checkStatus({ quiet: true }); }, 8000);
+        }
       }
     });
   }
@@ -362,17 +410,37 @@
       } else {
         cropCard.className = "card stage";
         if ($("cropBody")) {
-          var cropHtml = "<p>" + T("crop_label") + ": <strong>" + (crop.crop || "") + "</strong></p>" +
-            "<div class='conf'>" + T("confidence") + " <strong>" + pct(crop.confidence || 0) + "</strong></div>" +
-            "<div class='bar'><i style='width:" + ((crop.confidence || 0) * 100) + "%'></i></div>";
-          if (crop.needs_user_pick && crop.top3 && crop.top3.length) {
-            cropHtml += "<div class='crop-picker'><p class='muted'>" + T("crop_pick_hint") + "</p><div class='crop-pick-btns'>";
+          var cropName = crop.crop || "";
+          var cropIsOther = String(cropName).toLowerCase() === "other";
+          var cropHtml = "<p>" + T("crop_label") + ": <strong>" +
+            (cropIsOther ? T("crop_other") : cropName) + "</strong></p>";
+          if (!cropIsOther) {
+            cropHtml += "<div class='conf'>" + T("confidence") + " <strong>" + pct(crop.confidence || 0) + "</strong></div>" +
+              "<div class='bar'><i style='width:" + ((crop.confidence || 0) * 100) + "%'></i></div>";
+          }
+          if (cropIsOther && !crop.needs_user_pick) {
+            cropHtml += "<p class='muted'>" + (data.message || T("crop_other_hint")) + "</p>";
+          }
+          var pickList = crop.top3 || [];
+          var showPicker = crop.needs_user_pick && pickList.length;
+          if (!showPicker && !cropIsOther) {
+            pickList = [{ crop: "Other", confidence: 0 }];
+            showPicker = true;
+          }
+          if (showPicker) {
+            cropHtml += "<div class='crop-picker'>";
+            if (crop.needs_user_pick) {
+              cropHtml += "<p class='muted'>" + T("crop_pick_hint") + "</p>";
+            }
+            cropHtml += "<div class='crop-pick-btns'>";
             var ci;
-            for (ci = 0; ci < Math.min(3, crop.top3.length); ci++) {
-              var opt = crop.top3[ci];
+            for (ci = 0; ci < pickList.length; ci++) {
+              var opt = pickList[ci];
+              var optOther = String(opt.crop || "").toLowerCase() === "other";
+              var optLabel = optOther ? T("crop_other") : (opt.crop || "");
+              if (!optOther) optLabel += " (" + pct(opt.confidence || 0) + ")";
               cropHtml += "<button type='button' class='btn btn-secondary btn-sm crop-pick-btn' data-crop='" +
-                (opt.crop || "") + "'>" + (opt.crop || "") +
-                " (" + pct(opt.confidence || 0) + ")</button>";
+                (opt.crop || "") + "'>" + optLabel + "</button>";
             }
             cropHtml += "</div></div>";
           }
@@ -654,20 +722,42 @@
 
   function setLoaderText(text) {
     var loader = $("loader");
-    if (!loader) return;
-    var p = loader.getElementsByTagName("p")[0];
-    if (p) p.textContent = text;
+    if (loader) {
+      var p = loader.getElementsByTagName("p")[0];
+      if (p) p.textContent = text;
+    }
+    if (window.AgroScanBusy && window.AgroScanBusy.show) {
+      var sub = T("scan_prep_sub");
+      if (text === T("crop_working")) sub = T("scan_prep_leaf_sub");
+      window.AgroScanBusy.show(text, sub, { allowSkip: false });
+    }
+  }
+
+  function showChecking() {
+    if (window.AgroScanBusy && window.AgroScanBusy.startChecking) {
+      window.AgroScanBusy.startChecking();
+      return;
+    }
+    setLoaderText(T("scan_checking"));
+  }
+
+  function hideChecking() {
+    var loader = $("loader");
+    if (loader) loader.className = "loader hidden";
+    if (window.AgroScanBusy && window.AgroScanBusy.hide) window.AgroScanBusy.hide();
   }
 
   function runAnalyze() {
-    window.__agroscanAutoSpoke = false;
+    if (window.speechSynthesis) {
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    }
     if (window.AgroScanFeatures && window.AgroScanFeatures.closeHistoryView) {
       window.AgroScanFeatures.closeHistoryView();
     }
-    if (!selectedFile || !apiOnline) {
+    if (!selectedFile || !(apiOnline || hasOfflineVision())) {
       var err0 = $("errorBox");
       if (err0) {
-        err0.textContent = !apiOnline ? T("err_no_server") : T("err_no_image");
+        err0.textContent = !selectedFile ? T("err_no_image") : T("err_no_server");
         err0.className = "error";
       }
       return;
@@ -676,8 +766,8 @@
     if (results) results.className = "results hidden";
     document.body.classList.remove("has-results");
     if (err) err.className = "error hidden";
-    if (loader) loader.className = "loader";
-    setLoaderText(T("compressing"));
+    if (loader) loader.className = "loader hidden";
+    setLoaderText(T("scan_prep"));
     lastStatusKey = "status_analyzing";
     lastStatusBad = false;
     refreshStatusText();
@@ -693,24 +783,47 @@
         lang: (window.AgroScanI18n && window.AgroScanI18n.lang) || "bn"
       };
       if (selectedCropOverride) extra.crop = selectedCropOverride;
-      xhrPostFile(API + "/api/predict", uploadFile, function (data) {
-        if (loader) loader.className = "loader hidden";
+      function finishOk(data) {
+        hideChecking();
         renderResult(data);
         if (window.AgroScanShop && data.stage3_disease && data.stage3_disease.best_answer) {
           window.AgroScanShop.recommendForDisease(data.stage3_disease.best_answer.prediction || "");
         }
         checkStatus();
         updateAnalyzeBtn();
-      }, function (msg) {
-        if (loader) loader.className = "loader hidden";
-        checkStatus();
+      }
+      function finishErr(msg) {
+        hideChecking();
         if (err) {
           err.textContent = typeof msg === "string" ? msg : T("err_prediction");
           err.className = "error";
         }
         updateAnalyzeBtn();
-      }, function (progressText) {
-        setLoaderText(progressText);
+      }
+      function runLocal() {
+        if (!hasOfflineVision()) {
+          finishErr(T("err_no_server"));
+          return;
+        }
+        setLoaderText(T("analyzing_offline"));
+        showChecking();
+        window.AgroScanOffline.predict(uploadFile, extra).then(finishOk).catch(function () {
+          finishErr(T("err_offline_models"));
+        });
+      }
+      if (!preferServer()) {
+        runLocal();
+        return;
+      }
+      xhrPostFile(API + "/api/predict", uploadFile, function (data) {
+        apiOnline = true;
+        finishOk(data);
+      }, function () {
+        if (hasOfflineVision()) runLocal();
+        else finishErr(T("err_prediction"));
+      }, function (progressText, kind) {
+        if (kind === "checking") showChecking();
+        else setLoaderText(progressText);
       }, extra);
     });
   }
