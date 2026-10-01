@@ -1,7 +1,0 @@
-# Cloudflare Tunnel: public HTTPS -> local uvicorn
-# Hostname is created in Zero Trust (or: cloudflared tunnel route dns).
-
-ingress:
-  - hostname: agroscan.mujahidulhaquejihad.com
-    service: http://127.0.0.1:8000
-  - service: http_status:404

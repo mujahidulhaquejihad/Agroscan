@@ -8,7 +8,7 @@ Generated 2026-08-20. Bangladesh-only. English keys, Bangla (`_bn`) on every far
 
 | Section | File | Brief's target | Delivered |
 |---|---|---|---|
-| A | `disease_treatments.json` | 30 diseases | **58** |
+| A | `diseases/*.json` (one file per disease) | 30 diseases | **136** |
 | B | `products.json` | 200 products | **237** |
 | C | `equipment.json` | 100 items | **105** |
 | D | `suppliers.json` | 150 dealers | **48** — see the honest caveat below |
@@ -17,7 +17,6 @@ Generated 2026-08-20. Bangladesh-only. English keys, Bangla (`_bn`) on every far
 | G | `regulatory_safety.json` | 1 reference doc | **9 topics + 11 UI warning boxes** |
 | H | `order_workflow.json` | 1 doc | **1** |
 | — | `keys_reference.json` | — | controlled vocabularies and join keys |
-| — | `agroscan_master.json` | — | all sections in one file |
 
 `validate.py` passes with **0 failures and 0 warnings**. Run it after any edit.
 
@@ -139,8 +138,7 @@ For perennials (mango, banana, papaya, jackfruit) the input cost is **annual mai
 
 ```
 data/
-  agroscan_master.json        all sections in one file
-  disease_treatments.json     A — 58 records
+  diseases/<class>.json       A — one file per disease (136), named after the model class
   products.json               B — 237 SKUs
   equipment.json              C — 105 SKUs
   suppliers.json              D — 48 documented entities
@@ -149,26 +147,19 @@ data/
   regulatory_safety.json      G — 9 topics, 11 UI warning boxes, helplines, portals
   order_workflow.json         H — ordering norms and a suggested order state machine
   keys_reference.json         controlled vocabularies and join keys
-  upazilas_qa.json            geo match-quality QA report
-  parts/                      Section A source files, merged into disease_treatments.json
   scripts/collect_dealers.py  Google Places dealer collection script
-  _raw/                       upstream source data
 
-build_upazilas.py    E: geocode ↔ geoBoundaries join
-build_products.py    B: catalogue generator
-build_equipment.py   C: catalogue generator
-build_suppliers.py   D: documented-entity generator
-build_crops.py       F: economics generator
-link_datasets.py     cross-dataset SKU resolution + cure flags + keys reference
-validate.py          16 integrity checks — run after any edit
+link_datasets.py      cross-dataset SKU resolution + cure flags + keys reference
+validate.py           16 integrity checks — run after any edit
+test_disease_pack.py  every model class has its own disease file with valid steps
 ```
 
-Regenerate everything:
+The JSON files are the source of truth — edit them directly, then:
 
 ```bash
-python3 build_upazilas.py && python3 build_products.py && \
-python3 build_equipment.py && python3 build_suppliers.py && \
-python3 build_crops.py && python3 link_datasets.py && python3 validate.py
+python data/agroscan/link_datasets.py
+python data/agroscan/validate.py
+python data/agroscan/test_disease_pack.py
 ```
 
 ---

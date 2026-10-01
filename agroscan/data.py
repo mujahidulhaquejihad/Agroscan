@@ -473,10 +473,32 @@ def _leaf_items() -> Tuple[List[Tuple[Path, int]], List[str]]:
     return leaf + non_leaf, class_names
 
 
+def disease_leaf_sample(split_root: Path, per_class: int, leaf_idx: int = 0) -> List[Tuple[Path, int]]:
+    """A few photos per disease class, labelled leaf.
+
+    leaf_gate/*/leaf is mostly green maize close-ups, so without these the gate
+    rejects single diseased/yellowed leaves on plain backgrounds (typical web photos).
+    Same split in, same split out: no leakage into valid/test.
+    """
+    rng = random.Random(config.SEED)
+    out: List[Tuple[Path, int]] = []
+    for cls in sorted(p for p in split_root.iterdir() if p.is_dir()):
+        files = sorted(_gather(cls))
+        out += [(p, leaf_idx) for p in rng.sample(files, min(per_class, len(files)))]
+    return out
+
+
 def leaf_loaders(input_size: int, batch: int, val_frac: float = 0.1):
     if (config.LEAF_SPLIT_TRAIN / "leaf").is_dir() and (config.LEAF_SPLIT_VALID / "leaf").is_dir():
         train_ds = ImageFolder(str(config.LEAF_SPLIT_TRAIN), build_transforms(input_size, True))
         val_ds = ImageFolder(str(config.LEAF_SPLIT_VALID), build_transforms(input_size, False))
+        if config.LEAF_USE_DISEASE_IMAGES:
+            leaf_idx = train_ds.class_to_idx["leaf"]
+            train_ds = ConcatDataset([train_ds, ImageListDataset(
+                disease_leaf_sample(config.UNIFIED_TRAIN, 40, leaf_idx), build_transforms(input_size, True))])
+            val_ds = ConcatDataset([val_ds, ImageListDataset(
+                disease_leaf_sample(config.UNIFIED_VALID, 6, leaf_idx), build_transforms(input_size, False))])
+            train_ds.classes = val_ds.classes = ["leaf", "non_leaf"]
         print(
             f"Leaf gate splits: {train_ds.classes} | "
             f"{len(train_ds):,} train / {len(val_ds):,} val"

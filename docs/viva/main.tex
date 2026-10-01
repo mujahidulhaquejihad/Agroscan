@@ -60,7 +60,7 @@ Load \texttt{.pt} & \texttt{models.py} \texttt{load\_checkpoint} 70--80 & arch, 
 Train loop & \texttt{engine.py} \texttt{train\_model} 53-- & Focal loss, AMP, resume \\
 Advice text & \texttt{knowledge.py} \texttt{advice\_for} 365-- & Pack lookup by class name \\
 Chat ladder & \texttt{llm\_chat.py} \texttt{chat\_reply} 932--1026 & clarify $\rightarrow$ pack $\rightarrow$ KB $\rightarrow$ Gemini \\
-RAG fetch & \texttt{rag.py} \texttt{retrieve} 235-- & TF-IDF + cosine, $k=6$ \\
+RAG fetch & \texttt{rag.py} \texttt{retrieve} 235-- & TF-IDF + cosine, $k=4$ in chat \\
 Shop order & \texttt{shop\_db.py} \texttt{create\_order} 529-- & Insert order, pick supplier \\
 Vendor login & \texttt{shop\_db.py} \texttt{vendor\_login} 1261-- & Token for \texttt{/vendor} \\
 Farmer login & \texttt{auth\_store.py} \texttt{login\_local} 168-- & Session token \\
@@ -74,7 +74,7 @@ Shop cart & \texttt{web/shop.js} \texttt{checkout} 809-- & \texttt{POST /api/sho
 
 \chapter{How a request travels}
 \begin{enumerate}
-    \item Browser: \texttt{web/index.html} loads \texttt{config.js}, \texttt{i18n.js}, \texttt{core.js}, \texttt{app.js}, \texttt{app-extra.js}, \texttt{shop.js}.
+    \item Browser: \texttt{web/index.html} loads \texttt{config.js}, \texttt{i18n.js}, \texttt{core.js}, \texttt{app-extra.js}, \texttt{shop.js}.
     \item User taps capture. \texttt{core.js} \texttt{runAnalyze} compresses the photo and POSTs to \texttt{/api/predict}.
     \item \texttt{backend/main.py} \texttt{predict} reads bytes, \texttt{load\_rgb\_image}, calls \texttt{engine.predict}.
     \item \texttt{InferenceEngine} was created at startup in \texttt{\_load} (line 102).
@@ -152,13 +152,11 @@ Farmer: \texttt{GET /api/shop/products}, \texttt{POST /api/shop/orders}. Vendor 
     \item \texttt{config.js} --- \texttt{API\_BASE}, online pill against \texttt{/api/status}.
     \item \texttt{i18n.js} --- Bangla/English strings.
     \item \texttt{core.js} --- status, upload, analyze, render diagnosis.
-    \item \texttt{app.js} --- page init, older upload/chat wiring.
     \item \texttt{app-extra.js} --- chat panel, mic, speech, vision-in-chat.
     \item \texttt{shop.js} --- catalogue, cart, checkout, orders.
     \item \texttt{field.js} --- named plots.
     \item \texttt{auth.js} / \texttt{account.js} --- login header and account page.
     \item \texttt{crop.js} --- perspective / auto-crop UI.
-    \item \texttt{offline-infer.js} --- leftover ONNX path; production APK does not ship models.
     \item \texttt{ops.js} --- shared helpers for vendor/admin HTML.
     \item Vendor UI lives in \texttt{web/vendor.html} (inline script). Admin in \texttt{web/admin.html}.
     \item Android: \texttt{mobile/} Capacitor shell. No on-device ensemble.

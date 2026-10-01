@@ -13,10 +13,6 @@ from __future__ import annotations
 import re
 from typing import Dict, List, Optional
 
-from .disease_guides import DISEASE_GUIDES
-from .disease_guides_bn import DISEASE_GUIDES_BN
-from .knowledge_bn import DISEASE_INFO_BN, SEVERITY_BN
-
 # --------------------------------------------------------------------------- #
 # Emergency contacts (Bangladesh) and government resources
 # --------------------------------------------------------------------------- #
@@ -100,267 +96,6 @@ GOV_LINKS = [
     },
 ]
 
-# --------------------------------------------------------------------------- #
-# Disease knowledge base (keyed by a normalized condition slug)
-# --------------------------------------------------------------------------- #
-DISEASE_INFO: Dict[str, Dict[str, object]] = {
-    "healthy": {
-        "title": "Healthy leaf",
-        "summary": "No disease detected. The leaf looks healthy.",
-        "symptoms": ["Uniform green colour", "No spots, mold or wilting"],
-        "treatment": ["No treatment needed."],
-        "prevention": ["Keep up balanced fertilisation and irrigation.", "Scout the field weekly for early symptoms."],
-        "severity": "none",
-    },
-    "apple_scab": {
-        "title": "Apple scab",
-        "summary": "Fungal disease (Venturia inaequalis) causing olive-green to black velvety spots.",
-        "symptoms": ["Olive-green/black spots on leaves", "Scabby, cracked fruit", "Early leaf drop"],
-        "treatment": ["Apply protectant fungicides (e.g., mancozeb) or captan at green-tip and repeat per label.", "Prune to improve air flow."],
-        "prevention": ["Rake and destroy fallen leaves", "Plant resistant varieties", "Avoid overhead irrigation"],
-        "severity": "moderate",
-    },
-    "black_rot": {
-        "title": "Black rot",
-        "summary": "Fungal disease causing leaf spots ('frog-eye') and fruit rot.",
-        "symptoms": ["Brown circular leaf spots with purple margins", "Rotting, shrivelled fruit", "Cankers on twigs"],
-        "treatment": ["Remove mummified fruit and cankers", "Apply fungicide (captan/mancozeb) from bloom onward"],
-        "prevention": ["Sanitation: remove infected wood & fruit", "Improve canopy airflow"],
-        "severity": "moderate",
-    },
-    "rust": {
-        "title": "Rust (incl. cedar-apple & common rust)",
-        "summary": "Fungal disease producing orange/rusty pustules on leaves.",
-        "symptoms": ["Yellow-orange spots on upper leaf", "Rusty pustules underneath", "Premature leaf drop"],
-        "treatment": ["Apply fungicide at first sign (e.g., myclobutanil for cedar-apple rust)", "Remove nearby alternate hosts (junipers) where relevant"],
-        "prevention": ["Use resistant varieties", "Avoid prolonged leaf wetness"],
-        "severity": "moderate",
-    },
-    "powdery_mildew": {
-        "title": "Powdery mildew",
-        "summary": "White powdery fungal growth on leaf surfaces.",
-        "symptoms": ["White/grey powder on leaves & shoots", "Distorted, stunted growth"],
-        "treatment": ["Apply sulfur or potassium-bicarbonate sprays", "Use systemic fungicide for heavy infection"],
-        "prevention": ["Improve airflow & sunlight", "Avoid excess nitrogen", "Plant resistant cultivars"],
-        "severity": "moderate",
-    },
-    "gray_leaf_spot": {
-        "title": "Gray leaf spot / Cercospora",
-        "summary": "Fungal disease of maize causing rectangular grey-brown lesions.",
-        "symptoms": ["Long rectangular tan/grey lesions along veins", "Lesions merge and blight the leaf"],
-        "treatment": ["Apply foliar fungicide (strobilurin/triazole) at early disease onset"],
-        "prevention": ["Rotate crops", "Use resistant hybrids", "Bury crop residue"],
-        "severity": "high",
-    },
-    "northern_leaf_blight": {
-        "title": "Northern leaf blight",
-        "summary": "Fungal disease of maize with long cigar-shaped grey-green lesions.",
-        "symptoms": ["Cigar-shaped tan lesions on leaves", "Blighted leaves reduce yield"],
-        "treatment": ["Apply fungicide if disease appears before tasseling"],
-        "prevention": ["Resistant hybrids", "Crop rotation", "Residue management"],
-        "severity": "high",
-    },
-    "esca": {
-        "title": "Esca (Black Measles) - grape",
-        "summary": "Complex trunk disease of grapevine.",
-        "symptoms": ["Tiger-stripe interveinal scorch on leaves", "Dark spots on berries", "Sudden vine collapse (apoplexy)"],
-        "treatment": ["No reliable cure; remove and re-train affected arms", "Protect pruning wounds"],
-        "prevention": ["Prune in dry weather & seal large cuts", "Avoid vine stress"],
-        "severity": "high",
-    },
-    "leaf_blight": {
-        "title": "Leaf blight (Isariopsis) - grape",
-        "summary": "Fungal leaf-spot disease of grape.",
-        "symptoms": ["Irregular dark-brown leaf spots", "Premature defoliation"],
-        "treatment": ["Apply mancozeb/copper fungicide on a protective schedule"],
-        "prevention": ["Canopy management for airflow", "Remove fallen leaves"],
-        "severity": "moderate",
-    },
-    "citrus_greening": {
-        "title": "Citrus greening (Huanglongbing/HLB)",
-        "summary": "Serious bacterial disease spread by the citrus psyllid. No cure.",
-        "symptoms": ["Blotchy asymmetric leaf yellowing", "Lopsided bitter fruit", "Twig dieback"],
-        "treatment": ["No cure - remove and destroy infected trees to protect the orchard", "Control psyllid vectors with insecticide"],
-        "prevention": ["Use certified disease-free saplings", "Aggressive psyllid control", "Regular scouting"],
-        "severity": "critical",
-    },
-    "bacterial_spot": {
-        "title": "Bacterial spot",
-        "summary": "Bacterial disease of tomato/pepper/peach causing water-soaked spots.",
-        "symptoms": ["Small water-soaked spots turning brown/black", "Yellow halos", "Fruit lesions"],
-        "treatment": ["Apply copper-based bactericides (limited efficacy)", "Remove severely infected plants"],
-        "prevention": ["Use disease-free certified seed", "Avoid overhead watering & working when wet", "Rotate crops"],
-        "severity": "high",
-    },
-    "early_blight": {
-        "title": "Early blight",
-        "summary": "Fungal disease (Alternaria) of tomato/potato with target-like spots.",
-        "symptoms": ["Brown spots with concentric rings ('target')", "Yellowing around spots", "Lower leaves first"],
-        "treatment": ["Apply chlorothalonil or mancozeb fungicide", "Remove infected lower leaves"],
-        "prevention": ["Mulch to stop soil splash", "Crop rotation", "Adequate plant spacing"],
-        "severity": "moderate",
-    },
-    "late_blight": {
-        "title": "Late blight",
-        "summary": "Aggressive disease (Phytophthora infestans) - can destroy a field fast.",
-        "symptoms": ["Large grey-green water-soaked patches", "White mold under leaf in humid weather", "Rapid collapse"],
-        "treatment": ["Act immediately: apply fungicide (chlorothalonil/mancozeb; metalaxyl)", "Destroy infected plants away from the field"],
-        "prevention": ["Plant resistant varieties & certified seed", "Avoid leaf wetness", "Do not compost infected debris"],
-        "severity": "critical",
-    },
-    "leaf_mold": {
-        "title": "Leaf mold - tomato",
-        "summary": "Fungal disease favoured by high humidity (common in greenhouses/poly-tunnels).",
-        "symptoms": ["Pale-yellow spots on upper leaf", "Olive-green/brown velvety mold underneath"],
-        "treatment": ["Improve ventilation & lower humidity", "Apply fungicide if severe"],
-        "prevention": ["Space plants, prune for airflow", "Avoid wetting foliage"],
-        "severity": "moderate",
-    },
-    "septoria_leaf_spot": {
-        "title": "Septoria leaf spot - tomato",
-        "summary": "Fungal disease causing many small circular spots.",
-        "symptoms": ["Numerous small spots with dark margins & grey centres", "Tiny black specks in centre", "Starts on lower leaves"],
-        "treatment": ["Apply fungicide (chlorothalonil/mancozeb)", "Remove infected leaves"],
-        "prevention": ["Mulch, rotate crops", "Avoid overhead irrigation"],
-        "severity": "moderate",
-    },
-    "spider_mites": {
-        "title": "Two-spotted spider mites",
-        "summary": "Tiny sap-sucking pests (not a disease) that stipple and web leaves.",
-        "symptoms": ["Fine yellow stippling/speckling", "Fine webbing under leaves", "Bronzing & leaf drop"],
-        "treatment": ["Spray water to dislodge; use miticide or insecticidal soap/neem oil", "Encourage predatory mites"],
-        "prevention": ["Avoid drought stress & dust", "Avoid broad-spectrum insecticides that kill predators"],
-        "severity": "moderate",
-    },
-    "target_spot": {
-        "title": "Target spot - tomato",
-        "summary": "Fungal disease (Corynespora) with target-like lesions on leaves and fruit.",
-        "symptoms": ["Brown spots with concentric rings", "Lesions on stems & fruit"],
-        "treatment": ["Apply fungicide (chlorothalonil/mancozeb)", "Remove infected debris"],
-        "prevention": ["Airflow, rotation, avoid leaf wetness"],
-        "severity": "moderate",
-    },
-    "mosaic_virus": {
-        "title": "Tomato mosaic virus",
-        "summary": "Viral disease causing mottling and distortion. No chemical cure.",
-        "symptoms": ["Mottled light/dark green leaves", "Distorted, fern-like leaves", "Stunted plants"],
-        "treatment": ["No cure - remove & destroy infected plants", "Disinfect hands/tools (milk or bleach solution)"],
-        "prevention": ["Use resistant varieties & clean seed", "Wash hands; avoid tobacco use near plants", "Control weeds"],
-        "severity": "high",
-    },
-    "yellow_leaf_curl_virus": {
-        "title": "Tomato yellow leaf curl virus (TYLCV)",
-        "summary": "Viral disease spread by whiteflies. No cure.",
-        "symptoms": ["Upward curling, yellow leaf margins", "Stunted bushy growth", "Heavy flower drop"],
-        "treatment": ["No cure - remove infected plants", "Control whitefly vectors (insecticide, yellow sticky traps)"],
-        "prevention": ["Resistant varieties", "Whitefly nets / reflective mulch", "Early whitefly control"],
-        "severity": "critical",
-    },
-}
-
-# Map keywords found in a class name's condition to a KB key.
-_CONDITION_RULES = [
-    ("healthy", "healthy"),
-    ("scab", "apple_scab"),
-    ("black_rot", "black_rot"),
-    ("rust", "rust"),
-    ("powdery", "powdery_mildew"),
-    ("cercospora", "gray_leaf_spot"),
-    ("gray_leaf", "gray_leaf_spot"),
-    ("northern_leaf_blight", "northern_leaf_blight"),
-    ("esca", "esca"),
-    # Longer blight names BEFORE generic leaf_blight
-    ("early_blight", "early_blight"),
-    ("late_blight", "late_blight"),
-    ("leaf_blight", "leaf_blight"),
-    ("haunglongbing", "citrus_greening"),
-    ("greening", "citrus_greening"),
-    ("bacterial_spot", "bacterial_spot"),
-    ("leaf_mold", "leaf_mold"),
-    ("septoria", "septoria_leaf_spot"),
-    ("spider_mites", "spider_mites"),
-    ("target_spot", "target_spot"),
-    ("mosaic", "mosaic_virus"),
-    ("yellow_leaf_curl", "yellow_leaf_curl_virus"),
-    ("leaf_scorch", "septoria_leaf_spot"),
-]
-
-
-_GUIDE_FIELDS = (
-    "description",
-    "next_steps",
-    "when_to_call_helpline",
-    "expected_outcome",
-)
-
-
-def _attach_guide(info: dict, kb_key: str, lang: str = "bn") -> dict:
-    """Attach detailed next-step guide (EN, then BN overlay)."""
-    out = dict(info)
-    guide = DISEASE_GUIDES.get(kb_key) or {}
-    for field in _GUIDE_FIELDS:
-        if field in guide:
-            out[field] = guide[field]
-    if lang == "bn":
-        bn_guide = DISEASE_GUIDES_BN.get(kb_key) or {}
-        for field in _GUIDE_FIELDS:
-            if field in bn_guide:
-                out[field] = bn_guide[field]
-    return out
-
-
-def _localize_info(info: dict, lang: str = "bn") -> dict:
-    """Merge Bengali fields when lang is 'bn'."""
-    key = info.get("matched_key")
-    out = dict(info)
-    if lang == "bn" and key and key in DISEASE_INFO_BN:
-        bn = DISEASE_INFO_BN[key]
-        for field in ("title", "summary", "symptoms", "treatment", "prevention"):
-            if field in bn:
-                out[field] = bn[field]
-        sev = out.get("severity")
-        if sev in SEVERITY_BN:
-            out["severity_label"] = SEVERITY_BN[sev]
-    if key:
-        out = _attach_guide(out, str(key), lang)
-    return out
-
-
-def advice_for_key(
-    kb_key: str,
-    lang: str = "bn",
-    *,
-    land_size: float | None = None,
-    land_unit: str = "decimal",
-) -> Optional[dict]:
-    try:
-        from agroscan.treatment_detail import advice_from_pack
-
-        pack = advice_from_pack(kb_key, lang, land_size=land_size, land_unit=land_unit)
-        if pack:
-            return pack
-    except Exception:
-        pass
-    if kb_key not in DISEASE_INFO:
-        return None
-    info = dict(DISEASE_INFO[kb_key])
-    info["matched_key"] = kb_key
-    try:
-        from agroscan.treatment_detail import treatment_plan_for
-
-        tp = treatment_plan_for(kb_key, lang, land_size=land_size, land_unit=land_unit)
-        if tp:
-            info["treatment_plan"] = tp
-            if tp.get("land"):
-                info["land"] = tp["land"]
-            if tp.get("land_followups"):
-                steps = list(info.get("next_steps") or [])
-                steps.extend(tp["land_followups"])
-                info["next_steps"] = steps
-    except Exception:
-        pass
-    return _localize_info(info, lang)
-
 
 def advice_for(
     class_name: str,
@@ -369,21 +104,13 @@ def advice_for(
     land_size: float | None = None,
     land_unit: str = "decimal",
 ) -> Optional[dict]:
-    """Return KB info for a full class name like 'Tomato___Late_blight'."""
+    """Disease card from data/agroscan/diseases/ for a class name like 'Tomato___Late_blight'."""
     try:
         from agroscan.treatment_detail import advice_from_pack
 
-        pack = advice_from_pack(class_name, lang, land_size=land_size, land_unit=land_unit)
-        if pack:
-            return pack
+        return advice_from_pack(class_name, lang, land_size=land_size, land_unit=land_unit) or None
     except Exception:
-        pass
-    cond = class_name.split("___", 1)[1] if "___" in class_name else class_name
-    key = cond.lower()
-    for needle, kb_key in _CONDITION_RULES:
-        if needle in key:
-            return advice_for_key(kb_key, lang, land_size=land_size, land_unit=land_unit)
-    return None
+        return None
 
 
 def all_diseases(lang: str = "bn") -> Dict[str, dict]:
@@ -401,11 +128,6 @@ def all_diseases(lang: str = "bn") -> Dict[str, dict]:
                 out[str(name)] = info
     except Exception:
         pass
-    for k in DISEASE_INFO:
-        if k not in out:
-            info = advice_for_key(k, lang)
-            if info:
-                out[k] = info
     return out
 
 
@@ -436,6 +158,7 @@ _WEAK_DISEASE_TOKENS = {
     "common", "black", "brown", "yellow", "green", "gray", "grey",
     "রোগ", "পাতা", "গাছ", "ফসল",
 }
+_NAME_STOPWORDS = {"and", "the", "with", "from", "for", "ও", "এবং"}
 
 # App-usage questions only — not "how do I treat X" / "what pesticide to use".
 _APP_HOWTO_RE = re.compile(
@@ -520,9 +243,7 @@ def pack_catalog_reply(message: str, lang: str) -> Optional[dict]:
         key = crop_en.lower() or crop_bn.lower()
         if not key or key in seen_crop:
             continue
-        if (len(crop_en) >= 3 and crop_en.lower() in msg) or (
-            len(crop_bn) >= 2 and crop_bn.lower() in msg
-        ):
+        if crop_mentioned(crop_en, msg) or crop_mentioned(crop_bn, msg):
             mentioned.append(key)
             seen_crop.add(key)
 
@@ -579,6 +300,31 @@ def _split_name(text: str) -> list:
     return [t for t in re.split(r"[\s,./;:()+\-]+", (text or "").strip().lower()) if t]
 
 
+_YA = "(?:\u09df|\u09af\u09bc)"
+# ponytail: fixed Bangla suffix list; add one here if a real inflection ('আমের', 'চায়ের') stops matching.
+_BN_CROP_SUFFIX = (
+    f"(?:র|ের|এর|{_YA}ের|{_YA}ে|{_YA}|ে|তে|টি|টা|গুলো|গুলোর|গাছ|গাছের|গাছে|পাতা|পাতার|ক্ষেত|ক্ষেতে|বাগান|বাগানে)?"
+)
+
+
+def _word_in(token: str, words: list) -> bool:
+    """Disease-name token starts a message word: 'ব্লাস্টে' has 'ব্লাস্ট'; 'protect' does not have 'rot'."""
+    return any(w.startswith(token) for w in words)
+
+
+def crop_mentioned(crop: str, msg: str) -> bool:
+    """Whole-word crop match: 'আমের', 'tomatoes' count; 'আমি' (I), 'চাষ' (farming), 'price' do not."""
+    crop = (crop or "").strip().lower()
+    if len(crop) < 2:
+        return False
+    if crop.isascii():
+        return re.search(rf"\b{re.escape(crop)}(?:e?s)?\b", msg) is not None
+    return (
+        re.search(rf"(?<![\u0980-\u09ff]){re.escape(crop)}{_BN_CROP_SUFFIX}(?![\u0980-\u09ff])", msg)
+        is not None
+    )
+
+
 def _disease_name_tokens(dis_en: str, dis_bn: str, crop_en: str, crop_bn: str) -> list:
     """Tokens that identify the disease, not the crop or generic words.
 
@@ -588,7 +334,7 @@ def _disease_name_tokens(dis_en: str, dis_bn: str, crop_en: str, crop_bn: str) -
     crop_bits = _split_name(f"{crop_en} {crop_bn}")
     out = []
     for tok in _split_name(f"{dis_en} {dis_bn}"):
-        if len(tok) < 3 or tok in _WEAK_DISEASE_TOKENS:
+        if len(tok) < 3 or tok in _WEAK_DISEASE_TOKENS or tok in _NAME_STOPWORDS:
             continue
         if tok in crop_bits or any(c and len(c) >= 2 and (c in tok or tok in c) for c in crop_bits):
             continue
@@ -651,11 +397,14 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
     except Exception:
         return out
 
+    msg_words = _split_name(msg)
     for rec in treatments():
         class_name = str(rec.get("class_name") or "")
         kb = str(rec.get("kb_key") or "")
         crop_en = str(rec.get("crop_en") or "").lower()
         crop_bn = str(rec.get("crop_bn") or "").lower()
+        # "Corn_(maize)" -> "corn maize", so "corn" counts as the crop, not a disease word.
+        class_crop = class_name.split("___", 1)[0].replace("_", " ").lower()
         dis_en = str(rec.get("disease_en") or "").lower()
         dis_bn = str(rec.get("disease_bn") or "").lower()
         score = 0
@@ -665,19 +414,19 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
             score += 12
         if dis_bn and dis_bn in msg:
             score += 12
-        name_toks = _disease_name_tokens(dis_en, dis_bn, crop_en, crop_bn)
-        token_hit = any(t in msg for t in name_toks)
+        name_toks = _disease_name_tokens(dis_en, dis_bn, f"{crop_en} {class_crop}", crop_bn)
+        token_hits = sum(_word_in(t, msg_words) for t in set(name_toks))
+        token_hit = token_hits > 0
         if token_hit:
-            score += 12
+            score += 12 + 6 * (token_hits - 1)  # more name words matched = more specific
         if phrase and phrase in msg:
             score += 10
-        if crop_en and crop_en in msg:
-            score += 8
-        if crop_bn and crop_bn in msg:
+        crop_hit = crop_mentioned(crop_en, msg) or crop_mentioned(crop_bn, msg)
+        if crop_hit:
             score += 8
 
         tokens = [t for t in kb.split("_") if len(t) > 2 and t not in _WEAK_DISEASE_TOKENS]
-        if tokens and all(t in msg for t in tokens):
+        if tokens and all(_word_in(t, msg_words) for t in tokens):
             score += 4 * len(tokens)
 
         if kb == "late_blight" and "late" in msg and "blight" in msg:
@@ -687,7 +436,6 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
         if "northern" in kb and "northern" in msg and "blight" in msg:
             score = max(score, 11)
 
-        crop_hit = bool((crop_en and crop_en in msg) or (crop_bn and crop_bn in msg))
         disease_hit = bool(
             (dis_en and dis_en in msg)
             or (dis_bn and dis_bn in msg)
@@ -722,52 +470,46 @@ def _score_pack_candidates(msg: str, lang: str) -> List[dict]:
                 "label": label,
             }
         )
-    return out
+    return out or _score_generic_name(msg, lang)
 
 
-def _score_kb_candidates(msg: str, lang: str, exclude_classes: set) -> List[dict]:
+_DISEASE_KINDS = {"blight", "rust", "mold", "spot", "virus"}
+
+
+def _score_generic_name(msg: str, lang: str) -> List[dict]:
+    """'rust', 'leaf blight', 'corn rust': only weak words, so offer every disease named with all of them."""
+    from agroscan.bd_data import treatments
+    from agroscan.treatment_detail import advice_from_pack
+
+    words = set(_split_name(msg))
+    weak = words & _WEAK_DISEASE_TOKENS
+    if not weak & _DISEASE_KINDS:
+        return []
+    hits = []
+    for rec in treatments():
+        name = set(_split_name(f"{rec.get('disease_en') or ''} {rec.get('disease_bn') or ''}"))
+        if not weak <= name:
+            continue
+        class_crop = str(rec.get("class_name") or "").split("___", 1)[0].replace("_", " ")
+        crop = set(_split_name(f"{rec.get('crop_en') or ''} {rec.get('crop_bn') or ''} {class_crop}"))
+        hits.append((rec, bool(words & crop)))
+    if any(crop_hit for _, crop_hit in hits):
+        hits = [h for h in hits if h[1]]
     out: List[dict] = []
-    for key, _raw in DISEASE_INFO.items():
-        if key == "healthy":
-            continue
-        phrase = key.replace("_", " ")
-        score = 0
-        if phrase in msg:
-            score += 10
-        info = advice_for_key(key, lang)
-        if not info:
-            continue
-        title = str(info.get("title") or "").lower()
-        if title and title in msg:
-            score += 9
-        tokens = [t for t in key.split("_") if len(t) > 2 and t not in _WEAK_DISEASE_TOKENS]
-        if len(tokens) >= 2 and all(t in msg for t in tokens):
-            score += 8
-        if key == "late_blight" and "late" in msg and "blight" in msg:
-            score = max(score, 11)
-        if key == "early_blight" and "early" in msg and "blight" in msg:
-            score = max(score, 11)
-        if key == "northern_leaf_blight" and "northern" in msg and "blight" in msg:
-            score = max(score, 11)
-        if score < 8:
-            continue
-        cn = str(info.get("class_name") or key)
-        if cn in exclude_classes:
-            continue
-        label = _option_label(info, lang)
-        if cn.lower() == msg or label.lower() == msg:
-            score += 40
-        out.append(
-            {
-                "score": score,
-                "info": info,
-                "class_name": cn,
-                "kb_key": key,
-                "crop_hit": False,
-                "disease_hit": True,
-                "label": label,
-            }
-        )
+    for rec, crop_hit in hits:
+        info = advice_from_pack(str(rec.get("class_name")), lang)
+        if info:
+            out.append(
+                {
+                    "score": 18 if crop_hit else 8,
+                    "info": info,
+                    "class_name": rec.get("class_name"),
+                    "kb_key": rec.get("kb_key") or "",
+                    "crop_hit": crop_hit,
+                    "disease_hit": True,
+                    "label": _option_label(info, lang),
+                }
+            )
     return out
 
 
@@ -832,9 +574,6 @@ def resolve_disease_query(
                 return {"status": "matched", "info": info}
 
     candidates = _score_pack_candidates(msg, lang)
-    seen = {c["class_name"] for c in candidates}
-    candidates.extend(_score_kb_candidates(msg, lang, seen))
-
     if not candidates:
         return {"status": "none"}
 

@@ -112,7 +112,7 @@ crea<!DOCTYPE html>
         <ul>
           <li>L1 MobileNetV3-Large → L2 EfficientNet-B3 → L3 ensemble (B3 + ResNet-50 + DenseNet-121), crop-masked, highest confidence wins</li>
           <li>Advice comes from the JSON pack, not from the CNN</li>
-          <li>Chat: clarify → pack → KB → Gemini + TF-IDF RAG (k = 6)</li>
+          <li>Chat: clarify → pack → KB → Gemini + TF-IDF RAG (k = 4)</li>
           <li>Shop orders, vendor stock, admin users</li>
           <li class="warn">Weather is not this API — the page calls Open-Meteo in the browser</li>
         </ul>
@@ -129,7 +129,7 @@ crea<!DOCTYPE html>
         <ul style="text-align:left">
           <li><span class="mono">users.db</span> — farmer accounts</li>
           <li><span class="mono">agroscan_shop.db</span> — shop &amp; vendors</li>
-          <li>JSON pack — 142 disease cards</li>
+          <li><span class="mono">diseases/</span> — 1 JSON file per disease (136)</li>
           <li><span class="mono">*.pt</span> — PyTorch CNN weights</li>
         </ul>
       </div>

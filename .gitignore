@@ -16,6 +16,7 @@ models/*.pt
 models/*.train.pt
 llm_data/
 archive/
+internet_test/
 *.7z
 *.zip
 

@@ -23,7 +23,7 @@ print("AGROSCAN DATASET VALIDATION")
 print("=" * 78)
 
 # ---------------------------------------------------------------- load all
-files = ["disease_treatments.json", "products.json", "equipment.json",
+files = ["products.json", "equipment.json",
          "suppliers.json", "upazilas.json", "crop_profitability.json",
          "regulatory_safety.json", "order_workflow.json"]
 data = {}
@@ -36,7 +36,8 @@ for f in files:
         fail(f"{f} failed to parse: {e}")
         print(f"  FAIL {f}: {e}")
 
-dis = data["disease_treatments.json"]
+dis = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(Path(D, "diseases").glob("*.json"))]
+print(f"  OK  {'diseases/*.json':32} {len(dis)} files")
 prod = data["products.json"]
 equip = data["equipment.json"]
 sup = data["suppliers.json"]
@@ -444,7 +445,7 @@ print(f"  step-structure failures: {step_fail}")
 print("\n" + "=" * 78)
 print("TARGETS VS DELIVERED")
 print("=" * 78)
-targets = [("A  disease_treatments.json", 30, len(dis)),
+targets = [("A  diseases/*.json", 30, len(dis)),
            ("B  products.json", 200, len(prod)),
            ("C  equipment.json", 100, len(equip)),
            ("D  suppliers.json", 150, len(sup)),

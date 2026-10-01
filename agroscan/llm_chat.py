@@ -11,7 +11,7 @@ Env:
   AGROSCAN_LLM_LOCAL       1 to load local Gemma/Qwen on GPU
   AGROSCAN_LLM_BASE        HuggingFace id (default google/gemma-2-9b-it)
   AGROSCAN_LLM_ADAPTER     Qwen LoRA dir only (ignored on Gemma)
-  AGROSCAN_LLM_MAX_NEW     max new tokens (default 1024)
+  AGROSCAN_LLM_MAX_NEW     max new tokens (default 4096)
   AGROSCAN_LLM_DEVICE      cuda|cpu|auto
   AGROSCAN_LLM_PRELOAD     1 to load the local model at startup
   AGROSCAN_LLM_4BIT        auto|1|0   default auto (4-bit on CUDA)
@@ -38,14 +38,16 @@ config.load_dotenv()
 
 DEFAULT_ADAPTER = config.LLM_ADAPTERS / "agroscan-3b"
 DEFAULT_BASE = "google/gemma-2-9b-it"
+# Free tier allows 20 requests/day per model, so fall through several before the KB card.
 DEFAULT_GEMINI_MODELS = (
     "gemini-flash-latest",
-    "gemini-3.5-flash",
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
     "gemini-3.6-flash",
-)
-STT_GEMINI_MODELS = (
     "gemini-3.5-flash",
-    "gemini-flash-latest",
+    "gemini-2.5-flash",
+    "gemini-flash-lite-latest",
+    "gemini-3.5-flash-lite",
 )
 
 _lock = threading.Lock()
@@ -58,6 +60,13 @@ _using_adapter: Optional[str] = None
 _quant: Optional[str] = None
 _gemini_model: Optional[str] = None
 _gemini_dead: set[str] = set()
+
+
+def _note_gemini_error(model: str, code: Optional[int], err: str) -> None:
+    # ponytail: a model out of daily quota stays skipped until every model is dead
+    # (_gemini_models then retries all) or the server restarts; no midnight-PT reset timer.
+    if code == 404 or (code == 429 and "PerDay" in (err or "")):
+        _gemini_dead.add(model)
 
 
 def _env_flag(name: str, default: str = "auto") -> str:
@@ -187,6 +196,7 @@ def _relevant_context(message: str, context_disease: Optional[str]) -> Optional[
     ctx = context_disease.lower()
     try:
         from agroscan.bd_data import treatments
+        from agroscan.knowledge import crop_mentioned
 
         recs = treatments()
     except Exception:
@@ -204,10 +214,7 @@ def _relevant_context(message: str, context_disease: Optional[str]) -> Optional[
     for rec in recs:
         crop_en = str(rec.get("crop_en") or "").lower().strip()
         crop_bn = str(rec.get("crop_bn") or "").lower().strip()
-        mentioned = (len(crop_en) >= 3 and crop_en in msg) or (
-            len(crop_bn) >= 2 and crop_bn in msg
-        )
-        if not mentioned:
+        if not (crop_mentioned(crop_en, msg) or crop_mentioned(crop_bn, msg)):
             continue
         if crop_en in scan_crops or crop_bn in scan_crops:
             continue
@@ -225,7 +232,8 @@ _BANGLISH_RE = re.compile(
 
 HISTORY_MAX_TURNS = 8
 HISTORY_MAX_CHARS = 1200
-DEFAULT_MAX_NEW = 1024
+# Gemini counts its hidden reasoning against this too; Bangla needs ~3x the tokens of English.
+DEFAULT_MAX_NEW = 4096
 
 
 def _sanitize_history(history, current_message: str) -> list:
@@ -383,8 +391,9 @@ def _build_chat_messages(
             "সার রাখা, আবহাওয়া, রোপণের সময় — এসব সাধারণ চাষাবাদে বাংলাদেশের কৃষি সম্প্রসারণ জ্ঞান ব্যবহার করতে পারেন; "
             "নতুন কীটনাশকের নাম বা ডোজ আবিষ্কার করবেন না। "
             "প্রশ্নের সাথে মিলছে না এমন guide কপি করবেন না। "
-            "সংক্ষিপ্ত ফলো-আপ (ডোজ, স্প্রে, প্রতিরোধ) আগের রোগ ও কথোপকথন ধরে উত্তর দিন। "
-            "উত্তর শেষ করুন; বাক্য মাঝপথে কাটবেন না।"
+            "সংক্ষিপ্ত ফলো-আপ (ডোজ, স্প্রে, প্রতিরোধ) আগের রোগ ও কথোপকথন ধরে উত্তর দিন। "            "উত্তর শেষ করুন; বাক্য মাঝপথে কাটবেন না। "
+            "রোগ নিয়ে প্রশ্নে matched record বা guide থেকে পূর্ণ উত্তর দিন: রোগটি কী, লক্ষণ, ধাপে ধাপে করণীয়, "
+            "ওষুধের নাম ও ডোজ, প্রতিরোধ, এবং কখন ১৬১২৩ কল করবেন। নির্দিষ্ট ফলো-আপ প্রশ্নে শুধু সেই বিষয়টি পুরোপুরি বলুন।"
         )
     else:
         system = (
@@ -395,8 +404,10 @@ def _build_chat_messages(
             "For general farm practice (fertilizer storage, weather, planting time) you may use standard Bangladesh extension knowledge. "
             "Do not invent pesticide brands, doses, or disease symptoms. "
             "Ignore retrieved guides that do not match the question. "
-            "Short follow-ups (dose, spray, prevention) refer to the pinned disease and earlier turns. "
-            "Finish the answer; do not stop mid-sentence."
+            "Short follow-ups (dose, spray, prevention) refer to the pinned disease and earlier turns. "            "Finish the answer; do not stop mid-sentence. "
+            "For a question about a disease, answer fully from the matched record or guides: what it is, symptoms, "
+            "step-by-step actions, treatment with product and dose, prevention, and when to call 16123. "
+            "For a narrow follow-up, answer that one point completely."
         )
 
     parts: list[str] = []
@@ -705,7 +716,7 @@ def _gemini_extract(data: dict) -> tuple[Optional[str], str]:
     c0 = cands[0] or {}
     reason = str(c0.get("finishReason") or "")
     parts = ((c0.get("content") or {}).get("parts") or [])
-    text = "".join(str(p.get("text") or "") for p in parts).strip()
+    text = "".join(str(p.get("text") or "") for p in parts if not p.get("thought")).strip()
     return (text or None), reason
 
 
@@ -717,10 +728,11 @@ def _gemini_http(url: str, body: bytes, headers: dict, timeout: int = 45) -> tup
     except urllib.error.HTTPError as exc:
         err_body = ""
         try:
-            err_body = exc.read().decode("utf-8", errors="replace")[:400]
+            err_body = exc.read().decode("utf-8", errors="replace")
         except Exception:
             pass
-        return None, f"HTTP {exc.code}: {err_body or exc.reason}", exc.code
+        tag = " [PerDay]" if "PerDay" in err_body else ""
+        return None, f"HTTP {exc.code}{tag}: {err_body[:400] or exc.reason}", exc.code
     except Exception as exc:
         return None, f"{type(exc).__name__}: {exc}", None
 
@@ -743,11 +755,17 @@ def _gemini_generate(messages: list, max_new: int) -> Optional[str]:
         },
     }
     last_err = None
+    # The browser gives up on /api/chat at 90 s (web/app-extra.js); leave room for the KB fallback.
+    deadline = time.monotonic() + 60
+
+    def _left() -> int:
+        return min(55, int(deadline - time.monotonic()))
+
     models = _gemini_models()
     if _gemini_model:
         models = [_gemini_model] + [m for m in models if m != _gemini_model]
     for model in models:
-        if not model:
+        if not model or _left() < 5:
             continue
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
@@ -762,18 +780,25 @@ def _gemini_generate(messages: list, max_new: int) -> Optional[str]:
             req_headers = headers or {"Content-Type": "application/json"}
             busy = False
             for try_n in (0, 1):
+                if _left() < 5:
+                    busy = True
+                    break
                 body = json.dumps(payload).encode("utf-8")
-                data, err, code = _gemini_http(req_url, body, req_headers)
+                data, err, code = _gemini_http(req_url, body, req_headers, timeout=_left())
                 if err:
                     last_err = f"{err} {model}"
                     if key:
                         last_err = last_err.replace(key, "[redacted]")
-                    if code == 404:
-                        _gemini_dead.add(model)
+                    _note_gemini_error(model, code, err)
+                    if model in _gemini_dead:
+                        busy = True
+                        break
                     if code in (429, 503) and try_n == 0:
                         busy = True
                         time.sleep(1.5)
                         continue
+                    if code is None or code >= 500:
+                        busy = True  # timeout / server error: the other auth header won't help
                     break
                 text, reason = _gemini_extract(data or {})
                 if not text:
@@ -781,7 +806,7 @@ def _gemini_generate(messages: list, max_new: int) -> Optional[str]:
                     break
                 _gemini_model = model
                 _load_error = None
-                if reason == "MAX_TOKENS":
+                if reason == "MAX_TOKENS" and _left() >= 5:
                     cont = list(contents)
                     cont.append({"role": "model", "parts": [{"text": text}]})
                     cont.append(
@@ -797,7 +822,7 @@ def _gemini_generate(messages: list, max_new: int) -> Optional[str]:
                     more_payload = dict(payload)
                     more_payload["contents"] = cont
                     more_body = json.dumps(more_payload).encode("utf-8")
-                    more_data, more_err, _code = _gemini_http(req_url, more_body, req_headers)
+                    more_data, more_err, _code = _gemini_http(req_url, more_body, req_headers, timeout=_left())
                     if more_err:
                         print(f"[AgroScan LLM] Gemini continue failed: {more_err}")
                     else:
@@ -873,9 +898,7 @@ def transcribe_audio(audio: bytes, mime: str = "audio/wav", lang: str = "bn") ->
             ),
         )
     b64 = base64.b64encode(audio).decode("ascii")
-    models = [m for m in STT_GEMINI_MODELS if m not in _gemini_dead]
-    if not models:
-        models = list(STT_GEMINI_MODELS)
+    models = _gemini_models()
     headers = {"Content-Type": "application/json", "x-goog-api-key": key}
 
     def _once(prompt: str) -> Optional[str]:
@@ -898,8 +921,7 @@ def transcribe_audio(audio: bytes, mime: str = "audio/wav", lang: str = "bn") ->
             )
             data, err, code = _gemini_http(url, body, headers, timeout=25)
             if err:
-                if code == 404:
-                    _gemini_dead.add(model)
+                _note_gemini_error(model, code, err)
                 continue
             text, _reason = _gemini_extract(data or {})
             if not text:
@@ -939,7 +961,6 @@ def chat_reply(
 ) -> dict:
     """Gemini + RAG when enabled; pack/KB fallback otherwise."""
     from agroscan.knowledge import (
-        _format_pack_reply,
         _suggestions,
         chatbot_reply,
         pack_catalog_reply,
@@ -960,8 +981,8 @@ def chat_reply(
             "source": "clarify",
         }
 
+    # kb is the verified card (named disease or last scan); Gemini gets the same card in its prompt.
     kb = chatbot_reply(message, context_disease, lang, confirm_class=confirm_class)
-    pack = query.get("info") if query.get("status") == "matched" else None
 
     catalog = pack_catalog_reply(message, lang)
     if catalog:
@@ -971,17 +992,6 @@ def chat_reply(
         return kb
     if _structural_intent(message):
         kb["source"] = kb.get("source") or "kb"
-        return kb
-
-    if pack:
-        return {
-            "reply": _format_pack_reply(pack, lang),
-            "suggestions": suggestions,
-            "source": "pack",
-            "matched_key": pack.get("matched_key"),
-            "class_name": pack.get("class_name"),
-        }
-    if kb.get("source") in ("pack", "context"):
         return kb
 
     if (message or "").strip() and llm_configured() and _gemini_enabled() and not _want_local_llm():
@@ -998,8 +1008,8 @@ def chat_reply(
                 "suggestions": kb.get("suggestions") or suggestions,
                 "source": "gemini+rag",
             }
-            if context_disease:
-                out["class_name"] = context_disease
+            if kb.get("class_name") or context_disease:
+                out["class_name"] = kb.get("class_name") or context_disease
             return out
         print("[AgroScan LLM] Gemini empty/rejected; using pack/KB fallback.")
 
@@ -1054,7 +1064,8 @@ def _build_vision_messages(best: dict, leaf: dict, crop: dict, lang: str, pack: 
         system = (
             "আপনি AgroScan কৃষি সহকারী। শুধু নিচের মডেল ফলাফল ও verified guide ব্যবহার করুন। "
             "কোনো নতুন ওষুধ/ডোজ আবিষ্কার করবেন না। একই শব্দ বারবার লিখবেন না। "
-            "'Section:' হেডার কপি করবেন না। ৩–৬টি সংক্ষিপ্ত বাক্যে কৃষককে পরামর্শ দিন।"
+            "'Section:' হেডার কপি করবেন না। কৃষককে পূর্ণ পরামর্শ দিন: রোগটি কী, এখন কী করবেন (ধাপ, ওষুধ ও ডোজ), "
+            "প্রতিরোধ, এবং কখন ১৬১২৩ কল করবেন।"
         )
         ask = (
             "মডেল ফলাফল ও গাইড থেকে কৃষককে সহজ বাংলায় বলুন কী রোগ হতে পারে, "
@@ -1064,7 +1075,8 @@ def _build_vision_messages(best: dict, leaf: dict, crop: dict, lang: str, pack: 
         system = (
             "You are AgroScan for Bangladeshi farmers. Use ONLY the scan result and verified guide. "
             "Do not invent products or doses. Do not repeat words. "
-            "Do not copy headers like 'Section:'. Write 3–6 short sentences."
+            "Do not copy headers like 'Section:'. Give a complete answer: what it is, what to do now "
+            "(steps, product and dose), prevention, and when to call 16123."
         )
         ask = (
             "From the model result and guide, tell the farmer what it likely is, "
@@ -1081,7 +1093,7 @@ def _build_vision_messages(best: dict, leaf: dict, crop: dict, lang: str, pack: 
         steps = pack.get("next_steps") or []
         if steps:
             parts.append("Steps:\n")
-            for i, step in enumerate(steps[:5], 1):
+            for i, step in enumerate(steps, 1):
                 if isinstance(step, dict):
                     parts.append(
                         f"{i}. {(step.get('title') or '').strip()}: {(step.get('detail') or '').strip()}\n"
@@ -1091,12 +1103,12 @@ def _build_vision_messages(best: dict, leaf: dict, crop: dict, lang: str, pack: 
         treatments = pack.get("treatment") or []
         if treatments:
             parts.append("Treatment notes:\n")
-            for t in treatments[:4]:
+            for t in treatments:
                 parts.append(f"- {t}\n")
         prevention = pack.get("prevention") or []
         if prevention:
             parts.append("Prevention:\n")
-            for p in prevention[:3]:
+            for p in prevention:
                 parts.append(f"- {p}\n")
     else:
         parts.append(f"Disease class label: {class_name}\nNo verified guide found.\n")
@@ -1148,7 +1160,7 @@ def generate_vision_feedback(
     if not llm_configured():
         return None
     messages = _build_vision_messages(best, leaf, crop, lang, pack)
-    max_new = int(os.environ.get("AGROSCAN_LLM_VISION_MAX_NEW") or os.environ.get("AGROSCAN_LLM_MAX_NEW") or "512")
+    max_new = int(os.environ.get("AGROSCAN_LLM_VISION_MAX_NEW") or os.environ.get("AGROSCAN_LLM_MAX_NEW") or str(DEFAULT_MAX_NEW))
     if _want_local_llm() and _ensure_loaded():
         assert _model is not None and _tokenizer is not None
         prompt = _to_chat_prompt(_tokenizer, messages)

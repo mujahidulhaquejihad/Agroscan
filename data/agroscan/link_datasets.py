@@ -3,7 +3,7 @@
 """
 AgroScan — cross-dataset linking pass.
 
-Turns the human-written product NAME references in disease_treatments.json and
+Turns the human-written product NAME references in diseases/*.json and
 crop_profitability.json into resolved SKU links against products.json and
 equipment.json, so the app can go diagnosis -> recommended product -> cart
 without any string matching at runtime.
@@ -33,7 +33,8 @@ def save(n, o):
     json.dump(o, open(D + n, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 
-dis = load("disease_treatments.json")
+dis_paths = sorted(Path(D, "diseases").glob("*.json"))
+dis = [json.loads(p.read_text(encoding="utf-8")) for p in dis_paths]
 crop = load("crop_profitability.json")
 prod = load("products.json")
 equip = load("equipment.json")
@@ -245,7 +246,8 @@ keys_ref = {
     },
 }
 
-save("disease_treatments.json", dis)
+for p, r in zip(dis_paths, dis):
+    p.write_text(json.dumps(r, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 save("crop_profitability.json", crop)
 save("keys_reference.json", keys_ref)
 

@@ -1,18 +1,21 @@
-"""One check: every model disease class has a pack card with valid steps."""
+"""One check: every model disease class has its own file in diseases/ with valid steps."""
 import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PACK = ROOT / "data" / "agroscan" / "disease_treatments.json"
+DISEASES = ROOT / "data" / "agroscan" / "diseases"
 MODEL = ROOT / "web" / "offline-pack.json"
 BN = re.compile(r"[ঀ-৿]")
 
 
 def test_every_model_class_has_steps():
     classes = json.loads(MODEL.read_text(encoding="utf-8"))["models"]["disease"]["classes"]
-    rows = json.loads(PACK.read_text(encoding="utf-8"))
-    by = {r["class_name"]: r for r in rows}
+    files = sorted(DISEASES.glob("*.json"))
+    rows = [json.loads(p.read_text(encoding="utf-8")) for p in files]
+    for p, rec in zip(files, rows):
+        assert p.name == re.sub(r"[^\w]+", "_", rec["class_name"]).strip("_") + ".json", p.name
+    by = {n: r for r in rows for n in [r["class_name"], *r.get("aliases", [])]}
     missing = [c for c in classes if c not in by]
     assert missing == [], missing[:10]
     for rec in rows:
@@ -23,8 +26,9 @@ def test_every_model_class_has_steps():
             assert BN.search(b["title"] + b["detail"])
         if "healthy" in rec["kb_key"].lower() or rec.get("disease_en") == "Healthy":
             assert rec.get("chemical_treatments") == []
+    return len(rows), len(classes)
 
 
 if __name__ == "__main__":
-    test_every_model_class_has_steps()
-    print("ok", len(json.loads(MODEL.read_text(encoding="utf-8"))["models"]["disease"]["classes"]), "model classes covered")
+    n, c = test_every_model_class_has_steps()
+    print("ok", n, "disease files,", c, "model classes covered")

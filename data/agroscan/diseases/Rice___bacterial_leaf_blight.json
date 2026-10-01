@@ -222,5 +222,8 @@
       "match_confidence": "high"
     }
   ],
-  "is_curable_with_chemicals": true
+  "is_curable_with_chemicals": true,
+  "aliases": [
+    "Rice___Bacterial_leaf_blight"
+  ]
 }

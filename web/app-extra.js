@@ -15,7 +15,6 @@
         if (govLinks.length) paintGovGrid();
         if (emergencyContacts.length) paintEmergency();
         refreshMicTitle();
-        refreshSpeakTitle();
         var attachBtn = $("chatAttachBtn");
         if (attachBtn) {
           attachBtn.title = tChat("chat_attach");
@@ -169,16 +168,12 @@
       var opening = panel.className.indexOf("hidden") >= 0;
       panel.className = opening ? "chat-panel" : "chat-panel hidden";
       document.body.classList.toggle("chat-open", opening);
-      if (!opening) {
-        stopVoiceListen();
-        stopChatSpeak();
-      }
+      if (!opening) stopVoiceListen();
     };
     if (close && panel) close.onclick = function () {
       panel.className = "chat-panel hidden";
       document.body.classList.remove("chat-open");
       stopVoiceListen();
-      stopChatSpeak();
     };
     if (form) form.onsubmit = function (e) {
       e.preventDefault();
@@ -207,19 +202,6 @@
       };
       refreshMicTitle();
     }
-    var speakBtn = $("chatSpeakBtn");
-    if (speakBtn) {
-      speakBtn.onclick = function () { toggleChatSpeak(); };
-      refreshSpeakTitle();
-    }
-    if (window.speechSynthesis) {
-      try {
-        window.speechSynthesis.getVoices();
-        window.speechSynthesis.onvoiceschanged = function () {
-          try { window.speechSynthesis.getVoices(); } catch (e2) {}
-        };
-      } catch (e) {}
-    }
     if (attachBtn) {
       attachBtn.title = tChat("chat_attach");
       attachBtn.setAttribute("aria-label", tChat("chat_attach"));
@@ -229,10 +211,6 @@
   function tChat(key, vars) {
     if (window.AgroScanI18n && window.AgroScanI18n.t) return window.AgroScanI18n.t(key, vars);
     return key;
-  }
-
-  function isBnChat() {
-    return i18n() && i18n().lang === "bn";
   }
 
   var chatPendingFile = null;
@@ -245,14 +223,6 @@
   var chatRecTimer = null;
   var chatRecMime = "";
   var chatAudioCtx = null;
-  var chatSpeaking = false;
-  var chatSpeakGen = 0;
-  var chatSpeakOn = true;
-  try {
-    var savedSpeak = localStorage.getItem("agroscan_chat_tts");
-    if (savedSpeak === "0") chatSpeakOn = false;
-    if (savedSpeak === "1") chatSpeakOn = true;
-  } catch (e) {}
 
   function chatSourceLabel(src) {
     if (!src || src === "clarify") return "";
@@ -288,7 +258,6 @@
     }
     log.appendChild(b);
     log.scrollTop = log.scrollHeight;
-    if (chatSpeakOn) speakChat(text);
   }
 
   function collectChatHistory() {
@@ -477,95 +446,6 @@
     micBtn.title = label;
     micBtn.setAttribute("aria-label", label);
     micBtn.classList.toggle("is-listening", !!chatListening);
-  }
-
-  function refreshSpeakTitle() {
-    var btn = $("chatSpeakBtn");
-    if (!btn) return;
-    var label = chatSpeaking ? tChat("chat_speak_stop") : (chatSpeakOn ? tChat("chat_speak_on") : tChat("chat_speak"));
-    btn.title = label;
-    btn.setAttribute("aria-label", label);
-    btn.classList.toggle("is-speaking", !!chatSpeaking);
-    btn.classList.toggle("is-muted", !chatSpeakOn);
-  }
-
-  function chatLangTag() {
-    return isBnChat() ? "bn-BD" : "en-US";
-  }
-
-  function pickChatVoice() {
-    if (!window.speechSynthesis) return null;
-    var voices = window.speechSynthesis.getVoices() || [];
-    var bn = isBnChat();
-    var best = null;
-    var i;
-    for (i = 0; i < voices.length; i++) {
-      var v = voices[i];
-      var lang = String(v.lang || "").toLowerCase();
-      var name = String(v.name || "").toLowerCase();
-      var hit = bn
-        ? (lang.indexOf("bn") === 0 || name.indexOf("bengali") >= 0 || name.indexOf("bangla") >= 0)
-        : lang.indexOf("en") === 0;
-      if (!hit) continue;
-      if (!best) best = v;
-      if (bn && (lang.indexOf("bd") >= 0 || name.indexOf("google") >= 0)) best = v;
-      if (!bn && (lang.indexOf("us") >= 0 || name.indexOf("google") >= 0)) best = v;
-    }
-    return best;
-  }
-
-  function stopChatSpeak() {
-    chatSpeakGen += 1;
-    if (window.speechSynthesis) {
-      try { window.speechSynthesis.cancel(); } catch (e) {}
-    }
-    chatSpeaking = false;
-    refreshSpeakTitle();
-  }
-
-  function speakChat(text) {
-    if (!chatSpeakOn || !text || !window.speechSynthesis) return;
-    var gen = ++chatSpeakGen;
-    try { window.speechSynthesis.cancel(); } catch (e) {}
-    var u = new SpeechSynthesisUtterance(String(text).replace(/\s+/g, " ").trim());
-    if (!u.text) return;
-    u.lang = chatLangTag();
-    u.rate = isBnChat() ? 1.02 : 1.08;
-    var voice = pickChatVoice();
-    if (voice) {
-      u.voice = voice;
-      if (voice.lang) u.lang = voice.lang;
-    }
-    u.onend = function () {
-      if (gen !== chatSpeakGen) return;
-      chatSpeaking = false;
-      refreshSpeakTitle();
-    };
-    u.onerror = function () {
-      if (gen !== chatSpeakGen) return;
-      chatSpeaking = false;
-      refreshSpeakTitle();
-    };
-    chatSpeaking = true;
-    refreshSpeakTitle();
-    setTimeout(function () {
-      if (gen !== chatSpeakGen || !chatSpeakOn) return;
-      window.speechSynthesis.speak(u);
-    }, 50);
-  }
-
-  function toggleChatSpeak() {
-    if (chatSpeaking) {
-      stopChatSpeak();
-      return;
-    }
-    chatSpeakOn = !chatSpeakOn;
-    try { localStorage.setItem("agroscan_chat_tts", chatSpeakOn ? "1" : "0"); } catch (e) {}
-    refreshSpeakTitle();
-    if (!chatSpeakOn) return;
-    var log = $("chatLog");
-    var last = log && log.querySelector(".msg.bot:last-child .msg-body");
-    if (last && last.textContent) speakChat(last.textContent);
   }
 
   function stopRecStream() {
@@ -847,7 +727,6 @@
       }
       return;
     }
-    stopChatSpeak();
     beginVoiceListen();
   }
 
@@ -943,7 +822,6 @@
   }
 
   function sendChat(message, confirmClass) {
-    stopChatSpeak();
     var log = $("chatLog");
     if (message && log) {
       var u = document.createElement("div");

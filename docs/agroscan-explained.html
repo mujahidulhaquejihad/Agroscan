@@ -278,9 +278,9 @@
     <li>Mask to the chosen crop.</li>
     <li>Take the <strong>highest-confidence single model</strong> as <span class="tag">best_answer</span>.</li>
   </ol>
-  <h2>The book: <span class="tag">data/agroscan/disease_treatments.json</span></h2>
+  <h2>The book: <span class="tag">data/agroscan/diseases/&lt;class&gt;.json</span></h2>
   <div class="kid">
-    <strong>Simple:</strong> The picture net is good at “what do I see?” It is a terrible lawyer and a terrible chemist. So doses, brands, and “call 16123” come from a pack written from DAE / PPW / BRRI / BARC-style sources. 44 diseases, each in English and Bangla.
+    <strong>Simple:</strong> The picture net is good at “what do I see?” It is a terrible lawyer and a terrible chemist. So doses, brands, and “call 16123” come from a pack written from DAE / PPW / BRRI / BARC-style sources. One file per disease (136 files), each in English and Bangla.
   </div>
   <p>Each disease card can hold: pathogen, season, symptoms, cultural control, fertilizer (BARC FRG-style), chemical options (product, active ingredient, grams per litre, timing, max sprays, PHI — waiting days before harvest), Bangladesh brand names, organic options, safety, legal notes, and when to call the Krishi Call Center <strong>16123</strong>.</p>
   <div class="warn">
@@ -312,9 +312,9 @@
   <p><strong>RAG</strong> means Retrieval-Augmented Generation: first fetch pages, then let the robot talk using those pages.</p>
   <p>AgroScan’s retrieval is <strong>not</strong> a magic “understands meaning” search. It is <strong>TF-IDF</strong> (a word-counting score: rare words that appear in both the question and a page count more) plus cosine similarity (how aligned two word-count lists are). Kid version: it looks for shared words and word pairs, not vibes.</p>
   <ul>
-    <li>Build: <span class="tag">python -m agroscan.rag_build</span> writes 88 documents (44 diseases × EN+BN), each split into overview / symptoms / prevention / treatment / process.</li>
+    <li>Build: at server start, <span class="tag">rag_build</span> turns each <span class="tag">diseases/*.json</span> file into EN + BN documents in memory (220 documents, 110 diseases), each split into overview / symptoms / prevention / treatment / process. No generated file.</li>
     <li>Index: sklearn, 20,000 word features, 1–2 word phrases, kept in RAM.</li>
-    <li>Fetch top <strong>6</strong> chunks. Drop scores under 0.015. Prefer Bangla chunks if the farmer wrote Bangla. Boost treatment pages if the question says “spray” / “স্প্রে”.</li>
+    <li>Fetch top <strong>4</strong> chunks. Drop scores under 0.015. Prefer Bangla chunks if the farmer wrote Bangla. Boost treatment pages if the question says “spray” / “স্প্রে”.</li>
     <li>If we already know the disease, <span class="tag">allow_keys</span> pins retrieval so maize blight cannot leak into potato late blight.</li>
   </ul>
   <p>There is no Chroma, FAISS, or embedding model. Qwen does not search. Qwen only writes.</p>
@@ -350,7 +350,6 @@
     <li>AgroScan farm/disease lines a few hundred</li>
   </ul>
   <p>LoRA (Low-Rank Adaptation) is a small sticker of extra weights you stick on a frozen big model so you do not retrain all billions of numbers. That sticker was trained on <strong>Qwen2.5-1.5B</strong> (2 epochs, batch 1, grad accum 16, lr 1e-4, max 512 tokens). Serve time uses <strong>3B</strong>. Different sizes — the sticker does not fit. So live RAG answers are stock 3B + retrieved pack text.</p>
-  <p>Train again with <span class="tag">python -m llm.build_qa_dataset</span> then <span class="tag">python -m llm.train_lora</span> (VS Code tasks exist). To make chat smarter, either train a 3B sticker or serve the 1.5B model with the 1.5B sticker.</p>
   <footer class="foot"><span>Qwen rewrites the book. It must not write a new book.</span><span>Page 8 of 9 · Qwen</span></footer>
 </section>
 
@@ -369,9 +368,8 @@
       <tr><td>Change the Android wrapper</td><td><span class="tag">mobile/</span></td></tr>
       <tr><td>Edit doses and 16123 text</td><td><span class="tag">data/agroscan/</span></td></tr>
       <tr><td>Retrain picture nets</td><td><span class="tag">python -m agroscan.train_all</span></td></tr>
-      <tr><td>Rebuild RAG pages</td><td><span class="tag">python -m agroscan.rag_build</span></td></tr>
-      <tr><td>Train Qwen LoRA</td><td><span class="tag">llm/train_lora.py</span></td></tr>
-      <tr><td>See a technical diagram</td><td><span class="tag">docs/AgroScan_Architecture.pdf</span></td></tr>
+      <tr><td>Update RAG pages</td><td>Edit <span class="tag">data/agroscan/diseases/</span>, restart the server</td></tr>
+      <tr><td>See a technical diagram</td><td><span class="tag">docs/AgroScan_Stack_Figure.pdf</span></td></tr>
     </tbody>
   </table>
   <h2>What a farmer actually gets today</h2>
@@ -392,7 +390,6 @@
     <li>Open the folder <span class="tag">I:\Agroscan\Agroscan</span> (the parent folder is only Syncthing).</li>
     <li>Install PyTorch with CUDA, then <span class="tag">pip install -r requirements.txt</span>.</li>
     <li><span class="tag">start_server.bat</span> or uvicorn on port 8000.</li>
-    <li>For Qwen on this GPU PC: <span class="tag">.\scripts\run_local_with_llm.ps1</span> (close extra browsers if Windows complains about the paging file).</li>
   </ol>
   <p class="tiny">Production site: https://agroscan.mujahidulhaquejihad.com · Docker serves CPU PyTorch (vision yes, Qwen probably off) · This booklet matches the code after the package rename to <span class="tag">agroscan</span>.</p>
   <footer class="foot"><span>If two pages disagree, trust the code in agroscan/ and data/agroscan/</span><span>Page 9 of 9 · Map</span></footer>

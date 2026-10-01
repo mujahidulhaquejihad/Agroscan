@@ -18,7 +18,7 @@ python-multipart
 datasets
 huggingface_hub
 
-# LoRA agri-LLM serving (/api/chat) — also see llm/requirements-train.txt
+# Optional local LLM for /api/chat (production uses Gemini)
 transformers<5
 accelerate
 peft

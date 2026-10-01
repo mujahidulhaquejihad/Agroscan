@@ -110,7 +110,7 @@ Status legend:
 2. **Dose / crop** → same PPW entry + product label; pack marks many AP refs as *not individually verified*  
 3. **Fertilizer advice** → FRG-2024 PDF above  
 4. **Yields** → BBS yearbook PDF above  
-5. **Per-disease narrative in AgroScan** → `data/agroscan/disease_treatments.json` (each record has `source`, `confidence`, `last_verified`) and RAG copy in `rag_disease_docs.json`
+5. **Per-disease narrative in AgroScan** → `data/agroscan/diseases/<class>.json`, one file per disease (each record has `source`, `confidence`, `last_verified`); chat RAG reads these same files in memory
 
 ### Honest limits (say this if asked)
 - Not every chemical line in the pack has a verified AP number; only ~11 were matched to the Archive register.  

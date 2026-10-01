@@ -48,4 +48,3 @@ python -m agroscan.train_all --resume --skip-leaf --skip-crop
 
 - Resume requires the **same class list** and architecture as the snapshot.
 - If only a best `.pt` exists (no `.train.pt`), `--resume` loads weights and continues with a **fresh** optimizer/scheduler from the next epoch.
-- LoRA chatbot training already supports resume: `python -m llm.train_lora --resume`.

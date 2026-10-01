@@ -649,42 +649,6 @@
       </details>`).join("") || `<p class="muted small">${T().t("library_empty")}</p>`;
   }
 
-  /* ---------------- Text-to-speech ---------------- */
-  let speaking = false;
-  function speakAdvice() {
-    const r = window.lastResult || window.lastResultData;
-    const d0 = r && (r.stage3_disease || r.stage2_disease);
-    const b = d0 && d0.best_answer;
-    if (!b || !window.speechSynthesis) return;
-    if (speaking) { window.speechSynthesis.cancel(); speaking = false; setListenLabel(); return; }
-    const a = b.advice || {};
-    const tp = a.treatment_plan || {};
-    const doseLines = (tp.chemical_treatments || []).slice(0, 2).map((ct) => {
-      const name = ct.product || ct.product_en || "";
-      const dose = ct.dose_display_scaled || ct.dose_scaled || ct.dose_display || ct.dose || "";
-      const phi = ct.phi_days != null ? `PHI ${ct.phi_days}` : "";
-      return [name, dose, phi].filter(Boolean).join(". ");
-    });
-    const text = [
-      `${b.plant}, ${b.condition}.`,
-      a.land && a.land.summary ? a.land.summary : "",
-      a.description || a.summary || "",
-      (a.next_steps || []).map((s, i) => `${i + 1}. ${s.title}. ${s.detail || ""}`).join(" "),
-      doseLines.length ? `${T().t("treatment")}: ${doseLines.join(". ")}` : `${T().t("treatment")}: ${(a.treatment || []).join(". ")}`,
-      a.when_to_call_helpline ? `${T().t("when_to_call")}: ${a.when_to_call_helpline}` : "16123",
-    ].filter(Boolean).join(" ");
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = T().lang === "bn" ? "bn-BD" : "en-US";
-    u.rate = 0.92;
-    u.onend = () => { speaking = false; setListenLabel(); };
-    speaking = true; setListenLabel();
-    window.speechSynthesis.speak(u);
-  }
-  function setListenLabel() {
-    const b = $("listenBtn");
-    if (b && T()) b.textContent = (speaking ? "\u23F9 " : "\u{1F50A} ") + T().t(speaking ? "stop" : "listen");
-  }
-
   /* ---------------- Download / share report ---------------- */
   function buildReport() {
     const r = window.lastResult;
@@ -857,7 +821,6 @@
     const d = data.stage3_disease || data.stage2_disease;
     if (!(d && d.best_answer)) return;
     if ($("resultActions")) $("resultActions").classList.remove("hidden");
-    setListenLabel();
 
     compressImageSrc(thumb || ($("preview") && $("preview").src) || "", (imageDataUrl) => {
       const entry = buildHistoryEntry(data, imageDataUrl);
@@ -880,10 +843,8 @@
       bind("clearHistory", clearHistoryAll);
       bind("photoHistoryClear", clearHistoryAll);
       bind("loadWeather", loadWeather);
-      bind("listenBtn", speakAdvice);
       bind("downloadBtn", downloadReport);
       bind("shareBtn", shareReport);
-      setListenLabel();
       loadWeather();
       document.addEventListener("agroscan-geo", (ev) => {
         const d = ev.detail || {};
@@ -893,7 +854,6 @@
         renderHistory(); renderPhotoHistory(); renderCalendar(); renderTip();
         loadLibrary();
         if (lastFarmPlan) renderFarmPlan(lastFarmPlan);
-        setListenLabel();
         const wb = $("weatherBody");
         if (wb && wb.querySelector(".wx-grid")) loadWeather();
       });
@@ -905,7 +865,6 @@
   window.AgroScanFeatures = {
     onResult,
     init,
-    speakAdvice,
     closeHistoryView: function () { setHistoryViewMode(false); },
     attachFeedback: function (disease, vote) {
       const h = getHistory();

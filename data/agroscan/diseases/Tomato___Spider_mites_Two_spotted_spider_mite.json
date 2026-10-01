@@ -1,5 +1,5 @@
 {
-  "class_name": "Tomato___Spider_mites_Two-spotted_spider_mite",
+  "class_name": "Tomato___Spider_mites Two-spotted_spider_mite",
   "kb_key": "spider_mites",
   "crop_en": "Tomato",
   "crop_bn": "টমেটো",
@@ -260,5 +260,8 @@
       "match_confidence": "high"
     }
   ],
-  "is_curable_with_chemicals": true
+  "is_curable_with_chemicals": true,
+  "aliases": [
+    "Tomato___Spider_mites_Two-spotted_spider_mite"
+  ]
 }

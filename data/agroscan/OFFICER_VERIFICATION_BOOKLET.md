@@ -2,7 +2,7 @@
 
 **For verification by agricultural officer / DAE / plant doctor**
 
-- Generated from: `data/agroscan/disease_treatments.json` (Bangladesh AgroScan pack)
+- Generated from: `data/agroscan/diseases/*.json`, one file per disease (Bangladesh AgroScan pack)
 - Purpose: print and tick each product, dose, timing, and PHI
 - Rule: farmers must still follow the **printed label** and local officer advice
 - Pack note: only some AP numbers are individually verified; others must be checked on PPW

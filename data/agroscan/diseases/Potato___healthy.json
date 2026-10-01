@@ -163,5 +163,8 @@
       "match_confidence": "high"
     }
   ],
-  "is_curable_with_chemicals": true
+  "is_curable_with_chemicals": true,
+  "aliases": [
+    "Potato___Healthy"
+  ]
 }

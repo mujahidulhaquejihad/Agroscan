@@ -1,5 +1,5 @@
 {
-  "class_name": "Mango___Powdery_mildew",
+  "class_name": "Mango___Powdery_Mildew",
   "kb_key": "powdery_mildew",
   "crop_en": "Mango",
   "crop_bn": "আম",
@@ -243,5 +243,8 @@
       "match_confidence": "high"
     }
   ],
-  "is_curable_with_chemicals": true
+  "is_curable_with_chemicals": true,
+  "aliases": [
+    "Mango___Powdery_mildew"
+  ]
 }

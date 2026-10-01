@@ -1,1 +1,0 @@
-# AgroScan LLM package

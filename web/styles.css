@@ -2342,26 +2342,6 @@ body.chat-open .chat-toggle {
   align-items: center;
 }
 .chat-head-actions { display: flex; align-items: center; gap: 6px; }
-.chat-head-btn {
-  background: rgba(255,255,255,.15);
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-.chat-head-btn:hover { background: rgba(255,255,255,.28); }
-.chat-head-btn.is-speaking {
-  background: #fff;
-  color: var(--green-d);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
-}
-.chat-head-btn.is-muted { opacity: 0.55; }
 .chat-close {
   background: rgba(255,255,255,.15);
   border: none;

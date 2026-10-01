@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from agroscan.rag import _pack_chunks, _section_bodies, retrieve
+from agroscan.rag import _chunks, _section_bodies, retrieve
 
 
 def main() -> None:
@@ -28,7 +28,7 @@ def main() -> None:
     assert "Safety:" in parts[3] and "Pack notes:" in parts[3]
     assert _section_bodies("symptoms", "diamond spots") == ["diamond spots"]
 
-    pack = _pack_chunks()
+    pack = _chunks()
     treat = [c for c in pack if c["class_name"] == "Potato___Late_blight" and c["section"] == "treatment" and c["lang"] == "en"]
     assert len(treat) >= 4, len(treat)
     assert max(len(c["text"]) for c in treat) < 2200, max(len(c["text"]) for c in treat)

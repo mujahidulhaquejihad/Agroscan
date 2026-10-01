@@ -4,63 +4,36 @@ Production hostname: **https://agroscan.mujahidulhaquejihad.com**
 
 ---
 
-## 1. Linux server — Docker
+## 1. Server — Proxmox CT 101 (`root@192.168.0.51`, app in `/opt/agroscan`)
 
-Copy the project to the server (include `models/*.pt`).
+Routine update (code, web UI, disease/shop JSON). Keeps the server's `.env` and `data/*.db`:
 
-```bash
-cd ~/agroscan   # or your project path
-docker compose up -d --build
-docker compose logs -f
+```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy\update-ct101.ps1
 ```
 
-Local check on the server:
+New models: copy the `.pt` files to `/opt/agroscan/models/` and run `systemctl restart agroscan`.
 
-```bash
-curl http://127.0.0.1:8000/api/status
+Fresh CT only (first install or rebuild — never for routine updates):
+
+```powershell
+ssh-copy-id root@192.168.0.51
+powershell -ExecutionPolicy Bypass -File .\deploy\push-to-ct101.ps1
 ```
 
-Expect `"ready": true` and disease models listed.
+`push-to-ct101.ps1` copies the runtime and models, then runs `deploy/ct101-setup.sh` (venv, CPU torch, `requirements-ct.txt`, the `agroscan.service` systemd unit, cloudflared). Uvicorn binds **127.0.0.1:8000** only.
 
-Update models without rebuilding the image: replace files under `./models/` and restart:
-
-```bash
-docker compose restart
-```
-
-Compose binds **127.0.0.1:8000** only (safe with a tunnel).
+Check on the CT: `curl -sS http://127.0.0.1:8000/api/status` → `"ready": true`.
 
 ---
 
-## 2. Cloudflare Tunnel
+## 2. Cloudflare Tunnel (once per CT)
 
-Example config: [`deploy/cloudflared.config.example.yml`](../deploy/cloudflared.config.example.yml)
-
-```bash
-cloudflared tunnel login
-cloudflared tunnel create agroscan
-# note the UUID
-
-mkdir -p ~/.cloudflared
-nano ~/.cloudflared/config.yml
-```
-
-```yaml
-tunnel: YOUR_TUNNEL_UUID
-credentials-file: /home/YOUR_USER/.cloudflared/YOUR_TUNNEL_UUID.json
-
-ingress:
-  - hostname: agroscan.mujahidulhaquejihad.com
-    service: http://127.0.0.1:8000
-  - service: http_status:404
-```
+Cloudflare Zero Trust → Networks → Tunnels → Create `agroscan`. Public hostname `agroscan.mujahidulhaquejihad.com` → `http://127.0.0.1:8000`. Then on the CT:
 
 ```bash
-cloudflared tunnel route dns agroscan agroscan.mujahidulhaquejihad.com
-cloudflared tunnel run agroscan
-# or install as a service:
-# sudo cloudflared service install
-# sudo systemctl enable --now cloudflared
+cloudflared service install <TOKEN>
+systemctl enable --now cloudflared
 ```
 
 Verify in a browser:

@@ -198,16 +198,7 @@
   }
 
   function wireActionStrip() {
-    var listen = $("farmerActListen");
     var buy = $("farmerActBuy");
-    if (listen) {
-      listen.onclick = function () {
-        if ($("listenBtn")) $("listenBtn").click();
-        else if (window.AgroScanFeatures && window.AgroScanFeatures.speakAdvice) {
-          window.AgroScanFeatures.speakAdvice();
-        }
-      };
-    }
     if (buy) {
       buy.onclick = function () {
         if (window.AgroScanShop && window.AgroScanShop.recommendForDisease) {

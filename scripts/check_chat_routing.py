@@ -26,6 +26,23 @@ assert "blast" in cn.lower(), cn
 q2 = resolve_disease_query("how do I treat rice blast", "en")
 assert q2.get("status") == "matched", q2
 
+rust = resolve_disease_query("rust", "en")
+assert rust.get("status") == "clarify", rust
+assert all("rust" in o["class_name"].lower() for o in rust["options"]), rust["options"]
+corn = resolve_disease_query("corn rust", "en")
+assert corn["status"] == "matched" and corn["info"]["class_name"] == "Corn_(maize)___Common_rust_", corn
+assert resolve_disease_query("my leaves have yellow spots", "en")["status"] == "none"
+assert resolve_disease_query("how do i treat this and prevent it next season?", "en")["status"] == "none"
+assert resolve_disease_query("should i protect the field", "en")["status"] == "none"
+for q, want, lang in (
+    ("আলুর নাবি ধ্বসা", "Potato___Late_blight", "bn"),
+    ("brinjal fruit borer", "Brinjal___Shoot_and_fruit_borer", "en"),
+    ("tomato late blight", "Tomato___Late_blight", "en"),
+    ("wheat yellow rust", "Wheat___Yellow_rust", "en"),
+):
+    got = resolve_disease_query(q, lang)
+    assert got["status"] == "matched" and got["info"]["class_name"] == want, (q, got.get("status"))
+
 r = chat_reply("ধানের ব্লাস্টে কী স্প্রে?", lang="bn")
 assert r.get("source") == "pack", r.get("source")
 assert "blast" in ((r.get("class_name") or "") + (r.get("matched_key") or "")).lower()
@@ -58,6 +75,13 @@ assert not _llm_text_is_bad("Stop urea and spray tricyclazole at booting if blas
 
 assert _relevant_context("ধানের ব্লাস্টে কী স্প্রে?", "Strawberry___leaf_scorch") is None
 assert _relevant_context("what should I spray", "Strawberry___leaf_scorch")
+assert _relevant_context("আমি কত দিন পর পর স্প্রে করব?", "Apple___Apple_scab") == "Apple___Apple_scab"
+
+from agroscan.knowledge import crop_mentioned
+
+assert crop_mentioned("আম", "আমের পাতায় দাগ") and not crop_mentioned("আম", "আমি কী করব")
+assert crop_mentioned("চা", "চায়ের পাতায় দাগ") and not crop_mentioned("চা", "ধান চাষ করতে চাই")
+assert crop_mentioned("tomato", "my tomatoes have spots") and not crop_mentioned("rice", "what is the price")
 
 assert _reply_lang("ধানের ব্লাস্টে কী স্প্রে?", "en") == "bn"
 assert _reply_lang("ki ki rog e help korte parbe?", "en") == "bn"
@@ -115,5 +139,23 @@ assert msgs[0]["role"] == "system"
 assert any(m["role"] == "assistant" and "Septoria" in m["content"] for m in msgs)
 assert "what dose?" in msgs[-1]["content"]
 assert "Septoria" in msgs[-1]["content"] or "septoria" in msgs[-1]["content"].lower()
+
+from agroscan.llm_chat import _note_gemini_error, _gemini_dead
+
+_note_gemini_error("m-day", 429, "HTTP 429 [PerDay]: quota")
+_note_gemini_error("m-minute", 429, "HTTP 429: slow down")
+assert "m-day" in _gemini_dead and "m-minute" not in _gemini_dead
+_gemini_dead.clear()
+
+# With Gemini up, questions after a scan or about a named disease get a real answer, not the raw card.
+import agroscan.llm_chat as lc
+
+lc.llm_configured = lc._gemini_enabled = lambda: True
+lc._want_local_llm = lambda: False
+lc.generate_reply = lambda *a, **k: "Spray mancozeb every 7 days and pick off the spotted lower leaves first."
+after_scan = chat_reply("how often should I spray?", context_disease="Tomato___Septoria_leaf_spot", lang="en")
+assert after_scan["source"] == "gemini+rag" and after_scan["class_name"] == "Tomato___Septoria_leaf_spot", after_scan
+named = chat_reply("how do I treat rice blast", lang="en")
+assert named["source"] == "gemini+rag" and "blast" in named["class_name"].lower(), named
 
 print("ok")

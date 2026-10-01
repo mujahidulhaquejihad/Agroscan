@@ -18,13 +18,19 @@ def _read(name: str):
 
 @lru_cache(maxsize=1)
 def treatments() -> List[dict]:
-    data = _read("disease_treatments.json")
-    return data if isinstance(data, list) else []
+    """One JSON file per disease: data/agroscan/diseases/<class_name>.json"""
+    folder = AGROSCAN_PACK_DIR / "diseases"
+    return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("*.json"))]
 
 
 @lru_cache(maxsize=1)
 def treatments_by_class() -> Dict[str, dict]:
-    return {str(r.get("class_name") or ""): r for r in treatments() if r.get("class_name")}
+    out: Dict[str, dict] = {}
+    for r in treatments():
+        for name in [r.get("class_name"), *(r.get("aliases") or [])]:
+            if name:
+                out[str(name)] = r
+    return out
 
 
 @lru_cache(maxsize=1)

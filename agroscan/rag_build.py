@@ -1,19 +1,14 @@
 """Build verified RAG disease documents from the Bangladesh data pack.
 
-Source of truth: data/agroscan/disease_treatments.json (DAE/PPW-backed pack).
+Source of truth: data/agroscan/diseases/<class_name>.json, one file per disease (DAE/PPW-backed pack).
 Does not invent doses, products, or registration numbers — only reformats pack fields
-into sectioned documents for retrieval.
+into sectioned documents for retrieval. Nothing is written to disk.
 """
 from __future__ import annotations
 
-import json
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from agroscan.bd_data import treatments
-from agroscan.config import AGROSCAN_PACK_DIR
-
-OUT_NAME = "rag_disease_docs.json"
 
 
 def _is_healthy(rec: dict) -> bool:
@@ -230,27 +225,17 @@ def build_disease_doc(rec: dict, lang: str) -> Optional[Dict[str, Any]]:
     }
 
 
-def build_all() -> Dict[str, Any]:
+def build_all() -> List[dict]:
+    """EN + BN search docs for every non-healthy disease file, built in memory."""
     docs: List[dict] = []
     for rec in treatments():
         for lang in ("en", "bn"):
             doc = build_disease_doc(rec, lang)
             if doc:
                 docs.append(doc)
-    payload = {
-        "meta": {
-            "source": "disease_treatments.json Bangladesh AgroScan pack",
-            "policy": "Verified pack fields only — no invented doses or AP numbers",
-            "disease_docs": len(docs) // 2,
-            "documents": len(docs),
-        },
-        "documents": docs,
-    }
-    out_path = Path(AGROSCAN_PACK_DIR) / OUT_NAME
-    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {"path": str(out_path), **payload["meta"]}
+    return docs
 
 
 if __name__ == "__main__":
-    info = build_all()
-    print(json.dumps(info, ensure_ascii=False, indent=2))
+    docs = build_all()
+    print(f"{len(docs) // 2} diseases, {len(docs)} RAG documents")

@@ -1,18 +1,18 @@
 /* AgroScan PWA service worker — cache app shell; always network for API. */
-const CACHE = "agroscan-shell-v24";
+const CACHE = "agroscan-shell-v25";
 const SHELL = [
   "/",
   "/login",
   "/signup",
-  "/static/styles.css?v=84",
+  "/static/styles.css?v=85",
   "/static/config.js?v=26",
-  "/static/i18n.js?v=66",
+  "/static/i18n.js?v=68",
   "/static/auth.js?v=25",
-  "/static/core.js?v=41",
+  "/static/core.js?v=42",
   "/static/crop.js?v=5",
-  "/static/features.js?v=40",
-  "/static/farmer-ux.js?v=4",
-  "/static/app-extra.js?v=31",
+  "/static/features.js?v=41",
+  "/static/farmer-ux.js?v=5",
+  "/static/app-extra.js?v=32",
   "/static/shop.js?v=17",
   "/static/geo.js?v=2",
   "/static/mobile.js?v=28",

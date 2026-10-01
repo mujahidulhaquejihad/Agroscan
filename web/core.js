@@ -748,9 +748,6 @@
   }
 
   function runAnalyze() {
-    if (window.speechSynthesis) {
-      try { window.speechSynthesis.cancel(); } catch (e) {}
-    }
     if (window.AgroScanFeatures && window.AgroScanFeatures.closeHistoryView) {
       window.AgroScanFeatures.closeHistoryView();
     }

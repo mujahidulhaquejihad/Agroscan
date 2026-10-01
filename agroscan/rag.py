@@ -1,22 +1,17 @@
 """Lightweight TF-IDF RAG over verified AgroScan disease docs (CPU only).
 
-Primary source: data/agroscan/rag_disease_docs.json built from disease_treatments.json
+Primary source: data/agroscan/diseases/*.json, built in memory by rag_build
 (sectioned overview / symptoms / prevention / treatment / process).
-Fallback: DISEASE_GUIDES + DISEASE_INFO.
 """
 from __future__ import annotations
 
-import json
 import re
 from functools import lru_cache
-from pathlib import Path
 from typing import List, Optional, Set
 
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
-from agroscan.config import AGROSCAN_PACK_DIR
 
 SECTION_ORDER = ("overview", "symptoms", "prevention", "treatment", "process")
 # Treatment pages mix 2–3 chemicals + organic + safety. One TF-IDF vector
@@ -64,54 +59,11 @@ def _section_bodies(section: str, body: str) -> List[str]:
     return out or [body]
 
 
-def _guide_text(key: str, guide: dict) -> str:
-    parts = [key.replace("_", " "), str(guide.get("description") or "")]
-    for step in guide.get("next_steps") or []:
-        if isinstance(step, dict):
-            parts.append(f"{step.get('title') or ''}: {step.get('detail') or ''}")
-        else:
-            parts.append(str(step))
-    for field in ("when_to_call_helpline", "expected_outcome"):
-        val = guide.get(field)
-        if val:
-            parts.append(str(val))
-    return "\n".join(p.strip() for p in parts if p and str(p).strip())
+def _chunks() -> List[dict]:
+    from agroscan.rag_build import build_all
 
-
-def _info_text(key: str, info: dict) -> str:
-    parts = [
-        key.replace("_", " "),
-        str(info.get("title") or ""),
-        str(info.get("summary") or ""),
-        " ".join(str(x) for x in (info.get("symptoms") or [])),
-        " ".join(str(x) for x in (info.get("treatment") or [])),
-        " ".join(str(x) for x in (info.get("prevention") or [])),
-    ]
-    return "\n".join(p.strip() for p in parts if p and str(p).strip())
-
-
-def _load_pack_docs() -> List[dict]:
-    path = Path(AGROSCAN_PACK_DIR) / "rag_disease_docs.json"
-    if not path.exists():
-        try:
-            from agroscan.rag_build import build_all
-
-            build_all()
-        except Exception:
-            return []
-    if not path.exists():
-        return []
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return []
-    docs = data.get("documents") if isinstance(data, dict) else data
-    return docs if isinstance(docs, list) else []
-
-
-def _pack_chunks() -> List[dict]:
     out: List[dict] = []
-    for doc in _load_pack_docs():
+    for doc in build_all():
         class_name = str(doc.get("class_name") or "")
         kb_key = str(doc.get("kb_key") or "")
         lang = str(doc.get("lang") or "en")
@@ -139,45 +91,6 @@ def _pack_chunks() -> List[dict]:
                     }
                 )
     return out
-
-
-def _legacy_chunks() -> List[dict]:
-    from .disease_guides import DISEASE_GUIDES
-    from .disease_guides_bn import DISEASE_GUIDES_BN
-    from .knowledge import DISEASE_INFO
-    from .knowledge_bn import DISEASE_INFO_BN
-
-    out: List[dict] = []
-    for key, guide in DISEASE_GUIDES.items():
-        text = _guide_text(key, guide)
-        if text:
-            out.append({"key": key, "kb_key": key, "section": "guide", "lang": "en", "text": text})
-    for key, guide in DISEASE_GUIDES_BN.items():
-        text = _guide_text(key, guide)
-        if text:
-            out.append({"key": key, "kb_key": key, "section": "guide", "lang": "bn", "text": text})
-    for key, info in DISEASE_INFO.items():
-        text = _info_text(key, info)
-        if text:
-            out.append({"key": key, "kb_key": key, "section": "info", "lang": "en", "text": text})
-    for key, info in DISEASE_INFO_BN.items():
-        text = _info_text(key, info)
-        if text:
-            out.append({"key": key, "kb_key": key, "section": "info", "lang": "bn", "text": text})
-    return out
-
-
-def _chunks() -> List[dict]:
-    pack = _pack_chunks()
-    if not pack:
-        return _legacy_chunks()
-    pack_kb = {c.get("kb_key") for c in pack if c.get("kb_key")}
-    extra = [c for c in _legacy_chunks() if c.get("kb_key") not in pack_kb]
-    return pack + extra
-
-
-def clear_index_cache() -> None:
-    _index.cache_clear()
 
 
 @lru_cache(maxsize=1)
@@ -279,11 +192,7 @@ def retrieve(
             if dedupe in seen:
                 continue
             seen.add(dedupe)
-            text = chunk.get("text") or ""
-            # Pack sections are already disease-sized; only cap leftover guide/info blobs.
-            if chunk.get("section") in ("guide", "info") and len(text) > 1600:
-                text = text[:1600]
-            picked.append(text)
+            picked.append(chunk.get("text") or "")
             if len(picked) >= k:
                 return picked
     return picked

@@ -191,5 +191,8 @@
       "match_confidence": "medium"
     }
   ],
-  "is_curable_with_chemicals": true
+  "is_curable_with_chemicals": true,
+  "aliases": [
+    "Tomato___Healthy"
+  ]
 }
