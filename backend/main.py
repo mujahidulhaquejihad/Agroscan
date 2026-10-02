@@ -149,7 +149,7 @@ def classes():
     return {"disease_classes": engine.disease_classes}
 
 
-@app.post("/api/predict")
+@app.post("/api/predict")   ####    Main prediction endpoint: image upload → 3-level JSON result
 async def predict(
     file: UploadFile = File(...),
     crop: str | None = Form(default=None),
@@ -245,7 +245,7 @@ class ChatIn(BaseModel):
     history: list[ChatTurn] | None = None
 
 
-@app.post("/api/chat/stt")
+@app.post("/api/chat/stt") ### SPEECH TO TEXT ##
 async def chat_stt(
     file: UploadFile = File(...),
     lang: str | None = Form(default="bn"),
